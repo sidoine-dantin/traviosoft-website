@@ -19,6 +19,9 @@ build/
 # Debug
 npm-debug.log*
 
+# Cloudflare local config (not needed for Pages CI)
+wrangler.toml
+
 # System
 .DS_Store
 Thumbs.db
