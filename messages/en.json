@@ -1,0 +1,421 @@
+{
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "how_it_works": "How it works",
+    "pricing": "Pricing",
+    "about": "About",
+    "faq": "FAQ",
+    "book_demo": "Book a demo"
+  },
+  "footer": {
+    "product_col": "Product",
+    "company_col": "Company",
+    "legal_col": "Legal",
+    "features": "Features",
+    "how_it_works": "How it works",
+    "pricing": "Pricing",
+    "book_demo": "Book a demo",
+    "about": "About",
+    "faq": "FAQ",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "tagline": "Management software for boutique travel agencies",
+    "copyright": "Traviosoft"
+  },
+  "home": {
+    "meta_title": "Traviosoft - The management software for boutique travel agencies",
+    "meta_description": "Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for boutique travel agencies and DMCs. Book a 30-minute demo.",
+    "hero": {
+      "headline": "The management software built for boutique travel agencies",
+      "subheadline": "Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.",
+      "cta_primary": "Book a demo",
+      "cta_secondary": "See how it works"
+    },
+    "pain_points": {
+      "title": "Does this sound familiar?",
+      "item1_title": "Quotes that take hours",
+      "item1_text": "Every quote is rebuilt from scratch in Excel or Word, margins are recalculated by hand, and the final result doesn't always look as professional as you'd like when sending it to a client.",
+      "item2_title": "Payment tracking by gut feeling",
+      "item2_text": "Who paid the deposit? Who still owes the balance before departure? Without a dedicated tool, this lives in a spreadsheet, or in your head, with the risk of forgetting a reminder.",
+      "item3_title": "Supplier coordination over email and WhatsApp",
+      "item3_text": "Guides, hotels, transport providers: every important piece of information (contact details, documents, languages spoken, rates) is scattered across chat threads and attachments."
+    },
+    "solution": {
+      "title": "One platform, from first contact to invoice",
+      "flow": "Client request → Quote (PDF) → Order → Supplier coordination → Tracked payments → Invoicing",
+      "description": "Everything is connected: an accepted quote automatically generates an order with its tasks, and every payment milestone is linked to the right quote and client.",
+      "cta": "Discover how it works step by step"
+    },
+    "pillars": {
+      "title": "What Traviosoft changes in practice",
+      "p1_title": "Save time on repetitive tasks",
+      "p1_text": "Build your quotes line by line, with automatic total and margin calculation. Export to PDF in one click. As soon as a quote is accepted, the order and its tasks are created automatically.",
+      "p2_title": "Make the client relationship more professional",
+      "p2_text": "Quotes and service sheets in clean PDF format, structured tracking of every request (new, awaiting reply, handled), and a full history per client.",
+      "p3_title": "Stay on top of payments and invoicing",
+      "p3_text": "Set payment milestones directly on the quote, attach a payment link to each one, and track client and supplier invoices with clear statuses (draft, issued, partially paid, paid).",
+      "p4_title": "Centralize suppliers, guides and your catalog",
+      "p4_text": "Supplier and guide profiles with contacts, documents and languages spoken. A service catalog with categories and seasonal pricing. Everything connected to your quotes and orders."
+    },
+    "steps_preview": {
+      "title": "From the client's first message to the final invoice, in 6 steps",
+      "step1": "A request comes in and is centralized",
+      "step2": "A quote is created and sent as a PDF",
+      "step3": "The accepted quote becomes an order, with its tasks",
+      "step4": "The team executes: service sheets, suppliers coordinated",
+      "step5": "Payments are tracked with milestones and reminders",
+      "step6": "Invoicing happens, for both clients and suppliers",
+      "cta": "See the detail of each step"
+    },
+    "trust": {
+      "title": "Built from real-world use, not from an abstract spec sheet",
+      "text": "Traviosoft was built with, and for, a boutique travel agency based in Barcelona, specializing in tailor-made trips. That agency uses Traviosoft every day to run its entire business: requests, quotes, orders, payments, suppliers. The product keeps evolving in contact with agencies like yours, with a simple goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
+      "cta": "Book a demo and talk it through"
+    },
+    "multilang": {
+      "title": "Built for international teams and clients",
+      "text": "The interface is available in French, English and Spanish. Your quotes, supplier profiles and documents can be managed in the language that suits each contact, without duplicating tools."
+    },
+    "final_cta": {
+      "headline": "Ready to see Traviosoft working with your business?",
+      "text": "In 30 minutes, we'll look together at how Traviosoft fits your way of working, no strings attached.",
+      "cta": "Book a demo"
+    }
+  },
+  "product": {
+    "meta_title": "Features - Traviosoft",
+    "meta_description": "Discover Traviosoft's modules: client requests, quotes, orders, payments, suppliers, catalog, projects, reports and AI assistant.",
+    "intro": {
+      "headline": "Everything a boutique travel agency needs, in one tool",
+      "text": "Each module below maps to a real step in an agency's daily work. No gimmick features: just tools to save time, make your documents more professional, and stay in control of your margins.",
+      "cta": "Book a demo"
+    },
+    "modules": {
+      "requests": {
+        "title": "Requests & client CRM",
+        "benefit": "Never lose a client request again, and keep the full history in one place.",
+        "points": [
+          "All incoming requests centralized with a clear status (new, awaiting reply, handled)",
+          "AI-assisted reply drafts to save time on writing (always reviewed and sent by you)",
+          "Full client profile: contact details, notes, tax information adapted to your country",
+          "Complete history per client: requests, quotes, orders, invoices"
+        ],
+        "change": "No more digging through email to find out where a client stands: it's all in their profile."
+      },
+      "quotes": {
+        "title": "Quotes",
+        "benefit": "Professional quotes in minutes, with your margins calculated automatically.",
+        "points": [
+          "Build quotes line by line (catalog items or free-text lines)",
+          "Total and margin recalculated automatically with every change",
+          "PDF export ready to send to the client",
+          "Quote statuses (draft, sent, accepted, refused) and an expiration date",
+          "Payment milestones defined directly on the quote"
+        ],
+        "change": "A quote that used to take two hours in Excel now takes minutes, with a clean PDF output."
+      },
+      "orders": {
+        "title": "Orders & operations",
+        "benefit": "As soon as a quote is accepted, the preparation work starts automatically.",
+        "points": [
+          "The order is created automatically from the accepted quote",
+          "Preparation tasks are generated automatically from the quote's line items",
+          "PDF service sheets for the day of the service",
+          "Order status tracking (awaiting payment, paid, in progress, completed)",
+          "A payment link (WooCommerce) can be attached to the order"
+        ],
+        "change": "Nobody has to wonder \"what's left to prepare for this file?\": the task list already exists."
+      },
+      "suppliers": {
+        "title": "Suppliers & guides",
+        "benefit": "All the information about your suppliers and guides, in one place, kept up to date.",
+        "points": [
+          "Supplier and guide profiles: contacts, banking details, tax information",
+          "Associated documents (contracts, certificates, etc.)",
+          "Languages spoken, categories and geographic areas",
+          "Multiple contacts per supplier"
+        ],
+        "change": "No more digging through email to find a guide's phone number or the latest version of a contract."
+      },
+      "catalog": {
+        "title": "Catalog",
+        "benefit": "Your services, organized and ready to drop into a quote.",
+        "points": [
+          "Catalog of products and services with categories",
+          "Seasonal pricing (different prices depending on the period)",
+          "Direct link between a catalog item and a supplier",
+          "Purchase price and sales price tracked separately, to keep visibility on margins"
+        ],
+        "change": "Building a quote becomes a matter of picking from an already up-to-date list, instead of re-entering prices every time."
+      },
+      "projects": {
+        "title": "Projects",
+        "benefit": "For complex files, keep multiple alternatives and the traveler list organized.",
+        "points": [
+          "Full lifecycle of a travel project",
+          "Multiple alternatives (variants) for the same project",
+          "Named list of travelers per project"
+        ],
+        "change": "Ideal when a client is choosing between several versions of a trip, or for group files with a long list of participants."
+      },
+      "payments": {
+        "title": "Payments & invoicing",
+        "benefit": "See at a glance who has paid, who still owes, and where you stand with your suppliers.",
+        "points": [
+          "Payment milestones per quote, with due dates",
+          "Tracking of payment reminders",
+          "Client invoices with detailed line items and statuses (draft, issued, partially paid, paid, overpaid, cancelled)",
+          "Supplier invoices tracked at the same level of detail"
+        ],
+        "change": "No more parallel spreadsheets to track payments: everything is linked to the original quote and order."
+      },
+      "reports": {
+        "title": "Reports",
+        "benefit": "A bird's-eye view of your business to step back and see the bigger picture.",
+        "points": [
+          "An overview dashboard of activity (quotes, orders, payments)",
+          "Always up to date, built on the same data as the rest of the tool"
+        ],
+        "change": "No need to build a separate dashboard: the numbers are already there."
+      },
+      "ai": {
+        "title": "AI assistant",
+        "benefit": "An assistant that saves you time, without ever acting on your behalf without approval.",
+        "points": [
+          "Helps draft replies to client requests (a draft is proposed, never sent automatically)",
+          "Built-in help chatbot to answer questions about how to use the tool",
+          "Operational assistant that can read your data and propose actions (create a client, update a request, etc.)"
+        ],
+        "zero_write": "No assistant suggestion is applied to your data without your explicit approval. You stay in control at every step.",
+        "change": "AI does the first draft, you make the final call."
+      },
+      "multilang": {
+        "title": "Multi-language",
+        "benefit": "An interface built for your team and your international clients.",
+        "points": [
+          "Interface available in French, English and Spanish",
+          "Tax information handling adapted by country"
+        ]
+      }
+    },
+    "final_cta": {
+      "headline": "Want to see these features applied to your own business?",
+      "cta": "Book a demo"
+    }
+  },
+  "how_it_works": {
+    "meta_title": "How it works - Traviosoft",
+    "meta_description": "From the client request to the invoice, discover the full journey of a file through Traviosoft, step by step.",
+    "intro": {
+      "headline": "From the client's first message to the final invoice",
+      "text": "Here's how a client file moves through Traviosoft, from the first request to invoicing. Each step builds on the information entered in the previous one: no double data entry, no files to copy elsewhere."
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "One request, one place",
+        "description": "Whether it arrives by email, form or phone, every client request is logged with a status (new, awaiting reply, handled). A reply draft can be generated with AI assistance, to review and adjust before sending.",
+        "before": "Requests get lost between the inbox, paper notes and people's memory.",
+        "after": "Every request is visible in one place, with its status."
+      },
+      {
+        "number": "02",
+        "title": "A quote built in minutes",
+        "description": "From the request, you build the quote line by line (catalog items or free-text lines). The total and margin are calculated automatically. The quote is exported to PDF and sent to the client, with an expiration date.",
+        "before": "Every quote is rebuilt from scratch in Excel or Word, with the risk of calculation errors.",
+        "after": "The quote pulls prices from the catalog, calculates the margin automatically, and generates a PDF ready to send."
+      },
+      {
+        "number": "03",
+        "title": "Acceptance triggers preparation",
+        "description": "When the client accepts the quote, its status changes to \"accepted\" and an order is created automatically. Preparation tasks derived from the quote's line items (bookings, documents to prepare, etc.) are generated within the order.",
+        "before": "You have to re-read the accepted quote and manually recreate a task list in another tool.",
+        "after": "The order and its task list exist as soon as the quote is accepted."
+      },
+      {
+        "number": "04",
+        "title": "Supplier coordination and service sheets",
+        "description": "The team tracks progress on the order's tasks, generates PDF service sheets for the day of the service, and coordinates suppliers and guides from their profiles (contacts, documents, languages spoken).",
+        "before": "Coordination happens through scattered emails and WhatsApp messages.",
+        "after": "Every task, supplier and document is linked to the corresponding order."
+      },
+      {
+        "number": "05",
+        "title": "Clear milestones, reminders under control",
+        "description": "Payment milestones defined on the quote are tracked throughout the file. A payment link can be attached to each milestone, and reminders are tracked within the tool.",
+        "before": "Payment tracking lives in a separate spreadsheet, with the risk of forgetting a reminder.",
+        "after": "Every milestone is linked to the quote and order, with its payment status."
+      },
+      {
+        "number": "06",
+        "title": "Client and supplier invoices, with clear statuses",
+        "description": "Client invoices are generated with detailed line items and follow a precise status (draft, issued, partially paid, paid). Supplier invoices are tracked with the same level of detail, to keep a complete view of your real margins.",
+        "before": "Client and supplier invoices are tracked in separate documents, disconnected from the original quote.",
+        "after": "Everything stays linked to the client file, from the initial quote to the final invoice."
+      }
+    ],
+    "before_label": "Before Traviosoft",
+    "after_label": "With Traviosoft",
+    "final_cta": {
+      "headline": "See this workflow applied to your own business",
+      "text": "In 30 minutes, we'll walk through this process together with an example close to your real activity.",
+      "cta": "Book a demo"
+    }
+  },
+  "pricing": {
+    "meta_title": "Pricing - Traviosoft",
+    "meta_description": "A simple pricing model, no hidden fees, built for boutique travel agencies. Book a demo to get your quote.",
+    "intro": {
+      "headline": "A simple price, fitted to your agency",
+      "text": "No à la carte feature matrix, no paid add-on modules. Traviosoft runs on a single plan, designed for boutique agencies."
+    },
+    "model": {
+      "title": "One plan, everything included",
+      "points": [
+        "A single plan, with no feature tiers to unlock separately",
+        "No hidden setup fees",
+        "Monthly or annual billing, your choice"
+      ],
+      "text": "We'd rather have a simple, readable model than a 10-row pricing table that needs a calculator to understand."
+    },
+    "trial": {
+      "title": "Try it before you commit",
+      "text": "A trial period is available so you can explore Traviosoft with your own files, with no upfront commitment."
+    },
+    "why_no_price": {
+      "title": "Why we'd rather talk it through on a call",
+      "text": "Every agency is organized differently: team size, quote volume, specific needs. Rather than a generic price that doesn't reflect your situation, we prefer to discuss it with you directly during the demo, so we can give you a fair price and answer your questions live."
+    },
+    "final_cta": {
+      "headline": "Get your price in 30 minutes",
+      "text": "Book a demo: we'll look at your business together and give you a clear price, fitted to your agency.",
+      "cta": "Book a demo to get your price"
+    }
+  },
+  "about": {
+    "meta_title": "About - Traviosoft",
+    "meta_description": "Traviosoft was born from the real-world needs of a boutique travel agency. Discover the philosophy behind the product.",
+    "intro": {
+      "headline": "A tool built for boutique agencies, not for the big players",
+      "text": "Traviosoft wasn't dreamed up in a product committee disconnected from the field. It was born from a concrete need: a travel agency having to juggle Excel, Word, email and WhatsApp to run its business."
+    },
+    "story": {
+      "title": "Built with a real agency",
+      "text": "Traviosoft was developed with, and for, a boutique travel agency based in Barcelona, specializing in tailor-made trips. This agency uses Traviosoft every day to run its entire business: client requests, quotes, orders, payments, suppliers and invoicing. The product keeps evolving based on real, day-to-day needs, not abstract assumptions about what an agency \"should\" need."
+    },
+    "philosophy": {
+      "title": "Built for small teams",
+      "text": "Most management software for the travel industry is built for large organizations: big sales teams, complex processes, modules you'll never use. Traviosoft takes the opposite approach: a simple tool, focused on the real needs of a 2-to-15-person team running tailor-made trips."
+    },
+    "support": {
+      "title": "Human support, not a black box",
+      "text": "When you contact us, you talk to someone who knows both the product and the travel agency business. The initial demo isn't a scripted sales pitch: it's a chance to look together at how Traviosoft fits (or doesn't fit) your way of working."
+    },
+    "ai": {
+      "title": "AI as an assistant, never as the decision-maker",
+      "text": "Traviosoft includes AI features to save you time: reply drafts, writing assistance, an assistant that can propose actions. But one rule stays central: nothing is written to your data without your explicit approval. AI prepares, you decide."
+    },
+    "final_cta": {
+      "headline": "Let's talk about your business",
+      "text": "The best way to know if Traviosoft is right for your agency is to talk it through directly.",
+      "cta": "Book a demo"
+    }
+  },
+  "demo": {
+    "meta_title": "Book a demo - Traviosoft",
+    "meta_description": "Book a 30-minute demo to discover how Traviosoft fits your travel agency. No commitment, no credit card required.",
+    "hero": {
+      "headline": "Book your 30-minute demo",
+      "subheadline": "We'll look together at how Traviosoft fits your business. No sales script, no commitment."
+    },
+    "what_to_expect": {
+      "title": "What to expect",
+      "points": [
+        "A walkthrough of Traviosoft tailored to your business (team size, type of trips, current tools)",
+        "A concrete demo of the quote → order → payment → invoice flow",
+        "Your questions, with no artificial time pressure",
+        "If it's a fit: a clear price tailored to your situation"
+      ],
+      "text": "If Traviosoft isn't a fit for your business, we'll tell you directly, no detours."
+    },
+    "fit_yes": {
+      "title": "Traviosoft is a particularly good fit if...",
+      "points": [
+        "You run a tailor-made travel agency, a DMC or a specialized inbound operator",
+        "Your team has between 2 and 15 people",
+        "You currently manage quotes, payments or suppliers with Excel, Word, email or WhatsApp",
+        "You want to make your client-facing documents (quotes, service sheets) more professional without overhauling your whole setup"
+      ]
+    },
+    "fit_no": {
+      "title": "It's probably not (yet) for you if...",
+      "points": [
+        "You handle several hundred quotes a month with a large dedicated sales team",
+        "You're looking for an online booking platform for the general public (OTA)"
+      ]
+    },
+    "reassurance": {
+      "title": "No commitment",
+      "points": [
+        "No credit card required to book the demo",
+        "No obligation to buy after the call",
+        "Questions about data security, importing your existing data, or setup time are welcome during the call (and in the FAQ)"
+      ]
+    },
+    "final_cta": {
+      "headline": "Pick a time that works for you"
+    }
+  },
+  "faq": {
+    "meta_title": "FAQ - Traviosoft",
+    "meta_description": "Answers to frequently asked questions about Traviosoft: data security, setup time, data import, available languages and more.",
+    "intro": {
+      "headline": "Frequently asked questions",
+      "text": "If your question isn't here, ask it directly during the demo."
+    },
+    "items": [
+      {
+        "question": "Is my data secure?",
+        "answer": "Your data is hosted securely and only accessible to authorized users at your agency. Access to AI features is under your control: the AI can read certain data to assist you, but it never writes to your database without your explicit approval."
+      },
+      {
+        "question": "How long does it take to get started?",
+        "answer": "Setup time depends on your current situation (number of clients, ongoing quotes, suppliers to register). During the demo, we'll assess together how much time it would take to get started with your real data."
+      },
+      {
+        "question": "Is it suitable if I work alone? What about a team of 10 or 15?",
+        "answer": "Yes, in both cases. Traviosoft is designed for teams of 2 to 15 people, but it can also be used effectively by a single person handling the whole process, from quote to invoice."
+      },
+      {
+        "question": "Can we import our existing clients, quotes or suppliers?",
+        "answer": "Depending on the format of your current data (Excel files, exports from another tool), an import is possible. This is a point to discuss during the demo to figure out the best approach for your situation."
+      },
+      {
+        "question": "Does the AI access my data without my consent?",
+        "answer": "No. AI access to your data is an option you control. Even when enabled, the AI can read certain information to assist you (for example, to suggest a reply draft), but it never modifies your data without your explicit approval."
+      },
+      {
+        "question": "Is the software available in my language?",
+        "answer": "Traviosoft's interface is available in French, English and Spanish."
+      },
+      {
+        "question": "What happens if I want to cancel?",
+        "answer": "You remain the owner of your data. If you cancel, a data export can be arranged. The exact terms are detailed in our terms of service and can be discussed with you directly."
+      },
+      {
+        "question": "Does Traviosoft replace my website or my accounting software?",
+        "answer": "No. Traviosoft is an internal management tool for running your quotes, orders, payments and suppliers. It doesn't replace your website (showcase, public online booking) or your accounting software, although it can make your accountant's job easier thanks to the tracking of client and supplier invoices."
+      }
+    ],
+    "final_cta": {
+      "headline": "Have another question?",
+      "cta": "Book a demo"
+    }
+  },
+  "legal": {
+    "privacy_title": "Privacy Policy - Traviosoft",
+    "terms_title": "Terms of Service - Traviosoft",
+    "back_home": "Back to home"
+  }
+}
