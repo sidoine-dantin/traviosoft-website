@@ -115,6 +115,13 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      <style>{`
+        .footer-link { color: oklch(0.72 0.008 118); transition: color 0.15s ease-out; }
+        .footer-link:hover { color: white; }
+        .footer-link--highlight { color: var(--color-accent); }
+        .footer-link--highlight:hover { color: oklch(0.65 0.14 48); }
+      `}</style>
     </footer>
   );
 }
@@ -128,14 +135,8 @@ function FooterLinks({ links }: { links: FooterLinkItem[] }) {
         <li key={href}>
           <Link
             href={href}
-            style={{
-              fontSize: '0.875rem',
-              color: highlight ? 'var(--color-accent)' : 'oklch(0.72 0.008 118)',
-              textDecoration: 'none',
-              transition: 'color 0.15s ease-out'
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = highlight ? 'oklch(0.65 0.14 48)' : 'white'; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = highlight ? 'var(--color-accent)' : 'oklch(0.72 0.008 118)'; }}
+            className={`footer-link${highlight ? ' footer-link--highlight' : ''}`}
+            style={{ fontSize: '0.875rem', textDecoration: 'none' }}
           >
             {label}
           </Link>
