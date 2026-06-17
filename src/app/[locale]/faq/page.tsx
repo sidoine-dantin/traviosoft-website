@@ -4,13 +4,14 @@ import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/reveal';
 import { FaqAccordion } from '@/components/ui/faq-accordion';
+import { buildMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'faq' });
-  return { title: t('meta_title'), description: t('meta_description') };
+  return buildMetadata({ locale, path: '/faq', title: t('meta_title'), description: t('meta_description') });
 }
 
 type FaqItem = { question: string; answer: string };
@@ -19,8 +20,25 @@ export default function FaqPage() {
   const t = useTranslations('faq');
   const items = t.raw('items') as FaqItem[];
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer
+      }
+    }))
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section style={{
         backgroundColor: 'var(--color-primary)',
         paddingTop: 'clamp(7rem, 12vw, 9rem)',

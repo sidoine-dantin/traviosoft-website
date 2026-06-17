@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { baseUrl, siteName } from '@/lib/seo';
 import '../globals.css';
 
 const inter = Inter({
@@ -23,8 +24,13 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://traviosoft.com'),
-  icons: { icon: '/favicon.ico' }
+  metadataBase: new URL(baseUrl),
+  icons: { icon: '/favicon.ico' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
+  }
 };
 
 type Props = {
@@ -38,9 +44,31 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages();
 
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteName,
+    url: baseUrl
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteName,
+    url: baseUrl
+  };
+
   return (
     <html lang={locale} className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body style={{ fontFamily: 'var(--font-inter, system-ui, sans-serif)' }}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>

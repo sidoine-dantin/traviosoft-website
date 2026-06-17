@@ -1,13 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
+import { buildMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'legal' });
-  return { title: t('terms_title') };
+  return buildMetadata({ locale, path: '/legal/terms', title: t('terms_title') });
 }
 
 export default async function TermsPage({ params }: Props) {
