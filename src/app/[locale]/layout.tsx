@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, DM_Serif_Display } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
@@ -25,12 +25,14 @@ const dmSerifDisplay = DM_Serif_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  icons: { icon: '/favicon.ico' },
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true }
-  }
+  },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined
 };
 
 type Props = {
@@ -43,19 +45,46 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!(routing.locales as readonly string[]).includes(locale)) notFound();
 
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: 'home' });
+  const description = t('meta_description');
 
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: siteName,
-    url: baseUrl
+    url: baseUrl,
+    logo: `${baseUrl}/icon.svg`,
+    description
   };
 
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteName,
-    url: baseUrl
+    url: baseUrl,
+    inLanguage: routing.locales
+  };
+
+  const softwareJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: siteName,
+    url: baseUrl,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description,
+    inLanguage: routing.locales,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'EUR',
+      price: '0',
+      description: 'Book a demo'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      url: baseUrl
+    }
   };
 
   return (
@@ -68,6 +97,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
         />
         <NextIntlClientProvider messages={messages}>
           <Header />
