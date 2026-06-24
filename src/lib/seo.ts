@@ -8,13 +8,13 @@ export const siteName = 'Traviosoft';
 export const pagePaths = [
   '',
   '/product',
-  '/how-it-works',
   '/pricing',
   '/about',
   '/demo',
   '/faq',
   '/legal/privacy',
-  '/legal/terms'
+  '/legal/terms',
+  '/legal/notice'
 ] as const;
 
 function localizedUrl(locale: string, path: string) {

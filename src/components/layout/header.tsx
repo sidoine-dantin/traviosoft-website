@@ -7,7 +7,6 @@ import { useParams } from 'next/navigation';
 
 const NAV_LINKS = [
   { key: 'product', href: '/product' },
-  { key: 'how_it_works', href: '/how-it-works' },
   { key: 'pricing', href: '/pricing' },
   { key: 'about', href: '/about' },
   { key: 'faq', href: '/faq' }
@@ -47,6 +46,22 @@ export default function Header() {
     router.replace(pathname, { locale });
   }
 
+  // Every page leads with a dark hero except the legal pages (light background).
+  // At the very top of a dark-hero page the header is transparent, so its text
+  // must be light to stay legible; once scrolled the bar turns white and the
+  // dark palette takes over.
+  const overDarkHero = !pathname.startsWith('/legal');
+  const lightOnDark = !scrolled && overDarkHero;
+
+  const logoColor = lightOnDark ? 'white' : 'var(--color-primary)';
+  const navActiveColor = lightOnDark ? 'white' : 'var(--color-primary)';
+  const navInactiveColor = lightOnDark ? 'oklch(0.86 0.02 118)' : 'var(--color-muted)';
+  const navHoverColor = lightOnDark ? 'white' : 'var(--color-ink)';
+  const dividerColor = lightOnDark ? 'oklch(1 0 0 / 0.28)' : 'var(--color-border)';
+  const ctaStyle = lightOnDark
+    ? { backgroundColor: 'white', color: 'var(--color-primary)' }
+    : {};
+
   return (
     <header
       style={{
@@ -74,11 +89,12 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
           <span style={{
-            fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+            fontFamily: 'var(--font-display, Georgia, serif)',
             fontSize: '1.375rem',
-            color: 'var(--color-primary)',
+            color: logoColor,
             fontWeight: 400,
-            letterSpacing: '-0.01em'
+            letterSpacing: '-0.01em',
+            transition: 'color 0.25s ease-out'
           }}>
             Traviosoft
           </span>
@@ -105,13 +121,13 @@ export default function Header() {
                 borderRadius: '4px',
                 fontSize: '0.9375rem',
                 fontWeight: isActive(href) ? 500 : 400,
-                color: isActive(href) ? 'var(--color-primary)' : 'var(--color-muted)',
+                color: isActive(href) ? navActiveColor : navInactiveColor,
                 textDecoration: 'none',
                 transition: 'color 0.15s ease-out',
                 whiteSpace: 'nowrap'
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--color-ink)'; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = isActive(href) ? 'var(--color-primary)' : 'var(--color-muted)'; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = navHoverColor; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = isActive(href) ? navActiveColor : navInactiveColor; }}
             >
               {t(key)}
             </Link>
@@ -141,11 +157,11 @@ export default function Header() {
                   padding: '0.25rem 0.5rem',
                   fontSize: '0.8125rem',
                   fontWeight: currentLocale === code ? 600 : 400,
-                  color: currentLocale === code ? 'var(--color-primary)' : 'var(--color-muted)',
+                  color: currentLocale === code ? navActiveColor : navInactiveColor,
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer',
-                  borderRight: idx < LOCALES.length - 1 ? '1px solid var(--color-border)' : 'none',
+                  borderRight: idx < LOCALES.length - 1 ? `1px solid ${dividerColor}` : 'none',
                   lineHeight: 1,
                   transition: 'color 0.15s ease-out'
                 }}
@@ -156,7 +172,7 @@ export default function Header() {
           </div>
 
           {/* CTA */}
-          <Link href="/demo" className="btn-primary" style={{ fontSize: '0.875rem', padding: '0.5rem 1.125rem' }}>
+          <Link href="/demo" className="btn-primary" style={{ fontSize: '0.875rem', padding: '0.5rem 1.125rem', ...ctaStyle }}>
             {t('book_demo')}
           </Link>
 
@@ -172,7 +188,7 @@ export default function Header() {
               border: 'none',
               cursor: 'pointer',
               padding: '0.25rem',
-              color: 'var(--color-ink)'
+              color: lightOnDark ? 'white' : 'var(--color-ink)'
             }}
           >
             {menuOpen ? (

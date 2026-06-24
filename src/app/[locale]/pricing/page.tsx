@@ -27,7 +27,7 @@ export default function PricingPage() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <Reveal>
             <h1 style={{
-              fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+              fontFamily: 'var(--font-display, Georgia, serif)',
               fontSize: 'clamp(2rem, 4vw, 3.5rem)',
               fontWeight: 400, color: 'white',
               letterSpacing: '-0.02em', marginBottom: '1rem',
@@ -58,7 +58,7 @@ export default function PricingPage() {
               <div>
                 <span className="section-rule" />
                 <h2 style={{
-                  fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+                  fontFamily: 'var(--font-display, Georgia, serif)',
                   fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
                   fontWeight: 400, color: 'var(--color-ink)',
                   letterSpacing: '-0.01em', marginBottom: '1.5rem'
@@ -80,7 +80,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
                 <p style={{
-                  fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+                  fontFamily: 'var(--font-display, Georgia, serif)',
                   fontSize: '1rem', fontStyle: 'italic',
                   color: 'var(--color-muted)', lineHeight: 1.65
                 }}>
@@ -135,7 +135,7 @@ export default function PricingPage() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <Reveal>
             <h2 style={{
-              fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+              fontFamily: 'var(--font-display, Georgia, serif)',
               fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
               fontWeight: 400, color: 'white',
               letterSpacing: '-0.02em', marginBottom: '0.875rem',

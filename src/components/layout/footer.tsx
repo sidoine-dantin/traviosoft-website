@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ gridColumn: 'span 1' }}>
             <span style={{
-              fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+              fontFamily: 'var(--font-display, Georgia, serif)',
               fontSize: '1.375rem',
               color: 'white',
               fontWeight: 400,
@@ -58,7 +58,6 @@ export default function Footer() {
             </p>
             <FooterLinks links={[
               { label: t('features'), href: '/product' },
-              { label: t('how_it_works'), href: '/how-it-works' },
               { label: t('pricing'), href: '/pricing' },
               { label: t('book_demo'), href: '/demo', highlight: true }
             ]} />
@@ -96,7 +95,8 @@ export default function Footer() {
             </p>
             <FooterLinks links={[
               { label: t('privacy'), href: '/legal/privacy' },
-              { label: t('terms'), href: '/legal/terms' }
+              { label: t('terms'), href: '/legal/terms' },
+              { label: t('legal_notice'), href: '/legal/notice' }
             ]} />
           </div>
         </div>

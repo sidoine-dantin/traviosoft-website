@@ -9,13 +9,13 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'legal' });
-  return buildMetadata({ locale, path: '/legal/privacy', title: t('privacy_title') });
+  return buildMetadata({ locale, path: '/legal/notice', title: t('notice_title') });
 }
 
-export default async function PrivacyPage({ params }: Props) {
+export default async function NoticePage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'legal' });
-  const sections = t.raw('privacy.sections') as { heading: string; body: string[] }[];
+  const sections = t.raw('notice.sections') as { heading: string; body: string[] }[];
 
   return (
     <div style={{ paddingTop: 'clamp(6rem, 12vw, 8rem)', paddingBottom: 'clamp(4rem, 8vw, 6rem)' }}>
@@ -29,10 +29,10 @@ export default async function PrivacyPage({ params }: Props) {
         </Link>
 
         <LegalDocument
-          title={t('privacy_title').replace(' - Traviosoft', '')}
+          title={t('notice_title').replace(' - Traviosoft', '')}
           updatedLabel={t('updated_label')}
           updatedDate={t('updated_date')}
-          intro={t('privacy.intro')}
+          intro={t('notice.intro')}
           sections={sections}
         />
       </div>

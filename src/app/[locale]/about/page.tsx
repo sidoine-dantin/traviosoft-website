@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({ locale, path: '/about', title: t('meta_title'), description: t('meta_description') });
 }
 
-const SECTIONS = ['story', 'philosophy', 'support', 'ai'] as const;
+const SECTIONS = ['story', 'philosophy', 'support'] as const;
 
 export default function AboutPage() {
   const t = useTranslations('about');
@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <Reveal>
             <h1 style={{
-              fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+              fontFamily: 'var(--font-display, Georgia, serif)',
               fontSize: 'clamp(2rem, 4vw, 3.5rem)',
               fontWeight: 400, color: 'white',
               letterSpacing: '-0.02em', marginBottom: '1rem',
@@ -78,7 +78,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <Reveal>
             <h2 style={{
-              fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+              fontFamily: 'var(--font-display, Georgia, serif)',
               fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
               fontWeight: 400, color: 'white',
               letterSpacing: '-0.02em', marginBottom: '0.875rem',

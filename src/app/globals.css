@@ -17,8 +17,8 @@
   --color-muted:         oklch(0.51 0.010 118);
 
   /* Fonts */
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: var(--font-dm-serif), Georgia, serif;
+  --font-body: var(--font-geist-sans), system-ui, sans-serif;
 
   /* Spacing extras */
   --spacing-18: 4.5rem;

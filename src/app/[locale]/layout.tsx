@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Instrument_Serif } from 'next/font/google';
+import { Geist, DM_Serif_Display } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -9,17 +9,17 @@ import Footer from '@/components/layout/footer';
 import { baseUrl, siteName } from '@/lib/seo';
 import '../globals.css';
 
-const inter = Inter({
+const geistSans = Geist({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-geist-sans',
   display: 'swap'
 });
 
-const instrumentSerif = Instrument_Serif({
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'],
   weight: '400',
   style: ['normal', 'italic'],
-  variable: '--font-instrument-serif',
+  variable: '--font-dm-serif',
   display: 'swap'
 });
 
@@ -59,8 +59,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
 
   return (
-    <html lang={locale} className={`${inter.variable} ${instrumentSerif.variable}`}>
-      <body style={{ fontFamily: 'var(--font-inter, system-ui, sans-serif)' }}>
+    <html lang={locale} className={`${geistSans.variable} ${dmSerifDisplay.variable}`}>
+      <body style={{ fontFamily: 'var(--font-body, system-ui, sans-serif)' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

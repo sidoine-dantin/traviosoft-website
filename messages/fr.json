@@ -20,6 +20,7 @@
     "faq": "FAQ",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions générales",
+    "legal_notice": "Mentions légales",
     "tagline": "Logiciel de gestion pour agences de voyage boutique",
     "copyright": "Traviosoft"
   },
@@ -38,21 +39,21 @@
       "item1_text": "Vous reconstruisez chaque devis depuis zéro dans Excel ou Word, vous recalculez les marges à la main, et le résultat final n'a pas toujours l'air très professionnel à envoyer au client.",
       "item2_title": "Le suivi des paiements au feeling",
       "item2_text": "Qui a payé l'acompte ? Qui doit encore régler le solde avant le départ ? Sans outil dédié, ce suivi vit dans une feuille de calcul ou dans votre tête, avec le risque d'oublier une relance.",
-      "item3_title": "La coordination des prestataires par email et WhatsApp",
+      "item3_title": "La coordination des prestataires éparpillée entre emails et messages",
       "item3_text": "Guides, hôtels, transporteurs : chaque information importante (contact, document, langue parlée, tarif) est dispersée dans des fils de discussion et des pièces jointes."
     },
     "solution": {
       "title": "Une seule plateforme, du premier contact à la facture",
-      "flow": "Demande client → Devis (PDF) → Commande → Coordination prestataires → Paiements suivis → Facturation",
+      "flow": "Demande client → Devis → Commande → Coordination prestataires → Paiements suivis → Facturation",
       "description": "Tout est relié : un devis accepté génère automatiquement une commande avec ses tâches, et chaque échéance de paiement est rattachée au bon devis et au bon client.",
       "cta": "Découvrir le fonctionnement étape par étape"
     },
     "pillars": {
       "title": "Ce que Traviosoft change concrètement",
       "p1_title": "Gagner du temps sur les tâches répétitives",
-      "p1_text": "Construisez vos devis ligne par ligne, avec calcul automatique du total et de la marge. Export PDF en un clic. Dès que le devis est accepté, la commande et ses tâches sont créées automatiquement.",
+      "p1_text": "Montez un devis en quelques minutes, avec le total et votre marge calculés pour vous. Dès que le client accepte, la commande et tout ce qu'il y a à préparer apparaissent d'eux-mêmes.",
       "p2_title": "Professionnaliser la relation client",
-      "p2_text": "Des devis et des fiches de service au format PDF soigné, un suivi structuré de chaque demande (nouvelle, en attente de réponse, traitée), et un historique complet par client.",
+      "p2_text": "Des devis et des fiches de service soignés qui font bonne impression, un suivi clair de chaque demande (nouvelle, en attente de réponse, traitée), et un historique complet par client.",
       "p3_title": "Maîtriser les paiements et la facturation",
       "p3_text": "Définissez des échéances de paiement par devis, associez un lien de paiement à chacune, et suivez vos factures clients et fournisseurs avec des statuts clairs (brouillon, émise, partiellement payée, payée).",
       "p4_title": "Centraliser prestataires, guides et catalogue",
@@ -61,7 +62,7 @@
     "steps_preview": {
       "title": "Du premier message du client à la facture finale, en 6 étapes",
       "step1": "Une demande arrive et est centralisée",
-      "step2": "Un devis est créé et envoyé en PDF",
+      "step2": "Un devis est créé et envoyé au client",
       "step3": "Le devis accepté devient une commande, avec ses tâches",
       "step4": "L'équipe exécute : fiches de service, prestataires coordonnés",
       "step5": "Les paiements sont suivis avec échéances et relances",
@@ -70,7 +71,7 @@
     },
     "trust": {
       "title": "Un outil né du terrain, pas d'un cahier des charges abstrait",
-      "text": "Traviosoft a été conçu avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure. Elle l'utilise au quotidien pour gérer l'intégralité de son activité : devis, commandes, paiements, prestataires. Le produit continue d'évoluer au contact d'agences comme la vôtre, avec un objectif simple : remplacer les fichiers Excel et Word dispersés par un outil pensé pour le métier.",
+      "text": "Traviosoft a été conçu avec et pour une agence de voyage boutique basée en Espagne, spécialisée dans les voyages sur-mesure. Le produit continue d'évoluer au contact d'agences comme la vôtre, avec un objectif simple : remplacer les fichiers Excel et Word dispersés par un outil pensé pour le métier.",
       "cta": "Réserver une démo et en discuter"
     },
     "multilang": {
@@ -85,122 +86,114 @@
   },
   "product": {
     "meta_title": "Fonctionnalités - Traviosoft",
-    "meta_description": "Découvrez les modules de Traviosoft : demandes clients, devis, commandes, paiements, prestataires, catalogue, projets, rapports et assistant IA.",
+    "meta_description": "Découvrez ce qui change quand devis, commandes, paiements, prestataires et facturation vivent dans un seul outil pensé pour les agences de voyage boutique. Réservez une démo de 30 minutes.",
     "intro": {
-      "headline": "Tout ce dont une agence de voyage boutique a besoin, dans un seul outil",
-      "text": "Chaque module ci-dessous correspond à une étape réelle du travail quotidien d'une agence. Pas de fonctionnalités gadget : des outils pour gagner du temps, professionnaliser vos documents et garder le contrôle sur vos marges.",
+      "headline": "Moins de temps sur l'administratif. Plus de temps à vendre des voyages.",
+      "text": "Vous n'avez pas monté une agence de voyage pour vous battre avec des fichiers Excel. Voici à quoi ressemblent vos journées quand chaque devis, chaque paiement et chaque prestataire vit au même endroit.",
       "cta": "Réserver une démo"
     },
     "modules": {
       "requests": {
-        "title": "Demandes & CRM clients",
-        "benefit": "Ne perdez plus aucune demande client et gardez tout l'historique au même endroit.",
+        "title": "Ne perdez plus jamais une demande",
+        "benefit": "Toutes vos demandes dans une seule liste, plus aucun client qui passe à la trappe.",
         "points": [
-          "Centralisation de toutes les demandes entrantes avec un statut clair (nouvelle, en attente de réponse, traitée)",
-          "Brouillon de réponse assisté par IA pour gagner du temps sur la rédaction (toujours relu et envoyé par vous)",
-          "Fiche client complète : coordonnées, notes, informations fiscales adaptées à votre pays",
-          "Historique complet par client : demandes, devis, commandes, factures"
+          "Chaque demande arrive au même endroit, avec un statut lisible d'un coup d'œil : nouvelle, en attente, traitée",
+          "Vous ouvrez un client et tout son historique est là : demandes, devis, commandes, factures",
+          "Ses coordonnées et ses informations fiscales sont prêtes à glisser dans un devis, sans rien ressaisir"
         ],
-        "change": "Plus besoin de chercher dans vos emails pour savoir où en est un client : tout est dans sa fiche."
+        "change": "Vous arrêtez de vous demander «est-ce que j'ai répondu à ce couple ?» : la réponse est à l'écran."
       },
       "quotes": {
-        "title": "Devis",
-        "benefit": "Des devis professionnels en quelques minutes, avec vos marges calculées automatiquement.",
+        "title": "Envoyez des devis dont vous êtes fier, en quelques minutes",
+        "benefit": "Un devis soigné qui donne l'impression d'avoir pris des heures, prêt en quelques clics.",
         "points": [
-          "Construction du devis ligne par ligne (prestations du catalogue ou lignes libres)",
-          "Calcul automatique du total et de la marge à chaque modification",
-          "Export PDF prêt à envoyer au client",
-          "Statuts de devis (brouillon, envoyé, accepté, refusé) et date d'expiration",
-          "Échéances de paiement définies directement sur le devis"
+          "Vous piochez vos prestations dans le catalogue et le devis se construit tout seul au fur et à mesure",
+          "Votre total et votre marge se mettent à jour d'eux-mêmes, vous ne bradez plus par erreur",
+          "Vous envoyez un devis propre, à votre image, tant que le client est encore emballé",
+          "Vous voyez d'un coup d'œil quels devis sont envoyés, acceptés ou sur le point d'expirer"
         ],
-        "change": "Un devis qui prenait deux heures dans Excel se construit maintenant en quelques minutes, avec un rendu PDF soigné."
+        "change": "Le devis qui vous prenait toute la soirée part maintenant avant que le client ne refroidisse."
       },
       "orders": {
-        "title": "Commandes & opérations",
-        "benefit": "Dès qu'un devis est accepté, le travail de préparation démarre automatiquement.",
+        "title": "Le voyage se prépare tout seul une fois vendu",
+        "benefit": "Un devis accepté se transforme en check-list prête à suivre, sans rien faire.",
         "points": [
-          "Création automatique de la commande à partir du devis accepté",
-          "Génération automatique des tâches de préparation issues des lignes du devis",
-          "Fiches de service au format PDF pour le jour J",
-          "Suivi du statut de commande (en attente de paiement, payée, en cours, terminée)",
-          "Lien de paiement (WooCommerce) associable à la commande"
+          "Dès que le client dit oui, la commande et sa liste de tâches apparaissent automatiquement",
+          "Rien à penser à réserver : chaque tâche vous attend déjà",
+          "Vous imprimez une fiche de service nette pour le jour J",
+          "Vous savez toujours où en est un dossier : en attente de paiement, en cours, terminé"
         ],
-        "change": "Personne ne se demande \"qu'est-ce qu'il reste à préparer pour ce dossier ?\" : la liste des tâches existe déjà."
+        "change": "Fini le «qu'est-ce qu'il restait à organiser pour eux ?» : la liste existe déjà."
       },
       "suppliers": {
-        "title": "Prestataires & guides",
-        "benefit": "Toutes les informations sur vos prestataires et guides, au même endroit, à jour.",
+        "title": "Chaque guide et prestataire à une recherche près",
+        "benefit": "Contacts, contrats et langues parlées, au même endroit et à jour.",
         "points": [
-          "Fiches prestataires et guides : contacts, coordonnées bancaires, informations fiscales",
-          "Documents associés (contrats, attestations, etc.)",
-          "Langues parlées, catégories et zones géographiques",
-          "Plusieurs contacts par prestataire"
+          "Vous retrouvez le numéro d'un guide ou un contrat d'hôtel en quelques secondes, au lieu de fouiller vos vieux emails",
+          "Chaque document reste rattaché au bon prestataire",
+          "Vous voyez qui parle quelle langue et couvre quelle zone avant de réserver",
+          "Vous voyez tout votre historique avec chaque prestataire, des voyages passés aux documents qu'il vous a envoyés"
         ],
-        "change": "Plus besoin de fouiller dans vos emails pour retrouver le numéro d'un guide ou la dernière version d'un contrat."
+        "change": "Quand vous avez besoin de ce guide tout de suite, vous le retrouvez vraiment."
       },
       "catalog": {
-        "title": "Catalogue",
-        "benefit": "Vos prestations, organisées et prêtes à être glissées dans un devis.",
+        "title": "Construisez vos devis sur des prix fiables",
+        "benefit": "Vos prestations et vos tarifs prêts à l'emploi, toujours à jour.",
         "points": [
-          "Catalogue de produits et services avec catégories",
-          "Tarification saisonnière (prix différents selon les périodes)",
-          "Lien direct entre un item de catalogue et un prestataire",
-          "Prix d'achat et prix de vente suivis séparément, pour garder une visibilité sur la marge"
+          "Vous réutilisez vos prestations au lieu de ressaisir les prix à chaque fois",
+          "Vous fixez des tarifs différents selon la saison, vous ne ressortez plus le prix de l'an dernier par erreur",
+          "Vous gardez votre prix d'achat et votre prix de vente côte à côte, votre marge n'est jamais une supposition"
         ],
-        "change": "Construire un devis revient à choisir dans une liste déjà à jour, plutôt qu'à ressaisir des prix à chaque fois."
+        "change": "Faire un devis revient à choisir dans une liste, pas à tout reconstruire de mémoire."
       },
       "projects": {
-        "title": "Projets",
-        "benefit": "Pour les dossiers complexes, gardez plusieurs alternatives et la liste des voyageurs organisées.",
+        "title": "Gardez les gros voyages compliqués sous contrôle",
+        "benefit": "Plusieurs versions alternatives d'un voyage, bien organisées au même endroit.",
         "points": [
-          "Cycle de vie complet d'un projet de voyage",
-          "Plusieurs alternatives (variantes) pour un même projet",
-          "Liste nominative des voyageurs par projet"
+          "Vous proposez deux ou trois versions d'un voyage à un client sans vous y perdre",
+          "Vous gardez le nombre de voyageurs et les détails du voyage rattachés au projet",
+          "Vous suivez un dossier complexe de la première idée jusqu'au départ, au même endroit"
         ],
-        "change": "Idéal quand un même client hésite entre plusieurs versions d'un voyage, ou pour des dossiers groupe avec une longue liste de participants."
+        "change": "Les voyages de groupe et le «vous pouvez me remontrer l'option B ?» cessent d'être un casse-tête."
       },
       "payments": {
-        "title": "Paiements & facturation",
-        "benefit": "Sachez en un coup d'œil qui a payé, qui doit encore régler, et où vous en êtes avec vos fournisseurs.",
+        "title": "Sachez toujours qui vous doit encore de l'argent",
+        "benefit": "Une vue claire de qui a payé, qui n'a pas payé, et ce que vous devez à vos fournisseurs.",
         "points": [
-          "Échéances de paiement par devis, avec dates dues",
-          "Suivi des relances de paiement",
-          "Factures clients avec lignes détaillées et statuts (brouillon, émise, partiellement payée, payée, surpayée, annulée)",
-          "Factures fournisseurs avec le même niveau de suivi"
+          "Vous voyez d'un coup d'œil qui a réglé l'acompte et qui doit encore le solde avant le départ",
+          "Vous découpez un voyage en échéances avec leurs dates, et vous associez un lien de paiement à chacune",
+          "Vous suivez vos factures clients et fournisseurs avec des statuts clairs, au même endroit"
         ],
-        "change": "Fini les feuilles Excel parallèles pour suivre les paiements : tout est rattaché au devis et à la commande d'origine."
+        "change": "La feuille «est-ce qu'ils ont payé ?» disparaît, et la relance oubliée avec elle."
       },
       "reports": {
-        "title": "Rapports",
-        "benefit": "Une vue d'ensemble de votre activité pour prendre du recul.",
+        "title": "Voyez vraiment comment va l'activité",
+        "benefit": "Une vue d'ensemble claire de votre activité, sans construire le moindre tableau Excel.",
         "points": [
-          "Vue de pilotage de l'activité (devis, commandes, paiements)",
-          "Données toujours à jour, issues des mêmes informations que le reste de l'outil"
+          "Une seule vue des devis, commandes et paiements, toujours à jour",
+          "Des chiffres fiables, parce qu'ils viennent directement de vos vrais dossiers"
         ],
-        "change": "Pas besoin de construire un tableau de bord à part : les chiffres sont déjà là."
-      },
-      "ai": {
-        "title": "Assistant IA",
-        "benefit": "Un assistant qui vous fait gagner du temps, sans jamais agir à votre place sans validation.",
-        "points": [
-          "Aide à la rédaction de réponses aux demandes clients (brouillon proposé, jamais envoyé automatiquement)",
-          "Chatbot d'aide intégré pour répondre à vos questions sur l'utilisation de l'outil",
-          "Assistant opérationnel capable de lire vos données et de proposer des actions (créer un client, mettre à jour une demande, etc.)"
-        ],
-        "zero_write": "Aucune proposition de l'assistant n'est appliquée à vos données sans votre validation explicite. Vous gardez le contrôle à chaque étape.",
-        "change": "L'IA fait le premier jet, vous gardez la décision finale."
+        "change": "Vous prenez du recul et vous voyez toute l'activité d'un coup d'œil, quand vous le voulez."
       },
       "multilang": {
-        "title": "Multi-langue",
-        "benefit": "Une interface adaptée à vos équipes et à vos clients internationaux.",
+        "title": "Travaillez dans votre langue, vendez dans la leur",
+        "benefit": "Un seul outil pour une équipe et des clients internationaux.",
         "points": [
-          "Interface disponible en français, anglais et espagnol",
-          "Gestion des informations fiscales adaptée selon les pays"
+          "Vous utilisez l'interface en français, anglais ou espagnol",
+          "Vous gérez les informations fiscales de chaque client comme son pays l'attend"
         ]
       }
     },
+    "journey": {
+      "title": "Du premier message du client à la facture finale",
+      "text": "Chaque étape s'appuie sur la précédente : aucune double saisie, rien à recopier d'un outil à l'autre."
+    },
+    "everything": {
+      "title": "Tout ce qui fait tourner votre agence, au même endroit",
+      "text": "Au-delà du flux quotidien, Traviosoft garde aussi le reste de votre activité réuni."
+    },
     "final_cta": {
-      "headline": "Envie de voir ces fonctionnalités sur votre propre activité ?",
+      "headline": "Imaginez toute votre agence pilotée depuis un seul écran, l'esprit tranquille",
       "cta": "Réserver une démo"
     }
   },
@@ -213,46 +206,46 @@
     },
     "steps": [
       {
-        "number": "01",
         "title": "Une demande, un endroit",
-        "description": "Qu'elle arrive par email, formulaire ou téléphone, chaque demande client est enregistrée avec un statut (nouvelle, en attente de réponse, traitée). Un brouillon de réponse peut être généré avec l'aide de l'IA, à relire et ajuster avant envoi.",
+        "description": "Enregistrez vous-même une nouvelle demande en quelques secondes, ou reliez Traviosoft à votre site web pour que les demandes y arrivent d'elles-mêmes. Chacune porte un statut clair (nouvelle, en attente de réponse, traitée), pour que rien ne se perde entre la boîte mail et un post-it.",
         "before": "Les demandes se perdent entre la boîte mail, les notes papier et la mémoire de chacun.",
-        "after": "Toutes les demandes sont visibles au même endroit, avec leur statut."
+        "after": "Toutes les demandes sont visibles au même endroit, avec leur statut.",
+        "name": "Demandes"
       },
       {
-        "number": "02",
         "title": "Un devis construit en quelques minutes",
-        "description": "À partir de la demande, vous construisez le devis ligne par ligne (prestations du catalogue ou lignes libres). Le total et la marge se calculent automatiquement. Le devis est exporté en PDF et envoyé au client, avec une date d'expiration.",
+        "description": "À partir de la demande, vous montez le devis en quelques minutes. Le total et votre marge sont calculés pour vous, et vous l'envoyez au client avec une date d'expiration en deux clics.",
         "before": "Chaque devis est recomposé depuis zéro dans Excel ou Word, avec un risque d'erreur de calcul.",
-        "after": "Le devis reprend les prix du catalogue, calcule la marge automatiquement et génère un PDF prêt à envoyer."
+        "after": "Le devis reprend vos prix habituels, calcule la marge pour vous et est prêt à envoyer en quelques minutes.",
+        "name": "Devis"
       },
       {
-        "number": "03",
-        "title": "L'acceptation déclenche la préparation",
-        "description": "Quand le client accepte le devis, son statut passe à «accepté» et une commande est créée automatiquement. Les tâches de préparation issues des lignes du devis (réservations, documents à préparer, etc.) sont générées dans la commande.",
+        "title": "Le client dit oui, le travail se met en place tout seul",
+        "description": "Dès que le client accepte, le voyage passe en préparation de lui-même : une commande est créée avec une liste toute prête de ce qu'il y a à organiser (réservations, documents à préparer, etc.). Et quand le client paie, le paiement est enregistré automatiquement dans l'application, vous savez toujours où vous en êtes.",
         "before": "Il faut relire le devis accepté et recréer manuellement une liste de tâches dans un autre outil.",
-        "after": "La commande et sa liste de tâches existent dès l'acceptation du devis."
+        "after": "La commande et sa liste de tâches existent dès l'acceptation du devis, et les paiements s'enregistrent d'eux-mêmes.",
+        "name": "Commandes"
       },
       {
-        "number": "04",
         "title": "Coordination des prestataires et fiches de service",
-        "description": "L'équipe suit l'avancement des tâches de la commande, génère les fiches de service au format PDF pour le jour J, et coordonne les prestataires et guides à partir de leurs fiches (contacts, documents, langues parlées).",
-        "before": "La coordination passe par des emails et messages WhatsApp dispersés.",
-        "after": "Chaque tâche, chaque prestataire et chaque document est rattaché à la commande correspondante."
+        "description": "L'équipe suit la liste de tâches de la commande, prépare les fiches de service pour le jour J, et coordonne les prestataires et guides à partir de leurs fiches (contacts, documents, langues parlées).",
+        "before": "La coordination passe par des emails et des messages dispersés.",
+        "after": "Chaque tâche, chaque prestataire et chaque document est rattaché à la commande correspondante.",
+        "name": "Coordination"
       },
       {
-        "number": "05",
-        "title": "Des échéances claires, des relances suivies",
-        "description": "Les échéances de paiement définies sur le devis sont suivies tout au long du dossier. Un lien de paiement peut être associé à chaque échéance, et les relances sont suivies dans l'outil.",
+        "title": "Des paiements suivis, rien d'oublié",
+        "description": "Découpez le voyage en plusieurs paiements (un acompte, puis le solde, par exemple) et Traviosoft garde un œil sur chacun : ce qui est dû, ce qui est payé, et ce qui attend encore une relance, le tout au même endroit.",
         "before": "Le suivi des paiements vit dans une feuille Excel séparée, avec le risque d'oublier une relance.",
-        "after": "Chaque échéance est rattachée au devis et à la commande, avec son statut de paiement."
+        "after": "Chaque échéance est rattachée au devis et à la commande, avec son statut de paiement.",
+        "name": "Paiements"
       },
       {
-        "number": "06",
         "title": "Factures clients et fournisseurs, avec des statuts clairs",
         "description": "Les factures clients sont générées avec leurs lignes détaillées et suivent un statut précis (brouillon, émise, partiellement payée, payée). Les factures fournisseurs sont suivies avec le même niveau de détail, pour garder une vue complète sur vos marges réelles.",
         "before": "Les factures clients et fournisseurs sont suivies dans des documents séparés, sans lien avec le devis d'origine.",
-        "after": "Tout reste relié au dossier client, du devis initial à la facture finale."
+        "after": "Tout reste relié au dossier client, du devis initial à la facture finale.",
+        "name": "Facturation"
       }
     ],
     "before_label": "Avant Traviosoft",
@@ -267,29 +260,30 @@
     "meta_title": "Tarifs - Traviosoft",
     "meta_description": "Un modèle de tarification simple, sans frais cachés, adapté aux agences de voyage boutique. Réservez une démo pour recevoir votre tarif.",
     "intro": {
-      "headline": "Un tarif simple, adapté à votre agence",
-      "text": "Pas de matrice de fonctionnalités à la carte, pas de modules payants en plus. Traviosoft fonctionne avec une formule unique, pensée pour les agences boutique."
+      "headline": "Un seul produit, façonné autour de votre agence. Un tarif adapté à la taille de votre équipe.",
+      "text": "Traviosoft s'adapte à la façon dont votre agence travaille, et non l'inverse. La seule chose qui fixe votre tarif, c'est le nombre de personnes de votre équipe qui l'utilisent."
     },
     "model": {
-      "title": "Une seule formule, tout inclus",
+      "title": "Un Traviosoft qui colle à votre agence, dimensionné à votre équipe",
       "points": [
-        "Un seul plan, sans paliers de fonctionnalités à débloquer séparément",
-        "Pas de frais de mise en place caché",
+        "Adapté à la façon dont votre agence travaille, pour qu'il vous semble fait sur mesure",
+        "Un tarif fixé par la taille de votre équipe (petite équipe, équipe qui grandit, équipe complète), vous ne payez que les sièges que vous utilisez",
+        "Pas de frais de mise en place ni d'onboarding cachés",
         "Facturation mensuelle ou annuelle, au choix"
       ],
-      "text": "Nous préférons un modèle simple et lisible plutôt qu'une grille tarifaire à 10 lignes qui demande une calculatrice pour la comprendre."
+      "text": "Une agence d'une personne et une équipe de quinze n'ont pas besoin de logiciels différents, juste d'un tarif adapté à leur taille. Nous avons donc gardé un seul produit, et c'est la taille de votre équipe qui fixe le tarif."
     },
     "trial": {
       "title": "Testez avant de vous engager",
       "text": "Une période d'essai est proposée pour découvrir Traviosoft sur vos propres dossiers, sans engagement de départ."
     },
     "why_no_price": {
-      "title": "Pourquoi on en parle plutôt en visio",
-      "text": "Chaque agence a une organisation différente : nombre de personnes, volume de devis, besoins spécifiques. Plutôt qu'un prix générique qui ne reflète pas votre situation, nous préférons en discuter directement avec vous pendant la démo, pour vous donner un tarif adapté et répondre à vos questions en direct."
+      "title": "Vous obtenez votre tarif pendant la démo",
+      "text": "Nous le fixons avec vous pendant la démo, selon la taille de votre équipe et votre façon de travailler. Vous repartez de l'appel en sachant exactement ce que Traviosoft coûte pour votre agence."
     },
     "final_cta": {
       "headline": "Recevez votre tarif en 30 minutes",
-      "text": "Réservez une démo : on regarde votre activité ensemble et on vous donne un tarif clair, adapté à votre agence.",
+      "text": "Réservez une démo : on regarde votre agence ensemble, on ajuste le tarif à la taille de votre équipe, et on vous donne un montant clair.",
       "cta": "Réserver une démo pour recevoir votre tarif"
     }
   },
@@ -297,24 +291,20 @@
     "meta_title": "À propos - Traviosoft",
     "meta_description": "Traviosoft est né du besoin réel d'une agence de voyage boutique. Découvrez la philosophie derrière le produit.",
     "intro": {
-      "headline": "Un outil pensé pour les agences boutique, pas pour les géants du voyage",
-      "text": "Traviosoft n'a pas été imaginé dans un comité produit déconnecté du terrain. Il est né d'un besoin concret : celui d'une agence de voyage qui devait jongler entre Excel, Word, emails et WhatsApp pour gérer son activité."
+      "headline": "Pensé pour les agences boutique que les gros logiciels oublient",
+      "text": "Traviosoft est parti d'un vrai problème : une agence de voyage qui jonglait entre Excel, Word et des messageries sans fin juste pour faire avancer ses voyages. Nous avons construit l'outil dont cette agence avait réellement besoin, et nous avons continué à partir de là."
     },
     "story": {
       "title": "Conçu avec une vraie agence",
-      "text": "Traviosoft a été développé avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure. Cette agence utilise Traviosoft au quotidien pour gérer l'intégralité de son activité : demandes clients, devis, commandes, paiements, prestataires et facturation. Le produit continue d'évoluer à partir de besoins réels rencontrés sur le terrain, pas de suppositions abstraites sur ce dont une agence «devrait» avoir besoin."
+      "text": "Traviosoft a été développé avec et pour une agence de voyage boutique basée en Espagne, spécialisée dans les voyages sur-mesure. Chaque partie vient d'un vrai besoin quotidien que nous avons vu l'équipe rencontrer."
     },
     "philosophy": {
       "title": "Conçu pour les petites structures",
-      "text": "La plupart des logiciels de gestion pour le tourisme sont pensés pour de grosses structures : équipes commerciales nombreuses, processus complexes, modules qu'on n'utilisera jamais. Traviosoft prend le chemin inverse : un outil simple, centré sur les besoins réels d'une équipe de 2 à 15 personnes qui gère des voyages sur-mesure."
+      "text": "La plupart des logiciels de gestion pour le tourisme sont conçus pour de grandes structures, avec des processus lourds et des modules qu'une petite agence n'ouvrira jamais. Traviosoft en est la version simple : centrée sur ce qu'une équipe de 2 à 15 personnes qui gère des voyages sur-mesure fait vraiment chaque jour."
     },
     "support": {
-      "title": "Un accompagnement humain, pas une boîte noire",
-      "text": "Quand vous nous contactez, vous parlez à quelqu'un qui connaît à la fois le produit et le métier d'agence de voyage. La démo initiale n'est pas un argumentaire commercial scripté : c'est l'occasion de regarder ensemble comment Traviosoft s'adapte (ou non) à votre façon de travailler."
-    },
-    "ai": {
-      "title": "L'IA comme assistant, jamais comme décideur",
-      "text": "Traviosoft intègre des fonctions d'intelligence artificielle pour vous faire gagner du temps : brouillons de réponses, aide à la rédaction, assistant capable de proposer des actions. Mais une règle reste centrale : aucune écriture dans vos données ne se fait sans votre validation explicite. L'IA prépare, vous décidez."
+      "title": "De vraies personnes qui connaissent le métier",
+      "text": "Quand vous nous contactez, vous parlez à quelqu'un qui connaît à la fois le produit et le métier d'agence de voyage. La première démo est une séance de travail : on regarde ensemble comment Traviosoft s'adapte à votre façon de travailler, et on est honnête quand ce n'est pas le cas."
     },
     "final_cta": {
       "headline": "Discutons de votre activité",
@@ -324,7 +314,7 @@
   },
   "demo": {
     "meta_title": "Réserver une démo - Traviosoft",
-    "meta_description": "Réservez une démo de 30 minutes pour découvrir comment Traviosoft s'adapte à votre agence de voyage. Sans engagement, sans carte bancaire.",
+    "meta_description": "Réservez une démo de 30 minutes pour découvrir comment Traviosoft s'adapte à votre agence de voyage. Sans engagement, sans script commercial.",
     "hero": {
       "headline": "Réservez votre démo de 30 minutes",
       "subheadline": "On regarde ensemble comment Traviosoft s'adapte à votre activité. Pas de script commercial, pas d'engagement."
@@ -344,8 +334,8 @@
       "points": [
         "Vous gérez une agence de voyage sur-mesure, une DMC ou un réceptif spécialisé",
         "Votre équipe compte entre 2 et 15 personnes",
-        "Vous gérez aujourd'hui vos devis, paiements ou prestataires avec Excel, Word, email ou WhatsApp",
-        "Vous voulez professionnaliser vos documents clients (devis, fiches de service) sans changer toute votre organisation"
+        "Vous gérez aujourd'hui vos devis, paiements ou prestataires avec Excel, Word ou un logiciel qui n'a pas été pensé pour les agences de voyage",
+        "Vous voulez professionnaliser vos devis et vos documents clients sans changer toute votre organisation"
       ]
     },
     "fit_no": {
@@ -358,7 +348,6 @@
     "reassurance": {
       "title": "Sans engagement",
       "points": [
-        "Aucune carte bancaire requise pour réserver la démo",
         "Aucune obligation d'achat à la suite de l'appel",
         "Vos questions sur la sécurité des données, l'import de vos données existantes ou le délai de mise en route sont les bienvenues pendant l'appel (et dans la FAQ)"
       ]
@@ -377,35 +366,31 @@
     "items": [
       {
         "question": "Mes données sont-elles en sécurité ?",
-        "answer": "Vos données sont hébergées de manière sécurisée et ne sont accessibles qu'aux utilisateurs autorisés de votre agence. L'accès aux fonctions d'intelligence artificielle se fait sous votre contrôle : l'IA peut lire certaines données pour vous assister, mais n'écrit jamais dans votre base sans validation explicite de votre part."
+        "answer": "Oui. Vos données sont sur des serveurs sécurisés, et seules les personnes que vous autorisez dans votre agence peuvent les consulter. Elles restent les vôtres, et vous pouvez les exporter quand vous voulez."
       },
       {
         "question": "Combien de temps faut-il pour démarrer ?",
-        "answer": "La mise en route dépend de votre situation actuelle (nombre de clients, devis en cours, prestataires à enregistrer). Pendant la démo, on évalue ensemble le temps nécessaire pour démarrer avec vos données réelles."
+        "answer": "Cela dépend de ce que vous reprenez : combien de clients, de devis en cours et de prestataires vous avez. Pendant la démo, on regarde vos données réelles ensemble et on vous donne une idée réaliste du temps nécessaire."
       },
       {
         "question": "Est-ce adapté si on est seul(e) ? Et si on est 10 ou 15 ?",
-        "answer": "Oui dans les deux cas. Traviosoft est pensé pour des équipes de 2 à 15 personnes, mais reste utilisable efficacement par une seule personne qui gère l'ensemble du processus, du devis à la facturation."
+        "answer": "Les deux marchent. Traviosoft est conçu pour des équipes de 2 à 15 personnes, et il fonctionne tout aussi bien pour une seule personne qui gère tout, du premier devis à la facture finale."
       },
       {
         "question": "Peut-on importer nos clients, devis ou prestataires existants ?",
-        "answer": "Selon le format de vos données actuelles (fichiers Excel, exports d'un autre outil), un import est possible. C'est un point à aborder pendant la démo pour évaluer la meilleure approche selon votre situation."
-      },
-      {
-        "question": "L'IA a-t-elle accès à mes données sans mon accord ?",
-        "answer": "Non. L'accès de l'IA à vos données est une option que vous contrôlez. Même lorsqu'elle est activée, l'IA peut lire certaines informations pour vous assister (par exemple, proposer un brouillon de réponse), mais elle ne modifie jamais vos données sans une validation explicite de votre part."
+        "answer": "En général oui. Si vos données sont dans Excel ou exportées d'un autre outil, on peut les reprendre. On décide de la meilleure façon de le faire pendant la démo, en fonction de ce que vous avez déjà."
       },
       {
         "question": "Le logiciel est-il disponible dans ma langue ?",
-        "answer": "L'interface de Traviosoft est disponible en français, anglais et espagnol."
+        "answer": "L'interface est disponible en français, anglais et espagnol, et chaque personne de votre équipe peut choisir la sienne."
       },
       {
         "question": "Que se passe-t-il si je veux arrêter ?",
-        "answer": "Vous restez propriétaire de vos données. En cas d'arrêt, un export de vos données peut être organisé. Les conditions précises sont détaillées dans nos conditions générales et peuvent être discutées directement avec vous."
+        "answer": "Vos données restent les vôtres. Si vous décidez de partir, on organise un export pour que vous les emportiez. Les conditions précises figurent dans votre contrat de service, et on vous les explique volontiers."
       },
       {
         "question": "Est-ce que Traviosoft remplace mon site web ou ma comptabilité ?",
-        "answer": "Non. Traviosoft est un outil de gestion interne pour piloter vos devis, commandes, paiements et prestataires. Il ne remplace pas votre site web (vitrine, réservation en ligne grand public) ni votre logiciel de comptabilité, même s'il peut faciliter le travail de votre comptable grâce au suivi des factures clients et fournisseurs."
+        "answer": "Non. Traviosoft est l'outil interne pour piloter vos devis, commandes, paiements et prestataires. Il ne remplace pas votre site web public ni votre logiciel de comptabilité, même si suivre vos factures clients et fournisseurs dedans facilite le travail de votre comptable."
       }
     ],
     "final_cta": {
@@ -416,6 +401,158 @@
   "legal": {
     "privacy_title": "Politique de confidentialité - Traviosoft",
     "terms_title": "Conditions générales - Traviosoft",
-    "back_home": "Retour à l'accueil"
+    "notice_title": "Mentions légales - Traviosoft",
+    "back_home": "Retour à l'accueil",
+    "updated_label": "Dernière mise à jour",
+    "updated_date": "Juin 2026",
+    "privacy": {
+      "intro": "Cette politique explique comment nous traitons les informations collectées via le site traviosoft.com. Elle concerne uniquement le site web public. L'utilisation de l'application Traviosoft par nos clients est régie par un contrat distinct.",
+      "sections": [
+        {
+          "heading": "Qui nous sommes",
+          "body": [
+            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014, l'entreprise derrière Traviosoft, un logiciel de gestion pour les agences de voyage boutique. Pour toute question sur cette politique ou sur vos données, vous pouvez nous écrire à sidoine@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "Ce que nous collectons",
+          "body": [
+            "Lorsque vous réservez une démo, vous partagez les informations que vous saisissez dans le formulaire de réservation : en général votre nom, votre adresse email et quelques éléments sur votre agence. La réservation elle-même est gérée par l'outil de prise de rendez-vous de Google, qui traite donc aussi les informations que vous y saisissez.",
+            "Comme la plupart des sites, notre hébergeur enregistre des données techniques de base, comme votre adresse IP et votre type de navigateur, dans ses journaux de serveur. Nous n'utilisons pas de traceurs publicitaires et ne constituons pas de profils marketing."
+          ]
+        },
+        {
+          "heading": "Comment nous utilisons vos informations",
+          "body": [
+            "Nous utilisons les informations que vous nous donnez pour répondre à votre demande de démo, préparer l'appel et assurer le suivi au sujet de Traviosoft. Les journaux techniques servent à garder le site sûr et fonctionnel. Nous ne vendons jamais vos données et ne les partageons qu'avec les prestataires nécessaires au fonctionnement du site et de la réservation.",
+            "Lorsque la loi exige une base légale, nous nous appuyons sur votre demande (organiser la démo que vous avez sollicitée) et sur notre intérêt légitime à sécuriser le site et à rester en contact avec les personnes qui nous ont écrit."
+          ]
+        },
+        {
+          "heading": "Services tiers",
+          "body": [
+            "Le calendrier de démo est fourni par Google. La réservation d'un créneau est soumise aux conditions et à la politique de confidentialité de Google. Le site est diffusé via l'hébergement et le réseau de Cloudflare. Ces prestataires traitent des données limitées pour notre compte afin de faire fonctionner la réservation et le site."
+          ]
+        },
+        {
+          "heading": "Cookies",
+          "body": [
+            "Le site n'utilise que les cookies nécessaires à son fonctionnement et à la mémorisation de votre choix de langue. Le calendrier de réservation intégré peut déposer ses propres cookies, gérés par Google. Nous n'utilisons pas de cookies publicitaires."
+          ]
+        },
+        {
+          "heading": "Combien de temps nous les conservons",
+          "body": [
+            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant une durée raisonnable. Les journaux techniques ne sont conservés que le temps court nécessaire à la sécurité et à la maintenance."
+          ]
+        },
+        {
+          "heading": "Vos droits",
+          "body": [
+            "Vous pouvez demander à consulter les données que nous détenons sur vous, à les corriger ou à les supprimer. Pour faire une demande, écrivez-nous à sidoine@traviosoft.com. L'entreprise étant établie en France, vous pouvez aussi introduire une réclamation auprès de la CNIL."
+          ]
+        },
+        {
+          "heading": "Modifications de cette politique",
+          "body": [
+            "Nous pouvons mettre à jour cette politique à mesure que le site évolue. La date en haut de page indique sa dernière modification."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "intro": "Ces conditions régissent votre utilisation du site traviosoft.com. Elles s'appliquent uniquement au site web public. L'abonnement et l'utilisation de l'application Traviosoft font l'objet d'un contrat distinct signé avec chaque client.",
+      "sections": [
+        {
+          "heading": "Qui édite ce site",
+          "body": [
+            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014. Vous pouvez nous contacter à sidoine@traviosoft.com. Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis."
+          ]
+        },
+        {
+          "heading": "Utilisation du site",
+          "body": [
+            "En naviguant sur traviosoft.com, vous acceptez ces conditions. Le site existe pour présenter Traviosoft et vous permettre de réserver une démo. Vous vous engagez à ne pas en faire un usage abusif, par exemple en tentant de le perturber, d'y accéder par extraction automatisée ou d'interférer avec sa sécurité."
+          ]
+        },
+        {
+          "heading": "La réservation de démo",
+          "body": [
+            "Réserver une démo est gratuit et ne crée aucune obligation d'achat. Un créneau est proposé sous réserve de disponibilité et peut être reporté ou annulé par l'une ou l'autre partie. Tout tarif évoqué pendant une démo est une estimation pour votre situation, et non une offre ferme tant qu'il n'est pas formalisé dans un contrat signé."
+          ]
+        },
+        {
+          "heading": "Informations présentes sur le site",
+          "body": [
+            "Nous maintenons le contenu de ce site aussi exact et à jour que possible, mais il est fourni à titre d'information générale. Les fonctionnalités, descriptions et tarifs peuvent évoluer avec le produit. Le site est fourni « en l'état », sans garantie de disponibilité permanente ni d'absence d'erreur."
+          ]
+        },
+        {
+          "heading": "Propriété intellectuelle",
+          "body": [
+            "Le nom Traviosoft, le contenu, le design et les visuels de ce site appartiennent à Traviosoft. Vous ne pouvez pas les copier, les réutiliser ou les redistribuer sans notre autorisation écrite."
+          ]
+        },
+        {
+          "heading": "Liens et services externes",
+          "body": [
+            "Le calendrier de démo est hébergé par Google et le site est diffusé via Cloudflare. Nous ne sommes pas responsables du contenu ni des pratiques de ces services tiers, qui sont régis par leurs propres conditions."
+          ]
+        },
+        {
+          "heading": "Responsabilité",
+          "body": [
+            "Dans la mesure permise par la loi, nous ne sommes pas responsables des préjudices indirects découlant de votre utilisation de ce site. Rien dans ces conditions ne limite un droit dont vous disposez et auquel il ne peut être renoncé selon la loi applicable."
+          ]
+        },
+        {
+          "heading": "Droit applicable",
+          "body": [
+            "Ces conditions sont régies par le droit français. Tout litige relatif au site relève des tribunaux français compétents."
+          ]
+        },
+        {
+          "heading": "Modifications de ces conditions",
+          "body": [
+            "Nous pouvons mettre à jour ces conditions de temps à autre. La date en haut de page indique leur dernière modification. En continuant à utiliser le site, vous acceptez la version en vigueur."
+          ]
+        }
+      ]
+    },
+    "notice": {
+      "intro": "Informations légales du site traviosoft.com, fournies conformément à la loi française.",
+      "sections": [
+        {
+          "heading": "Éditeur du site",
+          "body": [
+            "Ce site est édité par Sidoine Dantin EI, entreprise individuelle immatriculée en France sous le SIRET 941 883 779 00014. Adresse du siège : 137 rue à Vaches, 62610 Balinghem, France. Directeur de la publication : Sidoine Dantin. Contact : sidoine@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "Hébergement",
+          "body": [
+            "Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis (cloudflare.com)."
+          ]
+        },
+        {
+          "heading": "Propriété intellectuelle",
+          "body": [
+            "Le nom Traviosoft, le contenu, le design et les visuels de ce site appartiennent à Sidoine Dantin EI. Toute réutilisation sans autorisation écrite est interdite."
+          ]
+        },
+        {
+          "heading": "Données personnelles",
+          "body": [
+            "Le traitement des données collectées via le site est décrit dans notre Politique de confidentialité, où vous pouvez aussi exercer vos droits, y compris auprès de la CNIL."
+          ]
+        },
+        {
+          "heading": "Contact",
+          "body": [
+            "Pour toute question sur le site, écrivez à sidoine@traviosoft.com."
+          ]
+        }
+      ]
+    }
   }
 }

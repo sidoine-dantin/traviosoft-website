@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Reveal } from '@/components/ui/reveal';
@@ -17,6 +17,8 @@ const CALENDAR_URL =
 
 export default function DemoPage() {
   const t = useTranslations('demo');
+  const locale = useLocale();
+  const calendarSrc = `${CALENDAR_URL}&hl=${locale}`;
   const expectPoints = t.raw('what_to_expect.points') as string[];
   const fitYesPoints = t.raw('fit_yes.points') as string[];
   const fitNoPoints = t.raw('fit_no.points') as string[];
@@ -33,7 +35,7 @@ export default function DemoPage() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <Reveal>
             <h1 style={{
-              fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+              fontFamily: 'var(--font-display, Georgia, serif)',
               fontSize: 'clamp(2rem, 4vw, 3.5rem)',
               fontWeight: 400, color: 'white',
               letterSpacing: '-0.02em', marginBottom: '1rem',
@@ -62,10 +64,10 @@ export default function DemoPage() {
               backgroundColor: 'var(--color-surface)'
             }}>
               <iframe
-                src={CALENDAR_URL}
+                src={calendarSrc}
                 width="100%"
-                height="600"
-                style={{ border: 'none', display: 'block' }}
+                height="820"
+                style={{ border: 'none', display: 'block', width: '100%', minHeight: '820px' }}
                 title={t('final_cta.headline')}
                 loading="lazy"
               />
@@ -104,7 +106,7 @@ export default function DemoPage() {
                   ))}
                 </ul>
                 <p style={{
-                  fontFamily: 'var(--font-instrument-serif, Georgia, serif)',
+                  fontFamily: 'var(--font-display, Georgia, serif)',
                   fontSize: '0.9375rem', fontStyle: 'italic',
                   color: 'var(--color-muted)', lineHeight: 1.65, margin: 0
                 }}>
