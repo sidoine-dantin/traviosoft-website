@@ -12,6 +12,7 @@ export const pagePaths = [
   '/about',
   '/demo',
   '/faq',
+  '/blog',
   '/legal/privacy',
   '/legal/terms',
   '/legal/notice'

@@ -6,6 +6,7 @@
     "pricing": "Precios",
     "about": "Quiénes somos",
     "faq": "Preguntas frecuentes",
+    "blog": "Blog",
     "book_demo": "Reservar una demo"
   },
   "footer": {
@@ -554,5 +555,16 @@
         }
       ]
     }
+  },
+  "blog": {
+    "meta_title": "Blog - Traviosoft",
+    "meta_description": "Artículos sobre la gestión de una agencia de viajes, presupuestos, pedidos y pagos, por el equipo de Traviosoft.",
+    "intro": {
+      "headline": "El blog de Traviosoft",
+      "text": "Notas sobre la gestión diaria de una agencia de viajes."
+    },
+    "empty": "Todavía no hay artículos, vuelve pronto.",
+    "read_more": "Leer artículo",
+    "back_to_blog": "Volver al blog"
   }
 }

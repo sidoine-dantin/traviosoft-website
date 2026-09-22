@@ -6,6 +6,7 @@
     "pricing": "Pricing",
     "about": "About",
     "faq": "FAQ",
+    "blog": "Blog",
     "book_demo": "Book a demo"
   },
   "footer": {
@@ -554,5 +555,16 @@
         }
       ]
     }
+  },
+  "blog": {
+    "meta_title": "Blog - Traviosoft",
+    "meta_description": "Articles on running a travel agency, quotes, orders and payments, from the team behind Traviosoft.",
+    "intro": {
+      "headline": "The Traviosoft blog",
+      "text": "Notes on running a travel agency day to day."
+    },
+    "empty": "No articles yet, check back soon.",
+    "read_more": "Read article",
+    "back_to_blog": "Back to blog"
   }
 }

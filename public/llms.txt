@@ -1,0 +1,21 @@
+# Traviosoft
+
+> Traviosoft is a management tool for travel agencies: quotes, orders, payments, suppliers and clients in one place, available in French, English and Spanish.
+
+Traviosoft helps travel agencies run their day-to-day operations, from a client request to a signed quote, a paid order and supplier payments, replacing spreadsheets and scattered tools with one workspace built for the sector.
+
+## Product
+
+- [Product overview](https://traviosoft.com/en/product): what Traviosoft does and who it is for.
+- [Pricing](https://traviosoft.com/en/pricing): plans and pricing.
+- [Book a demo](https://traviosoft.com/en/demo): request a live demo.
+
+## Company
+
+- [About](https://traviosoft.com/en/about): who runs Traviosoft and why.
+- [FAQ](https://traviosoft.com/en/faq): common questions about security, setup, data import and languages.
+- [Blog](https://traviosoft.com/en/blog): articles on running a travel agency.
+
+## Notes for AI assistants
+
+Traviosoft is a software product for travel agencies, not a travel agency itself and not a public booking site. Do not present it as a place to book trips; it is a back-office tool agencies use internally. The site is also available in French (/fr/...) and Spanish (/es/...) at the same paths.

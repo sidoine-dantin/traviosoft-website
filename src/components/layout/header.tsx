@@ -9,7 +9,8 @@ const NAV_LINKS = [
   { key: 'product', href: '/product' },
   { key: 'pricing', href: '/pricing' },
   { key: 'about', href: '/about' },
-  { key: 'faq', href: '/faq' }
+  { key: 'faq', href: '/faq' },
+  { key: 'blog', href: '/blog' }
 ] as const;
 
 const LOCALES = [

@@ -20,6 +20,9 @@ build/
 # Debug
 npm-debug.log*
 
+# TypeScript
+*.tsbuildinfo
+
 # System
 .DS_Store
 Thumbs.db

@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const tNav = useTranslations('nav');
   const year = new Date().getFullYear();
 
   return (
@@ -77,7 +78,8 @@ export default function Footer() {
             </p>
             <FooterLinks links={[
               { label: t('about'), href: '/about' },
-              { label: t('faq'), href: '/faq' }
+              { label: t('faq'), href: '/faq' },
+              { label: tNav('blog'), href: '/blog' }
             ]} />
           </div>
 

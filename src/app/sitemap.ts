@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { baseUrl, pagePaths } from '@/lib/seo';
+import { getAllBlogSlugs } from '@/lib/blog';
 
 const priorityByPath: Record<string, number> = {
   '': 1,
@@ -24,7 +25,7 @@ const changeFrequencyByPath: Record<string, MetadataRoute.Sitemap[number]['chang
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return pagePaths.flatMap(path =>
+  const staticEntries = pagePaths.flatMap(path =>
     routing.locales.map(locale => ({
       url: `${baseUrl}/${locale}${path}`,
       lastModified,
@@ -37,4 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     }))
   );
+
+  const blogEntries = routing.locales.flatMap(locale =>
+    getAllBlogSlugs(locale).map(slug => ({
+      url: `${baseUrl}/${locale}/blog/${slug}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6
+    }))
+  );
+
+  return [...staticEntries, ...blogEntries];
 }
