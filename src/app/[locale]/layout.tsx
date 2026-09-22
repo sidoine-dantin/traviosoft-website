@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { ConsentBanner } from '@/components/consent-banner';
 import { baseUrl, siteName } from '@/lib/seo';
 import '../globals.css';
 
@@ -106,6 +107,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header />
           <main>{children}</main>
           <Footer />
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

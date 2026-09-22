@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Reveal } from '@/components/ui/reveal';
 import { buildMetadata } from '@/lib/seo';
+import { DemoLeadPixel } from '@/components/demo-lead-pixel';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,6 +27,7 @@ export default function DemoPage() {
 
   return (
     <>
+      <DemoLeadPixel />
       {/* Hero */}
       <section style={{
         backgroundColor: 'var(--color-primary)',

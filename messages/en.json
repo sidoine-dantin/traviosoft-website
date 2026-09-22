@@ -566,5 +566,10 @@
     "empty": "No articles yet, check back soon.",
     "read_more": "Read article",
     "back_to_blog": "Back to blog"
+  },
+  "consent": {
+    "message": "We use a cookie to measure how visitors reach this site, only after you agree.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

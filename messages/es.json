@@ -566,5 +566,10 @@
     "empty": "Todavía no hay artículos, vuelve pronto.",
     "read_more": "Leer artículo",
     "back_to_blog": "Volver al blog"
+  },
+  "consent": {
+    "message": "Usamos una cookie para medir cómo llegan los visitantes a este sitio, solo tras tu consentimiento.",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   }
 }
