@@ -22,7 +22,11 @@
     "terms": "Condiciones generales",
     "legal_notice": "Aviso legal",
     "tagline": "Software de gestión para agencias de viajes boutique",
-    "copyright": "Traviosoft"
+    "copyright": "Traviosoft",
+    "company_details": "Datos de la empresa",
+    "legal_name_placeholder": "[Razón social]",
+    "address_placeholder": "[Domicilio social]",
+    "registration_placeholder": "[Número de registro / NIF]"
   },
   "home": {
     "meta_title": "Traviosoft - El software de gestión para agencias de viajes boutique",
@@ -31,7 +35,9 @@
       "headline": "La herramienta de gestión diseñada para agencias de viaje boutique",
       "subheadline": "Presupuestos, pedidos, pagos y proveedores, todo en un solo lugar, sin hojas de Excel ni documentos de Word dispersos.",
       "cta_primary": "Reservar una demo",
-      "cta_secondary": "Ver cómo funciona"
+      "cta_secondary": "Ver cómo funciona",
+      "cta_tour": "Ver el recorrido de 2 minutos",
+      "shot": "panel de control"
     },
     "pain_points": {
       "title": "¿Te suena este día a día?",
@@ -46,18 +52,22 @@
       "title": "Una sola plataforma, desde el primer contacto hasta la factura",
       "flow": "Solicitud del cliente → Presupuesto → Pedido → Coordinación de proveedores → Pagos controlados → Facturación",
       "description": "Todo está conectado: un presupuesto aceptado genera automáticamente un pedido con sus tareas, y cada plazo de pago queda vinculado al presupuesto y al cliente correspondiente.",
-      "cta": "Descubrir el funcionamiento paso a paso"
+      "cta": "Ver cómo funciona, paso a paso"
     },
     "pillars": {
       "title": "Lo que Traviosoft cambia en el día a día",
       "p1_title": "Ahorrar tiempo en tareas repetitivas",
       "p1_text": "Prepara un presupuesto en minutos, con el total y tu margen calculados por ti. En cuanto el cliente acepta, el pedido y todo lo que hay que preparar aparecen solos.",
       "p2_title": "Profesionalizar la relación con el cliente",
-      "p2_text": "Presupuestos y hojas de servicio cuidados que causan buena impresión, seguimiento claro de cada solicitud (nueva, pendiente de respuesta, gestionada) e historial completo por cliente.",
+      "p2_text": "Presupuestos en PDF y hojas de servicio con tu imagen, una página web por viaje donde tu cliente encuentra el itinerario y las entradas que compartes, seguimiento claro de cada solicitud e historial completo por cliente.",
       "p3_title": "Controlar pagos y facturación",
-      "p3_text": "Define plazos de pago directamente en el presupuesto, asocia un enlace de pago a cada plazo, y controla tus facturas de clientes y proveedores con estados claros (borrador, emitida, parcialmente pagada, pagada).",
+      "p3_text": "Define plazos de pago en el presupuesto y asocia un enlace de pago a cada uno, generado desde tu tienda WooCommerce o copiado del proveedor de pagos que ya usas. Las facturas de clientes aplican el Régimen Especial de Agencias de Viajes (REAV), y las de proveedores están al lado.",
       "p4_title": "Centralizar proveedores, guías y catálogo",
-      "p4_text": "Fichas de proveedores y guías con contactos, documentos e idiomas. Catálogo de servicios con categorías y precios por temporada. Todo conectado con tus presupuestos y pedidos."
+      "p4_text": "Fichas de proveedores y guías con contactos, documentos e idiomas. Catálogo de servicios con categorías y precios por temporada. Todo conectado con tus presupuestos y pedidos.",
+      "p1_shot": "creación del presupuesto con total y margen",
+      "p2_shot": "presupuesto en PDF con tu imagen",
+      "p3_shot": "calendario de pagos con enlaces de pago",
+      "p4_shot": "ficha de proveedor"
     },
     "steps_preview": {
       "title": "Del primer mensaje del cliente a la factura final, en 6 pasos",
@@ -69,11 +79,6 @@
       "step6": "Se factura, tanto al cliente como a los proveedores",
       "cta": "Ver el detalle de cada paso"
     },
-    "trust": {
-      "title": "Una herramienta nacida del día a día real, no de un documento abstracto",
-      "text": "Traviosoft se ha desarrollado con y para una agencia de viajes boutique con sede en España, especializada en viajes a medida. El producto sigue evolucionando en contacto con agencias como la tuya, con un objetivo simple: sustituir los Excel y Word dispersos por una herramienta pensada para el sector.",
-      "cta": "Reservar una demo y comentarlo"
-    },
     "multilang": {
       "title": "Pensado para equipos y clientes internacionales",
       "text": "La interfaz está disponible en español, francés e inglés. Tus presupuestos, fichas de proveedores y documentos pueden gestionarse en el idioma adecuado para cada interlocutor, sin duplicar herramientas."
@@ -82,6 +87,12 @@
       "headline": "¿Listo para ver Traviosoft funcionando con tu actividad?",
       "text": "En 30 minutos, vemos juntos cómo Traviosoft se adapta a tu forma de trabajar, sin compromiso.",
       "cta": "Reservar una demo"
+    },
+    "tour": {
+      "title": "Traviosoft en dos minutos",
+      "text": "Un recorrido breve por un expediente: la solicitud, el presupuesto y su PDF, el pedido, los pagos y la página de itinerario que recibe tu cliente.",
+      "video_subject": "recorrido del producto (60 a 90 segundos)",
+      "video_title": "Recorrido del producto Traviosoft"
     }
   },
   "product": {
@@ -90,7 +101,8 @@
     "intro": {
       "headline": "Menos tiempo en administración. Más tiempo vendiendo viajes.",
       "text": "No montaste una agencia de viajes para pelearte con hojas de Excel. Así son tus días cuando cada presupuesto, cada pago y cada proveedor viven en un solo lugar.",
-      "cta": "Reservar una demo"
+      "cta": "Reservar una demo",
+      "shot": "presupuesto en PDF con tu imagen"
     },
     "modules": {
       "requests": {
@@ -161,14 +173,14 @@
         "benefit": "Una vista clara de quién ha pagado, quién no, y qué debes a tus proveedores.",
         "points": [
           "Ves de un vistazo quién ha pagado la señal y a quién le falta el resto antes de la salida",
-          "Divides un viaje en plazos con sus fechas, y asocias un enlace de pago a cada uno",
-          "Sigues tus facturas de clientes y proveedores con estados claros, en el mismo sitio"
+          "Divides un viaje en plazos con sus fechas, y asocias un enlace de pago a cada uno (desde tu tienda WooCommerce, o desde el proveedor que ya usas)",
+          "Sigues tus facturas de clientes y proveedores con estados claros, en el mismo sitio, con el REAV integrado"
         ],
         "change": "La hoja del «¿han pagado?» desaparece, y con ella el recordatorio olvidado."
       },
       "reports": {
-        "title": "Ve de verdad cómo va el negocio",
-        "benefit": "Una vista de conjunto clara de tu actividad, sin montar una sola hoja de cálculo.",
+        "title": "Ve qué te espera y cómo va el negocio",
+        "benefit": "Un panel con lo que hay que hacer hoy, e informes de tu actividad, sin montar una sola hoja de cálculo.",
         "points": [
           "Una única vista de presupuestos, pedidos y pagos, siempre al día",
           "Cifras fiables, porque salen directamente de tus expedientes reales"
@@ -195,6 +207,35 @@
     "final_cta": {
       "headline": "Imagina toda tu agencia funcionando desde una sola pantalla, con tranquilidad",
       "cta": "Reservar una demo"
+    },
+    "highlights": {
+      "title": "Lo primero que notan las agencias",
+      "items": [
+        {
+          "key": "itinerary",
+          "title": "Una página del viaje para tu cliente, creada desde el pedido",
+          "text": "Comparte un enlace y tu cliente ve su viaje día a día: horarios, puntos de encuentro, el contacto del guía, y las entradas y bonos que decidas compartir. La página sigue el pedido en directo: si corriges una hora, también se corrige para él. Puedes revocar el enlace en cualquier momento.",
+          "shot": "página de itinerario del cliente en el móvil"
+        },
+        {
+          "key": "payments",
+          "title": "Un enlace de pago en cada plazo",
+          "text": "Divide un viaje en señal y saldo, y asocia un enlace de pago a cada uno: generado desde tu tienda WooCommerce, donde el pago se registra solo, o copiado de cualquier proveedor de pagos que ya uses.",
+          "shot": "pagos del pedido con enlaces de pago"
+        },
+        {
+          "key": "reav",
+          "title": "Facturas con el Régimen Especial de Agencias de Viajes",
+          "text": "Las facturas usan por defecto el REAV: el IVA se calcula sobre tu margen, la mención legal aparece en la factura, y ves la cuota de IVA REAV a declarar.",
+          "shot": "factura en PDF con la mención REAV"
+        },
+        {
+          "key": "dashboard",
+          "title": "Un panel que te dice qué te espera hoy",
+          "text": "Solicitudes nuevas, presupuestos que seguir, reservas por hacer, pagos de clientes y a proveedores pendientes o atrasados: una sola pantalla, construida con tus expedientes reales.",
+          "shot": "panel de control"
+        }
+      ]
     }
   },
   "how_it_works": {
@@ -221,21 +262,21 @@
       },
       {
         "title": "El cliente dice que sí y el trabajo se organiza solo",
-        "description": "En cuanto el cliente acepta, el viaje pasa a preparación por sí solo: se crea un pedido con una lista lista de todo lo que hay que organizar (reservas, documentos a preparar, etc.). Y cuando el cliente paga, el pago se registra automáticamente en la aplicación, así siempre sabes en qué punto estás.",
+        "description": "En cuanto el cliente acepta, el viaje pasa a preparación por sí solo: se crea un pedido con una lista lista de todo lo que hay que organizar (reservas, documentos a preparar, etc.). Cuando el cliente paga online con un enlace de tu tienda WooCommerce, el pago se registra solo en la aplicación.",
         "before": "Hay que releer el presupuesto aceptado y recrear manualmente una lista de tareas en otra herramienta.",
         "after": "El pedido y su lista de tareas existen desde el momento en que se acepta el presupuesto, y los pagos se registran solos.",
         "name": "Pedidos"
       },
       {
         "title": "Coordinación de proveedores y hojas de servicio",
-        "description": "El equipo sigue la lista de tareas del pedido, prepara las hojas de servicio para el día del servicio, y coordina proveedores y guías a partir de sus fichas (contactos, documentos, idiomas hablados).",
+        "description": "El equipo sigue la lista de tareas del pedido, prepara las hojas de servicio para el día del servicio, y coordina proveedores y guías a partir de sus fichas (contactos, documentos, idiomas hablados). El cliente recibe una página web con su itinerario y las entradas que decidas compartir.",
         "before": "La coordinación pasa por correos y mensajes dispersos.",
         "after": "Cada tarea, proveedor y documento está vinculado al pedido correspondiente.",
         "name": "Coordinación"
       },
       {
         "title": "Pagos controlados, nada se olvida",
-        "description": "Divide el viaje en varios pagos (un anticipo y luego el saldo, por ejemplo) y Traviosoft vigila cada uno: lo que se debe, lo que ya está pagado y lo que aún necesita un recordatorio, todo en el mismo lugar.",
+        "description": "Divide el viaje en varios pagos (un anticipo y luego el saldo, por ejemplo) y asocia un enlace de pago a cada uno. Traviosoft vigila cada uno: lo que se debe, lo que ya está pagado y lo que aún necesita un recordatorio, todo en el mismo lugar.",
         "before": "El seguimiento de pagos vive en una hoja de Excel separada, con riesgo de olvidar un recordatorio.",
         "after": "Cada plazo está vinculado al presupuesto y al pedido, con su estado de pago.",
         "name": "Pagos"
@@ -258,33 +299,41 @@
   },
   "pricing": {
     "meta_title": "Precios - Traviosoft",
-    "meta_description": "Un modelo de precios simple, sin costes ocultos, pensado para agencias de viajes boutique. Reserva una demo para recibir tu tarifa.",
+    "meta_description": "Un precio simple por agencia: {price} al mes hasta {users} usuarios, o {yearly} al año. Prueba gratuita de {days} días. Reserva una demo para verlo funcionar.",
     "intro": {
-      "headline": "Un solo producto, adaptado a tu agencia. Un precio para el tamaño de tu equipo.",
-      "text": "Traviosoft se adapta a la forma de trabajar de tu agencia, y no al revés. Lo único que fija tu precio es cuántas personas de tu equipo lo usan."
+      "headline": "Un precio simple, por agencia",
+      "text": "Sin precio por módulo, sin costes de puesta en marcha sorpresa. Un solo producto, un solo precio para un equipo de hasta {users} personas, y una prueba gratuita para juzgarlo con tus propios expedientes."
     },
     "model": {
-      "title": "Un Traviosoft que encaja con tu agencia, ajustado a tu equipo",
+      "title": "Qué incluye",
       "points": [
-        "Adaptado a la forma de trabajar de tu agencia, para que lo sientas hecho a tu medida",
-        "Un precio fijado por el tamaño de tu equipo (equipo pequeño, equipo que crece, equipo completo), pagas solo por los puestos que usas",
-        "Sin costes de implementación ni de puesta en marcha ocultos",
+        "Hasta {users} usuarios en tu agencia",
+        "La interfaz en español, inglés y francés, a elegir por cada usuario",
+        "Ayuda para traer tus clientes y proveedores desde Excel",
+        "Sin costes de implementación ni de puesta en marcha",
         "Facturación mensual o anual, a elegir"
       ],
-      "text": "Una agencia de una persona y un equipo de quince no necesitan softwares distintos, solo un precio adaptado a su tamaño. Por eso mantuvimos un solo producto, y es el tamaño de tu equipo el que fija el precio."
+      "text": "Una agencia de una persona y un equipo de cinco usan el mismo producto. Si creces más allá, lo hablamos entonces."
     },
     "trial": {
-      "title": "Pruébalo antes de comprometerte",
-      "text": "Se ofrece un periodo de prueba para descubrir Traviosoft con tus propios expedientes, sin compromiso inicial."
-    },
-    "why_no_price": {
-      "title": "Recibes tu precio durante la demo",
-      "text": "Lo fijamos contigo durante la demo, según el tamaño de tu equipo y tu forma de trabajar. Sales de la llamada sabiendo exactamente cuánto cuesta Traviosoft para tu agencia."
+      "title": "Pruébalo durante {days} días",
+      "text": "Después de la demo, creamos tu propio espacio para que pruebes Traviosoft con tus expedientes reales durante {days} días, gratis y sin compromiso."
     },
     "final_cta": {
-      "headline": "Recibe tu tarifa en 30 minutos",
-      "text": "Reserva una demo: vemos tu agencia juntos, ajustamos el precio al tamaño de tu equipo y te damos una cifra clara.",
-      "cta": "Reservar una demo para recibir tu tarifa"
+      "headline": "Míralo funcionar antes de decidir",
+      "text": "Reserva una demo de 30 minutos: ves la herramienta con un ejemplo cercano a tu agencia, y sales con tu prueba preparada.",
+      "cta": "Reservar una demo"
+    },
+    "price": {
+      "per_month": "/ mes",
+      "per_agency": "por agencia, hasta {users} usuarios",
+      "yearly": "o {price} al año, {months} meses gratis",
+      "trial": "Prueba gratuita de {days} días",
+      "more_users": "¿Más de {users} personas en el equipo? Fijamos el precio contigo en la demo."
+    },
+    "why_demo": {
+      "title": "¿Por qué empezar con una demo?",
+      "text": "Treinta minutos bastan para ver si Traviosoft encaja con la forma de trabajar de tu agencia, y para preparar tu prueba contigo. Si no encaja, te lo decimos."
     }
   },
   "about": {
@@ -325,7 +374,7 @@
         "Una presentación de Traviosoft adaptada a tu actividad (tamaño del equipo, tipo de viajes, herramientas actuales)",
         "Una demostración concreta del recorrido presupuesto → pedido → pago → factura",
         "Tus preguntas, sin límite de tiempo artificial",
-        "Si tiene sentido para ti: una tarifa clara adaptada a tu situación"
+        "Si tiene sentido para ti: tu prueba gratuita, preparada contigo"
       ],
       "text": "Si Traviosoft no se adapta a tu actividad, te lo diremos directamente, sin rodeos."
     },
@@ -431,7 +480,8 @@
         {
           "heading": "Servicios de terceros",
           "body": [
-            "El calendario de demo lo proporciona Google. Reservar una franja está sujeto a las condiciones y la política de privacidad de Google. El sitio se sirve a través del alojamiento y la red de Cloudflare. Estos proveedores tratan datos limitados por cuenta nuestra para que la reserva y el sitio funcionen."
+            "El calendario de demo lo proporciona Google. Reservar una franja está sujeto a las condiciones y la política de privacidad de Google. El sitio se sirve a través del alojamiento y la red de Cloudflare. Estos proveedores tratan datos limitados por cuenta nuestra para que la reserva y el sitio funcionen.",
+            "Medimos las visitas con Cloudflare Web Analytics, que no usa cookies ni te sigue por otros sitios web."
           ]
         },
         {
@@ -554,5 +604,41 @@
         }
       ]
     }
+  },
+  "media": {
+    "screenshot": "Captura de pantalla: {subject}",
+    "video": "Vídeo: {subject}",
+    "photo": "Foto: {subject}"
+  },
+  "founder": {
+    "title": "Creado con una agencia de viajes a medida de Barcelona que lo usa a diario",
+    "story": "Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Su equipo gestionaba presupuestos, pagos y proveedores entre Excel, Word y WhatsApp, así que construí con ellos la herramienta que necesitaban, un problema real tras otro. Hoy llevan toda la agencia con ella cada día, y las nuevas funciones siguen naciendo de lo que les vemos hacer.",
+    "name_placeholder": "[Nombre del fundador]",
+    "role_default": "Fundador de Traviosoft",
+    "photo_subject": "retrato del fundador",
+    "testimonial_placeholder": "Testimonio de cliente: espacio reservado, oculto hasta tener una cita real aprobada"
+  },
+  "your_data": {
+    "title": "Tus datos",
+    "intro": "Las preguntas que toda agencia se hace antes de confiar sus expedientes a un producto joven.",
+    "items": [
+      {
+        "title": "Tu propia base de datos",
+        "text": "El espacio de cada agencia funciona sobre su propia base de datos, separada, con su propio almacenamiento de documentos. Tus archivos nunca se mezclan con los de otra agencia."
+      },
+      {
+        "title": "Accesos bajo tu control",
+        "text": "Solo pueden entrar los usuarios que crea tu administrador. Un enlace compartido con un cliente, como una página de itinerario, se puede revocar en cualquier momento."
+      },
+      {
+        "title": "Sin ataduras",
+        "text": "Importa tus clientes, proveedores y catálogo desde un archivo CSV, y accede a todos tus datos por una API, con claves que crea tu administrador."
+      }
+    ],
+    "todo": [
+      "TODO (propietario): ubicación del alojamiento (¿UE?) por confirmar",
+      "TODO (propietario): frecuencia y conservación de las copias de seguridad por confirmar",
+      "TODO (propietario): exportación completa de datos bajo petición, condiciones por confirmar"
+    ]
   }
 }

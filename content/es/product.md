@@ -14,6 +14,28 @@ slug: /product
 
 ---
 
+## Destacados (con capturas)
+
+**Título de sección:** Lo primero que notan las agencias
+
+### Una página del viaje para tu cliente, creada desde el pedido
+Comparte un enlace y tu cliente ve su viaje día a día: horarios, puntos de encuentro, el contacto del guía, y las entradas y bonos que decidas compartir. La página sigue el pedido en directo: si corriges una hora, también se corrige para él. Puedes revocar el enlace en cualquier momento.
+Hueco de captura: `itinerary-mobile.png` (página de itinerario del cliente en el móvil)
+
+### Un enlace de pago en cada plazo
+Divide un viaje en señal y saldo, y asocia un enlace de pago a cada uno: generado desde tu tienda WooCommerce, donde el pago se registra solo, o copiado de cualquier proveedor de pagos que ya uses.
+Hueco de captura: `payments.png` (pagos del pedido con enlaces de pago)
+
+### Facturas con el Régimen Especial de Agencias de Viajes
+Las facturas usan por defecto el REAV: el IVA se calcula sobre tu margen, la mención legal aparece en la factura, y ves la cuota de IVA REAV a declarar.
+Hueco de captura: `invoice-reav.png` (factura en PDF con la mención REAV)
+
+### Un panel que te dice qué te espera hoy
+Solicitudes nuevas, presupuestos que seguir, reservas por hacer, pagos de clientes y a proveedores pendientes o atrasados: una sola pantalla, construida con tus expedientes reales.
+Hueco de captura: `dashboard.png` (panel de control)
+
+---
+
 ## Solicitudes y CRM de clientes
 
 **Beneficio:** No pierdas ninguna solicitud y mantén todo el historial en un solo lugar.
@@ -52,7 +74,7 @@ Puntos clave:
 - Generación automática de las tareas de preparación a partir de las líneas del presupuesto
 - Hojas de servicio en PDF para el día del servicio
 - Seguimiento del estado del pedido (pendiente de pago, pagado, en curso, finalizado)
-- Enlace de pago (WooCommerce) asociable al pedido
+- Enlace de pago asociable a cada pago (generado desde tu tienda WooCommerce, o copiado de cualquier proveedor de pagos)
 
 **Lo que cambia:** Nadie tiene que preguntarse "¿qué falta por preparar para este expediente?": la lista de tareas ya existe.
 

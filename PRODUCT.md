@@ -10,7 +10,7 @@ Boutique travel agency owners and directors - typically the same person. Teams o
 
 ## Product Purpose
 
-Traviosoft is a management tool for boutique travel agencies. It covers the full client file lifecycle: client request, quote (PDF), order, supplier coordination, tracked payments, invoicing. The website's only conversion goal is to get visitors to book a 30-minute demo. No self-serve signup, no pricing table - just one call to action repeated across all pages.
+Traviosoft is a management tool for boutique travel agencies. It covers the full client file lifecycle: client request, quote (PDF), order, supplier coordination, tracked payments, invoicing. The website's only conversion goal is to get visitors to book a 30-minute demo. No self-serve signup and no multi-tier pricing table: one plan, its price shown on `/pricing` (amounts in `src/lib/site-config.ts`), and one call to action repeated across all pages. The only secondary action is watching the product tour on the home page.
 
 ## Brand Personality
 

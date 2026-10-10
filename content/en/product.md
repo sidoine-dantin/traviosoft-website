@@ -14,6 +14,28 @@ slug: /product
 
 ---
 
+## Highlights (with screenshots)
+
+**Section title:** What agencies notice first
+
+### A trip page for your client, built from the order
+Share one link and your client sees the trip day by day: times, meeting points, the guide's contact, and the tickets and vouchers you choose to share. It follows the order live, so a time you fix is fixed for them too. You can revoke the link at any time.
+Screenshot slot: `itinerary-mobile.png` (client itinerary page on a phone)
+
+### Payment links on every milestone
+Split a trip into a deposit and a balance, and attach a payment link to each: generated from your WooCommerce shop, where the payment is then recorded on its own, or pasted from any payment provider you already use.
+Screenshot slot: `payments.png` (order payments with payment links)
+
+### Invoices that follow the travel agency VAT scheme
+Invoices use the special VAT scheme for travel agencies (REAV) by default: VAT is calculated on your margin, the legal notice is printed on the invoice, and you see the REAV VAT to declare.
+Screenshot slot: `invoice-reav.png` (invoice PDF with the REAV notice)
+
+### A dashboard that tells you what needs you today
+New requests, quotes to follow up, bookings still to make, client and supplier payments due or overdue: one screen, built from your real files.
+Screenshot slot: `dashboard.png` (dashboard overview)
+
+---
+
 ## Requests & client CRM
 
 **Benefit:** Never lose a client request again, and keep the full history in one place.
@@ -52,7 +74,7 @@ Key points:
 - Preparation tasks are generated automatically from the quote's line items
 - PDF service sheets for the day of the service
 - Order status tracking (awaiting payment, paid, in progress, completed)
-- A payment link (WooCommerce) can be attached to the order
+- A payment link can be attached to each payment (generated from your WooCommerce shop, or pasted from any payment provider)
 
 **What it changes:** Nobody has to wonder "what's left to prepare for this file?": the task list already exists.
 

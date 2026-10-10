@@ -11,7 +11,9 @@ slug: /
 **Subheadline:** Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.
 
 **Primary CTA:** Book a demo
-**Secondary CTA:** See how it works
+**Secondary CTA:** Watch the 2-minute tour (→ #tour)
+
+Screenshot slot: `dashboard.png` (placeholder until the file exists, see `public/shots/README.md`)
 
 ---
 
@@ -54,10 +56,10 @@ Everything is connected: an accepted quote automatically generates an order with
 Build your quotes line by line, with automatic total and margin calculation. Export to PDF in one click. As soon as a quote is accepted, the order and its tasks are created automatically.
 
 ### 2. Make the client relationship more professional
-Quotes and service sheets in clean PDF format, structured tracking of every request (new, awaiting reply, handled), and a full history per client.
+Branded quote PDFs and service sheets that look the part, a web page per trip where your client finds the itinerary and the tickets you share, clear tracking of every request, and a full history for each client.
 
 ### 3. Stay on top of payments and invoicing
-Set payment milestones directly on the quote, attach a payment link to each one, and track client and supplier invoices with clear statuses (draft, issued, partially paid, paid).
+Set payment milestones on the quote and attach a payment link to each one, generated from your WooCommerce shop or pasted from the payment provider you already use. Client invoices support the travel agency VAT margin scheme (REAV), and supplier invoices sit next to them.
 
 ### 4. Centralize suppliers, guides and your catalog
 Supplier and guide profiles with contacts, documents and languages spoken. A service catalog with categories and seasonal pricing. Everything connected to your quotes and orders.
@@ -81,15 +83,23 @@ Short visual summary of the 6 steps (detailed on `/how-it-works`):
 
 ---
 
-## Why trust us
+## Product tour (video)
 
-**Section title:** Built from real-world use, not from an abstract spec sheet
+**Title:** See Traviosoft in two minutes
 
-Traviosoft was built with, and for, a boutique travel agency based in Barcelona, specializing in tailor-made trips. That agency uses Traviosoft every day to run its entire business: requests, quotes, orders, payments, suppliers.
+A short walk through one client file: the request, the quote and its PDF, the order, the payments, and the itinerary page your client receives.
 
-The product keeps evolving in contact with agencies like yours, with a simple goal: replace scattered spreadsheets and Word documents with a tool designed for the job.
+Video slot: `tour.mp4` + `tour-poster.jpg` (placeholder until the file exists, see `public/shots/README.md`).
 
-**CTA:** Book a demo and talk it through
+---
+
+## Founder
+
+**Title:** Built with a Barcelona tailor-made agency that runs on it every day
+
+Traviosoft started inside a tailor-made travel agency in Barcelona. Its team was juggling quotes, payments and suppliers across Excel, Word and WhatsApp, so I built the tool they needed, with them, one real problem at a time. They run their agency on it every day, and new features still start from what we see them do.
+
+Photo slot: `founder.jpg` (placeholder until the file exists, see `public/shots/README.md`). Founder name: placeholder until set in `src/lib/site-config.ts` (FOUNDER). Client testimonial: hidden until a real, approved quote is set in TESTIMONIAL.
 
 ---
 

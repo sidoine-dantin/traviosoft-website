@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { baseUrl, siteName } from '@/lib/seo';
+import { PRICING } from '@/lib/site-config';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -45,6 +46,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!(routing.locales as readonly string[]).includes(locale)) notFound();
 
   const messages = await getMessages();
+  const cfBeaconToken = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
   const t = await getTranslations({ locale, namespace: 'home' });
   const description = t('meta_description');
 
@@ -76,9 +78,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     inLanguage: routing.locales,
     offers: {
       '@type': 'Offer',
-      priceCurrency: 'EUR',
-      price: '0',
-      description: 'Book a demo'
+      priceCurrency: PRICING.currency,
+      price: String(PRICING.monthly),
+      description: `Per agency per month, up to ${PRICING.includedUsers} users. ${PRICING.trialDays}-day free trial.`
     },
     publisher: {
       '@type': 'Organization',
@@ -107,6 +109,14 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        {/* Cloudflare Web Analytics: cookieless, only when the token is set at build time (docs/tracking.md). */}
+        {cfBeaconToken && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+          />
+        )}
       </body>
     </html>
   );

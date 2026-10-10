@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { COMPANY } from '@/lib/site-config';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -58,8 +59,9 @@ export default function Footer() {
             </p>
             <FooterLinks links={[
               { label: t('features'), href: '/product' },
+              { label: t('how_it_works'), href: '/how-it-works' },
               { label: t('pricing'), href: '/pricing' },
-              { label: t('book_demo'), href: '/demo', highlight: true }
+              { label: t('book_demo'), href: '/demo', highlight: true, cta: 'book-demo' }
             ]} />
           </div>
 
@@ -101,6 +103,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Company details. Empty COMPANY fields (site-config) show as placeholders. */}
+        <div style={{ paddingTop: '1.5rem' }}>
+          <p style={{
+            fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.08em',
+            textTransform: 'uppercase', color: 'oklch(0.55 0.008 118)', marginBottom: '0.5rem'
+          }}>
+            {t('company_details')}
+          </p>
+          <p style={{ fontSize: '0.8125rem', lineHeight: 1.6, color: 'oklch(0.65 0.008 118)', margin: 0, maxWidth: 'none' }}>
+            <CompanyField value={COMPANY.legalName} placeholder={t('legal_name_placeholder')} />
+            {' · '}
+            <CompanyField value={COMPANY.address} placeholder={t('address_placeholder')} />
+            {' · '}
+            <CompanyField value={COMPANY.registration} placeholder={t('registration_placeholder')} />
+          </p>
+        </div>
+
         {/* Bottom: copyright */}
         <div style={{
           paddingTop: '1.5rem',
@@ -126,15 +145,26 @@ export default function Footer() {
   );
 }
 
-type FooterLinkItem = { label: string; href: string; highlight?: boolean };
+function CompanyField({ value, placeholder }: { value: string; placeholder: string }) {
+  if (value) return <span>{value}</span>;
+  return (
+    <span style={{ border: '1px dashed oklch(0.45 0.008 118)', borderRadius: '3px', padding: '0 0.3rem' }}>
+      {placeholder}
+    </span>
+  );
+}
+
+type FooterLinkItem = { label: string; href: string; highlight?: boolean; cta?: string };
 
 function FooterLinks({ links }: { links: FooterLinkItem[] }) {
   return (
     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-      {links.map(({ label, href, highlight }) => (
+      {links.map(({ label, href, highlight, cta }) => (
         <li key={href}>
           <Link
             href={href}
+            data-cta={cta}
+            data-cta-location={cta ? 'footer' : undefined}
             className={`footer-link${highlight ? ' footer-link--highlight' : ''}`}
             style={{ fontSize: '0.875rem', textDecoration: 'none' }}
           >

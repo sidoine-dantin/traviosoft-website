@@ -7,6 +7,7 @@ import { useParams } from 'next/navigation';
 
 const NAV_LINKS = [
   { key: 'product', href: '/product' },
+  { key: 'how_it_works', href: '/how-it-works' },
   { key: 'pricing', href: '/pricing' },
   { key: 'about', href: '/about' },
   { key: 'faq', href: '/faq' }
@@ -172,7 +173,7 @@ export default function Header() {
           </div>
 
           {/* CTA */}
-          <Link href="/demo" className="btn-primary" style={{ fontSize: '0.875rem', padding: '0.5rem 1.125rem', ...ctaStyle }}>
+          <Link href="/demo" data-cta="book-demo" data-cta-location="header" className="btn-primary" style={{ fontSize: '0.875rem', padding: '0.5rem 1.125rem', ...ctaStyle }}>
             {t('book_demo')}
           </Link>
 
@@ -256,7 +257,7 @@ export default function Header() {
                 </button>
               ))}
             </div>
-            <Link href="/demo" className="btn-primary" style={{ fontSize: '0.875rem' }}>
+            <Link href="/demo" data-cta="book-demo" data-cta-location="header-mobile" className="btn-primary" style={{ fontSize: '0.875rem' }}>
               {t('book_demo')}
             </Link>
           </div>

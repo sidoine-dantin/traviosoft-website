@@ -83,7 +83,7 @@ export default function FaqPage() {
             }}>
               {t('final_cta.headline')}
             </h2>
-            <Link href="/demo" style={{
+            <Link href="/demo" data-cta="book-demo" data-cta-location="faq-final" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '0.875rem 1.75rem',
               backgroundColor: 'white', color: 'var(--color-primary)',

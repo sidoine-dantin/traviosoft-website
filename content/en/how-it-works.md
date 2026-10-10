@@ -4,6 +4,8 @@ meta_description: From the client request to the invoice, discover the full jour
 slug: /how-it-works
 ---
 
+<!-- Source copy. The live text is `how_it_works` in `messages/en.json`; keep both in step. -->
+
 ## Intro
 
 **Headline:** From the client's first message to the final invoice
@@ -12,55 +14,55 @@ slug: /how-it-works
 
 ---
 
-## Step 1 - The request comes in
+## Step 1 - Requests
 
 **Title:** One request, one place
 
-**Description:** Whether it arrives by email, form or phone, every client request is logged with a status (new, awaiting reply, handled). A reply draft can be generated with AI assistance, to review and adjust before sending.
+**Description:** Add a new request yourself in seconds, or connect Traviosoft to your website so enquiries land in it on their own. Each one carries a clear status (new, awaiting reply, handled), so nothing slips between the inbox and a sticky note.
 
 - **Before Traviosoft:** Requests get lost between the inbox, paper notes and people's memory.
 - **With Traviosoft:** Every request is visible in one place, with its status.
 
 ---
 
-## Step 2 - The quote is created
+## Step 2 - Quotes
 
 **Title:** A quote built in minutes
 
-**Description:** From the request, you build the quote line by line (catalog items or free-text lines). The total and margin are calculated automatically. The quote is exported to PDF and sent to the client, with an expiration date.
+**Description:** From the request, you put the quote together in minutes. The total and your margin are worked out for you, and you send it to the client with an expiry date in a couple of clicks.
 
 - **Before Traviosoft:** Every quote is rebuilt from scratch in Excel or Word, with the risk of calculation errors.
-- **With Traviosoft:** The quote pulls prices from the catalog, calculates the margin automatically, and generates a PDF ready to send.
+- **With Traviosoft:** The quote reuses your usual prices, works out the margin for you, and is ready to send in minutes.
 
 ---
 
-## Step 3 - The quote is accepted → the order is created
+## Step 3 - Order setup
 
-**Title:** Acceptance triggers preparation
+**Title:** The client says yes, the work sets itself up
 
-**Description:** When the client accepts the quote, its status changes to "accepted" and an order is created automatically. Preparation tasks derived from the quote's line items (bookings, documents to prepare, etc.) are generated within the order.
+**Description:** As soon as the client accepts, the trip moves into preparation on its own: an order is created with a ready-made list of everything to arrange (bookings, documents to prepare, and so on). When the client pays online through a link from your WooCommerce shop, the payment is recorded in the app on its own.
 
 - **Before Traviosoft:** You have to re-read the accepted quote and manually recreate a task list in another tool.
-- **With Traviosoft:** The order and its task list exist as soon as the quote is accepted.
+- **With Traviosoft:** The order and its to-do list exist as soon as the quote is accepted, and payments show up on their own.
 
 ---
 
-## Step 4 - The team executes
+## Step 4 - Coordination
 
 **Title:** Supplier coordination and service sheets
 
-**Description:** The team tracks progress on the order's tasks, generates PDF service sheets for the day of the service, and coordinates suppliers and guides from their profiles (contacts, documents, languages spoken).
+**Description:** The team follows the order's to-do list, prepares the service sheets for the day of the trip, and coordinates suppliers and guides from their profiles (contacts, documents, languages spoken). The client gets a web page with their itinerary and the tickets you choose to share.
 
-- **Before Traviosoft:** Coordination happens through scattered emails and WhatsApp messages.
+- **Before Traviosoft:** Coordination happens through scattered emails and messages.
 - **With Traviosoft:** Every task, supplier and document is linked to the corresponding order.
 
 ---
 
-## Step 5 - Payments are tracked
+## Step 5 - Payments
 
-**Title:** Clear milestones, reminders under control
+**Title:** Payments tracked, nothing forgotten
 
-**Description:** Payment milestones defined on the quote are tracked throughout the file. A payment link can be attached to each milestone, and reminders are tracked within the tool.
+**Description:** Split the trip into payments (a deposit, then the balance, for example) and attach a payment link to each. Traviosoft keeps an eye on every one: what's due, what's been paid, and what still needs a reminder, all in the same place.
 
 - **Before Traviosoft:** Payment tracking lives in a separate spreadsheet, with the risk of forgetting a reminder.
 - **With Traviosoft:** Every milestone is linked to the quote and order, with its payment status.

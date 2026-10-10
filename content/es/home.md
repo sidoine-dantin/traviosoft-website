@@ -11,7 +11,9 @@ slug: /
 **Subtítulo:** Presupuestos, pedidos, pagos y proveedores, todo en un solo lugar, sin hojas de Excel ni documentos de Word dispersos.
 
 **CTA principal:** Reservar una demo
-**CTA secundario:** Ver cómo funciona
+**CTA secundario:** Ver el recorrido de 2 minutos (→ #tour)
+
+Hueco de captura: `dashboard.png` (placeholder mientras no exista el archivo, ver `public/shots/README.md`)
 
 ---
 
@@ -54,10 +56,10 @@ Todo está conectado: un presupuesto aceptado genera automáticamente un pedido 
 Construye tus presupuestos línea por línea, con cálculo automático del total y del margen. Exportación a PDF en un clic. En cuanto se acepta el presupuesto, el pedido y sus tareas se crean automáticamente.
 
 ### 2. Profesionalizar la relación con el cliente
-Presupuestos y hojas de servicio en PDF con un aspecto cuidado, seguimiento estructurado de cada solicitud (nueva, pendiente de respuesta, gestionada) e historial completo por cliente.
+Presupuestos en PDF y hojas de servicio con tu imagen, una página web por viaje donde tu cliente encuentra el itinerario y las entradas que compartes, seguimiento claro de cada solicitud e historial completo por cliente.
 
 ### 3. Controlar pagos y facturación
-Define plazos de pago directamente en el presupuesto, asocia un enlace de pago a cada plazo, y controla tus facturas de clientes y proveedores con estados claros (borrador, emitida, parcialmente pagada, pagada).
+Define plazos de pago en el presupuesto y asocia un enlace de pago a cada uno, generado desde tu tienda WooCommerce o copiado del proveedor de pagos que ya usas. Las facturas de clientes aplican el Régimen Especial de Agencias de Viajes (REAV), y las de proveedores están al lado.
 
 ### 4. Centralizar proveedores, guías y catálogo
 Fichas de proveedores y guías con contactos, documentos e idiomas. Catálogo de servicios con categorías y precios por temporada. Todo conectado con tus presupuestos y pedidos.
@@ -81,15 +83,23 @@ Resumen visual de los 6 pasos (detallados en `/how-it-works`):
 
 ---
 
-## Por qué confiar en nosotros
+## Recorrido del producto (vídeo)
 
-**Título de sección:** Una herramienta nacida del día a día real, no de un documento abstracto
+**Título:** Traviosoft en dos minutos
 
-Traviosoft se ha desarrollado con y para una agencia de viajes boutique con sede en Barcelona, especializada en viajes a medida. Esta agencia lo usa cada día para gestionar toda su actividad: presupuestos, pedidos, pagos, proveedores.
+Un recorrido breve por un expediente: la solicitud, el presupuesto y su PDF, el pedido, los pagos y la página de itinerario que recibe tu cliente.
 
-El producto sigue evolucionando en contacto con agencias como la tuya, con un objetivo simple: sustituir los Excel y Word dispersos por una herramienta pensada para el sector.
+Hueco de vídeo: `tour.mp4` + `tour-poster.jpg` (placeholder mientras no exista el archivo, ver `public/shots/README.md`).
 
-**CTA:** Reservar una demo y comentarlo
+---
+
+## Fundador
+
+**Título:** Creado con una agencia de viajes a medida de Barcelona que lo usa a diario
+
+Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Su equipo gestionaba presupuestos, pagos y proveedores entre Excel, Word y WhatsApp, así que construí con ellos la herramienta que necesitaban, un problema real tras otro. Hoy llevan toda la agencia con ella cada día, y las nuevas funciones siguen naciendo de lo que les vemos hacer.
+
+Hueco de foto: `founder.jpg` (placeholder mientras no exista el archivo, ver `public/shots/README.md`). Nombre del fundador: placeholder hasta que se rellene en `src/lib/site-config.ts` (FOUNDER). Testimonio de cliente: oculto hasta tener una cita real aprobada en TESTIMONIAL.
 
 ---
 

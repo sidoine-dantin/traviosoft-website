@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/gen-shots-manifest.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/gen-shots-manifest.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "build:cloudflare": "npx @opennextjs/cloudflare build",
     "deploy": "npm run build:cloudflare && wrangler deploy",
-    "preview": "npm run build:cloudflare && wrangler dev"
+    "preview": "npm run build:cloudflare && wrangler dev",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^15.3.3",

@@ -22,7 +22,11 @@
     "terms": "Terms of service",
     "legal_notice": "Legal notice",
     "tagline": "Management software for boutique travel agencies",
-    "copyright": "Traviosoft"
+    "copyright": "Traviosoft",
+    "company_details": "Company details",
+    "legal_name_placeholder": "[Legal company name]",
+    "address_placeholder": "[Registered address]",
+    "registration_placeholder": "[Registration number]"
   },
   "home": {
     "meta_title": "Traviosoft - The management software for boutique travel agencies",
@@ -31,7 +35,9 @@
       "headline": "The management software built for boutique travel agencies",
       "subheadline": "Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.",
       "cta_primary": "Book a demo",
-      "cta_secondary": "See how it works"
+      "cta_secondary": "See how it works",
+      "cta_tour": "Watch the 2-minute tour",
+      "shot": "dashboard overview"
     },
     "pain_points": {
       "title": "Does this sound familiar?",
@@ -46,18 +52,22 @@
       "title": "One platform, from first contact to invoice",
       "flow": "Client request → Quote → Order → Supplier coordination → Tracked payments → Invoicing",
       "description": "Everything is connected: an accepted quote automatically generates an order with its tasks, and every payment milestone is linked to the right quote and client.",
-      "cta": "Discover how it works step by step"
+      "cta": "See how it works, step by step"
     },
     "pillars": {
       "title": "What Traviosoft changes in practice",
       "p1_title": "Save time on repetitive tasks",
       "p1_text": "Put a quote together in minutes, with the total and your margin worked out for you. The moment a client accepts, the order and everything to arrange appear on their own.",
       "p2_title": "Make the client relationship more professional",
-      "p2_text": "Polished quotes and service documents that look the part, clear tracking of every request (new, awaiting reply, handled), and a full history for each client.",
+      "p2_text": "Branded quote PDFs and service sheets that look the part, a web page per trip where your client finds the itinerary and the tickets you share, clear tracking of every request, and a full history for each client.",
       "p3_title": "Stay on top of payments and invoicing",
-      "p3_text": "Set payment milestones directly on the quote, attach a payment link to each one, and track client and supplier invoices with clear statuses (draft, issued, partially paid, paid).",
+      "p3_text": "Set payment milestones on the quote and attach a payment link to each one, generated from your WooCommerce shop or pasted from the payment provider you already use. Client invoices support the travel agency VAT margin scheme (REAV), and supplier invoices sit next to them.",
       "p4_title": "Centralize suppliers, guides and your catalog",
-      "p4_text": "Supplier and guide profiles with contacts, documents and languages spoken. A service catalog with categories and seasonal pricing. Everything connected to your quotes and orders."
+      "p4_text": "Supplier and guide profiles with contacts, documents and languages spoken. A service catalog with categories and seasonal pricing. Everything connected to your quotes and orders.",
+      "p1_shot": "quote builder with total and margin",
+      "p2_shot": "branded quote PDF",
+      "p3_shot": "payment schedule with payment links",
+      "p4_shot": "supplier profile"
     },
     "steps_preview": {
       "title": "From the client's first message to the final invoice, in 6 steps",
@@ -69,11 +79,6 @@
       "step6": "Invoicing happens, for both clients and suppliers",
       "cta": "See the detail of each step"
     },
-    "trust": {
-      "title": "Built from real-world use, not from an abstract spec sheet",
-      "text": "Traviosoft was built with, and for, a boutique travel agency based in Spain, specializing in tailor-made trips. The product keeps evolving in contact with agencies like yours, with a simple goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
-      "cta": "Book a demo and talk it through"
-    },
     "multilang": {
       "title": "Built for international teams and clients",
       "text": "The interface is available in French, English and Spanish. Your quotes, supplier profiles and documents can be managed in the language that suits each contact, without duplicating tools."
@@ -82,6 +87,12 @@
       "headline": "Ready to see Traviosoft working with your business?",
       "text": "In 30 minutes, we'll look together at how Traviosoft fits your way of working, no strings attached.",
       "cta": "Book a demo"
+    },
+    "tour": {
+      "title": "See Traviosoft in two minutes",
+      "text": "A short walk through one client file: the request, the quote and its PDF, the order, the payments, and the itinerary page your client receives.",
+      "video_subject": "product tour (60 to 90 seconds)",
+      "video_title": "Traviosoft product tour"
     }
   },
   "product": {
@@ -90,7 +101,8 @@
     "intro": {
       "headline": "Less time fighting admin. More time selling trips.",
       "text": "You didn't start a travel agency to wrestle with spreadsheets. Here's what your days look like once every quote, payment and supplier lives in one place.",
-      "cta": "Book a demo"
+      "cta": "Book a demo",
+      "shot": "branded quote PDF"
     },
     "modules": {
       "requests": {
@@ -161,14 +173,14 @@
         "benefit": "One clear view of who has paid, who hasn't, and what you owe your suppliers.",
         "points": [
           "See at a glance who paid the deposit and who still owes the balance before departure",
-          "Split a trip into payment milestones with due dates, and attach a payment link to each one",
-          "Track client and supplier invoices with clear statuses, in the same place"
+          "Split a trip into payment milestones with due dates, and attach a payment link to each one (from your WooCommerce shop, or from any provider you already use)",
+          "Track client and supplier invoices with clear statuses, in the same place, with the travel agency VAT scheme (REAV) built in"
         ],
         "change": "The \"have they paid?\" spreadsheet disappears, and so does the forgotten reminder."
       },
       "reports": {
-        "title": "See how the business is really doing",
-        "benefit": "A clear overview of your activity, without building a single spreadsheet.",
+        "title": "See what needs you, and how the business is doing",
+        "benefit": "A dashboard of what to do today, and reports on your activity, without building a single spreadsheet.",
         "points": [
           "One overview of quotes, orders and payments, always up to date",
           "Numbers you can trust, because they come straight from your real files"
@@ -195,6 +207,35 @@
     "final_cta": {
       "headline": "Picture your whole agency running from one calm screen",
       "cta": "Book a demo"
+    },
+    "highlights": {
+      "title": "What agencies notice first",
+      "items": [
+        {
+          "key": "itinerary",
+          "title": "A trip page for your client, built from the order",
+          "text": "Share one link and your client sees the trip day by day: times, meeting points, the guide's contact, and the tickets and vouchers you choose to share. It follows the order live, so a time you fix is fixed for them too. You can revoke the link at any time.",
+          "shot": "client itinerary page on a phone"
+        },
+        {
+          "key": "payments",
+          "title": "Payment links on every milestone",
+          "text": "Split a trip into a deposit and a balance, and attach a payment link to each: generated from your WooCommerce shop, where the payment is then recorded on its own, or pasted from any payment provider you already use.",
+          "shot": "order payments with payment links"
+        },
+        {
+          "key": "reav",
+          "title": "Invoices that follow the travel agency VAT scheme",
+          "text": "Invoices use the special VAT scheme for travel agencies (REAV) by default: VAT is calculated on your margin, the legal notice is printed on the invoice, and you see the REAV VAT to declare.",
+          "shot": "invoice PDF with the REAV notice"
+        },
+        {
+          "key": "dashboard",
+          "title": "A dashboard that tells you what needs you today",
+          "text": "New requests, quotes to follow up, bookings still to make, client and supplier payments due or overdue: one screen, built from your real files.",
+          "shot": "dashboard overview"
+        }
+      ]
     }
   },
   "how_it_works": {
@@ -221,21 +262,21 @@
       },
       {
         "title": "The client says yes, the work sets itself up",
-        "description": "As soon as the client accepts, the trip moves into preparation on its own: an order is created with a ready-made list of everything to arrange (bookings, documents to prepare, and so on). And when the client pays, the payment is recorded in the app automatically, so you always know where you stand.",
+        "description": "As soon as the client accepts, the trip moves into preparation on its own: an order is created with a ready-made list of everything to arrange (bookings, documents to prepare, and so on). When the client pays online through a link from your WooCommerce shop, the payment is recorded in the app on its own.",
         "before": "You have to re-read the accepted quote and manually recreate a task list in another tool.",
         "after": "The order and its to-do list exist as soon as the quote is accepted, and payments show up on their own.",
         "name": "Order setup"
       },
       {
         "title": "Supplier coordination and service sheets",
-        "description": "The team follows the order's to-do list, prepares the service documents for the day of the trip, and coordinates suppliers and guides from their profiles (contacts, documents, languages spoken).",
+        "description": "The team follows the order's to-do list, prepares the service sheets for the day of the trip, and coordinates suppliers and guides from their profiles (contacts, documents, languages spoken). The client gets a web page with their itinerary and the tickets you choose to share.",
         "before": "Coordination happens through scattered emails and messages.",
         "after": "Every task, supplier and document is linked to the corresponding order.",
         "name": "Coordination"
       },
       {
         "title": "Payments tracked, nothing forgotten",
-        "description": "Split the trip into payments (a deposit, then the balance, for example) and Traviosoft keeps an eye on each one: what's due, what's been paid, and what still needs a reminder, all in the same place.",
+        "description": "Split the trip into payments (a deposit, then the balance, for example) and attach a payment link to each. Traviosoft keeps an eye on every one: what's due, what's been paid, and what still needs a reminder, all in the same place.",
         "before": "Payment tracking lives in a separate spreadsheet, with the risk of forgetting a reminder.",
         "after": "Every milestone is linked to the quote and order, with its payment status.",
         "name": "Payments"
@@ -258,33 +299,41 @@
   },
   "pricing": {
     "meta_title": "Pricing - Traviosoft",
-    "meta_description": "A simple pricing model, no hidden fees, built for boutique travel agencies. Book a demo to get your quote.",
+    "meta_description": "One simple price per agency: {price} per month for up to {users} users, or {yearly} per year. {days}-day free trial. Book a demo to see it working.",
     "intro": {
-      "headline": "One product, shaped around your agency. Priced for your team size.",
-      "text": "Traviosoft adapts to the way your agency works, not the other way around. The only thing that sets your price is how many people on your team use it."
+      "headline": "One simple price per agency",
+      "text": "No price per module, no surprise setup fee. One product, one price for a team of up to {users}, and a free trial so you can judge it on your own files."
     },
     "model": {
-      "title": "A Traviosoft that fits your agency, sized to your team",
+      "title": "What's included",
       "points": [
-        "Tailored to the way your agency works, so it feels made for you",
-        "A price set by your team size (small team, growing team, full team), so you only pay for the seats you use",
-        "No hidden setup or onboarding fees",
-        "Monthly or annual billing, your choice"
+        "Up to {users} users in your agency",
+        "The interface in English, French and Spanish, chosen by each user",
+        "Help bringing your clients and suppliers over from Excel",
+        "No setup or onboarding fees",
+        "Monthly or yearly billing, your choice"
       ],
-      "text": "A one-person agency and a fifteen-person team don't need different software, just a price that fits their size. So we kept one product, and let your team size set the price."
+      "text": "A one-person agency and a five-person team run the same product. If you grow beyond that, we talk about it, not before."
     },
     "trial": {
-      "title": "Try it before you commit",
-      "text": "A trial period is available so you can explore Traviosoft with your own files, with no upfront commitment."
-    },
-    "why_no_price": {
-      "title": "You get your price on the demo call",
-      "text": "We set it with you during the demo, based on your team size and how you work. You leave the call knowing exactly what Traviosoft costs for your agency."
+      "title": "Try it for {days} days",
+      "text": "After the demo, we set up your own workspace so you can try Traviosoft with your real files for {days} days, free and with no commitment."
     },
     "final_cta": {
-      "headline": "Get your price in 30 minutes",
-      "text": "Book a demo: we'll look at your agency together, match the price to your team size, and give you a clear figure.",
-      "cta": "Book a demo to get your price"
+      "headline": "See it working before you decide",
+      "text": "Book a 30-minute demo: you see the tool on an example close to your agency, and you leave with your trial set up.",
+      "cta": "Book a demo"
+    },
+    "price": {
+      "per_month": "/ month",
+      "per_agency": "per agency, up to {users} users",
+      "yearly": "or {price} per year, {months} months free",
+      "trial": "{days}-day free trial",
+      "more_users": "More than {users} people on the team? We set the price with you on the demo."
+    },
+    "why_demo": {
+      "title": "Why start with a demo?",
+      "text": "Thirty minutes is enough to see whether Traviosoft fits the way your agency works, and to set up your trial with you. If it isn't a fit, we'll tell you."
     }
   },
   "about": {
@@ -325,7 +374,7 @@
         "A walkthrough of Traviosoft tailored to your business (team size, type of trips, current tools)",
         "A concrete demo of the quote → order → payment → invoice flow",
         "Your questions, with no artificial time pressure",
-        "If it's a fit: a clear price tailored to your situation"
+        "If it's a fit: your free trial, set up with you"
       ],
       "text": "If Traviosoft isn't a fit for your business, we'll tell you directly, no detours."
     },
@@ -431,7 +480,8 @@
         {
           "heading": "Third-party services",
           "body": [
-            "The demo calendar is provided by Google. Booking a slot is subject to Google's own terms and privacy policy. The website is delivered through Cloudflare's hosting and content network. These providers process limited data on our behalf to make the booking and the site work."
+            "The demo calendar is provided by Google. Booking a slot is subject to Google's own terms and privacy policy. The website is delivered through Cloudflare's hosting and content network. These providers process limited data on our behalf to make the booking and the site work.",
+            "We count visits with Cloudflare Web Analytics, which does not use cookies and does not track you across other websites."
           ]
         },
         {
@@ -554,5 +604,41 @@
         }
       ]
     }
+  },
+  "media": {
+    "screenshot": "Screenshot: {subject}",
+    "video": "Video: {subject}",
+    "photo": "Photo: {subject}"
+  },
+  "founder": {
+    "title": "Built with a Barcelona tailor-made agency that runs on it every day",
+    "story": "Traviosoft started inside a tailor-made travel agency in Barcelona. Its team was juggling quotes, payments and suppliers across Excel, Word and WhatsApp, so I built the tool they needed, with them, one real problem at a time. They run their agency on it every day, and new features still start from what we see them do.",
+    "name_placeholder": "[Founder name]",
+    "role_default": "Founder of Traviosoft",
+    "photo_subject": "founder portrait",
+    "testimonial_placeholder": "Client testimonial: placeholder, hidden until a real quote is approved"
+  },
+  "your_data": {
+    "title": "Your data",
+    "intro": "The questions every agency asks before moving its files into a young product.",
+    "items": [
+      {
+        "title": "Your own database",
+        "text": "Each agency's workspace runs on its own separate database, with its own document storage. Your files are never mixed with another agency's."
+      },
+      {
+        "title": "Access you control",
+        "text": "Only the users your admin creates can sign in. A link you share with a client, such as an itinerary page, can be revoked at any time."
+      },
+      {
+        "title": "No lock-in",
+        "text": "Bring your clients, suppliers and catalog in from a CSV file, and reach all your data through an API, with keys your admin creates."
+      }
+    ],
+    "todo": [
+      "TODO (owner): hosting location (EU?) not confirmed yet",
+      "TODO (owner): backup frequency and retention not confirmed yet",
+      "TODO (owner): full data export on request, terms to confirm"
+    ]
   }
 }

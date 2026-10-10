@@ -6,6 +6,7 @@ const priorityByPath: Record<string, number> = {
   '': 1,
   '/demo': 0.9,
   '/product': 0.8,
+  '/how-it-works': 0.7,
   '/pricing': 0.8,
   '/about': 0.6,
   '/faq': 0.6,

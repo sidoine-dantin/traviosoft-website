@@ -11,7 +11,9 @@ slug: /
 **Sous-titre :** Devis, commandes, paiements et prestataires, réunis dans un seul outil, sans fichiers Excel ni Word qui se perdent.
 
 **CTA principal :** Réserver une démo
-**CTA secondaire :** Voir comment ça marche
+**CTA secondaire :** Voir la visite en 2 minutes (→ #tour)
+
+Emplacement capture : `dashboard.png` (placeholder tant que le fichier n'existe pas, voir `public/shots/README.md`)
 
 ---
 
@@ -54,10 +56,10 @@ Tout est relié : un devis accepté génère automatiquement une commande avec s
 Construisez vos devis ligne par ligne, avec calcul automatique du total et de la marge. Export PDF en un clic. Dès que le devis est accepté, la commande et ses tâches sont créées automatiquement.
 
 ### 2. Professionnaliser la relation client
-Des devis et des fiches de service au format PDF soigné, un suivi structuré de chaque demande (nouvelle, en attente de réponse, traitée), et un historique complet par client.
+Des devis PDF et des fiches de service à vos couleurs, une page web par voyage où votre client retrouve son itinéraire et les billets que vous partagez, un suivi clair de chaque demande, et un historique complet par client.
 
 ### 3. Maîtriser les paiements et la facturation
-Définissez des échéances de paiement par devis, associez un lien de paiement à chacune, et suivez vos factures clients et fournisseurs avec des statuts clairs (brouillon, émise, partiellement payée, payée).
+Définissez des échéances de paiement sur le devis et associez un lien de paiement à chacune, généré depuis votre boutique WooCommerce ou copié depuis le prestataire de paiement que vous utilisez déjà. Les factures clients gèrent le régime de TVA sur la marge des agences de voyages, et les factures fournisseurs sont à côté.
 
 ### 4. Centraliser prestataires, guides et catalogue
 Fiches prestataires et guides avec contacts, documents et langues parlées. Catalogue de prestations avec catégories et tarification saisonnière. Tout est relié à vos devis et commandes.
@@ -81,15 +83,23 @@ Court résumé visuel des 6 étapes (détaillées sur `/how-it-works`) :
 
 ---
 
-## Pourquoi nous faire confiance
+## Visite produit (vidéo)
 
-**Titre de section :** Un outil né du terrain, pas d'un cahier des charges abstrait
+**Titre :** Traviosoft en deux minutes
 
-Traviosoft a été conçu avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure. Elle l'utilise au quotidien pour gérer l'intégralité de son activité : devis, commandes, paiements, prestataires.
+Un court parcours d'un dossier client : la demande, le devis et son PDF, la commande, les paiements, et la page itinéraire que reçoit votre client.
 
-Le produit continue d'évoluer au contact d'agences comme la vôtre, avec un objectif simple : remplacer les fichiers Excel et Word dispersés par un outil pensé pour le métier.
+Emplacement vidéo : `tour.mp4` + `tour-poster.jpg` (placeholder tant que le fichier n'existe pas, voir `public/shots/README.md`).
 
-**CTA :** Réserver une démo et en discuter
+---
+
+## Fondateur
+
+**Titre :** Conçu avec une agence sur-mesure de Barcelone qui l’utilise tous les jours
+
+Traviosoft est né dans une agence de voyages sur-mesure à Barcelone. L'équipe jonglait entre Excel, Word et WhatsApp pour ses devis, ses paiements et ses prestataires. J'ai construit avec elle l'outil dont elle avait besoin, un vrai problème après l'autre. Elle fait tourner son agence dessus chaque jour, et les nouvelles fonctionnalités partent toujours de ce qu'on la voit faire.
+
+Emplacement photo : `founder.jpg` (placeholder tant que le fichier n'existe pas, voir `public/shots/README.md`). Nom du fondateur : placeholder tant qu'il n'est pas renseigné dans `src/lib/site-config.ts` (FOUNDER). Témoignage client : masqué tant qu'une vraie citation validée n'est pas renseignée dans TESTIMONIAL.
 
 ---
 

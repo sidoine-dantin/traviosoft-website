@@ -4,6 +4,16 @@ import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/reveal';
 import { buildMetadata } from '@/lib/seo';
+import { ProductShot, VideoSlot } from '@/components/ui/product-shot';
+import { FounderSection } from '@/components/sections/credibility';
+import { SHOTS } from '@/lib/site-config';
+
+const PILLARS = [
+  { key: 'p1', file: SHOTS.quoteBuilder },
+  { key: 'p2', file: SHOTS.quotePdf },
+  { key: 'p3', file: SHOTS.payments },
+  { key: 'p4', file: SHOTS.suppliers }
+] as const;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -15,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function HomePage() {
   const t = useTranslations('home');
+  const tm = useTranslations('media');
 
   return (
     <>
@@ -55,16 +66,38 @@ export default function HomePage() {
               </p>
             </Reveal>
             <Reveal delay={140}>
-              <Link href="/product" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                padding: '0.875rem 1.75rem', backgroundColor: 'white',
-                color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.9375rem',
-                borderRadius: '6px', textDecoration: 'none', whiteSpace: 'nowrap'
-              }}>
-                {t('hero.cta_secondary')}
-              </Link>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                <Link href="/demo" data-cta="book-demo" data-cta-location="home-hero" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                  padding: '0.875rem 1.75rem', backgroundColor: 'white',
+                  color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.9375rem',
+                  borderRadius: '6px', textDecoration: 'none', whiteSpace: 'nowrap'
+                }}>
+                  {t('hero.cta_primary')}
+                </Link>
+                <a href="#tour" data-cta="watch-tour" data-cta-location="home-hero" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                  padding: '0.875rem 1.5rem', backgroundColor: 'transparent',
+                  color: 'white', fontWeight: 500, fontSize: '0.9375rem',
+                  border: '1.5px solid oklch(1 0 0 / 0.55)',
+                  borderRadius: '6px', textDecoration: 'none', whiteSpace: 'nowrap'
+                }}>
+                  <svg aria-hidden width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
+                  {t('hero.cta_tour')}
+                </a>
+              </div>
             </Reveal>
           </div>
+
+          <Reveal delay={200}>
+            <div style={{ marginTop: 'clamp(3rem, 6vw, 4.5rem)' }}>
+              <ProductShot
+                file={SHOTS.dashboard}
+                label={tm('screenshot', { subject: t('hero.shot') })}
+                priority
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -113,6 +146,77 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── The 4 pillars, each with its screenshot ── */}
+      <section style={{ backgroundColor: 'var(--color-surface)', padding: 'clamp(4rem, 8vw, 7rem) 0' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <Reveal>
+            <h2 style={{
+              fontFamily: 'var(--font-display, Georgia, serif)',
+              fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+              fontWeight: 400, color: 'var(--color-ink)',
+              marginBottom: 'clamp(2.5rem, 5vw, 4rem)', letterSpacing: '-0.01em'
+            }}>
+              {t('pillars.title')}
+            </h2>
+          </Reveal>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(3rem, 7vw, 6rem)' }}>
+            {PILLARS.map(({ key, file }, i) => (
+              <div key={key} className={`feature-row${i % 2 ? ' feature-row--flip' : ''}`}>
+                <Reveal>
+                  <div>
+                    <span className="section-rule" />
+                    <h3 style={{
+                      fontSize: 'clamp(1.15rem, 2vw, 1.35rem)', fontWeight: 600,
+                      color: 'var(--color-ink)', marginBottom: '0.75rem', lineHeight: 1.3
+                    }}>
+                      {t(`pillars.${key}_title`)}
+                    </h3>
+                    <p style={{ fontSize: '1rem', color: 'var(--color-muted)', lineHeight: 1.7, maxWidth: '46ch', margin: 0 }}>
+                      {t(`pillars.${key}_text`)}
+                    </p>
+                  </div>
+                </Reveal>
+                <Reveal delay={80}>
+                  <ProductShot file={file} label={tm('screenshot', { subject: t(`pillars.${key}_shot`) })} />
+                </Reveal>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Product tour video (target of the hero's "watch the tour") ── */}
+      <section id="tour" style={{ backgroundColor: 'var(--color-bg)', padding: 'clamp(4rem, 8vw, 7rem) 0', scrollMarginTop: '64px' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <Reveal>
+            <div style={{ maxWidth: '48rem', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+              <h2 style={{
+                fontFamily: 'var(--font-display, Georgia, serif)',
+                fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+                fontWeight: 400, color: 'var(--color-ink)',
+                marginBottom: '1rem', letterSpacing: '-0.01em'
+              }}>
+                {t('tour.title')}
+              </h2>
+              <p style={{ fontSize: '1rem', color: 'var(--color-muted)', lineHeight: 1.7, margin: 0 }}>
+                {t('tour.text')}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div style={{ maxWidth: '64rem' }}>
+              <VideoSlot
+                file={SHOTS.tourVideo}
+                poster={SHOTS.tourPoster}
+                label={tm('video', { subject: t('tour.video_subject') })}
+                title={t('tour.video_title')}
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── One connected flow (bridge to Product) ── */}
       <section style={{ backgroundColor: 'var(--color-surface)', padding: 'clamp(4rem, 8vw, 7rem) 0' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
@@ -146,7 +250,7 @@ export default function HomePage() {
               }}>
                 {t('solution.description')}
               </p>
-              <Link href="/product" style={{
+              <Link href="/how-it-works" style={{
                 fontSize: '0.9375rem', color: 'var(--color-primary)', fontWeight: 500,
                 textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
                 borderBottom: '1.5px solid var(--color-primary)', paddingBottom: '1px'
@@ -158,8 +262,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Founder / credibility ── */}
+      <FounderSection background="var(--color-bg)" />
+
       {/* ── Multilingual ── */}
-      <section style={{ backgroundColor: 'var(--color-bg)', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
+      <section style={{ backgroundColor: 'var(--color-surface)', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{
             display: 'grid',
@@ -203,7 +310,7 @@ export default function HomePage() {
               }}>
                 {t('final_cta.text')}
               </p>
-              <Link href="/demo" style={{
+              <Link href="/demo" data-cta="book-demo" data-cta-location="home-final" style={{
                 display: 'inline-flex', alignItems: 'center',
                 padding: '0.875rem 1.75rem', backgroundColor: 'white',
                 color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.9375rem',

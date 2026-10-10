@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/reveal';
 import { buildMetadata } from '@/lib/seo';
+import { FounderSection, YourDataSection } from '@/components/sections/credibility';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -74,6 +75,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <FounderSection background="var(--color-surface)" />
+
+      <YourDataSection background="var(--color-bg)" />
+
       <section style={{ backgroundColor: 'var(--color-primary)', padding: 'clamp(4rem, 8vw, 6rem) 0' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
           <Reveal>
@@ -92,7 +97,7 @@ export default function AboutPage() {
             }}>
               {t('final_cta.text')}
             </p>
-            <Link href="/demo" style={{
+            <Link href="/demo" data-cta="book-demo" data-cta-location="about-final" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '0.875rem 1.75rem',
               backgroundColor: 'white', color: 'var(--color-primary)',

@@ -8,6 +8,7 @@ export const siteName = 'Traviosoft';
 export const pagePaths = [
   '',
   '/product',
+  '/how-it-works',
   '/pricing',
   '/about',
   '/demo',

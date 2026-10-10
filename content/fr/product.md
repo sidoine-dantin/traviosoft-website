@@ -14,6 +14,28 @@ slug: /product
 
 ---
 
+## Points forts (avec captures)
+
+**Titre de section :** Ce que les agences remarquent en premier
+
+### Une page voyage pour votre client, construite depuis la commande
+Partagez un lien et votre client voit son voyage jour par jour : horaires, points de rendez-vous, contact du guide, et les billets et vouchers que vous choisissez de partager. La page suit la commande en direct : une heure corrigée l'est aussi pour lui. Vous pouvez révoquer le lien à tout moment.
+Emplacement capture : `itinerary-mobile.png` (page itinéraire client sur téléphone)
+
+### Un lien de paiement sur chaque échéance
+Découpez un voyage en acompte et solde, et associez un lien de paiement à chacun : généré depuis votre boutique WooCommerce, où le paiement est ensuite enregistré tout seul, ou copié depuis le prestataire de paiement que vous utilisez déjà.
+Emplacement capture : `payments.png` (paiements de la commande avec liens de paiement)
+
+### Des factures au régime de TVA des agences de voyages
+Les factures utilisent par défaut le régime particulier de TVA des agences de voyages (TVA sur la marge) : la TVA est calculée sur votre marge, la mention légale figure sur la facture, et vous voyez la TVA à déclarer.
+Emplacement capture : `invoice-reav.png` (facture PDF avec la mention du régime de TVA sur la marge)
+
+### Un tableau de bord qui vous dit ce qui vous attend aujourd'hui
+Nouvelles demandes, devis à relancer, réservations à faire, paiements clients et fournisseurs à venir ou en retard : un seul écran, construit à partir de vos vrais dossiers.
+Emplacement capture : `dashboard.png` (tableau de bord)
+
+---
+
 ## Demandes & CRM clients
 
 **Bénéfice :** Ne perdez plus aucune demande client et gardez tout l'historique au même endroit.
@@ -52,7 +74,7 @@ Points clés :
 - Génération automatique des tâches de préparation issues des lignes du devis
 - Fiches de service au format PDF pour le jour J
 - Suivi du statut de commande (en attente de paiement, payée, en cours, terminée)
-- Lien de paiement (WooCommerce) associable à la commande
+- Lien de paiement associable à chaque paiement (généré depuis votre boutique WooCommerce, ou copié depuis n'importe quel prestataire de paiement)
 
 **Ce que ça change :** Personne ne se demande "qu'est-ce qu'il reste à préparer pour ce dossier ?" : la liste des tâches existe déjà.
 

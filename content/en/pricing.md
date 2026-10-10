@@ -1,50 +1,63 @@
 ---
 title: Pricing - Traviosoft
-meta_description: A simple pricing model, no hidden fees, built for boutique travel agencies. Book a demo to get your quote.
+meta_description: One simple price per agency: €99 per month for up to 5 users, or €990 per year. 14-day free trial. Book a demo to see it working.
 slug: /pricing
 ---
 
+<!-- Source copy. The live text is `pricing` in `messages/en.json`; amounts come from `PRICING` in `src/lib/site-config.ts` (not confirmed yet). -->
+
 ## Intro
 
-**Headline:** A simple price, fitted to your agency
+**Headline:** One simple price per agency
 
-**Text:** No à la carte feature matrix, no paid add-on modules. Traviosoft runs on a single plan, designed for boutique agencies.
+**Text:** No price per module, no surprise setup fee. One product, one price for a team of up to 5, and a free trial so you can judge it on your own files.
 
 ---
 
-## A simple model
+## Price
 
-**Section title:** One plan, everything included
+- €99 / month, per agency, up to 5 users
+- or €990 per year, 2 months free
+- 14-day free trial
+- More than 5 people on the team? We set the price with you on the demo.
+
+---
+
+## What's included
+
+**Section title:** What's included
 
 Key points:
-- A single plan, with no feature tiers to unlock separately
-- No hidden setup fees
-- Monthly or annual billing, your choice
+- Up to 5 users in your agency
+- The interface in English, French and Spanish, chosen by each user
+- Help bringing your clients and suppliers over from Excel
+- No setup or onboarding fees
+- Monthly or yearly billing, your choice
 
-**Text:** We'd rather have a simple, readable model than a 10-row pricing table that needs a calculator to understand.
+**Text:** A one-person agency and a five-person team run the same product. If you grow beyond that, we talk about it, not before.
 
 ---
 
 ## Trial
 
-**Section title:** Try it before you commit
+**Section title:** Try it for 14 days
 
-**Text:** A trial period is available so you can explore Traviosoft with your own files, with no upfront commitment.
+**Text:** After the demo, we set up your own workspace so you can try Traviosoft with your real files for 14 days, free and with no commitment.
 
 ---
 
-## Why we don't list a price
+## Why a demo first
 
-**Section title:** Why we'd rather talk it through on a call
+**Section title:** Why start with a demo?
 
-**Text:** Every agency is organized differently: team size, quote volume, specific needs. Rather than a generic price that doesn't reflect your situation, we prefer to discuss it with you directly during the demo, so we can give you a fair price and answer your questions live.
+**Text:** Thirty minutes is enough to see whether Traviosoft fits the way your agency works, and to set up your trial with you. If it isn't a fit, we'll tell you.
 
 ---
 
 ## Final CTA
 
-**Headline:** Get your price in 30 minutes
+**Headline:** See it working before you decide
 
-**Text:** Book a demo: we'll look at your business together and give you a clear price, fitted to your agency.
+**Text:** Book a 30-minute demo: you see the tool on an example close to your agency, and you leave with your trial set up.
 
-**CTA:** Book a demo to get your price
+**CTA:** Book a demo

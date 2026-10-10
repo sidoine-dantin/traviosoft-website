@@ -1,21 +1,26 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/reveal';
 import { buildMetadata } from '@/lib/seo';
+import { YourDataSection } from '@/components/sections/credibility';
+import { PRICING, formatPrice, pricingValues } from '@/lib/site-config';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pricing' });
-  return buildMetadata({ locale, path: '/pricing', title: t('meta_title'), description: t('meta_description') });
+  return buildMetadata({ locale, path: '/pricing', title: t('meta_title'), description: t('meta_description', pricingValues(locale)) });
 }
 
 export default function PricingPage() {
   const t = useTranslations('pricing');
-  const points = t.raw('model.points') as string[];
+  const locale = useLocale();
+  const values = pricingValues(locale);
+  // model.points is a plain array (t.raw), so its {users} placeholder is filled here.
+  const points = (t.raw('model.points') as string[]).map(p => p.replace('{users}', String(values.users)));
 
   return (
     <>
@@ -37,9 +42,9 @@ export default function PricingPage() {
             </h1>
             <p style={{
               fontSize: '1.0625rem', color: 'oklch(0.78 0.018 118)',
-              maxWidth: '48ch', lineHeight: 1.65
+              maxWidth: '52ch', lineHeight: 1.65
             }}>
-              {t('intro.text')}
+              {t('intro.text', values)}
             </p>
           </Reveal>
         </div>
@@ -53,22 +58,43 @@ export default function PricingPage() {
             gap: 'clamp(2rem, 5vw, 5rem)',
             alignItems: 'start'
           }}>
-            {/* Model */}
+            {/* Price card. Amounts come from PRICING in src/lib/site-config.ts. */}
             <Reveal>
-              <div>
-                <span className="section-rule" />
-                <h2 style={{
-                  fontFamily: 'var(--font-display, Georgia, serif)',
-                  fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-                  fontWeight: 400, color: 'var(--color-ink)',
-                  letterSpacing: '-0.01em', marginBottom: '1.5rem'
+              <div style={{
+                padding: 'clamp(1.75rem, 4vw, 2.5rem)',
+                border: '1px solid var(--color-border)',
+                borderRadius: '10px',
+                backgroundColor: 'var(--color-bg)'
+              }}>
+                <p style={{ margin: '0 0 0.25rem', display: 'flex', alignItems: 'baseline', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span style={{
+                    fontFamily: 'var(--font-display, Georgia, serif)',
+                    fontSize: 'clamp(2.75rem, 5vw, 3.75rem)', lineHeight: 1,
+                    color: 'var(--color-ink)', letterSpacing: '-0.02em'
+                  }}>
+                    {formatPrice(PRICING.monthly, locale)}
+                  </span>
+                  <span style={{ fontSize: '1rem', color: 'var(--color-muted)' }}>{t('price.per_month')}</span>
+                </p>
+                <p style={{ fontSize: '1rem', color: 'var(--color-ink)', fontWeight: 500, margin: '0 0 0.375rem' }}>
+                  {t('price.per_agency', values)}
+                </p>
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-muted)', margin: '0 0 1.25rem' }}>
+                  {t('price.yearly', { ...values, price: values.yearly })}
+                </p>
+                <p style={{
+                  display: 'inline-block', margin: '0 0 1.75rem',
+                  fontSize: '0.8125rem', fontWeight: 600,
+                  color: 'var(--color-accent)', backgroundColor: 'var(--color-accent-light)',
+                  padding: '0.25rem 0.625rem', borderRadius: '4px'
                 }}>
-                  {t('model.title')}
-                </h2>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
+                  {t('price.trial', values)}
+                </p>
+
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                   {points.map((point, i) => (
                     <li key={i} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                      <span style={{
+                      <span aria-hidden style={{
                         flexShrink: 0, width: '20px', height: '20px',
                         borderRadius: '50%', backgroundColor: 'var(--color-primary)',
                         color: 'white', fontSize: '0.6875rem', fontWeight: 700,
@@ -79,50 +105,66 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <p style={{
-                  fontFamily: 'var(--font-display, Georgia, serif)',
-                  fontSize: '1rem', fontStyle: 'italic',
-                  color: 'var(--color-muted)', lineHeight: 1.65
-                }}>
-                  {t('model.text')}
+
+                <Link href="/demo" data-cta="book-demo" data-cta-location="pricing-card" className="btn-primary">
+                  {t('final_cta.cta')}
+                </Link>
+
+                <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', lineHeight: 1.6, margin: '1.25rem 0 0' }}>
+                  {t('price.more_users', values)}
                 </p>
               </div>
             </Reveal>
 
-            {/* Trial + Why no price */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+            {/* Trial + why a demo first */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <Reveal delay={80}>
-                <div style={{
-                  padding: 'clamp(1.5rem, 3vw, 2rem)',
-                  backgroundColor: 'var(--color-surface)',
-                  borderRadius: '8px'
-                }}>
-                  <h3 style={{
-                    fontSize: '1.0625rem', fontWeight: 600,
-                    color: 'var(--color-ink)', marginBottom: '0.75rem'
+                <div>
+                  <span className="section-rule" />
+                  <h2 style={{
+                    fontFamily: 'var(--font-display, Georgia, serif)',
+                    fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+                    fontWeight: 400, color: 'var(--color-ink)',
+                    letterSpacing: '-0.01em', marginBottom: '1rem'
                   }}>
-                    {t('trial.title')}
-                  </h3>
-                  <p style={{ fontSize: '0.9375rem', color: 'var(--color-muted)', lineHeight: 1.7, margin: 0 }}>
-                    {t('trial.text')}
+                    {t('model.title')}
+                  </h2>
+                  <p style={{
+                    fontFamily: 'var(--font-display, Georgia, serif)',
+                    fontSize: '1.0625rem', fontStyle: 'italic',
+                    color: 'var(--color-muted)', lineHeight: 1.65, margin: 0
+                  }}>
+                    {t('model.text')}
                   </p>
                 </div>
               </Reveal>
 
-              <Reveal delay={140}>
+              <Reveal delay={120}>
                 <div style={{
                   padding: 'clamp(1.5rem, 3vw, 2rem)',
                   backgroundColor: 'var(--color-surface)',
                   borderRadius: '8px'
                 }}>
-                  <h3 style={{
-                    fontSize: '1.0625rem', fontWeight: 600,
-                    color: 'var(--color-ink)', marginBottom: '0.75rem'
-                  }}>
-                    {t('why_no_price.title')}
+                  <h3 style={{ fontSize: '1.0625rem', fontWeight: 600, color: 'var(--color-ink)', marginBottom: '0.75rem' }}>
+                    {t('trial.title', values)}
                   </h3>
                   <p style={{ fontSize: '0.9375rem', color: 'var(--color-muted)', lineHeight: 1.7, margin: 0 }}>
-                    {t('why_no_price.text')}
+                    {t('trial.text', values)}
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={160}>
+                <div style={{
+                  padding: 'clamp(1.5rem, 3vw, 2rem)',
+                  backgroundColor: 'var(--color-surface)',
+                  borderRadius: '8px'
+                }}>
+                  <h3 style={{ fontSize: '1.0625rem', fontWeight: 600, color: 'var(--color-ink)', marginBottom: '0.75rem' }}>
+                    {t('why_demo.title')}
+                  </h3>
+                  <p style={{ fontSize: '0.9375rem', color: 'var(--color-muted)', lineHeight: 1.7, margin: 0 }}>
+                    {t('why_demo.text')}
                   </p>
                 </div>
               </Reveal>
@@ -130,6 +172,8 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      <YourDataSection background="var(--color-surface)" />
 
       <section style={{ backgroundColor: 'var(--color-primary)', padding: 'clamp(4rem, 8vw, 6rem) 0' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
@@ -149,7 +193,7 @@ export default function PricingPage() {
             }}>
               {t('final_cta.text')}
             </p>
-            <Link href="/demo" style={{
+            <Link href="/demo" data-cta="book-demo" data-cta-location="pricing-final" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '0.875rem 1.75rem',
               backgroundColor: 'white', color: 'var(--color-primary)',
