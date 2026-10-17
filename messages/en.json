@@ -610,14 +610,6 @@
     "video": "Video: {subject}",
     "photo": "Photo: {subject}"
   },
-  "founder": {
-    "title": "Built with a Barcelona tailor-made agency that runs on it every day",
-    "story": "Traviosoft started inside a tailor-made travel agency in Barcelona. Its team was juggling quotes, payments and suppliers across Excel, Word and WhatsApp, so I built the tool they needed, with them, one real problem at a time. They run their agency on it every day, and new features still start from what we see them do.",
-    "name_placeholder": "[Founder name]",
-    "role_default": "Founder of Traviosoft",
-    "photo_subject": "founder portrait",
-    "testimonial_placeholder": "Client testimonial: placeholder, hidden until a real quote is approved"
-  },
   "your_data": {
     "title": "Your data",
     "intro": "The questions every agency asks before moving its files into a young product.",
@@ -640,5 +632,10 @@
       "TODO (owner): backup frequency and retention not confirmed yet",
       "TODO (owner): full data export on request, terms to confirm"
     ]
+  },
+  "origin": {
+    "title": "Built inside a working tailor-made agency in Barcelona",
+    "story": "Traviosoft started inside a tailor-made travel agency in Barcelona. Its team was juggling quotes, payments and suppliers across Excel, Word and WhatsApp, so we built the tool they needed, with them, one real problem at a time. It runs their day-to-day work, and new features still start from what we see real agencies do.",
+    "image_subject": "agency workspace, no faces"
   }
 }

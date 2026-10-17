@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/reveal';
 import { buildMetadata } from '@/lib/seo';
-import { FounderSection, YourDataSection } from '@/components/sections/credibility';
+import { OriginSection, YourDataSection } from '@/components/sections/credibility';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -75,7 +75,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <FounderSection background="var(--color-surface)" />
+      <OriginSection background="var(--color-surface)" />
 
       <YourDataSection background="var(--color-bg)" />
 

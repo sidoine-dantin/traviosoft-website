@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/reveal';
-import { ProductShot, MediaPlaceholder } from '@/components/ui/product-shot';
-import { FOUNDER, TESTIMONIAL } from '@/lib/site-config';
+import { ProductShot } from '@/components/ui/product-shot';
 
 const container = { maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' } as const;
 
@@ -14,24 +13,24 @@ const placeholderText = {
 } as const;
 
 /**
- * Founder story: photo, name and a short honest story. Photo and name come
- * from FOUNDER in site-config and show as placeholders until filled in.
- * A client testimonial sits underneath, hidden unless TESTIMONIAL.show is true.
+ * Origin story: where Traviosoft comes from, told as "we", with no person
+ * shown (the owner does not want a face, name or voice in any material).
+ * The image slot takes origin.jpg (a scene with no faces) from public/shots/.
  */
-export function FounderSection({ background = 'var(--color-surface)' }: { background?: string }) {
-  const t = useTranslations('founder');
+export function OriginSection({ background = 'var(--color-surface)' }: { background?: string }) {
+  const t = useTranslations('origin');
   const tm = useTranslations('media');
 
   return (
     <section style={{ backgroundColor: background, padding: 'clamp(4rem, 8vw, 7rem) 0' }}>
       <div style={container}>
-        <div className="founder-grid">
+        <div className="origin-grid">
           <Reveal>
             <div style={{ maxWidth: '18rem' }}>
               <ProductShot
-                file={FOUNDER.photo}
-                label={tm('photo', { subject: t('photo_subject') })}
-                alt={FOUNDER.name || t('role_default')}
+                file="origin.jpg"
+                label={tm('photo', { subject: t('image_subject') })}
+                alt={t('image_subject')}
                 ratio="4 / 5"
                 style={{ boxShadow: 'none' }}
               />
@@ -52,68 +51,27 @@ export function FounderSection({ background = 'var(--color-surface)' }: { backgr
               </h2>
               <p style={{
                 fontSize: '1.0625rem', color: 'var(--color-ink)',
-                lineHeight: 1.75, marginBottom: '1.5rem', maxWidth: '60ch'
+                lineHeight: 1.75, margin: 0, maxWidth: '60ch'
               }}>
                 {t('story')}
               </p>
-              <p style={{ fontSize: '0.9375rem', margin: 0 }}>
-                {FOUNDER.name
-                  ? <strong style={{ color: 'var(--color-ink)', fontWeight: 600 }}>{FOUNDER.name}</strong>
-                  : <span style={placeholderText}>{t('name_placeholder')}</span>}
-                <span style={{ color: 'var(--color-muted)' }}>, {FOUNDER.role || t('role_default')}</span>
-              </p>
-
-              <Testimonial />
             </div>
           </Reveal>
         </div>
       </div>
 
       <style>{`
-        .founder-grid {
+        .origin-grid {
           display: grid;
           grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
           gap: clamp(2rem, 5vw, 4.5rem);
           align-items: start;
         }
         @media (max-width: 760px) {
-          .founder-grid { grid-template-columns: 1fr; }
+          .origin-grid { grid-template-columns: 1fr; }
         }
       `}</style>
     </section>
-  );
-}
-
-/** Renders nothing unless TESTIMONIAL.show is true (see site-config). */
-function Testimonial() {
-  const t = useTranslations('founder');
-  if (!TESTIMONIAL.show) return null;
-
-  if (!TESTIMONIAL.quote) {
-    return (
-      <div style={{ marginTop: '2rem' }}>
-        <MediaPlaceholder label={t('testimonial_placeholder')} file="(site-config TESTIMONIAL)" ratio="4 / 1" />
-      </div>
-    );
-  }
-
-  const by = [TESTIMONIAL.author, TESTIMONIAL.role, TESTIMONIAL.agency].filter(Boolean).join(', ');
-  return (
-    <figure style={{ margin: '2rem 0 0', paddingTop: '1.5rem', borderTop: '1px solid var(--color-border)' }}>
-      <blockquote style={{
-        margin: 0,
-        fontFamily: 'var(--font-display, Georgia, serif)',
-        fontSize: 'clamp(1.125rem, 2vw, 1.375rem)', fontStyle: 'italic',
-        color: 'var(--color-primary)', lineHeight: 1.5, maxWidth: '52ch'
-      }}>
-        “{TESTIMONIAL.quote}”
-      </blockquote>
-      {by && (
-        <figcaption style={{ marginTop: '0.75rem', fontSize: '0.875rem', color: 'var(--color-muted)' }}>
-          {by}
-        </figcaption>
-      )}
-    </figure>
   );
 }
 

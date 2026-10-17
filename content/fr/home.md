@@ -93,13 +93,13 @@ Emplacement vidéo : `tour.mp4` + `tour-poster.jpg` (placeholder tant que le fic
 
 ---
 
-## Fondateur
+## Origine
 
-**Titre :** Conçu avec une agence sur-mesure de Barcelone qui l’utilise tous les jours
+**Titre:** Conçu au sein d'une vraie agence sur-mesure à Barcelone
 
-Traviosoft est né dans une agence de voyages sur-mesure à Barcelone. L'équipe jonglait entre Excel, Word et WhatsApp pour ses devis, ses paiements et ses prestataires. J'ai construit avec elle l'outil dont elle avait besoin, un vrai problème après l'autre. Elle fait tourner son agence dessus chaque jour, et les nouvelles fonctionnalités partent toujours de ce qu'on la voit faire.
+Traviosoft est né dans une agence de voyages sur-mesure à Barcelone. L'équipe jonglait entre Excel, Word et WhatsApp pour ses devis, ses paiements et ses prestataires. Nous avons construit avec elle l'outil dont elle avait besoin, un vrai problème après l'autre. Il sert à son travail quotidien, et les nouvelles fonctionnalités partent toujours de ce que font de vraies agences.
 
-Emplacement photo : `founder.jpg` (placeholder tant que le fichier n'existe pas, voir `public/shots/README.md`). Nom du fondateur : placeholder tant qu'il n'est pas renseigné dans `src/lib/site-config.ts` (FOUNDER). Témoignage client : masqué tant qu'une vraie citation validée n'est pas renseignée dans TESTIMONIAL.
+Emplacement image: `origin.jpg` (espace de travail d'agence, sans visages).
 
 ---
 

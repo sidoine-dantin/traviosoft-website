@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/reveal';
 import { buildMetadata } from '@/lib/seo';
 import { ProductShot, VideoSlot } from '@/components/ui/product-shot';
-import { FounderSection } from '@/components/sections/credibility';
+import { OriginSection } from '@/components/sections/credibility';
 import { SHOTS } from '@/lib/site-config';
 
 const PILLARS = [
@@ -262,8 +262,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Founder / credibility ── */}
-      <FounderSection background="var(--color-bg)" />
+      {/* ── Origin / credibility ── */}
+      <OriginSection background="var(--color-bg)" />
 
       {/* ── Multilingual ── */}
       <section style={{ backgroundColor: 'var(--color-surface)', padding: 'clamp(3rem, 6vw, 5rem) 0' }}>

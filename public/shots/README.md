@@ -26,7 +26,7 @@ Rules for every screenshot:
 | `invoice-reav.png` | 4:5 | Product page, "REAV invoices" highlight | An invoice PDF showing the REAV (travel agency VAT scheme) notice |
 | `tour.mp4` | 16:9 | Home, "See Traviosoft in two minutes" (target of "Watch the 2-minute tour") | 60 to 90 s product tour, H.264 MP4, under 15 MB, subtitles burned in (sound off by default on most visitors) |
 | `tour-poster.jpg` | 16:9 | Poster frame shown before the video plays | A clean frame of the tour, 1920 x 1080 |
-| `founder.jpg` | 4:5 | Home and About, founder block | Founder portrait, natural light, 1080 x 1350 |
+| `origin.jpg` | 4:5 | Home and About, origin block | Agency workspace scene with no faces (photo or AI-generated), 1080 x 1350 |
 
-The founder's name, the client testimonial and the company legal details are
-not images: they are set in `src/lib/site-config.ts`.
+The company legal details are not images: they are set in `src/lib/site-config.ts`.
+No image may show the owner's face, and none may show a person presented as a client.

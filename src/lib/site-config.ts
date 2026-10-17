@@ -19,27 +19,6 @@ export const PRICING = {
   trialDays: 14
 } as const;
 
-/** Founder block (home + about). Empty strings render as placeholders. */
-export const FOUNDER = {
-  name: '',
-  /** e.g. "Founder of Traviosoft". Empty: a translated default is used. */
-  role: '',
-  /** File in public/shots/ (see public/shots/README.md). */
-  photo: 'founder.jpg'
-} as const;
-
-/**
- * Client testimonial. Hidden until the owner has a real, approved quote:
- * set `show` to true AND fill the fields. Never put an invented quote here.
- */
-export const TESTIMONIAL = {
-  show: false,
-  quote: '',
-  author: '',
-  role: '',
-  agency: ''
-} as const;
-
 /** Company details shown in the footer "Company" block. */
 export const COMPANY = {
   legalName: '',

@@ -93,13 +93,13 @@ Hueco de vídeo: `tour.mp4` + `tour-poster.jpg` (placeholder mientras no exista 
 
 ---
 
-## Fundador
+## Origen
 
-**Título:** Creado con una agencia de viajes a medida de Barcelona que lo usa a diario
+**Título:** Creado dentro de una agencia de viajes a medida de Barcelona
 
-Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Su equipo gestionaba presupuestos, pagos y proveedores entre Excel, Word y WhatsApp, así que construí con ellos la herramienta que necesitaban, un problema real tras otro. Hoy llevan toda la agencia con ella cada día, y las nuevas funciones siguen naciendo de lo que les vemos hacer.
+Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Su equipo gestionaba presupuestos, pagos y proveedores entre Excel, Word y WhatsApp, así que construimos con ellos la herramienta que necesitaban, un problema real tras otro. Hoy la usan en su trabajo diario, y las nuevas funciones siguen naciendo de lo que vemos hacer a agencias reales.
 
-Hueco de foto: `founder.jpg` (placeholder mientras no exista el archivo, ver `public/shots/README.md`). Nombre del fundador: placeholder hasta que se rellene en `src/lib/site-config.ts` (FOUNDER). Testimonio de cliente: oculto hasta tener una cita real aprobada en TESTIMONIAL.
+Hueco de imagen: `origin.jpg` (espacio de trabajo de agencia, sin caras).
 
 ---
 

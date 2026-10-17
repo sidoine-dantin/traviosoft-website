@@ -610,14 +610,6 @@
     "video": "Vidéo : {subject}",
     "photo": "Photo : {subject}"
   },
-  "founder": {
-    "title": "Conçu avec une agence sur-mesure de Barcelone qui l’utilise tous les jours",
-    "story": "Traviosoft est né dans une agence de voyages sur-mesure à Barcelone. L'équipe jonglait entre Excel, Word et WhatsApp pour ses devis, ses paiements et ses prestataires. J'ai construit avec elle l'outil dont elle avait besoin, un vrai problème après l'autre. Elle fait tourner son agence dessus chaque jour, et les nouvelles fonctionnalités partent toujours de ce qu'on la voit faire.",
-    "name_placeholder": "[Nom du fondateur]",
-    "role_default": "Fondateur de Traviosoft",
-    "photo_subject": "portrait du fondateur",
-    "testimonial_placeholder": "Témoignage client : emplacement réservé, masqué tant qu'une vraie citation n'est pas validée"
-  },
   "your_data": {
     "title": "Vos données",
     "intro": "Les questions que toute agence se pose avant de confier ses dossiers à un produit jeune.",
@@ -640,5 +632,10 @@
       "TODO (propriétaire) : fréquence et durée de conservation des sauvegardes à confirmer",
       "TODO (propriétaire) : export complet des données sur demande, conditions à confirmer"
     ]
+  },
+  "origin": {
+    "title": "Conçu au sein d'une vraie agence sur-mesure à Barcelone",
+    "story": "Traviosoft est né dans une agence de voyages sur-mesure à Barcelone. L'équipe jonglait entre Excel, Word et WhatsApp pour ses devis, ses paiements et ses prestataires. Nous avons construit avec elle l'outil dont elle avait besoin, un vrai problème après l'autre. Il sert à son travail quotidien, et les nouvelles fonctionnalités partent toujours de ce que font de vraies agences.",
+    "image_subject": "espace de travail d'agence, sans visages"
   }
 }

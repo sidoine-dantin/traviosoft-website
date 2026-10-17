@@ -93,13 +93,13 @@ Video slot: `tour.mp4` + `tour-poster.jpg` (placeholder until the file exists, s
 
 ---
 
-## Founder
+## Origin
 
-**Title:** Built with a Barcelona tailor-made agency that runs on it every day
+**Title:** Built inside a working tailor-made agency in Barcelona
 
-Traviosoft started inside a tailor-made travel agency in Barcelona. Its team was juggling quotes, payments and suppliers across Excel, Word and WhatsApp, so I built the tool they needed, with them, one real problem at a time. They run their agency on it every day, and new features still start from what we see them do.
+Traviosoft started inside a tailor-made travel agency in Barcelona. Its team was juggling quotes, payments and suppliers across Excel, Word and WhatsApp, so we built the tool they needed, with them, one real problem at a time. It runs their day-to-day work, and new features still start from what we see real agencies do.
 
-Photo slot: `founder.jpg` (placeholder until the file exists, see `public/shots/README.md`). Founder name: placeholder until set in `src/lib/site-config.ts` (FOUNDER). Client testimonial: hidden until a real, approved quote is set in TESTIMONIAL.
+Image slot: `origin.jpg` (agency workspace, no faces).
 
 ---
 
