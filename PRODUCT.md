@@ -10,7 +10,7 @@ Boutique travel agency owners and directors - typically the same person. Teams o
 
 ## Product Purpose
 
-Traviosoft is a management tool for boutique travel agencies. It covers the full client file lifecycle: client request, quote (PDF), order, supplier coordination, tracked payments, invoicing. The website's only conversion goal is to get visitors to book a 30-minute demo. No self-serve signup, no pricing table - just one call to action repeated across all pages.
+Traviosoft is a management tool for boutique travel agencies. It covers the full client file lifecycle: client request, quote (PDF), order, supplier coordination, tracked payments, invoicing. The website lets visitors go as deep as they want: a light home page, then one page per job (Sell, Book and run, Get paid, Your setup), pricing shown openly, an example trip anyone can open, and a Resources layer (comparisons, guides, glossary, Spain-only tax guides). Demo only, no self-serve signup. One quiet "Book a demo" link in the header; page bodies never push the demo.
 
 ## Brand Personality
 
@@ -28,7 +28,7 @@ Confident, clean, human. Direct and concrete - no marketing fluff, no SaaS buzzw
 
 1. **Substance over decoration** - every section earns its place by answering a real question the user has while reading the page
 2. **Honest by default** - never imply scale, testimonials or features that don't exist; the product's credibility comes from specificity, not from inflated claims
-3. **One conversion path** - every page ends at the same place: book a demo; no competing CTAs, no subscriptions, no pricing games
+3. **The visitor decides** - one quiet demo link in the header, no repeated CTAs; prices are public; country-specific rules (REAV, Veri*Factu) are settings, never headline features
 4. **Built for the expert** - assume the reader knows their business better than we do; address pain points precisely rather than explaining what a boutique agency is
 5. **Multilingual by nature** - FR/EN/ES are equal citizens, not afterthoughts; the language switcher is visible on every page
 

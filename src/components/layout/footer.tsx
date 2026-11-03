@@ -1,147 +1,64 @@
-import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { Logo } from '@/components/site/logo';
+import type { SiteContent } from '@/content/types';
 
-export default function Footer() {
-  const t = useTranslations('footer');
-  const year = new Date().getFullYear();
-
+export default function Footer({ c }: { c: SiteContent }) {
+  const f = c.footer;
+  const firstCompare = c.articles.find(a => a.kind === 'compare');
+  const firstGuide = c.articles.find(a => a.kind === 'guide');
   return (
-    <footer style={{
-      backgroundColor: 'var(--color-ink)',
-      color: 'oklch(0.85 0.008 118)',
-      paddingTop: '4rem',
-      paddingBottom: '2.5rem',
-      marginTop: '6rem'
-    }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
-        {/* Top: logo + columns */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
-          gap: '2.5rem',
-          paddingBottom: '3rem',
-          borderBottom: '1px solid oklch(0.25 0.010 118)'
-        }}>
-          {/* Brand */}
-          <div style={{ gridColumn: 'span 1' }}>
-            <span style={{
-              fontFamily: 'var(--font-display, Georgia, serif)',
-              fontSize: '1.375rem',
-              color: 'white',
-              fontWeight: 400,
-              display: 'block',
-              marginBottom: '0.75rem'
-            }}>
-              Traviosoft
-            </span>
-            <p style={{
-              fontSize: '0.875rem',
-              lineHeight: '1.6',
-              color: 'oklch(0.65 0.008 118)',
-              maxWidth: '22ch'
-            }}>
-              {t('tagline')}
-            </p>
+    <footer className="foot">
+      <div className="wrap">
+        <div className="foot-grid">
+          <div className="foot-brand">
+            <Logo color="var(--cream)" />
+            <p style={{ marginTop: 16, maxWidth: '34ch', opacity: 0.85 }}>{f.tagline}</p>
           </div>
-
-          {/* Product column */}
           <div>
-            <p style={{
-              fontSize: '0.75rem',
-              fontWeight: 600,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'oklch(0.55 0.008 118)',
-              marginBottom: '1rem'
-            }}>
-              {t('product_col')}
-            </p>
-            <FooterLinks links={[
-              { label: t('features'), href: '/product' },
-              { label: t('pricing'), href: '/pricing' },
-              { label: t('book_demo'), href: '/demo', highlight: true }
-            ]} />
+            <h4>{f.product}</h4>
+            <ul>
+              {(['sell', 'book', 'get-paid', 'setup'] as const).map(s => (
+                <li key={s}><Link href={`/${s}`}>{c.jobs[s].name}</Link></li>
+              ))}
+              <li><Link href="/pricing">{c.nav.pricing}</Link></li>
+              <li><Link href="/example">{c.nav.example}</Link></li>
+            </ul>
           </div>
-
-          {/* Company column */}
           <div>
-            <p style={{
-              fontSize: '0.75rem',
-              fontWeight: 600,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'oklch(0.55 0.008 118)',
-              marginBottom: '1rem'
-            }}>
-              {t('company_col')}
-            </p>
-            <FooterLinks links={[
-              { label: t('about'), href: '/about' },
-              { label: t('faq'), href: '/faq' }
-            ]} />
+            <h4>{f.resources}</h4>
+            <ul>
+              <li><Link href="/resources">{c.nav.resources}</Link></li>
+              {firstCompare && <li><Link href="/resources#compare">{f.compare}</Link></li>}
+              {firstGuide && <li><Link href="/resources#guide">{f.guides}</Link></li>}
+              <li><Link href="/glossary">{f.glossary}</Link></li>
+              {f.localLinks.map(l => (
+                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+              ))}
+            </ul>
           </div>
-
-          {/* Legal column */}
           <div>
-            <p style={{
-              fontSize: '0.75rem',
-              fontWeight: 600,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'oklch(0.55 0.008 118)',
-              marginBottom: '1rem'
-            }}>
-              {t('legal_col')}
-            </p>
-            <FooterLinks links={[
-              { label: t('privacy'), href: '/legal/privacy' },
-              { label: t('terms'), href: '/legal/terms' },
-              { label: t('legal_notice'), href: '/legal/notice' }
-            ]} />
+            <h4>{f.company}</h4>
+            <ul>
+              <li><Link href="/about">{f.about}</Link></li>
+              <li><Link href="/switch">{f.switching}</Link></li>
+              <li><Link href="/faq">{f.faq}</Link></li>
+              <li><Link href="/demo">{c.nav.demo}</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4>{f.legal}</h4>
+            <ul>
+              <li><Link href="/legal/privacy">{f.privacy}</Link></li>
+              <li><Link href="/legal/terms">{f.terms}</Link></li>
+              <li><Link href="/legal/notice">{f.notice}</Link></li>
+            </ul>
           </div>
         </div>
-
-        {/* Bottom: copyright */}
-        <div style={{
-          paddingTop: '1.5rem',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '0.75rem'
-        }}>
-          <p style={{ fontSize: '0.8125rem', color: 'oklch(0.50 0.008 118)' }}>
-            © {year} {t('copyright')}
-          </p>
+        <div className="foot-bottom">
+          <span>© {new Date().getFullYear()} {f.rights}</span>
+          <span>{f.hosted}</span>
         </div>
       </div>
-
-      <style>{`
-        .footer-link { color: oklch(0.72 0.008 118); transition: color 0.15s ease-out; }
-        .footer-link:hover { color: white; }
-        .footer-link--highlight { color: var(--color-accent); }
-        .footer-link--highlight:hover { color: oklch(0.65 0.14 48); }
-      `}</style>
     </footer>
-  );
-}
-
-type FooterLinkItem = { label: string; href: string; highlight?: boolean };
-
-function FooterLinks({ links }: { links: FooterLinkItem[] }) {
-  return (
-    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-      {links.map(({ label, href, highlight }) => (
-        <li key={href}>
-          <Link
-            href={href}
-            className={`footer-link${highlight ? ' footer-link--highlight' : ''}`}
-            style={{ fontSize: '0.875rem', textDecoration: 'none' }}
-          >
-            {label}
-          </Link>
-        </li>
-      ))}
-    </ul>
   );
 }
