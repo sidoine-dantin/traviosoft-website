@@ -294,7 +294,7 @@ const setup: JobPage = {
       lead: 'Everyone sees the same client, quote and booking. Add a colleague in a minute.',
       visual: 'team',
       features: [
-        { title: 'Users included in your plan', body: ['3 users on Small, 5 on Team, more on Larger.'] },
+        { title: 'Users included in your plan', body: ['3 users on Core, 5 on Team, more on Extended.'] },
         { title: 'Teams, portfolios and roles', body: ['Give each person their own clients and trips, and decide who sees what.'], later: true }
       ]
     },

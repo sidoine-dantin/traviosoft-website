@@ -294,7 +294,7 @@ const setup: JobPage = {
       lead: 'Todos ven el mismo cliente, presupuesto y reserva. Añade a un compañero en un minuto.',
       visual: 'team',
       features: [
-        { title: 'Usuarios incluidos en tu plan', body: ['3 usuarios en Small, 5 en Team, más en Larger.'] },
+        { title: 'Usuarios incluidos en tu plan', body: ['3 usuarios en Core, 5 en Team, más en Extended.'] },
         { title: 'Equipos, carteras y roles', body: ['Da a cada persona sus propios clientes y viajes, y decide quién ve qué.'], later: true }
       ]
     },

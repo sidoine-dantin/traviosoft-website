@@ -322,7 +322,7 @@ const best: Article = {
   metaDescription:
     'An honest comparison of Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV and Excel: who each is for, published prices, languages and limits.',
   title: 'Best software for DMCs and inbound agencies (2026)',
-  lead: 'For a DMC or tailor-made agency, the options are Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio and GIAV; Excel and Word work while volume is low. This guide compares them using public facts: who each is for, price, languages and limits.',
+  lead: 'For a DMC or tailor-made agency, the options are Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio and GIAV; many agencies also start with Excel and Word. This guide compares them using public facts: who each is for, price, languages and limits.',
   updated: UPDATED,
   card: 'Eight options compared: who each is for, published prices, languages and limits.',
   blocks: [

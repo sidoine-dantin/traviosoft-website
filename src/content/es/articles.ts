@@ -322,7 +322,7 @@ const best: Article = {
   metaDescription:
     'Comparativa honesta de Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV y Excel: para quién es cada uno, precios publicados, idiomas y límites.',
   title: 'Mejor software para DMC y receptivos en España (2026)',
-  lead: 'Para un DMC, receptivo o agencia a medida en España, las opciones son Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio y GIAV; Excel y Word valen mientras el volumen es bajo. Esta guía los compara con datos públicos: para quién es cada uno, precio, idiomas y límites.',
+  lead: 'Para un DMC, receptivo o agencia a medida en España, las opciones son Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio y GIAV; muchas agencias empiezan también con Excel y Word. Esta guía los compara con datos públicos: para quién es cada uno, precio, idiomas y límites.',
   updated: UPDATED,
   card: 'Ocho opciones comparadas: para quién es cada una, precios publicados, idiomas y límites.',
   blocks: [

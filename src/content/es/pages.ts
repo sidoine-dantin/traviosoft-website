@@ -12,7 +12,7 @@ export const pricing: SiteContent['pricing'] = {
   plans: [
     {
       id: 'small',
-      name: 'Small',
+      name: 'Core',
       users: 'Hasta 3 usuarios',
       yearly: '190',
       monthly: '228',
@@ -45,7 +45,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       id: 'larger',
-      name: 'Larger',
+      name: 'Extended',
       users: '6 usuarios o más',
       yearly: 'Desde 250',
       monthly: 'Desde 300',
@@ -91,7 +91,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Qué pasa si añado un usuario?',
-      a: ['Hasta 3 usuarios estás en Small y hasta 5 en Team. Desde el sexto usuario pasas a Larger, y cada usuario adicional cuesta 40 EUR al mes con pago anual y 48 EUR con pago mensual.']
+      a: ['Hasta 3 usuarios estás en Core y hasta 5 en Team. Desde el sexto usuario pasas a Extended, y cada usuario adicional cuesta 40 EUR al mes con pago anual y 48 EUR con pago mensual.']
     },
     {
       q: '¿Mensual o anual: cuál me conviene?',
@@ -351,7 +351,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Puedo pagar al mes?',
-          a: ['Sí. Con pago mensual son 228 EUR para Small y 300 EUR para Team. El alta cuesta 390 EUR una sola vez con pago mensual, y es gratis con pago anual.']
+          a: ['Sí. Con pago mensual son 228 EUR para Core y 300 EUR para Team. El alta cuesta 390 EUR una sola vez con pago mensual, y es gratis con pago anual.']
         },
         {
           q: '¿Hay prueba gratuita?',

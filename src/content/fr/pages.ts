@@ -12,7 +12,7 @@ export const pricing: SiteContent['pricing'] = {
   plans: [
     {
       id: 'small',
-      name: 'Small',
+      name: 'Core',
       users: 'Jusqu’à 3 utilisateurs',
       yearly: '190',
       monthly: '228',
@@ -45,7 +45,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       id: 'larger',
-      name: 'Larger',
+      name: 'Extended',
       users: '6 utilisateurs et plus',
       yearly: 'Dès 250',
       monthly: 'Dès 300',
@@ -91,7 +91,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Que se passe-t-il si j’ajoute un utilisateur ?',
-      a: ['Jusqu’à 3 utilisateurs, vous êtes en Small, jusqu’à 5 en Team. À partir du sixième, vous passez en Larger, et chaque utilisateur supplémentaire coûte 40 EUR par mois en annuel, 48 EUR en mensuel.']
+      a: ['Jusqu’à 3 utilisateurs, vous êtes en Core, jusqu’à 5 en Team. À partir du sixième, vous passez en Extended, et chaque utilisateur supplémentaire coûte 40 EUR par mois en annuel, 48 EUR en mensuel.']
     },
     {
       q: 'Mensuel ou annuel : lequel choisir ?',
@@ -351,7 +351,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Puis-je payer au mois ?',
-          a: ['Oui. En mensuel, c’est 228 EUR pour Small et 300 EUR pour Team. La mise en place coûte 390 EUR une seule fois en mensuel, et elle est offerte en annuel.']
+          a: ['Oui. En mensuel, c’est 228 EUR pour Core et 300 EUR pour Team. La mise en place coûte 390 EUR une seule fois en mensuel, et elle est offerte en annuel.']
         },
         {
           q: 'Y a-t-il un essai gratuit ?',

@@ -12,7 +12,7 @@ export const pricing: SiteContent['pricing'] = {
   plans: [
     {
       id: 'small',
-      name: 'Small',
+      name: 'Core',
       users: 'Up to 3 users',
       yearly: '190',
       monthly: '228',
@@ -45,7 +45,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       id: 'larger',
-      name: 'Larger',
+      name: 'Extended',
       users: '6 users and more',
       yearly: 'From 250',
       monthly: 'From 300',
@@ -91,7 +91,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'What if I add a user?',
-      a: ['Up to 3 users you are on Small, up to 5 on Team. From the sixth user on Larger, each extra user costs 40 EUR a month with yearly billing, 48 EUR with monthly.']
+      a: ['Up to 3 users you are on Core, up to 5 on Team. From the sixth user on Extended, each extra user costs 40 EUR a month with yearly billing, 48 EUR with monthly.']
     },
     {
       q: 'Monthly or yearly: which one?',
@@ -351,7 +351,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Can I pay monthly?',
-          a: ['Yes. Monthly billing is 228 EUR for Small and 300 EUR for Team. Setup is 390 EUR once with monthly billing, and free with yearly billing.']
+          a: ['Yes. Monthly billing is 228 EUR for Core and 300 EUR for Team. Setup is 390 EUR once with monthly billing, and free with yearly billing.']
         },
         {
           q: 'Is there a free trial?',
