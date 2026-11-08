@@ -6,7 +6,7 @@ slug: /product
 
 ## Intro
 
-**Título:** Todo lo que necesita una agencia de viajes boutique, en una sola herramienta
+**Título:** Todo lo que necesita una agencia de viajes a medida, en un solo sistema
 
 **Texto:** Cada módulo corresponde a un paso real del trabajo diario de una agencia. Sin funciones de relleno: herramientas para ahorrar tiempo, profesionalizar tus documentos y mantener el control sobre tus márgenes.
 

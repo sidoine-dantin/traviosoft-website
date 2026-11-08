@@ -1,12 +1,12 @@
 ---
 title: About - Traviosoft
-meta_description: Traviosoft was born from the real-world needs of a boutique travel agency. Discover the philosophy behind the product.
+meta_description: Traviosoft was born from the real-world needs of a travel agency. Discover the philosophy behind the product.
 slug: /about
 ---
 
 ## Intro
 
-**Headline:** A tool built for boutique agencies, not for the big players
+**Headline:** Complete management software for tailor-made travel agencies and DMCs
 
 **Text:** Traviosoft wasn't dreamed up in a product committee disconnected from the field. It was born from a concrete need: a travel agency having to juggle Excel, Word, email and WhatsApp to run its business.
 
@@ -16,7 +16,7 @@ slug: /about
 
 **Section title:** Built with a real agency
 
-**Text:** Traviosoft was developed with, and for, a boutique travel agency based in Barcelona, specializing in tailor-made trips. This agency uses Traviosoft every day to run its entire business: client requests, quotes, orders, payments, suppliers and invoicing.
+**Text:** Traviosoft was developed with, and for, a travel agency based in Barcelona, specializing in tailor-made trips. This agency uses Traviosoft every day to run its entire business: client requests, quotes, orders, payments, suppliers and invoicing.
 
 The product keeps evolving based on real, day-to-day needs, not abstract assumptions about what an agency "should" need.
 
@@ -24,9 +24,9 @@ The product keeps evolving based on real, day-to-day needs, not abstract assumpt
 
 ## Our philosophy
 
-**Section title:** Built for small teams
+**Section title:** Built around how tailor-made trips really run
 
-**Text:** Most management software for the travel industry is built for large organizations: big sales teams, complex processes, modules you'll never use. Traviosoft takes the opposite approach: a simple tool, focused on the real needs of a 2-to-15-person team running tailor-made trips.
+**Text:** Traviosoft follows the whole trip, from the first request to the last invoice, in one system: quotes, orders, supplier coordination, payments and invoicing. Every part is shaped around what a team running tailor-made trips actually does every day.
 
 ---
 

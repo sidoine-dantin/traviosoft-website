@@ -6,7 +6,7 @@ slug: /product
 
 ## Intro
 
-**Titre :** Tout ce dont une agence de voyage boutique a besoin, dans un seul outil
+**Titre :** Tout ce dont une agence de voyages sur mesure a besoin, dans un seul système
 
 **Texte :** Chaque module ci-dessous correspond à une étape réelle du travail quotidien d'une agence. Pas de fonctionnalités gadget : des outils pour gagner du temps, professionnaliser vos documents et garder le contrôle sur vos marges.
 

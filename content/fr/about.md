@@ -1,12 +1,12 @@
 ---
 title: À propos - Traviosoft
-meta_description: Traviosoft est né du besoin réel d'une agence de voyage boutique. Découvrez la philosophie derrière le produit.
+meta_description: Traviosoft est né du besoin réel d'une agence de voyage. Découvrez la philosophie derrière le produit.
 slug: /about
 ---
 
 ## Intro
 
-**Titre :** Un outil pensé pour les agences boutique, pas pour les géants du voyage
+**Titre :** Un logiciel de gestion complet pour les agences de voyages sur mesure et DMC
 
 **Texte :** Traviosoft n'a pas été imaginé dans un comité produit déconnecté du terrain. Il est né d'un besoin concret : celui d'une agence de voyage qui devait jongler entre Excel, Word, emails et WhatsApp pour gérer son activité.
 
@@ -16,7 +16,7 @@ slug: /about
 
 **Titre de section :** Conçu avec une vraie agence
 
-**Texte :** Traviosoft a été développé avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure. Cette agence utilise Traviosoft au quotidien pour gérer l'intégralité de son activité : demandes clients, devis, commandes, paiements, prestataires et facturation.
+**Texte :** Traviosoft a été développé avec et pour une agence de voyage basée à Barcelone, spécialisée dans les voyages sur-mesure. Cette agence utilise Traviosoft au quotidien pour gérer l'intégralité de son activité : demandes clients, devis, commandes, paiements, prestataires et facturation.
 
 Le produit continue d'évoluer à partir de besoins réels rencontrés sur le terrain, pas de suppositions abstraites sur ce dont une agence "devrait" avoir besoin.
 
@@ -24,9 +24,9 @@ Le produit continue d'évoluer à partir de besoins réels rencontrés sur le te
 
 ## Notre philosophie
 
-**Titre de section :** Conçu pour les petites structures
+**Titre de section :** Conçu autour du fonctionnement réel des voyages sur mesure
 
-**Texte :** La plupart des logiciels de gestion pour le tourisme sont pensés pour de grosses structures : équipes commerciales nombreuses, processus complexes, modules qu'on n'utilisera jamais. Traviosoft prend le chemin inverse : un outil simple, centré sur les besoins réels d'une équipe de 2 à 15 personnes qui gère des voyages sur-mesure.
+**Texte :** Traviosoft suit tout le voyage, de la première demande à la dernière facture, dans un seul système : devis, commandes, coordination des prestataires, paiements et facturation. Chaque partie est pensée autour de ce que fait vraiment, chaque jour, une équipe qui gère des voyages sur mesure.
 
 ---
 

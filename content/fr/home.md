@@ -1,12 +1,12 @@
 ---
-title: Traviosoft - Le logiciel de gestion pour agences de voyage boutique
+title: Traviosoft - Le système de gestion pour agences de voyages sur mesure et DMC
 meta_description: Traviosoft centralise devis, commandes, paiements, prestataires et facturation pour les agences de voyage sur-mesure et DMC. Réservez une démo de 30 minutes.
 slug: /
 ---
 
 ## Hero
 
-**Titre :** Le logiciel de gestion conçu pour les agences de voyage boutique
+**Titre :** Le système de gestion pour agences de voyages sur mesure et DMC
 
 **Sous-titre :** Devis, commandes, paiements et prestataires, réunis dans un seul outil, sans fichiers Excel ni Word qui se perdent.
 
@@ -85,7 +85,7 @@ Court résumé visuel des 6 étapes (détaillées sur `/how-it-works`) :
 
 **Titre de section :** Un outil né du terrain, pas d'un cahier des charges abstrait
 
-Traviosoft a été conçu avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure. Elle l'utilise au quotidien pour gérer l'intégralité de son activité : devis, commandes, paiements, prestataires.
+Traviosoft a été conçu avec et pour une agence de voyage basée à Barcelone, spécialisée dans les voyages sur-mesure. Elle l'utilise au quotidien pour gérer l'intégralité de son activité : devis, commandes, paiements, prestataires.
 
 Le produit continue d'évoluer au contact d'agences comme la vôtre, avec un objectif simple : remplacer les fichiers Excel et Word dispersés par un outil pensé pour le métier.
 

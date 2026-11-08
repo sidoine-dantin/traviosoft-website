@@ -1,6 +1,6 @@
 ---
 title: Pricing - Traviosoft
-meta_description: A simple pricing model, no hidden fees, built for boutique travel agencies. Book a demo to get your quote.
+meta_description: A clear pricing model, no hidden fees, for tailor-made travel agencies and DMCs. Book a demo to get your quote.
 slug: /pricing
 ---
 
@@ -8,7 +8,7 @@ slug: /pricing
 
 **Headline:** A simple price, fitted to your agency
 
-**Text:** No à la carte feature matrix, no paid add-on modules. Traviosoft runs on a single plan, designed for boutique agencies.
+**Text:** No à la carte feature matrix, no paid add-on modules. Traviosoft runs on a single plan, designed for tailor-made travel agencies and DMCs.
 
 ---
 

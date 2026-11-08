@@ -1,6 +1,6 @@
 ---
 title: Precios - Traviosoft
-meta_description: Un modelo de precios simple, sin costes ocultos, pensado para agencias de viajes boutique. Reserva una demo para recibir tu tarifa.
+meta_description: Un modelo de precios claro, sin costes ocultos, para agencias de viajes a medida y DMC. Reserva una demo para recibir tu tarifa.
 slug: /pricing
 ---
 
@@ -8,7 +8,7 @@ slug: /pricing
 
 **Título:** Un precio simple, adaptado a tu agencia
 
-**Texto:** Sin matriz de funcionalidades a la carta, sin módulos adicionales de pago. Traviosoft funciona con una única tarifa, pensada para agencias boutique.
+**Texto:** Sin matriz de funcionalidades a la carta, sin módulos adicionales de pago. Traviosoft funciona con una única tarifa, pensada para agencias de viajes a medida y DMC.
 
 ---
 

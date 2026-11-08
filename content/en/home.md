@@ -1,12 +1,12 @@
 ---
-title: Traviosoft - The management software for boutique travel agencies
-meta_description: Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for boutique travel agencies and DMCs. Book a 30-minute demo.
+title: Traviosoft - The management system for tailor-made travel agencies and DMCs
+meta_description: Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for tailor-made travel agencies and DMCs. Book a 30-minute demo.
 slug: /
 ---
 
 ## Hero
 
-**Headline:** The management software built for boutique travel agencies
+**Headline:** The management system for tailor-made travel agencies and DMCs
 
 **Subheadline:** Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.
 
@@ -85,7 +85,7 @@ Short visual summary of the 6 steps (detailed on `/how-it-works`):
 
 **Section title:** Built from real-world use, not from an abstract spec sheet
 
-Traviosoft was built with, and for, a boutique travel agency based in Barcelona, specializing in tailor-made trips. That agency uses Traviosoft every day to run its entire business: requests, quotes, orders, payments, suppliers.
+Traviosoft was built with, and for, a travel agency based in Barcelona, specializing in tailor-made trips. That agency uses Traviosoft every day to run its entire business: requests, quotes, orders, payments, suppliers.
 
 The product keeps evolving in contact with agencies like yours, with a simple goal: replace scattered spreadsheets and Word documents with a tool designed for the job.
 

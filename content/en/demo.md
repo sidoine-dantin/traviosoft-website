@@ -33,13 +33,12 @@ slug: /demo
 **Section title:** Traviosoft is a particularly good fit if...
 
 - You run a tailor-made travel agency, a DMC or a specialized inbound operator
-- Your team has between 2 and 15 people
+- You want one system that follows each trip from the first request to the last invoice
 - You currently manage quotes, payments or suppliers with Excel, Word, email or WhatsApp
 - You want to make your client-facing documents (quotes, service sheets) more professional without overhauling your whole setup
 
 **Section title:** It's probably not (yet) for you if...
 
-- You handle several hundred quotes a month with a large dedicated sales team
 - You're looking for an online booking platform for the general public (OTA)
 
 ---
