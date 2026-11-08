@@ -5,7 +5,7 @@ export const pricing: SiteContent['pricing'] = {
   metaDescription:
     'Trois formules, seul le nombre d’utilisateurs change. Toutes les fonctions partout. Dès 190 EUR par mois pour 3 utilisateurs, mise en place offerte en annuel.',
   title: 'Toutes les fonctions, un seul prix.',
-  lead: 'Les formules ne diffèrent que par le nombre d’utilisateurs, rien d’autre. Une petite agence n’a jamais à se demander ce qui lui manque.',
+  lead: 'Les formules ne diffèrent que par le nombre d’utilisateurs, rien d’autre. Toutes les fonctions sont dans toutes les formules : il n’y a jamais à se demander ce qui manque.',
   yearly: 'Annuel',
   monthly: 'Mensuel',
   yearlyNote: 'La facturation annuelle offre deux mois. Les prix s’entendent par mois, hors TVA.',
@@ -322,7 +322,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Qu’est-ce que Traviosoft ?',
-          a: ['Un logiciel web pour les petites agences de voyages sur mesure et les DMC, de 1 à 15 personnes. Il couvre la demande, le devis, la commande et les réservations, l’itinéraire client, les paiements et les factures.']
+          a: ['Un logiciel web de gestion pour les agences de voyages sur mesure et les DMC. Il couvre la demande, le devis, la commande et les réservations, l’itinéraire client, les paiements et les factures.']
         },
         {
           q: 'Plusieurs prestataires peuvent-ils vendre le même hôtel ou le même service ?',
@@ -399,7 +399,7 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'À propos de Traviosoft : né dans une agence de Barcelone',
   metaDescription:
-    'Traviosoft est né dans une agence de voyages sur mesure de Barcelone qui tournait avec Excel, Word et WhatsApp. Petite équipe, support par email, données en UE.',
+    'Traviosoft est né dans une agence de voyages sur mesure de Barcelone qui tournait avec Excel, Word et WhatsApp. Support par email assuré par les personnes qui construisent le produit, données en UE.',
   title: 'Conçu par une agence, pour des agences.',
   lead: 'Traviosoft est né dans une agence de voyages sur mesure de Barcelone. Il est fait pour les agences qui lui ressemblent.',
   blocks: [
@@ -413,14 +413,14 @@ export const about: SiteContent['about'] = {
     {
       title: 'Pourquoi nous avons continué',
       body: [
-        'Les logiciels pensés pour le voyage s’adressent soit aux grands opérateurs, soit aux vendeurs de circuits à départs fixes. Les agences sur mesure et les DMC de 1 à 15 personnes sont restées avec un tableur.',
-        'Nous voulions un seul endroit pour tout le voyage, à un prix auquel une petite agence peut dire oui.'
+        'Un voyage sur mesure se chiffre prestation par prestation à partir de tarifs nets, avec plusieurs fournisseurs et des documents dans la langue du client. Nous voulions un logiciel pensé pour cette façon de travailler.',
+        'Un seul endroit pour tout le voyage, de la première demande à la dernière facture, avec le prix affiché sur le site.'
       ]
     },
     {
       title: 'Notre façon de travailler',
       body: [
-        'Une petite équipe. Le support se fait par email, en espagnol, en anglais et en français, et vous parlez aux personnes qui construisent le produit.',
+        'Le support se fait par email, en espagnol, en anglais et en français, et vous parlez aux personnes qui construisent le produit.',
         'Nous vous disons ce qui est disponible et ce qui arrive. Ce qui n’est pas encore disponible porte une mention sur ce site.'
       ]
     },
@@ -431,16 +431,16 @@ export const about: SiteContent['about'] = {
       ]
     },
     {
-      title: 'Honnêtes sur notre jeunesse',
+      title: 'Ce sur quoi vous pouvez compter',
       body: [
-        'Traviosoft est un produit jeune. Nous n’avons pas une longue liste d’années d’existence, et nous ne vous montrons ni logos ni avis que nous ne pourrions pas défendre.',
-        'Ce que nous avons, c’est un outil qui fait tourner de vrais voyages, et une équipe qui répond à ses emails.'
+        'Traviosoft fait tourner de vrais voyages chaque jour, et nous ne montrons que les logos et avis que nous pouvons défendre.',
+        'Vous avez un système de gestion complet et une équipe qui répond à ses emails.'
       ]
     }
   ],
   facts: [
     { k: 'Origine', v: 'Une agence sur mesure de Barcelone' },
-    { k: 'Pour', v: 'Agences sur mesure et DMC, de 1 à 15 personnes' },
+    { k: 'Pour', v: 'Agences sur mesure et DMC' },
     { k: 'Support', v: 'Par email, en espagnol, anglais et français' },
     { k: 'Données', v: 'Votre propre base de données, hébergée dans l’UE' }
   ]

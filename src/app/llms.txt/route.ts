@@ -9,7 +9,7 @@ export function GET() {
   const lines: string[] = [
     '# Traviosoft',
     '',
-    `> ${en.footer.tagline} Web software for tailor-made travel agencies and DMCs of 1 to 15 people. From 190 EUR a month for 3 users and 250 EUR a month for 5 users, billed yearly, VAT excluded. Every feature in every plan. Each agency has its own database, hosted in the EU. Site in Spanish, English and French.`,
+    `> ${en.footer.tagline} Web management software for tailor-made travel agencies and DMCs. From 190 EUR a month for 3 users and 250 EUR a month for 5 users, billed yearly, VAT excluded. Every feature in every plan. Each agency has its own database, hosted in the EU. Site in Spanish, English and French.`,
     '',
     '## Key facts',
     ...en.home.facts.map(f => `- ${f.k}: ${f.v}`),

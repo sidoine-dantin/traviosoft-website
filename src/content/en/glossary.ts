@@ -9,7 +9,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'inbound-agency',
     term: 'Inbound agency (receptivo)',
-    def: 'An agency that receives travellers from abroad and organises their trip in its own country. In practice it is the same as a DMC, although "inbound agency" is used more for small agencies that sell to other agencies or straight to the traveller.'
+    def: 'An agency that receives travellers from abroad and organises their trip in its own country. In practice it is the same as a DMC, although "inbound agency" is used more for agencies that sell to other agencies or straight to the traveller.'
   },
   {
     id: 'tailor-made',

@@ -3,7 +3,7 @@ import type { SiteContent } from '../types';
 export const home: SiteContent['home'] = {
   metaTitle: 'Traviosoft: software para agencias a medida y DMC',
   metaDescription:
-    'Solicitudes, presupuestos con tu margen, reservas, itinerarios, cobros y facturas en un solo sitio. Para agencias de 1 a 15. Desde 190 EUR al mes, en la UE.',
+    'Solicitudes, presupuestos con tu margen, reservas, itinerarios, cobros y facturas en un solo sitio. Para agencias a medida y DMC. Desde 190 EUR al mes, en la UE.',
   kick: 'Envía el presupuesto',
   giant: 'hoy.',
   sub: 'No el jueves. Software para agencias a medida y DMC.',
@@ -45,7 +45,7 @@ export const home: SiteContent['home'] = {
   priceLink: 'Comparar planes',
   facts: [
     { k: 'Precio', v: 'Desde 190 EUR al mes, 3 usuarios incluidos' },
-    { k: 'Para', v: 'Agencias a medida y DMC, de 1 a 15 personas' },
+    { k: 'Para', v: 'Agencias a medida y DMC' },
     { k: 'Datos', v: 'Tu propia base de datos, alojada en la UE' },
     { k: 'Idiomas', v: 'Documentos en español, inglés, francés y más' }
   ]

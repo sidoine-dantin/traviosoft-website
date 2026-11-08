@@ -21,14 +21,14 @@
     "privacy": "Privacy policy",
     "terms": "Terms of service",
     "legal_notice": "Legal notice",
-    "tagline": "Management software for boutique travel agencies",
+    "tagline": "Management software for tailor-made travel agencies and DMCs",
     "copyright": "Traviosoft"
   },
   "home": {
-    "meta_title": "Traviosoft - The management software for boutique travel agencies",
-    "meta_description": "Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for boutique travel agencies and DMCs. Book a 30-minute demo.",
+    "meta_title": "Traviosoft - The management software for tailor-made travel agencies and DMCs",
+    "meta_description": "Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
     "hero": {
-      "headline": "The management software built for boutique travel agencies",
+      "headline": "The management software built for tailor-made travel agencies and DMCs",
       "subheadline": "Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.",
       "cta_primary": "Book a demo",
       "cta_secondary": "See how it works"
@@ -71,7 +71,7 @@
     },
     "trust": {
       "title": "Built from real-world use, not from an abstract spec sheet",
-      "text": "Traviosoft was built with, and for, a boutique travel agency based in Spain, specializing in tailor-made trips. The product keeps evolving in contact with agencies like yours, with a simple goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
+      "text": "Traviosoft was built with, and for, a tailor-made travel agency based in Spain. The product keeps evolving in contact with agencies like yours, with one goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
       "cta": "Book a demo and talk it through"
     },
     "multilang": {
@@ -86,7 +86,7 @@
   },
   "product": {
     "meta_title": "Features - Traviosoft",
-    "meta_description": "See what changes when quotes, orders, payments, suppliers and invoicing live in one tool built for boutique travel agencies. Book a 30-minute demo.",
+    "meta_description": "See what changes when quotes, orders, payments, suppliers and invoicing live in one tool built for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
     "intro": {
       "headline": "Less time fighting admin. More time selling trips.",
       "text": "You didn't start a travel agency to wrestle with spreadsheets. Here's what your days look like once every quote, payment and supplier lives in one place.",
@@ -258,7 +258,7 @@
   },
   "pricing": {
     "meta_title": "Pricing - Traviosoft",
-    "meta_description": "A simple pricing model, no hidden fees, built for boutique travel agencies. Book a demo to get your quote.",
+    "meta_description": "A clear pricing model, with every feature in every plan, for tailor-made travel agencies and DMCs. Book a demo to get your quote.",
     "intro": {
       "headline": "One product, shaped around your agency. Priced for your team size.",
       "text": "Traviosoft adapts to the way your agency works, not the other way around. The only thing that sets your price is how many people on your team use it."
@@ -267,7 +267,7 @@
       "title": "A Traviosoft that fits your agency, sized to your team",
       "points": [
         "Tailored to the way your agency works, so it feels made for you",
-        "A price set by your team size (small team, growing team, full team), so you only pay for the seats you use",
+        "A price set by your team size (3 users, 5 users or more), so you only pay for the seats you use",
         "No hidden setup or onboarding fees",
         "Monthly or annual billing, your choice"
       ],
@@ -289,18 +289,18 @@
   },
   "about": {
     "meta_title": "About - Traviosoft",
-    "meta_description": "Traviosoft was born from the real-world needs of a boutique travel agency. Discover the philosophy behind the product.",
+    "meta_description": "Traviosoft was born from the real-world needs of a tailor-made travel agency. Discover the philosophy behind the product.",
     "intro": {
-      "headline": "Made for the boutique agencies big software forgets",
+      "headline": "Made for tailor-made travel agencies and DMCs",
       "text": "Traviosoft started with a real problem: a travel agency juggling Excel, Word and endless chat messages just to keep its trips moving. We built the tool that agency actually needed, and kept going from there."
     },
     "story": {
       "title": "Built with a real agency",
-      "text": "Traviosoft was developed with, and for, a boutique travel agency based in Spain that specializes in tailor-made trips. Every part of it comes from a real day-to-day need we watched the team run into."
+      "text": "Traviosoft was developed with, and for, a tailor-made travel agency based in Spain. Every part of it comes from a real day-to-day need we watched the team run into."
     },
     "philosophy": {
-      "title": "Built for small teams",
-      "text": "Most travel management software is built for large organizations, with heavy processes and modules a small agency will never open. Traviosoft is the simple version: focused on what a 2-to-15-person team running tailor-made trips actually does every day."
+      "title": "Built around the whole trip",
+      "text": "Traviosoft covers the whole trip, from the first request to the last invoice, around what a tailor-made agency or DMC does every day: pricing service by service, coordinating suppliers, collecting payments and invoicing."
     },
     "support": {
       "title": "Real people who know the job",
@@ -333,7 +333,7 @@
       "title": "Traviosoft is a particularly good fit if...",
       "points": [
         "You run a tailor-made travel agency, a DMC or a specialized inbound operator",
-        "Your team has between 2 and 15 people",
+        "You want one system for the whole trip, from the first request to the last invoice",
         "You currently manage quotes, payments or suppliers with Excel, Word or software that wasn't built for travel agencies",
         "You want to make your quotes and client documents more professional without overhauling your whole setup"
       ]
@@ -341,7 +341,6 @@
     "fit_no": {
       "title": "It's probably not (yet) for you if...",
       "points": [
-        "You handle several hundred quotes a month with a large dedicated sales team",
         "You're looking for an online booking platform for the general public (OTA)"
       ]
     },
@@ -374,7 +373,7 @@
       },
       {
         "question": "Is it suitable if I work alone? What about a team of 10 or 15?",
-        "answer": "Both work. Traviosoft is built for teams of 2 to 15, and it works just as well for one person running everything from the first quote to the final invoice."
+        "answer": "Both work. Traviosoft suits one person running everything from the first quote to the final invoice, and a team sharing the same trips, with users added as the team grows."
       },
       {
         "question": "Can we import our existing clients, quotes or suppliers?",
@@ -411,7 +410,7 @@
         {
           "heading": "Who we are",
           "body": [
-            "This website is published by Sidoine Dantin EI, registered in France under SIRET 941 883 779 00014, the business behind Traviosoft, management software for boutique travel agencies. For any question about this policy or your data, you can contact us at sidoine@traviosoft.com."
+            "This website is published by Sidoine Dantin EI, registered in France under SIRET 941 883 779 00014, the business behind Traviosoft, management software for tailor-made travel agencies and DMCs. For any question about this policy or your data, you can contact us at sidoine@traviosoft.com."
           ]
         },
         {

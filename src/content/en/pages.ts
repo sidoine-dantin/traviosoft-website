@@ -5,7 +5,7 @@ export const pricing: SiteContent['pricing'] = {
   metaDescription:
     'Three plans that differ only by number of users. Every feature in every plan. From 190 EUR a month for 3 users, setup and data import free with yearly billing.',
   title: 'Every feature, one price.',
-  lead: 'The plans differ by the number of users, nothing else. A small agency never has to wonder what it is missing.',
+  lead: 'The plans differ by the number of users, nothing else. Every feature is in every plan, so there is never a question of what is missing.',
   yearly: 'Yearly',
   monthly: 'Monthly',
   yearlyNote: 'Yearly billing is two months free. Prices are per month, VAT excluded.',
@@ -322,7 +322,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'What is Traviosoft?',
-          a: ['Web software for small tailor-made travel agencies and DMCs, from 1 to 15 people. It covers the request, the quote, the order and bookings, the client itinerary, payments and invoices.']
+          a: ['Web management software for tailor-made travel agencies and DMCs. It covers the request, the quote, the order and bookings, the client itinerary, payments and invoices.']
         },
         {
           q: 'Can several suppliers sell the same hotel or service?',
@@ -399,7 +399,7 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'About Traviosoft: born inside a Barcelona agency',
   metaDescription:
-    'Traviosoft started inside a tailor-made travel agency in Barcelona that ran on Excel, Word and WhatsApp. Small team, support by email, data hosted in the EU.',
+    'Traviosoft started inside a tailor-made travel agency in Barcelona that ran on Excel, Word and WhatsApp. Support by email from the people who build the product, data hosted in the EU.',
   title: 'Built by an agency, for agencies.',
   lead: 'Traviosoft was born inside a tailor-made travel agency in Barcelona. It is made for the agencies that look like it.',
   blocks: [
@@ -413,14 +413,14 @@ export const about: SiteContent['about'] = {
     {
       title: 'Why we kept building',
       body: [
-        'The software made for travel is either made for big operators or for tour sellers with fixed departures. Tailor-made agencies and DMCs of 1 to 15 people were left with a spreadsheet.',
-        'We wanted one place for the whole trip, at a price a small agency can say yes to.'
+        'A tailor-made trip is priced service by service from net rates, with several suppliers and documents in the client’s language. We wanted software built around that way of working.',
+        'One place for the whole trip, from the first request to the last invoice, with the price shown on the site.'
       ]
     },
     {
       title: 'How we work',
       body: [
-        'A small team. Support is by email, in Spanish, English and French, and you talk to the people who build the product.',
+        'Support is by email, in Spanish, English and French, and you talk to the people who build the product.',
         'We tell you what is live and what is coming. Things that are not live yet carry a tag on this site.'
       ]
     },
@@ -431,16 +431,16 @@ export const about: SiteContent['about'] = {
       ]
     },
     {
-      title: 'Honest about being young',
+      title: 'What you can rely on',
       body: [
-        'Traviosoft is a young product. We do not have a long list of years in business, and we do not show you logos or reviews we cannot stand behind.',
-        'What we have is a tool that runs real trips, and a team that answers its email.'
+        'Traviosoft runs real trips every day, and we show only the logos and reviews we can stand behind.',
+        'You get a complete management system and a team that answers its email.'
       ]
     }
   ],
   facts: [
     { k: 'Origin', v: 'A tailor-made agency in Barcelona' },
-    { k: 'For', v: 'Tailor-made agencies and DMCs, 1 to 15 people' },
+    { k: 'For', v: 'Tailor-made agencies and DMCs' },
     { k: 'Support', v: 'By email, in Spanish, English and French' },
     { k: 'Data', v: 'Your own database, hosted in the EU' }
   ]

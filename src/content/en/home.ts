@@ -3,7 +3,7 @@ import type { SiteContent } from '../types';
 export const home: SiteContent['home'] = {
   metaTitle: 'Traviosoft: software for tailor-made travel agencies and DMCs',
   metaDescription:
-    'Requests, quotes with your margins, bookings, client itineraries, payments and invoices in one place. For agencies of 1 to 15 people. From 190 EUR a month, hosted in the EU.',
+    'Requests, quotes with your margins, bookings, client itineraries, payments and invoices in one place. For tailor-made agencies and DMCs. From 190 EUR a month, hosted in the EU.',
   kick: 'Send the quote',
   giant: 'tonight.',
   sub: 'Not on Thursday. Software for tailor-made agencies and DMCs.',
@@ -45,7 +45,7 @@ export const home: SiteContent['home'] = {
   priceLink: 'Compare plans',
   facts: [
     { k: 'Price', v: 'From 190 EUR a month, 3 users included' },
-    { k: 'For', v: 'Tailor-made agencies and DMCs, 1 to 15 people' },
+    { k: 'For', v: 'Tailor-made agencies and DMCs' },
     { k: 'Data', v: 'Your own database, hosted in the EU' },
     { k: 'Languages', v: 'Documents in Spanish, English, French and more' }
   ]

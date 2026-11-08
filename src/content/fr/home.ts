@@ -3,7 +3,7 @@ import type { SiteContent } from '../types';
 export const home: SiteContent['home'] = {
   metaTitle: 'Traviosoft : logiciel pour agences sur mesure et DMC',
   metaDescription:
-    'Demandes, devis avec vos marges, réservations, programmes, paiements et factures au même endroit. Pour agences de 1 à 15. Dès 190 EUR par mois, dans l’UE.',
+    'Demandes, devis avec vos marges, réservations, programmes, paiements et factures au même endroit. Pour agences sur mesure et DMC. Dès 190 EUR par mois, dans l’UE.',
   kick: 'Envoyez le devis',
   giant: 'ce soir.',
   sub: 'Pas jeudi. Logiciel pour agences sur mesure et DMC.',
@@ -45,7 +45,7 @@ export const home: SiteContent['home'] = {
   priceLink: 'Comparer les offres',
   facts: [
     { k: 'Prix', v: 'Dès 190 EUR par mois, 3 utilisateurs inclus' },
-    { k: 'Pour', v: 'Agences sur mesure et DMC, de 1 à 15 personnes' },
+    { k: 'Pour', v: 'Agences sur mesure et DMC' },
     { k: 'Données', v: 'Votre propre base de données, hébergée dans l’UE' },
     { k: 'Langues', v: 'Documents en espagnol, anglais, français et plus' }
   ]

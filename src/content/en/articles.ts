@@ -100,15 +100,15 @@ const compares: Cmp[] = [
     other: 'Ezus',
     metaTitle: 'Traviosoft vs Ezus: comparison for DMCs',
     metaDescription:
-      'We compare Traviosoft and Ezus with published prices, languages, setup costs and Spanish tax rules. Where each one wins, said plainly, for small DMC teams.',
+      'We compare Traviosoft and Ezus with published prices, languages, setup costs and Spanish tax rules. Where each one wins, said plainly, for DMCs and tailor-made agencies.',
     title: 'Traviosoft vs Ezus: an honest comparison for DMCs and inbound agencies',
-    lead: 'Ezus is the closest competitor: a French DMC software with many customers and public prices. Traviosoft costs less in year one for a team of 3 and includes REAV and Veri*Factu for Spain. Ezus has more history and more reviews.',
+    lead: 'Ezus is the closest competitor: a French DMC software with many customers and public prices. Traviosoft shows one price with users included and covers REAV and Veri*Factu for Spain. Ezus has more history and more reviews.',
     card: 'Two tools with public prices: what each includes and what year one costs.',
     basis:
       'Ezus details come from its website and public directories, checked on 3 November 2026. Prices change, so always check both current pricing pages. Ezus customer numbers and review scores are the ones it publishes.',
     rows: [
-      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies of 1 to 15 people', 'DMCs, inbound agencies, tour operators and agencies; FIT, groups and MICE'],
-      ['Company', 'Recent product; see the About page', 'Paris, founded in 2019'],
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'DMCs, inbound agencies, tour operators and agencies; FIT, groups and MICE'],
+      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Paris, founded in 2019'],
       ['Published price', 'From 190 EUR a month with 3 users; 250 EUR with 5', 'Professional 75 EUR per user a month (up to 10 users); Premium 100 EUR; Enterprise on request'],
       ['Getting started', 'Setup and import free with yearly billing', 'Mandatory onboarding pack of 1,990 EUR; data import 390 EUR'],
       ['3 users, year one (list prices)', '190 x 12 = 2,280 EUR', '75 x 3 x 12 = 2,700 EUR + 1,990 EUR = 4,690 EUR'],
@@ -121,11 +121,11 @@ const compares: Cmp[] = [
       'You want a product with more years on the market and many more public references: Ezus says it serves more than 600 agencies in more than 70 countries.',
       'You need support and documentation in Italian or Portuguese.',
       'You value a guided rollout, with an onboarding specialist for several months, and are willing to pay for it.',
-      'Your team is large: Ezus has an Enterprise plan from 30 users.',
+      'You need an Enterprise plan: Ezus offers one from 30 users.',
       'You want a traveller area, a payment portal and web pages inside the same tool, as Ezus describes them.'
     ],
     usBetter: [
-      'You are a team of 3 to 5 and want a clear price with users included and no mandatory onboarding fee.',
+      'You want a clear price with users included, and setup and import free with yearly billing.',
       'Your agency is in Spain and you need REAV on invoices and Veri*Factu with QR.',
       'You work mostly in Spanish and French and want documents and email templates in the client’s language.',
       'You prefer a tool focused on the flow of one trip: request, quote with margin, booking, payment and invoice.'
@@ -133,7 +133,7 @@ const compares: Cmp[] = [
     switching:
       'If you use Ezus and want to switch, export your products, suppliers and clients first. We import products, prices and suppliers from Excel or CSV during setup. A practical tip: switch outside high season and finish open trips where they are. The [Switching page](/switch) lists the steps.',
     faq: [
-      { q: 'Which one is cheaper for 3 users?', a: ['At list prices, Traviosoft costs about 2,280 EUR in year one and Ezus about 4,690 EUR, because Ezus includes a 1,990 EUR onboarding pack. Check both current prices.'] },
+      { q: 'What does each cost in the first year for 3 users?', a: ['At list prices, Traviosoft costs about 2,280 EUR in year one and Ezus about 4,690 EUR, because Ezus includes a 1,990 EUR onboarding pack. Check both current prices.'] },
       { q: 'Does Ezus work for Spain?', a: ['Yes, it has a Spanish site and support. What we did not find on its site is content about REAV. Ask them how they handle it if you need it.'] },
       { q: 'Can I try both?', a: ['Both work with a demo. The most useful test is to bring one real trip of yours to each and compare how long it takes to get a quote with margin.'] }
     ]
@@ -151,9 +151,9 @@ const compares: Cmp[] = [
     basis:
       'We could only see GIAV through directories and trade press, not through our own test. So where there is no public fact we write "Not public" and suggest you ask them. Traviosoft details are those on our site on 3 November 2026.',
     rows: [
-      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies of 1 to 15 people', 'Travel agency management in Spain, mostly retail agencies'],
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Travel agency management in Spain, mostly retail agencies'],
       ['Published price', 'From 190 EUR a month, 3 users included', 'Not public'],
-      ['Team size', '1 to 15 people', 'Not public'],
+      ['Team size', 'Plans for 3, 5 or more users', 'Not public'],
       ['Tailor-made quotes with margin and commission per line', 'Yes, with pricing rules', 'Not public'],
       ['Catalogue with seasons and several suppliers', 'Yes', 'Not public'],
       ['Client itinerary on a shareable page', 'Yes, in their language and with your brand', 'Not public'],
@@ -194,7 +194,7 @@ const compares: Cmp[] = [
     basis:
       'Holded details come from its site and its tourism and travel page, checked on 3 November 2026. Holded changes plans and promotions often, so check its pricing page. It is not a bad tool. It solves a different problem.',
     rows: [
-      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies of 1 to 15 people', 'Freelancers and SMEs in any sector, from 1 to over 100 people'],
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Freelancers and SMEs in any sector, from 1 to over 100 people'],
       ['Published price', 'From 190 EUR a month, 3 users included', 'Basic 29 EUR (2 users), Standard 59 EUR (4), Advanced 99 EUR (7), excluding VAT; with temporary discounts'],
       ['Quotes with margin per service', 'Yes, with pricing rules, VAT and commission', 'No travel-specific features that we saw'],
       ['Catalogue with seasons and suppliers', 'Yes', 'Not its job'],
@@ -231,15 +231,15 @@ const compares: Cmp[] = [
     metaTitle: 'Traviosoft vs Lemax: software for DMCs and tour operators',
     metaDescription:
       'Lemax is Croatian software for mid-size and large tour operators and DMCs. We compare team size, visible pricing and focus against Traviosoft.',
-    title: 'Traviosoft vs Lemax: small teams or large tour operators',
-    lead: 'Lemax is software with more than 30 years behind it, built for mid-size and large tour operators and DMCs. Its Lemax GO package starts at 15 users and prices are not published. Traviosoft is for teams of 1 to 15 and shows its price.',
-    card: 'Software for large operators against software for teams of 1 to 15.',
+    title: 'Traviosoft vs Lemax: two complete management systems compared',
+    lead: 'Lemax is software with more than 30 years behind it, built for mid-size and large tour operators and DMCs. Its Lemax GO package starts at 15 users and prices are not published. Traviosoft covers the whole trip, from the first request to the last invoice, in Spanish, English and French, and shows its price.',
+    card: 'Two complete systems: a long-established platform and one flow from request to invoice with a visible price.',
     basis:
       'Lemax details come from its website and trade press, checked on 3 November 2026. Lemax does not publish prices, so we write "Not public". Its customer numbers are the ones it shows.',
     rows: [
-      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies of 1 to 15 people', 'Mid-size and large tour operators and DMCs'],
-      ['Company', 'Recent product; see the About page', 'Croatia, founded in 1990'],
-      ['Team size', '1 to 15 people', 'Lemax GO from 15 users'],
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Mid-size and large tour operators and DMCs'],
+      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Croatia, founded in 1990'],
+      ['Team size', 'Plans for 3, 5 or more users', 'Lemax GO from 15 users'],
       ['Published price', 'From 190 EUR a month, 3 users included', 'Not public; the price is agreed before signing'],
       ['Site languages', 'Spanish, English and French', 'English'],
       ['Rollout', 'Setup and import free with yearly billing', 'Says "live in 90 days" for Lemax GO'],
@@ -254,13 +254,13 @@ const compares: Cmp[] = [
       'You have the budget for a guided rollout project.'
     ],
     usBetter: [
-      'You are a team of 1 to 15 and what you need is to quote, book and invoice well, without a project that takes months.',
+      'You want to quote, book and invoice the whole trip in one system and be up and running through a short setup.',
       'You want to see the price and the users included before asking for a demo.',
       'Your market is Spain and you sell in Spanish and French, with REAV and Veri*Factu.',
-      'You prefer a tool that is simple to adopt for a small team.'
+      'You want us to import your products, prices and suppliers from Excel or CSV during setup.'
     ],
     switching:
-      'If you use Lemax and your team is too small for its structure, export your products and prices and ask us how to import them from Excel or CSV. Switching in the middle of the season is risky, so it is usually done in the low season. See the [Switching page](/switch).',
+      'If you use Lemax and want to move to Traviosoft, export your products and prices and ask us how to import them from Excel or CSV. Switching in the middle of the season is risky, so it is usually done in the low season. See the [Switching page](/switch).',
     faq: [
       { q: 'Does Lemax work for a team of 4?', a: ['Its Lemax GO package starts at 15 users, according to its site. For smaller teams, ask them what options they have.'] },
       { q: 'Why is there no Lemax price?', a: ['Because it does not publish one. It says the package and rollout price are agreed before you sign. We prefer "Not public" to a guess.'] },
@@ -275,13 +275,13 @@ const compares: Cmp[] = [
     metaDescription:
       'Tourwriter is New Zealand software for luxury DMCs and travel designers. We compare list prices, languages, itinerary limits and Spanish tax rules.',
     title: 'Traviosoft vs Tourwriter: two tools for designing trips',
-    lead: 'Tourwriter is New Zealand software with polished itineraries, built for luxury DMCs and travel designers, in English. Traviosoft costs less for 3 users, works in Spanish and French, and includes REAV and Veri*Factu.',
+    lead: 'Tourwriter is New Zealand software with polished itineraries, built for luxury DMCs and travel designers, in English. Traviosoft prices in euros with users included, works in Spanish and French, and includes REAV and Veri*Factu.',
     card: 'Luxury itineraries in English against a euro-priced tool with Spanish and French.',
     basis:
       'Tourwriter details come from its site (plans and company pages) and from Capterra, checked on 3 November 2026. Its prices are "from" prices in US dollars, per user, with a quote request, so the real total can differ.',
     rows: [
-      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies of 1 to 15 people', 'Luxury DMCs and travel designers, multi-day FIT trips'],
-      ['Company', 'Recent product; see the About page', 'Wellington (New Zealand), founded in 2004'],
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Luxury DMCs and travel designers, multi-day FIT trips'],
+      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Wellington (New Zealand), founded in 2004'],
       ['Published price', 'From 190 EUR a month with 3 users; 250 EUR with 5', 'Starter from 99 USD per user a month; Pro from 149 USD; Premium on request'],
       ['3 users, per month (list prices)', '190 EUR', 'About 447 USD on Pro (3 x 149)'],
       ['Getting started', 'Setup and import free with yearly billing', 'One-time fee from 1,199 USD (migration, setup and training)'],
@@ -322,7 +322,7 @@ const best: Article = {
   metaDescription:
     'An honest comparison of Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV and Excel: who each is for, published prices, languages and limits.',
   title: 'Best software for DMCs and inbound agencies (2026)',
-  lead: 'For a small DMC or inbound agency, the real options are Traviosoft, Ezus and Tourwriter. Tourplan, Lemax and Kaptio are built for larger operators, and GIAV for retail agencies. Excel and Word work while volume is low. This guide compares them using public facts.',
+  lead: 'For a DMC or tailor-made agency, the options are Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio and GIAV; Excel and Word work while volume is low. This guide compares them using public facts: who each is for, price, languages and limits.',
   updated: UPDATED,
   card: 'Eight options compared: who each is for, published prices, languages and limits.',
   blocks: [
@@ -336,7 +336,7 @@ const best: Article = {
       head: ['Tool', 'Who it is for', 'Team size', 'Public price', 'Languages', 'Founded'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', '1 to 15 people', 'From 190 EUR a month with 3 users; 250 EUR with 5', 'Documents in ES, EN, FR and more', 'See the About page'],
+        ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', 'Plans for 3, 5 or more users', 'From 190 EUR a month with 3 users; 250 EUR with 5', 'Documents in ES, EN, FR and more', 'See the About page'],
         ['Ezus', 'DMCs, inbound agencies, tour operators and agencies', 'Professional up to 10 users; Enterprise from 30', '75 EUR per user a month (Professional); mandatory onboarding of 1,990 EUR', 'Site and support in EN, FR, ES, IT, PT', '2019, Paris'],
         ['Tourplan', 'Established tour operators and DMCs', 'Minimum 5 users, per Capterra', 'Not published on its site; Capterra lists from 250 USD per user a month', 'Site in English, Spanish and Japanese', '1986, New Zealand'],
         ['Tourwriter', 'Luxury DMCs and travel designers', '1 to 20+ people depending on plan', 'From 99 USD per user a month; setup from 1,199 USD', 'English', '2004, New Zealand'],
@@ -350,17 +350,17 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Covers the whole trip: requests, a catalogue with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV and Veri*Factu for Spain. It shows its price and does not charge setup with yearly billing. Limits: it is a recent product with no directory reviews yet, and it lacks the track record of the veterans.'
+      text: 'Covers the whole trip: requests, a catalogue with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV and Veri*Factu for Spain. It shows its price and does not charge setup with yearly billing. Limits: no directory reviews yet.'
     },
     { type: 'h3', text: 'Ezus' },
     {
       type: 'p',
-      text: 'The most complete competitor for a small DMC: public prices, a site in five languages and many references (Capterra 4.7 from 61 reviews, as shown on its site). Limits: the 1,990 EUR onboarding pack is mandatory and its Spanish content does not cover REAV.'
+      text: 'The most complete competitor for a DMC: public prices, a site in five languages and many references (Capterra 4.7 from 61 reviews, as shown on its site). Limits: the 1,990 EUR onboarding pack is mandatory and its Spanish content does not cover REAV.'
     },
     { type: 'h3', text: 'Tourplan' },
     {
       type: 'p',
-      text: 'Software with about 40 years of history for tour operators and DMCs, with clients in about 75 countries according to its site. Limits: no published prices, Capterra lists a 5-user minimum from 250 USD per user a month, and its focus is established companies rather than small teams.'
+      text: 'Software with about 40 years of history for tour operators and DMCs, with clients in about 75 countries according to its site. Limits: no published prices, and Capterra lists a 5-user minimum from 250 USD per user a month.'
     },
     { type: 'h3', text: 'Tourwriter' },
     {
@@ -392,7 +392,7 @@ const best: Article = {
       type: 'list',
       ordered: true,
       items: [
-        'Count how many people will use the tool. With 1 to 5, rule out anything that starts at 15 users.',
+        'Count how many people will use the tool and check each option’s minimum number of users.',
         'Work out the cost of year one, not just the monthly fee: add setup and data import.',
         'Check the language of the documents your client receives, not just the screen language.',
         'If your agency is in Spain, ask how invoicing with REAV works and whether the tool complies with Veri*Factu.',
@@ -404,7 +404,7 @@ const best: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'What is the best software for a small DMC?', a: ['It depends on your team and your market. For 1 to 15 people, with a visible price and Spanish invoicing, look at Traviosoft and Ezus. If you sell mostly in English and luxury trips, also look at Tourwriter.'] },
+        { q: 'What is the best software for a DMC or tailor-made agency?', a: ['It depends on your way of working and your market. For the whole trip from request to invoice, with a visible price and Spanish invoicing, look at Traviosoft and Ezus. If you sell mostly in English and luxury trips, also look at Tourwriter.'] },
         { q: 'How much does DMC software cost?', a: ['Public prices range from about 190 EUR a month for 3 users (Traviosoft) to 75 EUR per user a month plus 1,990 EUR onboarding (Ezus). Tourplan, Lemax and Kaptio do not publish prices.'] },
         { q: 'Do I need travel-specific software or will a general ERP do?', a: ['A general ERP handles bookkeeping well, but it does not price quotes with margin per service or list bookings per trip. Many agencies use both.'] }
       ]

@@ -102,13 +102,13 @@ const compares: Cmp[] = [
     metaDescription:
       'Traviosoft et Ezus comparés : prix publiés, langues, coût de démarrage et règles fiscales espagnoles. Là où chacun l’emporte, expliqué sans détour.',
     title: 'Traviosoft ou Ezus : un comparatif honnête pour DMC et réceptifs',
-    lead: 'Ezus est le concurrent le plus proche : un logiciel français pour DMC, avec beaucoup de clients et des prix publics. Traviosoft coûte moins cher la première année pour une équipe de 3 et gère le REAV et Veri*Factu pour l’Espagne. Ezus a plus d’historique et plus d’avis.',
+    lead: 'Ezus est le concurrent le plus proche : un logiciel français pour DMC, avec beaucoup de clients et des prix publics. Traviosoft affiche un prix utilisateurs inclus et gère le REAV et Veri*Factu pour l’Espagne. Ezus a plus d’historique et plus d’avis.',
     card: 'Deux outils aux prix publics : ce que chacun inclut et ce que coûte la première année.',
     basis:
       'Les informations sur Ezus viennent de son site et d’annuaires publics, vérifiés le 3 novembre 2026. Les prix changent : consultez toujours les pages de tarifs actuelles. Les chiffres de clients et de notes d’Ezus sont ceux qu’il publie lui-même.',
     rows: [
-      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure de 1 à 15 personnes', 'DMC, réceptifs, tour-opérateurs et agences ; FIT, groupes et MICE'],
-      ['Société', 'Produit récent ; voir la page À propos', 'Paris, fondée en 2019'],
+      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'DMC, réceptifs, tour-opérateurs et agences ; FIT, groupes et MICE'],
+      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Paris, fondée en 2019'],
       ['Prix publié', 'À partir de 190 EUR par mois avec 3 utilisateurs ; 250 EUR avec 5', 'Professional 75 EUR par utilisateur et par mois (jusqu’à 10 utilisateurs) ; Premium 100 EUR ; Enterprise sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Pack d’onboarding obligatoire de 1 990 EUR ; import de données 390 EUR'],
       ['3 utilisateurs, première année (prix catalogue)', '190 x 12 = 2 280 EUR', '75 x 3 x 12 = 2 700 EUR + 1 990 EUR = 4 690 EUR'],
@@ -121,11 +121,11 @@ const compares: Cmp[] = [
       'Vous voulez un produit plus ancien sur le marché et beaucoup plus de références publiques : Ezus annonce plus de 600 agences dans plus de 70 pays.',
       'Vous avez besoin de support et de documentation en italien ou en portugais.',
       'Vous appréciez un déploiement accompagné, avec un spécialiste dédié pendant plusieurs mois, et vous êtes prêt à le payer.',
-      'Votre équipe est grande : Ezus propose une offre Enterprise à partir de 30 utilisateurs.',
+      'Il vous faut une offre Enterprise : Ezus en propose une à partir de 30 utilisateurs.',
       'Vous voulez un espace voyageur, un portail de paiement et des pages web dans le même outil, tels que les décrit Ezus.'
     ],
     usBetter: [
-      'Vous êtes une équipe de 3 à 5 personnes et vous voulez un prix clair, utilisateurs inclus, sans frais d’onboarding obligatoire.',
+      'Vous voulez un prix clair, utilisateurs inclus, avec mise en place et import offerts en facturation annuelle.',
       'Votre agence est en Espagne et vous avez besoin du REAV sur les factures et de Veri*Factu avec QR.',
       'Vous travaillez surtout en espagnol et en français et voulez des documents et des modèles d’e-mail dans la langue du client.',
       'Vous préférez un outil centré sur le déroulé d’un voyage : demande, devis avec marge, réservation, paiement et facture.'
@@ -133,7 +133,7 @@ const compares: Cmp[] = [
     switching:
       'Si vous utilisez Ezus et voulez changer, exportez d’abord vos produits, fournisseurs et clients. Nous importons produits, prix et fournisseurs depuis Excel ou CSV pendant la mise en place. Conseil pratique : changez hors haute saison et terminez les voyages ouverts là où ils sont. La [page Changer](/switch) détaille les étapes.',
     faq: [
-      { q: 'Lequel est le moins cher pour 3 utilisateurs ?', a: ['Aux prix catalogue, Traviosoft coûte environ 2 280 EUR la première année et Ezus environ 4 690 EUR, car Ezus inclut un pack d’onboarding de 1 990 EUR. Vérifiez les prix actuels des deux.'] },
+      { q: 'Combien coûte chacun la première année pour 3 utilisateurs ?', a: ['Aux prix catalogue, Traviosoft coûte environ 2 280 EUR la première année et Ezus environ 4 690 EUR, car Ezus inclut un pack d’onboarding de 1 990 EUR. Vérifiez les prix actuels des deux.'] },
       { q: 'Ezus convient-il à l’Espagne ?', a: ['Oui, il a un site et un support en espagnol. Ce que nous n’avons pas trouvé sur son site, c’est du contenu sur le REAV. Demandez-leur comment ils le gèrent si vous en avez besoin.'] },
       { q: 'Puis-je essayer les deux ?', a: ['Les deux fonctionnent avec une démonstration. Le test le plus utile : apporter un vrai voyage à chacun et comparer le temps nécessaire pour obtenir un devis avec marge.'] }
     ]
@@ -151,9 +151,9 @@ const compares: Cmp[] = [
     basis:
       'Nous n’avons pu voir GIAV qu’à travers des annuaires et la presse du secteur, pas par un test personnel. Là où aucune donnée publique n’existe, nous écrivons "Non publié" et nous vous suggérons de leur poser la question. Les informations sur Traviosoft sont celles de notre site au 3 novembre 2026.',
     rows: [
-      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure de 1 à 15 personnes', 'Gestion d’agences de voyages en Espagne, surtout agences de détail'],
+      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Gestion d’agences de voyages en Espagne, surtout agences de détail'],
       ['Prix publié', 'À partir de 190 EUR par mois, 3 utilisateurs inclus', 'Non publié'],
-      ['Taille d’équipe', '1 à 15 personnes', 'Non publié'],
+      ['Taille d’équipe', 'Formules pour 3, 5 utilisateurs ou plus', 'Non publié'],
       ['Devis sur mesure avec marge et commission par ligne', 'Oui, avec des règles de prix', 'Non publié'],
       ['Catalogue avec saisons et plusieurs fournisseurs', 'Oui', 'Non publié'],
       ['Programme client sur une page partageable', 'Oui, dans sa langue et à vos couleurs', 'Non publié'],
@@ -194,7 +194,7 @@ const compares: Cmp[] = [
     basis:
       'Les informations sur Holded viennent de son site et de sa page tourisme et voyages, vérifiées le 3 novembre 2026. Holded change souvent ses offres et ses promotions : consultez sa page de tarifs. Ce n’est pas un mauvais outil, il résout simplement un autre problème.',
     rows: [
-      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure de 1 à 15 personnes', 'Indépendants et PME de tous secteurs, de 1 à plus de 100 personnes'],
+      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Indépendants et PME de tous secteurs, de 1 à plus de 100 personnes'],
       ['Prix publié', 'À partir de 190 EUR par mois, 3 utilisateurs inclus', 'Básico 29 EUR (2 utilisateurs), Estándar 59 EUR (4), Avanzado 99 EUR (7), hors TVA ; avec remises temporaires'],
       ['Devis avec marge par prestation', 'Oui, avec règles de prix, TVA et commission', 'Pas de fonction propre aux voyages que nous ayons vue'],
       ['Catalogue avec saisons et fournisseurs', 'Oui', 'Ce n’est pas son rôle'],
@@ -231,15 +231,15 @@ const compares: Cmp[] = [
     metaTitle: 'Traviosoft ou Lemax : logiciel pour DMC et tour-opérateurs',
     metaDescription:
       'Lemax est un logiciel croate pour tour-opérateurs et DMC moyens et grands. Taille d’équipe, prix visible et approche comparés à ceux de Traviosoft.',
-    title: 'Traviosoft ou Lemax : petites équipes ou grands tour-opérateurs',
-    lead: 'Lemax est un logiciel de plus de 30 ans, conçu pour les tour-opérateurs et DMC moyens et grands. Son offre Lemax GO démarre à 15 utilisateurs et ses prix ne sont pas publiés. Traviosoft s’adresse aux équipes de 1 à 15 personnes et affiche son prix.',
-    card: 'Un logiciel pour grands opérateurs face à un logiciel pour équipes de 1 à 15 personnes.',
+    title: 'Traviosoft ou Lemax : deux systèmes de gestion complets',
+    lead: 'Lemax est un logiciel de plus de 30 ans, conçu pour les tour-opérateurs et DMC moyens et grands. Son offre Lemax GO démarre à 15 utilisateurs et ses prix ne sont pas publiés. Traviosoft couvre tout le voyage, de la première demande à la dernière facture, en espagnol, anglais et français, et affiche son prix.',
+    card: 'Deux systèmes complets : une plateforme historique et un seul flux de la demande à la facture avec prix visible.',
     basis:
       'Les informations sur Lemax viennent de son site et de la presse du secteur, vérifiées le 3 novembre 2026. Lemax ne publie pas ses prix : nous écrivons "Non publié". Ses chiffres de clients sont ceux qu’il affiche.',
     rows: [
-      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure de 1 à 15 personnes', 'Tour-opérateurs et DMC moyens et grands'],
-      ['Société', 'Produit récent ; voir la page À propos', 'Croatie, fondée en 1990'],
-      ['Taille d’équipe', '1 à 15 personnes', 'Lemax GO à partir de 15 utilisateurs'],
+      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Tour-opérateurs et DMC moyens et grands'],
+      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Croatie, fondée en 1990'],
+      ['Taille d’équipe', 'Formules pour 3, 5 utilisateurs ou plus', 'Lemax GO à partir de 15 utilisateurs'],
       ['Prix publié', 'À partir de 190 EUR par mois, 3 utilisateurs inclus', 'Non publié ; le prix est convenu avant la signature'],
       ['Langues du site', 'Français, anglais et espagnol', 'Anglais'],
       ['Déploiement', 'Installation et import sans frais avec la facturation annuelle', 'Annonce une mise en service "en 90 jours" pour Lemax GO'],
@@ -254,13 +254,13 @@ const compares: Cmp[] = [
       'Vous avez le budget d’un projet de déploiement accompagné.'
     ],
     usBetter: [
-      'Vous êtes une équipe de 1 à 15 personnes et ce qu’il vous faut, c’est bien chiffrer, réserver et facturer, sans projet de plusieurs mois.',
+      'Vous voulez chiffrer, réserver et facturer tout le voyage dans un seul système, avec une mise en place courte.',
       'Vous voulez voir le prix et les utilisateurs inclus avant de demander une démonstration.',
       'Votre marché est l’Espagne et vous vendez en espagnol et en français, avec REAV et Veri*Factu.',
-      'Vous préférez un outil simple à adopter pour une petite équipe.'
+      'Vous voulez que nous importions vos produits, prix et fournisseurs depuis Excel ou CSV pendant la mise en place.'
     ],
     switching:
-      'Si vous utilisez Lemax et que votre équipe est trop petite pour sa structure, exportez vos produits et vos prix et demandez-nous comment les importer depuis Excel ou CSV. Changer en pleine saison est risqué : on le fait en général en basse saison. Voir la [page Changer](/switch).',
+      'Si vous utilisez Lemax et souhaitez passer à Traviosoft, exportez vos produits et vos prix et demandez-nous comment les importer depuis Excel ou CSV. Changer en pleine saison est risqué : on le fait en général en basse saison. Voir la [page Changer](/switch).',
     faq: [
       { q: 'Lemax convient-il à une équipe de 4 personnes ?', a: ['Son offre Lemax GO démarre à 15 utilisateurs, d’après son site. Pour des équipes plus petites, demandez-leur quelles options existent.'] },
       { q: 'Pourquoi le prix de Lemax n’apparaît-il pas ?', a: ['Parce qu’il ne le publie pas : il indique que l’offre et le déploiement sont convenus avant la signature. Nous préférons "Non publié" à une estimation.'] },
@@ -275,13 +275,13 @@ const compares: Cmp[] = [
     metaDescription:
       'Tourwriter est un logiciel néo-zélandais pour DMC de luxe. Prix catalogue, langues, limites d’itinéraires et fiscalité espagnole comparés à Traviosoft.',
     title: 'Traviosoft ou Tourwriter : deux outils pour concevoir des voyages',
-    lead: 'Tourwriter est un logiciel néo-zélandais aux programmes très soignés, conçu pour les DMC de luxe et les concepteurs de voyages, en anglais. Traviosoft coûte moins cher pour 3 utilisateurs, fonctionne en français et en espagnol, et gère le REAV et Veri*Factu.',
+    lead: 'Tourwriter est un logiciel néo-zélandais aux programmes très soignés, conçu pour les DMC de luxe et les concepteurs de voyages, en anglais. Traviosoft affiche ses prix en euros, utilisateurs inclus, fonctionne en français et en espagnol, et gère le REAV et Veri*Factu.',
     card: 'Des programmes de luxe en anglais face à un outil en euros, en français et en espagnol.',
     basis:
       'Les informations sur Tourwriter viennent de son site (pages offres et société) et de Capterra, vérifiées le 3 novembre 2026. Ses prix sont des prix "à partir de" en dollars, par utilisateur, avec demande de devis : le total réel peut différer.',
     rows: [
-      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure de 1 à 15 personnes', 'DMC de luxe et concepteurs de voyages, circuits FIT de plusieurs jours'],
-      ['Société', 'Produit récent ; voir la page À propos', 'Wellington (Nouvelle-Zélande), fondée en 2004'],
+      ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'DMC de luxe et concepteurs de voyages, circuits FIT de plusieurs jours'],
+      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Wellington (Nouvelle-Zélande), fondée en 2004'],
       ['Prix publié', 'À partir de 190 EUR par mois avec 3 utilisateurs ; 250 EUR avec 5', 'Starter à partir de 99 USD par utilisateur et par mois ; Pro à partir de 149 USD ; Premium sur demande'],
       ['3 utilisateurs, par mois (prix catalogue)', '190 EUR', 'Environ 447 USD en Pro (3 x 149)'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Frais uniques à partir de 1 199 USD (migration, configuration et formation)'],
@@ -322,7 +322,7 @@ const best: Article = {
   metaDescription:
     'Comparatif honnête de Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV et Excel : pour qui, prix publiés, langues et limites de chacun.',
   title: 'Meilleur logiciel pour DMC et réceptifs (2026)',
-  lead: 'Pour un petit DMC ou une agence réceptive, les vraies options sont Traviosoft, Ezus et Tourwriter. Tourplan, Lemax et Kaptio visent de plus gros opérateurs, GIAV des agences de détail. Excel et Word tiennent tant que le volume reste faible. Ce guide les compare avec des données publiques.',
+  lead: 'Pour un DMC ou une agence sur mesure, les options sont Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio et GIAV ; Excel et Word tiennent tant que le volume reste faible. Ce guide les compare avec des données publiques : pour qui, prix, langues et limites de chacun.',
   updated: UPDATED,
   card: 'Huit options comparées : pour qui, prix publiés, langues et limites.',
   blocks: [
@@ -336,7 +336,7 @@ const best: Article = {
       head: ['Logiciel', 'Pour qui', 'Taille d’équipe', 'Prix public', 'Langues', 'Fondation'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Réceptifs, DMC et agences sur mesure', '1 à 15 personnes', 'À partir de 190 EUR par mois avec 3 utilisateurs ; 250 EUR avec 5', 'Documents en FR, EN, ES et plus', 'Voir la page À propos'],
+        ['Traviosoft', 'Réceptifs, DMC et agences sur mesure', 'Formules pour 3, 5 utilisateurs ou plus', 'À partir de 190 EUR par mois avec 3 utilisateurs ; 250 EUR avec 5', 'Documents en FR, EN, ES et plus', 'Voir la page À propos'],
         ['Ezus', 'DMC, réceptifs, tour-opérateurs et agences', 'Professional jusqu’à 10 utilisateurs ; Enterprise à partir de 30', '75 EUR par utilisateur et par mois (Professional) ; onboarding obligatoire de 1 990 EUR', 'Site et support en EN, FR, ES, IT, PT', '2019, Paris'],
         ['Tourplan', 'Tour-opérateurs et DMC établis', 'Minimum 5 utilisateurs, selon Capterra', 'Non publié sur son site ; Capterra indique à partir de 250 USD par utilisateur et par mois', 'Site en anglais, espagnol et japonais', '1986, Nouvelle-Zélande'],
         ['Tourwriter', 'DMC de luxe et concepteurs de voyages', '1 à plus de 20 personnes selon l’offre', 'À partir de 99 USD par utilisateur et par mois ; frais de démarrage à partir de 1 199 USD', 'Anglais', '2004, Nouvelle-Zélande'],
@@ -350,17 +350,17 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Couvre tout le voyage : demandes, catalogue avec prix par saison, devis avec marge et commission, réservations, paiements et factures, avec REAV et Veri*Factu pour l’Espagne. Il affiche son prix et ne facture pas l’installation avec la facturation annuelle. Limites : produit récent, sans avis dans les annuaires pour l’instant, et sans l’historique des acteurs établis.'
+      text: 'Couvre tout le voyage : demandes, catalogue avec prix par saison, devis avec marge et commission, réservations, paiements et factures, avec REAV et Veri*Factu pour l’Espagne. Il affiche son prix et ne facture pas l’installation avec la facturation annuelle. Limites : pas encore d’avis dans les annuaires.'
     },
     { type: 'h3', text: 'Ezus' },
     {
       type: 'p',
-      text: 'Le concurrent le plus complet pour un petit DMC : prix publics, site en cinq langues et beaucoup de références (Capterra 4,7 sur 61 avis, d’après son site). Limites : le pack d’onboarding de 1 990 EUR est obligatoire et son contenu en espagnol ne traite pas du REAV.'
+      text: 'Le concurrent le plus complet pour un DMC : prix publics, site en cinq langues et beaucoup de références (Capterra 4,7 sur 61 avis, d’après son site). Limites : le pack d’onboarding de 1 990 EUR est obligatoire et son contenu en espagnol ne traite pas du REAV.'
     },
     { type: 'h3', text: 'Tourplan' },
     {
       type: 'p',
-      text: 'Un logiciel d’une quarantaine d’années pour tour-opérateurs et DMC, avec des clients dans environ 75 pays d’après son site. Limites : pas de prix publiés, Capterra indique un minimum de 5 utilisateurs à partir de 250 USD par utilisateur et par mois, et son orientation est celle d’entreprises établies plus que de petites équipes.'
+      text: 'Un logiciel d’une quarantaine d’années pour tour-opérateurs et DMC, avec des clients dans environ 75 pays d’après son site. Limites : pas de prix publiés, et Capterra indique un minimum de 5 utilisateurs à partir de 250 USD par utilisateur et par mois.'
     },
     { type: 'h3', text: 'Tourwriter' },
     {
@@ -392,7 +392,7 @@ const best: Article = {
       type: 'list',
       ordered: true,
       items: [
-        'Comptez combien de personnes utiliseront l’outil. Avec 1 à 5, écartez ce qui démarre à 15 utilisateurs.',
+        'Comptez combien de personnes utiliseront l’outil et vérifiez le nombre minimum d’utilisateurs de chaque option.',
         'Calculez le coût de la première année, pas seulement la mensualité : ajoutez les frais de démarrage et d’import de données.',
         'Vérifiez la langue des documents que reçoit votre client, pas seulement celle de l’écran.',
         'Si votre agence est en Espagne, demandez comment on facture avec le REAV et si l’outil est conforme à Veri*Factu.',
@@ -404,7 +404,7 @@ const best: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'Quel est le meilleur logiciel pour un petit DMC ?', a: ['Cela dépend de votre équipe et de votre marché. Pour 1 à 15 personnes, avec un prix visible et une facturation espagnole, regardez Traviosoft et Ezus. Si vous vendez surtout en anglais et dans le luxe, regardez aussi Tourwriter.'] },
+        { q: 'Quel est le meilleur logiciel pour un DMC ou une agence sur mesure ?', a: ['Cela dépend de votre façon de travailler et de votre marché. Pour gérer tout le voyage de la demande à la facture, avec un prix visible et une facturation espagnole, regardez Traviosoft et Ezus. Si vous vendez surtout en anglais et dans le luxe, regardez aussi Tourwriter.'] },
         { q: 'Combien coûte un logiciel pour DMC ?', a: ['Les prix publics vont d’environ 190 EUR par mois pour 3 utilisateurs (Traviosoft) à 75 EUR par utilisateur et par mois plus 1 990 EUR d’onboarding (Ezus). Tourplan, Lemax et Kaptio ne publient pas leurs prix.'] },
         { q: 'Faut-il un logiciel spécifique au voyage ou un ERP généraliste suffit-il ?', a: ['Un ERP généraliste gère bien la comptabilité, mais il ne chiffre pas des devis avec marge par prestation et ne liste pas les réservations par voyage. Beaucoup d’agences utilisent les deux.'] }
       ]

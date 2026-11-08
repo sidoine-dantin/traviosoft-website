@@ -21,14 +21,14 @@
     "privacy": "Politique de confidentialité",
     "terms": "Conditions générales",
     "legal_notice": "Mentions légales",
-    "tagline": "Logiciel de gestion pour agences de voyage boutique",
+    "tagline": "Logiciel de gestion pour agences de voyage sur mesure et DMC",
     "copyright": "Traviosoft"
   },
   "home": {
-    "meta_title": "Traviosoft - Le logiciel de gestion pour agences de voyage boutique",
+    "meta_title": "Traviosoft - Le logiciel de gestion pour agences de voyage sur mesure et DMC",
     "meta_description": "Traviosoft centralise devis, commandes, paiements, prestataires et facturation pour les agences de voyage sur-mesure et DMC. Réservez une démo de 30 minutes.",
     "hero": {
-      "headline": "Le logiciel de gestion conçu pour les agences de voyage boutique",
+      "headline": "Le logiciel de gestion conçu pour les agences de voyage sur mesure et DMC",
       "subheadline": "Devis, commandes, paiements et prestataires, réunis dans un seul outil, sans fichiers Excel ni Word qui se perdent.",
       "cta_primary": "Réserver une démo",
       "cta_secondary": "Voir comment ça marche"
@@ -71,7 +71,7 @@
     },
     "trust": {
       "title": "Un outil né du terrain, pas d'un cahier des charges abstrait",
-      "text": "Traviosoft a été conçu avec et pour une agence de voyage boutique basée en Espagne, spécialisée dans les voyages sur-mesure. Le produit continue d'évoluer au contact d'agences comme la vôtre, avec un objectif simple : remplacer les fichiers Excel et Word dispersés par un outil pensé pour le métier.",
+      "text": "Traviosoft a été conçu avec et pour une agence de voyage sur mesure basée en Espagne. Le produit continue d'évoluer au contact d'agences comme la vôtre, avec un objectif clair : remplacer les fichiers Excel et Word dispersés par un outil pensé pour le métier.",
       "cta": "Réserver une démo et en discuter"
     },
     "multilang": {
@@ -86,7 +86,7 @@
   },
   "product": {
     "meta_title": "Fonctionnalités - Traviosoft",
-    "meta_description": "Découvrez ce qui change quand devis, commandes, paiements, prestataires et facturation vivent dans un seul outil pensé pour les agences de voyage boutique. Réservez une démo de 30 minutes.",
+    "meta_description": "Découvrez ce qui change quand devis, commandes, paiements, prestataires et facturation vivent dans un seul outil pensé pour les agences de voyage sur mesure et DMC. Réservez une démo de 30 minutes.",
     "intro": {
       "headline": "Moins de temps sur l'administratif. Plus de temps à vendre des voyages.",
       "text": "Vous n'avez pas monté une agence de voyage pour vous battre avec des fichiers Excel. Voici à quoi ressemblent vos journées quand chaque devis, chaque paiement et chaque prestataire vit au même endroit.",
@@ -258,7 +258,7 @@
   },
   "pricing": {
     "meta_title": "Tarifs - Traviosoft",
-    "meta_description": "Un modèle de tarification simple, sans frais cachés, adapté aux agences de voyage boutique. Réservez une démo pour recevoir votre tarif.",
+    "meta_description": "Un modèle de tarification clair, avec toutes les fonctions dans toutes les formules, pour les agences de voyage sur mesure et les DMC. Réservez une démo pour recevoir votre tarif.",
     "intro": {
       "headline": "Un seul produit, façonné autour de votre agence. Un tarif adapté à la taille de votre équipe.",
       "text": "Traviosoft s'adapte à la façon dont votre agence travaille, et non l'inverse. La seule chose qui fixe votre tarif, c'est le nombre de personnes de votre équipe qui l'utilisent."
@@ -267,7 +267,7 @@
       "title": "Un Traviosoft qui colle à votre agence, dimensionné à votre équipe",
       "points": [
         "Adapté à la façon dont votre agence travaille, pour qu'il vous semble fait sur mesure",
-        "Un tarif fixé par la taille de votre équipe (petite équipe, équipe qui grandit, équipe complète), vous ne payez que les sièges que vous utilisez",
+        "Un tarif fixé par la taille de votre équipe (3 utilisateurs, 5 utilisateurs ou plus), vous ne payez que les sièges que vous utilisez",
         "Pas de frais de mise en place ni d'onboarding cachés",
         "Facturation mensuelle ou annuelle, au choix"
       ],
@@ -289,18 +289,18 @@
   },
   "about": {
     "meta_title": "À propos - Traviosoft",
-    "meta_description": "Traviosoft est né du besoin réel d'une agence de voyage boutique. Découvrez la philosophie derrière le produit.",
+    "meta_description": "Traviosoft est né du besoin réel d'une agence de voyage sur mesure. Découvrez la philosophie derrière le produit.",
     "intro": {
-      "headline": "Pensé pour les agences boutique que les gros logiciels oublient",
+      "headline": "Pensé pour les agences de voyage sur mesure et les DMC",
       "text": "Traviosoft est parti d'un vrai problème : une agence de voyage qui jonglait entre Excel, Word et des messageries sans fin juste pour faire avancer ses voyages. Nous avons construit l'outil dont cette agence avait réellement besoin, et nous avons continué à partir de là."
     },
     "story": {
       "title": "Conçu avec une vraie agence",
-      "text": "Traviosoft a été développé avec et pour une agence de voyage boutique basée en Espagne, spécialisée dans les voyages sur-mesure. Chaque partie vient d'un vrai besoin quotidien que nous avons vu l'équipe rencontrer."
+      "text": "Traviosoft a été développé avec et pour une agence de voyage sur mesure basée en Espagne. Chaque partie vient d'un vrai besoin quotidien que nous avons vu l'équipe rencontrer."
     },
     "philosophy": {
-      "title": "Conçu pour les petites structures",
-      "text": "La plupart des logiciels de gestion pour le tourisme sont conçus pour de grandes structures, avec des processus lourds et des modules qu'une petite agence n'ouvrira jamais. Traviosoft en est la version simple : centrée sur ce qu'une équipe de 2 à 15 personnes qui gère des voyages sur-mesure fait vraiment chaque jour."
+      "title": "Conçu pour tout le voyage",
+      "text": "Traviosoft couvre tout le voyage, de la première demande à la dernière facture, autour de ce que fait chaque jour une agence sur mesure ou un DMC : chiffrer prestation par prestation, coordonner les fournisseurs, encaisser et facturer."
     },
     "support": {
       "title": "De vraies personnes qui connaissent le métier",
@@ -333,7 +333,7 @@
       "title": "Traviosoft est particulièrement adapté si...",
       "points": [
         "Vous gérez une agence de voyage sur-mesure, une DMC ou un réceptif spécialisé",
-        "Votre équipe compte entre 2 et 15 personnes",
+        "Vous voulez un seul système pour tout le voyage, de la première demande à la dernière facture",
         "Vous gérez aujourd'hui vos devis, paiements ou prestataires avec Excel, Word ou un logiciel qui n'a pas été pensé pour les agences de voyage",
         "Vous voulez professionnaliser vos devis et vos documents clients sans changer toute votre organisation"
       ]
@@ -341,7 +341,6 @@
     "fit_no": {
       "title": "Ce n'est probablement pas (encore) pour vous si...",
       "points": [
-        "Vous gérez plusieurs centaines de devis par mois avec une équipe commerciale dédiée importante",
         "Vous cherchez une plateforme de réservation en ligne pour le grand public (OTA)"
       ]
     },
@@ -374,7 +373,7 @@
       },
       {
         "question": "Est-ce adapté si on est seul(e) ? Et si on est 10 ou 15 ?",
-        "answer": "Les deux marchent. Traviosoft est conçu pour des équipes de 2 à 15 personnes, et il fonctionne tout aussi bien pour une seule personne qui gère tout, du premier devis à la facture finale."
+        "answer": "Les deux marchent. Traviosoft convient à une seule personne qui gère tout, du premier devis à la facture finale, comme à une équipe qui partage les mêmes voyages, avec des utilisateurs ajoutés au fil de la croissance."
       },
       {
         "question": "Peut-on importer nos clients, devis ou prestataires existants ?",
@@ -411,7 +410,7 @@
         {
           "heading": "Qui nous sommes",
           "body": [
-            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014, l'entreprise derrière Traviosoft, un logiciel de gestion pour les agences de voyage boutique. Pour toute question sur cette politique ou sur vos données, vous pouvez nous écrire à sidoine@traviosoft.com."
+            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014, l'entreprise derrière Traviosoft, un logiciel de gestion pour les agences de voyage sur mesure et DMC. Pour toute question sur cette politique ou sur vos données, vous pouvez nous écrire à sidoine@traviosoft.com."
           ]
         },
         {

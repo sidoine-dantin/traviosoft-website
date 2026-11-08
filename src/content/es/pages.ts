@@ -5,7 +5,7 @@ export const pricing: SiteContent['pricing'] = {
   metaDescription:
     'Tres planes, distintos solo en usuarios. Todas las funciones en todos. Desde 190 EUR al mes para 3 usuarios; alta e importación gratis con pago anual.',
   title: 'Todas las funciones, un solo precio.',
-  lead: 'Los planes se diferencian por el número de usuarios y nada más. Una agencia pequeña nunca se pregunta qué le falta.',
+  lead: 'Los planes se diferencian por el número de usuarios y nada más. Todas las funciones están en todos los planes, así que nunca hay duda de qué falta.',
   yearly: 'Anual',
   monthly: 'Mensual',
   yearlyNote: 'Con el pago anual tienes dos meses gratis. Los precios son por mes, sin IVA.',
@@ -322,7 +322,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: '¿Qué es Traviosoft?',
-          a: ['Un software web para agencias pequeñas de viajes a medida y DMC, de 1 a 15 personas. Cubre la solicitud, el presupuesto, la reserva, el itinerario del cliente, los cobros y las facturas.']
+          a: ['Un software web de gestión para agencias de viajes a medida y DMC. Cubre la solicitud, el presupuesto, la reserva, el itinerario del cliente, los cobros y las facturas.']
         },
         {
           q: '¿Pueden varios proveedores vender el mismo hotel o servicio?',
@@ -399,7 +399,7 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'Sobre Traviosoft: nació en una agencia de Barcelona',
   metaDescription:
-    'Traviosoft nació en una agencia de viajes a medida de Barcelona que usaba Excel, Word y WhatsApp. Equipo pequeño, soporte por email y datos alojados en la UE.',
+    'Traviosoft nació en una agencia de viajes a medida de Barcelona que usaba Excel, Word y WhatsApp. Soporte por email de las personas que construyen el producto y datos alojados en la UE.',
   title: 'Hecho por una agencia, para agencias.',
   lead: 'Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Está hecho para las agencias que se le parecen.',
   blocks: [
@@ -413,14 +413,14 @@ export const about: SiteContent['about'] = {
     {
       title: 'Por qué seguimos',
       body: [
-        'El software pensado para viajes es o para grandes operadores o para quien vende salidas fijas. Las agencias a medida y las DMC de 1 a 15 personas se quedaron con una hoja de cálculo.',
-        'Queríamos un solo lugar para todo el viaje, a un precio al que una agencia pequeña pueda decir que sí.'
+        'Un viaje a medida se presupuesta servicio a servicio desde tarifas netas, con varios proveedores y documentos en el idioma del cliente. Queríamos un software pensado para esa forma de trabajar.',
+        'Un solo lugar para todo el viaje, de la primera solicitud a la última factura, con el precio visible en la web.'
       ]
     },
     {
       title: 'Cómo trabajamos',
       body: [
-        'Un equipo pequeño. El soporte es por email, en español, inglés y francés, y hablas con las personas que construyen el producto.',
+        'El soporte es por email, en español, inglés y francés, y hablas con las personas que construyen el producto.',
         'Te decimos qué está en marcha y qué viene. Lo que aún no está disponible lleva una etiqueta en esta web.'
       ]
     },
@@ -431,16 +431,16 @@ export const about: SiteContent['about'] = {
       ]
     },
     {
-      title: 'Sinceros sobre ser jóvenes',
+      title: 'En qué puedes confiar',
       body: [
-        'Traviosoft es un producto joven. No tenemos una larga lista de años en el mercado, y no te enseñamos logotipos ni opiniones que no podamos respaldar.',
-        'Lo que tenemos es una herramienta que lleva viajes reales y un equipo que contesta a su correo.'
+        'Traviosoft lleva viajes reales cada día, y solo mostramos los logotipos y opiniones que podemos respaldar.',
+        'Tienes un sistema de gestión completo y un equipo que contesta a su correo.'
       ]
     }
   ],
   facts: [
     { k: 'Origen', v: 'Una agencia a medida de Barcelona' },
-    { k: 'Para', v: 'Agencias a medida y DMC, de 1 a 15 personas' },
+    { k: 'Para', v: 'Agencias a medida y DMC' },
     { k: 'Soporte', v: 'Por email, en español, inglés y francés' },
     { k: 'Datos', v: 'Tu propia base de datos, alojada en la UE' }
   ]

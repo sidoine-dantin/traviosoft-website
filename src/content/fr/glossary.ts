@@ -9,7 +9,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'inbound-agency',
     term: 'Agence réceptive (receptivo)',
-    def: 'Agence qui accueille des voyageurs venus de l’étranger et organise leur séjour dans son pays. En pratique, c’est la même chose qu’un DMC, même si "réceptif" désigne plutôt les petites agences qui vendent à d’autres agences ou directement au voyageur.'
+    def: 'Agence qui accueille des voyageurs venus de l’étranger et organise leur séjour dans son pays. En pratique, c’est la même chose qu’un DMC, même si "réceptif" désigne plutôt les agences qui vendent à d’autres agences ou directement au voyageur.'
   },
   {
     id: 'tailor-made',
