@@ -1,0 +1,230 @@
+/**
+ * Content model for the whole marketing site.
+ * One SiteContent object per locale (src/content/{es,en,fr}/index.ts).
+ * Pages never hard-code copy: they read it from getContent(locale).
+ *
+ * Copy rules (see PRODUCT.md):
+ * - only features that are live on production; anything else is marked `later: true`
+ * - no testimonials, no client logos, no invented numbers, no founder name or face
+ * - never call Traviosoft a "CRM"
+ * - one quiet demo link (header). No repeated demo buttons in page bodies.
+ * - country-specific rules (REAV, Veri*Factu) are never headline features
+ */
+
+export type Locale = 'es' | 'en' | 'fr';
+
+export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
+
+/** Product fragments drawn in code (src/components/visuals.tsx). */
+export type VisualKey =
+  | 'quote'
+  | 'requests'
+  | 'catalogue'
+  | 'proposal'
+  | 'followup'
+  | 'order'
+  | 'suppliers'
+  | 'itinerary'
+  | 'calendar'
+  | 'payments'
+  | 'invoices'
+  | 'dashboard'
+  | 'brands'
+  | 'languages'
+  | 'team'
+  | 'safe'
+  | 'connections';
+
+export type Feature = {
+  title: string;
+  /** one or two short paragraphs, shown when the line is opened */
+  body: string[];
+  /** not on production yet: shown with a "coming" tag */
+  later?: boolean;
+};
+
+export type Chapter = {
+  id: string;
+  kicker: string;
+  title: string;
+  lead: string;
+  visual: VisualKey;
+  features: Feature[];
+};
+
+export type Faq = { q: string; a: string[] };
+
+export type JobPage = {
+  slug: JobSlug;
+  metaTitle: string;
+  metaDescription: string;
+  /** short name used in menus, e.g. "Sell" */
+  name: string;
+  /** one line under the name in the Product menu */
+  menuLine: string;
+  /** "1 of 4" style crumb label */
+  step: string;
+  heroTitle: string;
+  heroLead: string;
+  heroVisual: VisualKey;
+  chapters: Chapter[];
+  faq: Faq[];
+};
+
+export type Link = { label: string; href: string };
+
+/** Text used inside the product fragments. Only labels; names and numbers stay as data. */
+export type VisualText = {
+  quoteLabel: string; trip: string; tripSub: string; total: string; sent: string;
+  requests: string; newReq: string; quoted: string; waiting: string; won: string;
+  catalogue: string; season: string; suppliers: string; margin: string;
+  proposal: string; included: string; notIncluded: string;
+  followup: string; followupLine: string; followupSent: string;
+  order: string; booking: string; trip2: string; payment: string; confirmed: string; pending: string; paid: string; partial: string;
+  supplierMail: string; filed: string; serviceSheet: string;
+  yourTrip: string; dayLabel: string;
+  calendar: string;
+  payments: string; deposit: string; balance: string; due: string; link: string;
+  invoices: string; depositInvoice: string; finalInvoice: string; creditNote: string;
+  sales: string; trips: string; moneyIn: string; moneyOut: string; month: string;
+  brands: string; brandA: string; brandB: string;
+  languages: string;
+  team: string; seats: string; owner: string; sales2: string; ops: string;
+  safe1: string; safe2: string;
+  connections: string;
+  days: string[];
+  guide: string; halfDay: string; privateCar: string; transfers: string;
+};
+
+export type ArticleBlock =
+  | { type: 'h2'; text: string; id?: string }
+  | { type: 'h3'; text: string }
+  | { type: 'p'; text: string }
+  | { type: 'list'; items: string[]; ordered?: boolean }
+  | { type: 'table'; head: string[]; rows: string[][]; usRow?: number }
+  | { type: 'callout'; text: string }
+  | { type: 'faq'; items: Faq[] };
+
+export type ArticleKind = 'compare' | 'guide' | 'best' | 'spain';
+
+export type Article = {
+  /** shared key linking translations of the same article across locales */
+  key: string;
+  kind: ArticleKind;
+  /** URL slug in this locale */
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  title: string;
+  lead: string;
+  /** ISO date, shown as "last updated" */
+  updated: string;
+  /** one line for resource cards */
+  card: string;
+  blocks: ArticleBlock[];
+};
+
+export type GlossaryTerm = { id: string; term: string; def: string };
+
+export type Plan = {
+  id: 'small' | 'team' | 'larger';
+  name: string;
+  users: string;
+  yearly: string;
+  monthly: string;
+  priceNote: string;
+  hot?: boolean;
+  lines: { text: string; no?: boolean; later?: boolean }[];
+};
+
+export type SiteContent = {
+  locale: Locale;
+  nav: {
+    product: string; pricing: string; example: string; demo: string;
+    menuLabel: string; close: string; skip: string; resources: string;
+  };
+  footer: {
+    tagline: string;
+    product: string; company: string; resources: string; legal: string;
+    switching: string; faq: string; about: string; glossary: string; guides: string; compare: string;
+    privacy: string; terms: string; notice: string;
+    hosted: string; rights: string;
+    /** extra footer links that only exist in this locale (e.g. Spain page) */
+    localLinks: Link[];
+  };
+  common: {
+    later: string; next: string; onThisPage: string; updated: string; readMore: string;
+    faqTitle: string; backToResources: string; allResources: string; perMonth: string;
+  };
+  visuals: VisualText;
+  home: {
+    metaTitle: string; metaDescription: string;
+    kick: string; giant: string; sub: string;
+    tags: { t: string; s: string }[];
+    tripTitle: string;
+    steps: { time: string; title: string; body: string; job: JobSlug }[];
+    stepGo: string;
+    baTitle: string; beforeTitle: string; beforeScraps: string[]; afterTitle: string; afterBody: string;
+    exampleTitle: string; exampleBody: string; exampleLink: string;
+    priceTitle: string; priceBody: string; coin1: string; coin2: string; priceLink: string;
+    facts: { k: string; v: string }[];
+  };
+  jobs: Record<JobSlug, JobPage>;
+  pricing: {
+    metaTitle: string; metaDescription: string;
+    title: string; lead: string;
+    yearly: string; monthly: string; yearlyNote: string;
+    plans: Plan[];
+    compareTitle: string; compareBody: string;
+    includedTitle: string; included: string[];
+    faq: Faq[];
+  };
+  example: {
+    metaTitle: string; metaDescription: string;
+    title: string; lead: string;
+    tabs: { itinerary: string; quote: string };
+    trip: {
+      name: string; dates: string; travellers: string; agency: string;
+      days: { day: string; title: string; body: string; items: string[] }[];
+      quoteLines: { name: string; detail: string; price: string }[];
+      included: string[]; notIncluded: string[];
+      total: string; perPerson: string; deposit: string; validUntil: string;
+    };
+    note: string;
+  };
+  demo: {
+    metaTitle: string; metaDescription: string;
+    title: string; lead: string;
+    agendaTitle: string;
+    agenda: { mins: string; title: string; body: string }[];
+    bringTitle: string; bring: string[];
+    afterTitle: string; after: string[];
+    bookTitle: string; bookBody: string; emailLabel: string; email: string;
+    faq: Faq[];
+  };
+  switching: {
+    metaTitle: string; metaDescription: string;
+    title: string; lead: string;
+    timelineTitle: string;
+    timeline: { when: string; title: string; body: string }[];
+    importTitle: string; importRows: { what: string; from: string; how: string }[]; importHead: string[];
+    seasonTitle: string; seasonBody: string[];
+    faq: Faq[];
+  };
+  faqPage: {
+    metaTitle: string; metaDescription: string; title: string; lead: string;
+    groups: { title: string; items: Faq[] }[];
+  };
+  about: {
+    metaTitle: string; metaDescription: string; title: string; lead: string;
+    blocks: { title: string; body: string[] }[];
+    facts: { k: string; v: string }[];
+  };
+  resources: {
+    metaTitle: string; metaDescription: string; title: string; lead: string;
+    groups: { kind: ArticleKind | 'glossary' | 'example'; title: string; body: string }[];
+    glossaryTitle: string; glossaryMeta: string; glossaryLead: string;
+  };
+  articles: Article[];
+  glossary: GlossaryTerm[];
+};

@@ -1,111 +1,116 @@
 import type { Metadata } from 'next';
-import { Geist, DM_Serif_Display } from 'next/font/google';
+import { Bricolage_Grotesque, DM_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { JsonLd } from '@/components/site/json-ld';
+import { getContent } from '@/content';
 import { baseUrl, siteName } from '@/lib/seo';
 import '../globals.css';
 
-const geistSans = Geist({
+const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
-  variable: '--font-geist-sans',
+  axes: ['wdth', 'opsz'],
+  variable: '--font-bricolage',
   display: 'swap'
 });
 
-const dmSerifDisplay = DM_Serif_Display({
+const dmMono = DM_Mono({
   subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
-  variable: '--font-dm-serif',
+  weight: ['400', '500'],
+  variable: '--font-dm-mono',
   display: 'swap'
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true }
-  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
     : undefined
 };
 
-type Props = {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-};
+export function generateStaticParams() {
+  return routing.locales.map(locale => ({ locale }));
+}
+
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!(routing.locales as readonly string[]).includes(locale)) notFound();
+  setRequestLocale(locale);
 
   const messages = await getMessages();
-  const t = await getTranslations({ locale, namespace: 'home' });
-  const description = t('meta_description');
+  const c = getContent(locale);
 
-  const organizationJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: siteName,
-    url: baseUrl,
-    logo: `${baseUrl}/icon.svg`,
-    description
-  };
-
-  const websiteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteName,
-    url: baseUrl,
-    inLanguage: routing.locales
-  };
-
-  const softwareJsonLd = {
+  // Plain facts, kept identical to the visible text on Home and Pricing.
+  const software = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: siteName,
-    url: baseUrl,
+    url: `${baseUrl}/${locale}`,
     applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Travel agency and DMC management software',
     operatingSystem: 'Web',
-    description,
+    description: c.home.metaDescription,
     inLanguage: routing.locales,
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'EUR',
-      price: '0',
-      description: 'Book a demo'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: siteName,
-      url: baseUrl
-    }
+    offers: [
+      {
+        '@type': 'Offer',
+        name: c.pricing.plans[0]?.name,
+        price: '190',
+        priceCurrency: 'EUR',
+        description: c.pricing.plans[0]?.users,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '190',
+          priceCurrency: 'EUR',
+          unitCode: 'MON',
+          billingDuration: 'P1Y',
+          valueAddedTaxIncluded: false
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: c.pricing.plans[1]?.name,
+        price: '250',
+        priceCurrency: 'EUR',
+        description: c.pricing.plans[1]?.users,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '250',
+          priceCurrency: 'EUR',
+          unitCode: 'MON',
+          billingDuration: 'P1Y',
+          valueAddedTaxIncluded: false
+        }
+      }
+    ],
+    publisher: { '@type': 'Organization', name: siteName, url: baseUrl }
   };
+  const org = { '@context': 'https://schema.org', '@type': 'Organization', name: siteName, url: baseUrl, logo: `${baseUrl}/icon.svg` };
+  const site = { '@context': 'https://schema.org', '@type': 'WebSite', name: siteName, url: baseUrl, inLanguage: routing.locales };
+
+  const jobs = (['sell', 'book', 'get-paid', 'setup'] as const).map(s => ({
+    slug: s,
+    name: c.jobs[s].name,
+    menuLine: c.jobs[s].menuLine
+  }));
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${dmSerifDisplay.variable}`}>
-      <body style={{ fontFamily: 'var(--font-body, system-ui, sans-serif)' }}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
-        />
+    <html lang={locale} className={`${bricolage.variable} ${dmMono.variable}`}>
+      <body>
+        <JsonLd data={org} />
+        <JsonLd data={site} />
+        <JsonLd data={software} />
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <Header locale={c.locale} labels={c.nav} jobs={jobs} />
+          <main id="main">{children}</main>
+          <Footer c={c} />
         </NextIntlClientProvider>
       </body>
     </html>
