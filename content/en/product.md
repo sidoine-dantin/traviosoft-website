@@ -6,7 +6,7 @@ slug: /product
 
 ## Intro
 
-**Headline:** Everything a boutique travel agency needs, in one tool
+**Headline:** Everything a tailor-made travel agency needs, in one system
 
 **Text:** Each module below maps to a real step in an agency's daily work. No gimmick features: just tools to save time, make your documents more professional, and stay in control of your margins.
 

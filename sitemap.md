@@ -53,7 +53,7 @@ Colonnes suggérées :
 **Langue**
 - FR / EN / ES
 
-Bas de page : copyright "Traviosoft" + année courante, mention "Logiciel de gestion pour agences de voyage boutique" (variante de la tagline).
+Bas de page : copyright "Traviosoft" + année courante, mention "Système de gestion pour agences de voyages sur mesure et DMC" (variante de la tagline).
 
 # CTA récurrents
 

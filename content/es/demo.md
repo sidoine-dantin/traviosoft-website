@@ -33,13 +33,12 @@ slug: /demo
 **Título de sección:** Traviosoft es especialmente adecuado si...
 
 - Gestionas una agencia de viajes a medida, una DMC o un receptivo especializado
-- Tu equipo tiene entre 2 y 15 personas
+- Quieres un solo sistema que acompañe cada viaje desde la primera solicitud hasta la última factura
 - Hoy gestionas tus presupuestos, pagos o proveedores con Excel, Word, correo o WhatsApp
 - Quieres profesionalizar tus documentos de cliente (presupuestos, hojas de servicio) sin cambiar toda tu organización
 
 **Título de sección:** Probablemente (todavía) no es para ti si...
 
-- Gestionas varios cientos de presupuestos al mes con un equipo comercial dedicado grande
 - Buscas una plataforma de reservas online para el público general (OTA)
 
 ---

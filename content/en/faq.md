@@ -24,9 +24,9 @@ Setup time depends on your current situation (number of clients, ongoing quotes,
 
 ---
 
-## Is it suitable if I work alone? What about a team of 10 or 15?
+## Is it suitable if I work alone or with a team?
 
-Yes, in both cases. Traviosoft is designed for teams of 2 to 15 people, but it can also be used effectively by a single person handling the whole process, from quote to invoice.
+Yes, in both cases. Traviosoft supports a whole team working on the same files, and it can equally be used effectively by a single person handling the whole process, from quote to invoice.
 
 ---
 

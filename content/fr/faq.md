@@ -24,9 +24,9 @@ La mise en route dépend de votre situation actuelle (nombre de clients, devis e
 
 ---
 
-## Est-ce adapté si on est seul(e) ? Et si on est 10 ou 15 ?
+## Est-ce adapté si on est seul(e) ou en équipe ?
 
-Oui dans les deux cas. Traviosoft est pensé pour des équipes de 2 à 15 personnes, mais reste utilisable efficacement par une seule personne qui gère l'ensemble du processus, du devis à la facturation.
+Oui dans les deux cas. Traviosoft permet à toute une équipe de travailler sur les mêmes dossiers, et reste utilisable efficacement par une seule personne qui gère l'ensemble du processus, du devis à la facturation.
 
 ---
 

@@ -24,9 +24,9 @@ La puesta en marcha depende de tu situación actual (número de clientes, presup
 
 ---
 
-## ¿Es adecuado si trabajo solo/a? ¿Y si somos 10 o 15?
+## ¿Es adecuado si trabajo solo/a o en equipo?
 
-Sí, en ambos casos. Traviosoft está pensado para equipos de 2 a 15 personas, pero también lo puede usar de forma eficaz una sola persona que gestione todo el proceso, desde el presupuesto hasta la facturación.
+Sí, en ambos casos. Traviosoft permite que todo un equipo trabaje sobre los mismos expedientes, y también lo puede usar de forma eficaz una sola persona que gestione todo el proceso, desde el presupuesto hasta la facturación.
 
 ---
 

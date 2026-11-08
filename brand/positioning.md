@@ -7,19 +7,18 @@ status: working document (base pour la rédaction du site, pas pour publication 
 
 ## Le vrai concurrent
 
-Le concurrent de Traviosoft n'est pas un autre logiciel de gestion. C'est **Excel, Word, WhatsApp et la boîte mail** : la combinaison d'outils que la grande majorité des agences de voyage boutique utilisent encore pour gérer devis, paiements, prestataires et suivi client.
+Le concurrent de Traviosoft n'est pas un autre logiciel de gestion. C'est **Excel, Word, WhatsApp et la boîte mail** : la combinaison d'outils que la grande majorité des agences de voyages sur mesure et DMC utilisent encore pour gérer devis, paiements, prestataires et suivi client.
 
 Ce n'est pas un produit qui "vole" ces clients à un concurrent. C'est un produit qui remplace le chaos organisé par un seul outil structuré.
 
 ## Promesse centrale
 
-**Un seul outil pour piloter une agence boutique de bout en bout** : demande client → devis (avec PDF) → commande → coordination prestataires/guides → suivi des paiements (échéances) → factures → reporting.
+**Un seul système pour piloter une agence de voyages sur mesure ou un DMC de bout en bout** : demande client → devis (avec PDF) → commande → coordination prestataires/guides → suivi des paiements (échéances) → factures → reporting.
 
 ## ICP (profil client idéal)
 
 - Agences de voyage sur-mesure / luxe, DMC, réceptifs spécialisés
-- 2 à 15 personnes
-- Marché prioritaire : Espagne (Barcelone, Madrid, Séville, Valence, Bilbao, Malaga, San Sebastian), mais produit pertinent pour toute agence boutique francophone/anglophone/hispanophone
+- Marché prioritaire : Espagne (Barcelone, Madrid, Séville, Valence, Bilbao, Malaga, San Sebastian), mais produit pertinent pour toute agence sur mesure et DMC francophone/anglophone/hispanophone
 - Décideur : propriétaire ou directeur, souvent la même personne
 - Douleurs : devis lents et peu pro, suivi des paiements manuel, coordination prestataires par email/WhatsApp, zéro visibilité sur le pipeline
 
@@ -67,7 +66,7 @@ L'interface est disponible en français, anglais et espagnol. Argument pertinent
 
 ## Récit fondateur / crédibilité
 
-Traviosoft est né d'un besoin réel : l'outil a été conçu avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure, qui l'utilise au quotidien pour gérer l'intégralité de son activité (devis, commandes, paiements, prestataires).
+Traviosoft est né d'un besoin réel : l'outil a été conçu avec et pour une agence de voyages basée à Barcelone, spécialisée dans les voyages sur-mesure, qui l'utilise au quotidien pour gérer l'intégralité de son activité (devis, commandes, paiements, prestataires).
 
 Ce point doit être formulé **honnêtement**, sans donner l'impression d'un produit déjà déployé chez des dizaines de clients. Ton recommandé : "conçu à partir de vrais besoins d'agence, testé en conditions réelles" plutôt que "utilisé par X agences".
 
@@ -79,6 +78,6 @@ Ne jamais inventer :
 ## Ton de voix
 
 - Direct, concret, sans jargon marketing creux ("révolutionnaire", "disruptif")
-- Empathique sur la douleur métier (on connaît le quotidien d'une agence boutique)
-- Transparent sur le fait que c'est un produit jeune mais sérieux et conçu par quelqu'un qui comprend le métier
+- Empathique sur la douleur métier (on connaît le quotidien d'une agence de voyages sur mesure)
+- Posé et établi : un système de gestion complet et sérieux, avec un support par email en ES/EN/FR assuré par les personnes qui construisent le produit, et des données hébergées dans l'UE
 - Jamais survendre une fonctionnalité qui n'existe pas dans l'app
