@@ -2,6 +2,7 @@ import { Link } from '@/i18n/navigation';
 import type { JobSlug, SiteContent } from '@/content/types';
 import { Visual } from './visuals';
 import { FaqList, FaqSchema } from './faq';
+import { ChapterBar } from './chapter-bar';
 
 const ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup'];
 
@@ -14,29 +15,24 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
       <section className="wrap job-hero">
         <div>
           <p className="crumb mono"><span>{c.nav.product}</span><span aria-hidden="true">·</span><span>{j.step}</span></p>
-          <p className="lbl" style={{ color: 'var(--orange)', marginBottom: 14 }}>{j.name}</p>
+          <p className="lbl" style={{ color: 'var(--orange-ink)', marginBottom: 14 }}>{j.name}</p>
           <h1 className="h1">{j.heroTitle}</h1>
           <p className="lead">{j.heroLead}</p>
-          <nav aria-label={c.common.onThisPage}>
-            <ul className="chapters">
-              {j.chapters.map(ch => (
-                <li key={ch.id}><a href={`#${ch.id}`}>{ch.kicker}</a></li>
-              ))}
-            </ul>
-          </nav>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="job-hero-visual">
           <Visual k={j.heroVisual} v={c.visuals} />
         </div>
       </section>
 
+      <div>
+      <ChapterBar items={j.chapters.map(ch => ({ id: ch.id, label: ch.kicker }))} label={c.common.onThisPage} />
       {j.chapters.map((ch, i) => {
         const tone = i % 2 === 0 ? 'on-cream2' : 'on-cream';
         return (
-          <section key={ch.id} id={ch.id} className={`${tone} band`} style={{ scrollMarginTop: 70 }}>
+          <section key={ch.id} id={ch.id} className={`${tone} band chapter-band`}>
             <div className={`wrap chapter${i % 2 ? ' flip' : ''}`}>
               <div className="chapter-copy">
-                <p className="lbl" style={{ color: 'var(--orange)' }}>{ch.kicker}</p>
+                <p className="lbl" style={{ color: 'var(--orange-ink)' }}>{ch.kicker}</p>
                 <h2 className="h2" style={{ color: 'var(--green)' }}>{ch.title}</h2>
                 <p className="lead muted">{ch.lead}</p>
                 <div className="feat-list">
@@ -55,6 +51,7 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
           </section>
         );
       })}
+      </div>
 
       <section className="band">
         <div className="narrow">

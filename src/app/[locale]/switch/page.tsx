@@ -28,7 +28,7 @@ export default async function SwitchPage({ params }: Props) {
           <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 36 }}>{s.timelineTitle}</h2>
           <ol className="timeline">
             {s.timeline.map(t => (
-              <li key={t.title}><span className="mono" style={{ color: 'var(--orange)' }}>{t.when}</span><h3 className="h3" style={{ margin: '10px 0 8px' }}>{t.title}</h3><p className="muted">{t.body}</p></li>
+              <li key={t.title}><span className="mono" style={{ color: 'var(--orange-ink)' }}>{t.when}</span><h3 className="h3" style={{ margin: '10px 0 8px' }}>{t.title}</h3><p className="muted">{t.body}</p></li>
             ))}
           </ol>
         </div>
@@ -37,9 +37,9 @@ export default async function SwitchPage({ params }: Props) {
         <div className="wrap">
           <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 28 }}>{s.importTitle}</h2>
           <div className="tbl-wrap">
-            <table className="tbl">
+            <table className="tbl stack">
               <thead><tr>{s.importHead.map(h => <th key={h}>{h}</th>)}</tr></thead>
-              <tbody>{s.importRows.map(r => <tr key={r.what}><td>{r.what}</td><td>{r.from}</td><td>{r.how}</td></tr>)}</tbody>
+              <tbody>{s.importRows.map(r => <tr key={r.what}><td data-label={s.importHead[0]}>{r.what}</td><td data-label={s.importHead[1]}>{r.from}</td><td data-label={s.importHead[2]}>{r.how}</td></tr>)}</tbody>
             </table>
           </div>
         </div>

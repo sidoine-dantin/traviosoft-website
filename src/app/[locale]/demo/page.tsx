@@ -40,7 +40,7 @@ export default async function DemoPage({ params }: Props) {
             <h2 className="h3">{d.bookTitle}</h2>
             <p style={{ opacity: 0.9 }}>{d.bookBody}</p>
             <p style={{ marginTop: 8 }}><span className="lbl" style={{ opacity: 0.7 }}>{d.emailLabel}</span><br />
-              <a href={`mailto:${d.email}`} style={{ fontSize: 24, fontWeight: 800, color: 'var(--yellow)' }}>{d.email}</a></p>
+              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: 24, fontWeight: 800, color: 'var(--yellow)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
           </div>
           <div className="card">
             <h2 className="h3" style={{ color: 'var(--green)' }}>{d.bringTitle}</h2>

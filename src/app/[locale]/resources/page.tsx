@@ -32,7 +32,7 @@ export default async function ResourcesPage({ params }: Props) {
         const items = c.articles.filter(a => kinds.includes(a.kind));
         if (g.kind !== 'glossary' && g.kind !== 'example' && items.length === 0) return null;
         return (
-          <section key={g.kind} id={g.kind} className={`${i % 2 ? 'on-cream' : 'on-cream2'} band-sm`} style={{ scrollMarginTop: 70 }}>
+          <section key={g.kind} id={g.kind} className={`${i % 2 ? 'on-cream' : 'on-cream2'} band-sm`}>
             <div className="wrap">
               <h2 className="h2" style={{ color: 'var(--green)' }}>{g.title}</h2>
               <p className="muted" style={{ marginTop: 10, maxWidth: '60ch' }}>{g.body}</p>
