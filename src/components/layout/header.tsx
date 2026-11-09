@@ -28,14 +28,50 @@ export default function Header({ locale, labels, jobs }: Props) {
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const burgerRef = useRef<HTMLButtonElement>(null);
 
+  // On phones the bar slides away while reading down and comes back on the first scroll up.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 8);
+      if (Math.abs(y - last) < 6) return;
+      setHidden(y > last && y > 160);
+      last = y;
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Other sticky bars (the chapter bar on product pages) follow the header.
+  useEffect(() => {
+    document.documentElement.dataset.bar = hidden && !mobile ? 'hidden' : 'shown';
+  }, [hidden, mobile]);
+
+  // Full-screen menu: the page behind does not scroll, Escape closes it and focus returns to the button.
+  useEffect(() => {
+    if (!mobile) return;
+    const html = document.documentElement;
+    html.classList.add('menu-open');
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setMobile(false);
+        burgerRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    const onResize = () => window.innerWidth > 920 && setMobile(false);
+    window.addEventListener('resize', onResize);
+    return () => {
+      html.classList.remove('menu-open');
+      document.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [mobile]);
 
   useEffect(() => {
     setOpen(false);
@@ -71,7 +107,7 @@ export default function Header({ locale, labels, jobs }: Props) {
   );
 
   return (
-    <header className={`top${scrolled ? ' scrolled' : ''}`}>
+    <header className={`top${scrolled ? ' scrolled' : ''}${hidden && !mobile ? ' away' : ''}${mobile ? ' open' : ''}`}>
       <a href="#main" className="sr-only">{labels.skip}</a>
       <div className="wrap">
         <Logo />
@@ -82,7 +118,7 @@ export default function Header({ locale, labels, jobs }: Props) {
               aria-expanded={open}
               aria-controls="product-menu"
               onClick={() => setOpen(o => !o)}
-              style={isJob ? { color: 'var(--orange)' } : undefined}
+              style={isJob ? { color: 'var(--orange-ink)' } : undefined}
             >
               {labels.product} <span aria-hidden="true">▾</span>
             </button>
@@ -107,13 +143,14 @@ export default function Header({ locale, labels, jobs }: Props) {
           {langs}
           <Link className="quiet" href="/demo">{labels.demo}</Link>
           <button
+            ref={burgerRef}
             type="button"
             className="burger"
             aria-expanded={mobile}
             aria-controls="mobile-menu"
-            aria-label={mobile ? labels.close : labels.menuLabel}
             onClick={() => setMobile(m => !m)}
           >
+            <span>{mobile ? labels.close : labels.menuLabel}</span>
             <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
               {mobile ? (
                 <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
@@ -125,15 +162,27 @@ export default function Header({ locale, labels, jobs }: Props) {
         </div>
       </div>
       {mobile && (
-        <div className="mobile-panel" id="mobile-menu">
-          {jobs.map(j => (
-            <Link key={j.slug} href={`/${j.slug}`}>{j.name}</Link>
-          ))}
-          <Link href="/pricing">{labels.pricing}</Link>
-          <Link href="/example">{labels.example}</Link>
-          <Link href="/demo">{labels.demo}</Link>
-          {langs}
-        </div>
+        <nav className="mobile-panel" id="mobile-menu" aria-label="Main">
+          <p className="lbl mobile-kicker">{labels.product}</p>
+          <ul className="mobile-jobs">
+            {jobs.map((j, i) => (
+              <li key={j.slug}>
+                <Link href={`/${j.slug}`} aria-current={pathname === `/${j.slug}` ? 'page' : undefined}>
+                  <span className="menu-dot" style={DOT[i]} aria-hidden="true">{i + 1}</span>
+                  <span><b>{j.name}</b><small>{j.menuLine}</small></span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="mobile-links">
+            <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
+            <li><Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link></li>
+          </ul>
+          <div className="mobile-foot">
+            {langs}
+            <Link className="quiet mobile-demo" href="/demo">{labels.demo}</Link>
+          </div>
+        </nav>
       )}
     </header>
   );

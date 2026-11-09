@@ -28,19 +28,19 @@ export default async function ExamplePage({ params }: Props) {
         </ul>
       </section>
 
-      <section id="itinerary" className="on-green band" style={{ scrollMarginTop: 70 }}>
+      <section id="itinerary" className="on-green band">
         <div className="narrow" style={{ maxWidth: 820 }}>
           <p className="lbl" style={{ color: 'var(--yellow)' }}>{e.tabs.itinerary} · {t.agency}</p>
           <h2 className="h1" style={{ marginTop: 14, fontSize: 'clamp(44px, 7vw, 88px)' }}>{t.name}</h2>
           <p style={{ marginTop: 14, opacity: 0.85 }}>{t.dates} · {t.travellers}</p>
           <ol style={{ listStyle: 'none', padding: 0, margin: '48px 0 0', display: 'grid', gap: 0 }}>
             {t.days.map(d => (
-              <li key={d.day} style={{ display: 'grid', gridTemplateColumns: '90px 1fr', gap: 20, padding: '26px 0', borderTop: '1.5px solid rgba(255,244,230,.25)' }}>
-                <span className="mono" style={{ color: 'var(--yellow)', paddingTop: 6 }}>{d.day}</span>
+              <li key={d.day} className="trip-day">
+                <span className="mono">{d.day}</span>
                 <div>
                   <h3 className="h3">{d.title}</h3>
                   <p style={{ marginTop: 8, opacity: 0.9 }}>{d.body}</p>
-                  <ul style={{ margin: '12px 0 0', paddingLeft: 18, opacity: 0.85, display: 'grid', gap: 4 }}>
+                  <ul>
                     {d.items.map(i => <li key={i}>{i}</li>)}
                   </ul>
                 </div>
@@ -50,9 +50,9 @@ export default async function ExamplePage({ params }: Props) {
         </div>
       </section>
 
-      <section id="quote" className="band" style={{ scrollMarginTop: 70 }}>
+      <section id="quote" className="band">
         <div className="narrow" style={{ maxWidth: 820 }}>
-          <p className="lbl" style={{ color: 'var(--orange)' }}>{e.tabs.quote} · {t.agency}</p>
+          <p className="lbl" style={{ color: 'var(--orange-ink)' }}>{e.tabs.quote} · {t.agency}</p>
           <h2 className="h2" style={{ color: 'var(--green)', marginTop: 12 }}>{t.name}</h2>
           <p className="muted" style={{ marginTop: 10 }}>{t.dates} · {t.travellers}</p>
           <div className="tbl-wrap" style={{ marginTop: 32 }}>

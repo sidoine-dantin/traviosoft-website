@@ -25,7 +25,7 @@ export default async function FaqPage({ params }: Props) {
       <section className="narrow" style={{ paddingBottom: 'clamp(64px, 8vw, 110px)' }}>
         {f.groups.map(g => (
           <div key={g.title} style={{ marginTop: 48 }}>
-            <h2 className="lbl" style={{ color: 'var(--orange)', marginBottom: 8 }}>{g.title}</h2>
+            <h2 className="lbl" style={{ color: 'var(--orange-ink)', marginBottom: 8 }}>{g.title}</h2>
             <FaqList items={g.items} />
           </div>
         ))}

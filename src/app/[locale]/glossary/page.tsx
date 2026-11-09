@@ -29,7 +29,7 @@ export default async function GlossaryPage({ params }: Props) {
     <>
       <JsonLd data={schema} />
       <header className="narrow article-head">
-        <p className="mono"><Link href="/resources" style={{ textDecoration: 'none', color: 'var(--orange)' }}>← {c.common.backToResources}</Link></p>
+        <p className="mono"><Link href="/resources" className="back-link">← {c.common.backToResources}</Link></p>
         <h1 className="h1" style={{ marginTop: 20 }}>{c.resources.glossaryTitle}</h1>
         <p className="lead muted" style={{ marginTop: 20 }}>{c.resources.glossaryLead}</p>
         <ul className="chapters">{terms.map(t => <li key={t.id}><a href={`#${t.id}`}>{t.term}</a></li>)}</ul>

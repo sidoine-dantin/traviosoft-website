@@ -31,10 +31,10 @@ function Block({ b }: { b: ArticleBlock }) {
     case 'callout': return <div className="callout"><Inline text={b.text} /></div>;
     case 'table': return (
       <div className="tbl-wrap" style={{ margin: '24px 0' }}>
-        <table className="tbl">
+        <table className="tbl stack">
           <thead><tr>{b.head.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
           <tbody>{b.rows.map((r, i) => (
-            <tr key={i} className={b.usRow === i ? 'us' : undefined}>{r.map((cell, j) => <td key={j}><Inline text={cell} /></td>)}</tr>
+            <tr key={i} className={b.usRow === i ? 'us' : undefined}>{r.map((cell, j) => <td key={j} data-label={b.head[j]}><Inline text={cell} /></td>)}</tr>
           ))}</tbody>
         </table>
       </div>
@@ -62,7 +62,7 @@ export function ArticleView({ c, a, path }: { c: SiteContent; a: Article; path: 
     <article>
       <JsonLd data={schema} />
       <header className="narrow article-head">
-        <p className="mono"><Link href="/resources" style={{ textDecoration: 'none', color: 'var(--orange)' }}>← {c.common.backToResources}</Link></p>
+        <p className="mono"><Link href="/resources" className="back-link">← {c.common.backToResources}</Link></p>
         <h1 className="h1" style={{ marginTop: 20 }}>{a.title}</h1>
         <p className="lead muted" style={{ marginTop: 20, maxWidth: '60ch' }}>{a.lead}</p>
         <p className="updated">{c.common.updated}: <time dateTime={a.updated}>{date}</time></p>

@@ -21,7 +21,7 @@ export default async function TermsPage({ params }: Props) {
     <div style={{ paddingTop: 'clamp(6rem, 12vw, 8rem)', paddingBottom: 'clamp(4rem, 8vw, 6rem)' }}>
       <div style={{ maxWidth: '720px', margin: '0 auto', padding: '0 1.5rem' }}>
         <Link href="/" style={{
-          display: 'inline-flex', alignItems: 'center', gap: '0.375rem',
+          display: 'inline-flex', alignItems: 'center', gap: '0.375rem', minHeight: 44,
           fontSize: '0.875rem', color: 'var(--color-muted)',
           textDecoration: 'none', marginBottom: '2.5rem'
         }}>
