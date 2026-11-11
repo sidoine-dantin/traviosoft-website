@@ -39,7 +39,7 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
                   {ch.features.map(f => (
                     <details className="feat" key={f.title}>
                       <summary>
-                        <span>{f.title}{f.later && <span className="later">{c.common.later}</span>}</span>
+                        <span>{f.title}{f.premium && <span className="plan-tag">{c.common.premium}</span>}</span>
                       </summary>
                       <div className="feat-body">{f.body.map((p, k) => <p key={k}>{p}</p>)}</div>
                     </details>

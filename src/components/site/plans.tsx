@@ -5,7 +5,7 @@ import type { Plan } from '@/content/types';
 
 type Props = {
   plans: Plan[];
-  labels: { yearly: string; monthly: string; yearlyNote: string; later: string };
+  labels: { yearly: string; monthly: string; yearlyNote: string };
 };
 
 /** Plan cards with a yearly / monthly switch. Yearly is the default. */
@@ -32,7 +32,7 @@ export function Plans({ plans, labels }: Props) {
             <ul>
               {p.lines.map(l => (
                 <li key={l.text} className={l.no ? 'no' : undefined}>
-                  <span>{l.text}{l.later && <span className="later">{labels.later}</span>}</span>
+                  <span>{l.text}</span>
                 </li>
               ))}
             </ul>

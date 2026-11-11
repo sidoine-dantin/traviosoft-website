@@ -12,6 +12,8 @@ export const pagePaths = [
   '/get-paid',
   '/setup',
   '/pricing',
+  '/example/group',
+  '/example/safari',
   '/example',
   '/demo',
   '/switch',

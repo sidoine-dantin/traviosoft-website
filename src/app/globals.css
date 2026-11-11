@@ -253,7 +253,7 @@
 .feat .feat-body p + p { margin-top: .7em; }
 .feat-static { padding: 16px 0; border-bottom: 1.5px solid var(--line); }
 .feat-static b { display: block; font-size: 18px; margin-bottom: 4px; }
-.later { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; background: var(--yellow); color: var(--green); border-radius: 999px; padding: 3px 8px; margin-left: 8px; vertical-align: middle; }
+.plan-tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; background: var(--yellow); color: var(--green); border-radius: 999px; padding: 3px 8px; margin-left: 8px; vertical-align: middle; }
 @media (max-width: 900px) {
   .job-hero, .chapter { grid-template-columns: 1fr; }
   .chapter.flip > .chapter-visual { order: 0; }
@@ -463,3 +463,10 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
   /* demo agenda and timelines breathe less on a small screen */
   .band { padding-block: 72px; }
 }
+
+/* Example trip picker */
+.trip-pick { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.trip-pick a { display: grid; gap: 4px; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line); background: #fff; color: var(--ink); text-decoration: none; min-height: 44px; }
+.trip-pick a span { color: var(--muted); font-size: 15px; }
+.trip-pick a[aria-current="page"] { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
+.trip-pick a[aria-current="page"] strong { color: var(--green); }

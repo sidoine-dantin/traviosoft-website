@@ -1,4 +1,5 @@
 import type { Article, ArticleBlock, Faq } from '../types';
+import { PRICES, n } from '../prices';
 
 const UPDATED = '2026-11-03';
 
@@ -63,7 +64,7 @@ const compares: Cmp[] = [
       'Excel y Word son la herramienta con la que empieza casi toda agencia, y muchas viven bien con ellas durante años. Esta comparación no dice que sean malas: dice dónde se notan sus límites. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
     rows: [
       ['Pensado para', 'Viajes a medida: solicitudes, presupuestos, reservas y facturas', 'Cualquier tarea de hoja de cálculo y texto'],
-      ['Precio', 'Desde 190 EUR al mes, 3 usuarios incluidos', 'La licencia de Microsoft que ya tengas'],
+      ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'La licencia de Microsoft que ya tengas'],
       ['Margen y comisión', 'Reglas de precio definidas una vez; cada línea las aplica', 'Fórmulas que montas tú y copias de archivo en archivo'],
       ['Temporadas y proveedores', 'Precios por periodo y varios proveedores por producto', 'Una pestaña por proveedor, que alguien debe mantener al día'],
       ['Versiones del presupuesto', 'Cada versión queda guardada y se puede reabrir', 'Copias tipo "presupuesto_v3_final.xlsx"'],
@@ -71,7 +72,7 @@ const compares: Cmp[] = [
       ['Facturas', 'Desde el viaje, con numeración por empresa y notas de abono', 'Plantilla numerada a mano'],
       ['Normas fiscales de España', 'Etiquetas REAV y Veri*Factu con QR, activables por país', 'Las aplicas tú'],
       ['Itinerario para el cliente', 'Página para compartir, día a día, en su idioma', 'PDF o Word enviado por correo'],
-      ['Datos', 'Base de datos propia de tu agencia, alojada en la UE', 'Los archivos, donde los guardes']
+      ['Datos', 'Un espacio propio para tu agencia, alojado en la UE', 'Los archivos, donde los guardes']
     ],
     otherBetter: [
       'Haces pocos viajes al año y los llevas tú solo. Un buen modelo de Excel te da todo lo que necesitas.',
@@ -87,7 +88,7 @@ const compares: Cmp[] = [
       'Facturas a clientes de otros países y necesitas documentos en español, inglés y francés.'
     ],
     switching:
-      'No hace falta abandonar Excel de golpe. Durante el alta importamos tus productos, precios y proveedores desde Excel o CSV, y el alta y la importación no tienen coste con pago anual. Lo habitual es terminar los viajes ya abiertos en tus archivos y empezar las solicitudes nuevas en Traviosoft. Hay un calendario completo en la [página Cambiar](/switch) y una guía paso a paso en "De Excel a un software de agencia".',
+      'No hace falta abandonar Excel de golpe. Durante el alta importamos tus productos, precios y proveedores desde tus hojas de cálculo, y el alta y la importación no tienen coste con pago anual. Lo habitual es terminar los viajes ya abiertos en tus archivos y empezar las solicitudes nuevas en Traviosoft. Hay un calendario completo en la [página Cambiar](/switch) y una guía paso a paso en "De Excel a un software de agencia".',
     faq: [
       { q: '¿Puedo seguir usando Excel junto a Traviosoft?', a: ['Sí. Puedes importar tus datos desde Excel y exportar un resumen en Excel o un zip con todas las facturas en PDF para tu gestor.'] },
       { q: '¿Qué pasa con las fórmulas de margen que ya tengo?', a: ['Se convierten en reglas de precio. En lugar de copiar la fórmula en cada archivo, la defines una vez y se aplica a cada línea de cada presupuesto.'] },
@@ -109,13 +110,13 @@ const compares: Cmp[] = [
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC, receptivos, turoperadores y agencias; FIT, grupos y MICE'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'París, fundada en 2019'],
-      ['Precio publicado', 'Desde 190 EUR al mes con 3 usuarios; 250 EUR con 5', 'Professional 75 EUR por usuario y mes (hasta 10 usuarios); Premium 100 EUR; Enterprise a consultar'],
+      ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Professional 75 EUR por usuario y mes (hasta 10 usuarios); Premium 100 EUR; Enterprise a consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pack de onboarding obligatorio de 1.990 EUR; importación de datos 390 EUR'],
-      ['3 usuarios, primer año (precios de lista)', '190 x 12 = 2.280 EUR', '75 x 3 x 12 = 2.700 EUR + 1.990 EUR = 4.690 EUR'],
+      ['3 usuarios, primer año (precios de lista)', `${PRICES.classic.yearly} x 12 = ${n(PRICES.classic.yearly * 12, 'es')} EUR`, '75 x 3 x 12 = 2.700 EUR + 1.990 EUR = 4.690 EUR'],
       ['Idiomas', 'Documentos en español, inglés, francés y más', 'Web y soporte en 5 idiomas: EN, FR, ES, IT, PT'],
       ['Reseñas públicas', 'Todavía sin reseñas en directorios', 'Capterra 4,7 (61) y G2 4,9 (18), según su web'],
       ['Normas fiscales de España', 'REAV y Veri*Factu con QR', 'No vimos contenido sobre REAV en su web'],
-      ['Alojamiento de datos', 'UE, base de datos propia por agencia', 'AWS Irlanda, según su web']
+      ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'AWS Irlanda, según su web']
     ],
     otherBetter: [
       'Quieres un producto con más años en el mercado y muchas más referencias públicas: Ezus dice tener más de 600 agencias en más de 70 países.',
@@ -131,9 +132,9 @@ const compares: Cmp[] = [
       'Prefieres una herramienta enfocada en el flujo de un viaje: solicitud, presupuesto con margen, reserva, cobro y factura.'
     ],
     switching:
-      'Si usas Ezus y quieres cambiar, exporta antes tus productos, proveedores y clientes. Nosotros importamos productos, precios y proveedores desde Excel o CSV durante el alta. Un consejo práctico: cambia fuera de temporada alta y termina los viajes abiertos donde están. La [página Cambiar](/switch) detalla los pasos.',
+      'Si usas Ezus y quieres cambiar, exporta antes tus productos, proveedores y clientes. Nosotros importamos productos, precios y proveedores desde tus hojas de cálculo durante el alta. Un consejo práctico: cambia fuera de temporada alta y termina los viajes abiertos donde están. La [página Cambiar](/switch) detalla los pasos.',
     faq: [
-      { q: '¿Cuánto cuesta cada uno el primer año con 3 usuarios?', a: ['Con los precios de lista, Traviosoft cuesta unos 2.280 EUR el primer año y Ezus unos 4.690 EUR, porque incluye un pack de onboarding de 1.990 EUR. Comprueba los precios actuales de los dos.'] },
+      { q: '¿Cuánto cuesta cada uno el primer año con 3 usuarios?', a: [`Con los precios de lista, Traviosoft Classic cuesta unos ${n(PRICES.classic.yearly * 12, 'es')} EUR el primer año y Ezus unos 4.690 EUR, porque incluye un pack de onboarding de 1.990 EUR. Comprueba los precios actuales de los dos.`] },
       { q: '¿Ezus sirve para España?', a: ['Sí, tiene web y soporte en español. Lo que no encontramos en su web es contenido sobre REAV. Pregúntales cómo lo resuelven si lo necesitas.'] },
       { q: '¿Puedo probar los dos?', a: ['Los dos trabajan con demostración. Lo más útil es llevar un viaje real tuyo a cada una y comparar cuánto tardas en tener el presupuesto con margen.'] }
     ]
@@ -152,14 +153,14 @@ const compares: Cmp[] = [
       'Hemos podido ver GIAV a través de directorios y prensa del sector, no con una prueba propia. Por eso, donde no hay un dato público, lo indicamos como "No publicado" y te sugerimos preguntarles. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Gestión de agencias de viajes en España, sobre todo minoristas'],
-      ['Precio publicado', 'Desde 190 EUR al mes, 3 usuarios incluidos', 'No publicado'],
-      ['Tamaño de equipo', 'Planes para 3, 5 o más usuarios', 'No publicado'],
+      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'No publicado'],
+      ['Tamaño de equipo', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, 'No publicado'],
       ['Presupuestos a medida con margen y comisión por línea', 'Sí, con reglas de precio', 'No publicado'],
       ['Catálogo con temporadas y varios proveedores', 'Sí', 'No publicado'],
       ['Itinerario del cliente en página compartible', 'Sí, en su idioma y con tu marca', 'No publicado'],
       ['Idiomas de los documentos', 'Español, inglés, francés y más', 'No publicado'],
       ['REAV y Veri*Factu', 'Sí, con etiquetas REAV y Veri*Factu con QR', 'Consúltalo con ellos'],
-      ['Alojamiento de datos', 'UE, base de datos propia por agencia', 'No publicado']
+      ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'No publicado']
     ],
     otherBetter: [
       'Eres una agencia minorista que vende billetes, hoteles y paquetes de mayoristas. Un programa pensado para ese trabajo suele encajar mejor.',
@@ -174,9 +175,9 @@ const compares: Cmp[] = [
       'Prefieres ver el precio antes de hablar con nadie.'
     ],
     switching:
-      'Antes de decidir, pide a GIAV y a nosotros una demostración con un viaje tuyo y pregunta lo mismo a los dos: cómo se calcula el margen por línea, cómo se registra la comisión de un colaborador, qué ve el cliente y cómo se factura con REAV. Si cambias, importamos productos, precios y proveedores desde Excel o CSV; consulta la [página Cambiar](/switch).',
+      'Antes de decidir, pide a GIAV y a nosotros una demostración con un viaje tuyo y pregunta lo mismo a los dos: cómo se calcula el margen por línea, cómo se registra la comisión de un colaborador, qué ve el cliente y cómo se factura con REAV. Si cambias, importamos productos, precios y proveedores desde tus hojas de cálculo; consulta la [página Cambiar](/switch).',
     faq: [
-      { q: '¿Puedo importar los datos desde GIAV?', a: ['Importamos productos, precios y proveedores desde Excel o CSV. Si GIAV te permite exportar a esos formatos, puedes traerlos así. Depende de lo que te permita exportar tu versión.'] },
+      { q: '¿Puedo importar los datos desde GIAV?', a: ['Importamos productos, precios y proveedores desde hojas de cálculo. Si GIAV te permite exportar a una hoja de cálculo, puedes traerlos así. Depende de lo que te permita exportar tu versión.'] },
       { q: '¿Sirve Traviosoft para una agencia minorista?', a: ['Está pensado para agencias que diseñan y venden viajes a medida. Si tu negocio es sobre todo vender producto de catálogo de mayoristas, mira antes si encaja con lo que haces.'] },
       { q: '¿Por qué no hay precios de GIAV en la tabla?', a: ['Porque no los hemos visto publicados. Preferimos escribir "No publicado" a inventar una cifra.'] }
     ]
@@ -195,7 +196,7 @@ const compares: Cmp[] = [
       'Los datos de Holded vienen de su web y de su página de turismo y viajes, revisadas el 3 de noviembre de 2026. Holded cambia sus planes y promociones con frecuencia: comprueba su página de precios. No es un mal programa: simplemente resuelve otro problema.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Autónomos y pymes de cualquier sector, de 1 a más de 100 personas'],
-      ['Precio publicado', 'Desde 190 EUR al mes, 3 usuarios incluidos', 'Básico 29 EUR (2 usuarios), Estándar 59 EUR (4), Avanzado 99 EUR (7), sin IVA; con descuentos temporales'],
+      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Básico 29 EUR (2 usuarios), Estándar 59 EUR (4), Avanzado 99 EUR (7), sin IVA; con descuentos temporales'],
       ['Presupuestos con margen por servicio', 'Sí, con reglas de precio, IVA y comisión', 'Sin funciones específicas de viajes que hayamos visto'],
       ['Catálogo con temporadas y proveedores', 'Sí', 'No es su función'],
       ['Reservas y tareas por proveedor', 'Lista por viaje con estados', 'No es su función'],
@@ -239,13 +240,13 @@ const compares: Cmp[] = [
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Turoperadores y DMC medianos y grandes'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Croacia, fundada en 1990'],
-      ['Tamaño de equipo', 'Planes para 3, 5 o más usuarios', 'Lemax GO desde 15 usuarios'],
-      ['Precio publicado', 'Desde 190 EUR al mes, 3 usuarios incluidos', 'No publicado; el precio se acuerda antes de firmar'],
+      ['Tamaño de equipo', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, 'Lemax GO desde 15 usuarios'],
+      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'No publicado; el precio se acuerda antes de firmar'],
       ['Idiomas de su web', 'Español, inglés y francés', 'Inglés'],
       ['Implantación', 'Alta e importación sin coste con pago anual', 'Dicen "en producción en 90 días" para Lemax GO'],
-      ['Distribución y conexiones', 'API y acceso MCP', 'Conexión con proveedores, API de reservas, portal B2B, según su web'],
+      ['Distribución y conexiones', 'Conexiones con tu web, tu contabilidad y tus herramientas de IA (Premium)', 'Conexión con proveedores, API de reservas, portal B2B, según su web'],
       ['Normas fiscales de España', 'REAV y Veri*Factu con QR', 'No publicado'],
-      ['Alojamiento de datos', 'UE, base de datos propia por agencia', 'No publicado']
+      ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'No publicado']
     ],
     otherBetter: [
       'Eres un turoperador o un DMC con un equipo de 15 o más personas y procesos complejos de varios días.',
@@ -257,14 +258,14 @@ const compares: Cmp[] = [
       'Quieres presupuestar, reservar y facturar todo el viaje en un solo sistema y arrancar con una puesta en marcha corta.',
       'Quieres ver el precio y los usuarios incluidos antes de pedir una demostración.',
       'Tu mercado es España y vendes en español y francés, con REAV y Veri*Factu.',
-      'Quieres que importemos tus productos, precios y proveedores desde Excel o CSV durante la puesta en marcha.'
+      'Quieres que importemos tus productos, precios y proveedores desde tus hojas de cálculo durante la puesta en marcha.'
     ],
     switching:
-      'Si hoy usas Lemax y quieres pasar a Traviosoft, exporta tus productos y precios y pregúntanos cómo importarlos desde Excel o CSV. Cambiar de herramienta en plena temporada es arriesgado: lo normal es hacerlo en temporada baja. Consulta la [página Cambiar](/switch).',
+      'Si hoy usas Lemax y quieres pasar a Traviosoft, exporta tus productos y precios y pregúntanos cómo importarlos desde tus hojas de cálculo. Cambiar de herramienta en plena temporada es arriesgado: lo normal es hacerlo en temporada baja. Consulta la [página Cambiar](/switch).',
     faq: [
       { q: '¿Lemax sirve para un equipo de 4 personas?', a: ['Su paquete Lemax GO empieza en 15 usuarios, según su web. Para equipos más pequeños, pregúntales qué opciones tienen.'] },
       { q: '¿Por qué no aparece el precio de Lemax?', a: ['Porque no lo publican; dicen que el paquete y su implantación se acuerdan antes de firmar. Preferimos poner "No publicado" a estimarlo.'] },
-      { q: '¿Traviosoft tiene API?', a: ['Sí. Puedes leer y escribir tus datos desde otras herramientas con la API, y conectar una herramienta de IA con acceso MCP.'] }
+      { q: '¿Traviosoft se conecta con mis otras herramientas?', a: ['Sí, en Premium. Tu web, tu programa de contabilidad o un desarrollador con el que trabajes pueden leer y escribir tus datos de Traviosoft, y puedes conectar el asistente de IA que ya usas.'] }
     ]
   },
   {
@@ -282,8 +283,8 @@ const compares: Cmp[] = [
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC y diseñadores de viajes de lujo, viajes FIT de varios días'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Wellington (Nueva Zelanda), fundada en 2004'],
-      ['Precio publicado', 'Desde 190 EUR al mes con 3 usuarios; 250 EUR con 5', 'Starter desde 99 USD por usuario y mes; Pro desde 149 USD; Premium a consultar'],
-      ['3 usuarios, por mes (precios de lista)', '190 EUR', 'Unos 447 USD en Pro (3 x 149)'],
+      ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Starter desde 99 USD por usuario y mes; Pro desde 149 USD; Premium a consultar'],
+      ['3 usuarios, por mes (precios de lista)', `${PRICES.classic.yearly} EUR`, 'Unos 447 USD en Pro (3 x 149)'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pago único desde 1.199 USD (migración, configuración y formación)'],
       ['Límite de itinerarios', 'Plan con usuarios incluidos', 'Starter hasta 25 al año; Pro hasta 50 al año; Premium sin límite'],
       ['Idiomas', 'Documentos en español, inglés, francés y más', 'Inglés'],
@@ -303,7 +304,7 @@ const compares: Cmp[] = [
       'Prefieres no pagar una puesta en marcha de más de mil dólares al empezar.'
     ],
     switching:
-      'Si usas Tourwriter, exporta tus productos, precios y proveedores a Excel o CSV y nosotros los importamos en el alta. Lo habitual es terminar los viajes en curso donde están y abrir las solicitudes nuevas en Traviosoft. Más pasos en la [página Cambiar](/switch).',
+      'Si usas Tourwriter, exporta tus productos, precios y proveedores a una hoja de cálculo y nosotros los importamos en el alta. Lo habitual es terminar los viajes en curso donde están y abrir las solicitudes nuevas en Traviosoft. Más pasos en la [página Cambiar](/switch).',
     faq: [
       { q: '¿Cuánto cuesta Tourwriter para 3 usuarios?', a: ['Con los precios de lista del plan Pro, unos 447 USD al mes (3 x 149) más una puesta en marcha desde 1.199 USD. Es un precio "desde" y piden presupuesto, así que confírmalo con ellos.'] },
       { q: '¿Tourwriter está en español?', a: ['Su web y producto están en inglés según lo que vimos. Si tus clientes necesitan documentos en español o francés, pregúntales cómo lo resuelven.'] },
@@ -336,7 +337,7 @@ const best: Article = {
       head: ['Programa', 'Para quién es', 'Tamaño de equipo', 'Precio público', 'Idiomas', 'Fundación'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Receptivos, DMC y agencias a medida', 'Planes para 3, 5 o más usuarios', 'Desde 190 EUR/mes con 3 usuarios; 250 EUR con 5', 'Documentos en ES, EN, FR y más', 'Ver Sobre nosotros'],
+        ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, EN, FR y más', 'Ver Sobre nosotros'],
         ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); onboarding obligatorio de 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT', '2019, París'],
         ['Tourplan', 'Turoperadores y DMC consolidados', 'Mínimo 5 usuarios, según Capterra', 'No publicado en su web; Capterra indica desde 250 USD por usuario y mes', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
         ['Tourwriter', 'DMC y diseñadores de viajes de lujo', 'De 1 a más de 20 personas según plan', 'Desde 99 USD por usuario y mes; puesta en marcha desde 1.199 USD', 'Inglés', '2004, Nueva Zelanda'],
@@ -405,7 +406,7 @@ const best: Article = {
       type: 'faq',
       items: [
         { q: '¿Cuál es el mejor software para un DMC o agencia a medida en España?', a: ['Depende de tu forma de trabajar y tu mercado. Para llevar todo el viaje de la solicitud a la factura, con precio visible y facturación española, mira Traviosoft y Ezus. Si vendes sobre todo en inglés y viajes de lujo, mira también Tourwriter.'] },
-        { q: '¿Cuánto cuesta un software para DMC?', a: ['Los precios públicos van de unos 190 EUR al mes para 3 usuarios (Traviosoft) a 75 EUR por usuario y mes más 1.990 EUR de onboarding (Ezus). Tourplan, Lemax y Kaptio no publican precios.'] },
+        { q: '¿Cuánto cuesta un software para DMC?', a: [`Los precios públicos van de ${PRICES.classic.yearly} EUR al mes para ${PRICES.usersIncluded} usuarios (Traviosoft Classic) a 75 EUR por usuario y mes más 1.990 EUR de onboarding (Ezus). Tourplan, Lemax y Kaptio no publican precios.`] },
         { q: '¿Necesito un programa específico de viajes o me vale un ERP general?', a: ['Un ERP general lleva bien la contabilidad, pero no calcula presupuestos con margen por servicio ni lista reservas por viaje. Muchas agencias usan los dos.'] }
       ]
     },
@@ -677,7 +678,7 @@ const fromExcel: Article = {
       items: [
         'Limpia los listados en Excel: quita duplicados, unifica nombres y completa los precios que faltan.',
         'Define tus reglas de precio una sola vez y comprueba con un presupuesto antiguo que da el mismo resultado.',
-        'Importa productos, precios y proveedores. En Traviosoft lo hacemos durante el alta, desde Excel o CSV, y no tiene coste con pago anual.',
+        'Importa productos, precios y proveedores. En Traviosoft lo hacemos durante el alta, desde tus hojas de cálculo, y no tiene coste con pago anual.',
         'Importa clientes y revisa los duplicados.',
         'Haz un viaje de prueba de principio a fin: solicitud, presupuesto, reserva, cobro y factura.',
         'Empieza a registrar las solicitudes nuevas allí y termina los viajes abiertos en tus archivos.',
@@ -875,7 +876,7 @@ const spainPage: Article = {
         'Numeración por sociedad: cada empresa de tu grupo mantiene su propia serie de facturas.',
         'Exportación para el gestor: un resumen en Excel o un zip con todas las facturas en PDF de cualquier periodo.',
         'Documentos para clientes extranjeros: presupuestos, correos, propuestas e itinerarios en español, inglés y francés, con tu marca.',
-        'Datos en la UE: cada agencia tiene su propia base de datos alojada en la Unión Europea.'
+        'Datos en la UE: cada agencia tiene su propio espacio, alojado en la Unión Europea.'
       ]
     },
     { type: 'h2', text: 'Del presupuesto a la factura', id: 'flujo' },
@@ -894,7 +895,7 @@ const spainPage: Article = {
     { type: 'h2', text: 'Precio', id: 'precio' },
     {
       type: 'p',
-      text: 'Desde 190 EUR al mes con 3 usuarios incluidos y 250 EUR con 5, con alta e importación sin coste con pago anual. Los detalles están en la [página de precios](/pricing).'
+      text: `Classic cuesta ${PRICES.classic.yearly} EUR al mes y Premium ${PRICES.premium.yearly} EUR, con ${PRICES.usersIncluded} usuarios incluidos y alta e importación sin coste con pago anual. Los detalles están en la [página de precios](/pricing).`
     },
     { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
     {
@@ -902,7 +903,7 @@ const spainPage: Article = {
       items: [
         { q: '¿Traviosoft sustituye a mi gestor?', a: ['No. Gestiona el viaje, los cobros y las facturas, y prepara los archivos para tu gestor, que sigue llevando tu contabilidad y tus impuestos.'] },
         { q: '¿Funciona para un receptivo que vende a agencias de otros países?', a: ['Sí. Puedes emitir documentos en el idioma del cliente y registrar la comisión de la agencia que te trae la venta.'] },
-        { q: '¿Dónde están mis datos?', a: ['En una base de datos propia de tu agencia, alojada en la Unión Europea.'] }
+        { q: '¿Dónde están mis datos?', a: ['En un espacio propio para tu agencia, alojado en la Unión Europea.'] }
       ]
     },
     {

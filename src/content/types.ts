@@ -4,7 +4,7 @@
  * Pages never hard-code copy: they read it from getContent(locale).
  *
  * Copy rules (see PRODUCT.md):
- * - only features that are live on production; anything else is marked `later: true`
+ * - features of the Premium plan are marked `premium: true` (shown with a "Premium" tag)
  * - no testimonials, no client logos, no invented numbers, no founder name or face
  * - never call Traviosoft a "CRM"
  * - one quiet demo link (header). No repeated demo buttons in page bodies.
@@ -39,8 +39,8 @@ export type Feature = {
   title: string;
   /** one or two short paragraphs, shown when the line is opened */
   body: string[];
-  /** not on production yet: shown with a "coming" tag */
-  later?: boolean;
+  /** part of the Premium plan: shown with a "Premium" tag */
+  premium?: boolean;
 };
 
 export type Chapter = {
@@ -124,17 +124,34 @@ export type Article = {
   blocks: ArticleBlock[];
 };
 
+export type ExampleTripId = 'andalucia' | 'group' | 'safari';
+
+export type ExampleTrip = {
+  id: ExampleTripId;
+  /** short label in the trip picker, e.g. "Couple, 8 days" */
+  label: string;
+  /** one line under the label: who this trip is like */
+  kind: string;
+  name: string; dates: string; travellers: string; agency: string;
+  days: { day: string; title: string; body: string; items: string[] }[];
+  quoteLines: { name: string; detail: string; price: string }[];
+  included: string[]; notIncluded: string[];
+  total: string; perPerson: string; deposit: string; validUntil: string;
+  /** optional rooming list shown under the quote (groups) */
+  rooming?: { title: string; head: string[]; rows: string[][] };
+};
+
 export type GlossaryTerm = { id: string; term: string; def: string };
 
 export type Plan = {
-  id: 'small' | 'team' | 'larger';
+  id: 'classic' | 'premium';
   name: string;
   users: string;
   yearly: string;
   monthly: string;
   priceNote: string;
   hot?: boolean;
-  lines: { text: string; no?: boolean; later?: boolean }[];
+  lines: { text: string; no?: boolean }[];
 };
 
 export type SiteContent = {
@@ -153,7 +170,7 @@ export type SiteContent = {
     localLinks: Link[];
   };
   common: {
-    later: string; next: string; onThisPage: string; updated: string; readMore: string;
+    premium: string; next: string; onThisPage: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
   };
   visuals: VisualText;
@@ -175,7 +192,6 @@ export type SiteContent = {
     title: string; lead: string;
     yearly: string; monthly: string; yearlyNote: string;
     plans: Plan[];
-    compareTitle: string; compareBody: string;
     includedTitle: string; included: string[];
     faq: Faq[];
   };
@@ -183,13 +199,9 @@ export type SiteContent = {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;
     tabs: { itinerary: string; quote: string };
-    trip: {
-      name: string; dates: string; travellers: string; agency: string;
-      days: { day: string; title: string; body: string; items: string[] }[];
-      quoteLines: { name: string; detail: string; price: string }[];
-      included: string[]; notIncluded: string[];
-      total: string; perPerson: string; deposit: string; validUntil: string;
-    };
+    /** label above the trip picker */
+    pick: string;
+    trips: ExampleTrip[];
     note: string;
   };
   demo: {

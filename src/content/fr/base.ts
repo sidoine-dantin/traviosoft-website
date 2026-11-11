@@ -3,7 +3,7 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Produit',
   pricing: 'Tarifs',
-  example: 'Voyage exemple',
+  example: 'Voyages exemples',
   demo: 'Réserver une démo',
   menuLabel: 'Menu',
   close: 'Fermer',
@@ -32,7 +32,7 @@ export const footer: SiteContent['footer'] = {
 };
 
 export const common: SiteContent['common'] = {
-  later: 'Bientôt',
+  premium: 'Premium',
   next: 'Suivant',
   onThisPage: 'Sur cette page',
   updated: 'Dernière mise à jour',
@@ -53,7 +53,7 @@ export const visuals: SiteContent['visuals'] = {
   newReq: 'Nouvelle',
   quoted: 'Devis envoyé',
   waiting: 'En attente',
-  won: 'Gagnée',
+  won: 'Acceptée',
   catalogue: 'Catalogue · Hotel Alfonso XIII',
   season: 'Haute saison',
   suppliers: 'prestataires',
@@ -101,7 +101,7 @@ export const visuals: SiteContent['visuals'] = {
   owner: 'Propriétaire',
   sales2: 'Ventes',
   ops: 'Opérations',
-  safe1: 'Votre propre base de données',
+  safe1: 'Espace privé par agence',
   safe2: 'Hébergé dans l’UE',
   connections: 'Connexions',
   days: ['Séville', 'Séville', 'Córdoba', 'Granada', 'Granada', 'Ronda', 'Málaga', 'Retour'],

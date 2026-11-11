@@ -27,7 +27,7 @@ export default async function PricingPage({ params }: Props) {
         <p className="lead muted" style={{ marginTop: 22 }}>{p.lead}</p>
       </section>
       <section className="wrap" style={{ paddingBottom: 'clamp(64px, 8vw, 110px)' }}>
-        <Plans plans={p.plans} labels={{ yearly: p.yearly, monthly: p.monthly, yearlyNote: p.yearlyNote, later: c.common.later }} />
+        <Plans plans={p.plans} labels={{ yearly: p.yearly, monthly: p.monthly, yearlyNote: p.yearlyNote }} />
         <div style={{ marginTop: 48, color: 'var(--green)' }}>
           <KeyFacts facts={c.home.facts} />
         </div>
@@ -43,13 +43,7 @@ export default async function PricingPage({ params }: Props) {
           </ul>
         </div>
       </section>
-      <section className="band-sm">
-        <div className="narrow">
-          <p className="lbl muted">{p.compareTitle}</p>
-          <p style={{ fontSize: 20, marginTop: 12, lineHeight: 1.5 }}>{p.compareBody}</p>
-        </div>
-      </section>
-      <section className="band" style={{ paddingTop: 0 }}>
+      <section className="band">
         <div className="narrow">
           <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 28 }}>{c.common.faqTitle}</h2>
           <FaqList items={p.faq} />

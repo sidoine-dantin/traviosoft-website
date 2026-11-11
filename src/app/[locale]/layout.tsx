@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { JsonLd } from '@/components/site/json-ld';
+import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
 import { baseUrl, siteName } from '@/lib/seo';
 import '../globals.css';
@@ -69,12 +70,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       {
         '@type': 'Offer',
         name: c.pricing.plans[0]?.name,
-        price: '190',
+        price: String(PRICES.classic.yearly),
         priceCurrency: 'EUR',
         description: c.pricing.plans[0]?.users,
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '190',
+          price: String(PRICES.classic.yearly),
           priceCurrency: 'EUR',
           unitCode: 'MON',
           billingDuration: 'P1Y',
@@ -84,12 +85,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       {
         '@type': 'Offer',
         name: c.pricing.plans[1]?.name,
-        price: '250',
+        price: String(PRICES.premium.yearly),
         priceCurrency: 'EUR',
         description: c.pricing.plans[1]?.users,
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '250',
+          price: String(PRICES.premium.yearly),
           priceCurrency: 'EUR',
           unitCode: 'MON',
           billingDuration: 'P1Y',
