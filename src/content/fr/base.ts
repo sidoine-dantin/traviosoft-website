@@ -40,7 +40,12 @@ export const common: SiteContent['common'] = {
   faqTitle: 'Questions',
   backToResources: 'Toutes les ressources',
   allResources: 'Voir toutes les ressources',
-  perMonth: 'EUR / mois'
+  perMonth: 'EUR / mois',
+  notFound: {
+    title: 'Page introuvable',
+    body: 'Il n’y a rien à cette adresse. Vérifiez qu’elle est bien écrite, ou repartez de la page d’accueil.',
+    home: 'Aller à la page d’accueil'
+  }
 };
 
 export const visuals: SiteContent['visuals'] = {
