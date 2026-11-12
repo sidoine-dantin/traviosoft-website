@@ -5,7 +5,7 @@ export const pricing: SiteContent['pricing'] = {
   metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
     `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les équipes, les devises, les achats, plusieurs marques et l’assistant. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
-  title: 'Deux offres, des prix clairs.',
+  title: 'Deux offres, des prix clairs',
   lead: 'Classic contient tout pour gérer votre agence, de la première demande à la dernière facture. Premium ajoute ce que les grandes équipes et les DMC internationaux utilisent chaque jour.',
   yearly: 'Annuel',
   monthly: 'Mensuel',
@@ -99,7 +99,7 @@ export const example: SiteContent['example'] = {
   metaTitle: 'Voyages exemples : un couple, un groupe et un safari | Traviosoft',
   metaDescription:
     'Ouvrez trois voyages exemples construits dans Traviosoft, un couple en Andalousie, un groupe incentive à Porto et un safari au Kenya et en Tanzanie : le programme jour par jour et le devis tels que les voit le client. Données inventées, sans inscription.',
-  title: 'Ce que reçoit votre client.',
+  title: 'Ce que reçoit votre client',
   lead: 'Trois voyages exemples construits dans Traviosoft. Ouvrez l’itinéraire et le devis tels que les voit votre client ou votre agence partenaire.',
   tabs: { itinerary: 'Itinéraire', quote: 'Devis' },
   pick: 'Choisissez un voyage',
@@ -322,7 +322,7 @@ export const demo: SiteContent['demo'] = {
   metaTitle: 'Démo : 30 minutes, sur un voyage comme le vôtre | Traviosoft',
   metaDescription:
     'Un appel de 30 minutes sur un voyage préparé proche de ceux que vous vendez, de la demande à la facture. Vous recevez ensuite par écrit le prix pour votre équipe.',
-  title: '30 minutes, sur un voyage comme le vôtre.',
+  title: '30 minutes, sur un voyage comme le vôtre',
   lead: 'Nous déroulons dans l’application un voyage préparé, proche de ceux que vous vendez, du premier message à la facture finale.',
   agendaTitle: 'Le déroulé des 30 minutes',
   agenda: [
@@ -370,7 +370,7 @@ export const switching: SiteContent['switching'] = {
   metaTitle: 'Passer d’Excel à Traviosoft | Traviosoft',
   metaDescription:
     'Passer d’Excel, Word et WhatsApp à Traviosoft en pleine saison : ce que nous importons, ce que vous vérifiez, et comment finir les voyages en cours.',
-  title: 'D’Excel à Traviosoft, en pleine saison.',
+  title: 'D’Excel à Traviosoft, en pleine saison',
   lead: 'Vous avancez par étapes, et les voyages en cours continuent.',
   timelineTitle: 'Comment cela se passe',
   timeline: [
@@ -437,7 +437,7 @@ export const faqPage: SiteContent['faqPage'] = {
   metaTitle: 'Questions fréquentes | Traviosoft',
   metaDescription:
     'Des réponses claires sur ce que fait Traviosoft, son prix, l’hébergement de vos données et le passage depuis Excel. Pour les dirigeants d’agence.',
-  title: 'Les questions des agences.',
+  title: 'Les questions des agences',
   lead: 'Des réponses courtes. Si la vôtre n’est pas ici, écrivez à hola@traviosoft.com.',
   groups: [
     {
@@ -527,7 +527,7 @@ export const about: SiteContent['about'] = {
   metaTitle: 'À propos de Traviosoft : né dans une agence de Barcelone',
   metaDescription:
     'Traviosoft est né dans une agence de voyages sur mesure de Barcelone qui tournait avec Excel, Word et WhatsApp. Support par email assuré par les personnes qui construisent le produit, données en UE.',
-  title: 'Conçu par une agence, pour des agences.',
+  title: 'Conçu par une agence, pour des agences',
   lead: 'Traviosoft est né dans une agence de voyages sur mesure de Barcelone, sur de vrais voyages, et il est devenu un système de gestion complet pour les agences sur mesure et les DMC.',
   blocks: [
     {

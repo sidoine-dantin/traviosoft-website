@@ -46,7 +46,7 @@ export default async function HomePage({ params }: Props) {
             {h.steps.map((s, i) => (
               <li key={i}>
                 <Link href={`/${s.job}`} className="step">
-                  <span className="dot" aria-hidden="true">{i + 1}</span>
+                  <span className="dot" aria-hidden="true" />
                   <span className="mono" style={{ opacity: 0.8 }}>{s.time}</span>
                   <b>{s.title}</b>
                   <p>{s.body}</p>

@@ -24,7 +24,7 @@ export function LegalDocument({
         fontFamily: 'var(--font-display, Georgia, serif)',
         fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
         fontWeight: 400, color: 'var(--color-ink)',
-        letterSpacing: '-0.01em', marginBottom: '0.75rem', lineHeight: 1.2
+        marginBottom: '0.75rem', lineHeight: 1.2
       }}>
         {title}
       </h1>

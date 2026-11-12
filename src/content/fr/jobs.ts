@@ -8,7 +8,7 @@ const sell: JobPage = {
   name: 'Vendre',
   menuLine: 'De la première demande au devis accepté',
   step: '1 sur 4',
-  heroTitle: 'Répondez en premier, au bon prix.',
+  heroTitle: 'Répondez en premier, au bon prix',
   heroLead:
     'Les clients réservent souvent auprès de l’agence qui répond la première avec un devis clair et juste. Traviosoft garde chaque demande sous les yeux et construit le devis avec vos propres tarifs, pour que vous puissiez l’envoyer le jour même.',
   heroVisual: 'quote',
@@ -16,7 +16,7 @@ const sell: JobPage = {
     {
       id: 'requests',
       kicker: 'Demandes',
-      title: 'Chaque demande en main.',
+      title: 'Chaque demande en main',
       lead: 'Chaque demande dans une liste avec sa prochaine étape, qu’elle arrive par e-mail, par téléphone ou par WhatsApp.',
       visual: 'requests',
       features: [
@@ -30,7 +30,7 @@ const sell: JobPage = {
     {
       id: 'catalogue',
       kicker: 'Catalogue',
-      title: 'Vos tarifs, prêts à chiffrer.',
+      title: 'Vos tarifs, prêts à chiffrer',
       lead: 'Hôtels, transferts, guides et activités, chacun avec ses prix par date. Le bon prix pour les dates du voyage est choisi pour vous.',
       visual: 'catalogue',
       features: [
@@ -44,7 +44,7 @@ const sell: JobPage = {
     {
       id: 'quotes',
       kicker: 'Devis',
-      title: 'Un devis en quelques minutes, marge comprise.',
+      title: 'Un devis en quelques minutes, marge comprise',
       lead: 'Définissez vos règles de prix une fois. Chaque ligne de chaque devis les applique, donc chaque marge et chaque commission sont dans le prix.',
       visual: 'quote',
       features: [
@@ -59,7 +59,7 @@ const sell: JobPage = {
     {
       id: 'send',
       kicker: 'Envoi et relance',
-      title: 'Envoyé ce soir. Relancé la semaine prochaine.',
+      title: 'Envoyé ce soir, relancé la semaine prochaine',
       lead: 'Envoyez le devis par e-mail dans la langue du client. Une semaine plus tard, Traviosoft vous le ramène pour une relance.',
       visual: 'followup',
       features: [
@@ -71,7 +71,7 @@ const sell: JobPage = {
     {
       id: 'proposal',
       kicker: 'Proposition',
-      title: 'Une proposition que votre client aime ouvrir.',
+      title: 'Une proposition que votre client aime ouvrir',
       lead: 'Votre client reçoit un lien vers une page claire présentant le voyage, dans sa langue et à votre marque.',
       visual: 'proposal',
       features: [
@@ -83,7 +83,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agences partenaires',
-      title: 'Vendez via des agences partenaires.',
+      title: 'Vendez via des agences partenaires',
       lead: 'La plupart des voyages d’un réceptif viennent d’agences à l’étranger. Envoyez le devis au partenaire, gardez son client sur le même voyage et réglez sa commission à partir des mêmes chiffres.',
       visual: 'quote',
       features: [
@@ -110,7 +110,7 @@ const book: JobPage = {
   name: 'Réserver et suivre',
   menuLine: 'Du devis accepté au voyage terminé',
   step: '2 sur 4',
-  heroTitle: 'Chaque réservation confirmée, même en haute saison.',
+  heroTitle: 'Chaque réservation confirmée, même en haute saison',
   heroLead:
     'Une fois que le client dit oui, chaque prestation doit être réservée, confirmée et transmise aux bonnes personnes. Traviosoft tient la liste de chaque voyage, et toute l’équipe travaille sur la même.',
   heroVisual: 'order',
@@ -118,7 +118,7 @@ const book: JobPage = {
     {
       id: 'order',
       kicker: 'Dossier',
-      title: 'L’acompte ouvre le dossier.',
+      title: 'L’acompte ouvre le dossier',
       lead: 'Enregistrez le premier paiement et le devis est accepté : le dossier est créé avec toutes les prestations déjà dedans.',
       visual: 'order',
       features: [
@@ -130,7 +130,7 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Statuts',
-      title: 'Voyez ce qu’il reste à faire.',
+      title: 'Voyez ce qu’il reste à faire',
       lead: 'Les pastilles de réservation, de voyage et de paiement se mettent à jour seules. Vous savez d’un coup d’œil quels voyages ont besoin de vous aujourd’hui.',
       visual: 'order',
       features: [
@@ -142,7 +142,7 @@ const book: JobPage = {
     {
       id: 'suppliers',
       kicker: 'Prestataires',
-      title: 'Les prestataires au même endroit.',
+      title: 'Les prestataires au même endroit',
       lead: 'Contacts, documents et tous les e-mails échangés, classés dans le bon voyage et à portée de main quand le client appelle.',
       visual: 'suppliers',
       features: [
@@ -155,7 +155,7 @@ const book: JobPage = {
     {
       id: 'itinerary',
       kicker: 'Programme du client',
-      title: 'Un voyage jour par jour sur son téléphone.',
+      title: 'Un voyage jour par jour sur son téléphone',
       lead: 'Une fois le voyage confirmé, partagez une page avec chaque jour, les hôtels, les horaires et les contacts. Votre voyageur l’ouvre où il veut.',
       visual: 'itinerary',
       features: [
@@ -167,7 +167,7 @@ const book: JobPage = {
     {
       id: 'groups',
       kicker: 'Groupes',
-      title: 'Groupes et rooming lists.',
+      title: 'Groupes et rooming lists',
       lead: 'Incentives, associations, voyages scolaires : chaque voyageur nommé, chaque chambre prévue, chaque hôtel sait qui dort où.',
       visual: 'order',
       features: [
@@ -180,7 +180,7 @@ const book: JobPage = {
     {
       id: 'calendar',
       kicker: 'Calendrier',
-      title: 'Qui voyage cette semaine.',
+      title: 'Qui voyage cette semaine',
       lead: 'Chaque voyage est une bande sur le calendrier. Sur votre téléphone, les prestations du jour sous forme de liste simple.',
       visual: 'calendar',
       features: [
@@ -205,7 +205,7 @@ const getPaid: JobPage = {
   name: 'Encaisser',
   menuLine: 'Paiements, factures et vos chiffres',
   step: '3 sur 4',
-  heroTitle: 'Soyez payé à temps, facturez sans ressaisir.',
+  heroTitle: 'Soyez payé à temps, facturez sans ressaisir',
   heroLead:
     'L’argent d’un voyage vit avec le voyage. Dans Traviosoft, les paiements et les factures viennent du devis accepté par le client, donc les montants concordent toujours.',
   heroVisual: 'payments',
@@ -213,7 +213,7 @@ const getPaid: JobPage = {
     {
       id: 'schedule',
       kicker: 'Échéancier',
-      title: 'Acompte et solde, prévus dès le départ.',
+      title: 'Acompte et solde, prévus dès le départ',
       lead: 'Fixez l’acompte et le solde avec leurs dates dans le devis. Le client sait dès le premier jour ce qu’il doit payer et quand.',
       visual: 'payments',
       features: [
@@ -225,7 +225,7 @@ const getPaid: JobPage = {
     {
       id: 'links',
       kicker: 'Liens de paiement',
-      title: 'Le client paie depuis l’e-mail.',
+      title: 'Le client paie depuis l’e-mail',
       lead: 'Ajoutez votre lien de paiement à l’e-mail. Le client paie en quelques clics, depuis son téléphone.',
       visual: 'payments',
       features: [
@@ -236,7 +236,7 @@ const getPaid: JobPage = {
     {
       id: 'invoices',
       kicker: 'Factures',
-      title: 'Des factures avec les chiffres déjà saisis.',
+      title: 'Des factures avec les chiffres déjà saisis',
       lead: 'Les factures d’acompte et finale sont faites à partir du voyage. Le prix du devis passe dans la facture : les montants concordent avec le devis au centime près.',
       visual: 'invoices',
       features: [
@@ -251,7 +251,7 @@ const getPaid: JobPage = {
     {
       id: 'dashboard',
       kicker: 'Tableau de bord',
-      title: 'Sachez où en est votre agence.',
+      title: 'Sachez où en est votre agence',
       lead: 'Ventes, voyages, encaissements et décaissements en un coup d’œil, sur la période de votre choix, toujours à jour.',
       visual: 'dashboard',
       features: [
@@ -276,7 +276,7 @@ const setup: JobPage = {
   name: 'Votre configuration',
   menuLine: 'Marques, langues, devises, équipe et données',
   step: '4 sur 4',
-  heroTitle: 'Votre agence, configurée à votre façon.',
+  heroTitle: 'Votre agence, configurée à votre façon',
   heroLead:
     'Les réglages qui adaptent Traviosoft à votre agence : vos marques, vos langues, les règles de votre pays et votre équipe. Réglez-les une fois et chaque voyage les suit.',
   heroVisual: 'brands',
@@ -284,7 +284,7 @@ const setup: JobPage = {
     {
       id: 'brands',
       kicker: 'Marques',
-      title: 'Plusieurs marques, un seul compte.',
+      title: 'Plusieurs marques, un seul compte',
       lead: 'Gérez une deuxième marque ou une deuxième société au même endroit, chacune avec son identité et sa numérotation.',
       visual: 'brands',
       features: [
@@ -295,7 +295,7 @@ const setup: JobPage = {
     {
       id: 'languages',
       kicker: 'Langues',
-      title: 'Chaque document dans la langue de votre client.',
+      title: 'Chaque document dans la langue de votre client',
       lead: 'Rédigez une fois. Devis, e-mails, propositions et programmes partent en espagnol, anglais, français et plus.',
       visual: 'languages',
       features: [
@@ -307,7 +307,7 @@ const setup: JobPage = {
     {
       id: 'currencies',
       kicker: 'Devises',
-      title: 'Achetez et vendez dans toutes les devises.',
+      title: 'Achetez et vendez dans toutes les devises',
       lead: 'Des lodges en dollars, un client en livres, votre comptabilité en euros. Chaque devis a sa devise, et vos chiffres se totalisent dans la vôtre.',
       visual: 'payments',
       features: [
@@ -320,7 +320,7 @@ const setup: JobPage = {
     {
       id: 'country',
       kicker: 'Réglages par pays',
-      title: 'Les règles de votre pays, activées.',
+      title: 'Les règles de votre pays, activées',
       lead: 'Les régimes fiscaux et la facturation électronique dépendent du pays de votre agence. Ce sont des réglages, activés pour les pays qui en ont besoin.',
       visual: 'invoices',
       features: [
@@ -331,7 +331,7 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Équipe',
-      title: 'Votre équipe sur les mêmes voyages.',
+      title: 'Votre équipe sur les mêmes voyages',
       lead: 'Chacun voit le même client, le même devis et la même réservation. Ajoutez un collègue en une minute.',
       visual: 'team',
       features: [
@@ -342,7 +342,7 @@ const setup: JobPage = {
     {
       id: 'data',
       kicker: 'Vos données',
-      title: 'Vos données, protégées et à vous.',
+      title: 'Vos données, protégées et à vous',
       lead: 'Chaque agence a son propre espace séparé, hébergé dans l’Union européenne, à part de toutes les autres agences.',
       visual: 'safe',
       features: [
@@ -354,7 +354,7 @@ const setup: JobPage = {
     {
       id: 'connections',
       kicker: 'Connexions',
-      title: 'Connectez vos autres outils.',
+      title: 'Connectez vos autres outils',
       lead: 'Traviosoft fonctionne avec les outils que vous utilisez déjà, avec les mêmes droits que dans l’application.',
       visual: 'connections',
       features: [

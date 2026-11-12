@@ -6,15 +6,13 @@ export const home: SiteContent['home'] = {
   metaDescription:
     `Requests, quotes with your margins, bookings, client itineraries, payments and invoices in one place. For tailor-made travel agencies and DMCs. From ${PRICES.classic.yearly} EUR a month, hosted in the EU.`,
   kick: 'Send the quote',
-  giant: 'tonight.',
+  giant: 'tonight',
   sub: 'The day the request arrives. Software for tailor-made travel agencies and DMCs.',
   tags: [
-    { t: 'Answer first', s: 'quote sent 11:40' },
     { t: 'Deposit paid ✓', s: 'link in the email' },
-    { t: 'Hotel confirmed', s: 'filed on the trip' },
-    { t: 'Hosted in the EU', s: 'a private space per agency' }
+    { t: 'Hotel confirmed', s: 'filed on the trip' }
   ],
-  tripTitle: 'One trip, from first message to last invoice.',
+  tripTitle: 'One trip, from first message to last invoice',
   steps: [
     { time: '09:12', title: 'Request in', body: 'It lands in one list, with its next step.', job: 'sell' },
     { time: '11:40', title: 'Quote sent', body: 'Built from your rates, margin already in.', job: 'sell' },
@@ -23,7 +21,7 @@ export const home: SiteContent['home'] = {
     { time: 'Day 30', title: 'Final invoice', body: 'Made from the numbers of the quote.', job: 'get-paid' }
   ],
   stepGo: 'See how',
-  baTitle: 'What changes on Monday morning.',
+  baTitle: 'What changes on Monday morning',
   beforeTitle: 'Today',
   beforeScraps: [
     'Rates_2026_FINAL_v3.xlsx',
@@ -36,10 +34,10 @@ export const home: SiteContent['home'] = {
   afterTitle: 'With Traviosoft',
   afterBody:
     'One trip, one place. The request, the quote, the bookings, the payments and the invoices are on the same file, and everyone in the team sees the same thing.',
-  exampleTitle: 'See what your client receives.',
+  exampleTitle: 'See what your client receives',
   exampleBody: 'Open a sample trip, a couple, an incentive group or a safari: the day-by-day itinerary and the quote, as your client sees them. No sign-up.',
   exampleLink: 'Open the example trips',
-  priceTitle: 'Two plans, clear prices.',
+  priceTitle: 'Two plans, clear prices',
   priceBody: `Classic runs the whole agency. Premium adds teams, currencies, purchasing and more. ${PRICES.usersIncluded} users included, billed yearly or monthly, setup free with yearly billing.`,
   coin1: 'EUR/mo · Classic',
   coin2: 'EUR/mo · Premium',

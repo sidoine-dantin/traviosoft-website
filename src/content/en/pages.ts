@@ -5,7 +5,7 @@ export const pricing: SiteContent['pricing'] = {
   metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
     `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds teams, currencies, purchasing, several brands and the assistant. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
-  title: 'Two plans, clear prices.',
+  title: 'Two plans, clear prices',
   lead: 'Classic has everything to run your agency, from the first request to the last invoice. Premium adds what larger teams and international DMCs use every day.',
   yearly: 'Yearly',
   monthly: 'Monthly',
@@ -99,7 +99,7 @@ export const example: SiteContent['example'] = {
   metaTitle: 'Example trips: a couple, a group and a safari | Traviosoft',
   metaDescription:
     'Open three example trips built in Traviosoft, a couple in Andalucía, an incentive group in Porto and a safari in Kenya and Tanzania: the day-by-day itinerary and the quote as the client sees them. Invented data, no sign-up.',
-  title: 'What your client receives.',
+  title: 'What your client receives',
   lead: 'Three sample trips built in Traviosoft. Open the itinerary and the quote, as your client or your partner agency sees them.',
   tabs: { itinerary: 'Itinerary', quote: 'Quote' },
   pick: 'Choose a trip',
@@ -322,7 +322,7 @@ export const demo: SiteContent['demo'] = {
   metaTitle: 'Demo: 30 minutes, on a trip like yours | Traviosoft',
   metaDescription:
     'A 30-minute call on a ready-made trip close to the ones you sell, from request to invoice. You get the price for your team in writing afterwards.',
-  title: '30 minutes, on a trip like yours.',
+  title: '30 minutes, on a trip like yours',
   lead: 'We run a ready-made trip close to the ones you sell through the app, from the first message to the final invoice.',
   agendaTitle: 'How the 30 minutes go',
   agenda: [
@@ -370,7 +370,7 @@ export const switching: SiteContent['switching'] = {
   metaTitle: 'Switching from Excel to Traviosoft | Traviosoft',
   metaDescription:
     'How to move from Excel, Word and WhatsApp in the middle of a season: what we import, what you check, and how to keep running trips while you start new ones.',
-  title: 'From Excel to Traviosoft, season running.',
+  title: 'From Excel to Traviosoft, season running',
   lead: 'You move in steps, and the trips you are running keep going.',
   timelineTitle: 'How it goes',
   timeline: [
@@ -437,7 +437,7 @@ export const faqPage: SiteContent['faqPage'] = {
   metaTitle: 'Frequently asked questions | Traviosoft',
   metaDescription:
     'Straight answers on what Traviosoft does, what it costs, where your data lives and how switching from Excel works. Written for agency owners.',
-  title: 'Questions agencies ask.',
+  title: 'Questions agencies ask',
   lead: 'Short answers. If yours is not here, write to hola@traviosoft.com.',
   groups: [
     {
@@ -527,7 +527,7 @@ export const about: SiteContent['about'] = {
   metaTitle: 'About Traviosoft: born inside a Barcelona agency',
   metaDescription:
     'Traviosoft started inside a tailor-made travel agency in Barcelona that ran on Excel, Word and WhatsApp. Support by email from the people who build the product, data hosted in the EU.',
-  title: 'Built by an agency, for agencies.',
+  title: 'Built by an agency, for agencies',
   lead: 'Traviosoft was born inside a tailor-made travel agency in Barcelona, on real trips, and grew into a complete management system for tailor-made agencies and DMCs.',
   blocks: [
     {

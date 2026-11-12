@@ -6,15 +6,13 @@ export const home: SiteContent['home'] = {
   metaDescription:
     `Solicitudes, presupuestos con tu margen, reservas, itinerarios, cobros y facturas en un solo sitio. Para agencias de viajes a medida y DMC. Desde ${PRICES.classic.yearly} EUR al mes, en la UE.`,
   kick: 'Envía el presupuesto',
-  giant: 'hoy.',
+  giant: 'hoy',
   sub: 'El mismo día que llega la solicitud. Software para agencias de viajes a medida y DMC.',
   tags: [
-    { t: 'Respondes primero', s: 'presupuesto enviado 11:40' },
     { t: 'Señal pagada ✓', s: 'enlace en el email' },
-    { t: 'Hotel confirmado', s: 'archivado en el viaje' },
-    { t: 'Alojado en la UE', s: 'un espacio privado por agencia' }
+    { t: 'Hotel confirmado', s: 'archivado en el viaje' }
   ],
-  tripTitle: 'Un viaje, del primer mensaje a la última factura.',
+  tripTitle: 'Un viaje, del primer mensaje a la última factura',
   steps: [
     { time: '09:12', title: 'Entra la solicitud', body: 'Llega a una única lista, con su siguiente paso.', job: 'sell' },
     { time: '11:40', title: 'Presupuesto enviado', body: 'Hecho con tus tarifas, con el margen ya incluido.', job: 'sell' },
@@ -23,7 +21,7 @@ export const home: SiteContent['home'] = {
     { time: 'Día 30', title: 'Factura final', body: 'Sale de las cifras del presupuesto.', job: 'get-paid' }
   ],
   stepGo: 'Ver cómo',
-  baTitle: 'Lo que cambia el lunes por la mañana.',
+  baTitle: 'Lo que cambia el lunes por la mañana',
   beforeTitle: 'Hoy',
   beforeScraps: [
     'Tarifas_2026_FINAL_v3.xlsx',
@@ -36,10 +34,10 @@ export const home: SiteContent['home'] = {
   afterTitle: 'Con Traviosoft',
   afterBody:
     'Un viaje, un solo sitio. La solicitud, el presupuesto, las reservas, los cobros y las facturas están en el mismo expediente, y todo el equipo ve lo mismo.',
-  exampleTitle: 'Mira lo que recibe tu cliente.',
+  exampleTitle: 'Mira lo que recibe tu cliente',
   exampleBody: 'Abre un viaje de ejemplo, una pareja, un grupo de incentivo o un safari: el itinerario día a día y el presupuesto, tal como los ve tu cliente. Sin registrarte.',
   exampleLink: 'Abrir los viajes de ejemplo',
-  priceTitle: 'Dos planes, precios claros.',
+  priceTitle: 'Dos planes, precios claros',
   priceBody: `Classic lleva toda la agencia. Premium añade equipos, divisas, compras y más. ${PRICES.usersIncluded} usuarios incluidos, pago anual o mensual, puesta en marcha gratis con pago anual.`,
   coin1: 'EUR/mes · Classic',
   coin2: 'EUR/mes · Premium',

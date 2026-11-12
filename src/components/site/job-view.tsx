@@ -14,8 +14,6 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
     <>
       <section className="wrap job-hero">
         <div>
-          <p className="crumb mono"><span>{c.nav.product}</span><span aria-hidden="true">·</span><span>{j.step}</span></p>
-          <p className="lbl" style={{ color: 'var(--orange-ink)', marginBottom: 14 }}>{j.name}</p>
           <h1 className="h1">{j.heroTitle}</h1>
           <p className="lead">{j.heroLead}</p>
         </div>
@@ -32,7 +30,6 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
           <section key={ch.id} id={ch.id} className={`${tone} band chapter-band`}>
             <div className={`wrap chapter${i % 2 ? ' flip' : ''}`}>
               <div className="chapter-copy">
-                <p className="lbl" style={{ color: 'var(--orange-ink)' }}>{ch.kicker}</p>
                 <h2 className="h2" style={{ color: 'var(--green)' }}>{ch.title}</h2>
                 <p className="lead muted">{ch.lead}</p>
                 <div className="feat-list">
@@ -65,7 +62,7 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
         <div className="wrap">
           <Link href={`/${next}`} className="next-job">
             <span>
-              <span className="lbl" style={{ opacity: 0.75 }}>{c.common.next} · {nj.step}</span>
+              <span className="lbl" style={{ opacity: 0.75 }}>{c.common.next}</span>
               <span className="h2" style={{ display: 'block', marginTop: 10 }}>{nj.name}</span>
               <span style={{ display: 'block', marginTop: 8, opacity: 0.85 }}>{nj.menuLine}</span>
             </span>

@@ -8,7 +8,7 @@ const sell: JobPage = {
   name: 'Vender',
   menuLine: 'De la primera solicitud al presupuesto aceptado',
   step: '1 de 4',
-  heroTitle: 'Responde primero, con el precio correcto.',
+  heroTitle: 'Responde primero, con el precio correcto',
   heroLead:
     'Los clientes suelen reservar con la agencia que responde primero con un presupuesto claro y correcto. Traviosoft tiene todas las solicitudes a la vista y construye el presupuesto con tus propias tarifas, para que puedas enviarlo el mismo día.',
   heroVisual: 'quote',
@@ -16,7 +16,7 @@ const sell: JobPage = {
     {
       id: 'requests',
       kicker: 'Solicitudes',
-      title: 'Cada solicitud, a mano.',
+      title: 'Cada solicitud, a mano',
       lead: 'Cada consulta en una lista con su siguiente paso, tanto si llegó por email, por teléfono o por WhatsApp.',
       visual: 'requests',
       features: [
@@ -30,7 +30,7 @@ const sell: JobPage = {
     {
       id: 'catalogue',
       kicker: 'Catálogo',
-      title: 'Tus tarifas, listas para presupuestar.',
+      title: 'Tus tarifas, listas para presupuestar',
       lead: 'Hoteles, traslados, guías y actividades, cada uno con sus precios por fecha. El precio correcto para las fechas del viaje se elige solo.',
       visual: 'catalogue',
       features: [
@@ -44,7 +44,7 @@ const sell: JobPage = {
     {
       id: 'quotes',
       kicker: 'Presupuestos',
-      title: 'Un presupuesto en minutos, con el margen incluido.',
+      title: 'Un presupuesto en minutos, con el margen incluido',
       lead: 'Define tus reglas de precio una vez. Cada línea de cada presupuesto las sigue, así que cada margen y cada comisión están en el precio.',
       visual: 'quote',
       features: [
@@ -59,7 +59,7 @@ const sell: JobPage = {
     {
       id: 'send',
       kicker: 'Envío y seguimiento',
-      title: 'Enviado esta noche. Seguimiento la semana que viene.',
+      title: 'Enviado esta noche, seguimiento la semana que viene',
       lead: 'Envía el presupuesto por email en el idioma del cliente. Una semana después, Traviosoft te lo devuelve para hacer el seguimiento.',
       visual: 'followup',
       features: [
@@ -71,7 +71,7 @@ const sell: JobPage = {
     {
       id: 'proposal',
       kicker: 'Propuesta',
-      title: 'Una propuesta que da gusto abrir.',
+      title: 'Una propuesta que da gusto abrir',
       lead: 'Tu cliente recibe un enlace a una página clara con el viaje, en su idioma y con tu marca.',
       visual: 'proposal',
       features: [
@@ -83,7 +83,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agencias colaboradoras',
-      title: 'Vende a través de agencias colaboradoras.',
+      title: 'Vende a través de agencias colaboradoras',
       lead: 'La mayoría de los viajes de un DMC llegan de agencias del extranjero. Presupuesta a la agencia, conserva a su cliente en el mismo viaje y liquida su comisión con las mismas cifras.',
       visual: 'quote',
       features: [
@@ -110,7 +110,7 @@ const book: JobPage = {
   name: 'Reservar y operar',
   menuLine: 'Del presupuesto aceptado al viaje realizado',
   step: '2 de 4',
-  heroTitle: 'Cada reserva confirmada, también en temporada alta.',
+  heroTitle: 'Cada reserva confirmada, también en temporada alta',
   heroLead:
     'Cuando el cliente dice que sí, hay que reservar cada servicio, confirmarlo y enviarlo a las personas adecuadas. Traviosoft mantiene la lista de cada viaje, así todo el equipo trabaja con la misma.',
   heroVisual: 'order',
@@ -118,7 +118,7 @@ const book: JobPage = {
     {
       id: 'order',
       kicker: 'Reserva',
-      title: 'La señal abre la reserva.',
+      title: 'La señal abre la reserva',
       lead: 'Registra el primer pago y el presupuesto queda aceptado: se crea la reserva con todos los servicios ya dentro.',
       visual: 'order',
       features: [
@@ -130,7 +130,7 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Estados',
-      title: 'Ve lo que queda por hacer.',
+      title: 'Ve lo que queda por hacer',
       lead: 'Las etiquetas de reserva, viaje y pago se actualizan solas. Sabes de un vistazo qué viajes te necesitan hoy.',
       visual: 'order',
       features: [
@@ -142,7 +142,7 @@ const book: JobPage = {
     {
       id: 'suppliers',
       kicker: 'Proveedores',
-      title: 'Los proveedores en un solo sitio.',
+      title: 'Los proveedores en un solo sitio',
       lead: 'Contactos, documentos y todos los emails intercambiados, archivados en el viaje correcto y a mano cuando llama el cliente.',
       visual: 'suppliers',
       features: [
@@ -155,7 +155,7 @@ const book: JobPage = {
     {
       id: 'itinerary',
       kicker: 'Itinerario del cliente',
-      title: 'Un viaje día a día en su móvil.',
+      title: 'Un viaje día a día en su móvil',
       lead: 'Cuando el viaje está confirmado, comparte una página con cada día, los hoteles, los horarios y los contactos. Tu viajero la abre desde cualquier sitio.',
       visual: 'itinerary',
       features: [
@@ -167,7 +167,7 @@ const book: JobPage = {
     {
       id: 'groups',
       kicker: 'Grupos',
-      title: 'Grupos y rooming lists.',
+      title: 'Grupos y rooming lists',
       lead: 'Incentivos, asociaciones, viajes escolares: cada viajero con su nombre, cada habitación prevista, cada hotel sabe quién duerme dónde.',
       visual: 'order',
       features: [
@@ -180,7 +180,7 @@ const book: JobPage = {
     {
       id: 'calendar',
       kicker: 'Calendario',
-      title: 'Quién viaja esta semana.',
+      title: 'Quién viaja esta semana',
       lead: 'Cada viaje es una banda en el calendario. En el móvil, los servicios del día en una lista sencilla.',
       visual: 'calendar',
       features: [
@@ -205,7 +205,7 @@ const getPaid: JobPage = {
   name: 'Cobrar',
   menuLine: 'Cobros, facturas y tus cifras',
   step: '3 de 4',
-  heroTitle: 'Cobra a tiempo, factura sin reescribir.',
+  heroTitle: 'Cobra a tiempo, factura sin reescribir',
   heroLead:
     'La parte del dinero de un viaje vive con el viaje. En Traviosoft, los cobros y las facturas salen del presupuesto que aceptó el cliente, así que los importes siempre cuadran.',
   heroVisual: 'payments',
@@ -213,7 +213,7 @@ const getPaid: JobPage = {
     {
       id: 'schedule',
       kicker: 'Calendario de pagos',
-      title: 'Señal y liquidación, previstas desde el principio.',
+      title: 'Señal y liquidación, previstas desde el principio',
       lead: 'Fija la señal y la liquidación con sus fechas en el presupuesto. El cliente sabe desde el primer día qué paga y cuándo.',
       visual: 'payments',
       features: [
@@ -225,7 +225,7 @@ const getPaid: JobPage = {
     {
       id: 'links',
       kicker: 'Enlaces de pago',
-      title: 'El cliente paga desde el email.',
+      title: 'El cliente paga desde el email',
       lead: 'Añade tu enlace de pago al email. El cliente paga en pocos clics, desde su móvil.',
       visual: 'payments',
       features: [
@@ -236,7 +236,7 @@ const getPaid: JobPage = {
     {
       id: 'invoices',
       kicker: 'Facturas',
-      title: 'Facturas con las cifras que ya escribiste.',
+      title: 'Facturas con las cifras que ya escribiste',
       lead: 'Las facturas de señal y final se hacen desde el viaje. El precio presupuestado pasa a la factura, así que los importes cuadran con el presupuesto al céntimo.',
       visual: 'invoices',
       features: [
@@ -251,7 +251,7 @@ const getPaid: JobPage = {
     {
       id: 'dashboard',
       kicker: 'Panel',
-      title: 'Sabe cómo va tu agencia.',
+      title: 'Sabe cómo va tu agencia',
       lead: 'Ventas, viajes, cobros y pagos de un vistazo, para el periodo que elijas, siempre al día.',
       visual: 'dashboard',
       features: [
@@ -276,7 +276,7 @@ const setup: JobPage = {
   name: 'Tu configuración',
   menuLine: 'Marcas, idiomas, monedas, equipo y datos',
   step: '4 de 4',
-  heroTitle: 'Tu agencia, configurada a tu manera.',
+  heroTitle: 'Tu agencia, configurada a tu manera',
   heroLead:
     'Los ajustes que hacen que Traviosoft encaje con tu agencia: tus marcas, tus idiomas, las normas de tu país y tu equipo. Se configuran una vez y todos los viajes los siguen.',
   heroVisual: 'brands',
@@ -284,7 +284,7 @@ const setup: JobPage = {
     {
       id: 'brands',
       kicker: 'Marcas',
-      title: 'Varias marcas, una cuenta.',
+      title: 'Varias marcas, una cuenta',
       lead: 'Gestiona una segunda marca o una segunda empresa desde el mismo sitio, cada una con su imagen y su numeración.',
       visual: 'brands',
       features: [
@@ -295,7 +295,7 @@ const setup: JobPage = {
     {
       id: 'languages',
       kicker: 'Idiomas',
-      title: 'Cada documento en el idioma de tu cliente.',
+      title: 'Cada documento en el idioma de tu cliente',
       lead: 'Escribe una vez. Presupuestos, emails, propuestas e itinerarios salen en español, inglés, francés y más.',
       visual: 'languages',
       features: [
@@ -307,7 +307,7 @@ const setup: JobPage = {
     {
       id: 'currencies',
       kicker: 'Monedas',
-      title: 'Compra y vende en cualquier moneda.',
+      title: 'Compra y vende en cualquier moneda',
       lead: 'Lodges en dólares, un cliente en libras, tu contabilidad en euros. Cada presupuesto tiene su moneda y tus cifras cuadran en la tuya.',
       visual: 'payments',
       features: [
@@ -320,7 +320,7 @@ const setup: JobPage = {
     {
       id: 'country',
       kicker: 'Ajustes por país',
-      title: 'Las normas de tu país, activadas.',
+      title: 'Las normas de tu país, activadas',
       lead: 'Los regímenes fiscales y la facturación electrónica dependen de dónde esté tu agencia. Son ajustes, que se activan en los países que los necesitan.',
       visual: 'invoices',
       features: [
@@ -331,7 +331,7 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Equipo',
-      title: 'Tu equipo en los mismos viajes.',
+      title: 'Tu equipo en los mismos viajes',
       lead: 'Todos ven el mismo cliente, presupuesto y reserva. Añade a un compañero en un minuto.',
       visual: 'team',
       features: [
@@ -342,7 +342,7 @@ const setup: JobPage = {
     {
       id: 'data',
       kicker: 'Tus datos',
-      title: 'Tus datos, seguros y tuyos.',
+      title: 'Tus datos, seguros y tuyos',
       lead: 'Cada agencia tiene su propio espacio separado, alojado en la Unión Europea, aparte de todas las demás agencias.',
       visual: 'safe',
       features: [
@@ -354,7 +354,7 @@ const setup: JobPage = {
     {
       id: 'connections',
       kicker: 'Conexiones',
-      title: 'Conecta tus otras herramientas.',
+      title: 'Conecta tus otras herramientas',
       lead: 'Traviosoft trabaja con las herramientas que ya usas, con los mismos permisos que en la aplicación.',
       visual: 'connections',
       features: [

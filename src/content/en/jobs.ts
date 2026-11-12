@@ -8,7 +8,7 @@ const sell: JobPage = {
   name: 'Sell',
   menuLine: 'From the first request to the accepted quote',
   step: '1 of 4',
-  heroTitle: 'Answer first, with the right price.',
+  heroTitle: 'Answer first, with the right price',
   heroLead:
     'Clients often book with the agency that answers first with a clear, correct quote. Traviosoft keeps every request in view and builds the quote from your own rates, so you can send it the same day.',
   heroVisual: 'quote',
@@ -16,7 +16,7 @@ const sell: JobPage = {
     {
       id: 'requests',
       kicker: 'Requests',
-      title: 'Every request in hand.',
+      title: 'Every request in hand',
       lead: 'Every enquiry in one list with its next step, whether it came by email, phone or WhatsApp.',
       visual: 'requests',
       features: [
@@ -30,7 +30,7 @@ const sell: JobPage = {
     {
       id: 'catalogue',
       kicker: 'Catalogue',
-      title: 'Your rates, ready to quote.',
+      title: 'Your rates, ready to quote',
       lead: 'Hotels, transfers, guides and activities, each with its prices by date. The right price for the travel dates is picked for you.',
       visual: 'catalogue',
       features: [
@@ -44,7 +44,7 @@ const sell: JobPage = {
     {
       id: 'quotes',
       kicker: 'Quotes',
-      title: 'A quote in minutes, margin included.',
+      title: 'A quote in minutes, margin included',
       lead: 'Set your pricing rules once. Every line of every quote follows them, so every margin and commission is in the price.',
       visual: 'quote',
       features: [
@@ -59,7 +59,7 @@ const sell: JobPage = {
     {
       id: 'send',
       kicker: 'Send and follow up',
-      title: 'Sent tonight. Followed up next week.',
+      title: 'Sent tonight, followed up next week',
       lead: 'Send the quote by email in the client’s language. A week later, Traviosoft brings it back to you for a follow-up.',
       visual: 'followup',
       features: [
@@ -71,7 +71,7 @@ const sell: JobPage = {
     {
       id: 'proposal',
       kicker: 'Proposal',
-      title: 'A proposal your client enjoys opening.',
+      title: 'A proposal your client enjoys opening',
       lead: 'Your client gets a link to a clear page with the trip, in their language and with your brand.',
       visual: 'proposal',
       features: [
@@ -83,7 +83,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Partner agencies',
-      title: 'Sell through partner agencies.',
+      title: 'Sell through partner agencies',
       lead: 'Most DMC trips come from agencies abroad. Quote the partner, keep their client on the same trip, and settle their commission from the same numbers.',
       visual: 'quote',
       features: [
@@ -110,7 +110,7 @@ const book: JobPage = {
   name: 'Book and run',
   menuLine: 'From the accepted quote to the trip done',
   step: '2 of 4',
-  heroTitle: 'Every booking confirmed, even in high season.',
+  heroTitle: 'Every booking confirmed, even in high season',
   heroLead:
     'Once the client says yes, every service has to be booked, confirmed and sent to the right people. Traviosoft keeps the list for each trip, so the whole team works from the same one.',
   heroVisual: 'order',
@@ -118,7 +118,7 @@ const book: JobPage = {
     {
       id: 'order',
       kicker: 'Order',
-      title: 'The deposit opens the order.',
+      title: 'The deposit opens the order',
       lead: 'Record the first payment and the quote is accepted: the order is created with every service already on it.',
       visual: 'order',
       features: [
@@ -130,7 +130,7 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Statuses',
-      title: 'See what is left to do.',
+      title: 'See what is left to do',
       lead: 'Booking, trip and payment badges update themselves. You know at a glance which trips need you today.',
       visual: 'order',
       features: [
@@ -142,7 +142,7 @@ const book: JobPage = {
     {
       id: 'suppliers',
       kicker: 'Suppliers',
-      title: 'Suppliers in one place.',
+      title: 'Suppliers in one place',
       lead: 'Contacts, documents and every email exchanged, filed on the right trip and at hand when the client calls.',
       visual: 'suppliers',
       features: [
@@ -155,7 +155,7 @@ const book: JobPage = {
     {
       id: 'itinerary',
       kicker: 'Client itinerary',
-      title: 'A day-by-day trip on their phone.',
+      title: 'A day-by-day trip on their phone',
       lead: 'Once the trip is confirmed, share a page with each day, the hotels, the times and the contacts. Your traveller opens it anywhere.',
       visual: 'itinerary',
       features: [
@@ -167,7 +167,7 @@ const book: JobPage = {
     {
       id: 'groups',
       kicker: 'Groups',
-      title: 'Groups and rooming lists.',
+      title: 'Groups and rooming lists',
       lead: 'Incentives, associations, school trips: every traveller named, every room planned, every hotel told who sleeps where.',
       visual: 'order',
       features: [
@@ -180,7 +180,7 @@ const book: JobPage = {
     {
       id: 'calendar',
       kicker: 'Calendar',
-      title: 'Who travels this week.',
+      title: 'Who travels this week',
       lead: 'Every trip is a band on the calendar. On your phone, the day’s services as a simple list.',
       visual: 'calendar',
       features: [
@@ -205,7 +205,7 @@ const getPaid: JobPage = {
   name: 'Get paid',
   menuLine: 'Payments, invoices and your numbers',
   step: '3 of 4',
-  heroTitle: 'Get paid on time, invoice without retyping.',
+  heroTitle: 'Get paid on time, invoice without retyping',
   heroLead:
     'The money side of a trip lives with the trip. In Traviosoft, payments and invoices come from the quote the client accepted, so the amounts always match.',
   heroVisual: 'payments',
@@ -213,7 +213,7 @@ const getPaid: JobPage = {
     {
       id: 'schedule',
       kicker: 'Payment schedule',
-      title: 'Deposit and balance, planned from the start.',
+      title: 'Deposit and balance, planned from the start',
       lead: 'Set the deposit and the balance with their dates on the quote. The client knows from day one what to pay and when.',
       visual: 'payments',
       features: [
@@ -225,7 +225,7 @@ const getPaid: JobPage = {
     {
       id: 'links',
       kicker: 'Payment links',
-      title: 'The client pays from the email.',
+      title: 'The client pays from the email',
       lead: 'Add your payment link to the email. The client pays in a few clicks, from their phone.',
       visual: 'payments',
       features: [
@@ -236,7 +236,7 @@ const getPaid: JobPage = {
     {
       id: 'invoices',
       kicker: 'Invoices',
-      title: 'Invoices from the numbers you already typed.',
+      title: 'Invoices from the numbers you already typed',
       lead: 'Deposit and final invoices are made from the trip. The quoted price flows into the invoice, so the amounts match the quote to the cent.',
       visual: 'invoices',
       features: [
@@ -251,7 +251,7 @@ const getPaid: JobPage = {
     {
       id: 'dashboard',
       kicker: 'Dashboard',
-      title: 'Know where your agency stands.',
+      title: 'Know where your agency stands',
       lead: 'Sales, trips, money in and money out in one look, for the period you choose, always up to date.',
       visual: 'dashboard',
       features: [
@@ -276,7 +276,7 @@ const setup: JobPage = {
   name: 'Your setup',
   menuLine: 'Brands, languages, currencies, team and data',
   step: '4 of 4',
-  heroTitle: 'Your agency, set up your way.',
+  heroTitle: 'Your agency, set up your way',
   heroLead:
     'The settings that make Traviosoft fit your agency: your brands, your languages, your country’s rules and your team. Set them once and every trip follows.',
   heroVisual: 'brands',
@@ -284,7 +284,7 @@ const setup: JobPage = {
     {
       id: 'brands',
       kicker: 'Brands',
-      title: 'Several brands, one account.',
+      title: 'Several brands, one account',
       lead: 'Run a second brand or a second company from the same place, each with its own look and its own numbering.',
       visual: 'brands',
       features: [
@@ -295,7 +295,7 @@ const setup: JobPage = {
     {
       id: 'languages',
       kicker: 'Languages',
-      title: 'Every document in your client’s language.',
+      title: 'Every document in your client’s language',
       lead: 'Write once. Quotes, emails, proposals and itineraries go out in Spanish, English, French and more.',
       visual: 'languages',
       features: [
@@ -307,7 +307,7 @@ const setup: JobPage = {
     {
       id: 'currencies',
       kicker: 'Currencies',
-      title: 'Buy and sell in any currency.',
+      title: 'Buy and sell in any currency',
       lead: 'Lodges in dollars, a client in pounds, your books in euros. Each quote has its own currency, and your numbers add up in yours.',
       visual: 'payments',
       features: [
@@ -320,7 +320,7 @@ const setup: JobPage = {
     {
       id: 'country',
       kicker: 'Country settings',
-      title: 'Your country’s rules, switched on.',
+      title: 'Your country’s rules, switched on',
       lead: 'Tax schemes and e-invoicing depend on where your agency is. They are settings, switched on for the countries that need them.',
       visual: 'invoices',
       features: [
@@ -331,7 +331,7 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Team',
-      title: 'Your team on the same trips.',
+      title: 'Your team on the same trips',
       lead: 'Everyone sees the same client, quote and booking. Add a colleague in a minute.',
       visual: 'team',
       features: [
@@ -342,7 +342,7 @@ const setup: JobPage = {
     {
       id: 'data',
       kicker: 'Your data',
-      title: 'Your data, safe and yours.',
+      title: 'Your data, safe and yours',
       lead: 'Each agency has its own separate space, hosted in the European Union, kept apart from every other agency.',
       visual: 'safe',
       features: [
@@ -354,7 +354,7 @@ const setup: JobPage = {
     {
       id: 'connections',
       kicker: 'Connections',
-      title: 'Connect your other tools.',
+      title: 'Connect your other tools',
       lead: 'Traviosoft works with the tools you already use, with the same rights as in the app.',
       visual: 'connections',
       features: [
