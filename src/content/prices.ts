@@ -5,7 +5,7 @@
  */
 export const PRICES = {
   classic: { yearly: 290, monthly: 350 },
-  premium: { yearly: 490, monthly: 590 },
+  premium: { yearly: 390, monthly: 470 },
   usersIncluded: 3,
   extraUser: { yearly: 60, monthly: 70 },
   /** one-off setup and import fee with monthly billing (free with yearly) */
