@@ -18,9 +18,9 @@ import { Mark } from './logo';
 const LINKEDIN_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '10081602';
 const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID || '32264978'; // "Demo click"
 const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '999533615909262';
-// Google Ads tag ("AW-..." ID) and the conversion label of its "Demo click" action.
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
-const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '';
+// Google Ads tag (account 919-449-5984) and the conversion label of its "Demo click" action.
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18573914748';
+const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '2FpoCKbfgrgdEPzk3ZhF'; // "Demo click"
 const ENABLED = Boolean(LINKEDIN_ID || META_ID || GOOGLE_ADS_ID);
 
 const KEY = 'tv-consent';
@@ -120,7 +120,6 @@ function loadTags() {
     w.dataLayer = w.dataLayer ?? [];
     // gtag needs the real `arguments` object, not an array.
     w.gtag = function gtag() {
-      // eslint-disable-next-line prefer-rest-params
       w.dataLayer!.push(arguments);
     };
     // The tag only ever runs after the visitor accepted, so advertising consent is granted; no analytics.
