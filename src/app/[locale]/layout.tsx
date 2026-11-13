@@ -8,6 +8,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { JsonLd } from '@/components/site/json-ld';
 import { Consent } from '@/components/site/consent';
+import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
 import { baseUrl, siteName } from '@/lib/seo';
@@ -127,6 +128,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header locale={c.locale} labels={c.nav} jobs={jobs} />
           <main id="main">{children}</main>
           <Footer c={c} />
+          <ScrollTop />
           <Consent text={c.footer.consent.text} accept={c.footer.consent.accept} refuse={c.footer.consent.refuse} policy={c.footer.consent.policy} />
         </NextIntlClientProvider>
       </body>
