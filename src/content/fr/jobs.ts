@@ -106,25 +106,25 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Réserver et suivre le voyage | Traviosoft',
   metaDescription:
-    'Le premier paiement crée le dossier. Les statuts se mettent à jour seuls, les e-mails des prestataires sont classés et le client reçoit son programme.',
+    'Le premier paiement confirme le voyage. Les statuts se mettent à jour seuls, les e-mails des prestataires sont classés et le client reçoit son programme.',
   name: 'Réserver et suivre',
   menuLine: 'Du devis accepté au voyage terminé',
   step: '2 sur 4',
-  heroTitle: 'Dossiers, réservations et programme client',
+  heroTitle: 'Voyages confirmés, réservations et programme client',
   heroLead:
-    'Quand le client paie l’acompte, le devis devient un dossier avec toutes les prestations à réserver. Chaque voyage a sa liste de réservations, les e-mails de ses prestataires et une page de programme pour le voyageur.',
+    'Quand le client paie l’acompte, le voyage est confirmé avec toutes les prestations à réserver. Chaque voyage a sa liste de réservations, les e-mails de ses prestataires et une page de programme pour le voyageur.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
-      kicker: 'Dossier',
-      title: 'L’acompte crée le dossier',
-      lead: 'Enregistrez le premier paiement et le devis est accepté : le dossier est créé avec toutes les prestations déjà dedans.',
+      kicker: 'Voyage confirmé',
+      title: 'L’acompte confirme le voyage',
+      lead: 'Enregistrez le premier paiement et le devis est accepté : le voyage confirmé est créé avec toutes les prestations déjà dedans.',
       visual: 'order',
       features: [
-        { title: 'Une seule étape', body: ['Le premier paiement accepte le devis, crée le dossier et liste toutes les prestations à réserver, en une fois.'] },
+        { title: 'Une seule étape', body: ['Le premier paiement accepte le devis, confirme le voyage et liste toutes les prestations à réserver, en une fois.'] },
         { title: 'Tout vient du devis', body: ['Voyageurs, dates, prestations et prix viennent du devis accepté, tels que le client les a vus.'] },
-        { title: 'Changements après confirmation', body: ['Le client ajoute une nuit ? Mettez le voyage à jour et le dossier suit, pour que l’équipe travaille toujours sur la dernière version.'] }
+        { title: 'Changements après confirmation', body: ['Le client ajoute une nuit ? Mettez le devis à jour et le voyage confirmé suit, pour que l’équipe travaille toujours sur la dernière version.'] }
       ]
     },
     {

@@ -23,7 +23,7 @@ export const pricing: SiteContent['pricing'] = {
         { text: 'Catalogue avec prix par saison' },
         { text: 'Agences partenaires et relevés de commission' },
         { text: 'Page de proposition et programme jour par jour, avec votre logo et vos couleurs' },
-        { text: 'Dossiers et réservations, avec les e-mails des prestataires classés sur le voyage' },
+        { text: 'Voyages confirmés et réservations, avec les e-mails des prestataires classés sur le voyage' },
         { text: 'Fiches de service' },
         { text: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists' },
         { text: 'Échéanciers, liens de paiement et rappels' },
@@ -329,7 +329,7 @@ export const demo: SiteContent['demo'] = {
   agendaTitle: 'L’appel',
   agenda: [
     { mins: '5', title: 'Votre agence', body: 'Taille de l’équipe, ce que vous vendez et les outils que vous utilisez aujourd’hui.' },
-    { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, le dossier, le programme, le paiement et la facture. Un voyage en couple, un groupe incentive ou un safari.' },
+    { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, les réservations, le programme, le paiement et la facture. Un voyage en couple, un groupe incentive ou un safari.' },
     { mins: '10', title: 'Tarifs et questions', body: 'L’offre pour votre équipe, l’import de vos données et vos questions.' }
   ],
   bringTitle: 'Qui inviter',

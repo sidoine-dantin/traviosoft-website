@@ -76,7 +76,7 @@ export const visuals: SiteContent['visuals'] = {
   followup: 'Relance',
   followupLine: 'Sans réponse après 7 jours',
   followupSent: 'Relance envoyée',
-  order: 'Dossier · Andalucía, 8 jours',
+  order: 'Voyage confirmé · Andalucía, 8 jours',
   booking: 'Réservation',
   trip2: 'Voyage',
   payment: 'Paiement',
