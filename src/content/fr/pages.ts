@@ -560,7 +560,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'Ce sur quoi vous pouvez compter',
       body: [
-        'Traviosoft fait tourner de vrais voyages chaque jour, et nous ne montrons que les logos et avis que nous pouvons défendre.',
+        'Traviosoft fait tourner de vrais voyages chaque jour, et nous ne montrons que les noms de clients que nous pouvons défendre.',
         'Vous avez un système de gestion complet et une équipe qui répond à ses emails.'
       ]
     }

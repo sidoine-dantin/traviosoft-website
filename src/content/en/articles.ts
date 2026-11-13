@@ -106,7 +106,7 @@ const compares: Cmp[] = [
     lead: 'Ezus is a well-established French software for DMCs, with many customers, public prices and support in five languages. Traviosoft shows one price with users included and adds REAV and Veri*Factu for agencies in Spain.',
     card: 'Two tools with public prices: who each is for and what each includes.',
     basis:
-      'Ezus details come from its website and public directories, checked on 3 November 2026. Prices change, so always check both current pricing pages. Ezus customer numbers and review scores are the ones it publishes.',
+      'Ezus details come from its website and public directories, checked on 3 November 2026. Prices change, so always check both current pricing pages. Ezus customer numbers are the ones it publishes.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'DMCs, inbound agencies, tour operators and agencies; FIT, groups and MICE'],
       ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Paris, founded in 2019'],
@@ -116,7 +116,7 @@ const compares: Cmp[] = [
       ['Data hosting', 'EU, a separate space per agency', 'AWS Ireland, according to its site']
     ],
     otherBetter: [
-      'You want a product with more years on the market and many public references: Ezus says it serves more than 600 agencies in more than 70 countries, with high scores on Capterra and G2.',
+      'You want a product with more years on the market and many public references: Ezus says it serves more than 600 agencies in more than 70 countries.',
       'You need support and documentation in Italian or Portuguese.',
       'You value a guided rollout, with an onboarding specialist for several months.',
       'You need an Enterprise plan: Ezus offers one from 30 users.',
@@ -263,7 +263,7 @@ const compares: Cmp[] = [
     lead: 'Tourwriter is New Zealand software known for polished itineraries, built for luxury DMCs and travel designers working in English. Traviosoft prices in euros with users included, works in Spanish and French, and includes REAV and Veri*Factu.',
     card: 'Polished luxury itineraries in English and a euro-priced tool in Spanish and French.',
     basis:
-      'Tourwriter details come from its site (plans and company pages) and from Capterra, checked on 3 November 2026. Its prices are "from" prices in US dollars, per user, with a quote for each team, so the real total can differ.',
+      'Tourwriter details come from its site (plans and company pages), checked on 3 November 2026. Its prices are "from" prices in US dollars, per user, with a quote for each team, so the real total can differ.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Luxury DMCs and travel designers, multi-day FIT trips'],
       ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Wellington (New Zealand), founded in 2004'],
@@ -273,7 +273,7 @@ const compares: Cmp[] = [
     ],
     otherBetter: [
       'You sell luxury trips in English and want carefully designed itineraries.',
-      'You value that other European DMCs already use it and that it has strong user reviews (Capterra 4.5 from 42).',
+      'You value that other European DMCs already use it.',
       'You want a guided rollout with training included in the setup fee.',
       'Your main market is English-speaking.'
     ],
@@ -319,7 +319,7 @@ const best: Article = {
       rows: [
         ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', `Two plans, ${PRICES.usersIncluded} users included`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Documents in ES, EN, FR and more', 'See the About page'],
         ['Ezus', 'DMCs, inbound agencies, tour operators and agencies', 'Professional up to 10 users; Enterprise from 30', '75 EUR per user a month (Professional); onboarding pack 1,990 EUR', 'Site and support in EN, FR, ES, IT, PT', '2019, Paris'],
-        ['Tourplan', 'Established tour operators and DMCs', 'From 5 users, per Capterra', 'On request; Capterra lists from 250 USD per user a month', 'Site in English, Spanish and Japanese', '1986, New Zealand'],
+        ['Tourplan', 'Established tour operators and DMCs', 'On request', 'On request', 'Site in English, Spanish and Japanese', '1986, New Zealand'],
         ['Tourwriter', 'Luxury DMCs and travel designers', '1 to 20+ people depending on plan', 'From 99 USD per user a month; setup from 1,199 USD', 'English', '2004, New Zealand'],
         ['Lemax', 'Mid-size and large tour operators and DMCs', 'Lemax GO from 15 users', 'On request', 'English', '1990, Croatia'],
         ['Kaptio', 'Large multi-day travel operators', 'Large operators', 'On request', 'English', '2012, Iceland'],
@@ -336,17 +336,17 @@ const best: Article = {
     { type: 'h3', text: 'Ezus' },
     {
       type: 'p',
-      text: 'A complete DMC software with public prices, a site and support in five languages and many references (Capterra 4.7 from 61 reviews, as shown on its site). Its onboarding pack of 1,990 EUR includes a guided rollout.'
+      text: 'A complete DMC software with public prices, a site and support in five languages and many references: more than 600 agencies in more than 70 countries, according to its site. Its onboarding pack of 1,990 EUR includes a guided rollout.'
     },
     { type: 'h3', text: 'Tourplan' },
     {
       type: 'p',
-      text: 'Software with about 40 years of history for established tour operators and DMCs, with clients in about 75 countries according to its site. Prices are on request; Capterra lists plans from 5 users at 250 USD per user a month.'
+      text: 'Software with about 40 years of history for established tour operators and DMCs, with clients in about 75 countries according to its site. Prices and plans are presented on request.'
     },
     { type: 'h3', text: 'Tourwriter' },
     {
       type: 'p',
-      text: 'Known for polished luxury itineraries, with strong user reviews (Capterra 4.5 from 42). Plans are priced per user, with a setup fee that covers migration and training.'
+      text: 'Known for polished luxury itineraries, used by DMCs and travel designers in many countries. Plans are priced per user, with a setup fee that covers migration and training.'
     },
     { type: 'h3', text: 'Lemax' },
     {

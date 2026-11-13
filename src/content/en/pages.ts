@@ -560,7 +560,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'What you can rely on',
       body: [
-        'Traviosoft runs real trips every day, and we show only the logos and reviews we can stand behind.',
+        'Traviosoft runs real trips every day, and we show only the client names we can stand behind.',
         'You get a complete management system and a team that answers its email.'
       ]
     }

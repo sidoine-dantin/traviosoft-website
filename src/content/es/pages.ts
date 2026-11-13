@@ -560,7 +560,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'En qué puedes confiar',
       body: [
-        'Traviosoft lleva viajes reales cada día, y solo mostramos los logotipos y opiniones que podemos respaldar.',
+        'Traviosoft lleva viajes reales cada día, y solo mostramos los nombres de clientes que podemos respaldar.',
         'Tienes un sistema de gestión completo y un equipo que contesta a su correo.'
       ]
     }

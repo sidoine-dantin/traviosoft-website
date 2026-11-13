@@ -106,7 +106,7 @@ const compares: Cmp[] = [
     lead: 'Ezus es un software francés para DMC muy consolidado, con muchos clientes, precios públicos y soporte en cinco idiomas. Traviosoft muestra un precio con usuarios incluidos y añade REAV y Veri*Factu para agencias en España.',
     card: 'Dos programas con precios públicos: para quién es cada uno y qué incluye.',
     basis:
-      'Los datos de Ezus vienen de su sitio web y de directorios públicos, revisados el 3 de noviembre de 2026. Los precios cambian: comprueba siempre las páginas de precios actuales de ambos. Las cifras de clientes y reseñas de Ezus son las que ellos publican.',
+      'Los datos de Ezus vienen de su sitio web y de directorios públicos, revisados el 3 de noviembre de 2026. Los precios cambian: comprueba siempre las páginas de precios actuales de ambos. Las cifras de clientes de Ezus son las que ellos publican.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC, receptivos, turoperadores y agencias; FIT, grupos y MICE'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'París, fundada en 2019'],
@@ -116,7 +116,7 @@ const compares: Cmp[] = [
       ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'AWS Irlanda, según su web']
     ],
     otherBetter: [
-      'Quieres un producto con más años en el mercado y muchas referencias públicas: Ezus dice tener más de 600 agencias en más de 70 países, con notas altas en Capterra y G2.',
+      'Quieres un producto con más años en el mercado y muchas referencias públicas: Ezus dice tener más de 600 agencias en más de 70 países.',
       'Necesitas soporte y documentación en italiano o portugués.',
       'Valoras una implantación guiada, con especialista asignado durante varios meses.',
       'Necesitas un plan Enterprise: Ezus lo ofrece desde 30 usuarios.',
@@ -263,7 +263,7 @@ const compares: Cmp[] = [
     lead: 'Tourwriter es un software neozelandés conocido por sus itinerarios muy cuidados, pensado para DMC y diseñadores de viajes de lujo que trabajan en inglés. Traviosoft tiene precios en euros con usuarios incluidos, trabaja en español y francés, e incluye REAV y Veri*Factu.',
     card: 'Itinerarios de lujo muy cuidados en inglés y un programa en euros, en español y francés.',
     basis:
-      'Los datos de Tourwriter vienen de su web (páginas de planes y empresa) y de Capterra, revisados el 3 de noviembre de 2026. Sus precios son "desde", en dólares, por usuario, con un presupuesto para cada equipo: el total real puede variar.',
+      'Los datos de Tourwriter vienen de su web (páginas de planes y empresa), revisados el 3 de noviembre de 2026. Sus precios son "desde", en dólares, por usuario, con un presupuesto para cada equipo: el total real puede variar.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC y diseñadores de viajes de lujo, viajes FIT de varios días'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Wellington (Nueva Zelanda), fundada en 2004'],
@@ -273,7 +273,7 @@ const compares: Cmp[] = [
     ],
     otherBetter: [
       'Vendes viajes de lujo en inglés y quieres itinerarios con un diseño muy trabajado.',
-      'Valoras que otros DMC europeos ya lo usan y que tiene muy buenas reseñas de usuarios (Capterra 4,5 con 42).',
+      'Valoras que otros DMC europeos ya lo usan.',
       'Quieres una incorporación guiada con formación incluida en el pago de puesta en marcha.',
       'Tu mercado principal es anglosajón.'
     ],
@@ -319,7 +319,7 @@ const best: Article = {
       rows: [
         ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, EN, FR y más', 'Ver Sobre nosotros'],
         ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); pack de onboarding 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT', '2019, París'],
-        ['Tourplan', 'Turoperadores y DMC consolidados', 'Desde 5 usuarios, según Capterra', 'A consultar; Capterra indica desde 250 USD por usuario y mes', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
+        ['Tourplan', 'Turoperadores y DMC consolidados', 'A consultar', 'A consultar', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
         ['Tourwriter', 'DMC y diseñadores de viajes de lujo', 'De 1 a más de 20 personas según plan', 'Desde 99 USD por usuario y mes; puesta en marcha desde 1.199 USD', 'Inglés', '2004, Nueva Zelanda'],
         ['Lemax', 'Turoperadores y DMC medianos y grandes', 'Lemax GO desde 15 usuarios', 'A consultar', 'Inglés', '1990, Croacia'],
         ['Kaptio', 'Operadores grandes de viajes de varios días', 'Grandes operadores', 'A consultar', 'Inglés', '2012, Islandia'],
@@ -336,17 +336,17 @@ const best: Article = {
     { type: 'h3', text: 'Ezus' },
     {
       type: 'p',
-      text: 'Un software completo para DMC, con precios públicos, web y soporte en cinco idiomas y muchas referencias (Capterra 4,7 con 61 reseñas, según su web). Su pack de onboarding de 1.990 EUR incluye una implantación guiada.'
+      text: 'Un software completo para DMC, con precios públicos, web y soporte en cinco idiomas y muchas referencias: más de 600 agencias en más de 70 países, según su web. Su pack de onboarding de 1.990 EUR incluye una implantación guiada.'
     },
     { type: 'h3', text: 'Tourplan' },
     {
       type: 'p',
-      text: 'Software con unos 40 años de historia para turoperadores y DMC consolidados, con clientes en unos 75 países según su web. Precio a consultar; Capterra indica planes desde 5 usuarios a 250 USD por usuario y mes.'
+      text: 'Software con unos 40 años de historia para turoperadores y DMC consolidados, con clientes en unos 75 países según su web. Precios y planes a consultar.'
     },
     { type: 'h3', text: 'Tourwriter' },
     {
       type: 'p',
-      text: 'Conocido por sus itinerarios de lujo muy cuidados, con muy buenas reseñas de usuarios (Capterra 4,5 con 42). Sus planes tienen precio por usuario, con una puesta en marcha que incluye migración y formación.'
+      text: 'Conocido por sus itinerarios de lujo muy cuidados, usado por DMC y diseñadores de viajes de muchos países. Sus planes tienen precio por usuario, con una puesta en marcha que incluye migración y formación.'
     },
     { type: 'h3', text: 'Lemax' },
     {

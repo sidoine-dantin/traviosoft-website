@@ -1,10 +1,27 @@
+import path from 'node:path';
 import { NextConfig } from 'next';
-import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+/*
+ * next-intl reads its request config through the `next-intl/config` alias.
+ * We set that alias here instead of using `next-intl/plugin`: the plugin loads
+ * @swc/core when the config is read, and its native binary refuses to start in
+ * the Cloudflare build image (ERR_SWC_NATIVE_CACHE), which fails every build.
+ */
+const REQUEST_CONFIG = './src/i18n/request.ts';
 
 const config: NextConfig = {
   images: { remotePatterns: [] },
+  turbopack: {
+    resolveAlias: { 'next-intl/config': REQUEST_CONFIG }
+  },
+  webpack(webpackConfig) {
+    webpackConfig.resolve ??= {};
+    webpackConfig.resolve.alias = {
+      ...webpackConfig.resolve.alias,
+      'next-intl/config': path.resolve(webpackConfig.context ?? process.cwd(), REQUEST_CONFIG)
+    };
+    return webpackConfig;
+  },
   async redirects() {
     // Old pages from the first site, kept so existing links and search results still land somewhere useful.
     return [
@@ -14,4 +31,4 @@ const config: NextConfig = {
   }
 };
 
-export default withNextIntl(config);
+export default config;
