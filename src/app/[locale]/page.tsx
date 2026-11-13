@@ -73,16 +73,6 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="on-cream2 band-sm">
-        <div className="wrap" style={{ display: 'flex', flexWrap: 'wrap', gap: 32, alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ maxWidth: 560 }}>
-            <h2 className="h2" style={{ color: 'var(--green)' }}>{h.exampleTitle}</h2>
-            <p className="lead muted" style={{ marginTop: 16 }}>{h.exampleBody}</p>
-          </div>
-          <Link href="/example" className="arrow" style={{ color: 'var(--green)', fontSize: 20 }}>{h.exampleLink} →</Link>
-        </div>
-      </section>
-
       <section className="band">
         <div className="wrap coins">
           <div>

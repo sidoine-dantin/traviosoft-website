@@ -22,7 +22,6 @@ export default function Footer({ c }: { c: SiteContent }) {
                 <li key={s}><Link href={`/${s}`}>{c.jobs[s].name}</Link></li>
               ))}
               <li><Link href="/pricing">{c.nav.pricing}</Link></li>
-              <li><Link href="/example">{c.nav.example}</Link></li>
             </ul>
           </div>
           <div>

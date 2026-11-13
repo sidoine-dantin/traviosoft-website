@@ -158,7 +158,7 @@ export type Plan = {
 export type SiteContent = {
   locale: Locale;
   nav: {
-    product: string; pricing: string; example: string; demo: string;
+    product: string; pricing: string; demo: string;
     menuLabel: string; close: string; skip: string; resources: string;
   };
   footer: {
@@ -186,7 +186,6 @@ export type SiteContent = {
     steps: { time: string; title: string; body: string; job: JobSlug }[];
     stepGo: string;
     baTitle: string; beforeTitle: string; beforeScraps: string[]; afterTitle: string; afterBody: string;
-    exampleTitle: string; exampleBody: string; exampleLink: string;
     priceTitle: string; priceBody: string; coin1: string; coin2: string; priceLink: string;
     facts: { k: string; v: string }[];
   };
@@ -198,15 +197,6 @@ export type SiteContent = {
     plans: Plan[];
     includedTitle: string; included: string[];
     faq: Faq[];
-  };
-  example: {
-    metaTitle: string; metaDescription: string;
-    title: string; lead: string;
-    tabs: { itinerary: string; quote: string };
-    /** label above the trip picker */
-    pick: string;
-    trips: ExampleTrip[];
-    note: string;
   };
   demo: {
     metaTitle: string; metaDescription: string;
@@ -238,7 +228,7 @@ export type SiteContent = {
   };
   resources: {
     metaTitle: string; metaDescription: string; title: string; lead: string;
-    groups: { kind: ArticleKind | 'glossary' | 'example'; title: string; body: string }[];
+    groups: { kind: ArticleKind | 'glossary'; title: string; body: string }[];
     glossaryTitle: string; glossaryMeta: string; glossaryLead: string;
   };
   articles: Article[];

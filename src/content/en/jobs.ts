@@ -97,7 +97,7 @@ const sell: JobPage = {
   faq: [
     { q: 'Can I import my current catalogue?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
     { q: 'Can several suppliers sell the same hotel or service?', a: ['Yes. A product can have several suppliers, each with its own rates. You choose the supplier per trip.'] },
-    { q: 'What does my client see?', a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team. You can open the example trips to see it.'] },
+    { q: 'What does my client see?', a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team.'] },
     { q: 'Do I have to use the catalogue for every quote?', a: ['No. A quote can mix catalogue lines and one-off lines.'] }
   ]
 };

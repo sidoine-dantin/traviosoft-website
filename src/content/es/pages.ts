@@ -97,229 +97,6 @@ export const pricing: SiteContent['pricing'] = {
   ]
 };
 
-export const example: SiteContent['example'] = {
-  metaTitle: 'Viajes de ejemplo: una pareja, un grupo y un safari | Traviosoft',
-  metaDescription:
-    'Abre tres viajes de ejemplo hechos con Traviosoft, una pareja en Andalucía, un grupo de incentivo en Oporto y un safari en Kenia y Tanzania: el itinerario día a día y el presupuesto tal como los ve el cliente. Datos inventados, sin registrarte.',
-  title: 'Viajes de ejemplo',
-  lead: 'Tres viajes de muestra hechos con Traviosoft. El itinerario y el presupuesto tal como los ve el cliente o la agencia colaboradora.',
-  tabs: { itinerary: 'Itinerario', quote: 'Presupuesto' },
-  pick: 'Elige un viaje',
-  trips: [
-  {
-    id: 'andalucia',
-    label: 'Andalucía, 8 días',
-    kind: 'Una pareja, venta directa',
-    name: 'Andalucía, 8 días',
-    dates: 'Del 12 al 19 de abril de 2027',
-    travellers: 'Cliente: Laura & Tom, 2 adultos',
-    agency: 'Tu agencia',
-    days: [
-      {
-        day: 'Día 1',
-        title: 'Llegada a Sevilla',
-        body: 'Un conductor te recibe en el aeropuerto y te lleva al hotel. La tarde queda libre.',
-        items: ['Traslado privado desde el aeropuerto, 14:30', 'Hotel Alfonso XIII, check-in desde las 15:00', 'Sugerencias para cenar en Santa Cruz']
-      },
-      {
-        day: 'Día 2',
-        title: 'Sevilla, el casco antiguo',
-        body: 'La catedral, la Giralda y el Alcázar con guía local, y la tarde a tu ritmo.',
-        items: ['Guía privado, de 09:30 a 13:00', 'Entradas al Alcázar con hora fija', 'Tarde libre']
-      },
-      {
-        day: 'Día 3',
-        title: 'Sevilla, día libre y flamenco',
-        body: 'Un día para el río, los mercados y el barrio de Triana. Por la noche, un pequeño espectáculo de flamenco.',
-        items: ['Espectáculo de flamenco en Triana, 20:30', 'Hotel Alfonso XIII']
-      },
-      {
-        day: 'Día 4',
-        title: 'Hacia Córdoba',
-        body: 'Trayecto por la mañana hasta Córdoba. La Mezquita con guía y después la antigua judería a pie.',
-        items: ['Traslado privado de Sevilla a Córdoba, 09:00', 'Guía privado en la Mezquita, 12:00', 'Hotel en el casco antiguo']
-      },
-      {
-        day: 'Día 5',
-        title: 'Hacia Granada',
-        body: 'Carretera a Granada entre olivares. Tiempo para instalarte y subir al Albaicín al atardecer.',
-        items: ['Traslado privado de Córdoba a Granada, 10:00', 'Hotel con vistas a la Alhambra', 'Atardecer en el Mirador de San Nicolás']
-      },
-      {
-        day: 'Día 6',
-        title: 'La Alhambra',
-        body: 'Los palacios, el Generalife y los jardines con guía privado. El resto del día es tuyo.',
-        items: ['Guía privado, Alhambra, de 09:00 a 13:00', 'Entrada a los Palacios Nazaríes a las 09:30', 'Tarde libre']
-      },
-      {
-        day: 'Día 7',
-        title: 'Hacia Ronda',
-        body: 'Por la sierra hasta Ronda, la ciudad sobre el tajo. Un paseo hasta el Puente Nuevo antes de cenar.',
-        items: ['Traslado privado de Granada a Ronda, 10:30', 'Hotel con vistas al tajo', 'Cena en un restaurante local']
-      },
-      {
-        day: 'Día 8',
-        title: 'Salida desde Málaga',
-        body: 'Traslado al aeropuerto de Málaga, con la hora ajustada a tu vuelo.',
-        items: ['Traslado privado de Ronda al aeropuerto de Málaga, 09:00', 'Check-out antes de las 11:00']
-      }
-    ],
-    quoteLines: [
-      { name: 'Sevilla, 3 noches', detail: 'Hotel Alfonso XIII, habitación doble, desayuno', price: '1.980 EUR' },
-      { name: 'Córdoba, 1 noche', detail: 'Hotel en el casco antiguo, habitación doble, desayuno', price: '280 EUR' },
-      { name: 'Granada, 2 noches', detail: 'Hotel con vistas a la Alhambra, habitación doble, desayuno', price: '840 EUR' },
-      { name: 'Ronda, 1 noche', detail: 'Hotel con vistas al tajo, habitación doble, desayuno', price: '360 EUR' },
-      { name: 'Guías privados', detail: 'Alhambra 420 EUR, Mezquita 180 EUR (entradas incluidas en el precio)', price: '600 EUR' },
-      { name: 'Traslados privados', detail: 'Aeropuerto, Córdoba, Granada, Ronda y aeropuerto de Málaga', price: '560 EUR' },
-      { name: 'Espectáculo de flamenco', detail: 'Local pequeño en Triana, 2 entradas', price: '240 EUR' }
-    ],
-    included: [
-      '7 noches con desayuno',
-      'Todos los traslados privados',
-      'Guías privados en Sevilla, Córdoba y Granada',
-      'Entradas al Alcázar, la Mezquita y la Alhambra',
-      'Espectáculo de flamenco para 2'
-    ],
-    notIncluded: ['Vuelos', 'Comidas y cenas', 'Seguro de viaje', 'Tasa turística en los hoteles'],
-    total: '4.860 EUR',
-    perPerson: '2.430 EUR por persona',
-    deposit: '30 % para confirmar, el resto 30 días antes de la llegada',
-    validUntil: 'Válido hasta el 30 de noviembre de 2026'
-  },
-  {
-    id: 'group',
-    label: 'Oporto y el Duero, 4 días',
-    kind: 'Un grupo de incentivo de 24, vendido a través de una agencia colaboradora',
-    name: 'Oporto y el Duero, 4 días',
-    dates: 'Del 6 al 9 de mayo de 2027',
-    travellers: 'Cliente: tu agencia colaboradora de Múnich, para un grupo de empresa de 24',
-    agency: 'Tu agencia',
-    days: [
-      {
-        day: 'Día 1',
-        title: 'Llegada a Oporto',
-        body: 'Autocar privado del aeropuerto al hotel junto al río. Cena de bienvenida en la Ribeira.',
-        items: ['Traslado en autocar, encuentro en llegadas', 'Hotel en Oporto, 3 noches', 'Cena de bienvenida para 24']
-      },
-      {
-        day: 'Día 2',
-        title: 'Oporto, a elegir',
-        body: 'Mañana de golf para diez, o un paseo por el casco antiguo con un guía local. Por la tarde, una bodega de oporto.',
-        items: ['Mañana de golf, 10 invitados', 'Paseo por el casco antiguo, 14 invitados', 'Visita y cata en una bodega de oporto para 24']
-      },
-      {
-        day: 'Día 3',
-        title: 'El valle del Duero',
-        body: 'Autocar valle arriba, crucero por el río entre las terrazas, almuerzo en una finca vinícola. Cena de gala en una quinta.',
-        items: ['Autocar privado, día completo', 'Crucero por el río', 'Almuerzo en una finca vinícola', 'Cena de gala en una quinta']
-      },
-      {
-        day: 'Día 4',
-        title: 'Salida',
-        body: 'Mañana libre. Autocar al aeropuerto en dos grupos, según los vuelos.',
-        items: ['Dos traslados al aeropuerto']
-      }
-    ],
-    quoteLines: [
-      { name: 'Oporto, 3 noches', detail: 'Hotel junto al río, 12 habitaciones dobles o twin, desayuno', price: '9.360 EUR' },
-      { name: 'Cena de bienvenida', detail: 'Restaurante en la Ribeira, 24 invitados, bebidas incluidas', price: '2.040 EUR' },
-      { name: 'Día en el Duero', detail: 'Autocar, crucero y almuerzo en finca vinícola, 24 invitados', price: '3.960 EUR' },
-      { name: 'Visita a bodega de oporto', detail: 'Visita y cata, 24 invitados', price: '840 EUR' },
-      { name: 'Mañana de golf', detail: '10 invitados, green fees y palos', price: '1.200 EUR' },
-      { name: 'Cena de gala', detail: 'Quinta privada, 24 invitados, música', price: '3.360 EUR' },
-      { name: 'Traslados en autocar', detail: 'Aeropuerto, Oporto y Duero, 4 días', price: '1.850 EUR' },
-      { name: 'Guía local y anfitrión en destino', detail: '4 días', price: '1.600 EUR' }
-    ],
-    included: [
-      '3 noches en Oporto con desayuno',
-      'Todas las comidas y visitas indicadas, con bebidas en las cenas',
-      'Todos los traslados en autocar privado',
-      'Un anfitrión en destino durante toda la estancia',
-      'La comisión de tu agencia colaboradora'
-    ],
-    notIncluded: ['Vuelos', 'Almuerzos de los días 1, 2 y 4', 'Seguro de viaje', 'Tasa turística de Oporto'],
-    total: '24.210 EUR',
-    perPerson: '1.008,75 EUR por invitado',
-    deposit: '40 % para confirmar, 40 % 60 días antes de la llegada, el resto 15 días antes',
-    validUntil: 'Válido hasta el 15 de diciembre de 2026',
-    rooming: {
-      title: 'Rooming list · Hotel en Oporto, primeras 4 de 12 habitaciones',
-      head: ['Habitación', 'Tipo', 'Huéspedes', 'Noches'],
-      rows: [
-        ['Habitación 1', 'Doble', 'Anna Weber, Jonas Weber', 'Del 6 al 9 de mayo'],
-        ['Habitación 2', 'Twin', 'Lena Fischer, Marie Koch', 'Del 6 al 9 de mayo'],
-        ['Habitación 3', 'Doble', 'Paul Schmidt, Sofia Schmidt', 'Del 6 al 9 de mayo'],
-        ['Habitación 4', 'Twin', 'Thomas Becker, David Wolf', 'Del 6 al 9 de mayo']
-      ]
-    }
-  },
-  {
-    id: 'safari',
-    label: 'Kenia y Tanzania, 9 días',
-    kind: 'Un safari para dos, en dólares estadounidenses',
-    name: 'Kenia y Tanzania, 9 días',
-    dates: 'Del 14 al 22 de agosto de 2027',
-    travellers: 'Cliente: Emma & James, 2 adultos',
-    agency: 'Tu agencia',
-    days: [
-      {
-        day: 'Día 1',
-        title: 'Nairobi',
-        body: 'Recogida en el aeropuerto y traslado a un hotel con jardín en Karen. Cena en el hotel.',
-        items: ['Traslado privado', 'Hotel con jardín en Karen, 1 noche']
-      },
-      {
-        day: 'Días 2 a 4',
-        title: 'Masái Mara',
-        body: 'Avioneta hasta el Mara. Tres días de safaris en plena gran migración.',
-        items: ['Vuelo de Nairobi al Mara', 'Campamento de tiendas, pensión completa, 3 noches', 'Safaris de mañana y de tarde']
-      },
-      {
-        day: 'Días 5 a 7',
-        title: 'Serengeti',
-        body: 'Vuelo al otro lado de la frontera, al norte del Serengeti. Vuelo en globo al amanecer el día 6.',
-        items: ['Vuelo al Serengeti', 'Campamento móvil, pensión completa, 3 noches', 'Vuelo en globo con desayuno']
-      },
-      {
-        day: 'Día 8',
-        title: 'Ngorongoro',
-        body: 'Ruta con tu guía privado hasta el borde del cráter. Por la tarde, el fondo del cráter.',
-        items: ['Guía y vehículo privados', 'Lodge en el borde del cráter, 1 noche']
-      },
-      {
-        day: 'Día 9',
-        title: 'Salida desde Arusha',
-        body: 'Traslado al aeropuerto de Arusha para tu vuelo de vuelta.',
-        items: ['Traslado privado al aeropuerto']
-      }
-    ],
-    quoteLines: [
-      { name: 'Nairobi, 1 noche', detail: 'Hotel con jardín en Karen, desayuno', price: '640 USD' },
-      { name: 'Masái Mara, 3 noches', detail: 'Campamento de tiendas, pensión completa, safaris', price: '5.880 USD' },
-      { name: 'Serengeti, 3 noches', detail: 'Campamento móvil, pensión completa, safaris', price: '6.300 USD' },
-      { name: 'Ngorongoro, 1 noche', detail: 'Lodge en el borde del cráter, pensión completa', price: '1.440 USD' },
-      { name: 'Vuelos en avioneta', detail: 'Nairobi, Masái Mara, Serengeti', price: '2.900 USD' },
-      { name: 'Entradas a parques y tasas de conservación', detail: 'Kenia y Tanzania', price: '2.640 USD' },
-      { name: 'Guía y vehículo privados', detail: 'Tanzania, 4 días', price: '1.600 USD' },
-      { name: 'Globo', detail: 'Serengeti, 2 personas, con desayuno', price: '1.198 USD' }
-    ],
-    included: [
-      '8 noches, pensión completa durante el safari',
-      'Safaris con guías expertos',
-      'Vuelos dentro de Kenia y Tanzania',
-      'Entradas a parques y tasas de conservación',
-      'Todos los traslados'
-    ],
-    notIncluded: ['Vuelos internacionales', 'Visados', 'Seguro de viaje', 'Propinas para guías y personal de los campamentos'],
-    total: '22.598 USD',
-    perPerson: '11.299 USD por persona',
-    deposit: '30 % para confirmar, el resto 60 días antes de la llegada',
-    validUntil: 'Válido hasta el 31 de enero de 2027'
-  }
-  ],
-  note: 'Este es un ejemplo hecho con Traviosoft con datos inventados.'
-};
-
 export const demo: SiteContent['demo'] = {
   metaTitle: 'Reservar una demo | Traviosoft',
   metaDescription:
@@ -350,7 +127,7 @@ export const demo: SiteContent['demo'] = {
   faq: [
     {
       q: '¿Hay prueba gratuita?',
-      a: ['No. Hay una demo, y tres viajes de ejemplo en esta web.']
+      a: ['No. Hay una demo de 30 minutos.']
     },
     {
       q: '¿Quién hace la demo?',
@@ -483,7 +260,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Hay prueba gratuita?',
-          a: ['No. Hay una demo de 30 minutos, y tres viajes de ejemplo en esta web que se abren sin registro.']
+          a: ['No. Hay una demo de 30 minutos.']
         }
       ]
     },
@@ -568,15 +345,14 @@ export const about: SiteContent['about'] = {
 export const resources: SiteContent['resources'] = {
   metaTitle: 'Recursos para agencias de viajes a medida | Traviosoft',
   metaDescription:
-    'Comparativas, guías, un glosario y viajes de ejemplo para agencias a medida y DMC que eligen software. En lenguaje claro y sin necesidad de registrarte.',
+    'Comparativas, guías y un glosario para agencias a medida y DMC que eligen software. En lenguaje claro y sin necesidad de registrarte.',
   title: 'Recursos',
-  lead: 'Comparativas, guías, un glosario y viajes de ejemplo.',
+  lead: 'Comparativas, guías y un glosario.',
   groups: [
     { kind: 'best', title: 'Comparativa de los mejores programas', body: 'Las herramientas que usan las agencias a medida y las DMC, una junto a otra, y a quién le encaja cada una.' },
     { kind: 'compare', title: 'Páginas de comparación', body: 'Traviosoft al lado de otras herramientas.' },
     { kind: 'guide', title: 'Guías', body: 'Notas prácticas para presupuestar, reservar y facturar un viaje a medida.' },
     { kind: 'glossary', title: 'Glosario', body: 'Los términos de agencia de viajes y de software, en una línea cada uno.' },
-    { kind: 'example', title: 'Viajes de ejemplo', body: 'Una pareja en Andalucía, un grupo de incentivo en Oporto y un safari en Kenia y Tanzania, tal como los ve tu cliente.' }
   ],
   glossaryTitle: 'Glosario',
   glossaryMeta:

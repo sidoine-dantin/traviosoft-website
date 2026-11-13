@@ -97,7 +97,7 @@ const sell: JobPage = {
   faq: [
     { q: 'Puis-je importer mon catalogue actuel ?', a: ['Oui. Nous importons vos produits, prix et prestataires depuis vos tableurs pendant la mise en place. La mise en place et l’import sont gratuits avec la facturation annuelle.'] },
     { q: 'Plusieurs prestataires peuvent-ils vendre le même hôtel ou le même service ?', a: ['Oui. Un produit peut avoir plusieurs prestataires, chacun avec ses tarifs. Vous choisissez le prestataire par voyage.'] },
-    { q: 'Que voit mon client ?', a: ['Un devis net, avec des noms côté client, des prix par personne, ce qui est inclus et non inclus, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe. Vous pouvez ouvrir les voyages exemples pour le voir.'] },
+    { q: 'Que voit mon client ?', a: ['Un devis net, avec des noms côté client, des prix par personne, ce qui est inclus et non inclus, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe.'] },
     { q: 'Dois-je utiliser le catalogue pour chaque devis ?', a: ['Non. Un devis peut mêler lignes du catalogue et lignes ponctuelles.'] }
   ]
 };

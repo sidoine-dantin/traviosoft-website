@@ -9,7 +9,7 @@ type JobLink = { slug: string; name: string; menuLine: string };
 
 type Props = {
   locale: Locale;
-  labels: { product: string; pricing: string; example: string; demo: string; menuLabel: string; close: string; skip: string };
+  labels: { product: string; pricing: string; demo: string; menuLabel: string; close: string; skip: string };
   jobs: JobLink[];
   /** paths that exist in each locale; used to hide a language that has no version of this page */
   available?: Partial<Record<Locale, string>>;
@@ -137,7 +137,6 @@ export default function Header({ locale, labels, jobs }: Props) {
             )}
           </div>
           <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
-          <Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link>
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           {langs}
@@ -176,7 +175,6 @@ export default function Header({ locale, labels, jobs }: Props) {
           </ul>
           <ul className="mobile-links">
             <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
-            <li><Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link></li>
           </ul>
           <div className="mobile-foot">
             {langs}

@@ -97,229 +97,6 @@ export const pricing: SiteContent['pricing'] = {
   ]
 };
 
-export const example: SiteContent['example'] = {
-  metaTitle: 'Example trips: a couple, a group and a safari | Traviosoft',
-  metaDescription:
-    'Open three example trips built in Traviosoft, a couple in Andalucía, an incentive group in Porto and a safari in Kenya and Tanzania: the day-by-day itinerary and the quote as the client sees them. Invented data, no sign-up.',
-  title: 'Example trips',
-  lead: 'Three sample trips built in Traviosoft. The itinerary and the quote as the client or the partner agency sees them.',
-  tabs: { itinerary: 'Itinerary', quote: 'Quote' },
-  pick: 'Choose a trip',
-  trips: [
-  {
-    id: 'andalucia',
-    label: 'Andalucía, 8 days',
-    kind: 'A couple, sold direct',
-    name: 'Andalucía, 8 days',
-    dates: '12 to 19 April 2027',
-    travellers: 'Client: Laura & Tom, 2 adults',
-    agency: 'Your agency',
-    days: [
-      {
-        day: 'Day 1',
-        title: 'Arrival in Seville',
-        body: 'A driver meets you at the airport and takes you to the hotel. The evening is free.',
-        items: ['Private transfer from the airport, 14:30', 'Hotel Alfonso XIII, check-in from 15:00', 'Dinner suggestions in Santa Cruz']
-      },
-      {
-        day: 'Day 2',
-        title: 'Seville, the old town',
-        body: 'The cathedral, the Giralda and the Alcázar with a local guide, then the afternoon at your pace.',
-        items: ['Private guide, 09:30 to 13:00', 'Alcázar tickets with a fixed entry time', 'Free afternoon']
-      },
-      {
-        day: 'Day 3',
-        title: 'Seville, free day and flamenco',
-        body: 'A day for the river, the markets and the Triana side. In the evening, a small flamenco show.',
-        items: ['Flamenco show in Triana, 20:30', 'Hotel Alfonso XIII']
-      },
-      {
-        day: 'Day 4',
-        title: 'To Córdoba',
-        body: 'A morning drive to Córdoba. The Mezquita with a guide, then the old Jewish quarter on foot.',
-        items: ['Private transfer Seville to Córdoba, 09:00', 'Private guide at the Mezquita, 12:00', 'Hotel in the old town']
-      },
-      {
-        day: 'Day 5',
-        title: 'To Granada',
-        body: 'Drive to Granada through olive country. Time to settle in and walk up to the Albaicín at sunset.',
-        items: ['Private transfer Córdoba to Granada, 10:00', 'Hotel with Alhambra views', 'Sunset at the Mirador de San Nicolás']
-      },
-      {
-        day: 'Day 6',
-        title: 'The Alhambra',
-        body: 'The palaces, the Generalife and the gardens with a private guide. The rest of the day is yours.',
-        items: ['Private guide, Alhambra, 09:00 to 13:00', 'Nasrid Palaces entry at 09:30', 'Free afternoon']
-      },
-      {
-        day: 'Day 7',
-        title: 'To Ronda',
-        body: 'Over the mountains to Ronda, the town above the gorge. A walk to the New Bridge before dinner.',
-        items: ['Private transfer Granada to Ronda, 10:30', 'Hotel with a view of the gorge', 'Dinner at a local restaurant']
-      },
-      {
-        day: 'Day 8',
-        title: 'Departure from Málaga',
-        body: 'A transfer to Málaga airport, timed for your flight.',
-        items: ['Private transfer Ronda to Málaga airport, 09:00', 'Check-out by 11:00']
-      }
-    ],
-    quoteLines: [
-      { name: 'Seville, 3 nights', detail: 'Hotel Alfonso XIII, double room, breakfast', price: '1,980 EUR' },
-      { name: 'Córdoba, 1 night', detail: 'Hotel in the old town, double room, breakfast', price: '280 EUR' },
-      { name: 'Granada, 2 nights', detail: 'Hotel with Alhambra views, double room, breakfast', price: '840 EUR' },
-      { name: 'Ronda, 1 night', detail: 'Hotel with a view of the gorge, double room, breakfast', price: '360 EUR' },
-      { name: 'Private guides', detail: 'Alhambra 420 EUR, Mezquita 180 EUR (entry tickets in the price)', price: '600 EUR' },
-      { name: 'Private transfers', detail: 'Airport, Córdoba, Granada, Ronda and Málaga airport', price: '560 EUR' },
-      { name: 'Flamenco show', detail: 'Small venue in Triana, 2 tickets', price: '240 EUR' }
-    ],
-    included: [
-      '7 nights with breakfast',
-      'All private transfers',
-      'Private guides in Seville, Córdoba and Granada',
-      'Entry tickets for the Alcázar, the Mezquita and the Alhambra',
-      'Flamenco show for 2'
-    ],
-    notIncluded: ['Flights', 'Lunches and dinners', 'Travel insurance', 'Tourist tax at the hotels'],
-    total: '4,860 EUR',
-    perPerson: '2,430 EUR per person',
-    deposit: '30% to confirm, balance 30 days before arrival',
-    validUntil: 'Valid until 30 November 2026'
-  },
-  {
-    id: 'group',
-    label: 'Porto and the Douro, 4 days',
-    kind: 'An incentive group of 24, sold through a partner agency',
-    name: 'Porto and the Douro, 4 days',
-    dates: '6 to 9 May 2027',
-    travellers: 'Client: your partner agency in Munich, for a company group of 24',
-    agency: 'Your agency',
-    days: [
-      {
-        day: 'Day 1',
-        title: 'Arrival in Porto',
-        body: 'Private coach from the airport to the hotel on the river. Welcome dinner in Ribeira.',
-        items: ['Coach transfer, meeting at arrivals', 'Hotel in Porto, 3 nights', 'Welcome dinner for 24']
-      },
-      {
-        day: 'Day 2',
-        title: 'Porto, two ways',
-        body: 'Morning golf for ten, or a walk through the old town with a local guide. Afternoon in a port cellar.',
-        items: ['Golf morning, 10 guests', 'Old town walk, 14 guests', 'Port cellar visit and tasting for 24']
-      },
-      {
-        day: 'Day 3',
-        title: 'The Douro valley',
-        body: 'Coach up the valley, a river cruise between the terraces, lunch at a wine estate. Gala dinner at a quinta.',
-        items: ['Private coach, full day', 'River cruise', 'Lunch at a wine estate', 'Gala dinner at a quinta']
-      },
-      {
-        day: 'Day 4',
-        title: 'Departure',
-        body: 'Free morning. Coach to the airport in two groups, matched to the flights.',
-        items: ['Two airport transfers']
-      }
-    ],
-    quoteLines: [
-      { name: 'Porto, 3 nights', detail: 'Hotel on the river, 12 double or twin rooms, breakfast', price: '9,360 EUR' },
-      { name: 'Welcome dinner', detail: 'Restaurant in Ribeira, 24 guests, drinks included', price: '2,040 EUR' },
-      { name: 'Douro day', detail: 'Coach, river cruise and wine estate lunch, 24 guests', price: '3,960 EUR' },
-      { name: 'Port cellar visit', detail: 'Visit and tasting, 24 guests', price: '840 EUR' },
-      { name: 'Golf morning', detail: '10 guests, green fees and clubs', price: '1,200 EUR' },
-      { name: 'Gala dinner', detail: 'Private quinta, 24 guests, music', price: '3,360 EUR' },
-      { name: 'Coach transfers', detail: 'Airport, Porto and Douro, 4 days', price: '1,850 EUR' },
-      { name: 'Local guide and on-site host', detail: '4 days', price: '1,600 EUR' }
-    ],
-    included: [
-      '3 nights in Porto with breakfast',
-      'Every meal and visit listed, with drinks at dinners',
-      'All transfers by private coach',
-      'An on-site host for the whole stay',
-      'Your partner agency’s commission'
-    ],
-    notIncluded: ['Flights', 'Lunches on days 1, 2 and 4', 'Travel insurance', 'Porto tourist tax'],
-    total: '24,210 EUR',
-    perPerson: '1,008.75 EUR per guest',
-    deposit: '40% to confirm, 40% 60 days before arrival, balance 15 days before',
-    validUntil: 'Valid until 15 December 2026',
-    rooming: {
-      title: 'Rooming list · Hotel in Porto, first 4 of 12 rooms',
-      head: ['Room', 'Type', 'Guests', 'Nights'],
-      rows: [
-        ['Room 1', 'Double', 'Anna Weber, Jonas Weber', '6 to 9 May'],
-        ['Room 2', 'Twin', 'Lena Fischer, Marie Koch', '6 to 9 May'],
-        ['Room 3', 'Double', 'Paul Schmidt, Sofia Schmidt', '6 to 9 May'],
-        ['Room 4', 'Twin', 'Thomas Becker, David Wolf', '6 to 9 May']
-      ]
-    }
-  },
-  {
-    id: 'safari',
-    label: 'Kenya and Tanzania, 9 days',
-    kind: 'A safari for two, priced in US dollars',
-    name: 'Kenya and Tanzania, 9 days',
-    dates: '14 to 22 August 2027',
-    travellers: 'Client: Emma & James, 2 adults',
-    agency: 'Your agency',
-    days: [
-      {
-        day: 'Day 1',
-        title: 'Nairobi',
-        body: 'Met at the airport and driven to a garden hotel in Karen. Dinner at the hotel.',
-        items: ['Private transfer', 'Garden hotel in Karen, 1 night']
-      },
-      {
-        day: 'Day 2 to 4',
-        title: 'Masai Mara',
-        body: 'Light aircraft to the Mara. Three days of game drives during the great migration.',
-        items: ['Flight Nairobi to the Mara', 'Tented camp, full board, 3 nights', 'Morning and afternoon game drives']
-      },
-      {
-        day: 'Day 5 to 7',
-        title: 'Serengeti',
-        body: 'Fly across the border to the northern Serengeti. A balloon flight at sunrise on day 6.',
-        items: ['Flight to the Serengeti', 'Mobile camp, full board, 3 nights', 'Hot-air balloon flight with breakfast']
-      },
-      {
-        day: 'Day 8',
-        title: 'Ngorongoro',
-        body: 'Drive with your private guide to the crater rim. Afternoon on the crater floor.',
-        items: ['Private guide and vehicle', 'Lodge on the crater rim, 1 night']
-      },
-      {
-        day: 'Day 9',
-        title: 'Departure from Arusha',
-        body: 'Drive to Arusha airport for your flight home.',
-        items: ['Private transfer to the airport']
-      }
-    ],
-    quoteLines: [
-      { name: 'Nairobi, 1 night', detail: 'Garden hotel in Karen, breakfast', price: '640 USD' },
-      { name: 'Masai Mara, 3 nights', detail: 'Tented camp, full board, game drives', price: '5,880 USD' },
-      { name: 'Serengeti, 3 nights', detail: 'Mobile camp, full board, game drives', price: '6,300 USD' },
-      { name: 'Ngorongoro, 1 night', detail: 'Lodge on the crater rim, full board', price: '1,440 USD' },
-      { name: 'Light aircraft flights', detail: 'Nairobi, Masai Mara, Serengeti', price: '2,900 USD' },
-      { name: 'Park and conservation fees', detail: 'Kenya and Tanzania', price: '2,640 USD' },
-      { name: 'Private guide and vehicle', detail: 'Tanzania, 4 days', price: '1,600 USD' },
-      { name: 'Hot-air balloon', detail: 'Serengeti, 2 guests, with breakfast', price: '1,198 USD' }
-    ],
-    included: [
-      '8 nights, full board on safari',
-      'Game drives with expert guides',
-      'Flights inside Kenya and Tanzania',
-      'Park and conservation fees',
-      'All transfers'
-    ],
-    notIncluded: ['International flights', 'Visas', 'Travel insurance', 'Tips for guides and camp staff'],
-    total: '22,598 USD',
-    perPerson: '11,299 USD per person',
-    deposit: '30% to confirm, balance 60 days before arrival',
-    validUntil: 'Valid until 31 January 2027'
-  }
-  ],
-  note: 'This is an example built in Traviosoft with invented data.'
-};
-
 export const demo: SiteContent['demo'] = {
   metaTitle: 'Book a demo | Traviosoft',
   metaDescription:
@@ -350,7 +127,7 @@ export const demo: SiteContent['demo'] = {
   faq: [
     {
       q: 'Is there a free trial?',
-      a: ['No. There is a demo, and three example trips on this site.']
+      a: ['No. There is a 30-minute demo.']
     },
     {
       q: 'Who runs the demo?',
@@ -483,7 +260,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Is there a free trial?',
-          a: ['No. There is a 30-minute demo, and three example trips on this site that open without signing up.']
+          a: ['No. There is a 30-minute demo.']
         }
       ]
     },
@@ -568,15 +345,14 @@ export const about: SiteContent['about'] = {
 export const resources: SiteContent['resources'] = {
   metaTitle: 'Resources for tailor-made travel agencies | Traviosoft',
   metaDescription:
-    'Comparisons, guides, a glossary and an example trip for tailor-made agencies and DMCs choosing software. Plain language, no sign-up needed.',
+    'Comparisons, guides and a glossary for tailor-made agencies and DMCs choosing software. Plain language, no sign-up needed.',
   title: 'Resources',
-  lead: 'Comparisons, guides, a glossary and example trips.',
+  lead: 'Comparisons, guides and a glossary.',
   groups: [
     { kind: 'best', title: 'Best software comparison', body: 'The tools tailor-made agencies and DMCs use, side by side, and who each one suits.' },
     { kind: 'compare', title: 'Compare pages', body: 'Traviosoft next to other tools.' },
     { kind: 'guide', title: 'Guides', body: 'Practical notes on quoting, booking and invoicing a tailor-made trip.' },
     { kind: 'glossary', title: 'Glossary', body: 'The travel-agency and software terms, in a line each.' },
-    { kind: 'example', title: 'Example trips', body: 'A couple in Andalucía, an incentive group in Porto and a safari in Kenya and Tanzania, as your client sees them.' }
   ],
   glossaryTitle: 'Glossary',
   glossaryMeta:

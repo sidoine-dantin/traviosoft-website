@@ -26,7 +26,9 @@ const config: NextConfig = {
     // Old pages from the first site, kept so existing links and search results still land somewhere useful.
     return [
       { source: '/:locale(es|en|fr)/product', destination: '/:locale/sell', permanent: true },
-      { source: '/:locale(es|en|fr)/how-it-works', destination: '/:locale/sell', permanent: true }
+      { source: '/:locale(es|en|fr)/how-it-works', destination: '/:locale/sell', permanent: true },
+      // The example trips pages were removed (2026-11-13).
+      { source: '/:locale(es|en|fr)/example/:trip*', destination: '/:locale', permanent: false }
     ];
   }
 };

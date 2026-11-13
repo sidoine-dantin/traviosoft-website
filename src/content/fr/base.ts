@@ -3,7 +3,6 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Produit',
   pricing: 'Tarifs',
-  example: 'Voyages exemples',
   demo: 'Réserver une démo',
   menuLabel: 'Menu',
   close: 'Fermer',

@@ -97,7 +97,7 @@ const sell: JobPage = {
   faq: [
     { q: '¿Puedo importar mi catálogo actual?', a: ['Sí. Importamos tus productos, precios y proveedores desde tus hojas de cálculo durante la configuración. La configuración y la importación son gratis con facturación anual.'] },
     { q: '¿Pueden varios proveedores vender el mismo hotel o servicio?', a: ['Sí. Un producto puede tener varios proveedores, cada uno con sus tarifas. Eliges el proveedor por viaje.'] },
-    { q: '¿Qué ve mi cliente?', a: ['Un presupuesto limpio con nombres pensados para el cliente, precios por persona, lo incluido y lo no incluido, en su idioma y con tu marca. Tus tarifas netas y tus márgenes quedan solo para tu equipo. Puedes abrir los viajes de ejemplo para verlo.'] },
+    { q: '¿Qué ve mi cliente?', a: ['Un presupuesto limpio con nombres pensados para el cliente, precios por persona, lo incluido y lo no incluido, en su idioma y con tu marca. Tus tarifas netas y tus márgenes quedan solo para tu equipo.'] },
     { q: '¿Tengo que usar el catálogo en todos los presupuestos?', a: ['No. Un presupuesto puede mezclar líneas del catálogo y líneas sueltas.'] }
   ]
 };

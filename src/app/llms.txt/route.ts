@@ -18,7 +18,6 @@ export function GET() {
     '## Product (English)',
     ...(['sell', 'book', 'get-paid', 'setup'] as const).map(s => `- [${en.jobs[s].name}](${baseUrl}/en/${s}): ${en.jobs[s].metaDescription}`),
     `- [Pricing](${baseUrl}/en/pricing): ${en.pricing.metaDescription}`,
-    `- [Example trip](${baseUrl}/en/example): ${en.example.metaDescription}`,
     `- [FAQ](${baseUrl}/en/faq): ${en.faqPage.metaDescription}`,
     ''
   ];

@@ -33,9 +33,6 @@ export const home: SiteContent['home'] = {
   afterTitle: 'With Traviosoft',
   afterBody:
     'The request, the quote, the bookings, the payments and the invoices are on the same trip, and the whole team sees the same thing.',
-  exampleTitle: 'Example trips',
-  exampleBody: 'A couple, an incentive group and a safari: the day-by-day itinerary and the quote as the client sees them. No sign-up.',
-  exampleLink: 'Open the example trips',
   priceTitle: 'Pricing',
   priceBody: `Two plans, Classic and Premium, with ${PRICES.usersIncluded} users included. Billed yearly or monthly.`,
   coin1: 'EUR/mo · Classic',
