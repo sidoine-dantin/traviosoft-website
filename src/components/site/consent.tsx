@@ -13,8 +13,9 @@ import { Link } from '@/i18n/navigation';
  * for six months, and "Cookie settings" in the footer reopens the banner.
  */
 
-const LINKEDIN_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID ?? '';
-const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID ?? '';
+// Public tag IDs (they appear in every page's network requests); env vars can override them.
+const LINKEDIN_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '10081602';
+const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID || '32264978'; // "Demo click"
 const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '';
 const ENABLED = Boolean(LINKEDIN_ID || META_ID);
 
