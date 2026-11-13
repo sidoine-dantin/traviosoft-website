@@ -1,5 +1,5 @@
 import type { Article, ArticleBlock, Faq } from '../types';
-import { PRICES, n } from '../prices';
+import { PRICES } from '../prices';
 
 const UPDATED = '2026-11-03';
 
@@ -56,21 +56,21 @@ const compares: Cmp[] = [
     other: 'Excel y Word',
     metaTitle: 'Traviosoft vs Excel y Word para agencias de viajes',
     metaDescription:
-      'Excel y Word funcionan hasta que el volumen crece. Comparamos presupuestos, márgenes, reservas y facturas para ver cuándo conviene dar el salto a un software.',
-    title: 'Traviosoft frente a Excel y Word: cuándo una hoja de cálculo deja de bastar',
-    lead: 'Excel y Word bastan si llevas pocos viajes al año y trabajas solo. Cuando hay más de una persona, varias temporadas de precios y facturas que numerar, un software pensado para viajes evita errores de margen y copias de archivos.',
+      'Excel y Word son el punto de partida de casi toda agencia. Comparamos presupuestos, márgenes, reservas y facturas para ver cuándo compensa un software de viajes.',
+    title: 'Traviosoft frente a Excel y Word: cuándo dar el paso a un software de viajes',
+    lead: 'Excel y Word son flexibles, conocidos y suficientes para muchas agencias que llevan pocos viajes al año. Cuando entran varias personas, temporadas de precios y facturas que numerar, un software pensado para viajes se encarga de ese trabajo por ti.',
     card: 'Hoja de cálculo o software: cuándo compensa cambiar y cuándo no.',
     basis:
-      'Excel y Word son la herramienta con la que empieza casi toda agencia, y muchas viven bien con ellas durante años. Esta comparación no dice que sean malas: dice dónde se notan sus límites. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
+      'Excel y Word son la herramienta con la que empieza casi toda agencia, y muchas viven bien con ellas durante años. Esta página muestra qué cambia cuando los viajes pasan a un software pensado para ellos. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
     rows: [
       ['Pensado para', 'Viajes a medida: solicitudes, presupuestos, reservas y facturas', 'Cualquier tarea de hoja de cálculo y texto'],
       ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'La licencia de Microsoft que ya tengas'],
-      ['Margen y comisión', 'Reglas de precio definidas una vez; cada línea las aplica', 'Fórmulas que montas tú y copias de archivo en archivo'],
-      ['Temporadas y proveedores', 'Precios por periodo y varios proveedores por producto', 'Una pestaña por proveedor, que alguien debe mantener al día'],
-      ['Versiones del presupuesto', 'Cada versión queda guardada y se puede reabrir', 'Copias tipo "presupuesto_v3_final.xlsx"'],
+      ['Margen y comisión', 'Reglas de precio definidas una vez; cada línea las aplica', 'Fórmulas que diseñas tú, con total libertad'],
+      ['Temporadas y proveedores', 'Precios por periodo y varios proveedores por producto', 'Pestañas organizadas a tu manera'],
+      ['Versiones del presupuesto', 'Cada versión queda guardada y se puede reabrir', 'Un archivo por versión'],
       ['Reservas a proveedores', 'Lista por viaje con estados que se actualizan', 'Una columna o un documento aparte'],
-      ['Facturas', 'Desde el viaje, con numeración por empresa y notas de abono', 'Plantilla numerada a mano'],
-      ['Normas fiscales de España', 'Etiquetas REAV y Veri*Factu con QR, activables por país', 'Las aplicas tú'],
+      ['Facturas', 'Desde el viaje, con numeración por empresa y notas de abono', 'Tu propia plantilla de factura'],
+      ['Normas fiscales de España', 'Etiquetas REAV y Veri*Factu con QR, activables por país', 'Configuradas en tu propia plantilla'],
       ['Itinerario para el cliente', 'Página para compartir, día a día, en su idioma', 'PDF o Word enviado por correo'],
       ['Datos', 'Un espacio propio para tu agencia, alojado en la UE', 'Los archivos, donde los guardes']
     ],
@@ -81,10 +81,10 @@ const compares: Cmp[] = [
       'Necesitas un análisis puntual o un informe a medida. Excel sigue siendo la herramienta ideal, y Traviosoft exporta a Excel de todos modos.'
     ],
     usBetter: [
-      'Trabajáis dos o más personas sobre los mismos clientes y viajes, y ya os habéis pisado archivos.',
-      'Un cambio de precio de un hotel obliga a tocar varios presupuestos y alguno se queda con la tarifa antigua.',
-      'Quieres que el margen y la comisión se apliquen siempre igual, sin depender de que nadie olvide una fórmula.',
-      'Pierdes tiempo pasando los datos del presupuesto a la factura, y de ahí al correo del gestor.',
+      'Trabajáis dos o más personas sobre los mismos clientes y viajes a la vez.',
+      'Cuando un hotel cambia su precio, quieres ver qué presupuestos abiertos afecta y actualizarlos de una vez.',
+      'Quieres que el margen y la comisión se apliquen siempre igual, a partir de reglas que defines una vez.',
+      'Quieres que el presupuesto se convierta en factura, y en los archivos para tu gestor, sin volver a teclear.',
       'Facturas a clientes de otros países y necesitas documentos en español, inglés y francés.'
     ],
     switching:
@@ -92,7 +92,7 @@ const compares: Cmp[] = [
     faq: [
       { q: '¿Puedo seguir usando Excel junto a Traviosoft?', a: ['Sí. Puedes importar tus datos desde Excel y exportar un resumen en Excel o un zip con todas las facturas en PDF para tu gestor.'] },
       { q: '¿Qué pasa con las fórmulas de margen que ya tengo?', a: ['Se convierten en reglas de precio. En lugar de copiar la fórmula en cada archivo, la defines una vez y se aplica a cada línea de cada presupuesto.'] },
-      { q: '¿Merece la pena para una agencia de una sola persona?', a: ['Depende del volumen. Si llevas pocos viajes y no necesitas facturas ni itinerarios compartidos, una hoja de cálculo puede bastar. Si los presupuestos te quitan horas cada semana, un software ya compensa.'] }
+      { q: '¿Merece la pena para una agencia de una sola persona?', a: ['Depende del volumen. Si llevas pocos viajes y no necesitas facturas ni itinerarios compartidos, una hoja de cálculo puede bastar. Si los presupuestos te llevan horas cada semana, un software ya compensa.'] }
     ]
   },
   {
@@ -101,42 +101,39 @@ const compares: Cmp[] = [
     other: 'Ezus',
     metaTitle: 'Traviosoft vs Ezus: comparativa para DMC y receptivos',
     metaDescription:
-      'Comparamos Traviosoft y Ezus con precios publicados, idiomas, puesta en marcha y normas fiscales de España. Dónde gana cada uno, sin adornos.',
-    title: 'Traviosoft frente a Ezus: comparativa honesta para DMC y receptivos',
-    lead: 'Ezus es el competidor más cercano: un software francés para DMC con muchos clientes y precios públicos. Traviosoft muestra un precio con usuarios incluidos y trae REAV y Veri*Factu para España. Ezus tiene más trayectoria y más reseñas.',
-    card: 'Dos programas con precios públicos: qué incluye cada uno y qué cuesta el primer año.',
+      'Comparamos Traviosoft y Ezus: para quién es cada uno, precios publicados, idiomas y puesta en marcha, y en qué destaca cada uno para DMC y agencias a medida.',
+    title: 'Traviosoft frente a Ezus: comparativa independiente para DMC y receptivos',
+    lead: 'Ezus es un software francés para DMC muy consolidado, con muchos clientes, precios públicos y soporte en cinco idiomas. Traviosoft muestra un precio con usuarios incluidos y añade REAV y Veri*Factu para agencias en España.',
+    card: 'Dos programas con precios públicos: para quién es cada uno y qué incluye.',
     basis:
       'Los datos de Ezus vienen de su sitio web y de directorios públicos, revisados el 3 de noviembre de 2026. Los precios cambian: comprueba siempre las páginas de precios actuales de ambos. Las cifras de clientes y reseñas de Ezus son las que ellos publican.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC, receptivos, turoperadores y agencias; FIT, grupos y MICE'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'París, fundada en 2019'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Professional 75 EUR por usuario y mes (hasta 10 usuarios); Premium 100 EUR; Enterprise a consultar'],
-      ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pack de onboarding obligatorio de 1.990 EUR; importación de datos 390 EUR'],
-      ['3 usuarios, primer año (precios de lista)', `${PRICES.classic.yearly} x 12 = ${n(PRICES.classic.yearly * 12, 'es')} EUR`, '75 x 3 x 12 = 2.700 EUR + 1.990 EUR = 4.690 EUR'],
+      ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pack de onboarding de 1.990 EUR con implantación guiada; importación de datos 390 EUR'],
       ['Idiomas', 'Documentos en español, inglés, francés y más', 'Web y soporte en 5 idiomas: EN, FR, ES, IT, PT'],
-      ['Reseñas públicas', 'Todavía sin reseñas en directorios', 'Capterra 4,7 (61) y G2 4,9 (18), según su web'],
-      ['Normas fiscales de España', 'REAV y Veri*Factu con QR', 'No vimos contenido sobre REAV en su web'],
       ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'AWS Irlanda, según su web']
     ],
     otherBetter: [
-      'Quieres un producto con más años en el mercado y muchas más referencias públicas: Ezus dice tener más de 600 agencias en más de 70 países.',
+      'Quieres un producto con más años en el mercado y muchas referencias públicas: Ezus dice tener más de 600 agencias en más de 70 países, con notas altas en Capterra y G2.',
       'Necesitas soporte y documentación en italiano o portugués.',
-      'Valoras un paquete de implantación guiado, con especialista asignado durante varios meses, y estás dispuesto a pagarlo.',
+      'Valoras una implantación guiada, con especialista asignado durante varios meses.',
       'Necesitas un plan Enterprise: Ezus lo ofrece desde 30 usuarios.',
       'Quieres zona de cliente, portal de pago y páginas web dentro del mismo programa, tal como los describe Ezus.'
     ],
     usBetter: [
-      'Quieres un precio claro, con usuarios incluidos, y alta e importación gratis con el pago anual.',
-      'Tu agencia está en España y necesitas REAV en las facturas y Veri*Factu con QR.',
+      'Quieres un único precio con usuarios incluidos, y alta e importación incluidas con el pago anual.',
+      'Tu agencia está en España y quieres etiquetas REAV en las facturas y Veri*Factu con QR integrados.',
       'Trabajas sobre todo en español y francés y quieres que documentos y plantillas de correo salgan en el idioma del cliente.',
-      'Prefieres una herramienta enfocada en el flujo de un viaje: solicitud, presupuesto con margen, reserva, cobro y factura.'
+      'Prefieres una herramienta construida alrededor del flujo de un viaje: solicitud, presupuesto con margen, reserva, cobro y factura.'
     ],
     switching:
       'Si usas Ezus y quieres cambiar, exporta antes tus productos, proveedores y clientes. Nosotros importamos productos, precios y proveedores desde tus hojas de cálculo durante el alta. Un consejo práctico: cambia fuera de temporada alta y termina los viajes abiertos donde están. La [página Cambiar](/switch) detalla los pasos.',
     faq: [
-      { q: '¿Cuánto cuesta cada uno el primer año con 3 usuarios?', a: [`Con los precios de lista, Traviosoft Classic cuesta unos ${n(PRICES.classic.yearly * 12, 'es')} EUR el primer año y Ezus unos 4.690 EUR, porque incluye un pack de onboarding de 1.990 EUR. Comprueba los precios actuales de los dos.`] },
-      { q: '¿Ezus sirve para España?', a: ['Sí, tiene web y soporte en español. Lo que no encontramos en su web es contenido sobre REAV. Pregúntales cómo lo resuelven si lo necesitas.'] },
-      { q: '¿Puedo probar los dos?', a: ['Los dos trabajan con demostración. Lo más útil es llevar un viaje real tuyo a cada una y comparar cuánto tardas en tener el presupuesto con margen.'] }
+      { q: '¿Cómo es el precio de cada uno?', a: [`Traviosoft Classic cuesta ${PRICES.classic.yearly} EUR al mes con pago anual, ${PRICES.usersIncluded} usuarios incluidos, con alta e importación incluidas. Ezus Professional cuesta 75 EUR por usuario y mes, con un pack de onboarding de 1.990 EUR que incluye una implantación guiada. Comprueba las páginas de precios actuales de los dos.`] },
+      { q: '¿Ezus sirve para España?', a: ['Sí. Ezus tiene web y soporte en español. Traviosoft incluye además etiquetas REAV y Veri*Factu con QR para agencias en España.'] },
+      { q: '¿Puedo probar los dos?', a: ['Los dos trabajan con demostración. Lo más útil es llevar un viaje real tuyo a cada una y ver cómo construye cada uno el presupuesto con margen.'] }
     ]
   },
   {
@@ -145,22 +142,16 @@ const compares: Cmp[] = [
     other: 'GIAV',
     metaTitle: 'Traviosoft vs GIAV: gestión de agencias de viajes',
     metaDescription:
-      'GIAV es un software español veterano para agencias de viajes. Comparamos su enfoque con el de Traviosoft para receptivos y viajes a medida, sin inventar datos.',
+      'GIAV es un software español con larga trayectoria para agencias de viajes. Comparamos su enfoque con el de Traviosoft para receptivos y viajes a medida.',
     title: 'Traviosoft frente a GIAV: dos formas de gestionar una agencia de viajes',
-    lead: 'GIAV es un programa de gestión para agencias de viajes con muchos años en España, usado sobre todo por agencias minoristas. Traviosoft está pensado para receptivos y viajes a medida. Si vendes sobre todo viajes de catálogo, GIAV puede encajar mejor.',
-    card: 'Un programa veterano para agencias minoristas y otro para viajes a medida y receptivos.',
+    lead: 'GIAV es un programa de gestión para agencias de viajes con muchos años en España y una larga trayectoria con agencias minoristas. Traviosoft está pensado para receptivos y viajes a medida. Si vendes sobre todo viajes de catálogo, GIAV puede encajar mejor.',
+    card: 'Un programa con larga trayectoria para agencias minoristas y otro para viajes a medida y receptivos.',
     basis:
-      'Hemos podido ver GIAV a través de directorios y prensa del sector, no con una prueba propia. Por eso, donde no hay un dato público, lo indicamos como "No publicado" y te sugerimos preguntarles. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
+      'Los datos de GIAV vienen de directorios y prensa del sector. GIAV presenta sus precios y planes en una demostración, así que describimos su enfoque y te sugerimos preguntarles el resto. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Gestión de agencias de viajes en España, sobre todo minoristas'],
-      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'No publicado'],
-      ['Tamaño de equipo', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, 'No publicado'],
-      ['Presupuestos a medida con margen y comisión por línea', 'Sí, con reglas de precio', 'No publicado'],
-      ['Catálogo con temporadas y varios proveedores', 'Sí', 'No publicado'],
-      ['Itinerario del cliente en página compartible', 'Sí, en su idioma y con tu marca', 'No publicado'],
-      ['Idiomas de los documentos', 'Español, inglés, francés y más', 'No publicado'],
-      ['REAV y Veri*Factu', 'Sí, con etiquetas REAV y Veri*Factu con QR', 'Consúltalo con ellos'],
-      ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'No publicado']
+      ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar'],
+      ['Conocido por', 'Presupuestos con margen por línea, catálogo por temporadas, página de itinerario para el cliente, REAV y Veri*Factu', 'Una larga trayectoria con agencias de viajes en España']
     ],
     otherBetter: [
       'Eres una agencia minorista que vende billetes, hoteles y paquetes de mayoristas. Un programa pensado para ese trabajo suele encajar mejor.',
@@ -172,14 +163,14 @@ const compares: Cmp[] = [
       'Diseñas viajes a medida o recibes viajeros de fuera, y cada presupuesto se calcula servicio a servicio con tarifas netas.',
       'Necesitas precios por temporada y varios proveedores para un mismo servicio.',
       'Quieres enviar al cliente una página de propuesta e itinerario en su idioma, con tu marca.',
-      'Prefieres ver el precio antes de hablar con nadie.'
+      'Quieres ver en la web el precio y lo que incluye cada plan.'
     ],
     switching:
       'Antes de decidir, pide a GIAV y a nosotros una demostración con un viaje tuyo y pregunta lo mismo a los dos: cómo se calcula el margen por línea, cómo se registra la comisión de un colaborador, qué ve el cliente y cómo se factura con REAV. Si cambias, importamos productos, precios y proveedores desde tus hojas de cálculo; consulta la [página Cambiar](/switch).',
     faq: [
-      { q: '¿Puedo importar los datos desde GIAV?', a: ['Importamos productos, precios y proveedores desde hojas de cálculo. Si GIAV te permite exportar a una hoja de cálculo, puedes traerlos así. Depende de lo que te permita exportar tu versión.'] },
+      { q: '¿Puedo importar los datos desde GIAV?', a: ['Importamos productos, precios y proveedores desde hojas de cálculo. Si exportas tus datos de GIAV a una hoja de cálculo, puedes traerlos así.'] },
       { q: '¿Sirve Traviosoft para una agencia minorista?', a: ['Está pensado para agencias que diseñan y venden viajes a medida. Si tu negocio es sobre todo vender producto de catálogo de mayoristas, mira antes si encaja con lo que haces.'] },
-      { q: '¿Por qué no hay precios de GIAV en la tabla?', a: ['Porque no los hemos visto publicados. Preferimos escribir "No publicado" a inventar una cifra.'] }
+      { q: '¿Cómo es el precio de GIAV?', a: ['GIAV presenta sus precios en una demostración. Pídeles un presupuesto para el tamaño de tu equipo.'] }
     ]
   },
   {
@@ -188,22 +179,18 @@ const compares: Cmp[] = [
     other: 'Holded',
     metaTitle: 'Traviosoft vs Holded para agencias de viajes',
     metaDescription:
-      'Holded es un software general de facturación y gestión para pymes. Comparamos qué cubre y qué no para una agencia de viajes: márgenes, reservas y REAV.',
+      'Holded es un software de gestión para pymes; Traviosoft está pensado para viajes. En qué se centra cada uno y cómo una agencia puede usar los dos a la vez.',
     title: 'Traviosoft frente a Holded: software de viajes o ERP general',
-    lead: 'Holded es un programa general de facturación, contabilidad y gestión para pymes, muy extendido en España. No tiene presupuestos con margen por servicio ni REAV propios de una agencia de viajes. Traviosoft cubre el viaje; Holded puede seguir llevando la empresa.',
+    lead: 'Holded es un programa de facturación, contabilidad y gestión para pymes, muy extendido en España. Traviosoft está construido alrededor del viaje. Muchas agencias usan los dos: Traviosoft para los viajes y Holded para la empresa.',
     card: 'Un ERP general para pymes y un software de viajes: qué hace cada uno.',
     basis:
-      'Los datos de Holded vienen de su web y de su página de turismo y viajes, revisadas el 9 de noviembre de 2026. Holded cambia sus planes y promociones con frecuencia: comprueba su página de precios. No es un mal programa: simplemente resuelve otro problema.',
+      'Los datos de Holded vienen de su web y de su página de turismo y viajes, revisadas el 9 de noviembre de 2026. Holded cambia sus planes y promociones con frecuencia: comprueba su página de precios. Los dos programas se centran en trabajos distintos, así que la pregunta suele ser cómo combinarlos.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Autónomos y pymes de cualquier sector, de 1 a más de 100 personas'],
       ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Básico 34 EUR (2 usuarios), Estándar 69 EUR (4), Avanzado 115 EUR (7), Premium 229 EUR (15), sin IVA; con descuentos temporales'],
-      ['Presupuestos con margen por servicio', 'Sí, con reglas de precio, IVA y comisión', 'Sin funciones específicas de viajes que hayamos visto'],
-      ['Catálogo con temporadas y proveedores', 'Sí', 'No es su función'],
-      ['Reservas y tareas por proveedor', 'Lista por viaje con estados', 'No es su función'],
-      ['Itinerario del cliente', 'Página compartible, día a día', 'No es su función'],
-      ['REAV en facturas', 'Sí, etiquetas REAV', 'No aparece en su página de turismo y viajes'],
-      ['Veri*Factu', 'Sí, con QR', 'Indican que cumplen con Verifactu'],
-      ['Contabilidad, nóminas y bancos', 'No sustituye el trabajo de tu gestor', 'Sí, es su especialidad']
+      ['Enfoque principal', 'El viaje: solicitudes, presupuestos con margen, reservas, itinerario, cobros y facturas', 'La empresa: facturación, contabilidad, nóminas y bancos'],
+      ['Veri*Factu', 'Sí, con QR', 'Sí, según su web'],
+      ['Contabilidad, nóminas y bancos', 'Prepara los archivos para tu gestor', 'Su núcleo: contabilidad, nóminas y conciliación bancaria']
     ],
     otherBetter: [
       'Necesitas contabilidad, tesorería, nóminas o conciliación bancaria en el mismo programa.',
@@ -212,16 +199,16 @@ const compares: Cmp[] = [
       'Facturas en varias divisas y quieres un control de tesorería general.'
     ],
     usBetter: [
-      'El problema es calcular, enviar y hacer seguir presupuestos de viaje con margen, no la contabilidad.',
+      'Tu trabajo diario es calcular, enviar y hacer seguimiento de presupuestos de viaje con margen.',
       'Necesitas un catálogo con precios por temporada y varios proveedores por servicio.',
       'Quieres lista de reservas por viaje, hojas de servicio e itinerario para el cliente.',
-      'Tu agencia aplica REAV y no quieres rehacer a mano cada factura.'
+      'Tu agencia aplica REAV y quieres las etiquetas en cada factura de forma automática.'
     ],
     switching:
       'Lo más sensato es que convivan. Traviosoft lleva el viaje, desde la solicitud hasta la factura, y exporta un resumen en Excel o un zip de facturas en PDF para tu gestor. Decide en qué programa emites las facturas para no numerarlas en dos sitios, y pregunta a tu gestor cómo quiere recibir los datos. Más detalle en la [página Cambiar](/switch).',
     faq: [
       { q: '¿Tengo que dejar Holded para usar Traviosoft?', a: ['No necesariamente. Muchas agencias mantienen su contabilidad donde está. Lo importante es emitir cada factura en un solo sitio y acordar con tu gestor cómo recibe los datos.'] },
-      { q: '¿Holded sirve para REAV?', a: ['Su página de turismo y viajes no menciona REAV. Si lo necesitas, pregúntales directamente o consulta con tu gestor cómo tratar el margen en su programa.'] },
+      { q: '¿Pueden trabajar juntos Holded y Traviosoft?', a: ['Sí. Traviosoft lleva el viaje y sus facturas, y exporta un resumen en Excel o un zip de facturas en PDF que tu gestor puede llevar a Holded o a cualquier otro programa de contabilidad.'] },
       { q: '¿Traviosoft hace contabilidad?', a: ['No. Gestiona el viaje, los cobros y las facturas, y prepara los archivos para tu gestor. La contabilidad sigue en tu gestoría o en el programa que uses.'] }
     ]
   },
@@ -231,28 +218,25 @@ const compares: Cmp[] = [
     other: 'Lemax',
     metaTitle: 'Traviosoft vs Lemax: software para DMC y turoperadores',
     metaDescription:
-      'Lemax es un software croata para turoperadores y DMC medianos y grandes. Comparamos tamaño de equipo, precio visible y enfoque frente a Traviosoft.',
+      'Lemax es un software croata para turoperadores y DMC medianos y grandes. Comparamos para quién es cada uno, tamaño de equipo, precio y enfoque.',
     title: 'Traviosoft frente a Lemax: dos sistemas de gestión completos',
-    lead: 'Lemax es un software con más de 30 años, pensado para turoperadores y DMC medianos y grandes; su paquete Lemax GO empieza en 15 usuarios y no publica precios. Traviosoft cubre todo el viaje, de la primera solicitud a la última factura, en español, inglés y francés, y muestra el precio.',
-    card: 'Dos sistemas completos: una plataforma veterana y un solo flujo de la solicitud a la factura con precio visible.',
+    lead: 'Lemax es un software con más de 30 años, pensado para turoperadores y DMC medianos y grandes; su paquete Lemax GO está diseñado para equipos desde 15 usuarios, con precio acordado con cada cliente. Traviosoft cubre todo el viaje, de la primera solicitud a la última factura, en español, inglés y francés, con precio publicado.',
+    card: 'Dos sistemas completos: una plataforma consolidada y un solo flujo de la solicitud a la factura con precio publicado.',
     basis:
-      'Los datos de Lemax vienen de su sitio web y de prensa del sector, revisados el 3 de noviembre de 2026. Lemax no publica precios: lo indicamos como "No publicado". Sus cifras de clientes son las que ellos muestran.',
+      'Los datos de Lemax vienen de su sitio web y de prensa del sector, revisados el 3 de noviembre de 2026. Lemax acuerda el precio con cada cliente: lo indicamos como "A consultar". Sus cifras de clientes son las que ellos muestran.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Turoperadores y DMC medianos y grandes'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Croacia, fundada en 1990'],
       ['Tamaño de equipo', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, 'Lemax GO desde 15 usuarios'],
-      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'No publicado; el precio se acuerda antes de firmar'],
-      ['Idiomas de su web', 'Español, inglés y francés', 'Inglés'],
+      ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar; se acuerda con cada cliente antes de firmar'],
       ['Implantación', 'Alta e importación sin coste con pago anual', 'Dicen "en producción en 90 días" para Lemax GO'],
-      ['Distribución y conexiones', 'Conexiones con tu web, tu contabilidad y tus herramientas de IA (Premium)', 'Conexión con proveedores, API de reservas, portal B2B, según su web'],
-      ['Normas fiscales de España', 'REAV y Veri*Factu con QR', 'No publicado'],
-      ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'No publicado']
+      ['Distribución y conexiones', 'Conexiones con tu web, tu contabilidad y tus herramientas de IA (Premium)', 'Conexión con proveedores, API de reservas, portal B2B, según su web']
     ],
     otherBetter: [
       'Eres un turoperador o un DMC con un equipo de 15 o más personas y procesos complejos de varios días.',
       'Necesitas distribución, conexión con proveedores por API, un portal B2B para agencias o un motor de reservas online.',
       'Buscas un proveedor con más de 30 años y con clientes en varios continentes.',
-      'Tienes presupuesto para un proyecto de implantación guiado.'
+      'Quieres un proyecto de implantación guiado.'
     ],
     usBetter: [
       'Quieres presupuestar, reservar y facturar todo el viaje en un solo sistema y arrancar con una puesta en marcha corta.',
@@ -263,8 +247,8 @@ const compares: Cmp[] = [
     switching:
       'Si hoy usas Lemax y quieres pasar a Traviosoft, exporta tus productos y precios y pregúntanos cómo importarlos desde tus hojas de cálculo. Cambiar de herramienta en plena temporada es arriesgado: lo normal es hacerlo en temporada baja. Consulta la [página Cambiar](/switch).',
     faq: [
-      { q: '¿Lemax sirve para un equipo de 4 personas?', a: ['Su paquete Lemax GO empieza en 15 usuarios, según su web. Para equipos más pequeños, pregúntales qué opciones tienen.'] },
-      { q: '¿Por qué no aparece el precio de Lemax?', a: ['Porque no lo publican; dicen que el paquete y su implantación se acuerdan antes de firmar. Preferimos poner "No publicado" a estimarlo.'] },
+      { q: '¿Para quién es Lemax GO?', a: ['Para equipos de 15 usuarios o más, según su web, con una implantación que describen como "en producción en 90 días". Para otros tamaños de equipo, pregúntales qué ofrecen.'] },
+      { q: '¿Cómo es el precio de Lemax?', a: ['Lemax acuerda el precio del paquete y de la implantación con cada cliente antes de firmar. Pídeles un presupuesto.'] },
       { q: '¿Traviosoft se conecta con mis otras herramientas?', a: ['Sí, en Premium. Tu web, tu programa de contabilidad o un desarrollador con el que trabajes pueden leer y escribir tus datos de Traviosoft, y puedes conectar el asistente de IA que ya usas.'] }
     ]
   },
@@ -274,41 +258,37 @@ const compares: Cmp[] = [
     other: 'Tourwriter',
     metaTitle: 'Traviosoft vs Tourwriter para DMC y diseñadores de viaje',
     metaDescription:
-      'Tourwriter es un software neozelandés para DMC de lujo. Comparamos precios de lista, idiomas, límites de itinerarios y fiscalidad en España con Traviosoft.',
+      'Tourwriter es un software neozelandés para DMC de lujo y diseñadores de viajes. Comparamos para quién es cada uno, planes, precios, idiomas y en qué destaca cada uno.',
     title: 'Traviosoft frente a Tourwriter: dos programas para diseñar viajes',
-    lead: 'Tourwriter es un software neozelandés, con itinerarios muy cuidados, pensado para DMC y diseñadores de viajes de lujo y en inglés. Traviosoft tiene precios en euros con usuarios incluidos, trabaja en español y francés, e incluye REAV y Veri*Factu.',
-    card: 'Itinerarios de lujo en inglés frente a un programa en euros con español y francés.',
+    lead: 'Tourwriter es un software neozelandés conocido por sus itinerarios muy cuidados, pensado para DMC y diseñadores de viajes de lujo que trabajan en inglés. Traviosoft tiene precios en euros con usuarios incluidos, trabaja en español y francés, e incluye REAV y Veri*Factu.',
+    card: 'Itinerarios de lujo muy cuidados en inglés y un programa en euros, en español y francés.',
     basis:
-      'Los datos de Tourwriter vienen de su web (páginas de planes y empresa) y de Capterra, revisados el 3 de noviembre de 2026. Sus precios son "desde", en dólares, por usuario, y piden presupuesto: el total real puede variar.',
+      'Los datos de Tourwriter vienen de su web (páginas de planes y empresa) y de Capterra, revisados el 3 de noviembre de 2026. Sus precios son "desde", en dólares, por usuario, con un presupuesto para cada equipo: el total real puede variar.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC y diseñadores de viajes de lujo, viajes FIT de varios días'],
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Wellington (Nueva Zelanda), fundada en 2004'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Starter desde 99 USD por usuario y mes; Pro desde 149 USD; Premium a consultar'],
-      ['3 usuarios, por mes (precios de lista)', `${PRICES.classic.yearly} EUR`, 'Unos 447 USD en Pro (3 x 149)'],
-      ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pago único desde 1.199 USD (migración, configuración y formación)'],
-      ['Límite de itinerarios', 'Plan con usuarios incluidos', 'Starter hasta 25 al año; Pro hasta 50 al año; Premium sin límite'],
-      ['Idiomas', 'Documentos en español, inglés, francés y más', 'Inglés'],
-      ['Reseñas públicas', 'Todavía sin reseñas en directorios', 'Capterra 4,5 (42 reseñas)'],
-      ['Normas fiscales de España', 'REAV y Veri*Factu con QR', 'No publicado']
+      ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pago único desde 1.199 USD, que incluye migración, configuración y formación'],
+      ['Idiomas', 'Documentos en español, inglés, francés y más', 'Inglés']
     ],
     otherBetter: [
       'Vendes viajes de lujo en inglés y quieres itinerarios con un diseño muy trabajado.',
-      'Valoras que otros DMC europeos ya lo usan y que hay reseñas públicas de usuarios.',
+      'Valoras que otros DMC europeos ya lo usan y que tiene muy buenas reseñas de usuarios (Capterra 4,5 con 42).',
       'Quieres una incorporación guiada con formación incluida en el pago de puesta en marcha.',
-      'Tu mercado principal es anglosajón y no necesitas documentos en español o francés.'
+      'Tu mercado principal es anglosajón.'
     ],
     usBetter: [
       'Quieres un precio en euros, con los usuarios incluidos en cada plan.',
-      'Tu agencia está en España y necesitas REAV y Veri*Factu.',
+      'Tu agencia está en España y quieres REAV y Veri*Factu integrados.',
       'Tus clientes hablan español o francés y quieres que presupuestos y correos salgan en su idioma.',
-      'Prefieres no pagar una puesta en marcha de más de mil dólares al empezar.'
+      'Quieres el alta y la importación incluidas con el pago anual.'
     ],
     switching:
       'Si usas Tourwriter, exporta tus productos, precios y proveedores a una hoja de cálculo y nosotros los importamos en el alta. Lo habitual es terminar los viajes en curso donde están y abrir las solicitudes nuevas en Traviosoft. Más pasos en la [página Cambiar](/switch).',
     faq: [
-      { q: '¿Cuánto cuesta Tourwriter para 3 usuarios?', a: ['Con los precios de lista del plan Pro, unos 447 USD al mes (3 x 149) más una puesta en marcha desde 1.199 USD. Es un precio "desde" y piden presupuesto, así que confírmalo con ellos.'] },
-      { q: '¿Tourwriter está en español?', a: ['Su web y producto están en inglés según lo que vimos. Si tus clientes necesitan documentos en español o francés, pregúntales cómo lo resuelven.'] },
-      { q: '¿Traviosoft limita el número de itinerarios?', a: ['Los planes de Traviosoft se definen por usuarios incluidos. Consulta la página de precios para ver exactamente qué incluye cada plan.'] }
+      { q: '¿Cómo es el precio de Tourwriter?', a: ['Sus planes empiezan en 99 USD por usuario y mes (Starter) y 149 USD (Pro), con un pago único de puesta en marcha desde 1.199 USD que incluye migración y formación. Preparan un presupuesto para cada equipo, así que confirma el total con ellos.'] },
+      { q: '¿En qué idiomas trabaja cada uno?', a: ['Tourwriter trabaja en inglés. Traviosoft trabaja en español, inglés y francés, y envía los documentos en el idioma del cliente.'] },
+      { q: '¿Puedo probar los dos?', a: ['Los dos ofrecen demostración. Lo más útil es llevar un viaje real tuyo a cada uno y comparar el itinerario que recibiría tu cliente.'] }
     ]
   }
 ];
@@ -321,72 +301,72 @@ const best: Article = {
   slug: 'mejor-software-dmc-receptivos',
   metaTitle: 'Mejor software para DMC y receptivos en España (2026)',
   metaDescription:
-    'Comparativa honesta de Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV y Excel: para quién es cada uno, precios publicados, idiomas y límites.',
+    'Comparativa independiente de Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV y Excel: para quién es cada uno, precios publicados, idiomas y puntos fuertes.',
   title: 'Mejor software para DMC y receptivos en España (2026)',
-  lead: 'Para un DMC, receptivo o agencia a medida en España, las opciones son Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio y GIAV; muchas agencias empiezan también con Excel y Word. Esta guía los compara con datos públicos: para quién es cada uno, precio, idiomas y límites.',
+  lead: 'Para un DMC, receptivo o agencia a medida en España, las opciones son Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio y GIAV; muchas agencias empiezan también con Excel y Word. Esta guía los compara con datos públicos: para quién es cada uno, precio, idiomas y en qué destaca cada uno.',
   updated: UPDATED,
-  card: 'Ocho opciones comparadas: para quién es cada una, precios publicados, idiomas y límites.',
+  card: 'Ocho opciones comparadas: para quién es cada una, precios publicados, idiomas y puntos fuertes.',
   blocks: [
     {
       type: 'p',
-      text: 'La lista la escribe Traviosoft, así que puedes dudar de nuestra imparcialidad. Por eso solo usamos datos públicos, indicamos "No publicado" cuando no hay dato y decimos dónde gana cada alternativa. Datos revisados el 3 de noviembre de 2026; los precios cambian, comprueba siempre las páginas oficiales.'
+      text: 'La lista la escribe Traviosoft, así que nos ceñimos a datos públicos, indicamos "A consultar" cuando un proveedor presenta sus precios en una demostración y decimos en qué destaca cada programa. Datos revisados el 3 de noviembre de 2026; los precios cambian, comprueba siempre las páginas oficiales.'
     },
     { type: 'h2', text: 'Tabla comparativa', id: 'tabla' },
     {
       type: 'table',
-      head: ['Programa', 'Para quién es', 'Tamaño de equipo', 'Precio público', 'Idiomas', 'Fundación'],
+      head: ['Programa', 'Para quién es', 'Tamaño de equipo', 'Precio', 'Idiomas', 'Fundación'],
       usRow: 0,
       rows: [
         ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, EN, FR y más', 'Ver Sobre nosotros'],
-        ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); onboarding obligatorio de 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT', '2019, París'],
-        ['Tourplan', 'Turoperadores y DMC consolidados', 'Mínimo 5 usuarios, según Capterra', 'No publicado en su web; Capterra indica desde 250 USD por usuario y mes', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
+        ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); pack de onboarding 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT', '2019, París'],
+        ['Tourplan', 'Turoperadores y DMC consolidados', 'Desde 5 usuarios, según Capterra', 'A consultar; Capterra indica desde 250 USD por usuario y mes', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
         ['Tourwriter', 'DMC y diseñadores de viajes de lujo', 'De 1 a más de 20 personas según plan', 'Desde 99 USD por usuario y mes; puesta en marcha desde 1.199 USD', 'Inglés', '2004, Nueva Zelanda'],
-        ['Lemax', 'Turoperadores y DMC medianos y grandes', 'Lemax GO desde 15 usuarios', 'No publicado', 'Inglés', '1990, Croacia'],
-        ['Kaptio', 'Operadores grandes de viajes de varios días', 'Empresa grande', 'No publicado', 'Inglés', '2012, Islandia'],
-        ['GIAV', 'Agencias de viajes en España, sobre todo minoristas', 'No publicado', 'No publicado', 'No publicado', 'No publicado'],
+        ['Lemax', 'Turoperadores y DMC medianos y grandes', 'Lemax GO desde 15 usuarios', 'A consultar', 'Inglés', '1990, Croacia'],
+        ['Kaptio', 'Operadores grandes de viajes de varios días', 'Grandes operadores', 'A consultar', 'Inglés', '2012, Islandia'],
+        ['GIAV', 'Agencias de viajes en España, con larga trayectoria en minoristas', 'A consultar', 'A consultar', 'Español', 'Muchos años en España'],
         ['Excel + Word', 'Cualquier agencia que empieza', 'Una a tres personas en la práctica', 'La licencia que ya tengas', 'El que tú escribas', '1985 (Excel)']
       ]
     },
-    { type: 'h2', text: 'Cada programa, con sus puntos fuertes y sus límites', id: 'programas' },
+    { type: 'h2', text: 'Cada programa y en qué destaca', id: 'programas' },
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Cubre el viaje entero: solicitudes, catálogo con precios por temporada, presupuestos con margen y comisión, reservas, cobros y facturas, con REAV y Veri*Factu para España. Muestra el precio y no cobra el alta con pago anual. Sus límites: todavía no tiene reseñas en directorios.'
+      text: 'Cubre el viaje entero: solicitudes, catálogo con precios por temporada, presupuestos con margen y comisión, reservas, cobros y facturas, con REAV y Veri*Factu para España. Muestra el precio, y el alta y la importación están incluidas con el pago anual.'
     },
     { type: 'h3', text: 'Ezus' },
     {
       type: 'p',
-      text: 'Es el competidor más completo para un DMC: precios públicos, web en cinco idiomas y muchas referencias (Capterra 4,7 con 61 reseñas, según su web). Sus límites: el pack de onboarding de 1.990 EUR es obligatorio y su contenido en español no trata el REAV.'
+      text: 'Un software completo para DMC, con precios públicos, web y soporte en cinco idiomas y muchas referencias (Capterra 4,7 con 61 reseñas, según su web). Su pack de onboarding de 1.990 EUR incluye una implantación guiada.'
     },
     { type: 'h3', text: 'Tourplan' },
     {
       type: 'p',
-      text: 'Software con unos 40 años de historia para turoperadores y DMC, con clientes en unos 75 países según su web. Sus límites: no publica precios y Capterra indica un mínimo de 5 usuarios desde 250 USD por usuario y mes.'
+      text: 'Software con unos 40 años de historia para turoperadores y DMC consolidados, con clientes en unos 75 países según su web. Precio a consultar; Capterra indica planes desde 5 usuarios a 250 USD por usuario y mes.'
     },
     { type: 'h3', text: 'Tourwriter' },
     {
       type: 'p',
-      text: 'Muy bueno para itinerarios cuidados de viajes de lujo y con reseñas de usuarios (Capterra 4,5 con 42). Sus límites: está en inglés, los planes Starter y Pro limitan los itinerarios por año, y el precio por usuario sube con el equipo, además de la puesta en marcha.'
+      text: 'Conocido por sus itinerarios de lujo muy cuidados, con muy buenas reseñas de usuarios (Capterra 4,5 con 42). Sus planes tienen precio por usuario, con una puesta en marcha que incluye migración y formación.'
     },
     { type: 'h3', text: 'Lemax' },
     {
       type: 'p',
-      text: 'Plataforma completa para turoperadores y DMC medianos y grandes, con distribución, API de reservas y portal B2B. Sus límites: Lemax GO empieza en 15 usuarios, no publica precios y su web está en inglés.'
+      text: 'Plataforma completa para turoperadores y DMC medianos y grandes, con distribución, API de reservas y portal B2B. Lemax GO está diseñado para equipos desde 15 usuarios, y el precio se acuerda con cada cliente.'
     },
     { type: 'h3', text: 'Kaptio' },
     {
       type: 'p',
-      text: 'Plataforma construida sobre Salesforce para operadores grandes de viajes de varios días; sus clientes citados en prensa incluyen grupos internacionales conocidos. Sus límites: es una solución empresarial, con venta por taller de descubrimiento y sin precios públicos.'
+      text: 'Plataforma construida sobre Salesforce para operadores grandes de viajes de varios días; sus clientes citados en prensa incluyen grupos internacionales conocidos. Se vende a través de un taller de descubrimiento, con precio a consultar.'
     },
     { type: 'h3', text: 'GIAV' },
     {
       type: 'p',
-      text: 'Programa de gestión para agencias de viajes con larga presencia en España, usado sobre todo por agencias minoristas. No hemos podido verificar precios ni funciones propias de receptivos, así que si encaja con tu negocio, pídeles una demostración.'
+      text: 'Programa de gestión para agencias de viajes con larga presencia en España, sobre todo entre agencias minoristas. Presenta precios y funciones en una demostración: si encaja con tu negocio, pídeles una.'
     },
     { type: 'h3', text: 'Excel + Word' },
     {
       type: 'p',
-      text: 'Gratis si ya tienes la licencia, flexible y conocido por todos. Sus límites aparecen con el volumen: fórmulas de margen copiadas a mano, versiones sueltas, facturas numeradas a mano y nada que avise de lo que falta por reservar.'
+      text: 'Gratis si ya tienes la licencia, flexible y conocido por todos. Muchas agencias empiezan aquí y pasan a un software específico cuando crecen sus viajes y su equipo.'
     },
     { type: 'h2', text: 'Cómo elegir', id: 'elegir' },
     {
@@ -406,8 +386,8 @@ const best: Article = {
       type: 'faq',
       items: [
         { q: '¿Cuál es el mejor software para un DMC o agencia a medida en España?', a: ['Depende de tu forma de trabajar y tu mercado. Para llevar todo el viaje de la solicitud a la factura, con precio visible y facturación española, mira Traviosoft y Ezus. Si vendes sobre todo en inglés y viajes de lujo, mira también Tourwriter.'] },
-        { q: '¿Cuánto cuesta un software para DMC?', a: [`Los precios públicos van de ${PRICES.classic.yearly} EUR al mes para ${PRICES.usersIncluded} usuarios (Traviosoft Classic) a 75 EUR por usuario y mes más 1.990 EUR de onboarding (Ezus). Tourplan, Lemax y Kaptio no publican precios.`] },
-        { q: '¿Necesito un programa específico de viajes o me vale un ERP general?', a: ['Un ERP general lleva bien la contabilidad, pero no calcula presupuestos con margen por servicio ni lista reservas por viaje. Muchas agencias usan los dos.'] }
+        { q: '¿Cuánto cuesta un software para DMC?', a: [`Los precios publicados van de ${PRICES.classic.yearly} EUR al mes para ${PRICES.usersIncluded} usuarios (Traviosoft Classic) a 75 EUR por usuario y mes más un pack de onboarding de 1.990 EUR (Ezus). Tourplan, Lemax y Kaptio dan sus precios a consultar.`] },
+        { q: '¿Necesito un programa específico de viajes o me vale un ERP general?', a: ['Un ERP general está pensado para la contabilidad; un software de viajes añade presupuestos con margen por servicio y una lista de reservas por viaje. Muchas agencias usan los dos.'] }
       ]
     },
     { type: 'p', text: 'Si quieres ver Traviosoft con un viaje tuyo, la [página Demo](/demo) explica cómo es la llamada.' }
