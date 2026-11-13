@@ -40,7 +40,12 @@ export const common: SiteContent['common'] = {
   faqTitle: 'Questions',
   backToResources: 'All resources',
   allResources: 'See all resources',
-  perMonth: 'EUR / month'
+  perMonth: 'EUR / month',
+  notFound: {
+    title: 'Page not found',
+    body: 'There is nothing at this address. Check it for typos, or start again from the home page.',
+    home: 'Go to the home page'
+  }
 };
 
 export const visuals: SiteContent['visuals'] = {

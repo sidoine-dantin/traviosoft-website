@@ -172,6 +172,7 @@ export type SiteContent = {
   common: {
     premium: string; next: string; onThisPage: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
+    notFound: { title: string; body: string; home: string };
   };
   visuals: VisualText;
   home: {
