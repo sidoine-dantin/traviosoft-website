@@ -30,7 +30,7 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
 
-  --display: var(--font-funnel), "Helvetica Neue", Arial, sans-serif;
+  --display: var(--font-schibsted), "Helvetica Neue", Arial, sans-serif;
   --body: var(--font-schibsted), "Helvetica Neue", Arial, sans-serif;
   --figure: var(--font-bricolage), "Arial Narrow", sans-serif; /* logo and price figures */
   --mono: var(--font-dm-mono), ui-monospace, Menlo, monospace;
@@ -88,17 +88,17 @@
  
   line-height: .88;
 }
-.kick { display: block; font-family: var(--display); font-weight: 500; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.05; }
+.kick { display: block; font-family: var(--display); font-weight: 650; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.05; }
 .giant { display: block; font-size: clamp(84px, 22vw, 330px); white-space: nowrap; color: var(--orange); }
-.h1 { font-family: var(--display); font-weight: 500; font-size: clamp(40px, 5.6vw, 72px); line-height: 1.02; letter-spacing: -.025em; text-wrap: balance; }
-.h2 { font-family: var(--display); font-weight: 500; letter-spacing: -.02em; font-size: clamp(32px, 4.4vw, 56px); line-height: 1; text-wrap: balance; }
+.h1 { font-family: var(--display); font-weight: 700; font-size: clamp(40px, 5.6vw, 72px); line-height: 1.02; letter-spacing: -.03em; text-wrap: balance; }
+.h2 { font-family: var(--display); font-weight: 700; letter-spacing: -.025em; font-size: clamp(32px, 4.4vw, 56px); line-height: 1; text-wrap: balance; }
 .h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 650; line-height: 1.15; }
 .lead { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.5; max-width: 46ch; }
 .muted { color: var(--muted); }
 .on-green .muted, .on-deep .muted { color: rgba(255, 244, 230, .75); }
 .prose p + p { margin-top: 1em; }
 .prose { font-size: 18px; line-height: 1.65; }
-.prose h2 { font-family: var(--display); font-weight: 500; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; margin: 2.2em 0 .6em; }
+.prose h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; margin: 2.2em 0 .6em; }
 .prose h3 { font-size: 20px; margin: 1.6em 0 .4em; }
 .prose ul, .prose ol { padding-left: 1.2em; margin: .8em 0; }
 .prose li + li { margin-top: .4em; }
@@ -171,7 +171,7 @@
 /* ---------- home hero collage ---------- */
 .hero { overflow: hidden; }
 .hero h1 { margin: 0; }
-.hero .hero-title { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 4.8vw, 64px); line-height: 1.05; letter-spacing: -.025em; color: var(--green); text-align: center; max-width: 24ch; margin: clamp(40px, 6vw, 80px) auto 0; text-wrap: balance; }
+.hero .hero-title { font-family: var(--display); font-weight: 700; font-size: clamp(36px, 4.8vw, 64px); line-height: 1.05; letter-spacing: -.03em; color: var(--green); text-align: center; max-width: 24ch; margin: clamp(40px, 6vw, 80px) auto 0; text-wrap: balance; }
 .col { position: relative; display: flex; justify-content: center; margin-top: 24px; padding-block: 20px 96px; }
 .col .phone { transform: rotate(2deg); position: relative; z-index: 2; }
 .tag { position: absolute; z-index: 3; border-radius: 16px; padding: 12px 16px; font-weight: 700; font-size: 16px; box-shadow: 0 14px 30px -16px rgba(0, 0, 0, .45); white-space: nowrap; line-height: 1.2; }
