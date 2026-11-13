@@ -45,7 +45,7 @@ function ItineraryPhone({ v }: { v: VisualText }) {
         {items.map(([t, s], i) => (
           <div className="day" key={i}>
             <span className="d">{v.dayLabel} {i + 1}</span>
-            <span><b>{v.days[i]}</b><br /><span style={{ color: '#7a6b5c' }}>{t} · {s}</span></span>
+            <span><b>{v.days[i]}</b><br /><span style={{ color: 'var(--muted)' }}>{t} · {s}</span></span>
           </div>
         ))}
       </div>
@@ -123,7 +123,7 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
         <Frag title={v.calendar}>
           <div style={{ padding: '14px 18px', display: 'grid', gap: 10 }}>
             {bands.map(b => (
-              <div key={b.l} style={{ position: 'relative', height: 28, background: '#F6EEE2', borderRadius: 8 }}>
+              <div key={b.l} style={{ position: 'relative', height: 28, background: 'var(--line)', borderRadius: 8 }}>
                 <span style={{
                   position: 'absolute', left: `${(b.s / 31) * 100}%`, width: `${(b.w / 31) * 100}%`, top: 0, bottom: 0,
                   background: b.c, borderRadius: 8, color: b.c === 'var(--yellow)' ? 'var(--green)' : 'var(--cream)',
@@ -200,7 +200,7 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
           <defs><path id="seal-c" d="M120,120 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0" /></defs>
           <circle cx="120" cy="120" r="118" fill="#015D47" />
           <circle cx="120" cy="120" r="70" fill="#E0F354" />
-          <text fontFamily="var(--display), Arial" fontWeight="800" fontSize="15" fill="#FFF4E6" letterSpacing="2">
+          <text fontFamily="var(--display), Arial" fontWeight="800" fontSize="15" fill="#FFFFFF" letterSpacing="2">
             <textPath href="#seal-c" textLength="570" lengthAdjust="spacing">{`${v.safe1.toUpperCase()} · ${v.safe2.toUpperCase()} · `}</textPath>
           </text>
           <text x="120" y="134" textAnchor="middle" fontFamily="var(--display), Arial" fontWeight="800" fontSize="44" fill="#015D47">EU</text>
