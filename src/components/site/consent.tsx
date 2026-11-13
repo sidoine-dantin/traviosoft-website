@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { Mark } from './logo';
 
 /*
- * Ad measurement (LinkedIn Insight Tag, Meta Pixel), loaded only after the
+ * Ad measurement (LinkedIn Insight Tag, Meta Pixel, Google tag for Google Ads), loaded only after the
  * visitor accepts. The IDs come from build-time variables; with neither set,
  * nothing is loaded and no banner is shown.
  *
@@ -18,7 +18,10 @@ import { Mark } from './logo';
 const LINKEDIN_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '10081602';
 const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID || '32264978'; // "Demo click"
 const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '999533615909262';
-const ENABLED = Boolean(LINKEDIN_ID || META_ID);
+// Google Ads tag ("AW-..." ID) and the conversion label of its "Demo click" action.
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
+const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '';
+const ENABLED = Boolean(LINKEDIN_ID || META_ID || GOOGLE_ADS_ID);
 
 const KEY = 'tv-consent';
 const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 182;
@@ -32,6 +35,8 @@ type Win = Window & {
   _linkedin_partner_id?: string;
   _linkedin_data_partner_ids?: string[];
   lintrk?: ((...args: unknown[]) => void) & { q?: unknown[] };
+  dataLayer?: unknown[];
+  gtag?: (...args: unknown[]) => void;
 };
 
 function readChoice(): Choice | null {
@@ -111,26 +116,50 @@ function loadTags() {
     addScript('https://connect.facebook.net/en_US/fbevents.js');
     w.fbq('init', META_ID);
   }
+  if (GOOGLE_ADS_ID) {
+    w.dataLayer = w.dataLayer ?? [];
+    // gtag needs the real `arguments` object, not an array.
+    w.gtag = function gtag() {
+      // eslint-disable-next-line prefer-rest-params
+      w.dataLayer!.push(arguments);
+    };
+    // The tag only ever runs after the visitor accepted, so advertising consent is granted; no analytics.
+    w.gtag('consent', 'default', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'denied',
+    });
+    w.gtag('js', new Date());
+    w.gtag('config', GOOGLE_ADS_ID, { send_page_view: false });
+    addScript(`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`);
+  }
 }
 
-/** Every page counts as a view; pricing and demo pages also mark interest (Meta ViewContent). */
+/**
+ * Every page counts as a view; pricing and demo pages also mark interest (Meta ViewContent).
+ * Google Ads builds its remarketing lists from these page views (by URL).
+ */
 function trackPage(pathname: string) {
   const w = window as Win;
+  if (GOOGLE_ADS_ID) w.gtag?.('event', 'page_view', { send_to: GOOGLE_ADS_ID, page_location: window.location.href });
   if (!META_ID) return;
   w.fbq?.('track', 'PageView');
   const page = pathname.split('/').filter(Boolean).pop();
   if (page === 'pricing' || page === 'demo') w.fbq?.('track', 'ViewContent', { content_name: page });
 }
 
-function linkedinConversion() {
+/** "Demo click" conversion on LinkedIn and Google Ads. */
+function demoConversion() {
   const w = window as Win;
   if (LINKEDIN_ID && LINKEDIN_CONVERSION_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_CONVERSION_ID) });
+  if (GOOGLE_ADS_ID && GOOGLE_ADS_DEMO_LABEL) w.gtag?.('event', 'conversion', { send_to: `${GOOGLE_ADS_ID}/${GOOGLE_ADS_DEMO_LABEL}` });
 }
 
 /*
  * Interest signals for retargeting: a click on a "Book a demo" link (any link to
  * the demo page) is a Meta Schedule, a click on the demo email address is a Meta
- * Contact, and both count as a LinkedIn conversion.
+ * Contact, and both count as a LinkedIn and a Google Ads conversion.
  */
 function trackClick(target: EventTarget | null) {
   const a = (target as Element | null)?.closest?.('a[href]');
@@ -139,7 +168,7 @@ function trackClick(target: EventTarget | null) {
   const w = window as Win;
   if (href.startsWith('mailto:')) {
     if (META_ID) w.fbq?.('track', 'Contact');
-    linkedinConversion();
+    demoConversion();
     return;
   }
   let path = '';
@@ -151,7 +180,7 @@ function trackClick(target: EventTarget | null) {
   }
   if (path.split('/').filter(Boolean).pop() === 'demo') {
     if (META_ID) w.fbq?.('track', 'Schedule');
-    linkedinConversion();
+    demoConversion();
   }
 }
 
