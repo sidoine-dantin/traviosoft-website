@@ -436,8 +436,9 @@
         {
           "heading": "Publicidad y audiencias",
           "body": [
-            "Si aceptas las cookies publicitarias, el Insight Tag de LinkedIn y el Píxel de Meta registran que tu navegador visitó este sitio, qué páginas viste y si hiciste clic para contactarnos. Lo usamos para medir nuestros anuncios y volver a mostrarlos a quienes visitaron el sitio. LinkedIn y Meta solo nos dan totales y tamaños de audiencia, nunca nombres.",
+            "Si aceptas las cookies publicitarias, el Insight Tag de LinkedIn y el Píxel de Meta registran que tu navegador visitó este sitio, qué páginas viste y si abriste la página de demo o hiciste clic para contactarnos. Lo usamos para medir nuestros anuncios y volver a mostrarlos a quienes visitaron el sitio. LinkedIn y Meta solo nos dan totales y tamaños de audiencia, nunca nombres.",
             "También podemos subir a LinkedIn y Meta una lista de datos de contacto profesionales (nombre de la empresa, web y correo profesional del propietario o responsable de una agencia) para que nuestros anuncios lleguen a esas empresas de viajes. Los datos se cifran (hash) antes de subirlos, solo sirven para encontrar las cuentas y las plataformas los borran tras la comparación. Lo hacemos sobre la base de nuestro interés legítimo en presentar Traviosoft a profesionales del sector.",
+            "Si nos contactas o reservas una demo, también podemos añadir tu correo profesional a esas listas, para que nuestros anuncios te sigan llegando mientras conoces Traviosoft. Se cifra (hash) del mismo modo antes de subirlo. Lo hacemos sobre la base de nuestro interés legítimo en mantener el contacto con quien se ha dirigido a nosotros, y puedes oponerte en cualquier momento como se explica a continuación.",
             "Puedes oponerte en cualquier momento: escríbenos a sidoine@traviosoft.com y te quitamos de nuestras listas, cambia tu elección con \"Configurar cookies\" al pie de cada página, o ajusta los anuncios en tus cuentas de LinkedIn y Meta."
           ]
         },

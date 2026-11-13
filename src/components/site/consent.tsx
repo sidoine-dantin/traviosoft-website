@@ -111,16 +111,46 @@ function loadTags() {
   }
 }
 
-function trackPage() {
+/** Every page counts as a view; pricing and demo pages also mark interest (Meta ViewContent). */
+function trackPage(pathname: string) {
   const w = window as Win;
-  if (META_ID) w.fbq?.('track', 'PageView');
+  if (!META_ID) return;
+  w.fbq?.('track', 'PageView');
+  const page = pathname.split('/').filter(Boolean).pop();
+  if (page === 'pricing' || page === 'demo') w.fbq?.('track', 'ViewContent', { content_name: page });
 }
 
-/** A click on the demo email address counts as a lead for both ad platforms. */
-function trackLead() {
+function linkedinConversion() {
   const w = window as Win;
-  if (META_ID) w.fbq?.('track', 'Contact');
   if (LINKEDIN_ID && LINKEDIN_CONVERSION_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_CONVERSION_ID) });
+}
+
+/*
+ * Interest signals for retargeting: a click on a "Book a demo" link (any link to
+ * the demo page) is a Meta Schedule, a click on the demo email address is a Meta
+ * Contact, and both count as a LinkedIn conversion.
+ */
+function trackClick(target: EventTarget | null) {
+  const a = (target as Element | null)?.closest?.('a[href]');
+  if (!a) return;
+  const href = a.getAttribute('href') ?? '';
+  const w = window as Win;
+  if (href.startsWith('mailto:')) {
+    if (META_ID) w.fbq?.('track', 'Contact');
+    linkedinConversion();
+    return;
+  }
+  let path = '';
+  try {
+    const url = new URL(href, window.location.href);
+    if (url.origin === window.location.origin) path = url.pathname;
+  } catch {
+    return;
+  }
+  if (path.split('/').filter(Boolean).pop() === 'demo') {
+    if (META_ID) w.fbq?.('track', 'Schedule');
+    linkedinConversion();
+  }
 }
 
 export function CookieSettingsLink({ label }: { label: string }) {
@@ -150,15 +180,12 @@ export function Consent({ text, accept, refuse, policy }: { text: string; accept
   useEffect(() => {
     if (choice !== 'granted') return;
     loadTags();
-    trackPage();
+    trackPage(pathname);
   }, [choice, pathname]);
 
   useEffect(() => {
     if (choice !== 'granted') return;
-    const onClick = (e: MouseEvent) => {
-      const a = (e.target as Element | null)?.closest?.('a[href^="mailto:"]');
-      if (a) trackLead();
-    };
+    const onClick = (e: MouseEvent) => trackClick(e.target);
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
   }, [choice]);
