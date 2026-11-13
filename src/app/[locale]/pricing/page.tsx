@@ -23,7 +23,7 @@ export default async function PricingPage({ params }: Props) {
   return (
     <>
       <section className="wrap" style={{ paddingBlock: 'clamp(56px, 8vw, 100px) 40px' }}>
-        <h1 className="h1" style={{ color: 'var(--green)', maxWidth: '14ch' }}>{p.title}</h1>
+        <h1 className="h1" style={{ color: 'var(--green)' }}>{p.title}</h1>
         <p className="lead muted" style={{ marginTop: 22 }}>{p.lead}</p>
       </section>
       <section className="wrap" style={{ paddingBottom: 'clamp(64px, 8vw, 110px)' }}>
@@ -33,14 +33,17 @@ export default async function PricingPage({ params }: Props) {
         </div>
       </section>
       <section className="on-cream2 band">
-        <div className="wrap grid-2" style={{ gap: 'clamp(32px, 6vw, 96px)', alignItems: 'start' }}>
-          <div>
-            <h2 className="h2" style={{ color: 'var(--green)' }}>{p.includedTitle}</h2>
-            <p style={{ marginTop: 24 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}>{c.jobs.sell.name} · {c.jobs.book.name} · {c.jobs['get-paid'].name} →</Link></p>
-          </div>
-          <ul className="feat-list" style={{ listStyle: 'none', padding: 0, marginTop: 0 }}>
-            {p.included.map(i => <li key={i} className="feat-static">{i}</li>)}
+        <div className="wrap">
+          <h2 className="h2" style={{ color: 'var(--green)' }}>{p.includedTitle}</h2>
+          <ul className="incl">
+            {p.included.map(i => (
+              <li key={i}>
+                <span className="incl-mark" aria-hidden="true">✓</span>
+                <span>{i}</span>
+              </li>
+            ))}
           </ul>
+          <p style={{ marginTop: 36 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}>{c.jobs.sell.name} · {c.jobs.book.name} · {c.jobs['get-paid'].name} →</Link></p>
         </div>
       </section>
       <section className="band">

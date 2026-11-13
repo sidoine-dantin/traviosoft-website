@@ -8,30 +8,30 @@ const sell: JobPage = {
   name: 'Sell',
   menuLine: 'From the first request to the accepted quote',
   step: '1 of 4',
-  heroTitle: 'Answer first, with the right price',
+  heroTitle: 'Requests, catalogue and quotes',
   heroLead:
-    'Clients often book with the agency that answers first with a clear, correct quote. Traviosoft keeps every request in view and builds the quote from your own rates, so you can send it the same day.',
+    'Every request in one list, a catalogue with your rates by season, and quotes built from it with your margin and commission.',
   heroVisual: 'quote',
   chapters: [
     {
       id: 'requests',
       kicker: 'Requests',
-      title: 'Every request in hand',
+      title: 'One list of requests',
       lead: 'Every enquiry in one list with its next step, whether it came by email, phone or WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'One list of requests', body: ['Each request has a status, so you see at a glance what is new, what is quoted and what is waiting for an answer.'] },
+        { title: 'One list of requests', body: ['Each request has a status: new, quoted or waiting for an answer.'] },
         { title: 'A request becomes a project', body: ['When a request turns serious, it becomes a project. The client, the dates, the travellers and your notes stay together for the whole trip.'] },
         { title: 'One record per client', body: ['Type a name or an email you already have and Traviosoft shows the existing client, so each client keeps one history.'] },
         { title: 'Reminders', body: ['Put a date on a request. It comes back on your dashboard on the right day.'] },
-        { title: 'Learn from every closed request', body: ['Close a request with a reason. After a season, you see what to adjust: price, timing, destination.'] }
+        { title: 'Reasons for lost requests', body: ['Close a request with a reason: price, timing, destination.'] }
       ]
     },
     {
       id: 'catalogue',
       kicker: 'Catalogue',
-      title: 'Your rates, ready to quote',
-      lead: 'Hotels, transfers, guides and activities, each with its prices by date. The right price for the travel dates is picked for you.',
+      title: 'Products with prices by date',
+      lead: 'Hotels, transfers, guides and activities, each with prices by date. A quote uses the price for the travel dates.',
       visual: 'catalogue',
       features: [
         { title: 'Price periods by date', body: ['Low, mid and high season, special events, new contract rates. Each product keeps its prices by period, and the quote uses the one that matches the travel dates.'] },
@@ -44,38 +44,38 @@ const sell: JobPage = {
     {
       id: 'quotes',
       kicker: 'Quotes',
-      title: 'A quote in minutes, margin included',
-      lead: 'Set your pricing rules once. Every line of every quote follows them, so every margin and commission is in the price.',
+      title: 'Margin, VAT and commission',
+      lead: 'Set your pricing rules once, and every quote line applies them.',
       visual: 'quote',
       features: [
         { title: 'Margin, VAT and commission', body: ['A pricing procedure turns your net rates into selling prices: your margin, the right VAT, and the commission when an agency or a partner sells the trip.'] },
         { title: 'Per-person prices', body: ['Price per adult or per child. The client sees a clear price per person and a total.'] },
-        { title: 'Client-facing names', body: ['Keep your internal names for your team. The client reads a clean, friendly name for each service.'] },
-        { title: 'Included and not included', body: ['A clear list of what the price covers and what stays with the traveller, agreed from the start.'] },
+        { title: 'Client-facing names', body: ['Your team sees the internal name of each service, the client sees its client-facing name.'] },
+        { title: 'Included and not included', body: ['What the price covers and what it does not, listed on the quote.'] },
         { title: 'Versions', body: ['The client asks for a cheaper hotel? Make a new version. The previous one stays, and you can reopen it at any time.'] },
-        { title: 'Expiry date', body: ['Quick picks set how long the price is valid, so each quote is accepted at a price that still holds.'] }
+        { title: 'Expiry date', body: ['Set how long the price is valid.'] }
       ]
     },
     {
       id: 'send',
       kicker: 'Send and follow up',
-      title: 'Sent tonight, followed up next week',
-      lead: 'Send the quote by email in the client’s language. A week later, Traviosoft brings it back to you for a follow-up.',
+      title: 'Sending and follow-up',
+      lead: 'The quote goes by email in the client’s language. Seven days later it comes back to you for a follow-up.',
       visual: 'followup',
       features: [
         { title: 'Email templates', body: ['Your own email texts, in each language. The quote is attached and the email is ready to go.'] },
         { title: 'In the client’s language', body: ['Spanish, English, French and more. The quote, the email and the documents follow the client’s language.'] },
-        { title: 'Follow-up after 7 days', body: ['A week after sending, the quote comes back to you to follow up, so every interested client hears from you again, even in a busy week.'] }
+        { title: 'Follow-up after 7 days', body: ['A week after sending, the quote appears in your list to follow up.'] }
       ]
     },
     {
       id: 'proposal',
       kicker: 'Proposal',
-      title: 'A proposal your client enjoys opening',
-      lead: 'Your client gets a link to a clear page with the trip, in their language and with your brand.',
+      title: 'A page with the trip',
+      lead: 'The client gets a link to a page with the trip, in their language and with your logo.',
       visual: 'proposal',
       features: [
-        { title: 'A shareable proposal page', body: ['One link with the trip, the services and the price. It opens on any phone, straight from the link.'] },
+        { title: 'A shareable proposal page', body: ['One link with the trip, the services and the price. It opens on any phone.'] },
         { title: 'Your brand', body: ['Your logo and colours on the page and on every document.'] },
         { title: 'The same numbers everywhere', body: ['The proposal, the quote PDF and later the invoice all come from the same lines. Change a price once and it is right everywhere.'] }
       ]
@@ -84,7 +84,7 @@ const sell: JobPage = {
       id: 'partners',
       kicker: 'Partner agencies',
       title: 'Sell through partner agencies',
-      lead: 'Most DMC trips come from agencies abroad. Quote the partner, keep their client on the same trip, and settle their commission from the same numbers.',
+      lead: 'Quote the partner agency, keep their client on the trip, and settle their commission from the same numbers.',
       visual: 'quote',
       features: [
         { title: 'The partner and their client', body: ['The quote goes to the partner agency, the travellers are their clients. Both stay on the trip, from the first quote to the last invoice.'] },
@@ -98,7 +98,7 @@ const sell: JobPage = {
     { q: 'Can I import my current catalogue?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
     { q: 'Can several suppliers sell the same hotel or service?', a: ['Yes. A product can have several suppliers, each with its own rates. You choose the supplier per trip.'] },
     { q: 'What does my client see?', a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team. You can open the example trips to see it.'] },
-    { q: 'Do I have to use the catalogue for every quote?', a: ['You choose. Any quote can take a one-off line next to catalogue lines. The catalogue saves time on what you sell often.'] }
+    { q: 'Do I have to use the catalogue for every quote?', a: ['No. A quote can mix catalogue lines and one-off lines.'] }
   ]
 };
 
@@ -110,15 +110,15 @@ const book: JobPage = {
   name: 'Book and run',
   menuLine: 'From the accepted quote to the trip done',
   step: '2 of 4',
-  heroTitle: 'Every booking confirmed, even in high season',
+  heroTitle: 'Orders, bookings and the client itinerary',
   heroLead:
-    'Once the client says yes, every service has to be booked, confirmed and sent to the right people. Traviosoft keeps the list for each trip, so the whole team works from the same one.',
+    'When the client pays the deposit, the quote becomes an order with every service to book. Each trip has its booking list, its supplier emails and an itinerary page for the traveller.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Order',
-      title: 'The deposit opens the order',
+      title: 'The deposit creates the order',
       lead: 'Record the first payment and the quote is accepted: the order is created with every service already on it.',
       visual: 'order',
       features: [
@@ -130,20 +130,20 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Statuses',
-      title: 'See what is left to do',
-      lead: 'Booking, trip and payment badges update themselves. You know at a glance which trips need you today.',
+      title: 'Booking, trip and payment statuses',
+      lead: 'Statuses change as services are confirmed and payments come in.',
       visual: 'order',
       features: [
         { title: 'A booking list per trip', body: ['Hotel, guide, car, tickets: each service shows whether it is to book, waiting for the supplier or confirmed.'] },
-        { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked. When the balance is paid, the payment badge turns green. Statuses follow the work.'] },
+        { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked. When the balance is paid, the payment badge turns green.'] },
         { title: 'Archive', body: ['Finished trips go to the archive and stay searchable. A deleted record can be restored from the trash.'] }
       ]
     },
     {
       id: 'suppliers',
       kicker: 'Suppliers',
-      title: 'Suppliers in one place',
-      lead: 'Contacts, documents and every email exchanged, filed on the right trip and at hand when the client calls.',
+      title: 'Supplier records and emails',
+      lead: 'Contacts, documents and emails, filed on the supplier and on the trip.',
       visual: 'suppliers',
       features: [
         { title: 'Supplier emails filed for you', body: ['Confirmations and replies from suppliers land on the trip they belong to.'] },
@@ -155,11 +155,11 @@ const book: JobPage = {
     {
       id: 'itinerary',
       kicker: 'Client itinerary',
-      title: 'A day-by-day trip on their phone',
-      lead: 'Once the trip is confirmed, share a page with each day, the hotels, the times and the contacts. Your traveller opens it anywhere.',
+      title: 'A day-by-day itinerary',
+      lead: 'A page with each day, the hotels, the times and the contacts, shared with the traveller by link.',
       visual: 'itinerary',
       features: [
-        { title: 'A shareable itinerary page', body: ['One link, day by day. It opens on any phone, straight from the link.'] },
+        { title: 'A shareable itinerary page', body: ['One link, day by day. It opens on any phone.'] },
         { title: 'In the traveller’s language and your brand', body: ['The itinerary follows the client’s language and carries your logo.'] },
         { title: 'Always up to date', body: ['Change a pickup time on the trip and the page shows the new time. The link stays the same.'] }
       ]
@@ -168,7 +168,7 @@ const book: JobPage = {
       id: 'groups',
       kicker: 'Groups',
       title: 'Groups and rooming lists',
-      lead: 'Incentives, associations, school trips: every traveller named, every room planned, every hotel told who sleeps where.',
+      lead: 'Traveller lists, services for part of the group, and a rooming list per hotel.',
       visual: 'order',
       features: [
         { title: 'The travellers list', body: ['Paste or import the list from a spreadsheet, or send the organiser a form link. Up to 200 travellers per trip.'] },
@@ -180,8 +180,8 @@ const book: JobPage = {
     {
       id: 'calendar',
       kicker: 'Calendar',
-      title: 'Who travels this week',
-      lead: 'Every trip is a band on the calendar. On your phone, the day’s services as a simple list.',
+      title: 'Trips on a calendar',
+      lead: 'Each trip is a band on the calendar. On a phone, the day’s services show as a list.',
       visual: 'calendar',
       features: [
         { title: 'Trip bands', body: ['See every trip from arrival to departure, and how busy the coming weeks are.'] },
@@ -205,28 +205,28 @@ const getPaid: JobPage = {
   name: 'Get paid',
   menuLine: 'Payments, invoices and your numbers',
   step: '3 of 4',
-  heroTitle: 'Get paid on time, invoice without retyping',
+  heroTitle: 'Payments, invoices and figures',
   heroLead:
-    'The money side of a trip lives with the trip. In Traviosoft, payments and invoices come from the quote the client accepted, so the amounts always match.',
+    'Payments and invoices come from the accepted quote, so the amounts match.',
   heroVisual: 'payments',
   chapters: [
     {
       id: 'schedule',
       kicker: 'Payment schedule',
-      title: 'Deposit and balance, planned from the start',
-      lead: 'Set the deposit and the balance with their dates on the quote. The client knows from day one what to pay and when.',
+      title: 'Deposit and balance with due dates',
+      lead: 'The deposit and the balance are set on the quote, with their due dates.',
       visual: 'payments',
       features: [
         { title: 'Deposit and balance', body: ['A percentage or an amount, each with its due date, on every trip.'] },
         { title: 'What is due this week', body: ['Every payment due or past its date, across all your trips, in one list.'] },
-        { title: 'Payment reminders', body: ['Friendly reminders go to the client before and after a due date, in their language.'] }
+        { title: 'Payment reminders', body: ['Reminders go to the client before and after a due date, in their language.'] }
       ]
     },
     {
       id: 'links',
       kicker: 'Payment links',
-      title: 'The client pays from the email',
-      lead: 'Add your payment link to the email. The client pays in a few clicks, from their phone.',
+      title: 'Payment links in the email',
+      lead: 'Your payment link goes out with the email, and the client pays from it.',
       visual: 'payments',
       features: [
         { title: 'Your own payment link', body: ['Connect the payment link you already use. It goes out with the quote email.'] },
@@ -236,8 +236,8 @@ const getPaid: JobPage = {
     {
       id: 'invoices',
       kicker: 'Invoices',
-      title: 'Invoices from the numbers you already typed',
-      lead: 'Deposit and final invoices are made from the trip. The quoted price flows into the invoice, so the amounts match the quote to the cent.',
+      title: 'Invoices from the trip',
+      lead: 'Deposit and final invoices are made from the trip, with the amounts of the quote.',
       visual: 'invoices',
       features: [
         { title: 'Deposit and final invoices', body: ['Made from the trip in one click, with the client’s details and the right amounts.'] },
@@ -251,8 +251,8 @@ const getPaid: JobPage = {
     {
       id: 'dashboard',
       kicker: 'Dashboard',
-      title: 'Know where your agency stands',
-      lead: 'Sales, trips, money in and money out in one look, for the period you choose, always up to date.',
+      title: 'Sales, trips and cash',
+      lead: 'Sales, trips, money in and money out, for the period you choose.',
       visual: 'dashboard',
       features: [
         { title: 'Sales and trips', body: ['What you sold and how many trips, this month, this season or this year.'] },
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Which payment providers work?', a: ['You add the payment link of the provider you already use. The client pays there, and you record the payment on the trip.'] },
     { q: 'Can my accountant get the files?', a: ['Yes. Export an Excel recap or a zip of every invoice PDF for any period.'] },
-    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. Country-specific schemes are switched on in the settings: today that includes Spain’s REAV and Veri*Factu. Tell us your country in the demo and we will tell you plainly what is covered.'] }
+    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. Country-specific schemes are switched on in the settings: today that includes Spain’s REAV and Veri*Factu. For other countries, ask us in the demo.'] }
   ]
 };
 
@@ -276,15 +276,15 @@ const setup: JobPage = {
   name: 'Your setup',
   menuLine: 'Brands, languages, currencies, team and data',
   step: '4 of 4',
-  heroTitle: 'Your agency, set up your way',
+  heroTitle: 'Brands, languages, currencies and team',
   heroLead:
-    'The settings that make Traviosoft fit your agency: your brands, your languages, your country’s rules and your team. Set them once and every trip follows.',
+    'Settings for brands, languages, currencies, country tax rules and users. They apply to every trip.',
   heroVisual: 'brands',
   chapters: [
     {
       id: 'brands',
       kicker: 'Brands',
-      title: 'Several brands, one account',
+      title: 'Several brands in one account',
       lead: 'Run a second brand or a second company from the same place, each with its own look and its own numbering.',
       visual: 'brands',
       features: [
@@ -295,8 +295,8 @@ const setup: JobPage = {
     {
       id: 'languages',
       kicker: 'Languages',
-      title: 'Every document in your client’s language',
-      lead: 'Write once. Quotes, emails, proposals and itineraries go out in Spanish, English, French and more.',
+      title: 'Documents in the client’s language',
+      lead: 'Quotes, emails, proposals and itineraries in Spanish, English, French and more.',
       visual: 'languages',
       features: [
         { title: 'Documents per language', body: ['Each client has a language, and every document follows it.'] },
@@ -307,7 +307,7 @@ const setup: JobPage = {
     {
       id: 'currencies',
       kicker: 'Currencies',
-      title: 'Buy and sell in any currency',
+      title: 'Several currencies',
       lead: 'Lodges in dollars, a client in pounds, your books in euros. Each quote has its own currency, and your numbers add up in yours.',
       visual: 'payments',
       features: [
@@ -320,8 +320,8 @@ const setup: JobPage = {
     {
       id: 'country',
       kicker: 'Country settings',
-      title: 'Your country’s rules, switched on',
-      lead: 'Tax schemes and e-invoicing depend on where your agency is. They are settings, switched on for the countries that need them.',
+      title: 'Country tax rules',
+      lead: 'Tax schemes and e-invoicing are settings, switched on for the countries that need them.',
       visual: 'invoices',
       features: [
         { title: 'Travel agency VAT schemes', body: ['Where a country has a special VAT scheme for travel agencies, the right labels appear on your invoices.'] },
@@ -331,8 +331,8 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Team',
-      title: 'Your team on the same trips',
-      lead: 'Everyone sees the same client, quote and booking. Add a colleague in a minute.',
+      title: 'Users and teams',
+      lead: 'Everyone works on the same clients, quotes and bookings.',
       visual: 'team',
       features: [
         { title: 'Users included in your plan', body: ['3 users on both plans, and more whenever your team grows.'] },
@@ -342,7 +342,7 @@ const setup: JobPage = {
     {
       id: 'data',
       kicker: 'Your data',
-      title: 'Your data, safe and yours',
+      title: 'Data and hosting',
       lead: 'Each agency has its own separate space, hosted in the European Union, kept apart from every other agency.',
       visual: 'safe',
       features: [
@@ -354,8 +354,8 @@ const setup: JobPage = {
     {
       id: 'connections',
       kicker: 'Connections',
-      title: 'Connect your other tools',
-      lead: 'Traviosoft works with the tools you already use, with the same rights as in the app.',
+      title: 'Connections',
+      lead: 'Your other software can read and write your Traviosoft data, with the same rights as in the app.',
       visual: 'connections',
       features: [
         { title: 'Your website and accounting', body: ['Your website, your accounting tool or a developer you work with can read and write your Traviosoft data.'], premium: true },

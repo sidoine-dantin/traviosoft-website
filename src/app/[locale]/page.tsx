@@ -25,17 +25,14 @@ export default async function HomePage({ params }: Props) {
     <>
       <header className="hero on-cream">
         <div className="wrap">
-          <h1 style={{ color: 'var(--green)', paddingTop: 'clamp(28px, 5vw, 64px)' }}>
-            <span className="kick">{h.kick}</span>
-            <span className="giant disp">{h.giant}</span>
-          </h1>
+          <h1 className="hero-title">{h.title}</h1>
+          <p className="hero-sub">{h.sub}</p>
           <div className="col">
             {h.tags.map((t, i) => (
               <span key={i} className={`tag t${i + 1}`}>{t.t}<small>{t.s}</small></span>
             ))}
             <QuotePhone v={c.visuals} />
           </div>
-          <p className="hero-sub">{h.sub}</p>
         </div>
       </header>
 

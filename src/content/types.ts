@@ -149,7 +149,8 @@ export type Plan = {
   users: string;
   yearly: string;
   monthly: string;
-  priceNote: string;
+  /** extra-user price, shown for the billing period picked on the switch */
+  priceNote: { yearly: string; monthly: string };
   hot?: boolean;
   lines: { text: string; no?: boolean }[];
 };
@@ -179,7 +180,7 @@ export type SiteContent = {
   visuals: VisualText;
   home: {
     metaTitle: string; metaDescription: string;
-    kick: string; giant: string; sub: string;
+    title: string; sub: string;
     tags: { t: string; s: string }[];
     tripTitle: string;
     steps: { time: string; title: string; body: string; job: JobSlug }[];
