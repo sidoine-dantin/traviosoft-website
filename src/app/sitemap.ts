@@ -5,7 +5,7 @@ import { getContent, articleAlternates, locales } from '@/content';
 
 const priority: Record<string, number> = {
   '': 1, '/sell': 0.9, '/book': 0.9, '/get-paid': 0.9, '/setup': 0.8, '/pricing': 0.9,
-  '/example': 0.7, '/demo': 0.7, '/switch': 0.6, '/faq': 0.6, '/about': 0.5,
+  '/example': 0.7, '/example/group': 0.6, '/example/safari': 0.6, '/demo': 0.7, '/switch': 0.6, '/faq': 0.6, '/about': 0.5,
   '/resources': 0.6, '/glossary': 0.6
 };
 

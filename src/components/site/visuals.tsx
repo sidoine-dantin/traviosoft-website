@@ -209,9 +209,9 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'connections':
       return (
         <Frag title={v.connections}>
-          <Row a="API" s="REST · GraphQL" b={pill('ON', 'ok')} />
-          <Row a="MCP" s="AI tools" b={pill('ON', 'ok')} />
-          <Row a="Website" s="Requests from your site" b={pill('API', 'grey')} />
+          <Row a="Website" s="Requests from your site" b={pill('ON', 'ok')} />
+          <Row a="Accounting" s="Sales, purchases, payments" b={pill('ON', 'ok')} />
+          <Row a="AI tools" s="Claude, ChatGPT" b={pill('ON', 'ok')} />
         </Frag>
       );
   }

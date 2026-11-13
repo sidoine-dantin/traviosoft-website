@@ -3,7 +3,7 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Product',
   pricing: 'Pricing',
-  example: 'Example trip',
+  example: 'Example trips',
   demo: 'Book a demo',
   menuLabel: 'Menu',
   close: 'Close',
@@ -32,7 +32,7 @@ export const footer: SiteContent['footer'] = {
 };
 
 export const common: SiteContent['common'] = {
-  later: 'Coming',
+  premium: 'Premium',
   next: 'Next',
   onThisPage: 'On this page',
   updated: 'Last updated',
@@ -53,7 +53,7 @@ export const visuals: SiteContent['visuals'] = {
   newReq: 'New',
   quoted: 'Quoted',
   waiting: 'Waiting',
-  won: 'Won',
+  won: 'Accepted',
   catalogue: 'Catalogue · Hotel Alfonso XIII',
   season: 'High season',
   suppliers: 'suppliers',
@@ -101,7 +101,7 @@ export const visuals: SiteContent['visuals'] = {
   owner: 'Owner',
   sales2: 'Sales',
   ops: 'Operations',
-  safe1: 'Your own database',
+  safe1: 'Private space per agency',
   safe2: 'Hosted in the EU',
   connections: 'Connections',
   days: ['Seville', 'Seville', 'Córdoba', 'Granada', 'Granada', 'Ronda', 'Málaga', 'Home'],

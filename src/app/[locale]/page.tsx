@@ -5,6 +5,7 @@ import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { QuotePhone } from '@/components/site/visuals';
 import { KeyFacts } from '@/components/site/key-facts';
+import { PRICES } from '@/content/prices';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -45,7 +46,7 @@ export default async function HomePage({ params }: Props) {
             {h.steps.map((s, i) => (
               <li key={i}>
                 <Link href={`/${s.job}`} className="step">
-                  <span className="dot" aria-hidden="true">{i + 1}</span>
+                  <span className="dot" aria-hidden="true" />
                   <span className="mono" style={{ opacity: 0.8 }}>{s.time}</span>
                   <b>{s.title}</b>
                   <p>{s.body}</p>
@@ -93,10 +94,10 @@ export default async function HomePage({ params }: Props) {
             <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
           </div>
           <div className="coin" style={{ background: 'var(--orange)', color: 'var(--cream)' }}>
-            <span className="n num">190</span><span className="lbl">{h.coin1}</span>
+            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span>
           </div>
           <div className="coin" style={{ background: 'var(--yellow)', color: 'var(--green)' }}>
-            <span className="n num">250</span><span className="lbl">{h.coin2}</span>
+            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span>
           </div>
         </div>
         <div className="wrap" style={{ marginTop: 'clamp(56px, 8vw, 96px)', color: 'var(--green)' }}>

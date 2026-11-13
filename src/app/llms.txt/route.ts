@@ -1,5 +1,6 @@
 import { getContent, locales } from '@/content';
 import { baseUrl } from '@/lib/seo';
+import { PRICES } from '@/content/prices';
 
 export const dynamic = 'force-static';
 
@@ -9,7 +10,7 @@ export function GET() {
   const lines: string[] = [
     '# Traviosoft',
     '',
-    `> ${en.footer.tagline} Web management software for tailor-made travel agencies and DMCs. From 190 EUR a month for 3 users and 250 EUR a month for 5 users, billed yearly, VAT excluded. Every feature in every plan. Each agency has its own database, hosted in the EU. Site in Spanish, English and French.`,
+    `> ${en.footer.tagline} Web management software for tailor-made travel agencies and DMCs. Two plans, billed yearly or monthly, VAT excluded: Classic from ${PRICES.classic.yearly} EUR a month and Premium from ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included in both. Each agency has its own separate space, hosted in the EU. Site in Spanish, English and French.`,
     '',
     '## Key facts',
     ...en.home.facts.map(f => `- ${f.k}: ${f.v}`),

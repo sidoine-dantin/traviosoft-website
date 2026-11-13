@@ -1,121 +1,113 @@
 import type { SiteContent } from '../types';
+import { PRICES } from '../prices';
 
 export const pricing: SiteContent['pricing'] = {
-  metaTitle: 'Tarifs : dès 190 EUR par mois, tout inclus | Traviosoft',
+  metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    'Trois formules, seul le nombre d’utilisateurs change. Toutes les fonctions partout. Dès 190 EUR par mois pour 3 utilisateurs, mise en place offerte en annuel.',
-  title: 'Toutes les fonctions, un seul prix.',
-  lead: 'Les formules ne diffèrent que par le nombre d’utilisateurs, rien d’autre. Toutes les fonctions sont dans toutes les formules : il n’y a jamais à se demander ce qui manque.',
+    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les équipes, les devises, les achats, plusieurs marques et l’assistant. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
+  title: 'Deux offres, des prix clairs',
+  lead: 'Classic contient tout pour gérer votre agence, de la première demande à la dernière facture. Premium ajoute ce que les grandes équipes et les DMC internationaux utilisent chaque jour.',
   yearly: 'Annuel',
   monthly: 'Mensuel',
-  yearlyNote: 'La facturation annuelle offre deux mois. Les prix s’entendent par mois, hors TVA.',
+  yearlyNote: 'Prix par mois, hors TVA. En annuel, le mois revient moins cher.',
   plans: [
     {
-      id: 'small',
-      name: 'Core',
-      users: 'Jusqu’à 3 utilisateurs',
-      yearly: '190',
-      monthly: '228',
-      priceNote: 'EUR par mois, hors TVA. Facturation annuelle ou mensuelle.',
+      id: 'classic',
+      name: 'Classic',
+      users: `${PRICES.usersIncluded} utilisateurs inclus`,
+      yearly: String(PRICES.classic.yearly),
+      monthly: String(PRICES.classic.monthly),
+      priceNote: `EUR par mois, hors TVA. Chaque utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois en annuel, ${PRICES.extraUser.monthly} EUR en mensuel.`,
       lines: [
-        { text: 'Demandes, catalogue, devis et propositions' },
-        { text: 'Réservations, prestataires et itinéraires clients' },
-        { text: 'Paiements, factures et tableau de bord' },
-        { text: 'Votre propre base de données, hébergée dans l’UE' },
-        { text: 'Support par email en espagnol, anglais et français' },
-        { text: 'Assistant IA : option à 29 EUR par mois', later: true }
+        { text: 'Demandes, catalogue avec prix par saison, devis avec votre marge et votre commission' },
+        { text: 'Agences partenaires et relevés de commission' },
+        { text: 'Page de proposition et programme jour par jour, à votre marque' },
+        { text: 'Dossiers, réservations, e-mails des prestataires classés sur le voyage, fiches de service' },
+        { text: 'Groupes : liste des voyageurs, lien vers un formulaire, rooming lists' },
+        { text: 'Échéancier, liens de paiement et rappels' },
+        { text: 'Factures selon les règles de votre pays, avoirs, tableau de bord' },
+        { text: 'Documents dans la langue de votre client' }
       ]
     },
     {
-      id: 'team',
-      name: 'Team',
-      users: 'Jusqu’à 5 utilisateurs',
-      yearly: '250',
-      monthly: '300',
-      priceNote: 'EUR par mois, hors TVA. Facturation annuelle ou mensuelle.',
+      id: 'premium',
+      name: 'Premium',
+      users: `${PRICES.usersIncluded} utilisateurs inclus`,
+      yearly: String(PRICES.premium.yearly),
+      monthly: String(PRICES.premium.monthly),
+      priceNote: `EUR par mois, hors TVA. Chaque utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois en annuel, ${PRICES.extraUser.monthly} EUR en mensuel.`,
       hot: true,
       lines: [
-        { text: 'Demandes, catalogue, devis et propositions' },
-        { text: 'Réservations, prestataires et itinéraires clients' },
-        { text: 'Paiements, factures et tableau de bord' },
-        { text: 'Votre propre base de données, hébergée dans l’UE' },
-        { text: 'Support par email en espagnol, anglais et français' },
-        { text: 'Assistant IA inclus', later: true }
-      ]
-    },
-    {
-      id: 'larger',
-      name: 'Extended',
-      users: '6 utilisateurs et plus',
-      yearly: 'Dès 250',
-      monthly: 'Dès 300',
-      priceNote:
-        'EUR par mois, hors TVA. Annuel : 250 + 40 par utilisateur supplémentaire. Mensuel : 300 + 48 par utilisateur supplémentaire.',
-      lines: [
-        { text: 'Demandes, catalogue, devis et propositions' },
-        { text: 'Réservations, prestataires et itinéraires clients' },
-        { text: 'Paiements, factures et tableau de bord' },
-        { text: 'Votre propre base de données, hébergée dans l’UE' },
-        { text: 'Support par email en espagnol, anglais et français' },
-        { text: 'Assistant IA inclus', later: true }
+        { text: 'Tout Classic, et en plus :' },
+        { text: 'Des équipes avec leurs propres clients et voyages, des rôles par personne' },
+        { text: 'Toutes les devises pour les clients, les devis et les prestataires, avec des taux quotidiens' },
+        { text: 'Demandes de disponibilité et bons de commande aux prestataires' },
+        { text: 'Plusieurs marques et sociétés dans un seul compte' },
+        { text: 'Export comptable pour votre logiciel de comptabilité' },
+        { text: 'L’assistant dans Traviosoft, et vos propres outils d’IA connectés' },
+        { text: 'Des connexions à votre site et à vos autres outils' }
       ]
     }
   ],
-  compareTitle: 'À titre de comparaison',
-  compareBody:
-    'Ezus pour 3 utilisateurs coûte 75 EUR par utilisateur et par mois (225 EUR), plus un pack d’intégration obligatoire de 1 990 EUR. Source : ezus.io/pricing, novembre 2026.',
-  includedTitle: 'Chaque formule comprend',
+  includedTitle: 'Les deux offres incluent',
   included: [
-    'Toutes les fonctions de l’application, sans module verrouillé',
-    'Demandes, catalogue avec prix par saison, devis avec votre marge, la TVA et la commission',
-    'Page de proposition et itinéraire client dans la langue de votre client et à votre marque',
-    'Réservations, emails des prestataires classés dans le voyage, feuilles de service, calendrier',
-    'Échéancier de paiement, liens de paiement, factures d’acompte et de solde, avoirs',
-    'Tableau de bord avec ventes, voyages, encaissements et paiements',
-    'Votre propre base de données isolée, hébergée dans l’Union européenne',
-    'Accès à vos données par API et MCP',
-    'Mise en place et import des données : offerts en annuel, 390 EUR une seule fois en mensuel'
+    `${PRICES.usersIncluded} utilisateurs, et davantage dès que votre équipe grandit`,
+    `Mise en place et import des données : offerts en annuel, ${PRICES.setupMonthly} EUR une seule fois en mensuel`,
+    'Vos tarifs, clients et prestataires repris avec vous',
+    'Support par e-mail en espagnol, anglais et français, par les personnes qui construisent le produit',
+    'Un espace privé pour votre agence, hébergé dans l’Union européenne',
+    'Vos données en formats standard dès que vous les demandez',
+    'Chaque nouvelle fonction de votre offre dès sa sortie'
   ],
   faq: [
     {
-      q: 'Comment la facturation fonctionne-t-elle ?',
-      a: ['En annuel ou en mensuel, à votre choix. L’annuel revient à deux mois offerts. Le mensuel coûte 20 % de plus par mois et peut être arrêté n’importe quel mois.']
+      q: 'De quelle offre ai-je besoin ?',
+      a: ['Classic gère une agence entière : demandes, devis, partenaires, réservations, groupes, paiements et factures. Choisissez Premium quand l’une de ses fonctions compte pour vous, par exemple des équipes avec leurs propres portefeuilles, vendre en dollars ou en livres, ou des bons de commande aux prestataires.']
     },
     {
-      q: 'Les prix s’entendent-ils avec ou sans TVA ?',
-      a: ['Sans. La TVA est ajoutée sur la facture selon votre pays et le statut de votre société.']
+      q: 'Comment est-ce facturé ?',
+      a: ['À l’année ou au mois, au choix. L’annuel revient moins cher par mois et inclut la mise en place. Le mensuel s’arrête à la fin de n’importe quel mois.']
+    },
+    {
+      q: 'Les prix sont-ils hors TVA ?',
+      a: ['Oui. La TVA s’ajoute sur la facture selon votre pays et le statut de votre société.']
+    },
+    {
+      q: 'Et si j’ajoute un utilisateur ?',
+      a: [`Les deux offres incluent ${PRICES.usersIncluded} utilisateurs. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.yearly} EUR par mois en annuel, ${PRICES.extraUser.monthly} EUR en mensuel.`]
+    },
+    {
+      q: 'Puis-je changer d’offre ?',
+      a: ['Oui. Passez de Classic à Premium à tout moment : les nouvelles fonctions sont là le jour même. Vos données restent telles quelles.']
     },
     {
       q: 'Puis-je résilier ?',
-      a: ['Oui. Les formules mensuelles s’arrêtent à la fin du mois de la résiliation. Les formules annuelles vont jusqu’à la fin de l’année payée et ne sont pas renouvelées.']
+      a: ['Oui. Les offres mensuelles s’arrêtent à la fin du mois de la résiliation. Les offres annuelles vont jusqu’au bout de l’année payée et s’arrêtent là.']
     },
     {
-      q: 'Que se passe-t-il si j’ajoute un utilisateur ?',
-      a: ['Jusqu’à 3 utilisateurs, vous êtes en Core, jusqu’à 5 en Team. À partir du sixième, vous passez en Extended, et chaque utilisateur supplémentaire coûte 40 EUR par mois en annuel, 48 EUR en mensuel.']
-    },
-    {
-      q: 'Mensuel ou annuel : lequel choisir ?',
-      a: ['L’annuel est moins cher et la mise en place est offerte. Le mensuel est plus souple, avec des frais de mise en place uniques de 390 EUR. Si vous hésitez, commencez en mensuel et passez à l’annuel plus tard.']
-    },
-    {
-      q: 'Puis-je récupérer mes données si je pars ?',
-      a: ['Oui. Vous récupérez vos données dans des formats standard. Ce sont vos données, dans votre propre base.']
+      q: 'Puis-je récupérer mes données en partant ?',
+      a: ['Oui. Vous récupérez vos données dans des formats standard. Ce sont vos données.']
     },
     {
       q: 'Que comprend la mise en place ?',
-      a: ['Nous importons votre catalogue, vos clients, vos prestataires et vos voyages en cours depuis Excel ou CSV, et nous configurons votre marque et vos règles de prix. Elle est offerte en annuel et coûte 390 EUR une seule fois en mensuel.']
+      a: [`Nous importons votre catalogue, vos clients, vos prestataires et vos voyages en cours depuis vos tableurs, et nous configurons votre marque et vos règles de prix. Elle est offerte en annuel et coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel.`]
     }
   ]
 };
 
 export const example: SiteContent['example'] = {
-  metaTitle: 'Voyage exemple : Andalousie, 8 jours | Traviosoft',
+  metaTitle: 'Voyages exemples : un couple, un groupe et un safari | Traviosoft',
   metaDescription:
-    'Ouvrez un voyage exemple construit dans Traviosoft : l’itinéraire jour par jour et le devis tels que les voit le voyageur. Données inventées, sans inscription.',
-  title: 'Ce que reçoit votre client.',
-  lead: 'Un voyage exemple, construit dans Traviosoft. Ouvrez l’itinéraire et le devis tels que les voit le voyageur.',
+    'Ouvrez trois voyages exemples construits dans Traviosoft, un couple en Andalousie, un groupe incentive à Porto et un safari au Kenya et en Tanzanie : le programme jour par jour et le devis tels que les voit le client. Données inventées, sans inscription.',
+  title: 'Ce que reçoit votre client',
+  lead: 'Trois voyages exemples construits dans Traviosoft. Ouvrez l’itinéraire et le devis tels que les voit votre client ou votre agence partenaire.',
   tabs: { itinerary: 'Itinéraire', quote: 'Devis' },
-  trip: {
+  pick: 'Choisissez un voyage',
+  trips: [
+  {
+    id: 'andalucia',
+    label: 'Andalousie, 8 jours',
+    kind: 'Un couple, en vente directe',
     name: 'Andalousie, 8 jours',
     dates: 'Du 12 au 19 avril 2027',
     travellers: 'Client : Laura & Tom, 2 adultes',
@@ -192,53 +184,184 @@ export const example: SiteContent['example'] = {
     deposit: '30 % d’acompte pour confirmer, solde 30 jours avant l’arrivée',
     validUntil: 'Valable jusqu’au 30 novembre 2026'
   },
+  {
+    id: 'group',
+    label: 'Porto et le Douro, 4 jours',
+    kind: 'Un groupe incentive de 24, vendu via une agence partenaire',
+    name: 'Porto et le Douro, 4 jours',
+    dates: 'Du 6 au 9 mai 2027',
+    travellers: 'Client : votre agence partenaire de Munich, pour un groupe d’entreprise de 24',
+    agency: 'Votre agence',
+    days: [
+      {
+        day: 'Jour 1',
+        title: 'Arrivée à Porto',
+        body: 'Autocar privé de l’aéroport à l’hôtel au bord du fleuve. Dîner de bienvenue à Ribeira.',
+        items: ['Transfert en autocar, accueil aux arrivées', 'Hôtel à Porto, 3 nuits', 'Dîner de bienvenue pour 24']
+      },
+      {
+        day: 'Jour 2',
+        title: 'Porto, au choix',
+        body: 'Matinée golf pour dix, ou une balade dans la vieille ville avec un guide local. L’après-midi, une cave de porto.',
+        items: ['Matinée golf, 10 invités', 'Balade dans la vieille ville, 14 invités', 'Visite et dégustation dans une cave de porto pour 24']
+      },
+      {
+        day: 'Jour 3',
+        title: 'La vallée du Douro',
+        body: 'Autocar le long de la vallée, croisière sur le fleuve entre les terrasses, déjeuner dans un domaine viticole. Dîner de gala dans une quinta.',
+        items: ['Autocar privé, journée complète', 'Croisière sur le fleuve', 'Déjeuner dans un domaine viticole', 'Dîner de gala dans une quinta']
+      },
+      {
+        day: 'Jour 4',
+        title: 'Départ',
+        body: 'Matinée libre. Autocar vers l’aéroport en deux groupes, selon les vols.',
+        items: ['Deux transferts vers l’aéroport']
+      }
+    ],
+    quoteLines: [
+      { name: 'Porto, 3 nuits', detail: 'Hôtel au bord du fleuve, 12 chambres doubles ou twin, petit-déjeuner', price: '9 360 EUR' },
+      { name: 'Dîner de bienvenue', detail: 'Restaurant à Ribeira, 24 invités, boissons comprises', price: '2 040 EUR' },
+      { name: 'Journée dans le Douro', detail: 'Autocar, croisière et déjeuner au domaine, 24 invités', price: '3 960 EUR' },
+      { name: 'Visite d’une cave de porto', detail: 'Visite et dégustation, 24 invités', price: '840 EUR' },
+      { name: 'Matinée golf', detail: '10 invités, green fees et clubs', price: '1 200 EUR' },
+      { name: 'Dîner de gala', detail: 'Quinta privée, 24 invités, musique', price: '3 360 EUR' },
+      { name: 'Transferts en autocar', detail: 'Aéroport, Porto et Douro, 4 jours', price: '1 850 EUR' },
+      { name: 'Guide local et accompagnateur sur place', detail: '4 jours', price: '1 600 EUR' }
+    ],
+    included: [
+      '3 nuits à Porto avec petit-déjeuner',
+      'Tous les repas et visites indiqués, avec boissons aux dîners',
+      'Tous les transferts en autocar privé',
+      'Un accompagnateur sur place pendant tout le séjour',
+      'La commission de votre agence partenaire'
+    ],
+    notIncluded: ['Vols', 'Déjeuners des jours 1, 2 et 4', 'Assurance voyage', 'Taxe de séjour de Porto'],
+    total: '24 210 EUR',
+    perPerson: '1 008,75 EUR par invité',
+    deposit: '40 % pour confirmer, 40 % 60 jours avant l’arrivée, solde 15 jours avant',
+    validUntil: 'Valable jusqu’au 15 décembre 2026',
+    rooming: {
+      title: 'Rooming list · Hôtel à Porto, 4 premières chambres sur 12',
+      head: ['Chambre', 'Type', 'Occupants', 'Nuits'],
+      rows: [
+        ['Chambre 1', 'Double', 'Anna Weber, Jonas Weber', 'Du 6 au 9 mai'],
+        ['Chambre 2', 'Twin', 'Lena Fischer, Marie Koch', 'Du 6 au 9 mai'],
+        ['Chambre 3', 'Double', 'Paul Schmidt, Sofia Schmidt', 'Du 6 au 9 mai'],
+        ['Chambre 4', 'Twin', 'Thomas Becker, David Wolf', 'Du 6 au 9 mai']
+      ]
+    }
+  },
+  {
+    id: 'safari',
+    label: 'Kenya et Tanzanie, 9 jours',
+    kind: 'Un safari pour deux, en dollars américains',
+    name: 'Kenya et Tanzanie, 9 jours',
+    dates: 'Du 14 au 22 août 2027',
+    travellers: 'Client : Emma & James, 2 adultes',
+    agency: 'Votre agence',
+    days: [
+      {
+        day: 'Jour 1',
+        title: 'Nairobi',
+        body: 'Accueil à l’aéroport et transfert vers un hôtel avec jardin à Karen. Dîner à l’hôtel.',
+        items: ['Transfert privé', 'Hôtel de charme à Karen, 1 nuit']
+      },
+      {
+        day: 'Jours 2 à 4',
+        title: 'Masai Mara',
+        body: 'Petit avion jusqu’au Mara. Trois jours de safaris pendant la grande migration.',
+        items: ['Vol Nairobi Mara', 'Camp de tentes, pension complète, 3 nuits', 'Safaris le matin et l’après-midi']
+      },
+      {
+        day: 'Jours 5 à 7',
+        title: 'Serengeti',
+        body: 'Vol de l’autre côté de la frontière, vers le nord du Serengeti. Vol en montgolfière au lever du soleil le jour 6.',
+        items: ['Vol vers le Serengeti', 'Camp mobile, pension complète, 3 nuits', 'Vol en montgolfière avec petit-déjeuner']
+      },
+      {
+        day: 'Jour 8',
+        title: 'Ngorongoro',
+        body: 'Route avec votre guide privé jusqu’au bord du cratère. L’après-midi au fond du cratère.',
+        items: ['Guide et véhicule privés', 'Lodge au bord du cratère, 1 nuit']
+      },
+      {
+        day: 'Jour 9',
+        title: 'Départ d’Arusha',
+        body: 'Transfert à l’aéroport d’Arusha pour votre vol retour.',
+        items: ['Transfert privé vers l’aéroport']
+      }
+    ],
+    quoteLines: [
+      { name: 'Nairobi, 1 nuit', detail: 'Hôtel de charme à Karen, petit-déjeuner', price: '640 USD' },
+      { name: 'Masai Mara, 3 nuits', detail: 'Camp de tentes, pension complète, safaris', price: '5 880 USD' },
+      { name: 'Serengeti, 3 nuits', detail: 'Camp mobile, pension complète, safaris', price: '6 300 USD' },
+      { name: 'Ngorongoro, 1 nuit', detail: 'Lodge au bord du cratère, pension complète', price: '1 440 USD' },
+      { name: 'Vols en petit avion', detail: 'Nairobi, Masai Mara, Serengeti', price: '2 900 USD' },
+      { name: 'Droits d’entrée des parcs et de conservation', detail: 'Kenya et Tanzanie', price: '2 640 USD' },
+      { name: 'Guide et véhicule privés', detail: 'Tanzanie, 4 jours', price: '1 600 USD' },
+      { name: 'Montgolfière', detail: 'Serengeti, 2 personnes, avec petit-déjeuner', price: '1 198 USD' }
+    ],
+    included: [
+      '8 nuits, pension complète pendant le safari',
+      'Safaris avec des guides expérimentés',
+      'Vols intérieurs au Kenya et en Tanzanie',
+      'Droits d’entrée des parcs et de conservation',
+      'Tous les transferts'
+    ],
+    notIncluded: ['Vols internationaux', 'Visas', 'Assurance voyage', 'Pourboires des guides et du personnel des camps'],
+    total: '22 598 USD',
+    perPerson: '11 299 USD par personne',
+    deposit: '30 % pour confirmer, solde 60 jours avant l’arrivée',
+    validUntil: 'Valable jusqu’au 31 janvier 2027'
+  }
+  ],
   note: 'Ceci est un exemple construit dans Traviosoft avec des données inventées.'
 };
 
 export const demo: SiteContent['demo'] = {
   metaTitle: 'Démo : 30 minutes, sur un voyage comme le vôtre | Traviosoft',
   metaDescription:
-    'Un appel de 30 minutes sur l’un de vos voyages, de la demande à la facture. Prix par écrit ensuite, et aucun rappel sauf si vous le demandez.',
-  title: '30 minutes, sur un voyage comme le vôtre.',
-  lead: 'Pas de diapositives. Nous prenons l’un de vos voyages et nous le déroulons dans l’application, du premier message à la facture finale.',
+    'Un appel de 30 minutes sur un voyage préparé proche de ceux que vous vendez, de la demande à la facture. Vous recevez ensuite par écrit le prix pour votre équipe.',
+  title: '30 minutes, sur un voyage comme le vôtre',
+  lead: 'Nous déroulons dans l’application un voyage préparé, proche de ceux que vous vendez, du premier message à la facture finale.',
   agendaTitle: 'Le déroulé des 30 minutes',
   agenda: [
     { mins: '5', title: 'Votre agence', body: 'Combien vous êtes, ce que vous vendez, ce que vous utilisez aujourd’hui. Pour que la suite colle à votre cas.' },
-    { mins: '15', title: 'Un de vos voyages, de la demande à la facture', body: 'La demande, le devis avec votre marge, la réservation, l’itinéraire, le paiement et la facture. Sur un voyage comme ceux que vous vendez.' },
-    { mins: '10', title: 'Prix, changement d’outil et questions', body: 'Ce que cela coûte pour votre équipe, comment vos fichiers Excel sont repris, et tout ce que vous voulez demander.' }
+    { mins: '15', title: 'Un voyage comme le vôtre, de la demande à la facture', body: 'Un voyage en couple, un groupe incentive ou un safari, le plus proche de votre métier : la demande, le devis avec votre marge, le dossier, le programme, le paiement et la facture.' },
+    { mins: '10', title: 'Prix, changement d’outil et questions', body: 'Quelle offre convient à votre équipe, comment vos tableurs sont repris, et tout ce que vous voulez demander.' }
   ],
-  bringTitle: 'Ce qu’il faut apporter',
+  bringTitle: 'Qui inviter',
   bring: [
-    'Une demande récente, telle qu’elle est arrivée (un email suffit)',
-    'Votre fichier de tarifs, si vous voulez le voir importé',
-    'Les personnes de votre équipe qui font les devis ou les réservations'
+    'Les personnes de votre équipe qui font les devis ou les réservations',
+    'La personne qui suit les paiements et les factures',
+    'Vos questions : l’appel est à vous'
   ],
-  afterTitle: 'Ce qui se passe ensuite',
+  afterTitle: 'Et ensuite',
   after: [
-    'Un résumé écrit par email : ce que nous avons vu et ce que nous avons convenu',
+    'Un compte rendu écrit par e-mail : ce que nous avons vu et ce que nous avons convenu',
     'Le prix pour votre équipe, par écrit',
-    'Aucun appel de relance, sauf si vous en demandez un'
+    'Un rappel uniquement si vous le demandez'
   ],
   bookTitle: 'Demandez un créneau',
-  bookBody: 'Pour l’instant, la prise de rendez-vous se fait par email. Indiquez-nous votre agence, la taille de votre équipe et quelques jours qui vous conviennent. Nous répondons avec un horaire.',
+  bookBody: 'Pour l’instant, les rendez-vous se prennent par e-mail. Indiquez-nous votre agence, la taille de votre équipe et quelques jours qui vous conviennent. Nous vous répondons avec un horaire.',
   emailLabel: 'Écrivez à',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: 'Y a-t-il un essai gratuit ?',
-      a: ['Non. Il y a une démo, et le voyage exemple de ce site. Nous préférons vous montrer votre propre voyage plutôt que de vous laisser seul devant un compte vide.']
+      a: ['Il y a une démo à la place, et trois voyages exemples sur ce site. En 30 minutes, vous voyez un voyage complet du début à la fin, ce qu’un compte vide ne peut pas montrer.']
     },
     {
-      q: 'Qui anime la démo ?',
-      a: ['Quelqu’un de l’équipe Traviosoft, en espagnol, en anglais ou en français. C’est un appel, pas une vidéo enregistrée.']
+      q: 'Qui fait la démo ?',
+      a: ['Une personne de l’équipe Traviosoft, en espagnol, en anglais ou en français. C’est un appel, pas une vidéo enregistrée.']
     },
     {
       q: 'Dois-je préparer quelque chose ?',
-      a: ['Non. Une demande récente aide, et votre fichier de tarifs aussi, mais la démo fonctionne sans eux.']
+      a: ['Rien du tout. Nous apportons le voyage ; vous apportez vos questions.']
     },
     {
-      q: 'Allez-vous partager mes données ?',
-      a: ['Non. Ce que vous nous montrez reste entre nous. Il n’est pas nécessaire d’apporter de vraies données clients, vous pouvez changer les noms.']
+      q: 'Allez-vous me demander mes données ?',
+      a: ['La démo se fait sur un voyage exemple avec des données inventées. Vos tarifs et vos clients ne sont repris qu’une fois votre décision prise, pendant la mise en place.']
     }
   ]
 };
@@ -246,25 +369,25 @@ export const demo: SiteContent['demo'] = {
 export const switching: SiteContent['switching'] = {
   metaTitle: 'Passer d’Excel à Traviosoft | Traviosoft',
   metaDescription:
-    'Quitter Excel, Word et WhatsApp sans perdre une saison : ce que nous importons, ce que vous vérifiez, et comment finir les voyages en cours.',
-  title: 'Quitter Excel sans perdre une saison.',
-  lead: 'On n’éteint pas un système pour en allumer un autre. On avance par étapes, et les voyages en cours continuent.',
+    'Passer d’Excel, Word et WhatsApp à Traviosoft en pleine saison : ce que nous importons, ce que vous vérifiez, et comment finir les voyages en cours.',
+  title: 'D’Excel à Traviosoft, en pleine saison',
+  lead: 'Vous avancez par étapes, et les voyages en cours continuent.',
   timelineTitle: 'Comment cela se passe',
   timeline: [
     {
       when: 'Jour 1',
       title: 'Vous nous envoyez vos fichiers',
-      body: 'Vos tarifs, votre liste de clients, vos prestataires, vos voyages en cours. Excel et CSV conviennent, tout comme l’export d’un autre outil. Des fichiers en désordre, ce n’est pas un problème.'
+      body: 'Vos tarifs, votre liste de clients, vos prestataires, vos voyages en cours. Tout tableur convient, tout comme l’export d’un autre outil, rangé ou non.'
     },
     {
       when: 'Semaine 1',
       title: 'Nous importons, vous vérifiez',
-      body: 'Nous chargeons tout dans votre propre base de données. Vous l’ouvrez, vous regardez quelques produits et quelques clients, et vous nous dites ce qui ne va pas.'
+      body: 'Nous chargeons tout dans l’espace de votre agence. Vous l’ouvrez, vous regardez quelques produits et quelques clients, et vous nous dites quoi ajuster.'
     },
     {
       when: 'Semaine 2',
       title: 'Votre premier vrai devis',
-      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par email si vous bloquez.'
+      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
     },
     {
       when: 'En service',
@@ -275,37 +398,37 @@ export const switching: SiteContent['switching'] = {
   importTitle: 'Ce qui est repris',
   importHead: ['Quoi', 'Depuis', 'Comment'],
   importRows: [
-    { what: 'Catalogue, produits et tarifs', from: 'Excel, CSV', how: 'Nous l’importons. Vous vérifiez un échantillon.' },
-    { what: 'Clients', from: 'Excel, CSV, vos contacts email', how: 'Nous l’importons. Les doublons sont fusionnés avec vous.' },
-    { what: 'Prestataires et contacts', from: 'Excel, CSV', how: 'Nous l’importons. Vous vérifiez les contacts que vous utilisez le plus.' },
+    { what: 'Catalogue, produits et tarifs', from: 'Tableurs', how: 'Nous l’importons. Vous vérifiez un échantillon.' },
+    { what: 'Clients', from: 'Tableurs, vos contacts e-mail', how: 'Nous l’importons. Les doublons sont fusionnés avec vous.' },
+    { what: 'Prestataires et contacts', from: 'Tableurs', how: 'Nous l’importons. Vous vérifiez les contacts que vous utilisez le plus.' },
     { what: 'Voyages en cours', from: 'Excel, Word, l’export d’un autre outil', how: 'Nous importons ceux que vous choisissez. Vous les vérifiez un par un.' }
   ],
   seasonTitle: 'Cela va-t-il perturber ma saison ?',
   seasonBody: [
-    'Pas si vous le faites dans le bon ordre. Commencez par les nouvelles demandes : elles entrent dans Traviosoft dès le jour de la mise en service. Vous continuez à finir les voyages déjà en cours à l’ancienne, avec l’Excel et le Word que vous connaissez.',
+    'Dans cet ordre, cela se fait en parallèle de votre saison. Commencez par les nouvelles demandes : elles entrent dans Traviosoft dès le jour de la mise en service. Vous continuez à finir les voyages déjà en cours à l’ancienne, avec l’Excel et le Word que vous connaissez.',
     'Les voyages en cours ne sont repris que si vous le souhaitez, et en général ceux qui sont encore loin. Un voyage qui part la semaine prochaine reste où il est.',
-    'Si vous êtes en pleine haute saison, dites-le-nous. Nous pouvons importer d’abord et attendre pour passer en service que vous ayez une semaine calme.'
+    'Si vous êtes en pleine haute saison, dites-le-nous. Nous importons d’abord et passons en service lors de votre prochaine semaine calme.'
   ],
   faq: [
     {
       q: 'Pouvez-vous importer depuis mon outil actuel ?',
-      a: ['S’il peut exporter vers Excel ou CSV, oui. Envoyez-nous un export d’exemple et nous vous disons ce qui est repris et ce qui ne l’est pas.']
+      a: ['S’il exporte vers un tableur, oui. Envoyez-nous un export d’exemple et nous vous disons exactement ce qui est repris.']
     },
     {
       q: 'Combien cela coûte-t-il ?',
-      a: ['La mise en place et l’import des données sont offerts en annuel. En mensuel, ils coûtent 390 EUR une seule fois.']
+      a: [`La mise en place et l’import des données sont offerts en annuel. En mensuel, ils coûtent ${PRICES.setupMonthly} EUR une seule fois.`]
     },
     {
-      q: 'Vais-je perdre mes anciens fichiers ?',
-      a: ['Non. Nous importons des copies. Vos fichiers Excel et Word restent exactement où ils sont.']
+      q: 'Que deviennent mes anciens fichiers ?',
+      a: ['Ils restent exactement où ils sont. Nous importons des copies.']
     },
     {
       q: 'Dois-je reprendre tous les anciens voyages ?',
-      a: ['Non. Reprenez les voyages en cours que vous voulez et laissez le reste dans vos archives. Les anciens clients valent la peine d’être importés, les voyages passés en général non.']
+      a: ['Reprenez les voyages en cours que vous voulez et gardez le reste dans vos archives. Les anciens clients valent la peine d’être importés ; pour les voyages passés, vos archives suffisent.']
     },
     {
-      q: 'Et si l’import est erroné ?',
-      a: ['Vous vérifiez un échantillon avant la mise en service, et nous corrigeons ce qui ne va pas. Ce que vous repérez plus tard, vous le corrigez dans l’application ou vous nous le signalez.']
+      q: 'Et si l’import doit être ajusté ?',
+      a: ['Vous vérifiez un échantillon avant la mise en service, et nous l’ajustons avec vous. Ce que vous repérez plus tard, vous le corrigez dans l’application ou vous nous le signalez.']
     }
   ]
 };
@@ -314,7 +437,7 @@ export const faqPage: SiteContent['faqPage'] = {
   metaTitle: 'Questions fréquentes | Traviosoft',
   metaDescription:
     'Des réponses claires sur ce que fait Traviosoft, son prix, l’hébergement de vos données et le passage depuis Excel. Pour les dirigeants d’agence.',
-  title: 'Les questions des agences.',
+  title: 'Les questions des agences',
   lead: 'Des réponses courtes. Si la vôtre n’est pas ici, écrivez à hola@traviosoft.com.',
   groups: [
     {
@@ -330,15 +453,19 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Que voit mon client ?',
-          a: ['Un devis net avec des intitulés pensés pour le client, des prix par personne, ce qui est compris et ce qui ne l’est pas, dans sa langue et à votre marque. Vos tarifs nets et vos marges ne sont jamais affichés.']
+          a: ['Un devis net avec des intitulés pensés pour le client, des prix par personne, ce qui est compris et ce qui ne l’est pas, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe.']
         },
         {
           q: 'Mes guides et mes chauffeurs peuvent-ils voir le voyage ?',
-          a: ['Ils reçoivent une feuille de service avec les dates, les heures, les noms et le point de rendez-vous. Ils n’ont pas besoin de compte.']
+          a: ['Ils reçoivent par e-mail une fiche de service avec les dates, les heures, les noms et le point de rendez-vous.']
+        },
+        {
+          q: 'Travaillez-vous avec des DMC qui vendent via des agences partenaires ?',
+          a: ['Oui. Envoyez le devis à l’agence partenaire, gardez son client sur le voyage, ajoutez la commission du partenaire et réglez-la à partir d’un relevé par période.']
         },
         {
           q: 'Y a-t-il un assistant IA ?',
-          a: ['Pas encore. Il arrive : un assistant dans Traviosoft qui prépare les devis et répond aux questions sur vos voyages. Vous pouvez déjà connecter l’outil d’IA de votre choix grâce à l’accès MCP.']
+          a: ['Oui, avec Premium. Demandez-lui ce qui vous attend aujourd’hui, faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue ; chaque changement attend votre accord. Vous pouvez aussi connecter à vos données Traviosoft l’assistant d’IA que vous utilisez déjà.']
         }
       ]
     },
@@ -347,15 +474,15 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Combien cela coûte-t-il ?',
-          a: ['Dès 190 EUR par mois pour jusqu’à 3 utilisateurs, en facturation annuelle. Team, pour jusqu’à 5 utilisateurs, coûte 250 EUR par mois. Toutes les fonctions sont dans chaque formule. La TVA n’est pas incluse.']
+          a: [`Classic coûte ${PRICES.classic.yearly} EUR par mois et Premium ${PRICES.premium.yearly} EUR par mois, en facturation annuelle, avec ${PRICES.usersIncluded} utilisateurs inclus. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.yearly} EUR par mois. La TVA n’est pas incluse.`]
         },
         {
           q: 'Puis-je payer au mois ?',
-          a: ['Oui. En mensuel, c’est 228 EUR pour Core et 300 EUR pour Team. La mise en place coûte 390 EUR une seule fois en mensuel, et elle est offerte en annuel.']
+          a: [`Oui. En mensuel, c’est ${PRICES.classic.monthly} EUR pour Classic et ${PRICES.premium.monthly} EUR pour Premium. La mise en place coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel, et elle est offerte en annuel.`]
         },
         {
           q: 'Y a-t-il un essai gratuit ?',
-          a: ['Non. Il y a une démo sur l’un de vos propres voyages, et un voyage exemple sur ce site que vous pouvez ouvrir sans vous inscrire.']
+          a: ['Il y a une démo de 30 minutes sur un voyage comme ceux que vous vendez, et trois voyages exemples sur ce site que vous pouvez ouvrir sans vous inscrire.']
         }
       ]
     },
@@ -364,7 +491,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Où sont mes données ?',
-          a: ['Dans votre propre base de données, hébergée dans l’Union européenne. C’est une base séparée pour votre agence, pas une table partagée avec un filtre.']
+          a: ['Dans un espace à part pour votre agence, hébergé dans l’Union européenne, séparé de toutes les autres agences.']
         },
         {
           q: 'Puis-je partir avec mes données ?',
@@ -372,7 +499,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Qui peut voir quoi ?',
-          a: ['Chaque utilisateur de votre agence voit les voyages de l’agence. Un accès plus fin, par équipe et par personne, arrive.']
+          a: ['Avec Classic, chaque utilisateur voit les voyages de l’agence. Avec Premium, chaque équipe et chaque personne peut avoir ses propres clients, voyages et droits.']
         }
       ]
     },
@@ -381,11 +508,11 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Puis-je importer mon catalogue actuel ?',
-          a: ['Oui. Pendant la mise en place, nous importons vos produits, vos prix et vos prestataires depuis Excel ou CSV. La mise en place et l’import sont offerts en annuel.']
+          a: ['Oui. Pendant la mise en place, nous importons vos produits, vos prix et vos prestataires depuis vos tableurs. La mise en place et l’import sont offerts en annuel.']
         },
         {
           q: 'Le changement va-t-il perturber ma saison ?',
-          a: ['Pas forcément. Commencez par les nouvelles demandes dans Traviosoft et terminez les voyages en cours comme avant.']
+          a: ['Il se fait en parallèle. Commencez par les nouvelles demandes dans Traviosoft et terminez les voyages en cours comme avant.']
         },
         {
           q: 'Est-ce conforme aux règles de mon pays ?',
@@ -400,13 +527,13 @@ export const about: SiteContent['about'] = {
   metaTitle: 'À propos de Traviosoft : né dans une agence de Barcelone',
   metaDescription:
     'Traviosoft est né dans une agence de voyages sur mesure de Barcelone qui tournait avec Excel, Word et WhatsApp. Support par email assuré par les personnes qui construisent le produit, données en UE.',
-  title: 'Conçu par une agence, pour des agences.',
-  lead: 'Traviosoft est né dans une agence de voyages sur mesure de Barcelone. Il est fait pour les agences qui lui ressemblent.',
+  title: 'Conçu par une agence, pour des agences',
+  lead: 'Traviosoft est né dans une agence de voyages sur mesure de Barcelone, sur de vrais voyages, et il est devenu un système de gestion complet pour les agences sur mesure et les DMC.',
   blocks: [
     {
       title: 'D’où il vient',
       body: [
-        'L’agence fonctionnait avec Excel pour les tarifs, Word pour les devis et WhatsApp pour tout le reste. Cela marchait, jusqu’à une semaine chargée où un acompte était oublié ou un hôtel n’était pas confirmé.',
+        'L’agence fonctionnait avec Excel pour les tarifs, Word pour les devis et WhatsApp pour tout le reste. Pendant une semaine chargée, chaque acompte et chaque confirmation d’hôtel dépendaient de la mémoire de quelqu’un.',
         'L’outil a donc été construit là, sur de vrais voyages, par des gens qui devaient envoyer le devis le soir même.'
       ]
     },
@@ -421,13 +548,13 @@ export const about: SiteContent['about'] = {
       title: 'Notre façon de travailler',
       body: [
         'Le support se fait par email, en espagnol, en anglais et en français, et vous parlez aux personnes qui construisent le produit.',
-        'Nous vous disons ce qui est disponible et ce qui arrive. Ce qui n’est pas encore disponible porte une mention sur ce site.'
+        'Chaque fonction de ce site indique à quelle offre elle appartient, pour que vous sachiez exactement ce que vous obtenez.'
       ]
     },
     {
       title: 'Vos données',
       body: [
-        'Chaque agence a sa propre base de données isolée, hébergée dans l’Union européenne. Vos données ne sont jamais mélangées avec celles d’une autre agence, et vous pouvez partir avec.'
+        'Chaque agence a son propre espace séparé, hébergé dans l’Union européenne et à part de toutes les autres agences. Vos données sont à vous, et vous pouvez partir avec.'
       ]
     },
     {
@@ -442,14 +569,14 @@ export const about: SiteContent['about'] = {
     { k: 'Origine', v: 'Une agence sur mesure de Barcelone' },
     { k: 'Pour', v: 'Agences sur mesure et DMC' },
     { k: 'Support', v: 'Par email, en espagnol, anglais et français' },
-    { k: 'Données', v: 'Votre propre base de données, hébergée dans l’UE' }
+    { k: 'Données', v: 'Un espace privé par agence, hébergé dans l’UE' }
   ]
 };
 
 export const resources: SiteContent['resources'] = {
   metaTitle: 'Ressources pour agences de voyages sur mesure | Traviosoft',
   metaDescription:
-    'Comparatifs, guides, un glossaire et un voyage exemple pour les agences sur mesure et les DMC qui choisissent un logiciel. En langage clair, sans inscription.',
+    'Comparatifs, guides, un glossaire et des voyages exemples pour les agences sur mesure et les DMC qui choisissent un logiciel. En langage clair, sans inscription.',
   title: 'Ressources',
   lead: 'Ce que nous aurions aimé trouver quand nous cherchions un logiciel pour une agence comme la nôtre.',
   groups: [
@@ -457,7 +584,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'compare', title: 'Pages de comparaison', body: 'Traviosoft à côté d’autres outils, sur ce que vous payez et ce que vous obtenez.' },
     { kind: 'guide', title: 'Guides', body: 'Des notes pratiques pour chiffrer, réserver et facturer un voyage sur mesure.' },
     { kind: 'glossary', title: 'Glossaire', body: 'Les termes d’agence de voyages et de logiciel, en une ligne chacun.' },
-    { kind: 'example', title: 'Voyage exemple', body: 'Un voyage de 8 jours en Andalousie, tel que votre client verrait l’itinéraire et le devis.' }
+    { kind: 'example', title: 'Voyages exemples', body: 'Un couple en Andalousie, un groupe incentive à Porto et un safari au Kenya et en Tanzanie, tels que les voit votre client.' }
   ],
   glossaryTitle: 'Glossaire',
   glossaryMeta:
