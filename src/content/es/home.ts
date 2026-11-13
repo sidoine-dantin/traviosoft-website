@@ -9,7 +9,7 @@ export const home: SiteContent['home'] = {
   sub: 'Solicitudes, presupuestos, reservas, cobros y facturas, en un solo sitio.',
   tags: [
     { t: 'Señal pagada ✓', s: 'enlace en el email' },
-    { t: 'Hotel confirmado', s: 'archivado en el viaje' }
+    { t: 'Hotel confirmado', s: 'respuesta guardada en el viaje' }
   ],
   tripTitle: 'Cómo avanza un viaje en Traviosoft',
   steps: [

@@ -9,7 +9,7 @@ export const home: SiteContent['home'] = {
   sub: 'Requests, quotes, bookings, payments and invoices, in one place.',
   tags: [
     { t: 'Deposit paid ✓', s: 'link in the email' },
-    { t: 'Hotel confirmed', s: 'filed on the trip' }
+    { t: 'Hotel confirmed', s: 'reply saved to the trip' }
   ],
   tripTitle: 'How a trip moves through Traviosoft',
   steps: [

@@ -16,7 +16,7 @@ import { Link } from '@/i18n/navigation';
 // Public tag IDs (they appear in every page's network requests); env vars can override them.
 const LINKEDIN_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '10081602';
 const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID || '32264978'; // "Demo click"
-const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '';
+const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '999533615909262';
 const ENABLED = Boolean(LINKEDIN_ID || META_ID);
 
 const KEY = 'tv-consent';

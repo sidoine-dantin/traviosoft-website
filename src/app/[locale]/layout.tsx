@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, DM_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, DM_Mono, Funnel_Display, Schibsted_Grotesk } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -17,6 +17,19 @@ const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   axes: ['wdth', 'opsz'],
   variable: '--font-bricolage',
+  display: 'swap'
+});
+
+// Titles: Funnel Display. Text: Schibsted Grotesk. Bricolage only for the logo and price figures.
+const funnel = Funnel_Display({
+  subsets: ['latin'],
+  variable: '--font-funnel',
+  display: 'swap'
+});
+
+const schibsted = Schibsted_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-schibsted',
   display: 'swap'
 });
 
@@ -111,7 +124,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }));
 
   return (
-    <html lang={locale} className={`${bricolage.variable} ${dmMono.variable}`}>
+    <html lang={locale} className={`${bricolage.variable} ${funnel.variable} ${schibsted.variable} ${dmMono.variable}`}>
       <body>
         <JsonLd data={org} />
         <JsonLd data={site} />
