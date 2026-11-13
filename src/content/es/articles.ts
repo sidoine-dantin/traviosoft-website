@@ -193,10 +193,10 @@ const compares: Cmp[] = [
     lead: 'Holded es un programa general de facturación, contabilidad y gestión para pymes, muy extendido en España. No tiene presupuestos con margen por servicio ni REAV propios de una agencia de viajes. Traviosoft cubre el viaje; Holded puede seguir llevando la empresa.',
     card: 'Un ERP general para pymes y un software de viajes: qué hace cada uno.',
     basis:
-      'Los datos de Holded vienen de su web y de su página de turismo y viajes, revisadas el 3 de noviembre de 2026. Holded cambia sus planes y promociones con frecuencia: comprueba su página de precios. No es un mal programa: simplemente resuelve otro problema.',
+      'Los datos de Holded vienen de su web y de su página de turismo y viajes, revisadas el 9 de noviembre de 2026. Holded cambia sus planes y promociones con frecuencia: comprueba su página de precios. No es un mal programa: simplemente resuelve otro problema.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Autónomos y pymes de cualquier sector, de 1 a más de 100 personas'],
-      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Básico 29 EUR (2 usuarios), Estándar 59 EUR (4), Avanzado 99 EUR (7), sin IVA; con descuentos temporales'],
+      ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Básico 34 EUR (2 usuarios), Estándar 69 EUR (4), Avanzado 115 EUR (7), Premium 229 EUR (15), sin IVA; con descuentos temporales'],
       ['Presupuestos con margen por servicio', 'Sí, con reglas de precio, IVA y comisión', 'Sin funciones específicas de viajes que hayamos visto'],
       ['Catálogo con temporadas y proveedores', 'Sí', 'No es su función'],
       ['Reservas y tareas por proveedor', 'Lista por viaje con estados', 'No es su función'],
@@ -884,14 +884,6 @@ const spainPage: Article = {
       type: 'p',
       text: 'Los precios de tu catálogo, con sus temporadas y proveedores, se convierten en un presupuesto con tu margen, tu IVA y tu comisión. El primer pago del cliente abre el pedido, y la factura sale de las mismas líneas, sin teclear nada dos veces. Si cambia algo, se corrige en un solo sitio.'
     },
-    { type: 'h2', text: 'Guías para España', id: 'guias' },
-    {
-      type: 'list',
-      items: [
-        'REAV: el régimen especial de agencias de viajes explicado con ejemplos (/es/guides/guia-reav-agencias-de-viajes).',
-        'Veri*Factu para agencias de viajes (/es/guides/verifactu-agencias-de-viajes).'
-      ]
-    },
     { type: 'h2', text: 'Precio', id: 'precio' },
     {
       type: 'p',
@@ -913,4 +905,8 @@ const spainPage: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, reav, verifactu, spainPage];
+// The REAV and Veri*Factu guides stay off the site until a tax adviser has read them.
+// To publish them, add reav and verifactu back to this list and to base.ts localLinks.
+void reav;
+void verifactu;
+export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, spainPage];

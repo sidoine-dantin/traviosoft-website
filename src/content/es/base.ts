@@ -29,10 +29,15 @@ export const footer: SiteContent['footer'] = {
   hosted: 'Alojado en la UE',
   rights: 'Traviosoft',
   localLinks: [
-    { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' },
-    { label: 'Guía REAV', href: '/guides/guia-reav-agencias-de-viajes' },
-    { label: 'Veri*Factu para agencias', href: '/guides/verifactu-agencias-de-viajes' }
-  ]
+    { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' }
+  ],
+  consent: {
+    text: 'Con tu consentimiento, usamos cookies de LinkedIn y Meta para medir nuestros anuncios y mostrarlos a quienes han visitado este sitio.',
+    accept: 'Aceptar',
+    refuse: 'Rechazar',
+    settings: 'Configurar cookies',
+    policy: 'Política de privacidad'
+  }
 };
 
 export const common: SiteContent['common'] = {

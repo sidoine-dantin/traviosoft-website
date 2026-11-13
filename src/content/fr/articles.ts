@@ -193,10 +193,10 @@ const compares: Cmp[] = [
     lead: 'Holded est un logiciel généraliste de facturation, comptabilité et gestion pour PME, très répandu en Espagne. Il n’a pas de devis avec marge par prestation propres aux voyages ni de REAV. Traviosoft couvre le voyage, Holded peut continuer à faire tourner l’entreprise.',
     card: 'Un outil généraliste pour PME et un outil de voyage : ce que fait chacun.',
     basis:
-      'Les informations sur Holded viennent de son site et de sa page tourisme et voyages, vérifiées le 3 novembre 2026. Holded change souvent ses offres et ses promotions : consultez sa page de tarifs. Ce n’est pas un mauvais outil, il résout simplement un autre problème.',
+      'Les informations sur Holded viennent de son site et de sa page tourisme et voyages, vérifiées le 9 novembre 2026. Holded change souvent ses offres et ses promotions : consultez sa page de tarifs. Ce n’est pas un mauvais outil, il résout simplement un autre problème.',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Indépendants et PME de tous secteurs, de 1 à plus de 100 personnes'],
-      ['Prix publié', `Classic à partir de ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Básico 29 EUR (2 utilisateurs), Estándar 59 EUR (4), Avanzado 99 EUR (7), hors TVA ; avec remises temporaires'],
+      ['Prix publié', `Classic à partir de ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Básico 34 EUR (2 utilisateurs), Estándar 69 EUR (4), Avanzado 115 EUR (7), Premium 229 EUR (15), hors TVA ; avec remises temporaires'],
       ['Devis avec marge par prestation', 'Oui, avec règles de prix, TVA et commission', 'Pas de fonction propre aux voyages que nous ayons vue'],
       ['Catalogue avec saisons et fournisseurs', 'Oui', 'Ce n’est pas son rôle'],
       ['Réservations et tâches par fournisseur', 'Une liste par voyage avec statuts', 'Ce n’est pas son rôle'],

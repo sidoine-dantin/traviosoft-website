@@ -193,10 +193,10 @@ const compares: Cmp[] = [
     lead: 'Holded is general invoicing, accounting and management software for SMEs, widely used in Spain. It has no travel-specific quotes with margin per service and no REAV. Traviosoft covers the trip, while Holded can keep running the company.',
     card: 'A general SME tool and a travel tool: what each one does.',
     basis:
-      'Holded details come from its site and its tourism and travel page, checked on 3 November 2026. Holded changes plans and promotions often, so check its pricing page. It is not a bad tool. It solves a different problem.',
+      'Holded details come from its site and its tourism and travel page, checked on 9 November 2026. Holded changes plans and promotions often, so check its pricing page. It is not a bad tool. It solves a different problem.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Freelancers and SMEs in any sector, from 1 to over 100 people'],
-      ['Published price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Basic 29 EUR (2 users), Standard 59 EUR (4), Advanced 99 EUR (7), excluding VAT; with temporary discounts'],
+      ['Published price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Basic 34 EUR (2 users), Standard 69 EUR (4), Advanced 115 EUR (7), Premium 229 EUR (15), excluding VAT; with temporary discounts'],
       ['Quotes with margin per service', 'Yes, with pricing rules, VAT and commission', 'No travel-specific features that we saw'],
       ['Catalogue with seasons and suppliers', 'Yes', 'Not its job'],
       ['Bookings and tasks per supplier', 'A list per trip with statuses', 'Not its job'],

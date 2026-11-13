@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/navigation';
 import { Logo } from '@/components/site/logo';
 import type { SiteContent } from '@/content/types';
+import { CookieSettingsLink } from '@/components/site/consent';
 
 export default function Footer({ c }: { c: SiteContent }) {
   const f = c.footer;
@@ -51,6 +52,7 @@ export default function Footer({ c }: { c: SiteContent }) {
               <li><Link href="/legal/privacy">{f.privacy}</Link></li>
               <li><Link href="/legal/terms">{f.terms}</Link></li>
               <li><Link href="/legal/notice">{f.notice}</Link></li>
+              <CookieSettingsLink label={f.consent.settings} />
             </ul>
           </div>
         </div>

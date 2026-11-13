@@ -28,7 +28,14 @@ export const footer: SiteContent['footer'] = {
   notice: 'Mentions légales',
   hosted: 'Hébergé dans l’UE',
   rights: 'Traviosoft',
-  localLinks: []
+  localLinks: [],
+  consent: {
+    text: 'Avec votre accord, nous utilisons des cookies LinkedIn et Meta pour mesurer nos publicités et les montrer aux personnes qui ont visité ce site.',
+    accept: 'Accepter',
+    refuse: 'Refuser',
+    settings: 'Gérer les cookies',
+    policy: 'Politique de confidentialité'
+  }
 };
 
 export const common: SiteContent['common'] = {

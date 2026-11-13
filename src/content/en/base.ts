@@ -28,7 +28,14 @@ export const footer: SiteContent['footer'] = {
   notice: 'Legal notice',
   hosted: 'Hosted in the EU',
   rights: 'Traviosoft',
-  localLinks: []
+  localLinks: [],
+  consent: {
+    text: 'With your consent, we use LinkedIn and Meta cookies to measure our ads and show them to people who visited this site.',
+    accept: 'Accept',
+    refuse: 'Refuse',
+    settings: 'Cookie settings',
+    policy: 'Privacy policy'
+  }
 };
 
 export const common: SiteContent['common'] = {
