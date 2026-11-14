@@ -6,6 +6,7 @@ import { buildMetadata } from '@/lib/seo';
 import { Plans } from '@/components/site/plans';
 import { FaqList, FaqSchema } from '@/components/site/faq';
 import { KeyFacts } from '@/components/site/key-facts';
+import { ComparePlans } from '@/components/site/compare-plans';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -34,16 +35,9 @@ export default async function PricingPage({ params }: Props) {
       </section>
       <section className="on-cream2 band">
         <div className="wrap">
-          <h2 className="h2" style={{ color: 'var(--green)' }}>{p.includedTitle}</h2>
-          <ul className="incl">
-            {p.included.map(i => (
-              <li key={i}>
-                <span className="incl-mark" aria-hidden="true">✓</span>
-                <span>{i}</span>
-              </li>
-            ))}
-          </ul>
-          <p style={{ marginTop: 36 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}>{c.jobs.sell.name} · {c.jobs.book.name} · {c.jobs['get-paid'].name} →</Link></p>
+          <h2 className="h2" style={{ color: 'var(--green)' }}>{p.compareTitle}</h2>
+          <ComparePlans sections={p.compare} names={[p.plans[0].name, p.plans[1].name]} labels={{ feature: p.compareFeature, yes: p.yes, no: p.no }} note={p.compareNote} />
+          <p style={{ marginTop: 36 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{c.jobs.sell.name} · {c.jobs.book.name} · {c.jobs['get-paid'].name}</span><span className="arr" aria-hidden="true">→</span></Link></p>
         </div>
       </section>
       <section className="band">
@@ -51,7 +45,7 @@ export default async function PricingPage({ params }: Props) {
           <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 28 }}>{c.common.faqTitle}</h2>
           <FaqList items={p.faq} />
           <FaqSchema items={p.faq} />
-          <p style={{ marginTop: 28 }}><Link href="/switch" className="arrow" style={{ color: 'var(--green)' }}>{c.footer.switching} →</Link></p>
+          <p style={{ marginTop: 28 }}><Link href="/switch" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{c.footer.switching}</span><span className="arr" aria-hidden="true">→</span></Link></p>
         </div>
       </section>
     </>

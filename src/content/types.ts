@@ -174,8 +174,13 @@ export type Plan = {
   /** extra-user price, shown for the billing period picked on the switch */
   priceNote: { yearly: string; monthly: string };
   hot?: boolean;
-  lines: { text: string; no?: boolean }[];
+  /** one sentence under the price; the feature detail lives in the comparison table */
+  summary: string;
 };
+
+/** A comparison cell: true = included, false = not included, a string = included, with this detail. */
+export type CompareCell = boolean | string;
+export type CompareSection = { title: string; rows: { f: string; classic: CompareCell; premium: CompareCell }[] };
 
 export type SiteContent = {
   locale: Locale;
@@ -208,7 +213,7 @@ export type SiteContent = {
     steps: { time: string; title: string; body: string; job: JobSlug }[];
     stepGo: string;
     baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
-    priceTitle: string; priceBody: string; priceImport: string; priceFree: string; extraUserLine: string; coin1: string; coin2: string; coinUsers: string; priceNote: string; priceLink: string;
+    priceTitle: string; priceBody: string; priceImport: string; priceFree: string; priceFreeNote: string; extraUserLine: string; coin1: string; coin2: string; coinUsers: string; priceNote: string; priceLink: string;
     facts: { k: string; v: string }[];
   };
   jobs: Record<JobSlug, JobPage>;
@@ -217,7 +222,7 @@ export type SiteContent = {
     title: string; lead: string;
     yearly: string; monthly: string; yearlyNote: string;
     plans: Plan[];
-    includedTitle: string; included: string[];
+    compareTitle: string; compareFeature: string; yes: string; no: string; compare: CompareSection[]; compareNote: string;
     faq: Faq[];
   };
   demo: {

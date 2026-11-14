@@ -18,19 +18,7 @@ export const pricing: SiteContent['pricing'] = {
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
       priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.monthly} EUR al mes` },
-      lines: [
-        { text: 'Solicitudes y presupuestos con tu margen y tu comisión' },
-        { text: 'Catálogo con precios por temporada' },
-        { text: 'Agencias colaboradoras y liquidaciones de comisión' },
-        { text: 'Página de propuesta e itinerario día a día, con tu logo y tus colores' },
-        { text: 'Reservas, con los emails de proveedores archivados en el viaje' },
-        { text: 'Bonos de servicio' },
-        { text: 'Grupos: listas de viajeros, enlace a formulario y rooming lists' },
-        { text: 'Calendario de cobros, enlaces de pago y recordatorios' },
-        { text: 'Facturas y rectificativas, con las normas fiscales de tu país' },
-        { text: 'Panel' },
-        { text: 'Documentos en el idioma del cliente' }
-      ]
+      summary: 'Todo para llevar la agencia, desde la primera solicitud hasta la última factura.'
     },
     {
       id: 'premium',
@@ -40,28 +28,66 @@ export const pricing: SiteContent['pricing'] = {
       monthly: String(PRICES.premium.monthly),
       priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.monthly} EUR al mes` },
       hot: true,
-      lines: [
-        { text: 'Todo lo de Classic, y además:' },
-        { text: 'Equipos y roles' },
-        { text: 'Cualquier moneda, con tipos de cambio diarios' },
-        { text: 'Peticiones de disponibilidad y órdenes de compra a proveedores' },
-        { text: 'Varias marcas y empresas en una cuenta' },
-        { text: 'Exportación contable' },
-        { text: 'El asistente integrado y conexiones con tus propias herramientas de IA' },
-        { text: 'Conexiones con tu web y otros programas' }
+      summary: 'Todo Classic, más equipos, otras divisas, compras, varias marcas, el asistente y las conexiones.'
+    }
+  ],
+  compareTitle: 'Compara los planes',
+  compareFeature: 'Función',
+  yes: 'Incluido',
+  no: 'No incluido',
+  compare: [
+    {
+      title: 'Vender',
+      rows: [
+        { f: 'Solicitudes y presupuestos con tu margen y tu comisión', classic: true, premium: true },
+        { f: 'Catálogo con precios por temporada', classic: true, premium: true },
+        { f: 'Agencias colaboradoras y liquidaciones de comisión', classic: true, premium: true },
+        { f: 'Página de propuesta e itinerario día a día, con tu logo y tus colores', classic: true, premium: true },
+        { f: 'Documentos en el idioma del cliente', classic: true, premium: true },
+        { f: 'Divisas', classic: 'La divisa de tu agencia', premium: 'Cualquier divisa, con tipos de cambio diarios' }
+      ]
+    },
+    {
+      title: 'Reservar',
+      rows: [
+        { f: 'Pedidos y reservas, con los correos de proveedores archivados en el viaje', classic: true, premium: true },
+        { f: 'Hojas de servicio', classic: true, premium: true },
+        { f: 'Grupos: listas de viajeros, enlace a formulario y rooming lists', classic: true, premium: true },
+        { f: 'Solicitudes de disponibilidad y órdenes de compra a proveedores', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Cobrar',
+      rows: [
+        { f: 'Calendarios de pago, enlaces y recordatorios', classic: true, premium: true },
+        { f: 'Facturas y rectificativas, con las normas fiscales de tu país', classic: true, premium: true },
+        { f: 'Panel de control', classic: true, premium: true },
+        { f: 'Exportación contable', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Equipo y conexiones',
+      rows: [
+        { f: 'Usuarios', classic: `${PRICES.usersIncluded} incluidos, y ${PRICES.extraUser.yearly} EUR al mes por usuario adicional`, premium: `${PRICES.usersIncluded} incluidos, y ${PRICES.extraUser.yearly} EUR al mes por usuario adicional` },
+        { f: 'Equipos y roles', classic: false, premium: true },
+        { f: 'Varias marcas y sociedades en una cuenta', classic: false, premium: true },
+        { f: 'El asistente integrado, y la conexión de tus propias herramientas de IA', classic: false, premium: true },
+        { f: 'Conexiones con tu web y otros programas', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Alta y servicio',
+      rows: [
+        { f: 'Configuración de tu marca, tus documentos y tus reglas de precio', classic: 'Gratis con pago anual*', premium: 'Gratis con pago anual*' },
+        { f: 'Importación de tus hojas de cálculo o de la exportación de tu herramienta actual', classic: 'Gratis con pago anual*', premium: 'Gratis con pago anual*' },
+        { f: 'Soporte por correo en español, inglés y francés', classic: true, premium: true },
+        { f: 'Alojamiento en la Unión Europea, un espacio separado por agencia', classic: true, premium: true },
+        { f: 'Tus datos exportables en formatos estándar', classic: true, premium: true },
+        { f: 'Las novedades de tu plan en cuanto salen', classic: true, premium: true }
       ]
     }
   ],
-  includedTitle: 'Los dos planes incluyen',
-  included: [
-    `${PRICES.usersIncluded} usuarios, y más cuando los necesites`,
-    `Configuración de tu marca, tus documentos y tus reglas de precio, gratis con pago anual (${PRICES.setupMonthly} EUR una vez con pago mensual)`,
-    `Importación de tus hojas de cálculo o de la exportación de tu herramienta actual, gratis con pago anual (${PRICES.importMonthly} EUR una vez con pago mensual)`,
-    'Soporte por email en español, inglés y francés',
-    'Alojamiento en la Unión Europea, un espacio propio por agencia',
-    'Tus datos exportables en formatos estándar',
-    'Las funciones nuevas de tu plan en cuanto salen'
-  ],
+  compareNote: `* Oferta por tiempo limitado. Con pago mensual, el alta cuesta ${PRICES.setupMonthly} EUR y la importación de hojas de cálculo ${PRICES.importMonthly} EUR, una sola vez. Los demás archivos se importan con presupuesto aparte.`,
   faq: [
     {
       q: '¿Qué plan necesito?',

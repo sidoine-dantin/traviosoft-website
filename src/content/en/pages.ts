@@ -18,19 +18,7 @@ export const pricing: SiteContent['pricing'] = {
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
       priceNote: { yearly: `Extra user: ${PRICES.extraUser.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.monthly} EUR a month` },
-      lines: [
-        { text: 'Requests and quotes with your margin and commission' },
-        { text: 'Catalogue with season prices' },
-        { text: 'Partner agencies and commission statements' },
-        { text: 'Proposal page and day-by-day itinerary, with your logo and colours' },
-        { text: 'Orders and bookings, with supplier emails filed on the trip' },
-        { text: 'Service sheets' },
-        { text: 'Groups: traveller lists, form link and rooming lists' },
-        { text: 'Payment schedules, links and reminders' },
-        { text: 'Invoices and credit notes, with your country’s tax rules' },
-        { text: 'Dashboard' },
-        { text: 'Documents in the client’s language' }
-      ]
+      summary: 'Everything to run the agency, from the first request to the last invoice.'
     },
     {
       id: 'premium',
@@ -40,28 +28,66 @@ export const pricing: SiteContent['pricing'] = {
       monthly: String(PRICES.premium.monthly),
       priceNote: { yearly: `Extra user: ${PRICES.extraUser.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.monthly} EUR a month` },
       hot: true,
-      lines: [
-        { text: 'Everything in Classic, plus:' },
-        { text: 'Teams and roles' },
-        { text: 'Any currency, with daily exchange rates' },
-        { text: 'Availability requests and purchase orders to suppliers' },
-        { text: 'Several brands and companies in one account' },
-        { text: 'Accounting export' },
-        { text: 'The built-in assistant, and connections to your own AI tools' },
-        { text: 'Connections to your website and other software' }
+      summary: 'Everything in Classic, plus teams, other currencies, purchasing, several brands, the assistant and connections.'
+    }
+  ],
+  compareTitle: 'Compare the plans',
+  compareFeature: 'Feature',
+  yes: 'Included',
+  no: 'Not included',
+  compare: [
+    {
+      title: 'Sell',
+      rows: [
+        { f: 'Requests and quotes with your margin and commission', classic: true, premium: true },
+        { f: 'Catalogue with season prices', classic: true, premium: true },
+        { f: 'Partner agencies and commission statements', classic: true, premium: true },
+        { f: 'Proposal page and day-by-day itinerary, with your logo and colours', classic: true, premium: true },
+        { f: 'Documents in the client’s language', classic: true, premium: true },
+        { f: 'Currencies', classic: 'Your agency’s currency', premium: 'Any currency, with daily exchange rates' }
+      ]
+    },
+    {
+      title: 'Book',
+      rows: [
+        { f: 'Orders and bookings, with supplier emails filed on the trip', classic: true, premium: true },
+        { f: 'Service sheets', classic: true, premium: true },
+        { f: 'Groups: traveller lists, form link and rooming lists', classic: true, premium: true },
+        { f: 'Availability requests and purchase orders to suppliers', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Get paid',
+      rows: [
+        { f: 'Payment schedules, links and reminders', classic: true, premium: true },
+        { f: 'Invoices and credit notes, with your country’s tax rules', classic: true, premium: true },
+        { f: 'Dashboard', classic: true, premium: true },
+        { f: 'Accounting export', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Team and connections',
+      rows: [
+        { f: 'Users', classic: `${PRICES.usersIncluded} included, then ${PRICES.extraUser.yearly} EUR a month per user`, premium: `${PRICES.usersIncluded} included, then ${PRICES.extraUser.yearly} EUR a month per user` },
+        { f: 'Teams and roles', classic: false, premium: true },
+        { f: 'Several brands and companies in one account', classic: false, premium: true },
+        { f: 'The built-in assistant, and connections to your own AI tools', classic: false, premium: true },
+        { f: 'Connections to your website and other software', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Setup and service',
+      rows: [
+        { f: 'Setup of your brand, documents and pricing rules', classic: 'Free with yearly billing*', premium: 'Free with yearly billing*' },
+        { f: 'Import of your spreadsheets or your current tool’s export', classic: 'Free with yearly billing*', premium: 'Free with yearly billing*' },
+        { f: 'Support by email in Spanish, English and French', classic: true, premium: true },
+        { f: 'Hosting in the European Union, a separate space per agency', classic: true, premium: true },
+        { f: 'Your data exportable in standard formats', classic: true, premium: true },
+        { f: 'New features of your plan as they ship', classic: true, premium: true }
       ]
     }
   ],
-  includedTitle: 'Both plans include',
-  included: [
-    `${PRICES.usersIncluded} users, more when you need them`,
-    `Setup of your brand, documents and pricing rules, free with yearly billing (${PRICES.setupMonthly} EUR once with monthly)`,
-    `Import of your spreadsheets or your current tool’s export, free with yearly billing (${PRICES.importMonthly} EUR once with monthly)`,
-    'Support by email in Spanish, English and French',
-    'Hosting in the European Union, a separate space per agency',
-    'Your data exportable in standard formats',
-    'New features of your plan as they ship'
-  ],
+  compareNote: `* Limited-time offer. With monthly billing, setup is ${PRICES.setupMonthly} EUR and the import of spreadsheets ${PRICES.importMonthly} EUR, once. Other files are imported on quote.`,
   faq: [
     {
       q: 'Which plan do I need?',

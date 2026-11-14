@@ -81,7 +81,8 @@ export default async function HomePage({ params }: Props) {
           <div>
             <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>
             <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceImport} <s style={{ whiteSpace: "nowrap" }}>{PRICES.importMonthly} EUR</s> {h.priceFree}</p>
-            <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
+            <p className="free-note">{h.priceFreeNote}</p>
+            <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{h.priceLink}</span><span className="arr" aria-hidden="true">→</span></Link></p>
           </div>
           <div className="coin">
             <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span><span className="lbl users">{h.coinUsers}</span>

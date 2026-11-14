@@ -29,13 +29,7 @@ export function Plans({ plans, labels }: Props) {
             </div>
             <p className="price num" aria-live="polite">{yearly ? p.yearly : p.monthly}<small>EUR</small></p>
             <p style={{ fontSize: 14, opacity: 0.8 }}>{yearly ? p.priceNote.yearly : p.priceNote.monthly}</p>
-            <ul>
-              {p.lines.map(l => (
-                <li key={l.text} className={l.no ? 'no' : undefined}>
-                  <span>{l.text}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="plan-sum">{p.summary}</p>
           </article>
         ))}
       </div>

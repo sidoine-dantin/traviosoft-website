@@ -18,19 +18,7 @@ export const pricing: SiteContent['pricing'] = {
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
       priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.monthly} EUR par mois` },
-      lines: [
-        { text: 'Demandes et devis avec votre marge et votre commission' },
-        { text: 'Catalogue avec prix par saison' },
-        { text: 'Agences partenaires et relevés de commission' },
-        { text: 'Page de proposition et programme jour par jour, avec votre logo et vos couleurs' },
-        { text: 'Voyages confirmés et réservations, avec les e-mails des prestataires classés sur le voyage' },
-        { text: 'Fiches de service' },
-        { text: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists' },
-        { text: 'Échéanciers, liens de paiement et rappels' },
-        { text: 'Factures et avoirs, selon les règles fiscales de votre pays' },
-        { text: 'Tableau de bord' },
-        { text: 'Documents dans la langue du client' }
-      ]
+      summary: 'Tout pour gérer l’agence, de la première demande à la dernière facture.'
     },
     {
       id: 'premium',
@@ -40,28 +28,66 @@ export const pricing: SiteContent['pricing'] = {
       monthly: String(PRICES.premium.monthly),
       priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.monthly} EUR par mois` },
       hot: true,
-      lines: [
-        { text: 'Tout Classic, et en plus :' },
-        { text: 'Équipes et rôles' },
-        { text: 'Toutes les devises, avec des taux de change quotidiens' },
-        { text: 'Demandes de disponibilité et bons de commande aux prestataires' },
-        { text: 'Plusieurs marques et sociétés dans un compte' },
-        { text: 'Export comptable' },
-        { text: 'L’assistant intégré, et la connexion de vos propres outils d’IA' },
-        { text: 'Connexions à votre site et à vos autres logiciels' }
+      summary: 'Tout Classic, avec en plus les équipes, les autres devises, les achats, plusieurs marques, l’assistant et les connexions.'
+    }
+  ],
+  compareTitle: 'Comparer les offres',
+  compareFeature: 'Fonction',
+  yes: 'Inclus',
+  no: 'Non inclus',
+  compare: [
+    {
+      title: 'Vendre',
+      rows: [
+        { f: 'Demandes et devis avec votre marge et votre commission', classic: true, premium: true },
+        { f: 'Catalogue avec prix par saison', classic: true, premium: true },
+        { f: 'Agences partenaires et relevés de commission', classic: true, premium: true },
+        { f: 'Page de proposition et programme jour par jour, avec votre logo et vos couleurs', classic: true, premium: true },
+        { f: 'Documents dans la langue du client', classic: true, premium: true },
+        { f: 'Devises', classic: 'La devise de votre agence', premium: 'Toutes les devises, avec des taux de change quotidiens' }
+      ]
+    },
+    {
+      title: 'Réserver',
+      rows: [
+        { f: 'Voyages confirmés et réservations, avec les e-mails des prestataires classés sur le voyage', classic: true, premium: true },
+        { f: 'Fiches de service', classic: true, premium: true },
+        { f: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists', classic: true, premium: true },
+        { f: 'Demandes de disponibilité et bons de commande aux prestataires', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Encaisser',
+      rows: [
+        { f: 'Échéanciers, liens de paiement et rappels', classic: true, premium: true },
+        { f: 'Factures et avoirs, selon les règles fiscales de votre pays', classic: true, premium: true },
+        { f: 'Tableau de bord', classic: true, premium: true },
+        { f: 'Export comptable', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Équipe et connexions',
+      rows: [
+        { f: 'Utilisateurs', classic: `${PRICES.usersIncluded} inclus, puis ${PRICES.extraUser.yearly} EUR par mois et par utilisateur`, premium: `${PRICES.usersIncluded} inclus, puis ${PRICES.extraUser.yearly} EUR par mois et par utilisateur` },
+        { f: 'Équipes et rôles', classic: false, premium: true },
+        { f: 'Plusieurs marques et sociétés dans un compte', classic: false, premium: true },
+        { f: 'L’assistant intégré, et la connexion de vos propres outils d’IA', classic: false, premium: true },
+        { f: 'Connexions à votre site et à vos autres logiciels', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Mise en place et service',
+      rows: [
+        { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix', classic: 'Offert en annuel*', premium: 'Offert en annuel*' },
+        { f: 'Import de vos tableurs ou de l’export de votre outil actuel', classic: 'Offert en annuel*', premium: 'Offert en annuel*' },
+        { f: 'Support par e-mail en espagnol, anglais et français', classic: true, premium: true },
+        { f: 'Hébergement dans l’Union européenne, un espace séparé par agence', classic: true, premium: true },
+        { f: 'Vos données exportables en formats standard', classic: true, premium: true },
+        { f: 'Les nouvelles fonctions de votre offre dès leur sortie', classic: true, premium: true }
       ]
     }
   ],
-  includedTitle: 'Les deux offres incluent',
-  included: [
-    `${PRICES.usersIncluded} utilisateurs, et davantage quand vous en avez besoin`,
-    `Mise en place de votre marque, de vos documents et de vos règles de prix, offerte en annuel (${PRICES.setupMonthly} EUR une fois en mensuel)`,
-    `Import de vos tableurs ou de l’export de votre outil actuel, offert en annuel (${PRICES.importMonthly} EUR une fois en mensuel)`,
-    'Support par e-mail en espagnol, anglais et français',
-    'Hébergement dans l’Union européenne, un espace séparé par agence',
-    'Vos données exportables en formats standard',
-    'Les nouvelles fonctions de votre offre dès leur sortie'
-  ],
+  compareNote: `* Offre à durée limitée. En mensuel, la mise en place coûte ${PRICES.setupMonthly} EUR et l’import de tableurs ${PRICES.importMonthly} EUR, une seule fois. Les autres fichiers sont importés sur devis.`,
   faq: [
     {
       q: 'De quelle offre ai-je besoin ?',
