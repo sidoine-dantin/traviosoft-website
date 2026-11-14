@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 import { getContent } from '@/content';
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
@@ -17,7 +16,6 @@ export default async function NotFound() {
         <span className="h3" style={{ margin: 0 }}>{t.title}</span>
       </h1>
       <p className="lead muted" style={{ marginTop: 22, maxWidth: '46ch' }}>{t.body}</p>
-      <p style={{ marginTop: 36 }}><Link href="/" className="btn">{t.home}</Link></p>
     </section>
   );
 }

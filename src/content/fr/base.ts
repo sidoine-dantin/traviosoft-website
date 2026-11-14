@@ -50,8 +50,7 @@ export const common: SiteContent['common'] = {
   perMonth: 'EUR / mois',
   notFound: {
     title: 'Page introuvable',
-    body: 'Il n’y a rien à cette adresse. Vérifiez qu’elle est bien écrite, ou repartez de la page d’accueil.',
-    home: 'Aller à la page d’accueil'
+    body: 'Il n’y a rien à cette adresse.'
   }
 };
 
