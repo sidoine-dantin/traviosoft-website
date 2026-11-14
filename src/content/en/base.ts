@@ -29,9 +29,10 @@ export const footer: SiteContent['footer'] = {
   rights: 'Traviosoft',
   localLinks: [],
   consent: {
-    text: 'We use advertising cookies, only with your consent.',
+    text: 'With your consent, we and our advertising partners LinkedIn and Meta use cookies to measure visits that come from our ads and to show you our ads on other sites. Refusing changes nothing on this site. You can change your choice at any time with “Cookie settings” at the bottom of every page.',
     accept: 'Accept',
     refuse: 'Refuse',
+    more: 'Learn more',
     settings: 'Cookie settings',
     policy: 'Privacy policy'
   }

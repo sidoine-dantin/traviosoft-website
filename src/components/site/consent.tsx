@@ -3,6 +3,7 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { usePathname } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
+import { Mark } from './logo';
 
 /*
  * Ad measurement (LinkedIn Insight Tag, Meta Pixel), loaded only after the
@@ -165,7 +166,7 @@ export function CookieSettingsLink({ label }: { label: string }) {
   );
 }
 
-export function Consent({ text, accept, refuse, policy }: { text: string; accept: string; refuse: string; policy: string }) {
+export function Consent({ text, accept, refuse, more, policy }: { text: string; accept: string; refuse: string; more: string; policy: string }) {
   const pathname = usePathname();
   const stored = useSyncExternalStore(subscribe, snapshot, serverSnapshot);
   const choice: Choice | null = stored === 'granted' || stored === 'denied' ? stored : null;
@@ -206,10 +207,10 @@ export function Consent({ text, accept, refuse, policy }: { text: string; accept
     <>
     <div className="consent-dim" aria-hidden="true" />
     <div className="consent" role="dialog" aria-live="polite" aria-label={policy}>
-      <p>
-        {text} <Link href="/legal/privacy">{policy}</Link>
-      </p>
+      <span className="wm consent-wm" aria-hidden="true"><Mark />traviosoft</span>
+      <p>{text}</p>
       <div className="consent-actions">
+        <Link href="/legal/privacy" className="consent-btn consent-more" onClick={() => setReopened(false)}>{more} →</Link>
         <button type="button" className="consent-btn" onClick={() => decide('denied')}>{refuse}</button>
         <button type="button" className="consent-btn consent-accept" onClick={() => decide('granted')}>{accept}</button>
       </div>

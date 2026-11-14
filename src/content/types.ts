@@ -192,7 +192,7 @@ export type SiteContent = {
     /** extra footer links that only exist in this locale (e.g. Spain page) */
     localLinks: Link[];
     /** cookie banner, shown only when an ad measurement tag is configured */
-    consent: { text: string; accept: string; refuse: string; settings: string; policy: string };
+    consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };
   };
   common: {
     premium: string; next: string; onThisPage: string; updated: string; readMore: string;

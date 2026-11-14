@@ -129,7 +129,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main id="main">{children}</main>
           <Footer c={c} />
           <ScrollTop />
-          <Consent text={c.footer.consent.text} accept={c.footer.consent.accept} refuse={c.footer.consent.refuse} policy={c.footer.consent.policy} />
+          <Consent text={c.footer.consent.text} accept={c.footer.consent.accept} refuse={c.footer.consent.refuse} more={c.footer.consent.more} policy={c.footer.consent.policy} />
         </NextIntlClientProvider>
       </body>
     </html>
