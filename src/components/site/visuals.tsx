@@ -166,15 +166,11 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'brands':
       return (
         <div className="grid-2" style={{ width: 420, maxWidth: '100%' }} role="img" aria-label={v.brands}>
-          <div className="tile" style={{ background: 'var(--white)', border: '1px solid var(--line)', minHeight: 170 }}>
-            <span className="lbl" style={{ color: 'var(--orange-ink)' }}>{v.brandA}</span>
-            <span style={{ fontFamily: 'var(--display)', fontWeight: 800, fontSize: 30, color: 'var(--green)', lineHeight: 1 }}>Sur & Co.</span>
-            <span className="mono">F-2026-0142</span>
+          <div className="tile" style={{ background: 'var(--white)', border: '1px solid var(--line)', minHeight: 150, justifyContent: 'center', alignItems: 'center' }}>
+            <span style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 28, color: 'var(--green)', lineHeight: 1 }}>Sur & Co.</span>
           </div>
-          <div className="tile" style={{ background: 'var(--deep)', color: 'var(--cream)', minHeight: 170 }}>
-            <span className="lbl" style={{ color: 'var(--yellow)' }}>{v.brandB}</span>
+          <div className="tile" style={{ background: 'var(--deep)', color: 'var(--cream)', minHeight: 150, justifyContent: 'center', alignItems: 'center' }}>
             <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 30, lineHeight: 1 }}>Alma Events</span>
-            <span className="mono">AE-2026-0031</span>
           </div>
         </div>
       );

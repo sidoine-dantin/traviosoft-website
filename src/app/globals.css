@@ -255,7 +255,6 @@
 .feat .feat-body p + p { margin-top: .7em; }
 .feat-static { padding: 16px 0; border-bottom: 1.5px solid var(--line); }
 .feat-static b { display: block; font-size: 18px; margin-bottom: 4px; }
-.plan-tag { display: inline-block; font-size: 12px; font-weight: 700; background: var(--yellow); color: var(--green); border-radius: 999px; padding: 3px 8px; margin-left: 8px; vertical-align: middle; }
 @media (max-width: 900px) {
   .job-hero, .chapter { grid-template-columns: 1fr; }
   .chapter.flip > .chapter-visual { order: 0; }

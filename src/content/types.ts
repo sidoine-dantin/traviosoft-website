@@ -4,7 +4,7 @@
  * Pages never hard-code copy: they read it from getContent(locale).
  *
  * Copy rules (see PRODUCT.md):
- * - features of the Premium plan are marked `premium: true` (shown with a "Premium" tag)
+ * - features of the Premium plan are marked `premium: true` (used by the pricing table, not shown on product pages)
  * - no testimonials, no client logos, no invented numbers, no founder name or face
  * - never call Traviosoft a "CRM"
  * - one quiet demo link (header). No repeated demo buttons in page bodies.
