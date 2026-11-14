@@ -32,11 +32,11 @@ function compare(c: Cmp): Article {
     { type: 'list', items: c.otherBetter },
     { type: 'h2', text: 'When Traviosoft fits better', id: 'when-traviosoft' },
     { type: 'list', items: c.usBetter },
-    { type: 'h2', text: 'If you decide to switch', id: 'switching' },
+    { type: 'h2', text: 'Moving to Traviosoft', id: 'switching' },
     { type: 'p', text: c.switching },
     { type: 'h2', text: 'Questions', id: 'faq' },
     { type: 'faq', items: c.faq },
-    { type: 'p', text: 'To see Traviosoft with one of your own trips, the [Demo page](/demo) explains what the call looks like.' }
+    { type: 'p', text: 'The [Demo page](/demo) describes the demo, shown on a sample trip.' }
   ];
   return {
     key: c.key,
@@ -91,7 +91,7 @@ const compares: Cmp[] = [
       'You invoice clients abroad and need documents in Spanish, English and French.'
     ],
     switching:
-      'You do not have to leave Excel all at once. During setup we import your products, prices and suppliers from your spreadsheets, and setup and import are free with yearly billing. A common way is to finish the trips already open in your files and start new requests in Traviosoft. There is a full timeline on the [Switching page](/switch) and a step-by-step guide in "Moving from Excel to travel software".',
+      'During setup we import your products, prices and suppliers from your spreadsheets, free with yearly billing. The [Switching page](/switch) describes the steps, and the guide "From Excel to travel agency software" describes what changes.',
     faq: [
       { q: 'Can I keep using Excel next to Traviosoft?', a: ['Yes. You can import your data from Excel and export an Excel recap or a zip of every invoice PDF for your accountant.'] },
       { q: 'What happens to the margin formulas I already have?', a: ['They become pricing rules. Instead of copying the formula into every file, you define it once and it applies to every line of every quote.'] },
@@ -132,11 +132,11 @@ const compares: Cmp[] = [
       'You prefer a tool built around the flow of one trip: request, quote with margin, booking, payment and invoice.'
     ],
     switching:
-      'If you use Ezus and want to switch, export your products, suppliers and clients first. We import products, prices and suppliers from your spreadsheets during setup. A practical tip: switch outside high season and finish open trips where they are. The [Switching page](/switch) lists the steps.',
+      'If you move to Traviosoft from Ezus, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'How is each one priced?', a: [`Traviosoft Classic is ${PRICES.classic.yearly} EUR a month with yearly billing, ${PRICES.usersIncluded} users included, with setup and import included. Ezus Professional is 75 EUR per user a month, with an onboarding pack of 1,990 EUR that includes a guided rollout. Check both current pricing pages.`] },
       { q: 'Does Ezus work for Spain?', a: ['Yes. Ezus has a Spanish site and support. Traviosoft also includes REAV labels for agencies in Spain.'] },
-      { q: 'Can I try both?', a: ['Both work with a demo. The most useful test is to bring one real trip of yours to each and see how each one builds the quote with margin.'] }
+      { q: 'Can I try both?', a: ['Both work with a demo.'] }
     ]
   },
   {
@@ -150,7 +150,7 @@ const compares: Cmp[] = [
     lead: 'GIAV is travel agency management software with many years in Spain and a long record with retail agencies. Traviosoft is built for inbound and tailor-made travel. If you mainly sell catalogue trips, GIAV may fit better.',
     card: 'A long-established tool for retail agencies and one for tailor-made and inbound travel.',
     basis:
-      'GIAV details come from directories and trade press. GIAV presents its prices and plans in a demo, so we describe its focus and suggest you ask them for the rest. Traviosoft details are those on our site on 3 November 2026.',
+      'GIAV details come from directories and trade press. GIAV presents its prices and plans in a demo, so we describe its focus. Traviosoft details are those on our site on 3 November 2026.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Travel agency management in Spain, mostly retail agencies'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
@@ -169,11 +169,11 @@ const compares: Cmp[] = [
       'You want to see the price and what each plan includes on the website.'
     ],
     switching:
-      'Before deciding, ask GIAV and us for a demo with one of your trips, and ask both the same questions: how the margin per line is calculated, how a partner’s commission is recorded, what the client sees and how invoicing with REAV works. If you switch, we import products, prices and suppliers from your spreadsheets. See the [Switching page](/switch).',
+      'If you move to Traviosoft from GIAV, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'Can I import my data from GIAV?', a: ['We import products, prices and suppliers from spreadsheets. If you export your data from GIAV to a spreadsheet, you can bring it over.'] },
-      { q: 'Does Traviosoft work for a retail agency?', a: ['It is built for agencies that design and sell tailor-made trips. If your business is mostly selling wholesaler catalogue products, check first that it fits what you do.'] },
-      { q: 'How is GIAV priced?', a: ['GIAV presents its prices in a demo. Ask them for a quote for your team size.'] }
+      { q: 'Does Traviosoft work for a retail agency?', a: ['It is built for agencies that design and sell tailor-made trips.'] },
+      { q: 'How is GIAV priced?', a: ['GIAV presents its prices in a demo.'] }
     ]
   },
   {
@@ -207,7 +207,7 @@ const compares: Cmp[] = [
       'Your agency applies REAV and you want the labels on every invoice automatically.'
     ],
     switching:
-      'The sensible approach is to let them coexist. Traviosoft runs the trip, from request to invoice, and exports an Excel recap or a zip of PDF invoices for your accountant. Decide which program issues the invoices so you do not number them in two places, and ask your accountant how they want to receive the data. More on the [Switching page](/switch).',
+      'Traviosoft runs the trip, from request to invoice, and exports an Excel recap or a zip of PDF invoices, which an accountant can bring into Holded or another accounting program. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'Do I have to leave Holded to use Traviosoft?', a: ['Not necessarily. Many agencies keep their bookkeeping where it is. What matters is issuing each invoice in one place only, and agreeing with your accountant how they receive the data.'] },
       { q: 'Can Holded and Traviosoft work together?', a: ['Yes. Traviosoft handles the trip and its invoices, and exports an Excel recap or a zip of PDF invoices that your accountant can bring into Holded or any other accounting program.'] },
@@ -247,10 +247,10 @@ const compares: Cmp[] = [
       'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
     ],
     switching:
-      'If you use Lemax and want to move to Traviosoft, export your products and prices and ask us how to import them from your spreadsheets. Switching in the middle of the season is risky, so it is usually done in the low season. See the [Switching page](/switch).',
+      'If you move to Traviosoft from Lemax, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
-      { q: 'Who is Lemax GO for?', a: ['Teams of 15 users or more, according to its site, with a rollout it describes as "live in 90 days". For other team sizes, ask them what they offer.'] },
-      { q: 'How is Lemax priced?', a: ['Lemax agrees the package and rollout price with each client before signing. Ask them for a quote.'] },
+      { q: 'Who is Lemax GO for?', a: ['Teams of 15 users or more, according to its site, with a rollout it describes as "live in 90 days".'] },
+      { q: 'How is Lemax priced?', a: ['Lemax agrees the package and rollout price with each client before signing.'] },
       { q: 'Can Traviosoft connect to my other tools?', a: ['Yes, on Premium. Your website, your accounting tool or a developer you work with can read and write your Traviosoft data, and you can connect the AI assistant you already use.'] }
     ]
   },
@@ -286,11 +286,11 @@ const compares: Cmp[] = [
       'You want setup and import included with yearly billing.'
     ],
     switching:
-      'If you use Tourwriter, export your products, prices and suppliers to a spreadsheet and we import them during setup. A common approach is to finish trips in progress where they are and open new requests in Traviosoft. More steps on the [Switching page](/switch).',
+      'If you move to Traviosoft from Tourwriter, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'How is Tourwriter priced?', a: ['Its plans start from 99 USD per user a month (Starter) and 149 USD (Pro), with a one-time setup fee from 1,199 USD that covers migration and training. They prepare a quote for each team, so confirm the total with them.'] },
       { q: 'Which languages does each work in?', a: ['Tourwriter works in English. Traviosoft works in Spanish, English and French, and sends documents in the client’s language: Spanish, Catalan, English, French or Italian.'] },
-      { q: 'Can I try both?', a: ['Both offer a demo. The most useful test is to bring one real trip of yours to each and compare the itinerary your client would receive.'] }
+      { q: 'Can I try both?', a: ['Both offer a demo.'] }
     ]
   },
   {
@@ -326,11 +326,11 @@ const compares: Cmp[] = [
       'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
     ],
     switching:
-      'If you use Tourplan and want to move to Traviosoft, export your products, prices and suppliers to a spreadsheet and we import them during setup. A common approach is to finish trips in progress where they are and open new requests in Traviosoft, usually in the low season. See the [Switching page](/switch).',
+      'If you move to Traviosoft from Tourplan, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'Who is Tourplan for?', a: ['According to its site, DMCs and inbound and outbound tour operators, for FIT, group, MICE, tailor-made, series and specialist tours.'] },
-      { q: 'How is Tourplan priced?', a: ['Its site does not publish prices. Ask them for a quote.'] },
-      { q: 'Can I try both?', a: ['Both offer a demo. The most useful test is to bring one real trip of yours to each and compare the result.'] }
+      { q: 'How is Tourplan priced?', a: ['Its site does not publish prices.'] },
+      { q: 'Can I try both?', a: ['Both offer a demo.'] }
     ]
   },
   {
@@ -365,11 +365,11 @@ const compares: Cmp[] = [
       'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
     ],
     switching:
-      'If you use Kaptio and want to move to Traviosoft, export your products, prices and suppliers to a spreadsheet and we import them during setup. A common approach is to finish trips in progress where they are and open new requests in Traviosoft. See the [Switching page](/switch).',
+      'If you move to Traviosoft from Kaptio, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'Who is Kaptio for?', a: ['According to its site, companies selling multi-day travel: cruise, rail, group tours and tailor-made travel.'] },
-      { q: 'How is Kaptio priced?', a: ['Its site does not publish prices. Ask them for a quote.'] },
-      { q: 'Can I try both?', a: ['Kaptio starts with a discovery workshop and Traviosoft with a demo on a sample trip. Comparing the two on the same kind of trip is the most useful test.'] }
+      { q: 'How is Kaptio priced?', a: ['Its site does not publish prices.'] },
+      { q: 'Can I try both?', a: ['Kaptio starts with a discovery workshop and Traviosoft with a demo on a sample trip.'] }
     ]
   },
   {
@@ -404,7 +404,7 @@ const compares: Cmp[] = [
       'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
     ],
     switching:
-      'If you use TourCMS and want to move to Traviosoft, export your products, prices and suppliers to a spreadsheet and we import them during setup. See the [Switching page](/switch).',
+      'If you move to Traviosoft from TourCMS, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'Who is TourCMS for?', a: ['According to its site, tours and activities operators: day tours, hop-on hop-off, attractions, multi-day tours, DMCs and walking tours.'] },
       { q: 'How is TourCMS priced?', a: ['Its prices page lists four plans, from 49 USD a month (Small) to 569 USD a month (Enterprise), with a yearly option, plus a fee from 1.9% on bookings from connected partners.'] },
@@ -481,36 +481,31 @@ const best: Article = {
     { type: 'h3', text: 'GIAV' },
     {
       type: 'p',
-      text: 'Management software for travel agencies with a long presence in Spain, especially among retail agencies. Prices and features are presented in a demo, so if it fits your business, ask them for one.'
+      text: 'Management software for travel agencies with a long presence in Spain, especially among retail agencies. It presents its prices and features in a demo.'
     },
     { type: 'h3', text: 'Excel + Word' },
     {
       type: 'p',
       text: 'Free if you already have the licence, flexible and known to everyone. Many agencies start here and move to dedicated software as their trips and team grow.'
     },
-    { type: 'h2', text: 'How to choose', id: 'choose' },
-    {
-      type: 'list',
-      ordered: true,
-      items: [
-        'Count how many people will use the tool and check each option’s minimum number of users.',
-        'Work out the cost of year one, not just the monthly fee: add setup and data import.',
-        'Check the language of the documents your client receives, not just the screen language.',
-        'If your agency is in Spain, ask how invoicing with REAV works and whether the tool complies with Veri*Factu.',
-        'Ask for a demo with a real trip of yours and time how long it takes to get a quote with margin.',
-        'Do not switch in the middle of high season: finish open trips and start new ones in the new tool.'
-      ]
-    },
+    { type: 'h2', text: 'What differs between the options', id: 'choose' },
+    { type: 'list', items: [
+      'Options differ in the minimum number of users and in what is included in each plan.',
+      'The first-year cost can include setup and data import on top of the monthly fee, depending on the vendor.',
+      'The language of the documents a client receives can differ from the language of the screens.',
+      'Invoicing rules depend on the country; the pages in "Invoicing by country" describe several.',
+      'Some vendors publish their prices; others share them in a demo.'
+    ] },
     { type: 'h2', text: 'Questions', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: 'What is the best software for a DMC or tailor-made agency?', a: ['It depends on your way of working and your market. For the whole trip from request to invoice, with a visible price and Spanish invoicing, look at Traviosoft and Ezus. If you sell mostly in English and luxury trips, also look at Tourwriter.'] },
+        { q: 'What is the best software for a DMC or tailor-made agency?', a: ['It depends on the agency’s way of working and its market. The table above shows who each tool is for, its price and its languages.'] },
         { q: 'How much does DMC software cost?', a: [`Published prices range from ${PRICES.classic.yearly} EUR a month for ${PRICES.usersIncluded} users (Traviosoft Classic) to 75 EUR per user a month plus a 1,990 EUR onboarding pack (Ezus). Tourplan, Lemax and Kaptio give their prices on request.`] },
         { q: 'Do I need travel-specific software or will a general ERP do?', a: ['A general ERP is built for bookkeeping; travel software adds quotes with margin per service and a booking list per trip. Many agencies use both.'] }
       ]
     },
-    { type: 'p', text: 'To see Traviosoft with one of your own trips, the [Demo page](/demo) explains what the call looks like.' }
+    { type: 'p', text: 'The [Demo page](/demo) describes the demo, shown on a sample trip.' }
   ]
 };
 
@@ -518,26 +513,22 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'tailor-made-quote-with-margins',
-  metaTitle: 'How to build a tailor-made travel quote with margins',
+  metaTitle: 'How a tailor-made travel price is calculated: margin and commission',
   metaDescription:
-    'How to price a tailor-made trip: net rates, markup vs margin, commission and price per person, with a worked example in numbers, step by step.',
-  title: 'How to build a tailor-made travel quote with margins',
-  lead: 'To price a tailor-made trip, add up the net rates and divide by one minus the margin you want. With a cost of 1,000 EUR and a 25% margin on the selling price, the price is 1,333.33 EUR. If there is a commission, subtract it in the divisor too.',
-  updated: UPDATED,
-  card: 'Net rate, markup, margin and commission: the calculation explained with a real example.',
+    'How the price of a tailor-made trip is calculated from net rates, with a margin on the selling price and a commission, in a worked example with figures.',
+  title: 'How a tailor-made travel price is calculated',
+  lead: 'The price of a tailor-made trip is built from three amounts: what suppliers charge (the net rates), what the agency earns (the margin) and, when another agency sells the trip, its commission. This page shows the calculation on an example.',
+  updated: '2026-11-14',
+  card: 'Net rates, margin on the selling price and commission, calculated on a worked example.',
   blocks: [
+    { type: 'h2', text: 'Markup and margin for the same cost', id: 'concepts' },
     {
       type: 'p',
-      text: 'A tailor-made quote has three layers: what suppliers charge you (the net rate), what you want to earn (the margin) and what you pay whoever brings the sale (the commission). The most common mistake is confusing markup and margin. This guide separates them and works through the numbers.'
-    },
-    { type: 'h2', text: 'Net rate, markup and margin', id: 'concepts' },
-    {
-      type: 'p',
-      text: 'The net rate is what the supplier charges you, with nothing added. Markup is calculated on that cost. Margin is calculated on the selling price. They are different percentages for the same euro earned. With a cost of 1,000 EUR:'
+      text: 'Markup is calculated on the cost and margin on the selling price, so the same amount earned gives two different percentages. For a cost of 1,000 EUR:'
     },
     {
       type: 'table',
-      head: ['Markup on cost', 'Selling price', 'You earn', 'Margin on price'],
+      head: ['Markup on cost', 'Selling price', 'Amount earned', 'Margin on price'],
       rows: [
         ['20%', '1,200.00 EUR', '200.00 EUR', '16.7%'],
         ['25%', '1,250.00 EUR', '250.00 EUR', '20.0%'],
@@ -560,44 +551,38 @@ const quote: Article = {
     },
     {
       type: 'p',
-      text: 'If you want a 25% margin on the selling price, the price is 1,000 / (1 - 0.25) = 1,333.33 EUR. Your margin is 333.33 EUR. Per person, 666.67 EUR. If you had added 25% to the cost, the price would be 1,250 EUR and your real margin only 20%.'
+      text: 'With a 25% margin on the selling price, the price is 1,000 ÷ (1 − 0.25) = 1,333.33 EUR, which is 666.67 EUR per person. The margin is 333.33 EUR. A 25% markup on the cost would give 1,250 EUR, which is a 20% margin.'
     },
-    { type: 'h2', text: 'When there is a commission', id: 'commission' },
+    { type: 'h2', text: 'With a commission', id: 'commission' },
     {
       type: 'p',
-      text: 'Say another agency brings you the sale and you pay it 10% of the price. If you keep the price at 1,333.33 EUR, the commission is 133.33 EUR and your margin drops to 200 EUR, which is 15%. To keep 25%, subtract the commission in the divisor: 1,000 / (1 - 0.25 - 0.10) = 1,538.46 EUR.'
+      text: 'When another agency sells the trip for a 10% commission on the price, the commission is taken from the same price. At 1,333.33 EUR, the commission is 133.33 EUR and the margin falls to 200 EUR, which is 15%. To keep a 25% margin, the commission is included in the divisor: 1,000 ÷ (1 − 0.25 − 0.10) = 1,538.46 EUR.'
     },
     {
       type: 'list',
       items: [
         'Price to the client: 1,538.46 EUR (769.23 EUR per person).',
         'Commission at 10%: 153.85 EUR.',
-        'Your 25% margin: 384.62 EUR.',
+        'Margin at 25%: 384.62 EUR.',
         'Net cost: 1,000.00 EUR. (Figures carry cent rounding.)'
       ]
     },
-    { type: 'h2', text: 'Common mistakes', id: 'mistakes' },
+    { type: 'h2', text: 'Taxes', id: 'taxes' },
     {
-      type: 'list',
-      items: [
-        'Adding a percentage to the cost and calling it margin.',
-        'Forgetting the commission when giving a price and finding out when you pay it.',
-        'Using the rate of another season: check the dates of every price.',
-        'Rounding the price per person down in a large group: multiply by the travellers before rounding.',
-        'Leaving no validity date on the quote.',
-        'Mixing prices with and without VAT in the same sum. In Spain, agency VAT may also follow the REAV scheme, which has its own Spanish guide.'
-      ]
+      type: 'p',
+      text: 'The amounts above are before tax. How VAT applies to a trip depends on the country and on the scheme the agency uses; the pages in "Invoicing by country" describe several countries.'
     },
+    { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
     {
-      type: 'callout',
-      text: 'In Traviosoft you set your pricing rules (margin, VAT and commission) once, and every line of every quote follows them, with the price per person and the total the client sees.'
+      type: 'p',
+      text: 'In Traviosoft, pricing rules (margin, VAT and commission) are set once, and every line of every quote follows them, with the price per person and the total the client sees.'
     },
     { type: 'h2', text: 'Questions', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: 'What margin should I apply?', a: ['There is no number that suits everyone. It depends on your market, your fixed costs and the competition. What matters is a percentage you know and apply the same way on every quote.'] },
-        { q: 'Is margin calculated per service or per trip?', a: ['You can do both. A different margin per service (more on transfers, less on the hotel) gives more control, but it needs clear rules to avoid mistakes.'] }
+        { q: 'Is the margin set per service or per trip?', a: ['Both exist. Some agencies use one margin for the whole trip, others a different margin per type of service.'] },
+        { q: 'Why is the commission in the divisor?', a: ['Because the commission is a percentage of the selling price, like the margin. Putting both in the divisor gives a price where each keeps its percentage.'] }
       ]
     }
   ]
@@ -607,71 +592,61 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-template-groups-mice',
-  metaTitle: 'Rooming list for groups and MICE: template and steps',
+  metaTitle: 'Rooming list for groups and MICE: what it is and what it contains',
   metaDescription:
-    'How to prepare a rooming list for a group or MICE event: template columns, an example, the steps and the mistakes that cause problems at reception.',
-  title: 'How to prepare a rooming list for a group or MICE event',
-  lead: 'A rooming list tells the hotel who sleeps in each room, with room type, dates and requests. It must be complete before the contract deadline. The basic columns are room number, type, guest names, check-in, check-out and notes.',
-  updated: UPDATED,
-  card: 'The template columns, the steps and the most common mistakes in a rooming list.',
+    'What a rooming list is in group travel and MICE, the information it usually contains, an example and how hotels use it.',
+  title: 'The rooming list for groups and MICE events',
+  lead: 'A rooming list tells the hotel who sleeps in each room of a group, with the room type, the dates and any requests. The hotel uses it to assign rooms in the block it holds for the group.',
+  updated: '2026-11-14',
+  card: 'What a rooming list is, the columns it usually has and an example.',
   blocks: [
     {
       type: 'p',
-      text: 'For a group, the hotel holds a block of rooms and needs to know how they are split. A clean rooming list avoids queues at reception, wrong beds and charges for unused rooms. This guide gives you the columns and a working order.'
+      text: 'For a group, the hotel holds a block of rooms under a contract. The rooming list says how those rooms are split between the participants. The contract usually sets the date by which the hotel expects the list and the date on which unused rooms in the block are released.'
     },
-    { type: 'h2', text: 'The template columns', id: 'columns' },
+    { type: 'h2', text: 'The usual columns', id: 'columns' },
     {
       type: 'table',
-      head: ['Column', 'What to write', 'Example'],
+      head: ['Column', 'Content', 'Example'],
       rows: [
         ['Room no.', 'A running number; the hotel assigns the real one', '1'],
         ['Room type', 'Single, double, twin or triple', 'Twin'],
-        ['Guest 1', 'Full name as in the passport', 'Marta Ruiz Soler'],
+        ['Guest 1', 'Full name as in the travel document', 'Marta Ruiz Soler'],
         ['Guest 2', 'Same, if sharing', 'Pedro Vidal Mas'],
         ['Check-in', 'Arrival date', '12/05/2027'],
         ['Check-out', 'Departure date', '15/05/2027'],
         ['Nights', 'Calculated from the dates', '3'],
         ['Meal plan', 'Room only, breakfast, half board', 'Breakfast'],
-        ['Arrival', 'Time or flight, if it matters for early check-in', 'Flight 10:40'],
-        ['Requests', 'Diets, accessibility, extra bed, high floor', 'Gluten free'],
-        ['Company or group', 'Useful if there are several invoices', 'Sales team']
+        ['Arrival', 'Time or flight', 'Flight 10:40'],
+        ['Requests', 'Diets, accessibility, extra bed', 'Gluten free'],
+        ['Company or group', 'When there are several invoices', 'Sales team']
       ]
     },
     {
       type: 'p',
-      text: 'A size example: a group of 22 people splits into 9 twin rooms (18 people) and 4 single rooms, which is 13 rooms. Always check that the total number of people on the list matches the group.'
+      text: 'An example of size: a group of 22 people in 9 twin rooms (18 people) and 4 single rooms uses 13 rooms. The total of people on the list matches the group.'
     },
-    { type: 'h2', text: 'How to prepare it, step by step', id: 'steps' },
+    { type: 'h2', text: 'Who appears on it', id: 'who' },
     {
-      type: 'list',
-      ordered: true,
-      items: [
-        'Check the hotel contract for the deadline to send the rooming list and the release date of the block. It is usually a few weeks before arrival; confirm it in your contract.',
-        'Ask each participant, or the organising company, for full name, dates, who they share with and special requests.',
-        'Fill in the template, one row per room, and check that names match the travel document.',
-        'Count rooms and people and compare them with the block you booked.',
-        'Send the list to the hotel and ask for written confirmation.',
-        'Keep the version you sent. Every later change is a new dated version.'
-      ]
+      type: 'p',
+      text: 'Besides the participants, a group rooming list often includes the people who travel with the group, such as the guide, the driver or the organiser, when they stay at the same hotel.'
     },
-    { type: 'h2', text: 'Mistakes that cause problems', id: 'mistakes' },
+    { type: 'h2', text: 'Versions', id: 'versions' },
     {
-      type: 'list',
-      items: [
-        'Names with typos or no surnames, which then do not match the flight booking.',
-        'Not knowing whether two people want a double bed or two beds.',
-        'Sending the list late and losing rooms from the block.',
-        'Last-minute changes given by phone instead of in writing.',
-        'Leaving out the guide, the driver or the organiser, who also need rooms.'
-      ]
+      type: 'p',
+      text: 'A rooming list changes as participants confirm, cancel or swap rooms. Each version sent to the hotel usually carries its date, so both sides work from the same list.'
+    },
+    { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
+    {
+      type: 'p',
+      text: 'In Traviosoft, a rooming list per hotel is built from who shares with whom, ready to send as a PDF or a spreadsheet.'
     },
     { type: 'h2', text: 'Questions', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: 'When must the rooming list be sent?', a: ['When the hotel contract says. If you are not sure, ask the hotel in writing when you confirm the block.'] },
-        { q: 'What if names change at the last minute?', a: ['Send the hotel a new version with the date and mark what changed. Avoid giving the change by phone only.'] },
-        { q: 'Does the same template work for a small group?', a: ['Yes. For small groups you can remove columns, but keep names, room type and dates.'] }
+        { q: 'Is a rooming list only for large groups?', a: ['No. It is used whenever a hotel needs to know who sleeps in which room, from a small group to a large event.'] },
+        { q: 'What is the difference between a rooming list and a booking?', a: ['The booking reserves the rooms. The rooming list says who occupies each of them.'] }
       ]
     }
   ]
@@ -681,60 +656,52 @@ const fromExcel: Article = {
   key: 'from-excel',
   kind: 'guide',
   slug: 'move-from-excel-to-travel-software',
-  metaTitle: 'Moving from Excel to travel agency software',
+  metaTitle: 'From Excel to travel agency software: what moves and what changes',
   metaDescription:
-    'How to move a travel agency from Excel to software: what to prepare, the order of steps and when to wait, so you do not lose data or stop the season.',
-  title: 'Moving from Excel to software without stopping your season',
-  lead: 'To move from Excel to software, first clean your catalogue, suppliers and clients, import those three lists, then start new requests in the software while you finish open trips in your files. Do it outside high season.',
-  updated: UPDATED,
-  card: 'What to prepare, in what order, and when to wait before leaving your spreadsheets.',
+    'What a travel agency usually keeps in spreadsheets, what moves into travel software and what changes once trips are in one system.',
+  title: 'From Excel to travel agency software',
+  lead: 'Many agencies run on spreadsheets and documents: a product list, a supplier list, clients and one file per quote. Travel software holds the same information in one place, linked to each trip.',
+  updated: '2026-11-14',
+  card: 'What usually lives in spreadsheets, what moves into software and what changes.',
   blocks: [
-    {
-      type: 'p',
-      text: 'The usual fear is losing data or being unable to work for a week. You avoid both by switching in parts: do not move everything on a Monday, import what is stable (catalogue, suppliers, clients) and start with what is new.'
-    },
-    { type: 'h2', text: 'What to prepare first', id: 'prepare' },
+    { type: 'h2', text: 'What usually lives in spreadsheets', id: 'spreadsheets' },
     {
       type: 'list',
       items: [
-        'A product list with name, supplier, net price and validity period.',
-        'A supplier list with contact details and terms.',
-        'A client list without duplicates, with language and email.',
-        'Your pricing rules: margin, commission, VAT and whether REAV applies.',
-        'A quote template you want to keep and your usual email texts.'
+        'Products with name, supplier, net price and validity period.',
+        'Suppliers with contact details and terms.',
+        'Clients with language and email.',
+        'Pricing rules: margin, commission and VAT, often as formulas.',
+        'Quotes, often one file per version, and the usual email texts.'
       ]
     },
-    { type: 'h2', text: 'The recommended order', id: 'order' },
+    { type: 'h2', text: 'What changes in software', id: 'changes' },
     {
       type: 'list',
-      ordered: true,
       items: [
-        'Clean the lists in Excel: remove duplicates, unify names and fill in missing prices.',
-        'Define your pricing rules once and check with an old quote that you get the same result.',
-        'Import products, prices and suppliers. In Traviosoft we do this during setup, from your spreadsheets, and it is free with yearly billing.',
-        'Import clients and review duplicates.',
-        'Run a test trip from start to finish: request, quote, booking, payment and invoice.',
-        'Start recording new requests there and finish open trips in your files.',
-        'When the last old trip closes, archive the Excel files.'
+        'Prices are kept by season and by supplier, and a quote reads them from the catalogue.',
+        'Pricing rules are set once and apply to every quote line.',
+        'Each quote version is kept with the trip.',
+        'Bookings, payments and invoices are linked to the same trip.',
+        'Several people work on the same clients and trips at the same time.'
       ]
     },
-    { type: 'h2', text: 'When to wait', id: 'wait' },
+    { type: 'h2', text: 'What stays in the old files', id: 'archive' },
     {
       type: 'p',
-      text: 'If you are in the middle of high season, postpone the change. A team learning a tool while serving trips makes mistakes. The best time is the start of low season, with room to test with a real trip.'
+      text: 'The history of past trips often stays in the old files as an archive. What moves is what is reused: current rates, active suppliers and clients.'
     },
-    { type: 'h2', text: 'What you do not need to move', id: 'skip' },
+    { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
     {
       type: 'p',
-      text: 'You do not need to load the full history of past trips. Keep the old files as a reference archive and bring only what you will reuse: current rates, active suppliers and clients you will keep working with. The [Switching page](/switch) has a timeline with more detail.'
+      text: 'During setup, we import products, prices and suppliers from your spreadsheets. Setup and import are free with yearly billing. The [Switching page](/switch) describes the steps.'
     },
     { type: 'h2', text: 'Questions', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: 'How long does the move take?', a: ['It depends on how tidy your files are. Preparing the lists is usually the longest part. We do the import itself during setup.'] },
-        { q: 'Can I go back to Excel?', a: ['Yes. If you stop using Traviosoft, you get your data back in standard formats.'] },
-        { q: 'What if my files are very messy?', a: ['Start with the minimum: current products and prices. The rest can be completed as you go.'] }
+        { q: 'Can Excel still be used next to Traviosoft?', a: ['Yes. Traviosoft exports an Excel recap, or a zip of invoice PDFs for any period.'] },
+        { q: 'Can the data be taken back out?', a: ['Yes. If you stop using Traviosoft, you get your data back in standard formats.'] }
       ]
     }
   ]
@@ -794,7 +761,7 @@ const aiTools: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'Does it work with Gemini?', a: ['The connector works with any AI tool that supports MCP. Google supports MCP in its Gemini developer tools. Check whether your version of Gemini lets you add a custom connector.'] },
+        { q: 'Does it work with Gemini?', a: ['The connector works with any AI tool that supports MCP. Google supports MCP in its Gemini developer tools. Whether a custom connector can be added depends on the Gemini version.'] },
         { q: 'Is the MCP connector included in my plan?', a: ['Yes. It is included in both Classic and Premium. The built-in assistant is an option on both plans, with usage limits.'] },
         { q: 'Does the AI see all our data?', a: ['It sees what the person who connected it can see, and nothing more. An administrator can also allow reading only and block every change.'] },
         { q: 'Can the AI send emails to clients on its own?', a: ['Changes wait for a person’s approval in safe mode, which is on by default. You decide what it may do.'] }

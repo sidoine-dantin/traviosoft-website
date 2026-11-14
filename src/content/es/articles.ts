@@ -32,11 +32,11 @@ function compare(c: Cmp): Article {
     { type: 'list', items: c.otherBetter },
     { type: 'h2', text: 'Cuándo encaja mejor Traviosoft', id: 'cuando-traviosoft' },
     { type: 'list', items: c.usBetter },
-    { type: 'h2', text: 'Si decides cambiar', id: 'cambiar' },
+    { type: 'h2', text: 'Pasar a Traviosoft', id: 'cambiar' },
     { type: 'p', text: c.switching },
     { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
     { type: 'faq', items: c.faq },
-    { type: 'p', text: 'Si quieres ver Traviosoft con un viaje tuyo, la [página Demo](/demo) explica cómo es la llamada.' }
+    { type: 'p', text: 'La [página Demo](/demo) describe la demo, hecha sobre un viaje de ejemplo.' }
   ];
   return {
     key: c.key,
@@ -91,7 +91,7 @@ const compares: Cmp[] = [
       'Facturas a clientes de otros países y necesitas documentos en español, inglés y francés.'
     ],
     switching:
-      'No hace falta abandonar Excel de golpe. Durante el alta importamos tus productos, precios y proveedores desde tus hojas de cálculo, y el alta y la importación no tienen coste con pago anual. Lo habitual es terminar los viajes ya abiertos en tus archivos y empezar las solicitudes nuevas en Traviosoft. Hay un calendario completo en la [página Cambiar](/switch) y una guía paso a paso en "De Excel a un software de agencia".',
+      'Durante el alta, importamos tus productos, precios y proveedores desde tus hojas de cálculo, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos, y la guía «De Excel a un software de agencia de viajes» describe lo que cambia.',
     faq: [
       { q: '¿Puedo seguir usando Excel junto a Traviosoft?', a: ['Sí. Puedes importar tus datos desde Excel y exportar un resumen en Excel o un zip con todas las facturas en PDF para tu gestor.'] },
       { q: '¿Qué pasa con las fórmulas de margen que ya tengo?', a: ['Se convierten en reglas de precio. En lugar de copiar la fórmula en cada archivo, la defines una vez y se aplica a cada línea de cada presupuesto.'] },
@@ -132,11 +132,11 @@ const compares: Cmp[] = [
       'Prefieres una herramienta construida alrededor del flujo de un viaje: solicitud, presupuesto con margen, reserva, cobro y factura.'
     ],
     switching:
-      'Si usas Ezus y quieres cambiar, exporta antes tus productos, proveedores y clientes. Nosotros importamos productos, precios y proveedores desde tus hojas de cálculo durante el alta. Un consejo práctico: cambia fuera de temporada alta y termina los viajes abiertos donde están. La [página Cambiar](/switch) detalla los pasos.',
+      'Si pasas de Ezus a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Cómo es el precio de cada uno?', a: [`Traviosoft Classic cuesta ${PRICES.classic.yearly} EUR al mes con pago anual, ${PRICES.usersIncluded} usuarios incluidos, con alta e importación incluidas. Ezus Professional cuesta 75 EUR por usuario y mes, con un pack de onboarding de 1.990 EUR que incluye una implantación guiada. Comprueba las páginas de precios actuales de los dos.`] },
       { q: '¿Ezus sirve para España?', a: ['Sí. Ezus tiene web y soporte en español. Traviosoft incluye además etiquetas REAV para agencias en España.'] },
-      { q: '¿Puedo probar los dos?', a: ['Los dos trabajan con demostración. Lo más útil es llevar un viaje real tuyo a cada una y ver cómo construye cada uno el presupuesto con margen.'] }
+      { q: '¿Puedo probar los dos?', a: ['Los dos trabajan con demostración.'] }
     ]
   },
   {
@@ -150,7 +150,7 @@ const compares: Cmp[] = [
     lead: 'GIAV es un programa de gestión para agencias de viajes con muchos años en España y una larga trayectoria con agencias minoristas. Traviosoft está pensado para receptivos y viajes a medida. Si vendes sobre todo viajes de catálogo, GIAV puede encajar mejor.',
     card: 'Un programa con larga trayectoria para agencias minoristas y otro para viajes a medida y receptivos.',
     basis:
-      'Los datos de GIAV vienen de directorios y prensa del sector. GIAV presenta sus precios y planes en una demostración, así que describimos su enfoque y te sugerimos preguntarles el resto. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
+      'Los datos de GIAV vienen de directorios y prensa del sector. GIAV presenta sus precios y planes en una demostración, así que describimos su enfoque. Los datos de Traviosoft son los de nuestro sitio a 3 de noviembre de 2026.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Gestión de agencias de viajes en España, sobre todo minoristas'],
       ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar'],
@@ -169,11 +169,11 @@ const compares: Cmp[] = [
       'Quieres ver en la web el precio y lo que incluye cada plan.'
     ],
     switching:
-      'Antes de decidir, pide a GIAV y a nosotros una demostración con un viaje tuyo y pregunta lo mismo a los dos: cómo se calcula el margen por línea, cómo se registra la comisión de un colaborador, qué ve el cliente y cómo se factura con REAV. Si cambias, importamos productos, precios y proveedores desde tus hojas de cálculo; consulta la [página Cambiar](/switch).',
+      'Si pasas de GIAV a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Puedo importar los datos desde GIAV?', a: ['Importamos productos, precios y proveedores desde hojas de cálculo. Si exportas tus datos de GIAV a una hoja de cálculo, puedes traerlos así.'] },
-      { q: '¿Sirve Traviosoft para una agencia minorista?', a: ['Está pensado para agencias que diseñan y venden viajes a medida. Si tu negocio es sobre todo vender producto de catálogo de mayoristas, mira antes si encaja con lo que haces.'] },
-      { q: '¿Cómo es el precio de GIAV?', a: ['GIAV presenta sus precios en una demostración. Pídeles un presupuesto para el tamaño de tu equipo.'] }
+      { q: '¿Sirve Traviosoft para una agencia minorista?', a: ['Está pensado para agencias que diseñan y venden viajes a medida.'] },
+      { q: '¿Cómo es el precio de GIAV?', a: ['GIAV presenta sus precios en una demostración.'] }
     ]
   },
   {
@@ -207,7 +207,7 @@ const compares: Cmp[] = [
       'Tu agencia aplica REAV y quieres las etiquetas en cada factura de forma automática.'
     ],
     switching:
-      'Lo más sensato es que convivan. Traviosoft lleva el viaje, desde la solicitud hasta la factura, y exporta un resumen en Excel o un zip de facturas en PDF para tu gestor. Decide en qué programa emites las facturas para no numerarlas en dos sitios, y pregunta a tu gestor cómo quiere recibir los datos. Más detalle en la [página Cambiar](/switch).',
+      'Traviosoft lleva el viaje, de la solicitud a la factura, y exporta un resumen en Excel o un zip de facturas en PDF, que un gestor puede llevar a Holded o a otro programa de contabilidad. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Tengo que dejar Holded para usar Traviosoft?', a: ['No necesariamente. Muchas agencias mantienen su contabilidad donde está. Lo importante es emitir cada factura en un solo sitio y acordar con tu gestor cómo recibe los datos.'] },
       { q: '¿Pueden trabajar juntos Holded y Traviosoft?', a: ['Sí. Traviosoft lleva el viaje y sus facturas, y exporta un resumen en Excel o un zip de facturas en PDF que tu gestor puede llevar a Holded o a cualquier otro programa de contabilidad.'] },
@@ -247,10 +247,10 @@ const compares: Cmp[] = [
       'Quieres que importemos tus productos, precios y proveedores desde tus hojas de cálculo durante la puesta en marcha.'
     ],
     switching:
-      'Si hoy usas Lemax y quieres pasar a Traviosoft, exporta tus productos y precios y pregúntanos cómo importarlos desde tus hojas de cálculo. Cambiar de herramienta en plena temporada es arriesgado: lo normal es hacerlo en temporada baja. Consulta la [página Cambiar](/switch).',
+      'Si pasas de Lemax a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
-      { q: '¿Para quién es Lemax GO?', a: ['Para equipos de 15 usuarios o más, según su web, con una implantación que describen como "en producción en 90 días". Para otros tamaños de equipo, pregúntales qué ofrecen.'] },
-      { q: '¿Cómo es el precio de Lemax?', a: ['Lemax acuerda el precio del paquete y de la implantación con cada cliente antes de firmar. Pídeles un presupuesto.'] },
+      { q: '¿Para quién es Lemax GO?', a: ['Para equipos de 15 usuarios o más, según su web, con una implantación que describen como "en producción en 90 días".'] },
+      { q: '¿Cómo es el precio de Lemax?', a: ['Lemax acuerda el precio del paquete y de la implantación con cada cliente antes de firmar.'] },
       { q: '¿Traviosoft se conecta con mis otras herramientas?', a: ['Sí, en Premium. Tu web, tu programa de contabilidad o un desarrollador con el que trabajes pueden leer y escribir tus datos de Traviosoft, y puedes conectar el asistente de IA que ya usas.'] }
     ]
   },
@@ -286,11 +286,11 @@ const compares: Cmp[] = [
       'Quieres el alta y la importación incluidas con el pago anual.'
     ],
     switching:
-      'Si usas Tourwriter, exporta tus productos, precios y proveedores a una hoja de cálculo y nosotros los importamos en el alta. Lo habitual es terminar los viajes en curso donde están y abrir las solicitudes nuevas en Traviosoft. Más pasos en la [página Cambiar](/switch).',
+      'Si pasas de Tourwriter a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Cómo es el precio de Tourwriter?', a: ['Sus planes empiezan en 99 USD por usuario y mes (Starter) y 149 USD (Pro), con un pago único de puesta en marcha desde 1.199 USD que incluye migración y formación. Preparan un presupuesto para cada equipo, así que confirma el total con ellos.'] },
       { q: '¿En qué idiomas trabaja cada uno?', a: ['Tourwriter trabaja en inglés. Traviosoft trabaja en español, inglés y francés, y envía los documentos en el idioma del cliente: español, catalán, inglés, francés o italiano.'] },
-      { q: '¿Puedo probar los dos?', a: ['Los dos ofrecen demostración. Lo más útil es llevar un viaje real tuyo a cada uno y comparar el itinerario que recibiría tu cliente.'] }
+      { q: '¿Puedo probar los dos?', a: ['Los dos ofrecen demostración.'] }
     ]
   },
   {
@@ -326,11 +326,11 @@ const compares: Cmp[] = [
       'Quieres que importemos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta.'
     ],
     switching:
-      'Si usas Tourplan y quieres pasar a Traviosoft, exporta tus productos, precios y proveedores a una hoja de cálculo y los importamos durante el alta. Lo habitual es terminar los viajes en curso donde están y abrir las nuevas solicitudes en Traviosoft, normalmente en temporada baja. Mira la [página Cambiar](/switch).',
+      'Si pasas de Tourplan a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Para quién es Tourplan?', a: ['Según su web, para DMC y turoperadores receptivos y emisores: FIT, grupos, MICE, a medida, circuitos regulares y especializados.'] },
-      { q: '¿Cuánto cuesta Tourplan?', a: ['Su web no publica precios. Pídeles un presupuesto.'] },
-      { q: '¿Puedo probar los dos?', a: ['Los dos ofrecen una demo. La prueba más útil es llevar un viaje real a cada uno y comparar el resultado.'] }
+      { q: '¿Cuánto cuesta Tourplan?', a: ['Su web no publica precios.'] },
+      { q: '¿Puedo probar los dos?', a: ['Los dos ofrecen una demo.'] }
     ]
   },
   {
@@ -365,11 +365,11 @@ const compares: Cmp[] = [
       'Quieres que importemos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta.'
     ],
     switching:
-      'Si usas Kaptio y quieres pasar a Traviosoft, exporta tus productos, precios y proveedores a una hoja de cálculo y los importamos durante el alta. Lo habitual es terminar los viajes en curso donde están y abrir las nuevas solicitudes en Traviosoft. Mira la [página Cambiar](/switch).',
+      'Si pasas de Kaptio a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Para quién es Kaptio?', a: ['Según su web, para empresas que venden viajes de varios días: cruceros, tren, circuitos en grupo y viajes a medida.'] },
-      { q: '¿Cuánto cuesta Kaptio?', a: ['Su web no publica precios. Pídeles un presupuesto.'] },
-      { q: '¿Puedo probar los dos?', a: ['Kaptio empieza con un taller de descubrimiento y Traviosoft con una demo sobre un viaje de ejemplo. Compararlos con el mismo tipo de viaje es la prueba más útil.'] }
+      { q: '¿Cuánto cuesta Kaptio?', a: ['Su web no publica precios.'] },
+      { q: '¿Puedo probar los dos?', a: ['Kaptio empieza con un taller de descubrimiento y Traviosoft con una demo sobre un viaje de ejemplo.'] }
     ]
   },
   {
@@ -404,7 +404,7 @@ const compares: Cmp[] = [
       'Quieres que importemos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta.'
     ],
     switching:
-      'Si usas TourCMS y quieres pasar a Traviosoft, exporta tus productos, precios y proveedores a una hoja de cálculo y los importamos durante el alta. Mira la [página Cambiar](/switch).',
+      'Si pasas de TourCMS a Traviosoft, importamos tus productos, precios y proveedores desde tus hojas de cálculo durante el alta, sin coste con pago anual. La [página Cambiar](/switch) describe los pasos.',
     faq: [
       { q: '¿Para quién es TourCMS?', a: ['Según su web, para operadores de excursiones y actividades: excursiones de un día, autobuses turísticos, atracciones, circuitos de varios días, DMC y visitas a pie.'] },
       { q: '¿Cuánto cuesta TourCMS?', a: ['Su página de precios muestra cuatro planes, de 49 USD al mes (Small) a 569 USD al mes (Enterprise), con opción anual, más una comisión desde el 1,9 % en las reservas de socios conectados.'] },
@@ -481,36 +481,31 @@ const best: Article = {
     { type: 'h3', text: 'GIAV' },
     {
       type: 'p',
-      text: 'Programa de gestión para agencias de viajes con larga presencia en España, sobre todo entre agencias minoristas. Presenta precios y funciones en una demostración: si encaja con tu negocio, pídeles una.'
+      text: 'Programa de gestión para agencias de viajes con larga presencia en España, sobre todo entre agencias minoristas. Presenta precios y funciones en una demostración.'
     },
     { type: 'h3', text: 'Excel + Word' },
     {
       type: 'p',
       text: 'Gratis si ya tienes la licencia, flexible y conocido por todos. Muchas agencias empiezan aquí y pasan a un software específico cuando crecen sus viajes y su equipo.'
     },
-    { type: 'h2', text: 'Cómo elegir', id: 'elegir' },
-    {
-      type: 'list',
-      items: [
-        'Cuenta cuántas personas usarán el programa y comprueba el mínimo de usuarios de cada opción.',
-        'Calcula el coste del primer año, no solo la cuota mensual: suma la puesta en marcha y la importación de datos.',
-        'Comprueba el idioma de los documentos que recibirá tu cliente, no solo el de la pantalla.',
-        'Si tu agencia está en España, pregunta cómo se factura con REAV y si el programa cumple Veri*Factu.',
-        'Pide una demostración con un viaje real tuyo y mide cuánto tardas en tener el presupuesto con margen.',
-        'No cambies en plena temporada alta: termina los viajes abiertos y empieza lo nuevo en el programa nuevo.'
-      ],
-      ordered: true
-    },
+    { type: 'h2', text: 'Lo que cambia entre las opciones', id: 'elegir' },
+    { type: 'list', items: [
+      'Las opciones se diferencian en el mínimo de usuarios y en lo que incluye cada plan.',
+      'El coste del primer año puede incluir, además de la cuota mensual, la puesta en marcha y la importación de datos, según el proveedor.',
+      'El idioma de los documentos que recibe el cliente puede ser distinto del de las pantallas.',
+      'Las reglas de facturación dependen del país; las páginas «Facturar en tu país» describen varios.',
+      'Algunos proveedores publican sus precios; otros los presentan en una demostración.'
+    ] },
     { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: '¿Cuál es el mejor software para un DMC o agencia a medida en España?', a: ['Depende de tu forma de trabajar y tu mercado. Para llevar todo el viaje de la solicitud a la factura, con precio visible y facturación española, mira Traviosoft y Ezus. Si vendes sobre todo en inglés y viajes de lujo, mira también Tourwriter.'] },
+        { q: '¿Cuál es el mejor software para un DMC o agencia a medida en España?', a: ['Depende de la forma de trabajar de la agencia y de su mercado. La tabla de arriba muestra para quién es cada programa, su precio y sus idiomas.'] },
         { q: '¿Cuánto cuesta un software para DMC?', a: [`Los precios publicados van de ${PRICES.classic.yearly} EUR al mes para ${PRICES.usersIncluded} usuarios (Traviosoft Classic) a 75 EUR por usuario y mes más un pack de onboarding de 1.990 EUR (Ezus). Tourplan, Lemax y Kaptio dan sus precios a consultar.`] },
         { q: '¿Necesito un programa específico de viajes o me vale un ERP general?', a: ['Un ERP general está pensado para la contabilidad; un software de viajes añade presupuestos con margen por servicio y una lista de reservas por viaje. Muchas agencias usan los dos.'] }
       ]
     },
-    { type: 'p', text: 'Si quieres ver Traviosoft con un viaje tuyo, la [página Demo](/demo) explica cómo es la llamada.' }
+    { type: 'p', text: 'La [página Demo](/demo) describe la demo, hecha sobre un viaje de ejemplo.' }
   ]
 };
 
@@ -518,31 +513,27 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'presupuesto-viaje-a-medida-con-margen',
-  metaTitle: 'Presupuesto de viaje a medida con margen: guía y ejemplo',
+  metaTitle: 'Cómo se calcula el precio de un viaje a medida: margen y comisión',
   metaDescription:
-    'Cómo calcular el precio de un viaje a medida: tarifas netas, recargo frente a margen, comisión y precio por persona, con un ejemplo con cifras paso a paso.',
-  title: 'Cómo hacer un presupuesto de viaje a medida con margen',
-  lead: 'Para fijar el precio de un viaje a medida, suma las tarifas netas y divide por uno menos el margen que quieres. Con un coste de 1.000 EUR y un margen del 25% sobre el precio de venta, el precio es 1.333,33 EUR. Si hay una comisión, también se resta en el divisor.',
-  updated: UPDATED,
-  card: 'Tarifa neta, recargo, margen y comisión: el cálculo explicado con un ejemplo real.',
+    'Cómo se calcula el precio de un viaje a medida a partir de las tarifas netas, con un margen sobre el precio de venta y una comisión, con un ejemplo en cifras.',
+  title: 'Cómo se calcula el precio de un viaje a medida',
+  lead: 'El precio de un viaje a medida se construye con tres importes: lo que cobran los proveedores (las tarifas netas), lo que gana la agencia (el margen) y, cuando otra agencia vende el viaje, su comisión. Esta página muestra el cálculo con un ejemplo.',
+  updated: '2026-11-14',
+  card: 'Tarifas netas, margen sobre el precio de venta y comisión, calculados con un ejemplo.',
   blocks: [
+    { type: 'h2', text: 'Recargo y margen para un mismo coste', id: 'conceptos' },
     {
       type: 'p',
-      text: 'Un presupuesto de viaje a medida tiene tres capas: lo que te cobran los proveedores (la tarifa neta), lo que quieres ganar (el margen) y lo que pagas a quien te trae la venta (la comisión). El error más común es confundir recargo y margen. Esta guía los separa y lo calcula con cifras.'
-    },
-    { type: 'h2', text: 'Tarifa neta, recargo y margen', id: 'conceptos' },
-    {
-      type: 'p',
-      text: 'La tarifa neta es lo que te cobra el proveedor, sin nada añadido. El recargo (markup) se calcula sobre ese coste. El margen se calcula sobre el precio de venta. Son porcentajes distintos para el mismo euro ganado. Con un coste de 1.000 EUR:'
+      text: 'El recargo se calcula sobre el coste y el margen sobre el precio de venta, así que un mismo importe ganado da dos porcentajes distintos. Para un coste de 1.000 EUR:'
     },
     {
       type: 'table',
-      head: ['Recargo sobre el coste', 'Precio de venta', 'Ganas', 'Margen sobre el precio'],
+      head: ['Recargo sobre el coste', 'Precio de venta', 'Importe ganado', 'Margen sobre el precio'],
       rows: [
-        ['20%', '1.200,00 EUR', '200,00 EUR', '16,7%'],
-        ['25%', '1.250,00 EUR', '250,00 EUR', '20,0%'],
-        ['33,3%', '1.333,33 EUR', '333,33 EUR', '25,0%'],
-        ['50%', '1.500,00 EUR', '500,00 EUR', '33,3%']
+        ['20 %', '1.200,00 EUR', '200,00 EUR', '16,7 %'],
+        ['25 %', '1.250,00 EUR', '250,00 EUR', '20,0 %'],
+        ['33,3 %', '1.333,33 EUR', '333,33 EUR', '25,0 %'],
+        ['50 %', '1.500,00 EUR', '500,00 EUR', '33,3 %']
       ]
     },
     { type: 'h2', text: 'Ejemplo: 4 noches en Andalucía para 2 personas', id: 'ejemplo' },
@@ -560,44 +551,38 @@ const quote: Article = {
     },
     {
       type: 'p',
-      text: 'Si quieres un margen del 25% sobre el precio de venta, el precio es 1.000 / (1 - 0,25) = 1.333,33 EUR. Tu margen es 333,33 EUR. Por persona, 666,67 EUR. Si hubieras sumado un 25% al coste, el precio sería 1.250 EUR y tu margen real solo el 20%.'
+      text: 'Con un margen del 25 % sobre el precio de venta, el precio es 1.000 ÷ (1 − 0,25) = 1.333,33 EUR, es decir 666,67 EUR por persona. El margen es de 333,33 EUR. Un recargo del 25 % sobre el coste daría 1.250 EUR, que es un margen del 20 %.'
     },
-    { type: 'h2', text: 'Cuando hay comisión', id: 'comision' },
+    { type: 'h2', text: 'Con una comisión', id: 'comision' },
     {
       type: 'p',
-      text: 'Supón que otra agencia te trae la venta y le pagas el 10% del precio. Si dejas el precio en 1.333,33 EUR, la comisión son 133,33 EUR y tu margen baja a 200 EUR, un 15%. Para conservar el 25% tienes que restar la comisión en el divisor: 1.000 / (1 - 0,25 - 0,10) = 1.538,46 EUR.'
+      text: 'Cuando otra agencia vende el viaje con un 10 % de comisión sobre el precio, la comisión sale de ese mismo precio. A 1.333,33 EUR, la comisión es de 133,33 EUR y el margen baja a 200 EUR, un 15 %. Para mantener un 25 % de margen, la comisión entra en el divisor: 1.000 ÷ (1 − 0,25 − 0,10) = 1.538,46 EUR.'
     },
     {
       type: 'list',
       items: [
-        'Precio al cliente: 1.538,46 EUR (769,23 EUR por persona).',
-        'Comisión del 10%: 153,85 EUR.',
-        'Tu margen del 25%: 384,62 EUR.',
-        'Coste neto: 1.000,00 EUR. (Las cifras tienen redondeos de céntimos.)'
+        'Precio para el cliente: 1.538,46 EUR (769,23 EUR por persona).',
+        'Comisión del 10 %: 153,85 EUR.',
+        'Margen del 25 %: 384,62 EUR.',
+        'Coste neto: 1.000,00 EUR. (Los importes están redondeados al céntimo.)'
       ]
     },
-    { type: 'h2', text: 'Errores habituales', id: 'errores' },
+    { type: 'h2', text: 'Los impuestos', id: 'impuestos' },
     {
-      type: 'list',
-      items: [
-        'Sumar un porcentaje al coste y llamarlo margen.',
-        'Olvidar la comisión al dar un precio y descubrirlo al pagarla.',
-        'Usar la tarifa de otra temporada: comprueba las fechas de cada precio.',
-        'Redondear el precio por persona hacia abajo en un grupo grande: multiplica por los viajeros antes de redondear.',
-        'No dejar fecha de validez en el presupuesto.',
-        'Mezclar precios con y sin IVA en la misma suma. En España, además, el IVA de las agencias puede seguir el REAV: mira la guía del REAV.'
-      ]
+      type: 'p',
+      text: 'Los importes anteriores son sin impuestos. Cómo se aplica el IVA a un viaje depende del país y del régimen de la agencia; las páginas «Facturar en tu país» describen varios países.'
     },
+    { type: 'h2', text: 'En Traviosoft', id: 'traviosoft' },
     {
-      type: 'callout',
-      text: 'En Traviosoft defines una vez tus reglas de precio (margen, IVA y comisión) y cada línea de cada presupuesto las aplica, con el precio por persona y el total que ve el cliente.'
+      type: 'p',
+      text: 'En Traviosoft, las reglas de precio (margen, IVA y comisión) se definen una vez, y cada línea de cada presupuesto las sigue, con el precio por persona y el total que ve el cliente.'
     },
-    { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
+    { type: 'h2', text: 'Preguntas', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: '¿Qué margen debería aplicar?', a: ['No hay una cifra válida para todos. Depende de tu mercado, de tus costes fijos y de la competencia. Lo importante es que sea un porcentaje que conozcas y apliques igual en todos los presupuestos.'] },
-        { q: '¿Se calcula el margen por servicio o por viaje?', a: ['Puedes hacer los dos. Un margen distinto por servicio (más en traslados, menos en el hotel) da más control, pero exige reglas claras para no equivocarte.'] }
+        { q: '¿El margen se fija por servicio o por viaje?', a: ['Existen las dos formas. Algunas agencias aplican un margen a todo el viaje y otras un margen distinto por tipo de servicio.'] },
+        { q: '¿Por qué la comisión va en el divisor?', a: ['Porque la comisión es un porcentaje del precio de venta, como el margen. Ponerlas las dos en el divisor da un precio en el que cada una mantiene su porcentaje.'] }
       ]
     }
   ]
@@ -607,71 +592,61 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-grupos-mice',
-  metaTitle: 'Rooming list para grupos y MICE: plantilla y pasos',
+  metaTitle: 'Rooming list para grupos y MICE: qué es y qué contiene',
   metaDescription:
-    'Cómo preparar una rooming list para un grupo o evento MICE: columnas de la plantilla, ejemplo, pasos y errores que provocan problemas en recepción.',
-  title: 'Cómo preparar una rooming list para un grupo o evento MICE',
-  lead: 'Una rooming list es la lista que dice al hotel quién duerme en cada habitación, con tipo de habitación, fechas y peticiones. Tiene que estar completa antes de la fecha límite del contrato. Las columnas básicas son número de habitación, tipo, nombres, entrada, salida y observaciones.',
-  updated: UPDATED,
-  card: 'La plantilla de columnas, los pasos y los errores más comunes en una rooming list.',
+    'Qué es una rooming list en los viajes de grupo y el MICE, la información que suele contener, un ejemplo y para qué la usa el hotel.',
+  title: 'La rooming list para grupos y MICE',
+  lead: 'Una rooming list indica al hotel quién duerme en cada habitación de un grupo, con el tipo de habitación, las fechas y las peticiones especiales. El hotel la usa para asignar las habitaciones del cupo que reserva al grupo.',
+  updated: '2026-11-14',
+  card: 'Qué es una rooming list, sus columnas habituales y un ejemplo.',
   blocks: [
     {
       type: 'p',
-      text: 'En un grupo, el hotel reserva un bloque de habitaciones y necesita saber cómo se reparten. Una rooming list limpia evita colas en recepción, camas equivocadas y cargos por habitaciones no usadas. Esta guía te da las columnas y el orden de trabajo.'
+      text: 'Para un grupo, el hotel bloquea un cupo de habitaciones con un contrato. La rooming list dice cómo se reparten esas habitaciones entre los participantes. El contrato suele fijar la fecha en que el hotel espera la lista y la fecha en que se liberan las habitaciones del cupo que no se usan.'
     },
-    { type: 'h2', text: 'Las columnas de la plantilla', id: 'columnas' },
+    { type: 'h2', text: 'Las columnas habituales', id: 'columnas' },
     {
       type: 'table',
-      head: ['Columna', 'Qué escribir', 'Ejemplo'],
+      head: ['Columna', 'Contenido', 'Ejemplo'],
       rows: [
-        ['Nº de habitación', 'Un número de orden; el hotel asigna el real', '1'],
+        ['N.º de habitación', 'Un número correlativo; el hotel asigna el real', '1'],
         ['Tipo de habitación', 'Individual, doble, twin o triple', 'Twin'],
-        ['Huésped 1', 'Nombre y apellidos tal como figuran en el pasaporte', 'Marta Ruiz Soler'],
-        ['Huésped 2', 'Igual, si comparten', 'Pedro Vidal Mas'],
+        ['Huésped 1', 'Nombre completo como en el documento de viaje', 'Marta Ruiz Soler'],
+        ['Huésped 2', 'Igual, si comparte', 'Pedro Vidal Mas'],
         ['Entrada', 'Fecha de llegada', '12/05/2027'],
         ['Salida', 'Fecha de salida', '15/05/2027'],
         ['Noches', 'Calculadas a partir de las fechas', '3'],
         ['Régimen', 'Solo alojamiento, desayuno, media pensión', 'Desayuno'],
-        ['Llegada', 'Hora o vuelo, si importa para la entrada anticipada', 'Vuelo 10:40'],
-        ['Peticiones', 'Dietas, accesibilidad, cama supletoria, planta alta', 'Sin gluten'],
-        ['Empresa o grupo', 'Útil si hay varias facturas', 'Equipo comercial']
+        ['Llegada', 'Hora o vuelo', 'Vuelo 10:40'],
+        ['Peticiones', 'Dietas, accesibilidad, cama supletoria', 'Sin gluten'],
+        ['Empresa o grupo', 'Cuando hay varias facturas', 'Equipo comercial']
       ]
     },
     {
       type: 'p',
-      text: 'Ejemplo de tamaño: un grupo de 22 personas se reparte en 9 habitaciones twin (18 personas) y 4 individuales, es decir, 13 habitaciones. Comprueba siempre que el total de personas de la lista coincide con el del grupo.'
+      text: 'Un ejemplo de tamaño: un grupo de 22 personas en 9 habitaciones twin (18 personas) y 4 individuales ocupa 13 habitaciones. El total de personas de la lista coincide con el grupo.'
     },
-    { type: 'h2', text: 'Cómo prepararla, paso a paso', id: 'pasos' },
+    { type: 'h2', text: 'Quién aparece', id: 'quien' },
     {
-      type: 'list',
-      ordered: true,
-      items: [
-        'Mira en el contrato del hotel la fecha límite para enviar la rooming list y la fecha de liberación del bloque. Suele ser unas semanas antes de la llegada; confírmalo en tu contrato.',
-        'Pide a cada participante, o a la empresa organizadora, nombre completo, fechas, con quién comparte y peticiones especiales.',
-        'Rellena la plantilla, una fila por habitación, y revisa que los nombres coinciden con el documento de viaje.',
-        'Cuenta habitaciones y personas, y compáralas con el bloque reservado.',
-        'Envía la lista al hotel y pide una confirmación por escrito.',
-        'Guarda la versión enviada. Cada cambio posterior es una nueva versión con fecha.'
-      ]
+      type: 'p',
+      text: 'Además de los participantes, la rooming list de un grupo suele incluir a quienes viajan con él, como el guía, el conductor o el organizador, cuando se alojan en el mismo hotel.'
     },
-    { type: 'h2', text: 'Errores que dan problemas', id: 'errores' },
+    { type: 'h2', text: 'Las versiones', id: 'versiones' },
     {
-      type: 'list',
-      items: [
-        'Nombres con erratas o sin apellidos, que luego no coinciden con la reserva de vuelos.',
-        'No saber si dos personas quieren cama doble o dos camas.',
-        'Enviar la lista tarde y perder habitaciones del bloque.',
-        'Cambios de última hora comunicados por teléfono y no por escrito.',
-        'No incluir al guía, al conductor o al organizador, que también necesitan habitación.'
-      ]
+      type: 'p',
+      text: 'Una rooming list cambia a medida que los participantes confirman, cancelan o cambian de habitación. Cada versión enviada al hotel suele llevar su fecha, para que las dos partes trabajen con la misma lista.'
     },
-    { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
+    { type: 'h2', text: 'En Traviosoft', id: 'traviosoft' },
+    {
+      type: 'p',
+      text: 'En Traviosoft, la rooming list de cada hotel se construye a partir de quién comparte con quién, lista para enviar en PDF o en hoja de cálculo.'
+    },
+    { type: 'h2', text: 'Preguntas', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: '¿Cuándo hay que enviar la rooming list?', a: ['Cuando diga el contrato del hotel. Si no estás seguro, pregúntalo por escrito al hotel al confirmar el bloque.'] },
-        { q: '¿Qué hago si cambian los nombres de última hora?', a: ['Envía una versión nueva al hotel con la fecha y marca lo que cambia. Evita avisar solo por teléfono.'] },
-        { q: '¿Sirve la misma plantilla para un grupo pequeño?', a: ['Sí. Para grupos pequeños puedes quitar columnas, pero conserva nombres, tipo de habitación y fechas.'] }
+        { q: '¿La rooming list es solo para grupos grandes?', a: ['No. Se usa siempre que un hotel necesita saber quién duerme en cada habitación, desde un grupo pequeño hasta un gran evento.'] },
+        { q: '¿Qué diferencia hay entre una rooming list y una reserva?', a: ['La reserva bloquea las habitaciones. La rooming list dice quién ocupa cada una.'] }
       ]
     }
   ]
@@ -681,60 +656,52 @@ const fromExcel: Article = {
   key: 'from-excel',
   kind: 'guide',
   slug: 'de-excel-a-un-software-de-agencia',
-  metaTitle: 'De Excel a un software para tu agencia de viajes',
+  metaTitle: 'De Excel a un software de agencia de viajes: qué cambia',
   metaDescription:
-    'Cómo pasar tu agencia de viajes de Excel a un software: qué preparar, en qué orden hacerlo y cuándo esperar, sin perder datos ni parar la temporada.',
-  title: 'De Excel a un software: cómo pasar tu agencia de viajes sin parar la temporada',
-  lead: 'Para pasar de Excel a un software, limpia primero tu catálogo, tus proveedores y tus clientes, importa esos tres listados, y empieza con las solicitudes nuevas mientras terminas los viajes abiertos en tus archivos. Hazlo fuera de temporada alta.',
-  updated: UPDATED,
-  card: 'Qué preparar, en qué orden y cuándo conviene esperar antes de dejar las hojas de cálculo.',
+    'Lo que una agencia de viajes suele guardar en hojas de cálculo, lo que pasa a un software de viajes y lo que cambia cuando los viajes están en un solo sistema.',
+  title: 'De Excel a un software de agencia de viajes',
+  lead: 'Muchas agencias trabajan con hojas de cálculo y documentos: una lista de productos, una de proveedores, los clientes y un archivo por presupuesto. Un software de viajes reúne esa información en un solo sitio, vinculada a cada viaje.',
+  updated: '2026-11-14',
+  card: 'Lo que suele estar en hojas de cálculo, lo que pasa a un software y lo que cambia.',
   blocks: [
-    {
-      type: 'p',
-      text: 'El miedo habitual es perder datos o quedarse sin poder trabajar una semana. Se evita si cambias por partes: no se trata de mover todo un lunes, sino de importar lo que es estable (catálogo, proveedores, clientes) y empezar por lo nuevo.'
-    },
-    { type: 'h2', text: 'Qué preparar antes', id: 'preparar' },
+    { type: 'h2', text: 'Lo que suele estar en hojas de cálculo', id: 'hojas' },
     {
       type: 'list',
       items: [
-        'Una lista de productos con su nombre, proveedor, precio neto y periodo de validez.',
-        'Una lista de proveedores con contacto y condiciones.',
-        'Una lista de clientes sin duplicados, con idioma y correo.',
-        'Tus reglas de precio: margen, comisión, IVA y si hay REAV.',
-        'Una plantilla de presupuesto que quieras conservar y tus textos de correo habituales.'
+        'Los productos con su nombre, proveedor, precio neto y periodo de validez.',
+        'Los proveedores con sus datos de contacto y condiciones.',
+        'Los clientes con su idioma y su correo.',
+        'Las reglas de precio: margen, comisión e IVA, a menudo como fórmulas.',
+        'Los presupuestos, a menudo un archivo por versión, y los textos de correo habituales.'
       ]
     },
-    { type: 'h2', text: 'El orden recomendado', id: 'orden' },
+    { type: 'h2', text: 'Lo que cambia en un software', id: 'cambios' },
     {
       type: 'list',
-      ordered: true,
       items: [
-        'Limpia los listados en Excel: quita duplicados, unifica nombres y completa los precios que faltan.',
-        'Define tus reglas de precio una sola vez y comprueba con un presupuesto antiguo que da el mismo resultado.',
-        'Importa productos, precios y proveedores. En Traviosoft lo hacemos durante el alta, desde tus hojas de cálculo, y no tiene coste con pago anual.',
-        'Importa clientes y revisa los duplicados.',
-        'Haz un viaje de prueba de principio a fin: solicitud, presupuesto, reserva, cobro y factura.',
-        'Empieza a registrar las solicitudes nuevas allí y termina los viajes abiertos en tus archivos.',
-        'Cuando se cierre el último viaje antiguo, archiva los archivos de Excel.'
+        'Los precios se guardan por temporada y por proveedor, y el presupuesto los lee del catálogo.',
+        'Las reglas de precio se definen una vez y se aplican a cada línea de presupuesto.',
+        'Cada versión del presupuesto se guarda con el viaje.',
+        'Reservas, cobros y facturas están vinculados al mismo viaje.',
+        'Varias personas trabajan a la vez con los mismos clientes y viajes.'
       ]
     },
-    { type: 'h2', text: 'Cuándo esperar', id: 'esperar' },
+    { type: 'h2', text: 'Lo que se queda en los archivos antiguos', id: 'archivo' },
     {
       type: 'p',
-      text: 'Si estás en plena temporada alta, aplaza el cambio. Un equipo que aprende una herramienta mientras sirve viajes comete errores. Lo ideal es hacerlo al inicio de la temporada baja, con tiempo para probar con un viaje real.'
+      text: 'El historial de viajes pasados suele quedarse en los archivos antiguos, como archivo. Lo que pasa al software es lo que se reutiliza: las tarifas vigentes, los proveedores y los clientes activos.'
     },
-    { type: 'h2', text: 'Qué no hace falta mover', id: 'no-mover' },
+    { type: 'h2', text: 'En Traviosoft', id: 'traviosoft' },
     {
       type: 'p',
-      text: 'No hace falta cargar el historial completo de viajes pasados. Conserva los archivos antiguos como archivo de consulta y trae solo lo que vas a reutilizar: tarifas vigentes, proveedores activos y clientes con los que seguirás trabajando. La [página Cambiar](/switch) tiene un calendario con más detalle.'
+      text: 'Durante el alta, importamos tus productos, precios y proveedores desde tus hojas de cálculo. El alta y la importación no tienen coste con pago anual. La [página Cambiar](/switch) describe los pasos.'
     },
-    { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
+    { type: 'h2', text: 'Preguntas', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: '¿Cuánto tarda el cambio?', a: ['Depende de lo ordenados que estén tus archivos. La preparación de los listados suele ser la parte más larga; la importación en sí la hacemos nosotros durante el alta.'] },
-        { q: '¿Puedo volver a Excel?', a: ['Sí. Si dejas de usar Traviosoft, recuperas tus datos en formatos estándar.'] },
-        { q: '¿Y si mis archivos están muy desordenados?', a: ['Empieza por lo mínimo: productos y precios vigentes. El resto se puede completar sobre la marcha.'] }
+        { q: '¿Se puede seguir usando Excel junto a Traviosoft?', a: ['Sí. Traviosoft exporta un resumen en Excel, o un zip con las facturas en PDF de cualquier periodo.'] },
+        { q: '¿Se pueden recuperar los datos?', a: ['Sí. Si dejas de usar Traviosoft, recuperas tus datos en formatos estándar.'] }
       ]
     }
   ]
@@ -904,7 +871,7 @@ const spainPage: Article = {
       type: 'list',
       items: [
         'REAV: las facturas llevan la etiqueta del régimen especial de agencias de viajes cuando lo aplicas.',
-        'Facturas conformes a la normativa española: lo explicamos en la [guía de facturación en España](/guides/facturacion-agencia-de-viajes-espana).',
+        'Facturación en España: las reglas se describen en la [guía de facturación en España](/guides/facturacion-agencia-de-viajes-espana).',
         'Numeración por sociedad: cada empresa de tu grupo mantiene su propia serie de facturas.',
         'Exportación para el gestor: un resumen en Excel o un zip con todas las facturas en PDF de cualquier periodo.',
         'Documentos para clientes extranjeros: presupuestos, correos, propuestas e itinerarios en español, catalán, inglés, francés e italiano, con tu marca.',
@@ -932,7 +899,7 @@ const spainPage: Article = {
     },
     {
       type: 'callout',
-      text: 'Información general, no asesoramiento fiscal ni legal. Confirma con tu gestor cómo se aplican el REAV y Veri*Factu en tu caso.'
+      text: 'Información general, sin valor jurídico y sin asesoramiento fiscal ni jurídico. Compruébala con tu gestor o con las fuentes oficiales.'
     }
   ]
 };
@@ -994,7 +961,7 @@ const aiTools: Article = {
     {
       type: 'faq',
       items: [
-        { q: '¿Funciona con Gemini?', a: ['El conector funciona con cualquier herramienta de IA compatible con MCP. Google admite el MCP en sus herramientas Gemini para desarrolladores. Comprueba si tu versión de Gemini permite añadir un conector personalizado.'] },
+        { q: '¿Funciona con Gemini?', a: ['El conector funciona con cualquier herramienta de IA compatible con MCP. Google admite el MCP en sus herramientas Gemini para desarrolladores. La posibilidad de añadir un conector personalizado depende de la versión de Gemini.'] },
         { q: '¿El conector MCP está incluido en mi plan?', a: ['Sí. Está incluido en Classic y en Premium. El asistente integrado es opcional en los dos planes, con límites de uso.'] },
         { q: '¿La IA ve todos nuestros datos?', a: ['Ve lo que ve la persona que la conectó, y nada más. Un administrador también puede permitir solo la lectura y bloquear cualquier cambio.'] },
         { q: '¿La IA puede escribir sola a los clientes?', a: ['En modo seguro, activado por defecto, los cambios esperan la aprobación de una persona. Tú decides lo que puede hacer.'] }
