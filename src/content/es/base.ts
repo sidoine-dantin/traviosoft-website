@@ -31,7 +31,7 @@ export const footer: SiteContent['footer'] = {
     { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' }
   ],
   consent: {
-    text: 'Con tu consentimiento, nosotros y nuestros socios publicitarios LinkedIn y Meta usamos cookies para medir las visitas que llegan desde nuestros anuncios y mostrarte nuestros anuncios en otros sitios. Rechazar no cambia nada en este sitio. Puedes cambiar tu elección cuando quieras en «Configurar cookies», al pie de cada página.',
+    text: 'Con tu consentimiento, usamos cookies publicitarias para medir las visitas que llegan desde nuestros anuncios y mostrarte nuestros anuncios en otros sitios. Puedes cambiar tu elección cuando quieras al pie de cada página.',
     accept: 'Aceptar',
     refuse: 'Rechazar',
     more: 'Más información',

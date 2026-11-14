@@ -24,7 +24,6 @@ export default async function PricingPage({ params }: Props) {
     <>
       <section className="wrap" style={{ paddingBlock: 'clamp(56px, 8vw, 100px) 40px' }}>
         <h1 className="h1" style={{ color: 'var(--green)' }}>{p.title}</h1>
-        <p className="lead muted" style={{ marginTop: 22 }}>{p.lead}</p>
       </section>
       <section className="wrap" style={{ paddingBottom: 'clamp(64px, 8vw, 110px)' }}>
         <Plans plans={p.plans} labels={{ yearly: p.yearly, monthly: p.monthly, yearlyNote: p.yearlyNote }} />
