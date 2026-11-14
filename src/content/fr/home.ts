@@ -44,7 +44,7 @@ export const home: SiteContent['home'] = {
   priceImport: 'et import de vos tableurs',
   priceFree: 'offerts*',
   priceFreeNote: '* Avec la facturation annuelle. Offre à durée limitée.',
-  extraUserLine: `Utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois*`,
+  extraUserLine: `Utilisateur supplémentaire : ${PRICES.extraUser.classic.yearly} EUR (Classic) ou ${PRICES.extraUser.premium.yearly} EUR (Premium) par mois*`,
   coin1: 'EUR/mois* · Classic',
   coin2: 'EUR/mois* · Premium',
   coinUsers: `${PRICES.usersIncluded} utilisateurs`,

@@ -230,7 +230,7 @@ const compares: Cmp[] = [
       ['Team size', `Two plans, ${PRICES.usersIncluded} users included`, 'Lemax GO from 15 users'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request; agreed with each client before signing'],
       ['Rollout', 'Setup and import free with yearly billing', 'Says "live in 90 days" for Lemax GO'],
-      ['Distribution and connections', 'Connections to your website, accounting and AI tools (Premium)', 'Supplier connectivity, booking API and B2B portal, according to its site']
+      ['Distribution and connections', 'Connections to your website and accounting (Premium) and to your AI tools (both plans)', 'Supplier connectivity, booking API and B2B portal, according to its site']
     ],
     otherBetter: [
       'You are a tour operator or DMC with a team of 15 or more and complex multi-day processes.',

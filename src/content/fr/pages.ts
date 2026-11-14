@@ -4,9 +4,9 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les équipes, les devises, les achats, plusieurs marques et l’assistant. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
+    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les groupes, plusieurs équipes, les devises, les achats et plusieurs marques. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
   title: 'Tarifs',
-  lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les équipes, les autres devises, les achats, plusieurs marques et les connexions.',
+  lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les groupes, plusieurs équipes, les autres devises, les achats et plusieurs marques.',
   yearly: 'Annuel',
   monthly: 'Mensuel',
   yearlyNote: 'Prix par mois, hors TVA.',
@@ -17,7 +17,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} utilisateurs inclus`,
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
-      priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.monthly} EUR par mois` },
+      priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.classic.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.classic.monthly} EUR par mois` },
     },
     {
       id: 'premium',
@@ -25,7 +25,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} utilisateurs inclus`,
       yearly: String(PRICES.premium.yearly),
       monthly: String(PRICES.premium.monthly),
-      priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.monthly} EUR par mois` },
+      priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.premium.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.premium.monthly} EUR par mois` },
       hot: true,
     }
   ],
@@ -42,7 +42,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Agences partenaires et relevés de commission', classic: true, premium: true },
         { f: 'Page de proposition et programme jour par jour, avec votre logo et vos couleurs', classic: true, premium: true },
         { f: 'Documents dans la langue du client', classic: true, premium: true },
-        { f: 'Devises', classic: 'La devise de votre agence', premium: 'Toutes les devises, avec des taux de change quotidiens' }
+        { f: 'Multi-devises', classic: false, premium: true }
       ]
     },
     {
@@ -50,15 +50,16 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Voyages confirmés et réservations, avec les e-mails des prestataires classés sur le voyage', classic: true, premium: true },
         { f: 'Fiches de service', classic: true, premium: true },
-        { f: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists', classic: true, premium: true },
+        { f: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists', classic: false, premium: true },
         { f: 'Demandes de disponibilité et bons de commande aux prestataires', classic: false, premium: true }
       ]
     },
     {
       title: 'Encaisser',
       rows: [
-        { f: 'Échéanciers, liens de paiement et rappels', classic: true, premium: true },
-        { f: 'Factures et avoirs, selon les règles fiscales de votre pays', classic: true, premium: true },
+        { f: 'Échéanciers et liens de paiement', classic: true, premium: true },
+        { f: 'Rappels de paiement automatiques', classic: false, premium: true },
+        { f: 'Factures et avoirs', classic: 'En Espagne : intégrées. Ailleurs : via votre logiciel de facturation', premium: 'En Espagne : intégrées. Ailleurs : via votre logiciel de facturation' },
         { f: 'Tableau de bord', classic: true, premium: true },
         { f: 'Export comptable', classic: false, premium: true }
       ]
@@ -66,30 +67,30 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Équipe et connexions',
       rows: [
-        { f: 'Utilisateurs', classic: `${PRICES.usersIncluded} inclus, puis ${PRICES.extraUser.yearly} EUR par mois et par utilisateur`, premium: `${PRICES.usersIncluded} inclus, puis ${PRICES.extraUser.yearly} EUR par mois et par utilisateur` },
-        { f: 'Équipes et rôles', classic: false, premium: true },
+        { f: 'Plusieurs équipes', classic: false, premium: true },
+        { f: 'Rôles personnalisés', classic: false, premium: true },
         { f: 'Plusieurs marques et sociétés dans un compte', classic: false, premium: true },
-        { f: 'L’assistant intégré, et la connexion de vos propres outils d’IA', classic: false, premium: true },
-        { f: 'Connexions à votre site et à vos autres logiciels', classic: false, premium: true }
+        { f: 'Connexion de vos propres outils d’IA', classic: true, premium: true },
+        { f: 'L’assistant intégré', classic: { text: 'En option, avec des limites d’utilisation', option: true }, premium: { text: 'En option, avec des limites d’utilisation', option: true } },
+        { f: 'Accès API, pour que votre développeur relie votre site et vos autres logiciels', classic: false, premium: true }
       ]
     },
     {
       title: 'Mise en place et service',
       rows: [
-        { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix', classic: 'Offert en annuel*', premium: 'Offert en annuel*' },
-        { f: 'Import de vos tableurs ou de l’export de votre outil actuel', classic: 'Offert en annuel*', premium: 'Offert en annuel*' },
+        { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Import de vos tableurs ou de l’export de votre outil actuel', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Support par e-mail en espagnol, anglais et français', classic: true, premium: true },
-        { f: 'Hébergement dans l’Union européenne, un espace séparé par agence', classic: true, premium: true },
-        { f: 'Vos données exportables en formats standard', classic: true, premium: true },
-        { f: 'Les nouvelles fonctions de votre offre dès leur sortie', classic: true, premium: true }
+        { f: 'Hébergement dans l’Union européenne', classic: true, premium: true },
+        { f: 'Vos données en fichiers Excel, sur simple demande', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: `* Offre à durée limitée. En mensuel, la mise en place coûte ${PRICES.setupMonthly} EUR et l’import de tableurs ${PRICES.importMonthly} EUR, une seule fois. Les autres fichiers sont importés sur devis.`,
+  compareNote: `* Offre à durée limitée, réservée à la facturation annuelle. En facturation mensuelle, la mise en place (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois, au démarrage. Le prix fixe de l’import couvre vos tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis, après avoir vu un échantillon.`,
   faq: [
     {
       q: 'De quelle offre ai-je besoin ?',
-      a: ['Classic gère une agence entière : demandes, devis, partenaires, réservations, groupes, paiements et factures. Premium ajoute des fonctions comme des équipes avec leurs propres clients, la vente dans d’autres devises et les bons de commande aux prestataires.']
+      a: ['Classic gère une agence entière : demandes, devis, partenaires, réservations, paiements et factures. Premium ajoute les groupes, les rappels de paiement automatiques, plusieurs équipes, la vente dans d’autres devises et les bons de commande aux prestataires.']
     },
     {
       q: 'Comment est-ce facturé ?',
@@ -101,7 +102,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Et si j’ajoute un utilisateur ?',
-      a: [`Les deux offres incluent ${PRICES.usersIncluded} utilisateurs. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.yearly} EUR par mois en annuel, ${PRICES.extraUser.monthly} EUR en mensuel.`]
+      a: [`Les deux offres incluent ${PRICES.usersIncluded} utilisateurs. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.classic.yearly} EUR par mois avec Classic et ${PRICES.extraUser.premium.yearly} EUR avec Premium en annuel (${PRICES.extraUser.classic.monthly} et ${PRICES.extraUser.premium.monthly} EUR en mensuel).`]
     },
     {
       q: 'Puis-je changer d’offre ?',
@@ -272,7 +273,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Y a-t-il un assistant IA ?',
-          a: ['Oui, avec Premium. Demandez-lui ce qui vous attend aujourd’hui, faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue ; chaque changement attend votre accord. Vous pouvez aussi connecter à vos données Traviosoft l’assistant d’IA que vous utilisez déjà.']
+          a: ['Oui, en option dans les deux offres, avec des limites d’utilisation. Demandez-lui ce qui vous attend aujourd’hui, faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue ; chaque changement attend votre accord. La connexion à vos données Traviosoft de l’assistant d’IA que vous utilisez déjà est incluse dans les deux offres.']
         }
       ]
     },
@@ -281,7 +282,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Combien cela coûte-t-il ?',
-          a: [`Classic coûte ${PRICES.classic.yearly} EUR par mois et Premium ${PRICES.premium.yearly} EUR par mois, en facturation annuelle, avec ${PRICES.usersIncluded} utilisateurs inclus. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.yearly} EUR par mois. La TVA n’est pas incluse.`]
+          a: [`Classic coûte ${PRICES.classic.yearly} EUR par mois et Premium ${PRICES.premium.yearly} EUR par mois, en facturation annuelle, avec ${PRICES.usersIncluded} utilisateurs inclus. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.classic.yearly} EUR par mois avec Classic et ${PRICES.extraUser.premium.yearly} EUR avec Premium. La TVA n’est pas incluse.`]
         },
         {
           q: 'Puis-je payer au mois ?',

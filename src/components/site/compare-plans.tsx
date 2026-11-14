@@ -16,10 +16,25 @@ function Cell({ v, labels }: { v: CompareCell; labels: Props['labels'] }) {
       </span>
     );
   }
+  if (typeof v === 'object' && v.option) {
+    // offered on top of the plan, not included: an open circle, never the filled tick
+    return (
+      <span className="cmp-cell">
+        <svg className="cmp-opt" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.25" /><path d="M12 7.5v9M7.5 12h9" /></svg>
+        <span className="cmp-detail">{v.text}</span>
+      </span>
+    );
+  }
   return (
     <span className="cmp-cell">
       <svg className="cmp-yes" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" /><path d="M7.5 12.5l3 3 6-6.5" /></svg>
-      {v === true ? <span className="sr-only">{labels.yes}</span> : <span className="cmp-detail">{v}</span>}
+      {v === true ? (
+        <span className="sr-only">{labels.yes}</span>
+      ) : typeof v === 'string' ? (
+        <span className="cmp-detail">{v}</span>
+      ) : (
+        <span className="cmp-detail">{v.was && <><s className="cmp-was">{v.was}</s>{' '}</>}{v.text}</span>
+      )}
     </span>
   );
 }

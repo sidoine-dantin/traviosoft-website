@@ -177,7 +177,7 @@ export type Plan = {
 };
 
 /** A comparison cell: true = included, false = not included, a string = included, with this detail. */
-export type CompareCell = boolean | string;
+export type CompareCell = boolean | string | { text: string; was?: string; option?: boolean };
 export type CompareSection = { title: string; rows: { f: string; classic: CompareCell; premium: CompareCell }[] };
 
 export type SiteContent = {

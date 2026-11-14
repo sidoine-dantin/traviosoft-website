@@ -230,7 +230,7 @@ const compares: Cmp[] = [
       ['Taille d’équipe', `Deux offres, ${PRICES.usersIncluded} utilisateurs inclus`, 'Lemax GO à partir de 15 utilisateurs'],
       ['Prix', `Classic à partir de ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Sur demande ; convenu avec chaque client avant la signature'],
       ['Déploiement', 'Installation et import sans frais avec la facturation annuelle', 'Annonce une mise en service "en 90 jours" pour Lemax GO'],
-      ['Distribution et connexions', 'Connexions à votre site, votre comptabilité et vos outils d’IA (Premium)', 'Connexion aux fournisseurs, API de réservation et portail B2B, d’après son site']
+      ['Distribution et connexions', 'Connexions à votre site et votre comptabilité (Premium) et à vos outils d’IA (les deux offres)', 'Connexion aux fournisseurs, API de réservation et portail B2B, d’après son site']
     ],
     otherBetter: [
       'Vous êtes un tour-opérateur ou un DMC avec une équipe de 15 personnes ou plus et des processus complexes de circuits de plusieurs jours.',

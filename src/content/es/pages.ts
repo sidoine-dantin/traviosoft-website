@@ -4,9 +4,9 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Precios: Classic desde ${PRICES.classic.yearly} EUR al mes, Premium desde ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Dos planes para agencias de viajes a medida y DMC. Classic gestiona toda la agencia desde ${PRICES.classic.yearly} EUR al mes; Premium añade equipos, monedas, compras, varias marcas y el asistente. ${PRICES.usersIncluded} usuarios incluidos, alta gratis con pago anual.`,
+    `Dos planes para agencias de viajes a medida y DMC. Classic gestiona toda la agencia desde ${PRICES.classic.yearly} EUR al mes; Premium añade grupos, varios equipos, divisas, compras y varias marcas. ${PRICES.usersIncluded} usuarios incluidos, alta gratis con pago anual.`,
   title: 'Precios',
-  lead: 'Classic cubre toda la agencia, de la primera solicitud a la última factura. Premium añade equipos, otras monedas, compras, varias marcas y conexiones.',
+  lead: 'Classic cubre toda la agencia, desde la primera solicitud hasta la última factura. Premium añade grupos, varios equipos, otras divisas, compras y varias marcas.',
   yearly: 'Anual',
   monthly: 'Mensual',
   yearlyNote: 'Precios por mes, sin IVA.',
@@ -17,7 +17,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} usuarios incluidos`,
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
-      priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.monthly} EUR al mes` },
+      priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.classic.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.classic.monthly} EUR al mes` },
     },
     {
       id: 'premium',
@@ -25,7 +25,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} usuarios incluidos`,
       yearly: String(PRICES.premium.yearly),
       monthly: String(PRICES.premium.monthly),
-      priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.monthly} EUR al mes` },
+      priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.premium.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.premium.monthly} EUR al mes` },
       hot: true,
     }
   ],
@@ -42,7 +42,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Agencias colaboradoras y liquidaciones de comisión', classic: true, premium: true },
         { f: 'Página de propuesta e itinerario día a día, con tu logo y tus colores', classic: true, premium: true },
         { f: 'Documentos en el idioma del cliente', classic: true, premium: true },
-        { f: 'Divisas', classic: 'La divisa de tu agencia', premium: 'Cualquier divisa, con tipos de cambio diarios' }
+        { f: 'Multidivisa', classic: false, premium: true }
       ]
     },
     {
@@ -50,15 +50,16 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Pedidos y reservas, con los correos de proveedores archivados en el viaje', classic: true, premium: true },
         { f: 'Hojas de servicio', classic: true, premium: true },
-        { f: 'Grupos: listas de viajeros, enlace a formulario y rooming lists', classic: true, premium: true },
+        { f: 'Grupos: listas de viajeros, enlace a formulario y rooming lists', classic: false, premium: true },
         { f: 'Solicitudes de disponibilidad y órdenes de compra a proveedores', classic: false, premium: true }
       ]
     },
     {
       title: 'Cobrar',
       rows: [
-        { f: 'Calendarios de pago, enlaces y recordatorios', classic: true, premium: true },
-        { f: 'Facturas y rectificativas, con las normas fiscales de tu país', classic: true, premium: true },
+        { f: 'Calendarios de pago y enlaces de pago', classic: true, premium: true },
+        { f: 'Recordatorios de pago automáticos', classic: false, premium: true },
+        { f: 'Facturas y rectificativas', classic: 'En España: integradas. En otros países: a través de tu programa de facturación', premium: 'En España: integradas. En otros países: a través de tu programa de facturación' },
         { f: 'Panel de control', classic: true, premium: true },
         { f: 'Exportación contable', classic: false, premium: true }
       ]
@@ -66,30 +67,30 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Equipo y conexiones',
       rows: [
-        { f: 'Usuarios', classic: `${PRICES.usersIncluded} incluidos, y ${PRICES.extraUser.yearly} EUR al mes por usuario adicional`, premium: `${PRICES.usersIncluded} incluidos, y ${PRICES.extraUser.yearly} EUR al mes por usuario adicional` },
-        { f: 'Equipos y roles', classic: false, premium: true },
+        { f: 'Varios equipos', classic: false, premium: true },
+        { f: 'Roles personalizados', classic: false, premium: true },
         { f: 'Varias marcas y sociedades en una cuenta', classic: false, premium: true },
-        { f: 'El asistente integrado, y la conexión de tus propias herramientas de IA', classic: false, premium: true },
-        { f: 'Conexiones con tu web y otros programas', classic: false, premium: true }
+        { f: 'Conexión de tus propias herramientas de IA', classic: true, premium: true },
+        { f: 'El asistente integrado', classic: { text: 'Opcional, con límites de uso', option: true }, premium: { text: 'Opcional, con límites de uso', option: true } },
+        { f: 'Acceso API, para que tu desarrollador conecte tu web y tus otros programas', classic: false, premium: true }
       ]
     },
     {
       title: 'Alta y servicio',
       rows: [
-        { f: 'Configuración de tu marca, tus documentos y tus reglas de precio', classic: 'Gratis con pago anual*', premium: 'Gratis con pago anual*' },
-        { f: 'Importación de tus hojas de cálculo o de la exportación de tu herramienta actual', classic: 'Gratis con pago anual*', premium: 'Gratis con pago anual*' },
+        { f: 'Configuración de tu marca, tus documentos y tus reglas de precio', classic: { text: 'Gratis con pago anual*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Importación de tus hojas de cálculo o de la exportación de tu herramienta actual', classic: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Soporte por correo en español, inglés y francés', classic: true, premium: true },
-        { f: 'Alojamiento en la Unión Europea, un espacio separado por agencia', classic: true, premium: true },
-        { f: 'Tus datos exportables en formatos estándar', classic: true, premium: true },
-        { f: 'Las novedades de tu plan en cuanto salen', classic: true, premium: true }
+        { f: 'Alojamiento en la Unión Europea', classic: true, premium: true },
+        { f: 'Tus datos en archivos Excel, cuando los pidas', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: `* Oferta por tiempo limitado. Con pago mensual, el alta cuesta ${PRICES.setupMonthly} EUR y la importación de hojas de cálculo ${PRICES.importMonthly} EUR, una sola vez. Los demás archivos se importan con presupuesto aparte.`,
+  compareNote: `* Oferta por tiempo limitado, solo con pago anual. Con pago mensual, el alta (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez, al empezar. El precio fijo de la importación cubre tus hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte, después de ver una muestra.`,
   faq: [
     {
       q: '¿Qué plan necesito?',
-      a: ['Classic gestiona una agencia entera: solicitudes, presupuestos, agencias colaboradoras, reservas, grupos, cobros y facturas. Premium añade funciones como equipos con sus propios clientes, vender en otras monedas y órdenes de compra a proveedores.']
+      a: ['Classic gestiona una agencia entera: solicitudes, presupuestos, agencias colaboradoras, reservas, cobros y facturas. Premium añade los grupos, los recordatorios de pago automáticos, varios equipos, vender en otras divisas y las órdenes de compra a proveedores.']
     },
     {
       q: '¿Cómo se paga?',
@@ -101,7 +102,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Qué pasa si añado un usuario?',
-      a: [`Los dos planes incluyen ${PRICES.usersIncluded} usuarios. Cada usuario adicional cuesta ${PRICES.extraUser.yearly} EUR al mes con pago anual y ${PRICES.extraUser.monthly} EUR con pago mensual.`]
+      a: [`Los dos planes incluyen ${PRICES.usersIncluded} usuarios. Cada usuario adicional cuesta ${PRICES.extraUser.classic.yearly} EUR al mes en Classic y ${PRICES.extraUser.premium.yearly} EUR en Premium con pago anual (${PRICES.extraUser.classic.monthly} y ${PRICES.extraUser.premium.monthly} EUR con pago mensual).`]
     },
     {
       q: '¿Puedo cambiar de plan?',
@@ -272,7 +273,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Hay un asistente de IA?',
-          a: ['Sí, en Premium. Pregúntale qué te necesita hoy, pídele un presupuesto preparado desde tu catálogo o que convierta la lista de precios de un proveedor en precios de catálogo; cada cambio espera tu visto bueno. También puedes conectar a tus datos de Traviosoft el asistente de IA que ya usas.']
+          a: ['Sí, como opción en los dos planes, con límites de uso. Pregúntale qué te necesita hoy, pídele un presupuesto preparado desde tu catálogo o que convierta la lista de precios de un proveedor en precios de catálogo; cada cambio espera tu visto bueno. Conectar a tus datos de Traviosoft el asistente de IA que ya usas está incluido en los dos planes.']
         }
       ]
     },
@@ -281,7 +282,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: '¿Cuánto cuesta?',
-          a: [`Classic cuesta ${PRICES.classic.yearly} EUR al mes y Premium ${PRICES.premium.yearly} EUR al mes, con pago anual y ${PRICES.usersIncluded} usuarios incluidos. Cada usuario adicional cuesta ${PRICES.extraUser.yearly} EUR al mes. El IVA no está incluido.`]
+          a: [`Classic cuesta ${PRICES.classic.yearly} EUR al mes y Premium ${PRICES.premium.yearly} EUR al mes, con pago anual y ${PRICES.usersIncluded} usuarios incluidos. Cada usuario adicional cuesta ${PRICES.extraUser.classic.yearly} EUR al mes en Classic y ${PRICES.extraUser.premium.yearly} EUR en Premium. El IVA no está incluido.`]
         },
         {
           q: '¿Puedo pagar al mes?',

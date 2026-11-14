@@ -4,9 +4,9 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds teams, currencies, purchasing, several brands and the assistant. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
+    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchasing and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
   title: 'Pricing',
-  lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds teams, other currencies, purchasing, several brands and connections.',
+  lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds groups, several teams, other currencies, purchasing and several brands.',
   yearly: 'Yearly',
   monthly: 'Monthly',
   yearlyNote: 'Prices per month, VAT excluded.',
@@ -17,7 +17,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} users included`,
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
-      priceNote: { yearly: `Extra user: ${PRICES.extraUser.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.monthly} EUR a month` },
+      priceNote: { yearly: `Extra user: ${PRICES.extraUser.classic.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.classic.monthly} EUR a month` },
     },
     {
       id: 'premium',
@@ -25,7 +25,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} users included`,
       yearly: String(PRICES.premium.yearly),
       monthly: String(PRICES.premium.monthly),
-      priceNote: { yearly: `Extra user: ${PRICES.extraUser.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.monthly} EUR a month` },
+      priceNote: { yearly: `Extra user: ${PRICES.extraUser.premium.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.premium.monthly} EUR a month` },
       hot: true,
     }
   ],
@@ -42,7 +42,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Partner agencies and commission statements', classic: true, premium: true },
         { f: 'Proposal page and day-by-day itinerary, with your logo and colours', classic: true, premium: true },
         { f: 'Documents in the client’s language', classic: true, premium: true },
-        { f: 'Currencies', classic: 'Your agency’s currency', premium: 'Any currency, with daily exchange rates' }
+        { f: 'Multi-currency', classic: false, premium: true }
       ]
     },
     {
@@ -50,15 +50,16 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Orders and bookings, with supplier emails filed on the trip', classic: true, premium: true },
         { f: 'Service sheets', classic: true, premium: true },
-        { f: 'Groups: traveller lists, form link and rooming lists', classic: true, premium: true },
+        { f: 'Groups: traveller lists, form link and rooming lists', classic: false, premium: true },
         { f: 'Availability requests and purchase orders to suppliers', classic: false, premium: true }
       ]
     },
     {
       title: 'Get paid',
       rows: [
-        { f: 'Payment schedules, links and reminders', classic: true, premium: true },
-        { f: 'Invoices and credit notes, with your country’s tax rules', classic: true, premium: true },
+        { f: 'Payment schedules and payment links', classic: true, premium: true },
+        { f: 'Automatic payment reminders', classic: false, premium: true },
+        { f: 'Invoices and credit notes', classic: 'In Spain: built in. Elsewhere: through your invoicing software', premium: 'In Spain: built in. Elsewhere: through your invoicing software' },
         { f: 'Dashboard', classic: true, premium: true },
         { f: 'Accounting export', classic: false, premium: true }
       ]
@@ -66,30 +67,30 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Team and connections',
       rows: [
-        { f: 'Users', classic: `${PRICES.usersIncluded} included, then ${PRICES.extraUser.yearly} EUR a month per user`, premium: `${PRICES.usersIncluded} included, then ${PRICES.extraUser.yearly} EUR a month per user` },
-        { f: 'Teams and roles', classic: false, premium: true },
+        { f: 'Several teams', classic: false, premium: true },
+        { f: 'Custom roles', classic: false, premium: true },
         { f: 'Several brands and companies in one account', classic: false, premium: true },
-        { f: 'The built-in assistant, and connections to your own AI tools', classic: false, premium: true },
-        { f: 'Connections to your website and other software', classic: false, premium: true }
+        { f: 'Connection to your own AI tools', classic: true, premium: true },
+        { f: 'The built-in assistant', classic: { text: 'Optional, with usage limits', option: true }, premium: { text: 'Optional, with usage limits', option: true } },
+        { f: 'API access, so your developer can connect your website and other software', classic: false, premium: true }
       ]
     },
     {
       title: 'Setup and service',
       rows: [
-        { f: 'Setup of your brand, documents and pricing rules', classic: 'Free with yearly billing*', premium: 'Free with yearly billing*' },
-        { f: 'Import of your spreadsheets or your current tool’s export', classic: 'Free with yearly billing*', premium: 'Free with yearly billing*' },
+        { f: 'Setup of your brand, documents and pricing rules', classic: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Import of your spreadsheets or your current tool’s export', classic: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Support by email in Spanish, English and French', classic: true, premium: true },
-        { f: 'Hosting in the European Union, a separate space per agency', classic: true, premium: true },
-        { f: 'Your data exportable in standard formats', classic: true, premium: true },
-        { f: 'New features of your plan as they ship', classic: true, premium: true }
+        { f: 'Hosting in the European Union', classic: true, premium: true },
+        { f: 'Your data as Excel files, on request, at any time', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: `* Limited-time offer. With monthly billing, setup is ${PRICES.setupMonthly} EUR and the import of spreadsheets ${PRICES.importMonthly} EUR, once. Other files are imported on quote.`,
+  compareNote: `* Limited-time offer, with yearly billing only. With monthly billing, setup (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once, at the start. The fixed import price covers your spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. Other files (Word, PDF, emails, trips in progress) are imported on quote, once we have seen a sample.`,
   faq: [
     {
       q: 'Which plan do I need?',
-      a: ['Classic runs a whole agency: requests, quotes, partners, bookings, groups, payments and invoices. Premium adds features such as teams with their own clients, selling in other currencies, and purchase orders to suppliers.']
+      a: ['Classic runs a whole agency: requests, quotes, partners, bookings, payments and invoices. Premium adds groups, automatic payment reminders, several teams, selling in other currencies and purchase orders to suppliers.']
     },
     {
       q: 'How is it billed?',
@@ -101,7 +102,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'What if I add a user?',
-      a: [`Both plans include ${PRICES.usersIncluded} users. Each extra user costs ${PRICES.extraUser.yearly} EUR a month with yearly billing, ${PRICES.extraUser.monthly} EUR with monthly billing.`]
+      a: [`Both plans include ${PRICES.usersIncluded} users. Each extra user costs ${PRICES.extraUser.classic.yearly} EUR a month on Classic and ${PRICES.extraUser.premium.yearly} EUR on Premium with yearly billing (${PRICES.extraUser.classic.monthly} and ${PRICES.extraUser.premium.monthly} EUR with monthly billing).`]
     },
     {
       q: 'Can I change plan?',
@@ -272,7 +273,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Is there an AI assistant?',
-          a: ['Yes, on Premium. Ask it what needs you today, have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices; every change waits for your OK. You can also connect the AI assistant you already use to your Traviosoft data.']
+          a: ['Yes, as an option on both plans, with usage limits. Ask it what needs you today, have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices; every change waits for your OK. Connecting the AI assistant you already use to your Traviosoft data is included in both plans.']
         }
       ]
     },
@@ -281,7 +282,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'How much does it cost?',
-          a: [`Classic is ${PRICES.classic.yearly} EUR a month and Premium ${PRICES.premium.yearly} EUR a month, billed yearly, with ${PRICES.usersIncluded} users included. Each extra user is ${PRICES.extraUser.yearly} EUR a month. VAT is not included.`]
+          a: [`Classic is ${PRICES.classic.yearly} EUR a month and Premium ${PRICES.premium.yearly} EUR a month, billed yearly, with ${PRICES.usersIncluded} users included. Each extra user is ${PRICES.extraUser.classic.yearly} EUR a month on Classic and ${PRICES.extraUser.premium.yearly} EUR on Premium. VAT is not included.`]
         },
         {
           q: 'Can I pay monthly?',

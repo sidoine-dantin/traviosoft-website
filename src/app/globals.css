@@ -230,14 +230,14 @@
 @media (max-width: 900px) { .coins { grid-template-columns: 1fr; justify-items: center; text-align: center; } .coin { width: 200px; height: 200px; } .coin .n { font-size: 80px; } }
 
 /* ---------- links ---------- */
-/* Text link with an arrow: on hover or press the text gets bolder (drawn, so nothing shifts),
-   the underline drops a little and the arrow moves forward. */
+/* Text link with an arrow: on hover or press the text, the arrow and the underline get bolder
+   (drawn, so nothing shifts), the underline drops a little and the arrow moves forward. */
 .arrow { position: relative; font-weight: 650; text-decoration: none; display: inline-flex; gap: 8px; align-items: center; padding-bottom: 6px; }
-.arrow::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s ease; }
+.arrow::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s ease, height .2s ease; }
 .arrow .arr-t { transition: text-shadow .2s ease; }
-.arrow .arr { display: inline-block; transition: transform .2s ease; }
-.arrow:hover::before, .arrow:focus-visible::before { transform: translateY(4px); }
-.arrow:hover .arr-t, .arrow:focus-visible .arr-t { text-shadow: .45px 0 0 currentColor, -.45px 0 0 currentColor; }
+.arrow .arr { display: inline-block; transition: transform .2s ease, text-shadow .2s ease; }
+.arrow:hover::before, .arrow:focus-visible::before { height: 3px; transform: translateY(4px); }
+.arrow:hover .arr-t, .arrow:focus-visible .arr-t, .arrow:hover .arr, .arrow:focus-visible .arr { text-shadow: .45px 0 0 currentColor, -.45px 0 0 currentColor, 0 .45px 0 currentColor; }
 .arrow:hover .arr, .arrow:focus-visible .arr { transform: translateX(5px); }
 .arrow:active .arr { transform: translateX(9px); }
 .arrow:hover { color: var(--orange-ink); }
@@ -373,6 +373,9 @@ a.card:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -26px rgba(1
 .cmp-cell svg { flex: none; width: 24px; height: 24px; }
 .cmp-yes circle { fill: var(--green); }
 .cmp-yes path { fill: none; stroke: var(--cream); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.cmp-opt circle { fill: none; stroke: var(--green); stroke-width: 1.5; }
+.cmp-opt path { stroke: var(--green); stroke-width: 2; stroke-linecap: round; }
+.cmp-was { white-space: nowrap; color: var(--muted); }
 .cmp-no path { stroke: var(--muted); stroke-width: 2; stroke-linecap: round; opacity: .7; }
 .cmp-detail { padding-top: 2px; }
 @media (min-width: 901px) { .cmp-table td, .cmp-head span + span { padding-left: 32px; } }

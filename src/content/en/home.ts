@@ -44,7 +44,7 @@ export const home: SiteContent['home'] = {
   priceImport: 'and import of your spreadsheets',
   priceFree: 'free*',
   priceFreeNote: '* With yearly billing. Limited-time offer.',
-  extraUserLine: `Each extra user: ${PRICES.extraUser.yearly} EUR a month*`,
+  extraUserLine: `Extra user: ${PRICES.extraUser.classic.yearly} EUR (Classic) or ${PRICES.extraUser.premium.yearly} EUR (Premium) a month*`,
   coin1: 'EUR/mo* · Classic',
   coin2: 'EUR/mo* · Premium',
   coinUsers: `${PRICES.usersIncluded} users`,
