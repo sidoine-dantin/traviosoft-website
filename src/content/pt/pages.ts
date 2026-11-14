@@ -191,7 +191,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       when: 'Semana 1',
-      title: 'Nós importamos, você verifica',
+      title: 'Nós importamos, a sua equipa verifica',
       body: 'Carregamos tudo no espaço da sua agência. Abre-o, vê alguns produtos e alguns clientes, e diz-nos o que ajustar.'
     },
     {
@@ -378,7 +378,7 @@ export const resources: SiteContent['resources'] = {
   title: 'Recursos',
   lead: 'Comparações, guias e um glossário.',
   groups: [
-    { kind: 'best', title: 'Comparação dos melhores softwares', body: 'As ferramentas que as agências à medida e as DMC usam, lado a lado, e a quem se adapta cada uma.' },
+    { kind: 'best', title: 'Comparação do melhor software', body: 'As ferramentas que as agências à medida e as DMC usam, lado a lado, e a quem se adapta cada uma.' },
     { kind: 'compare', title: 'Comparações', body: 'O Traviosoft ao lado de outras ferramentas.' },
     { kind: 'guide', title: 'Guias', body: 'Notas práticas sobre orçamentos, reservas e faturação de uma viagem à medida.' },
     { kind: 'invoicing', title: 'Faturação por país', body: 'Como faturam as agências de viagens em Espanha, França, Alemanha e Bélgica, com as datas da faturação eletrónica.' },
