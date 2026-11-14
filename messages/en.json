@@ -403,7 +403,7 @@
     "notice_title": "Legal Notice - Traviosoft",
     "back_home": "Back to home",
     "updated_label": "Last updated",
-    "updated_date": "June 2026",
+    "updated_date": "November 2026",
     "privacy": {
       "intro": "This policy explains how we handle information collected through the traviosoft.com website. It covers the public website only. The use of the Traviosoft application by our customers is governed by a separate agreement.",
       "sections": [
@@ -417,32 +417,42 @@
           "heading": "What we collect",
           "body": [
             "When you book a demo, you share the details you enter in the booking form: usually your name, your email address, and a few facts about your agency. The booking itself is handled by Google's appointment scheduling, so the information you submit there is also processed by Google.",
-            "Like most websites, our hosting provider records basic technical data such as your IP address and browser type in its server logs. We do not use advertising trackers or build marketing profiles."
+            "Like most websites, our hosting provider records basic technical data such as your IP address and browser type in its server logs. If you accept advertising cookies, LinkedIn and Meta also record your visit to this site (see \"Advertising and audiences\")."
           ]
         },
         {
           "heading": "How we use your information",
           "body": [
-            "We use the details you give us to answer your demo request, prepare the call, and follow up about Traviosoft. We use technical logs to keep the site secure and working. We never sell your data, and we do not share it except with the service providers needed to run the site and the booking.",
-            "Where the law requires a legal basis, we rely on your request (to organize the demo you asked for) and on our legitimate interest in keeping the site safe and in contact with people who reached out to us."
+            "We use the details you give us to answer your demo request, prepare the call, and follow up about Traviosoft. We use technical logs to keep the site secure and working. We never sell your data. We share it only with the service providers needed to run the site and the booking, and with LinkedIn and Meta for our advertising as described below.",
+            "Where the law requires a legal basis, we rely on your request (to organize the demo you asked for), on your consent (for advertising cookies) and on our legitimate interest (to keep the site safe, to stay in contact with people who reached out to us, and to show our ads to travel businesses)."
           ]
         },
         {
           "heading": "Third-party services",
           "body": [
-            "The demo calendar is provided by Google. Booking a slot is subject to Google's own terms and privacy policy. The website is delivered through Cloudflare's hosting and content network. These providers process limited data on our behalf to make the booking and the site work."
+            "The demo calendar is provided by Google. The website is delivered through Cloudflare's hosting and content network. Our ads run on LinkedIn (LinkedIn Ireland Unlimited Company) and on Facebook and Instagram (Meta Platforms Ireland Limited). For the advertising cookies, LinkedIn and Meta act as joint controllers with us; their own privacy policies apply to what they do with the data. Some of these providers may transfer data to the United States under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
+          ]
+        },
+        {
+          "heading": "Advertising and audiences",
+          "body": [
+            "If you accept advertising cookies, the LinkedIn Insight Tag and the Meta Pixel record that your browser visited this site, which pages you saw and whether you opened the demo page or clicked to contact us. We use this to measure our ads and to show them again to people who visited the site. LinkedIn and Meta give us only totals and audience sizes, never names.",
+            "We may also upload a list of business contact details (company name, website, and the professional email address of an agency's owner or manager) to LinkedIn and Meta so that our ads reach those travel businesses. The details are encrypted (hashed) before the upload, are used only to match accounts, and are deleted by the platforms after matching. We do this on the basis of our legitimate interest in presenting Traviosoft to travel professionals.",
+            "If you contact us or book a demo, we may also add your professional email address to these lists, so that our ads keep reaching you while you look at Traviosoft. It is hashed in the same way before the upload. We do this on the basis of our legitimate interest in staying in contact with people who reached out to us, and you can object at any time as described below.",
+            "You can object at any time: write to sidoine@traviosoft.com and we remove you from our lists, change your choice with \"Cookie settings\" at the bottom of every page, or adjust your ad settings in your LinkedIn and Meta accounts."
           ]
         },
         {
           "heading": "Cookies",
           "body": [
-            "The website uses only the cookies needed for it to function and to remember your language choice. The embedded booking calendar may set its own cookies, managed by Google. We do not run advertising cookies."
+            "The website uses the cookies it needs to work and to remember your language and your cookie choice. With your consent only, it also uses LinkedIn and Meta advertising cookies. Refusing is as easy as accepting, and the site works the same either way. We ask again after six months. The embedded booking calendar may set its own cookies, managed by Google."
           ]
         },
         {
           "heading": "How long we keep it",
           "body": [
-            "We keep the information from your demo request for as long as we are in contact about Traviosoft, and a reasonable period afterwards. Technical logs are kept only for the short time needed for security and maintenance."
+            "We keep the information from your demo request for as long as we are in contact about Traviosoft, and a reasonable period afterwards. Technical logs are kept only for the short time needed for security and maintenance.",
+            "Advertising cookies last at most 13 months. Contact details uploaded for advertising audiences are kept for as long as the campaign runs and are removed from our lists when you object."
           ]
         },
         {

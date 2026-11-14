@@ -4,12 +4,12 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds teams, currencies, purchasing, several brands and the assistant. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
-  title: 'Two plans, clear prices',
-  lead: 'Classic has everything to run your agency, from the first request to the last invoice. Premium adds what larger teams and international DMCs use every day.',
+    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchasing and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
+  title: 'Pricing',
+  lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds groups, several teams, other currencies, purchasing and several brands.',
   yearly: 'Yearly',
   monthly: 'Monthly',
-  yearlyNote: 'Prices per month, VAT excluded. Yearly billing costs less per month.',
+  yearlyNote: 'Prices per month, VAT excluded.',
   plans: [
     {
       id: 'classic',
@@ -17,17 +17,7 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} users included`,
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
-      priceNote: `EUR per month, VAT excluded. Each extra user: ${PRICES.extraUser.yearly} EUR a month yearly, ${PRICES.extraUser.monthly} EUR monthly.`,
-      lines: [
-        { text: 'Requests, catalogue with season prices, quotes with your margin and commission' },
-        { text: 'Partner agencies and commission statements' },
-        { text: 'Proposal page and day-by-day itinerary, with your brand' },
-        { text: 'Orders, bookings, supplier emails filed on the trip, service sheets' },
-        { text: 'Groups: travellers list, form link, rooming lists' },
-        { text: 'Payment schedule, payment links and reminders' },
-        { text: 'Invoices with your country’s rules, credit notes, dashboard' },
-        { text: 'Documents in your client’s language' }
-      ]
+      priceNote: { yearly: `Extra user: ${PRICES.extraUser.classic.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.classic.monthly} EUR a month` },
     },
     {
       id: 'premium',
@@ -35,38 +25,76 @@ export const pricing: SiteContent['pricing'] = {
       users: `${PRICES.usersIncluded} users included`,
       yearly: String(PRICES.premium.yearly),
       monthly: String(PRICES.premium.monthly),
-      priceNote: `EUR per month, VAT excluded. Each extra user: ${PRICES.extraUser.yearly} EUR a month yearly, ${PRICES.extraUser.monthly} EUR monthly.`,
+      priceNote: { yearly: `Extra user: ${PRICES.extraUser.premium.yearly} EUR a month`, monthly: `Extra user: ${PRICES.extraUser.premium.monthly} EUR a month` },
       hot: true,
-      lines: [
-        { text: 'Everything in Classic, plus:' },
-        { text: 'Teams with their own clients and trips, roles per person' },
-        { text: 'Any currency for clients, quotes and suppliers, with daily rates' },
-        { text: 'Availability requests and purchase orders to suppliers' },
-        { text: 'Several brands and companies in one account' },
-        { text: 'Accounting export for your accounting software' },
-        { text: 'The assistant inside Traviosoft, and your own AI tools connected' },
-        { text: 'Connections to your website and your other tools' }
+    }
+  ],
+  compareTitle: 'Compare the plans',
+  compareFeature: 'Feature',
+  yes: 'Included',
+  no: 'Not included',
+  compare: [
+    {
+      title: 'Sell',
+      rows: [
+        { f: 'Requests and quotes with your margin and commission', classic: true, premium: true },
+        { f: 'Catalogue with season prices', classic: true, premium: true },
+        { f: 'Partner agencies and commission statements', classic: true, premium: true },
+        { f: 'Proposal page and day-by-day itinerary, with your logo and colours', classic: true, premium: true },
+        { f: 'Documents in the client’s language', classic: true, premium: true },
+        { f: 'Multi-currency', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Book',
+      rows: [
+        { f: 'Orders and bookings, with supplier emails filed on the trip', classic: true, premium: true },
+        { f: 'Service sheets', classic: true, premium: true },
+        { f: 'Groups: traveller lists, form link and rooming lists', classic: false, premium: true },
+        { f: 'Availability requests and purchase orders to suppliers', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Get paid',
+      rows: [
+        { f: 'Payment schedules and payment links', classic: true, premium: true },
+        { f: 'Automatic payment reminders', classic: false, premium: true },
+        { f: 'Invoices and credit notes', classic: 'In Spain: built in. Elsewhere: through your invoicing software', premium: 'In Spain: built in. Elsewhere: through your invoicing software' },
+        { f: 'Dashboard', classic: true, premium: true },
+        { f: 'Accounting export', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Team and connections',
+      rows: [
+        { f: 'Several teams', classic: false, premium: true },
+        { f: 'Custom roles', classic: false, premium: true },
+        { f: 'Several brands and companies in one account', classic: false, premium: true },
+        { f: 'MCP connector for your own AI tools (Claude, ChatGPT and others)', classic: true, premium: true },
+        { f: 'The built-in assistant', classic: { text: 'Optional, with usage limits', option: true }, premium: { text: 'Optional, with usage limits', option: true } },
+        { f: 'API access, so your developer can connect your website and other software', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Setup and service',
+      rows: [
+        { f: 'Setup of your brand, documents and pricing rules', classic: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Import of your spreadsheets or your current tool’s export**', classic: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` } },
+        { f: 'Support by email in Spanish, English and French', classic: true, premium: true },
+        { f: 'Hosting in the European Union', classic: true, premium: true },
+        { f: 'Data export on request', classic: true, premium: true }
       ]
     }
   ],
-  includedTitle: 'Both plans include',
-  included: [
-    `${PRICES.usersIncluded} users, and more whenever your team grows`,
-    `Setup and data import: free with yearly billing, ${PRICES.setupMonthly} EUR once with monthly billing`,
-    'Your rates, clients and suppliers brought over with you',
-    'Support by email in Spanish, English and French, from the people who build the product',
-    'A private space for your agency, hosted in the European Union',
-    'Your data back in standard formats whenever you ask',
-    'Every new feature of your plan as it ships'
-  ],
+  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
   faq: [
     {
       q: 'Which plan do I need?',
-      a: ['Classic runs a whole agency: requests, quotes, partners, bookings, groups, payments and invoices. Choose Premium when one of its features matters to you, for example teams with their own portfolios, selling in dollars or pounds, or purchase orders to suppliers.']
+      a: ['Classic runs a whole agency: requests, quotes, partners, bookings, payments and invoices. Premium adds groups, automatic payment reminders, several teams, selling in other currencies and purchase orders to suppliers.']
     },
     {
       q: 'How is it billed?',
-      a: ['Yearly or monthly, your choice. Yearly costs less per month and includes setup. Monthly can be stopped at the end of any month.']
+      a: ['Yearly or monthly, your choice. Yearly costs less per month and includes setup and import. Monthly can be stopped at the end of any month.']
     },
     {
       q: 'Are prices with or without VAT?',
@@ -74,11 +102,11 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'What if I add a user?',
-      a: [`Both plans include ${PRICES.usersIncluded} users. Each extra user costs ${PRICES.extraUser.yearly} EUR a month with yearly billing, ${PRICES.extraUser.monthly} EUR with monthly billing.`]
+      a: [`Both plans include ${PRICES.usersIncluded} users. Each extra user costs ${PRICES.extraUser.classic.yearly} EUR a month on Classic and ${PRICES.extraUser.premium.yearly} EUR on Premium with yearly billing (${PRICES.extraUser.classic.monthly} and ${PRICES.extraUser.premium.monthly} EUR with monthly billing).`]
     },
     {
       q: 'Can I change plan?',
-      a: ['Yes. Move from Classic to Premium at any time, and the new features are there the same day. Your data stays exactly as it is.']
+      a: ['Yes. Move from Classic to Premium at any time, and the new features are there the same day. Your data stays as it is.']
     },
     {
       q: 'Can I cancel?',
@@ -86,282 +114,62 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Can I take my data when I leave?',
-      a: ['Yes. You get your data back in standard formats. It is your data.']
+      a: ['Yes. You get your data back in standard formats.']
     },
     {
       q: 'What does setup include?',
-      a: [`We import your catalogue, clients, suppliers and open trips from your spreadsheets, and set up your brand and your pricing rules. It is free with yearly billing and ${PRICES.setupMonthly} EUR once with monthly billing.`]
+      a: [`We set up your brand, your documents and your margin, VAT and commission rules, and your team’s access. It is free with yearly billing and ${PRICES.setupMonthly} EUR once with monthly billing.`]
+    },
+    {
+      q: 'What does the import include?',
+      a: [`Your catalogue with its prices, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
     }
   ]
 };
 
-export const example: SiteContent['example'] = {
-  metaTitle: 'Example trips: a couple, a group and a safari | Traviosoft',
-  metaDescription:
-    'Open three example trips built in Traviosoft, a couple in Andalucía, an incentive group in Porto and a safari in Kenya and Tanzania: the day-by-day itinerary and the quote as the client sees them. Invented data, no sign-up.',
-  title: 'What your client receives',
-  lead: 'Three sample trips built in Traviosoft. Open the itinerary and the quote, as your client or your partner agency sees them.',
-  tabs: { itinerary: 'Itinerary', quote: 'Quote' },
-  pick: 'Choose a trip',
-  trips: [
-  {
-    id: 'andalucia',
-    label: 'Andalucía, 8 days',
-    kind: 'A couple, sold direct',
-    name: 'Andalucía, 8 days',
-    dates: '12 to 19 April 2027',
-    travellers: 'Client: Laura & Tom, 2 adults',
-    agency: 'Your agency',
-    days: [
-      {
-        day: 'Day 1',
-        title: 'Arrival in Seville',
-        body: 'A driver meets you at the airport and takes you to the hotel. The evening is free.',
-        items: ['Private transfer from the airport, 14:30', 'Hotel Alfonso XIII, check-in from 15:00', 'Dinner suggestions in Santa Cruz']
-      },
-      {
-        day: 'Day 2',
-        title: 'Seville, the old town',
-        body: 'The cathedral, the Giralda and the Alcázar with a local guide, then the afternoon at your pace.',
-        items: ['Private guide, 09:30 to 13:00', 'Alcázar tickets with a fixed entry time', 'Free afternoon']
-      },
-      {
-        day: 'Day 3',
-        title: 'Seville, free day and flamenco',
-        body: 'A day for the river, the markets and the Triana side. In the evening, a small flamenco show.',
-        items: ['Flamenco show in Triana, 20:30', 'Hotel Alfonso XIII']
-      },
-      {
-        day: 'Day 4',
-        title: 'To Córdoba',
-        body: 'A morning drive to Córdoba. The Mezquita with a guide, then the old Jewish quarter on foot.',
-        items: ['Private transfer Seville to Córdoba, 09:00', 'Private guide at the Mezquita, 12:00', 'Hotel in the old town']
-      },
-      {
-        day: 'Day 5',
-        title: 'To Granada',
-        body: 'Drive to Granada through olive country. Time to settle in and walk up to the Albaicín at sunset.',
-        items: ['Private transfer Córdoba to Granada, 10:00', 'Hotel with Alhambra views', 'Sunset at the Mirador de San Nicolás']
-      },
-      {
-        day: 'Day 6',
-        title: 'The Alhambra',
-        body: 'The palaces, the Generalife and the gardens with a private guide. The rest of the day is yours.',
-        items: ['Private guide, Alhambra, 09:00 to 13:00', 'Nasrid Palaces entry at 09:30', 'Free afternoon']
-      },
-      {
-        day: 'Day 7',
-        title: 'To Ronda',
-        body: 'Over the mountains to Ronda, the town above the gorge. A walk to the New Bridge before dinner.',
-        items: ['Private transfer Granada to Ronda, 10:30', 'Hotel with a view of the gorge', 'Dinner at a local restaurant']
-      },
-      {
-        day: 'Day 8',
-        title: 'Departure from Málaga',
-        body: 'A transfer to Málaga airport, timed for your flight.',
-        items: ['Private transfer Ronda to Málaga airport, 09:00', 'Check-out by 11:00']
-      }
-    ],
-    quoteLines: [
-      { name: 'Seville, 3 nights', detail: 'Hotel Alfonso XIII, double room, breakfast', price: '1,980 EUR' },
-      { name: 'Córdoba, 1 night', detail: 'Hotel in the old town, double room, breakfast', price: '280 EUR' },
-      { name: 'Granada, 2 nights', detail: 'Hotel with Alhambra views, double room, breakfast', price: '840 EUR' },
-      { name: 'Ronda, 1 night', detail: 'Hotel with a view of the gorge, double room, breakfast', price: '360 EUR' },
-      { name: 'Private guides', detail: 'Alhambra 420 EUR, Mezquita 180 EUR (entry tickets in the price)', price: '600 EUR' },
-      { name: 'Private transfers', detail: 'Airport, Córdoba, Granada, Ronda and Málaga airport', price: '560 EUR' },
-      { name: 'Flamenco show', detail: 'Small venue in Triana, 2 tickets', price: '240 EUR' }
-    ],
-    included: [
-      '7 nights with breakfast',
-      'All private transfers',
-      'Private guides in Seville, Córdoba and Granada',
-      'Entry tickets for the Alcázar, the Mezquita and the Alhambra',
-      'Flamenco show for 2'
-    ],
-    notIncluded: ['Flights', 'Lunches and dinners', 'Travel insurance', 'Tourist tax at the hotels'],
-    total: '4,860 EUR',
-    perPerson: '2,430 EUR per person',
-    deposit: '30% to confirm, balance 30 days before arrival',
-    validUntil: 'Valid until 30 November 2026'
-  },
-  {
-    id: 'group',
-    label: 'Porto and the Douro, 4 days',
-    kind: 'An incentive group of 24, sold through a partner agency',
-    name: 'Porto and the Douro, 4 days',
-    dates: '6 to 9 May 2027',
-    travellers: 'Client: your partner agency in Munich, for a company group of 24',
-    agency: 'Your agency',
-    days: [
-      {
-        day: 'Day 1',
-        title: 'Arrival in Porto',
-        body: 'Private coach from the airport to the hotel on the river. Welcome dinner in Ribeira.',
-        items: ['Coach transfer, meeting at arrivals', 'Hotel in Porto, 3 nights', 'Welcome dinner for 24']
-      },
-      {
-        day: 'Day 2',
-        title: 'Porto, two ways',
-        body: 'Morning golf for ten, or a walk through the old town with a local guide. Afternoon in a port cellar.',
-        items: ['Golf morning, 10 guests', 'Old town walk, 14 guests', 'Port cellar visit and tasting for 24']
-      },
-      {
-        day: 'Day 3',
-        title: 'The Douro valley',
-        body: 'Coach up the valley, a river cruise between the terraces, lunch at a wine estate. Gala dinner at a quinta.',
-        items: ['Private coach, full day', 'River cruise', 'Lunch at a wine estate', 'Gala dinner at a quinta']
-      },
-      {
-        day: 'Day 4',
-        title: 'Departure',
-        body: 'Free morning. Coach to the airport in two groups, matched to the flights.',
-        items: ['Two airport transfers']
-      }
-    ],
-    quoteLines: [
-      { name: 'Porto, 3 nights', detail: 'Hotel on the river, 12 double or twin rooms, breakfast', price: '9,360 EUR' },
-      { name: 'Welcome dinner', detail: 'Restaurant in Ribeira, 24 guests, drinks included', price: '2,040 EUR' },
-      { name: 'Douro day', detail: 'Coach, river cruise and wine estate lunch, 24 guests', price: '3,960 EUR' },
-      { name: 'Port cellar visit', detail: 'Visit and tasting, 24 guests', price: '840 EUR' },
-      { name: 'Golf morning', detail: '10 guests, green fees and clubs', price: '1,200 EUR' },
-      { name: 'Gala dinner', detail: 'Private quinta, 24 guests, music', price: '3,360 EUR' },
-      { name: 'Coach transfers', detail: 'Airport, Porto and Douro, 4 days', price: '1,850 EUR' },
-      { name: 'Local guide and on-site host', detail: '4 days', price: '1,600 EUR' }
-    ],
-    included: [
-      '3 nights in Porto with breakfast',
-      'Every meal and visit listed, with drinks at dinners',
-      'All transfers by private coach',
-      'An on-site host for the whole stay',
-      'Your partner agency’s commission'
-    ],
-    notIncluded: ['Flights', 'Lunches on days 1, 2 and 4', 'Travel insurance', 'Porto tourist tax'],
-    total: '24,210 EUR',
-    perPerson: '1,008.75 EUR per guest',
-    deposit: '40% to confirm, 40% 60 days before arrival, balance 15 days before',
-    validUntil: 'Valid until 15 December 2026',
-    rooming: {
-      title: 'Rooming list · Hotel in Porto, first 4 of 12 rooms',
-      head: ['Room', 'Type', 'Guests', 'Nights'],
-      rows: [
-        ['Room 1', 'Double', 'Anna Weber, Jonas Weber', '6 to 9 May'],
-        ['Room 2', 'Twin', 'Lena Fischer, Marie Koch', '6 to 9 May'],
-        ['Room 3', 'Double', 'Paul Schmidt, Sofia Schmidt', '6 to 9 May'],
-        ['Room 4', 'Twin', 'Thomas Becker, David Wolf', '6 to 9 May']
-      ]
-    }
-  },
-  {
-    id: 'safari',
-    label: 'Kenya and Tanzania, 9 days',
-    kind: 'A safari for two, priced in US dollars',
-    name: 'Kenya and Tanzania, 9 days',
-    dates: '14 to 22 August 2027',
-    travellers: 'Client: Emma & James, 2 adults',
-    agency: 'Your agency',
-    days: [
-      {
-        day: 'Day 1',
-        title: 'Nairobi',
-        body: 'Met at the airport and driven to a garden hotel in Karen. Dinner at the hotel.',
-        items: ['Private transfer', 'Garden hotel in Karen, 1 night']
-      },
-      {
-        day: 'Day 2 to 4',
-        title: 'Masai Mara',
-        body: 'Light aircraft to the Mara. Three days of game drives during the great migration.',
-        items: ['Flight Nairobi to the Mara', 'Tented camp, full board, 3 nights', 'Morning and afternoon game drives']
-      },
-      {
-        day: 'Day 5 to 7',
-        title: 'Serengeti',
-        body: 'Fly across the border to the northern Serengeti. A balloon flight at sunrise on day 6.',
-        items: ['Flight to the Serengeti', 'Mobile camp, full board, 3 nights', 'Hot-air balloon flight with breakfast']
-      },
-      {
-        day: 'Day 8',
-        title: 'Ngorongoro',
-        body: 'Drive with your private guide to the crater rim. Afternoon on the crater floor.',
-        items: ['Private guide and vehicle', 'Lodge on the crater rim, 1 night']
-      },
-      {
-        day: 'Day 9',
-        title: 'Departure from Arusha',
-        body: 'Drive to Arusha airport for your flight home.',
-        items: ['Private transfer to the airport']
-      }
-    ],
-    quoteLines: [
-      { name: 'Nairobi, 1 night', detail: 'Garden hotel in Karen, breakfast', price: '640 USD' },
-      { name: 'Masai Mara, 3 nights', detail: 'Tented camp, full board, game drives', price: '5,880 USD' },
-      { name: 'Serengeti, 3 nights', detail: 'Mobile camp, full board, game drives', price: '6,300 USD' },
-      { name: 'Ngorongoro, 1 night', detail: 'Lodge on the crater rim, full board', price: '1,440 USD' },
-      { name: 'Light aircraft flights', detail: 'Nairobi, Masai Mara, Serengeti', price: '2,900 USD' },
-      { name: 'Park and conservation fees', detail: 'Kenya and Tanzania', price: '2,640 USD' },
-      { name: 'Private guide and vehicle', detail: 'Tanzania, 4 days', price: '1,600 USD' },
-      { name: 'Hot-air balloon', detail: 'Serengeti, 2 guests, with breakfast', price: '1,198 USD' }
-    ],
-    included: [
-      '8 nights, full board on safari',
-      'Game drives with expert guides',
-      'Flights inside Kenya and Tanzania',
-      'Park and conservation fees',
-      'All transfers'
-    ],
-    notIncluded: ['International flights', 'Visas', 'Travel insurance', 'Tips for guides and camp staff'],
-    total: '22,598 USD',
-    perPerson: '11,299 USD per person',
-    deposit: '30% to confirm, balance 60 days before arrival',
-    validUntil: 'Valid until 31 January 2027'
-  }
-  ],
-  note: 'This is an example built in Traviosoft with invented data.'
-};
-
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Demo: 30 minutes, on a trip like yours | Traviosoft',
+  metaTitle: 'Book a demo | Traviosoft',
   metaDescription:
-    'A 30-minute call on a ready-made trip close to the ones you sell, from request to invoice. You get the price for your team in writing afterwards.',
-  title: '30 minutes, on a trip like yours',
-  lead: 'We run a ready-made trip close to the ones you sell through the app, from the first message to the final invoice.',
-  agendaTitle: 'How the 30 minutes go',
+    'A 30-minute call: a sample trip in Traviosoft from request to invoice, then pricing and questions.',
+  title: 'Book a demo',
+  lead: 'A 30-minute call. We go through a sample trip in Traviosoft, from the first request to the final invoice.',
+  agendaTitle: 'The call',
   agenda: [
-    { mins: '5', title: 'Your agency', body: 'How many of you, what you sell, what you use today. So the rest fits your case.' },
-    { mins: '15', title: 'A trip like yours, from request to invoice', body: 'A couple’s trip, an incentive group or a safari, whichever is closest to your work: the request, the quote with your margin, the order, the itinerary, the payment and the invoice.' },
-    { mins: '10', title: 'Price, switching and questions', body: 'Which plan fits your team, how your spreadsheets come over, and whatever you want to ask.' }
+    { mins: '5', title: 'Your agency', body: 'Team size, what you sell and the tools you use today.' },
+    { mins: '15', title: 'A sample trip', body: 'The request, the quote with margin, the order, the itinerary, the payment and the invoice. A couple’s trip, an incentive group or a safari.' },
+    { mins: '10', title: 'Pricing and questions', body: 'The plan for your team, importing your data, and your questions.' }
   ],
   bringTitle: 'Who to invite',
   bring: [
-    'Anyone on your team who quotes or books',
-    'Whoever looks after payments and invoices',
-    'Your questions: the call is yours'
+    'People on your team who quote or book',
+    'Whoever handles payments and invoices'
   ],
-  afterTitle: 'What happens after',
+  afterTitle: 'After the call',
   after: [
-    'A written summary by email: what we saw and what we agreed',
+    'A short summary by email',
     'The price for your team, in writing',
-    'A follow-up call only when you ask for one'
+    'A follow-up call if you ask for one'
   ],
   bookTitle: 'Ask for a time',
-  bookBody: 'For now, booking is done by email. Tell us your agency, your team size and a few days that suit you. We answer with a time.',
+  bookBody: 'Booking is by email for now. Send your agency name, team size and a few days that suit you, and we reply with a time.',
   emailLabel: 'Write to',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: 'Is there a free trial?',
-      a: ['There is a demo instead, and three example trips on this site. In 30 minutes you see a complete trip run from start to finish, which an empty account cannot show.']
+      a: ['No. There is a 30-minute demo.']
     },
     {
       q: 'Who runs the demo?',
-      a: ['Someone from the Traviosoft team, in Spanish, English or French. It is a call, not a recorded video.']
+      a: ['Someone from the Traviosoft team, in Spanish, English or French.']
     },
     {
       q: 'Do I need to prepare anything?',
-      a: ['Nothing at all. We bring the trip; you bring your questions.']
+      a: ['No.']
     },
     {
       q: 'Will you ask for my data?',
-      a: ['The demo runs on a sample trip with invented data. Your rates and clients come over only once you have decided, during setup.']
+      a: ['No. The demo uses a sample trip with invented data.']
     }
   ]
 };
@@ -370,14 +178,14 @@ export const switching: SiteContent['switching'] = {
   metaTitle: 'Switching from Excel to Traviosoft | Traviosoft',
   metaDescription:
     'How to move from Excel, Word and WhatsApp in the middle of a season: what we import, what you check, and how to keep running trips while you start new ones.',
-  title: 'From Excel to Traviosoft, season running',
-  lead: 'You move in steps, and the trips you are running keep going.',
+  title: 'Switching to Traviosoft',
+  lead: 'The switch happens in steps, alongside the trips you are running.',
   timelineTitle: 'How it goes',
   timeline: [
     {
       when: 'Day 1',
       title: 'You send us your files',
-      body: 'Your rates, your client list, your suppliers, your open trips. Any spreadsheet works, so does an export from another tool, tidy or messy.'
+      body: 'Your rates, clients, suppliers and open trips, in spreadsheets or as an export from another tool.'
     },
     {
       when: 'Week 1',
@@ -396,27 +204,24 @@ export const switching: SiteContent['switching'] = {
     }
   ],
   importTitle: 'What comes over',
-  importHead: ['What', 'From', 'How'],
-  importRows: [
-    { what: 'Catalogue, products and rates', from: 'Spreadsheets', how: 'We import it. You check a sample.' },
-    { what: 'Clients', from: 'Spreadsheets, your email contacts', how: 'We import it. Duplicates are merged with you.' },
-    { what: 'Suppliers and contacts', from: 'Spreadsheets', how: 'We import it. You check the contacts you use most.' },
-    { what: 'Open trips', from: 'Excel, Word, another tool’s export', how: 'We import the ones you choose. You check them one by one.' }
+  importParts: [
+    { title: 'Included in the import price', body: 'Your catalogue with its rates, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
+    { title: 'On quote', body: 'Trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
   ],
   seasonTitle: 'Will it disrupt my season?',
   seasonBody: [
-    'Done in this order, it runs alongside your season. Start with new requests: they go into Traviosoft from the day you are live. Keep finishing the trips already running the old way, with the Excel and the Word you know.',
+    'New requests go into Traviosoft from the day you are live. Trips already running finish the way they started.',
     'Open trips are moved only if you want them moved, and usually the ones that are far away. A trip that leaves next week stays where it is.',
-    'In the middle of high season, tell us. We import first and go live in your next quiet week.'
+    'In high season, we import first and go live in a quieter week.'
   ],
   faq: [
     {
       q: 'Can you import from my current tool?',
-      a: ['If it exports to a spreadsheet, yes. Send us a sample export and we tell you exactly what comes over.']
+      a: ['If it exports to a spreadsheet, yes. Send us a sample export and we tell you what comes over.']
     },
     {
       q: 'What does it cost?',
-      a: [`Setup and data import are free with yearly billing. With monthly billing, they are ${PRICES.setupMonthly} EUR once.`]
+      a: [`Setup and the import of your spreadsheets are free with yearly billing. With monthly billing, setup is ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one row per item and the same columns all the way down. Word documents, PDFs, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
     },
     {
       q: 'What happens to my old files?',
@@ -436,9 +241,9 @@ export const switching: SiteContent['switching'] = {
 export const faqPage: SiteContent['faqPage'] = {
   metaTitle: 'Frequently asked questions | Traviosoft',
   metaDescription:
-    'Straight answers on what Traviosoft does, what it costs, where your data lives and how switching from Excel works. Written for agency owners.',
-  title: 'Questions agencies ask',
-  lead: 'Short answers. If yours is not here, write to hola@traviosoft.com.',
+    'What Traviosoft does, what it costs, where your data is hosted and how switching from Excel works.',
+  title: 'Frequently asked questions',
+  lead: 'If your question is not here, write to hola@traviosoft.com.',
   groups: [
     {
       title: 'Product',
@@ -465,7 +270,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Is there an AI assistant?',
-          a: ['Yes, on Premium. Ask it what needs you today, have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices; every change waits for your OK. You can also connect the AI assistant you already use to your Traviosoft data.']
+          a: ['Yes, as an option on both plans, with usage limits. Ask it what needs you today, have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices; every change waits for your OK. Connecting the AI assistant you already use to your Traviosoft data is included in both plans.']
         }
       ]
     },
@@ -474,15 +279,15 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'How much does it cost?',
-          a: [`Classic is ${PRICES.classic.yearly} EUR a month and Premium ${PRICES.premium.yearly} EUR a month, billed yearly, with ${PRICES.usersIncluded} users included. Each extra user is ${PRICES.extraUser.yearly} EUR a month. VAT is not included.`]
+          a: [`Classic is ${PRICES.classic.yearly} EUR a month and Premium ${PRICES.premium.yearly} EUR a month, billed yearly, with ${PRICES.usersIncluded} users included. Each extra user is ${PRICES.extraUser.classic.yearly} EUR a month on Classic and ${PRICES.extraUser.premium.yearly} EUR on Premium. VAT is not included.`]
         },
         {
           q: 'Can I pay monthly?',
-          a: [`Yes. Monthly billing is ${PRICES.classic.monthly} EUR for Classic and ${PRICES.premium.monthly} EUR for Premium. Setup is ${PRICES.setupMonthly} EUR once with monthly billing, and free with yearly billing.`]
+          a: [`Yes. Monthly billing is ${PRICES.classic.monthly} EUR for Classic and ${PRICES.premium.monthly} EUR for Premium. Setup is ${PRICES.setupMonthly} EUR once and the import of your spreadsheets ${PRICES.importMonthly} EUR once with monthly billing, and both are free with yearly billing.`]
         },
         {
           q: 'Is there a free trial?',
-          a: ['There is a 30-minute demo on a trip like the ones you sell, and three example trips on this site that you can open without signing up.']
+          a: ['No. There is a 30-minute demo.']
         }
       ]
     },
@@ -516,7 +321,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Does it follow my country’s rules?',
-          a: ['Invoice numbering per company and credit notes work everywhere. Tax schemes and e-invoicing are switched on per country in the settings. Tell us your country and we will say plainly what is covered.']
+          a: ['Invoice numbering per company and credit notes work everywhere. Tax schemes and e-invoicing are switched on per country in the settings. For other countries, ask us what is covered.']
         }
       ]
     }
@@ -524,44 +329,35 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'About Traviosoft: born inside a Barcelona agency',
+  metaTitle: 'About Traviosoft',
   metaDescription:
     'Traviosoft started inside a tailor-made travel agency in Barcelona that ran on Excel, Word and WhatsApp. Support by email from the people who build the product, data hosted in the EU.',
-  title: 'Built by an agency, for agencies',
-  lead: 'Traviosoft was born inside a tailor-made travel agency in Barcelona, on real trips, and grew into a complete management system for tailor-made agencies and DMCs.',
+  title: 'About Traviosoft',
+  lead: 'Traviosoft started inside a tailor-made travel agency in Barcelona. It is a management system for tailor-made agencies and DMCs.',
   blocks: [
     {
       title: 'Where it comes from',
       body: [
         'The agency ran on Excel for the rates, Word for the quotes and WhatsApp for everything else. In a busy week, every deposit and every hotel confirmation depended on someone remembering it.',
-        'So the tool was built there, on real trips, by people who had to send the quote that night.'
+        'The first version was built there, on the agency’s own trips.'
       ]
     },
     {
-      title: 'Why we kept building',
+      title: 'What it does',
       body: [
-        'A tailor-made trip is priced service by service from net rates, with several suppliers and documents in the client’s language. We wanted software built around that way of working.',
-        'One place for the whole trip, from the first request to the last invoice, with the price shown on the site.'
+        'Traviosoft covers the whole trip: requests, quotes priced service by service from net rates, bookings with several suppliers, documents in the client’s language, payments and invoices.'
       ]
     },
     {
-      title: 'How we work',
+      title: 'Support',
       body: [
-        'Support is by email, in Spanish, English and French, and you talk to the people who build the product.',
-        'Each feature on this site says which plan it belongs to, so you know exactly what you get.'
+        'Support is by email, in Spanish, English and French, from the people who build the product.'
       ]
     },
     {
       title: 'Your data',
       body: [
-        'Each agency has its own separate space, hosted in the European Union and kept apart from every other agency. Your data is yours, and you can take it with you.'
-      ]
-    },
-    {
-      title: 'What you can rely on',
-      body: [
-        'Traviosoft runs real trips every day, and we show only the logos and reviews we can stand behind.',
-        'You get a complete management system and a team that answers its email.'
+        'Each agency has its own separate space, hosted in the European Union. You can export your data at any time.'
       ]
     }
   ],
@@ -576,15 +372,14 @@ export const about: SiteContent['about'] = {
 export const resources: SiteContent['resources'] = {
   metaTitle: 'Resources for tailor-made travel agencies | Traviosoft',
   metaDescription:
-    'Comparisons, guides, a glossary and an example trip for tailor-made agencies and DMCs choosing software. Plain language, no sign-up needed.',
+    'Comparisons, guides and a glossary for tailor-made agencies and DMCs choosing software. Plain language, no sign-up needed.',
   title: 'Resources',
-  lead: 'Things we wished we had found when we looked for software for an agency like ours.',
+  lead: 'Comparisons, guides and a glossary.',
   groups: [
     { kind: 'best', title: 'Best software comparison', body: 'The tools tailor-made agencies and DMCs use, side by side, and who each one suits.' },
-    { kind: 'compare', title: 'Compare pages', body: 'Traviosoft next to other tools, on what you pay and what you get.' },
+    { kind: 'compare', title: 'Compare pages', body: 'Traviosoft next to other tools.' },
     { kind: 'guide', title: 'Guides', body: 'Practical notes on quoting, booking and invoicing a tailor-made trip.' },
     { kind: 'glossary', title: 'Glossary', body: 'The travel-agency and software terms, in a line each.' },
-    { kind: 'example', title: 'Example trips', body: 'A couple in Andalucía, an incentive group in Porto and a safari in Kenya and Tanzania, as your client sees them.' }
   ],
   glossaryTitle: 'Glossary',
   glossaryMeta:

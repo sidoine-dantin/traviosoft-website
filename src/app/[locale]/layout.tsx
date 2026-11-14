@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, DM_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, DM_Mono, Schibsted_Grotesk } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -7,6 +7,8 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { JsonLd } from '@/components/site/json-ld';
+import { Consent } from '@/components/site/consent';
+import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
 import { baseUrl, siteName } from '@/lib/seo';
@@ -16,6 +18,13 @@ const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   axes: ['wdth', 'opsz'],
   variable: '--font-bricolage',
+  display: 'swap'
+});
+
+// Titles and text: Schibsted Grotesk. Bricolage only for the logo and price figures.
+const schibsted = Schibsted_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-schibsted',
   display: 'swap'
 });
 
@@ -38,7 +47,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#FFF4E6'
+  themeColor: '#F7F8F6'
 };
 
 export function generateStaticParams() {
@@ -110,7 +119,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }));
 
   return (
-    <html lang={locale} className={`${bricolage.variable} ${dmMono.variable}`}>
+    <html lang={locale} className={`${bricolage.variable} ${schibsted.variable} ${dmMono.variable}`}>
       <body>
         <JsonLd data={org} />
         <JsonLd data={site} />
@@ -119,6 +128,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header locale={c.locale} labels={c.nav} jobs={jobs} />
           <main id="main">{children}</main>
           <Footer c={c} />
+          <ScrollTop />
+          <Consent text={c.footer.consent.text} accept={c.footer.consent.accept} refuse={c.footer.consent.refuse} more={c.footer.consent.more} policy={c.footer.consent.policy} />
         </NextIntlClientProvider>
       </body>
     </html>

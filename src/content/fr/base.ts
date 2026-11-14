@@ -3,7 +3,6 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Produit',
   pricing: 'Tarifs',
-  example: 'Voyages exemples',
   demo: 'Réserver une démo',
   menuLabel: 'Menu',
   close: 'Fermer',
@@ -28,7 +27,15 @@ export const footer: SiteContent['footer'] = {
   notice: 'Mentions légales',
   hosted: 'Hébergé dans l’UE',
   rights: 'Traviosoft',
-  localLinks: []
+  localLinks: [],
+  consent: {
+    text: 'Avec votre accord, nous utilisons des cookies publicitaires pour mesurer les visites venues de nos annonces et vous montrer nos annonces sur d’autres sites. Vous pouvez changer d’avis à tout moment en bas de chaque page.',
+    accept: 'Accepter',
+    refuse: 'Refuser',
+    more: 'En savoir plus',
+    settings: 'Gérer les cookies',
+    policy: 'Politique de confidentialité'
+  }
 };
 
 export const common: SiteContent['common'] = {
@@ -50,7 +57,7 @@ export const common: SiteContent['common'] = {
 
 export const visuals: SiteContent['visuals'] = {
   quoteLabel: 'Devis · v2',
-  trip: 'Andalucía, 8 jours',
+  trip: 'Andalousie, 8 jours',
   tripSub: '2 adultes',
   total: 'Total',
   sent: 'Envoyé 21:48 ✓',
@@ -69,7 +76,7 @@ export const visuals: SiteContent['visuals'] = {
   followup: 'Relance',
   followupLine: 'Sans réponse après 7 jours',
   followupSent: 'Relance envoyée',
-  order: 'Dossier · Andalucía, 8 jours',
+  order: 'Voyage confirmé · Andalousie, 8 jours',
   booking: 'Réservation',
   trip2: 'Voyage',
   payment: 'Paiement',
@@ -78,12 +85,12 @@ export const visuals: SiteContent['visuals'] = {
   paid: 'Payé',
   partial: 'Acompte payé',
   supplierMail: 'E-mails des prestataires',
-  filed: 'Classés dans le voyage',
+  filed: 'Enregistrés dans le voyage',
   serviceSheet: 'Fiche de service envoyée',
   yourTrip: 'Votre voyage',
   dayLabel: 'Jour',
   calendar: 'Calendrier · mai',
-  payments: 'Paiements · Andalucía, 8 jours',
+  payments: 'Paiements · Andalousie, 8 jours',
   deposit: 'Acompte 30 %',
   balance: 'Solde',
   due: 'Échéance',
@@ -100,7 +107,7 @@ export const visuals: SiteContent['visuals'] = {
   brands: 'Marques',
   brandA: 'Votre agence',
   brandB: 'Votre deuxième marque',
-  languages: 'Le même devis, trois langues',
+  languages: 'Un devis, cinq langues',
   team: 'Équipe',
   seats: 'utilisateurs',
   owner: 'Propriétaire',
@@ -109,9 +116,26 @@ export const visuals: SiteContent['visuals'] = {
   safe1: 'Espace privé par agence',
   safe2: 'Hébergé dans l’UE',
   connections: 'Connexions',
-  days: ['Séville', 'Séville', 'Córdoba', 'Granada', 'Granada', 'Ronda', 'Málaga', 'Retour'],
+  days: ['Séville', 'Séville', 'Cordoue', 'Grenade', 'Grenade', 'Ronda', 'Malaga', 'Retour'],
   guide: 'Guide · Alhambra',
   halfDay: '½ journée · privé',
   privateCar: 'voiture privée',
-  transfers: 'Transferts'
+  transfers: 'Transferts',
+  ex: {
+    muller: 'Famille Müller', event: 'Événement · 40 personnes', reqTrip: 'Andalousie · mai', reqLisbon: 'Lisbonne → Porto · 6 personnes', reqBarcelona: 'Barcelone · 3 jours', reqMallorca: 'Majorque · 7 jours',
+    seasons: ['janv. – mars', 'avr. – juin', 'juil. – août'], room: 'Double · petit-déj.', vat: 'TVA 10 %',
+    itinerary: ['Arrivée 15:00', '10:00 · guide', 'Voiture à 09:00', '08:30 · billets'],
+    mailHotel: 'RE : 2 adultes, 12–15 mai', mailGuide: 'RE : Alhambra, 14 mai',
+    langNames: ['Español', 'Català', 'English', 'Français', 'Italiano'],
+    conWebsite: 'Site web', conWebsiteSub: 'Demandes depuis votre site', conAccounting: 'Comptabilité', conAccountingSub: 'Ventes, achats, paiements', conAi: 'Assistant IA', on: 'Actif',
+    numLocale: 'fr-FR', date1: '14 mars', date2: '12 avr.', date3: '9 mai',
+    net: 'Coût net', commission: 'Commission partenaire 10 %', sellPrice: 'Prix de vente',
+    commTitle: 'Commissions · Viajes Norte · avril', trip2Name: 'Lisbonne → Porto, 6 jours',
+    rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Double', twin: 'Twin', single: 'Single',
+    supplierDue: 'Prestataire · échéance', toPay: 'À payer',
+    mailSubject: 'Votre devis · Andalousie, 8 jours', mailBody: 'Acompte de 30 % pour confirmer le voyage.', payDeposit: 'Payer l’acompte',
+    settings: 'Réglages', langs: 'Langues', currencies: 'Devises',
+    smith: 'Famille Smith', atlas: 'Atlas Travel', books: 'Votre comptabilité',
+    countryTitle: 'Réglages par pays · Espagne', vatScheme: 'Régime de TVA des agences de voyages', qr: 'QR code sur chaque facture'
+  }
 };

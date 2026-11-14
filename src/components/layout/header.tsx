@@ -3,25 +3,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Logo } from '@/components/site/logo';
+import { LangMenu } from './lang-menu';
 import type { Locale } from '@/content/types';
 
 type JobLink = { slug: string; name: string; menuLine: string };
 
 type Props = {
   locale: Locale;
-  labels: { product: string; pricing: string; example: string; demo: string; menuLabel: string; close: string; skip: string };
+  labels: { product: string; pricing: string; resources: string; demo: string; menuLabel: string; close: string; skip: string };
   jobs: JobLink[];
   /** paths that exist in each locale; used to hide a language that has no version of this page */
   available?: Partial<Record<Locale, string>>;
 };
-
-const DOT = [
-  { background: 'var(--yellow)', color: 'var(--green)' },
-  { background: 'var(--orange)', color: 'var(--cream)' },
-  { background: 'var(--green)', color: 'var(--yellow)' },
-  { background: 'var(--ink)', color: 'var(--yellow)' }
-];
-const LOCALES: Locale[] = ['es', 'en', 'fr'];
 
 export default function Header({ locale, labels, jobs }: Props) {
   const pathname = usePathname();
@@ -96,15 +89,7 @@ export default function Header({ locale, labels, jobs }: Props) {
   // Locale-only pages (Spanish guides) have no twin: the switch goes to that locale's home.
   const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/resources' : pathname;
 
-  const langs = (
-    <div className="lang" aria-label="Language">
-      {LOCALES.map(l => (
-        <Link key={l} href={localeHref} locale={l} aria-current={l === locale ? 'true' : undefined} hrefLang={l}>
-          {l.toUpperCase()}
-        </Link>
-      ))}
-    </div>
-  );
+  const langs = <LangMenu locale={locale} href={localeHref} />;
 
   return (
     <header className={`top${scrolled ? ' scrolled' : ''}${hidden && !mobile ? ' away' : ''}${mobile ? ' open' : ''}`}>
@@ -124,9 +109,8 @@ export default function Header({ locale, labels, jobs }: Props) {
             </button>
             {open && (
               <div className="menu-panel" id="product-menu">
-                {jobs.map((j, i) => (
+                {jobs.map(j => (
                   <Link key={j.slug} href={`/${j.slug}`}>
-                    <span className="menu-dot" style={DOT[i]}>{i + 1}</span>
                     <span>
                       <b>{j.name}</b>
                       <small>{j.menuLine}</small>
@@ -137,7 +121,7 @@ export default function Header({ locale, labels, jobs }: Props) {
             )}
           </div>
           <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
-          <Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link>
+          <Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link>
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           {langs}
@@ -165,10 +149,9 @@ export default function Header({ locale, labels, jobs }: Props) {
         <nav className="mobile-panel" id="mobile-menu" aria-label="Main">
           <p className="lbl mobile-kicker">{labels.product}</p>
           <ul className="mobile-jobs">
-            {jobs.map((j, i) => (
+            {jobs.map(j => (
               <li key={j.slug}>
                 <Link href={`/${j.slug}`} aria-current={pathname === `/${j.slug}` ? 'page' : undefined}>
-                  <span className="menu-dot" style={DOT[i]} aria-hidden="true">{i + 1}</span>
                   <span><b>{j.name}</b><small>{j.menuLine}</small></span>
                 </Link>
               </li>
@@ -176,10 +159,10 @@ export default function Header({ locale, labels, jobs }: Props) {
           </ul>
           <ul className="mobile-links">
             <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
-            <li><Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link></li>
+            <li><Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link></li>
           </ul>
           <div className="mobile-foot">
-            {langs}
+            <LangMenu locale={locale} href={localeHref} up />
             <Link className="quiet mobile-demo" href="/demo">{labels.demo}</Link>
           </div>
         </nav>

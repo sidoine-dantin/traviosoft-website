@@ -5,47 +5,55 @@ export const home: SiteContent['home'] = {
   metaTitle: 'Traviosoft: software para agencias a medida y DMC',
   metaDescription:
     `Solicitudes, presupuestos con tu margen, reservas, itinerarios, cobros y facturas en un solo sitio. Para agencias de viajes a medida y DMC. Desde ${PRICES.classic.yearly} EUR al mes, en la UE.`,
-  kick: 'Envía el presupuesto',
-  giant: 'hoy',
-  sub: 'El mismo día que llega la solicitud. Software para agencias de viajes a medida y DMC.',
+  title: 'Software para agencias de viajes a medida y DMC',
+  sub: 'Solicitudes, presupuestos, reservas, cobros y facturas, en un solo sitio.',
   tags: [
     { t: 'Señal pagada ✓', s: 'enlace en el email' },
-    { t: 'Hotel confirmado', s: 'archivado en el viaje' }
+    { t: 'Hotel confirmado', s: 'respuesta guardada en el viaje' }
   ],
-  tripTitle: 'Un viaje, del primer mensaje a la última factura',
+  tripTitle: 'Cómo avanza un viaje en Traviosoft',
   steps: [
     { time: '09:12', title: 'Entra la solicitud', body: 'Llega a una única lista, con su siguiente paso.', job: 'sell' },
-    { time: '11:40', title: 'Presupuesto enviado', body: 'Hecho con tus tarifas, con el margen ya incluido.', job: 'sell' },
+    { time: '11:40', title: 'Presupuesto enviado', body: 'Hecho con tus tarifas, con tu margen.', job: 'sell' },
     { time: 'Día 2', title: 'Señal pagada', body: 'Pagada desde el enlace del email.', job: 'get-paid' },
     { time: 'Día 3', title: 'Proveedores confirmados', body: 'Hotel y guía marcados en el viaje.', job: 'book' },
     { time: 'Día 30', title: 'Factura final', body: 'Sale de las cifras del presupuesto.', job: 'get-paid' }
   ],
   stepGo: 'Ver cómo',
-  baTitle: 'Lo que cambia el lunes por la mañana',
+  baTitle: 'Antes y después',
   beforeTitle: 'Hoy',
   beforeScraps: [
-    'Tarifas_2026_FINAL_v3.xlsx',
-    'Presupuesto García.docx',
-    'WhatsApp: "¿ha confirmado el hotel?"',
-    '¿Señal? mirar el banco',
-    'Números de factura en una libreta',
-    '42 emails sin leer'
+    { i: 'sheet', t: 'Tarifas_2026_FINAL_v3.xlsx' },
+    { i: 'doc', t: 'Presupuesto García.docx' },
+    { i: 'chat', t: 'WhatsApp: "¿ha confirmado el hotel?"' },
+    { i: 'bank', t: '¿Señal? mirar el banco' },
+    { i: 'book', t: 'Números de factura en una libreta' },
+    { i: 'mail', t: '42 emails sin leer' },
+    { i: 'sheet', t: 'Rooming_list_Müller (2).xlsx' },
+    { i: 'phone', t: 'Llamar al guía' },
+    { i: 'note', t: '¿Quién envió el presupuesto?' },
+    { i: 'pdf', t: 'Bono_final_FINAL.pdf' },
+    { i: 'calc', t: 'Margen: revisar' },
+    { i: 'mail', t: 'RE: RE: RE: disponibilidad' }
   ],
   afterTitle: 'Con Traviosoft',
   afterBody:
-    'Un viaje, un solo sitio. La solicitud, el presupuesto, las reservas, los cobros y las facturas están en el mismo expediente, y todo el equipo ve lo mismo.',
-  exampleTitle: 'Mira lo que recibe tu cliente',
-  exampleBody: 'Abre un viaje de ejemplo, una pareja, un grupo de incentivo o un safari: el itinerario día a día y el presupuesto, tal como los ve tu cliente. Sin registrarte.',
-  exampleLink: 'Abrir los viajes de ejemplo',
-  priceTitle: 'Dos planes, precios claros',
-  priceBody: `Classic lleva toda la agencia. Premium añade equipos, divisas, compras y más. ${PRICES.usersIncluded} usuarios incluidos, pago anual o mensual, puesta en marcha gratis con pago anual.`,
-  coin1: 'EUR/mes · Classic',
-  coin2: 'EUR/mes · Premium',
+    'La solicitud, el presupuesto, las reservas, los cobros y las facturas están en el mismo viaje, y todo el equipo ve lo mismo.',
+  priceTitle: 'Precios',
+  priceBody: 'Alta',
+  priceImport: 'e importación de tus hojas de cálculo',
+  priceFree: 'gratis*',
+  priceFreeNote: '* Con el pago anual. Oferta por tiempo limitado.',
+  extraUserLine: `Usuario adicional: ${PRICES.extraUser.classic.yearly} EUR (Classic) o ${PRICES.extraUser.premium.yearly} EUR (Premium) al mes*`,
+  coin1: 'EUR/mes* · Classic',
+  coin2: 'EUR/mes* · Premium',
+  coinUsers: `${PRICES.usersIncluded} usuarios`,
+  priceNote: '* Al mes, pago anual, IVA no incluido. Todos los detalles en la página de precios.',
   priceLink: 'Comparar planes',
   facts: [
     { k: 'Precio', v: `Desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos` },
     { k: 'Para', v: 'Agencias a medida y DMC' },
     { k: 'Datos', v: 'Un espacio privado por agencia, alojado en la UE' },
-    { k: 'Idiomas', v: 'Documentos en español, inglés, francés y más' }
+    { k: 'Idiomas', v: 'Documentos en español, catalán, inglés, francés e italiano' }
   ]
 };

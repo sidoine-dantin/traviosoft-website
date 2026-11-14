@@ -3,7 +3,6 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Product',
   pricing: 'Pricing',
-  example: 'Example trips',
   demo: 'Book a demo',
   menuLabel: 'Menu',
   close: 'Close',
@@ -28,7 +27,15 @@ export const footer: SiteContent['footer'] = {
   notice: 'Legal notice',
   hosted: 'Hosted in the EU',
   rights: 'Traviosoft',
-  localLinks: []
+  localLinks: [],
+  consent: {
+    text: 'With your consent, we use advertising cookies to measure visits from our ads and to show you our ads on other sites. You can change your choice at any time at the bottom of every page.',
+    accept: 'Accept',
+    refuse: 'Refuse',
+    more: 'Learn more',
+    settings: 'Cookie settings',
+    policy: 'Privacy policy'
+  }
 };
 
 export const common: SiteContent['common'] = {
@@ -78,7 +85,7 @@ export const visuals: SiteContent['visuals'] = {
   paid: 'Paid',
   partial: 'Deposit paid',
   supplierMail: 'Supplier emails',
-  filed: 'Filed on the trip',
+  filed: 'Saved to the trip',
   serviceSheet: 'Service sheet sent',
   yourTrip: 'Your trip',
   dayLabel: 'Day',
@@ -100,9 +107,9 @@ export const visuals: SiteContent['visuals'] = {
   brands: 'Brands',
   brandA: 'Your agency',
   brandB: 'Your second brand',
-  languages: 'Same quote, three languages',
+  languages: 'One quote, five languages',
   team: 'Team',
-  seats: 'seats used',
+  seats: 'users',
   owner: 'Owner',
   sales2: 'Sales',
   ops: 'Operations',
@@ -113,5 +120,22 @@ export const visuals: SiteContent['visuals'] = {
   guide: 'Guide · Alhambra',
   halfDay: '½ day · private',
   privateCar: 'private car',
-  transfers: 'Transfers'
+  transfers: 'Transfers',
+  ex: {
+    muller: 'Müller family', event: 'Event · 40 people', reqTrip: 'Andalucía · May', reqLisbon: 'Lisboa → Porto · 6 people', reqBarcelona: 'Barcelona · 3 days', reqMallorca: 'Mallorca · 7 days',
+    seasons: ['Jan – Mar', 'Apr – Jun', 'Jul – Aug'], room: 'Double · B&B', vat: '10% VAT',
+    itinerary: ['Check-in 15:00', '10:00 · guide', 'Car at 09:00', '08:30 · tickets'],
+    mailHotel: 'RE: 2 adults, 12–15 May', mailGuide: 'RE: Alhambra, 14 May',
+    langNames: ['Español', 'Català', 'English', 'Français', 'Italiano'],
+    conWebsite: 'Website', conWebsiteSub: 'Requests from your site', conAccounting: 'Accounting', conAccountingSub: 'Sales, purchases, payments', conAi: 'AI assistant', on: 'On',
+    numLocale: 'en-GB', date1: '14 Mar', date2: '12 Apr', date3: '9 May',
+    net: 'Net cost', commission: 'Partner commission 10%', sellPrice: 'Selling price',
+    commTitle: 'Commission · Viajes Norte · April', trip2Name: 'Lisboa → Porto, 6 days',
+    rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Double', twin: 'Twin', single: 'Single',
+    supplierDue: 'Supplier · due', toPay: 'To pay',
+    mailSubject: 'Your quote · Andalucía, 8 days', mailBody: 'Deposit 30% to confirm the trip.', payDeposit: 'Pay the deposit',
+    settings: 'Settings', langs: 'Languages', currencies: 'Currencies',
+    smith: 'Smith family', atlas: 'Atlas Travel', books: 'Your accounts',
+    countryTitle: 'Country settings · Spain', vatScheme: 'Travel agency VAT scheme', qr: 'QR code on every invoice'
+  }
 };

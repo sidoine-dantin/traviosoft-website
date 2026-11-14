@@ -403,7 +403,7 @@
     "notice_title": "Aviso legal - Traviosoft",
     "back_home": "Volver al inicio",
     "updated_label": "Última actualización",
-    "updated_date": "Junio de 2026",
+    "updated_date": "Noviembre de 2026",
     "privacy": {
       "intro": "Esta política explica cómo tratamos la información recogida a través del sitio web traviosoft.com. Se refiere únicamente al sitio web público. El uso de la aplicación Traviosoft por parte de nuestros clientes se rige por un contrato aparte.",
       "sections": [
@@ -417,32 +417,42 @@
           "heading": "Qué recogemos",
           "body": [
             "Cuando reservas una demo, compartes la información que introduces en el formulario de reserva: normalmente tu nombre, tu dirección de correo y algunos datos sobre tu agencia. La reserva en sí la gestiona la herramienta de citas de Google, por lo que la información que introduces allí también la trata Google.",
-            "Como la mayoría de los sitios, nuestro proveedor de alojamiento registra datos técnicos básicos, como tu dirección IP y tu tipo de navegador, en sus registros de servidor. No usamos rastreadores publicitarios ni creamos perfiles de marketing."
+            "Como la mayoría de los sitios, nuestro proveedor de alojamiento registra datos técnicos básicos, como tu dirección IP y tu tipo de navegador, en sus registros de servidor. Si aceptas las cookies publicitarias, LinkedIn y Meta también registran tu visita a este sitio (ver \"Publicidad y audiencias\")."
           ]
         },
         {
           "heading": "Cómo usamos tu información",
           "body": [
-            "Usamos la información que nos das para responder a tu solicitud de demo, preparar la llamada y hacer seguimiento sobre Traviosoft. Los registros técnicos sirven para mantener el sitio seguro y operativo. Nunca vendemos tus datos y solo los compartimos con los proveedores necesarios para que el sitio y la reserva funcionen.",
-            "Cuando la ley exige una base legal, nos apoyamos en tu solicitud (organizar la demo que pediste) y en nuestro interés legítimo de mantener el sitio seguro y en contacto con quienes nos han escrito."
+            "Usamos los datos que nos das para responder a tu solicitud de demo, preparar la llamada y hacer seguimiento sobre Traviosoft. Usamos los registros técnicos para mantener el sitio seguro y en funcionamiento. Nunca vendemos tus datos. Solo los compartimos con los proveedores necesarios para el sitio y la reserva, y con LinkedIn y Meta para nuestra publicidad, como se explica más abajo.",
+            "Cuando la ley exige una base jurídica, nos basamos en tu solicitud (para organizar la demo que pediste), en tu consentimiento (para las cookies publicitarias) y en nuestro interés legítimo (mantener el sitio seguro, seguir en contacto con quien nos escribió y mostrar nuestros anuncios a empresas de viajes)."
           ]
         },
         {
           "heading": "Servicios de terceros",
           "body": [
-            "El calendario de demo lo proporciona Google. Reservar una franja está sujeto a las condiciones y la política de privacidad de Google. El sitio se sirve a través del alojamiento y la red de Cloudflare. Estos proveedores tratan datos limitados por cuenta nuestra para que la reserva y el sitio funcionen."
+            "El calendario de demos lo proporciona Google. El sitio se sirve a través del alojamiento y la red de contenidos de Cloudflare. Nuestros anuncios se publican en LinkedIn (LinkedIn Ireland Unlimited Company) y en Facebook e Instagram (Meta Platforms Ireland Limited). Para las cookies publicitarias, LinkedIn y Meta son corresponsables del tratamiento junto con nosotros; lo que hacen con los datos se rige por sus propias políticas de privacidad. Algunos de estos proveedores pueden transferir datos a Estados Unidos en el marco del Data Privacy Framework UE-EE. UU. o de las cláusulas contractuales tipo de la Comisión Europea."
+          ]
+        },
+        {
+          "heading": "Publicidad y audiencias",
+          "body": [
+            "Si aceptas las cookies publicitarias, el Insight Tag de LinkedIn y el Píxel de Meta registran que tu navegador visitó este sitio, qué páginas viste y si abriste la página de demo o hiciste clic para contactarnos. Lo usamos para medir nuestros anuncios y volver a mostrarlos a quienes visitaron el sitio. LinkedIn y Meta solo nos dan totales y tamaños de audiencia, nunca nombres.",
+            "También podemos subir a LinkedIn y Meta una lista de datos de contacto profesionales (nombre de la empresa, web y correo profesional del propietario o responsable de una agencia) para que nuestros anuncios lleguen a esas empresas de viajes. Los datos se cifran (hash) antes de subirlos, solo sirven para encontrar las cuentas y las plataformas los borran tras la comparación. Lo hacemos sobre la base de nuestro interés legítimo en presentar Traviosoft a profesionales del sector.",
+            "Si nos contactas o reservas una demo, también podemos añadir tu correo profesional a esas listas, para que nuestros anuncios te sigan llegando mientras conoces Traviosoft. Se cifra (hash) del mismo modo antes de subirlo. Lo hacemos sobre la base de nuestro interés legítimo en mantener el contacto con quien se ha dirigido a nosotros, y puedes oponerte en cualquier momento como se explica a continuación.",
+            "Puedes oponerte en cualquier momento: escríbenos a sidoine@traviosoft.com y te quitamos de nuestras listas, cambia tu elección con \"Configurar cookies\" al pie de cada página, o ajusta los anuncios en tus cuentas de LinkedIn y Meta."
           ]
         },
         {
           "heading": "Cookies",
           "body": [
-            "El sitio solo usa las cookies necesarias para funcionar y para recordar tu elección de idioma. El calendario de reserva integrado puede instalar sus propias cookies, gestionadas por Google. No usamos cookies publicitarias."
+            "El sitio usa las cookies necesarias para funcionar y para recordar tu idioma y tu elección sobre cookies. Solo con tu consentimiento, usa también cookies publicitarias de LinkedIn y Meta. Rechazar es tan fácil como aceptar, y el sitio funciona igual en ambos casos. Te volvemos a preguntar a los seis meses. El calendario de reserva integrado puede instalar sus propias cookies, gestionadas por Google."
           ]
         },
         {
           "heading": "Cuánto tiempo los conservamos",
           "body": [
-            "Conservamos la información de tu solicitud de demo mientras estemos en contacto sobre Traviosoft y durante un periodo razonable después. Los registros técnicos solo se guardan el tiempo breve necesario para la seguridad y el mantenimiento."
+            "Conservamos la información de tu solicitud de demo mientras estemos en contacto sobre Traviosoft y durante un periodo razonable después. Los registros técnicos solo se guardan el tiempo breve necesario para la seguridad y el mantenimiento.",
+            "Las cookies publicitarias duran como máximo 13 meses. Los datos de contacto subidos para audiencias publicitarias se conservan mientras dura la campaña y se eliminan de nuestras listas cuando te opones."
           ]
         },
         {

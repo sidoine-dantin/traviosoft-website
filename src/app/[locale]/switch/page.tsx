@@ -36,11 +36,13 @@ export default async function SwitchPage({ params }: Props) {
       <section className="band">
         <div className="wrap">
           <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 28 }}>{s.importTitle}</h2>
-          <div className="tbl-wrap">
-            <table className="tbl stack">
-              <thead><tr>{s.importHead.map(h => <th key={h}>{h}</th>)}</tr></thead>
-              <tbody>{s.importRows.map(r => <tr key={r.what}><td data-label={s.importHead[0]}>{r.what}</td><td data-label={s.importHead[1]}>{r.from}</td><td data-label={s.importHead[2]}>{r.how}</td></tr>)}</tbody>
-            </table>
+          <div className="grid-2 import-parts">
+            {s.importParts.map(part => (
+              <div key={part.title}>
+                <h3 className="h3" style={{ marginBottom: 8 }}>{part.title}</h3>
+                <p className="muted">{part.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

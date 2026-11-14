@@ -30,7 +30,7 @@ export default async function ResourcesPage({ params }: Props) {
       {r.groups.map((g, i) => {
         const kinds = g.kind === 'guide' ? ['guide', 'spain'] : [g.kind];
         const items = c.articles.filter(a => kinds.includes(a.kind));
-        if (g.kind !== 'glossary' && g.kind !== 'example' && items.length === 0) return null;
+        if (g.kind !== 'glossary' && items.length === 0) return null;
         return (
           <section key={g.kind} id={g.kind} className={`${i % 2 ? 'on-cream' : 'on-cream2'} band-sm`}>
             <div className="wrap">
@@ -40,9 +40,6 @@ export default async function ResourcesPage({ params }: Props) {
                 {g.kind === 'glossary' && (
                   <Link className="card" href="/glossary"><b className="h3">{r.glossaryTitle}</b><span className="muted">{r.glossaryLead}</span><span className="more">{c.common.readMore} →</span></Link>
                 )}
-                {g.kind === 'example' && c.example.trips.map((t, i) => (
-                  <Link key={t.id} className="card" href={i === 0 ? '/example' : `/example/${t.id}`}><b className="h3">{t.label}</b><span className="muted">{t.kind}</span><span className="more">{c.common.readMore} →</span></Link>
-                ))}
                 {items.map(a => (
                   <Link key={a.key} className="card" href={hrefFor(a.kind, a.slug)}>
                     <b className="h3">{a.title}</b>

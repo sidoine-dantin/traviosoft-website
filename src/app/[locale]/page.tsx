@@ -1,10 +1,12 @@
+import { ScrapIcon } from '@/components/site/scrap-icon';
+import { HeroParallax } from '@/components/site/hero-parallax';
+import { HomeMotion } from '@/components/site/home-motion';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { QuotePhone } from '@/components/site/visuals';
-import { KeyFacts } from '@/components/site/key-facts';
 import { PRICES } from '@/content/prices';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -23,25 +25,26 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <header className="hero on-cream">
+      <header className="hero on-cream snap">
+        <HeroParallax />
+        <HomeMotion />
         <div className="wrap">
-          <h1 style={{ color: 'var(--green)', paddingTop: 'clamp(28px, 5vw, 64px)' }}>
-            <span className="kick">{h.kick}</span>
-            <span className="giant disp">{h.giant}</span>
-          </h1>
+          <h1 className="hero-title">{h.title}</h1>
+          <p className="hero-sub">{h.sub}</p>
           <div className="col">
             {h.tags.map((t, i) => (
               <span key={i} className={`tag t${i + 1}`}>{t.t}<small>{t.s}</small></span>
             ))}
             <QuotePhone v={c.visuals} />
           </div>
-          <p className="hero-sub">{h.sub}</p>
         </div>
       </header>
 
-      <section className="on-green band">
+      <section className="on-green band steps-pin snap">
+        {h.steps.map((_, i) => <span key={i} className="snap-mark" aria-hidden="true" />)}
+        <div className="pin">
         <div className="wrap">
-          <h2 className="h2" style={{ maxWidth: '16ch', marginBottom: 'clamp(48px, 7vw, 80px)' }}>{h.tripTitle}</h2>
+          <h2 className="h2" data-reveal style={{ maxWidth: '16ch', marginBottom: 'clamp(48px, 7vw, 80px)' }}>{h.tripTitle}</h2>
           <ol className="steps">
             {h.steps.map((s, i) => (
               <li key={i}>
@@ -50,22 +53,23 @@ export default async function HomePage({ params }: Props) {
                   <span className="mono" style={{ opacity: 0.8 }}>{s.time}</span>
                   <b>{s.title}</b>
                   <p>{s.body}</p>
-                  <span className="go">{h.stepGo} →</span>
+                  <span className="go"><span className="arr-t">{h.stepGo}</span><span className="arr" aria-hidden="true">→</span></span>
                 </Link>
               </li>
             ))}
           </ol>
         </div>
+        </div>
       </section>
 
-      <section className="band">
+      <section className="band snap">
         <div className="wrap">
-          <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 40, maxWidth: '18ch' }}>{h.baTitle}</h2>
+          <h2 className="h2" data-reveal style={{ color: 'var(--green)', marginBottom: 40, maxWidth: '18ch' }}>{h.baTitle}</h2>
           <div className="ba">
             <div className="before">
               <p className="lbl muted">{h.beforeTitle}</p>
               <div className="scraps">
-                {h.beforeScraps.map(s => <span key={s} className="scrap">{s}</span>)}
+                {h.beforeScraps.map(s => <span key={s.t} className="scrap"><ScrapIcon k={s.i} />{s.t}</span>)}
               </div>
             </div>
             <div className="after">
@@ -76,32 +80,21 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="on-cream2 band-sm">
-        <div className="wrap" style={{ display: 'flex', flexWrap: 'wrap', gap: 32, alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ maxWidth: 560 }}>
-            <h2 className="h2" style={{ color: 'var(--green)' }}>{h.exampleTitle}</h2>
-            <p className="lead muted" style={{ marginTop: 16 }}>{h.exampleBody}</p>
-          </div>
-          <Link href="/example" className="arrow" style={{ color: 'var(--green)', fontSize: 20 }}>{h.exampleLink} →</Link>
-        </div>
-      </section>
-
-      <section className="band">
+      <section className="band snap">
         <div className="wrap coins">
           <div>
             <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>
-            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody}</p>
-            <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
+            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceImport} <s style={{ whiteSpace: "nowrap" }}>{PRICES.importMonthly} EUR</s> {h.priceFree}</p>
+            <p className="free-note">{h.priceFreeNote}</p>
+            <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{h.priceLink}</span><span className="arr" aria-hidden="true">→</span></Link></p>
           </div>
-          <div className="coin" style={{ background: 'var(--orange)', color: 'var(--cream)' }}>
-            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span>
+          <div className="coin">
+            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span><span className="lbl users">{h.coinUsers}</span>
           </div>
-          <div className="coin" style={{ background: 'var(--yellow)', color: 'var(--green)' }}>
-            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span>
+          <div className="coin">
+            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span><span className="lbl users">{h.coinUsers}</span>
           </div>
-        </div>
-        <div className="wrap" style={{ marginTop: 'clamp(56px, 8vw, 96px)', color: 'var(--green)' }}>
-          <KeyFacts facts={h.facts} />
+          <p className="price-note"><span className="extra-user">{h.extraUserLine}</span><Link href="/pricing">{h.priceNote}</Link></p>
         </div>
       </section>
     </>
