@@ -476,18 +476,22 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 .trip-pick a[aria-current="page"] { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
 .trip-pick a[aria-current="page"] strong { color: var(--green); }
 
-/* Cookie banner: bottom of the screen, refuse and accept look the same */
-.consent { position: fixed; z-index: 60; left: 0; right: 0; bottom: 0;
-  padding: 16px var(--gutter) calc(16px + env(safe-area-inset-bottom, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-  background: var(--deep); color: var(--cream);
-  display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
-.consent p { margin: 0; max-width: 72ch; font-size: 15px; line-height: 1.45; min-width: 0; }
+/* Cookie banner: a card over a dimmed page until the visitor answers. The page stays usable
+   (the dim layer lets clicks through). Accept is filled; Refuse is the same size, fully readable
+   and one click, so refusing stays as easy as accepting (CNIL / AEPD / EDPB). */
+.consent-dim { position: fixed; inset: 0; z-index: 59; background: rgba(1, 58, 45, .28); pointer-events: none; }
+.consent { position: fixed; z-index: 60; left: 50%; bottom: max(16px, env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
+  width: min(640px, calc(100% - 2 * var(--gutter))); padding: 22px 24px; border-radius: 20px;
+  background: var(--deep); color: var(--cream); box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .5);
+  display: grid; gap: 18px; }
+.consent p { margin: 0; font-size: 16px; line-height: 1.5; min-width: 0; }
 .consent a { color: var(--yellow); text-decoration: underline; }
-.consent-actions { display: flex; gap: 10px; }
-.consent-btn { min-height: 44px; min-width: 120px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--cream);
-  background: transparent; color: var(--cream); font: inherit; font-weight: 650; cursor: pointer; }
-.consent-btn:hover { background: var(--cream); color: var(--deep); }
+.consent-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.consent-btn { min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--cream);
+  background: transparent; color: var(--cream); font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; }
+.consent-btn:hover { background: rgba(247, 248, 246, .12); }
+.consent-accept { background: var(--yellow); border-color: var(--yellow); color: var(--deep); }
+.consent-accept:hover { background: #EAF77F; }
 .consent-btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
 .foot-linkbtn { opacity: .92; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; min-height: 44px; }
 .foot-linkbtn:hover { text-decoration: underline; }

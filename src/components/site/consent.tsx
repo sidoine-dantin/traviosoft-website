@@ -203,14 +203,17 @@ export function Consent({ text, accept, refuse, policy }: { text: string; accept
   };
 
   return (
+    <>
+    <div className="consent-dim" aria-hidden="true" />
     <div className="consent" role="dialog" aria-live="polite" aria-label={policy}>
       <p>
         {text} <Link href="/legal/privacy">{policy}</Link>
       </p>
       <div className="consent-actions">
         <button type="button" className="consent-btn" onClick={() => decide('denied')}>{refuse}</button>
-        <button type="button" className="consent-btn" onClick={() => decide('granted')}>{accept}</button>
+        <button type="button" className="consent-btn consent-accept" onClick={() => decide('granted')}>{accept}</button>
       </div>
     </div>
+    </>
   );
 }
