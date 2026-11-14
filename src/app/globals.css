@@ -190,14 +190,15 @@
 /* ---------- trip timeline ---------- */
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; position: relative; list-style: none; margin: 0; padding: 0; }
 .steps::before { content: ""; position: absolute; left: 4%; right: 4%; top: 9px; border-top: 4px dotted var(--yellow); }
-.step { position: relative; display: flex; flex-direction: column; gap: 10px; text-decoration: none; }
+.steps > li { display: flex; }
+.step { position: relative; display: flex; flex-direction: column; gap: 10px; text-decoration: none; flex: 1; }
 .step .dot { width: 22px; height: 22px; border-radius: 50%; display: block; background: var(--yellow); color: var(--green); border: 3px solid var(--deep); transition: transform .2s; }
 .step:hover .dot { transform: scale(1.08); }
 .step:nth-child(2) .dot { background: var(--orange); color: var(--cream); }
 .step:nth-child(5) .dot { background: var(--cream); color: var(--green); }
 .step b { font-size: 19px; line-height: 1.15; }
 .step p { font-size: 15px; opacity: .8; }
-.step .go { font-size: 14px; font-weight: 700; color: var(--yellow); margin-top: 2px; }
+.step .go { font-size: 14px; font-weight: 700; color: var(--yellow); margin-top: auto; padding-top: 2px; } /* same baseline in every column */
 @media (max-width: 900px) {
   .steps { grid-template-columns: 1fr; gap: 34px; }
   .steps::before { left: 9px; right: auto; top: 0; bottom: 0; border-top: 0; border-left: 4px dotted var(--yellow); }
