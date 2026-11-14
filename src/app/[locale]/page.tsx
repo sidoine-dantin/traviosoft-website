@@ -80,7 +80,7 @@ export default async function HomePage({ params }: Props) {
         <div className="wrap coins">
           <div>
             <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>
-            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody}</p>
+            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceFree}</p>
             <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
           </div>
           <div className="coin">
@@ -89,7 +89,7 @@ export default async function HomePage({ params }: Props) {
           <div className="coin">
             <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span><span className="lbl users">{h.coinUsers}</span>
           </div>
-          <p className="price-note"><Link href="/pricing">{h.priceNote}</Link></p>
+          <p className="price-note"><span className="extra-user">{h.extraUserLine}</span><Link href="/pricing">{h.priceNote}</Link></p>
         </div>
         <div className="wrap" style={{ marginTop: 'clamp(56px, 8vw, 96px)', color: 'var(--green)' }}>
           <KeyFacts facts={h.facts} />

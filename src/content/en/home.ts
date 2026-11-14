@@ -40,7 +40,9 @@ export const home: SiteContent['home'] = {
   afterBody:
     'The request, the quote, the bookings, the payments and the invoices are on the same trip, and the whole team sees the same thing.',
   priceTitle: 'Pricing',
-  priceBody: `Setup and import of your data included with yearly billing. Each extra user: ${PRICES.extraUser.yearly} EUR a month.`,
+  priceBody: 'Setup and import of your data',
+  priceFree: 'free with yearly billing.',
+  extraUserLine: `Each extra user: ${PRICES.extraUser.yearly} EUR a month*`,
   coin1: 'EUR/mo* · Classic',
   coin2: 'EUR/mo* · Premium',
   coinUsers: `${PRICES.usersIncluded} users`,

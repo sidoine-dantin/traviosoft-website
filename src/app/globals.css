@@ -221,6 +221,7 @@
 .coin .users { margin-top: 4px; opacity: .85; }
 .price-note { grid-column: 1 / -1; margin: 0; font-size: 13px; color: var(--deep); }
 .price-note a { color: inherit; text-decoration: none; }
+.price-note .extra-user { display: block; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
 .price-note a:hover { text-decoration: underline; }
 .coin { width: 240px; height: 240px; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--deep); color: var(--white); transform: rotate(-6deg); }
 .coin + .coin { transform: rotate(5deg); }
