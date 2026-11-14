@@ -557,73 +557,6 @@ const rooming: Article = {
   ]
 };
 
-const startDmc: Article = {
-  key: 'start-dmc-spain',
-  kind: 'guide',
-  slug: 'start-a-dmc-in-spain',
-  metaTitle: 'How to start a DMC or inbound agency in Spain: steps',
-  metaDescription:
-    'General steps to start a DMC or inbound travel agency in Spain: legal form, regional registry, guarantee, insurance and REAV. Always check with a gestor.',
-  title: 'How to start a DMC or inbound agency in Spain: the steps',
-  lead: 'To start an inbound agency in Spain you choose a legal form, register with the tax office, register in your autonomous community’s travel agency registry, set up the required guarantee and take out civil liability insurance. Requirements and amounts are set by each community.',
-  updated: UPDATED,
-  card: 'Legal form, regional registry, guarantee, insurance and REAV: the path in order.',
-  blocks: [
-    {
-      type: 'p',
-      text: 'This guide is a general map, not legal or tax advice. Travel agency rules depend on the autonomous community where you are based, and they change. Before any step, talk to a gestor or adviser and check the tourism rules of your community.'
-    },
-    {
-      type: 'callout',
-      text: 'We give no amounts for fees, guarantees or insurance, because they vary by community and by type of agency. Ask your gestor and the regional tourism department.'
-    },
-    { type: 'h2', text: '1. Decide what you will sell', id: 'decide' },
-    {
-      type: 'p',
-      text: 'Receiving travellers from abroad and selling them tailor-made trips is not the same as selling only services to other agencies. Some communities distinguish types of agency (wholesaler, retailer, both). Decide your model before registering, because it determines the activity you declare.'
-    },
-    { type: 'h2', text: '2. Choose a legal form', id: 'legal-form' },
-    {
-      type: 'p',
-      text: 'The two usual options are sole trader (autónomo) and limited company (sociedad limitada). A company separates your personal assets from the business but involves more paperwork. Your gestor will tell you which fits your expected volume and whether you have partners.'
-    },
-    { type: 'h2', text: '3. Register in the travel agency registry', id: 'registry' },
-    {
-      type: 'p',
-      text: 'Travel agency activity is regulated by each autonomous community. In many, the process is a declaración responsable and entry in the community’s registro de agencias de viajes. Ask your regional tourism department for the list of documents and any requirements about premises or a responsible person.'
-    },
-    { type: 'h2', text: '4. Guarantee and insurance', id: 'guarantee' },
-    {
-      type: 'p',
-      text: 'Package travel rules require agencies to protect travellers against insolvency, usually with a guarantee (bank guarantee, surety insurance or deposit) whose amount each community sets. Civil liability insurance is also commonly required. Ask your insurer or bank for a quote with the exact requirements of your registry.'
-    },
-    { type: 'h2', text: '5. Tax office: registration, VAT and REAV', id: 'tax' },
-    {
-      type: 'p',
-      text: 'Your gestor will register you with the tax office and social security. Agencies that sell services bought from third parties in their own name normally apply REAV, the special VAT scheme on the margin. We have a separate guide, in Spanish, with examples. You will also need to invoice with software that complies with Veri*Factu once it applies to you.'
-    },
-    { type: 'h2', text: '6. Contracts, data protection and tools', id: 'rest' },
-    {
-      type: 'list',
-      items: [
-        'Contracts with hotels, guides and carriers, with net prices and clear cancellation terms.',
-        'General terms of sale for your clients and a legal notice on your website.',
-        'GDPR compliance: you handle passports and traveller data.',
-        'A tool for quotes, bookings and invoices. You can start with Excel and move to software when volume asks for it.'
-      ]
-    },
-    { type: 'h2', text: 'Questions', id: 'faq' },
-    {
-      type: 'faq',
-      items: [
-        { q: 'Do I need to register as a travel agency to be an inbound agency?', a: ['It depends on what you sell and on your autonomous community. If you sell package travel or services to travellers, it is usually required. Ask the regional tourism department and your gestor.'] },
-        { q: 'How much does it cost to start an inbound agency?', a: ['We give no figures because they depend on the legal form, the guarantee required in your community and the insurance. Ask for specific quotes.'] },
-        { q: 'When should I get software?', a: ['When quotes, bookings or invoices cost you time or cause mistakes. Many agencies start with spreadsheets.'] }
-      ]
-    }
-  ]
-};
-
 const fromExcel: Article = {
   key: 'from-excel',
   kind: 'guide',
@@ -750,4 +683,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...invoicingGuides];

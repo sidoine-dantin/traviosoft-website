@@ -379,7 +379,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'best', title: 'Best software comparison', body: 'The tools tailor-made agencies and DMCs use, side by side, and who each one suits.' },
     { kind: 'compare', title: 'Compare pages', body: 'Traviosoft next to other tools.' },
     { kind: 'guide', title: 'Guides', body: 'Practical notes on quoting, booking and invoicing a tailor-made trip.' },
-    { kind: 'invoicing', title: 'Invoicing by country', body: 'How travel agencies invoice in Spain, France, Italy, Portugal, Germany, the UK and Belgium, with the e-invoicing dates.' },
+    { kind: 'invoicing', title: 'Invoicing by country', body: 'How travel agencies invoice in Spain, France, Germany and Belgium, with the e-invoicing dates.' },
     { kind: 'glossary', title: 'Glossary', body: 'The travel-agency and software terms, in a line each.' },
   ],
   glossaryTitle: 'Glossary',

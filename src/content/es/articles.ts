@@ -557,73 +557,6 @@ const rooming: Article = {
   ]
 };
 
-const startDmc: Article = {
-  key: 'start-dmc-spain',
-  kind: 'guide',
-  slug: 'como-montar-un-receptivo-dmc-en-espana',
-  metaTitle: 'Cómo montar un receptivo o DMC en España: pasos',
-  metaDescription:
-    'Pasos generales para montar una agencia receptiva o DMC en España: forma jurídica, registro autonómico, garantía, seguro y REAV. Consulta siempre con tu gestor.',
-  title: 'Cómo montar un receptivo o DMC en España: los pasos',
-  lead: 'Para montar un receptivo en España decides la forma jurídica, te das de alta en Hacienda, te inscribes en el registro de agencias de viajes de tu comunidad autónoma, constituyes la garantía exigida y contratas el seguro de responsabilidad civil. Los requisitos y los importes los fija cada comunidad.',
-  updated: UPDATED,
-  card: 'Forma jurídica, registro autonómico, garantía, seguro y REAV: el camino en orden.',
-  blocks: [
-    {
-      type: 'p',
-      text: 'Esta guía es un mapa general, no asesoramiento legal ni fiscal. Las reglas de las agencias de viajes dependen de la comunidad autónoma donde tengas la sede, y cambian. Antes de dar ningún paso, habla con un gestor o asesor y comprueba la normativa de turismo de tu comunidad.'
-    },
-    {
-      type: 'callout',
-      text: 'No damos importes de tasas, garantías ni seguros porque varían según la comunidad y el tipo de agencia. Pregunta a tu gestor y a la consejería de turismo.'
-    },
-    { type: 'h2', text: '1. Define qué vas a vender', id: 'definir' },
-    {
-      type: 'p',
-      text: 'No es lo mismo recibir viajeros de fuera y venderles viajes a medida que vender solo servicios a otras agencias. Algunas comunidades distinguen tipos de agencia (mayorista, minorista, mayorista-minorista). Decide tu modelo antes del registro porque determina qué actividad declaras.'
-    },
-    { type: 'h2', text: '2. Elige la forma jurídica', id: 'forma-juridica' },
-    {
-      type: 'p',
-      text: 'Las dos opciones habituales son autónomo (persona física) y sociedad limitada. La sociedad separa tu patrimonio personal del de la empresa, pero tiene más trámites. Tu gestor te dirá cuál conviene según tu volumen previsto y si tienes socios.'
-    },
-    { type: 'h2', text: '3. Inscríbete en el registro de agencias de viajes', id: 'registro' },
-    {
-      type: 'p',
-      text: 'La actividad de agencia de viajes está regulada por cada comunidad autónoma. En muchas, el trámite es una declaración responsable y la inscripción en el registro de agencias de viajes de la comunidad. Pide a tu consejería de turismo la lista de documentos y los requisitos de local, titulación o responsable, si los hay.'
-    },
-    { type: 'h2', text: '4. Garantía o fianza y seguro', id: 'garantia' },
-    {
-      type: 'p',
-      text: 'La normativa de viajes combinados obliga a las agencias a proteger al viajero frente a la insolvencia, normalmente con una garantía (aval, seguro de caución o fianza) cuyo importe fija cada comunidad. Además se suele exigir un seguro de responsabilidad civil. Pide presupuesto a tu aseguradora o banco con los requisitos exactos de tu registro.'
-    },
-    { type: 'h2', text: '5. Hacienda: alta, IVA y REAV', id: 'hacienda' },
-    {
-      type: 'p',
-      text: 'Tu gestor te dará de alta en Hacienda y en la Seguridad Social. Las agencias de viajes que venden servicios comprados a terceros en nombre propio aplican normalmente el REAV, el régimen especial del IVA sobre el margen. Tenemos una guía aparte con ejemplos. También tendrás que facturar con un programa que cumpla Veri*Factu cuando te sea exigible.'
-    },
-    { type: 'h2', text: '6. Contratos, protección de datos y herramientas', id: 'resto' },
-    {
-      type: 'list',
-      items: [
-        'Contratos con hoteles, guías y transportistas, con precios netos y condiciones de cancelación claras.',
-        'Condiciones generales de venta para tus clientes y aviso legal en tu web.',
-        'Cumplimiento del RGPD: tratas pasaportes y datos de viajeros.',
-        'Una herramienta para presupuestos, reservas y facturas. Puedes empezar con Excel y pasar a un software cuando el volumen lo pida.'
-      ]
-    },
-    { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
-    {
-      type: 'faq',
-      items: [
-        { q: '¿Necesito registrarme como agencia de viajes para ser receptivo?', a: ['Depende de lo que vendas y de tu comunidad autónoma. Si vendes viajes combinados o servicios a viajeros, lo habitual es que sí. Pregunta a la consejería de turismo y a tu gestor.'] },
-        { q: '¿Cuánto cuesta montar un receptivo?', a: ['No damos cifras porque dependen de la forma jurídica, la garantía exigida en tu comunidad y el seguro. Pide presupuestos concretos.'] },
-        { q: '¿Cuándo debo contratar un software?', a: ['Cuando los presupuestos, las reservas o las facturas te quiten tiempo o provoquen errores. Muchas agencias empiezan con hojas de cálculo.'] }
-      ]
-    }
-  ]
-};
-
 const fromExcel: Article = {
   key: 'from-excel',
   kind: 'guide',
@@ -781,7 +714,7 @@ const verifactu: Article = {
   blocks: [
     {
       type: 'callout',
-      text: 'Información general, no asesoramiento fiscal. Confirma con tu gestor si te afecta y desde cuándo.'
+      text: 'Información general, redactada el 14 de noviembre de 2026. No constituye asesoramiento jurídico ni fiscal y no tiene valor legal. Las normas y las fechas cambian: compruébalas en las fuentes oficiales o con un profesional cualificado. Traviosoft no se hace responsable de las decisiones tomadas a partir de esta página.'
     },
     { type: 'h2', text: 'Qué es Veri*Factu', id: 'que-es' },
     {
@@ -791,14 +724,13 @@ const verifactu: Article = {
     { type: 'h2', text: 'A quién afecta', id: 'a-quien' },
     {
       type: 'p',
-      text: 'A empresarios y profesionales que emiten facturas con un programa informático, lo que incluye a las agencias de viajes. Hay excepciones: quienes ya informan a Hacienda con el Suministro Inmediato de Información (SII) y los territorios con régimen foral propio, que tienen sus sistemas. Pregunta a tu gestor en cuál estás.'
+      text: 'A empresarios y profesionales que emiten facturas con un programa informático, lo que incluye a las agencias de viajes. Hay excepciones: quienes ya informan a Hacienda con el Suministro Inmediato de Información (SII) y los territorios con régimen foral propio, que tienen sus sistemas.'
     },
-    { type: 'h2', text: 'Qué cambia para una agencia', id: 'que-cambia' },
+    { type: 'h2', text: 'Qué implica para una agencia', id: 'que-cambia' },
     {
       type: 'list',
       items: [
         'Las facturas deben salir de un programa que cumpla los requisitos, con el productor del programa responsable de ello.',
-        'Una factura hecha a mano en una plantilla de Word o Excel que se puede editar después es difícil de encajar. Pregunta a tu gestor.',
         'Las facturas rectificativas y los abonos también son registros de facturación.',
         'En modalidad Veri*Factu, cada registro se envía a la AEAT al emitir la factura.',
         'Si aplicas REAV, la factura sigue llevando la mención del régimen especial.'
@@ -812,7 +744,7 @@ const verifactu: Article = {
     { type: 'h2', text: 'Plazos', id: 'plazos' },
     {
       type: 'p',
-      text: 'El Real Decreto-ley 15/2025 fija el 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y el 1 de julio de 2027 para autónomos y demás obligados. En octubre de 2026, Hacienda anunció un nuevo aplazamiento a 2028, que aún no se ha publicado en el BOE. Actualizado a 14 de noviembre de 2026: consulta el calendario vigente en la sede de la AEAT.'
+      text: 'El Real Decreto-ley 15/2025 fija el 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y el 1 de julio de 2027 para autónomos y demás obligados. El calendario vigente se publica en la sede de la AEAT y en el BOE.'
     },
     { type: 'h2', text: 'Cómo lo resuelve Traviosoft', id: 'traviosoft' },
     {
@@ -823,11 +755,11 @@ const verifactu: Article = {
     {
       type: 'faq',
       items: [
-        { q: '¿Tengo que cambiar de programa de facturación?', a: ['Si tu programa actual no cumple los requisitos y te alcanza la obligación, sí. Pregunta a tu proveedor y a tu gestor.'] },
-        { q: '¿Veri*Factu sustituye al SII?', a: ['No. Quien ya está en el SII tiene su propio sistema. Confirma con tu gestor cuál te corresponde.'] },
+        { q: '¿Veri*Factu sustituye al SII?', a: ['No. Quien ya está en el SII tiene su propio sistema.'] },
         { q: '¿El cliente tiene que hacer algo con el QR?', a: ['No. Es una forma de comprobar la factura en la sede de la AEAT si quiere.'] }
       ]
-    }
+    },
+    { type: 'p', text: 'Fuentes oficiales: [Agencia Tributaria](https://sede.agenciatributaria.gob.es) y el [BOE](https://www.boe.es).' }
   ]
 };
 
@@ -951,4 +883,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools, spainPage, verifactu, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, spainPage, verifactu, ...invoicingGuides];
