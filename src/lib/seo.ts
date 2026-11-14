@@ -1,3 +1,4 @@
+import { LANG_TAG, type Locale } from '@/content/types';
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 
@@ -40,7 +41,7 @@ export function buildMetadata({ locale, path, title, description, alternates }: 
   const paths: Partial<Record<string, string>> =
     alternates ?? Object.fromEntries(routing.locales.map(l => [l, path]));
   const languages: Record<string, string> = {};
-  for (const [l, p] of Object.entries(paths)) if (p !== undefined) languages[l] = localizedUrl(l, p);
+  for (const [l, p] of Object.entries(paths)) if (p !== undefined) languages[LANG_TAG[l as Locale] ?? l] = localizedUrl(l, p);
   const xDefault = paths[routing.defaultLocale] ?? paths[locale] ?? path;
   const url = localizedUrl(locale, path);
 
@@ -51,7 +52,7 @@ export function buildMetadata({ locale, path, title, description, alternates }: 
       canonical: url,
       languages: { ...languages, 'x-default': localizedUrl(paths[routing.defaultLocale] ? routing.defaultLocale : locale, xDefault) }
     },
-    openGraph: { title, description, url, siteName, locale, type: 'website' },
+    openGraph: { title, description, url, siteName, locale: (LANG_TAG[locale as Locale] ?? locale).replace('-', '_'), type: 'website' },
     twitter: { card: 'summary_large_image', title, description }
   };
 }

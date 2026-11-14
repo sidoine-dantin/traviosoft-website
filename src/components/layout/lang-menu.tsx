@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Link } from '@/i18n/navigation';
-import type { Locale } from '@/content/types';
+import { LANG_TAG, type Locale } from '@/content/types';
 
-const NAMES: Record<Locale, string> = { es: 'Español', en: 'English', fr: 'Français' };
-const ORDER: Locale[] = ['es', 'en', 'fr'];
+const NAMES: Record<Locale, string> = { es: 'Español', en: 'English', fr: 'Français', it: 'Italiano', pt: 'Português' };
+const ORDER: Locale[] = ['es', 'en', 'fr', 'it', 'pt'];
 
 /** One language button; the other languages open in a small list under it (above it with `up`). */
 export function LangMenu({ locale, href, up = false }: { locale: Locale; href: string; up?: boolean }) {
@@ -35,7 +35,7 @@ export function LangMenu({ locale, href, up = false }: { locale: Locale; href: s
         <ul className="lang-list">
           {ORDER.map(l => (
             <li key={l}>
-              <Link href={href} locale={l} hrefLang={l} lang={l} aria-current={l === locale ? 'true' : undefined} onClick={() => setOpen(false)}>
+              <Link href={href} locale={l} hrefLang={LANG_TAG[l]} lang={LANG_TAG[l]} aria-current={l === locale ? 'true' : undefined} onClick={() => setOpen(false)}>
                 {NAMES[l]}
               </Link>
             </li>

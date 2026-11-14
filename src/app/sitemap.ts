@@ -1,3 +1,4 @@
+import { LANG_TAG, type Locale } from '@/content/types';
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { baseUrl, pagePaths } from '@/lib/seo';
@@ -17,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: (path.startsWith('/legal') ? 'yearly' : 'monthly') as 'yearly' | 'monthly',
       priority: priority[path] ?? 0.3,
-      alternates: { languages: Object.fromEntries(routing.locales.map(l => [l, `${baseUrl}/${l}${path}`])) }
+      alternates: { languages: Object.fromEntries(routing.locales.map(l => [LANG_TAG[l], `${baseUrl}/${l}${path}`])) }
     }))
   ).flat();
 
@@ -30,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(a.updated),
         changeFrequency: 'monthly' as const,
         priority: a.kind === 'best' || a.kind === 'spain' ? 0.7 : 0.6,
-        alternates: { languages: Object.fromEntries(Object.entries(alts).map(([l, s]) => [l, `${baseUrl}/${l}${base}${s}`])) }
+        alternates: { languages: Object.fromEntries(Object.entries(alts).map(([l, s]) => [LANG_TAG[l as Locale], `${baseUrl}/${l}${base}${s}`])) }
       };
     })
   );

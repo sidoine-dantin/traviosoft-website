@@ -10,7 +10,7 @@ export function GET() {
   const lines: string[] = [
     '# Traviosoft',
     '',
-    `> ${en.footer.tagline} Web management software for tailor-made travel agencies and DMCs. Two plans, billed yearly or monthly, VAT excluded: Classic from ${PRICES.classic.yearly} EUR a month and Premium from ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included in both. Each agency has its own separate space, hosted in the EU. Site in Spanish, English and French.`,
+    `> ${en.footer.tagline} Web management software for tailor-made travel agencies and DMCs. Two plans, billed yearly or monthly, VAT excluded: Classic from ${PRICES.classic.yearly} EUR a month and Premium from ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included in both. Each agency has its own separate space, hosted in the EU. Site in Spanish, English, French, Italian and Portuguese.`,
     '',
     '## Key facts',
     ...en.home.facts.map(f => `- ${f.k}: ${f.v}`),

@@ -1,0 +1,567 @@
+{
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "how_it_works": "How it works",
+    "pricing": "Pricing",
+    "about": "About",
+    "faq": "FAQ",
+    "book_demo": "Book a demo"
+  },
+  "footer": {
+    "product_col": "Product",
+    "company_col": "Company",
+    "legal_col": "Legal",
+    "features": "Features",
+    "how_it_works": "How it works",
+    "pricing": "Pricing",
+    "book_demo": "Book a demo",
+    "about": "About",
+    "faq": "FAQ",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "legal_notice": "Legal notice",
+    "tagline": "Management software for tailor-made travel agencies and DMCs",
+    "copyright": "Traviosoft"
+  },
+  "home": {
+    "meta_title": "Traviosoft - The management software for tailor-made travel agencies and DMCs",
+    "meta_description": "Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
+    "hero": {
+      "headline": "The management software built for tailor-made travel agencies and DMCs",
+      "subheadline": "Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.",
+      "cta_primary": "Book a demo",
+      "cta_secondary": "See how it works"
+    },
+    "pain_points": {
+      "title": "Does this sound familiar?",
+      "item1_title": "Quotes that take hours",
+      "item1_text": "Every quote is rebuilt from scratch in Excel or Word, margins are recalculated by hand, and the final result doesn't always look as professional as you'd like when sending it to a client.",
+      "item2_title": "Payment tracking by gut feeling",
+      "item2_text": "Who paid the deposit? Who still owes the balance before departure? Without a dedicated tool, this lives in a spreadsheet, or in your head, with the risk of forgetting a reminder.",
+      "item3_title": "Supplier coordination scattered across emails and messages",
+      "item3_text": "Guides, hotels, transport providers: every important piece of information (contact details, documents, languages spoken, rates) is scattered across chat threads and attachments."
+    },
+    "solution": {
+      "title": "One platform, from first contact to invoice",
+      "flow": "Client request → Quote → Order → Supplier coordination → Tracked payments → Invoicing",
+      "description": "Everything is connected: an accepted quote automatically generates an order with its tasks, and every payment milestone is linked to the right quote and client.",
+      "cta": "Discover how it works step by step"
+    },
+    "pillars": {
+      "title": "What Traviosoft changes in practice",
+      "p1_title": "Save time on repetitive tasks",
+      "p1_text": "Put a quote together in minutes, with the total and your margin worked out for you. The moment a client accepts, the order and everything to arrange appear on their own.",
+      "p2_title": "Make the client relationship more professional",
+      "p2_text": "Polished quotes and service documents that look the part, clear tracking of every request (new, awaiting reply, handled), and a full history for each client.",
+      "p3_title": "Stay on top of payments and invoicing",
+      "p3_text": "Set payment milestones directly on the quote, attach a payment link to each one, and track client and supplier invoices with clear statuses (draft, issued, partially paid, paid).",
+      "p4_title": "Centralize suppliers, guides and your catalog",
+      "p4_text": "Supplier and guide profiles with contacts, documents and languages spoken. A service catalog with categories and seasonal pricing. Everything connected to your quotes and orders."
+    },
+    "steps_preview": {
+      "title": "From the client's first message to the final invoice, in 6 steps",
+      "step1": "A request comes in and is centralized",
+      "step2": "A quote is created and sent to the client",
+      "step3": "The accepted quote becomes an order, with its tasks",
+      "step4": "The team executes: service sheets, suppliers coordinated",
+      "step5": "Payments are tracked with milestones and reminders",
+      "step6": "Invoicing happens, for both clients and suppliers",
+      "cta": "See the detail of each step"
+    },
+    "trust": {
+      "title": "Built from real-world use, not from an abstract spec sheet",
+      "text": "Traviosoft was built with, and for, a tailor-made travel agency based in Spain. The product keeps evolving in contact with agencies like yours, with one goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
+      "cta": "Book a demo and talk it through"
+    },
+    "multilang": {
+      "title": "Built for international teams and clients",
+      "text": "The interface is available in French, English and Spanish. Your quotes, supplier profiles and documents can be managed in the language that suits each contact, without duplicating tools."
+    },
+    "final_cta": {
+      "headline": "Ready to see Traviosoft working with your business?",
+      "text": "In 30 minutes, we'll look together at how Traviosoft fits your way of working, no strings attached.",
+      "cta": "Book a demo"
+    }
+  },
+  "product": {
+    "meta_title": "Features - Traviosoft",
+    "meta_description": "See what changes when quotes, orders, payments, suppliers and invoicing live in one tool built for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
+    "intro": {
+      "headline": "Less time fighting admin. More time selling trips.",
+      "text": "You didn't start a travel agency to wrestle with spreadsheets. Here's what your days look like once every quote, payment and supplier lives in one place.",
+      "cta": "Book a demo"
+    },
+    "modules": {
+      "requests": {
+        "title": "Never lose a lead again",
+        "benefit": "Every enquiry in one list, so no client ever slips through the cracks.",
+        "points": [
+          "Every enquiry lands in the same place, with a status you read at a glance: new, waiting, handled",
+          "Open a client and their whole history is right there: enquiries, quotes, orders, invoices",
+          "Their details and tax information are ready to drop straight into a quote, no retyping"
+        ],
+        "change": "You stop wondering \"did I ever reply to that couple?\": the answer is on the screen."
+      },
+      "quotes": {
+        "title": "Send quotes you're proud of, in minutes",
+        "benefit": "A polished quote that looks like it took you hours, ready in a few clicks.",
+        "points": [
+          "Pick services from your catalog and the quote builds itself as you go",
+          "Your total and your margin update on their own, so you never undersell by mistake",
+          "Send a clean, on-brand quote while the client is still excited",
+          "See at a glance which quotes are sent, accepted, or about to expire"
+        ],
+        "change": "The quote that used to eat your whole evening now goes out before the client cools off."
+      },
+      "orders": {
+        "title": "The trip prepares itself once it's sold",
+        "benefit": "An accepted quote turns into a ready-to-go checklist, on its own.",
+        "points": [
+          "The moment a client says yes, the order and its to-do list appear automatically",
+          "Nothing to remember to book: every task is already waiting for you",
+          "Print a clean service sheet for the day of the trip",
+          "Always know where a file stands: awaiting payment, in progress, done"
+        ],
+        "change": "No more \"what did we still have to arrange for them?\": the list already exists."
+      },
+      "suppliers": {
+        "title": "Every guide and supplier, one search away",
+        "benefit": "Contacts, contracts and languages spoken, all in one place and up to date.",
+        "points": [
+          "Find a guide's number or a hotel contract in seconds, instead of digging through old emails",
+          "Keep every document attached to the right supplier",
+          "See who speaks which language and covers which area before you book",
+          "See your whole history with each supplier, from past trips to the documents they sent"
+        ],
+        "change": "When you need that guide right now, you actually find them."
+      },
+      "catalog": {
+        "title": "Build quotes from prices you trust",
+        "benefit": "Your services and rates ready to drop in, always current.",
+        "points": [
+          "Reuse your services instead of retyping prices every single time",
+          "Set different rates by season, so you never quote last year's price by accident",
+          "Keep your cost and your selling price side by side, so your margin is never a guess"
+        ],
+        "change": "Quoting becomes picking from a list, not rebuilding everything from memory."
+      },
+      "projects": {
+        "title": "Keep the big, complex trips under control",
+        "benefit": "Several alternative versions of a trip, neatly organized in one place.",
+        "points": [
+          "Offer a client two or three versions of a trip without losing track",
+          "Keep the number of travelers and the trip's details tied to the project",
+          "Follow a complex file from first idea to departure in one place"
+        ],
+        "change": "Group trips and \"can you show me option B?\" stop being a headache."
+      },
+      "payments": {
+        "title": "Always know who still owes you",
+        "benefit": "One clear view of who has paid, who hasn't, and what you owe your suppliers.",
+        "points": [
+          "See at a glance who paid the deposit and who still owes the balance before departure",
+          "Split a trip into payment milestones with due dates, and attach a payment link to each one",
+          "Track client and supplier invoices with clear statuses, in the same place"
+        ],
+        "change": "The \"have they paid?\" spreadsheet disappears, and so does the forgotten reminder."
+      },
+      "reports": {
+        "title": "See how the business is really doing",
+        "benefit": "A clear overview of your activity, without building a single spreadsheet.",
+        "points": [
+          "One overview of quotes, orders and payments, always up to date",
+          "Numbers you can trust, because they come straight from your real files"
+        ],
+        "change": "You step back and see the whole business at a glance, whenever you want."
+      },
+      "multilang": {
+        "title": "Work in your language, sell in theirs",
+        "benefit": "One tool for an international team and international clients.",
+        "points": [
+          "Use the interface in French, English or Spanish",
+          "Handle each client's tax details the way their country expects"
+        ]
+      }
+    },
+    "journey": {
+      "title": "From the client's first message to the final invoice",
+      "text": "Each step builds on the one before it, so there is no double data entry and nothing to copy from one tool to another."
+    },
+    "everything": {
+      "title": "Everything your agency runs, in one place",
+      "text": "Beyond the day-to-day flow, Traviosoft keeps the rest of your operation together too."
+    },
+    "final_cta": {
+      "headline": "Picture your whole agency running from one calm screen",
+      "cta": "Book a demo"
+    }
+  },
+  "how_it_works": {
+    "meta_title": "How it works - Traviosoft",
+    "meta_description": "From the client request to the invoice, discover the full journey of a file through Traviosoft, step by step.",
+    "intro": {
+      "headline": "From the client's first message to the final invoice",
+      "text": "Here's how a client file moves through Traviosoft, from the first request to invoicing. Each step builds on the information entered in the previous one: no double data entry, no files to copy elsewhere."
+    },
+    "steps": [
+      {
+        "title": "One request, one place",
+        "description": "Add a new request yourself in seconds, or connect Traviosoft to your website so enquiries land in it on their own. Each one carries a clear status (new, awaiting reply, handled), so nothing slips between the inbox and a sticky note.",
+        "before": "Requests get lost between the inbox, paper notes and people's memory.",
+        "after": "Every request is visible in one place, with its status.",
+        "name": "Requests"
+      },
+      {
+        "title": "A quote built in minutes",
+        "description": "From the request, you put the quote together in minutes. The total and your margin are worked out for you, and you send it to the client with an expiry date in a couple of clicks.",
+        "before": "Every quote is rebuilt from scratch in Excel or Word, with the risk of calculation errors.",
+        "after": "The quote reuses your usual prices, works out the margin for you, and is ready to send in minutes.",
+        "name": "Quotes"
+      },
+      {
+        "title": "The client says yes, the work sets itself up",
+        "description": "As soon as the client accepts, the trip moves into preparation on its own: an order is created with a ready-made list of everything to arrange (bookings, documents to prepare, and so on). And when the client pays, the payment is recorded in the app automatically, so you always know where you stand.",
+        "before": "You have to re-read the accepted quote and manually recreate a task list in another tool.",
+        "after": "The order and its to-do list exist as soon as the quote is accepted, and payments show up on their own.",
+        "name": "Order setup"
+      },
+      {
+        "title": "Supplier coordination and service sheets",
+        "description": "The team follows the order's to-do list, prepares the service documents for the day of the trip, and coordinates suppliers and guides from their profiles (contacts, documents, languages spoken).",
+        "before": "Coordination happens through scattered emails and messages.",
+        "after": "Every task, supplier and document is linked to the corresponding order.",
+        "name": "Coordination"
+      },
+      {
+        "title": "Payments tracked, nothing forgotten",
+        "description": "Split the trip into payments (a deposit, then the balance, for example) and Traviosoft keeps an eye on each one: what's due, what's been paid, and what still needs a reminder, all in the same place.",
+        "before": "Payment tracking lives in a separate spreadsheet, with the risk of forgetting a reminder.",
+        "after": "Every milestone is linked to the quote and order, with its payment status.",
+        "name": "Payments"
+      },
+      {
+        "title": "Client and supplier invoices, with clear statuses",
+        "description": "Client invoices are generated with detailed line items and follow a precise status (draft, issued, partially paid, paid). Supplier invoices are tracked with the same level of detail, to keep a complete view of your real margins.",
+        "before": "Client and supplier invoices are tracked in separate documents, disconnected from the original quote.",
+        "after": "Everything stays linked to the client file, from the initial quote to the final invoice.",
+        "name": "Invoicing"
+      }
+    ],
+    "before_label": "Before Traviosoft",
+    "after_label": "With Traviosoft",
+    "final_cta": {
+      "headline": "See this workflow applied to your own business",
+      "text": "In 30 minutes, we'll walk through this process together with an example close to your real activity.",
+      "cta": "Book a demo"
+    }
+  },
+  "pricing": {
+    "meta_title": "Pricing - Traviosoft",
+    "meta_description": "A clear pricing model, with every feature in every plan, for tailor-made travel agencies and DMCs. Book a demo to get your quote.",
+    "intro": {
+      "headline": "One product, shaped around your agency. Priced for your team size.",
+      "text": "Traviosoft adapts to the way your agency works, not the other way around. The only thing that sets your price is how many people on your team use it."
+    },
+    "model": {
+      "title": "A Traviosoft that fits your agency, sized to your team",
+      "points": [
+        "Tailored to the way your agency works, so it feels made for you",
+        "A price set by your team size (3 users, 5 users or more), so you only pay for the seats you use",
+        "No hidden setup or onboarding fees",
+        "Monthly or annual billing, your choice"
+      ],
+      "text": "A one-person agency and a fifteen-person team don't need different software, just a price that fits their size. So we kept one product, and let your team size set the price."
+    },
+    "trial": {
+      "title": "Try it before you commit",
+      "text": "A trial period is available so you can explore Traviosoft with your own files, with no upfront commitment."
+    },
+    "why_no_price": {
+      "title": "You get your price on the demo call",
+      "text": "We set it with you during the demo, based on your team size and how you work. You leave the call knowing exactly what Traviosoft costs for your agency."
+    },
+    "final_cta": {
+      "headline": "Get your price in 30 minutes",
+      "text": "Book a demo: we'll look at your agency together, match the price to your team size, and give you a clear figure.",
+      "cta": "Book a demo to get your price"
+    }
+  },
+  "about": {
+    "meta_title": "About - Traviosoft",
+    "meta_description": "Traviosoft was born from the real-world needs of a tailor-made travel agency. Discover the philosophy behind the product.",
+    "intro": {
+      "headline": "Made for tailor-made travel agencies and DMCs",
+      "text": "Traviosoft started with a real problem: a travel agency juggling Excel, Word and endless chat messages just to keep its trips moving. We built the tool that agency actually needed, and kept going from there."
+    },
+    "story": {
+      "title": "Built with a real agency",
+      "text": "Traviosoft was developed with, and for, a tailor-made travel agency based in Spain. Every part of it comes from a real day-to-day need we watched the team run into."
+    },
+    "philosophy": {
+      "title": "Built around the whole trip",
+      "text": "Traviosoft covers the whole trip, from the first request to the last invoice, around what a tailor-made agency or DMC does every day: pricing service by service, coordinating suppliers, collecting payments and invoicing."
+    },
+    "support": {
+      "title": "Real people who know the job",
+      "text": "When you contact us, you talk to someone who knows both the product and the travel agency business. The first demo is a working session: we look together at how Traviosoft fits your way of working, and we are honest when it doesn't."
+    },
+    "final_cta": {
+      "headline": "Let's talk about your business",
+      "text": "The best way to know if Traviosoft is right for your agency is to talk it through directly.",
+      "cta": "Book a demo"
+    }
+  },
+  "demo": {
+    "meta_title": "Book a demo - Traviosoft",
+    "meta_description": "Book a 30-minute demo to discover how Traviosoft fits your travel agency. No commitment, no sales script.",
+    "hero": {
+      "headline": "Book your 30-minute demo",
+      "subheadline": "We'll look together at how Traviosoft fits your business. No sales script, no commitment."
+    },
+    "what_to_expect": {
+      "title": "What to expect",
+      "points": [
+        "A walkthrough of Traviosoft tailored to your business (team size, type of trips, current tools)",
+        "A concrete demo of the quote → order → payment → invoice flow",
+        "Your questions, with no artificial time pressure",
+        "If it's a fit: a clear price tailored to your situation"
+      ],
+      "text": "If Traviosoft isn't a fit for your business, we'll tell you directly, no detours."
+    },
+    "fit_yes": {
+      "title": "Traviosoft is a particularly good fit if...",
+      "points": [
+        "You run a tailor-made travel agency, a DMC or a specialized inbound operator",
+        "You want one system for the whole trip, from the first request to the last invoice",
+        "You currently manage quotes, payments or suppliers with Excel, Word or software that wasn't built for travel agencies",
+        "You want to make your quotes and client documents more professional without overhauling your whole setup"
+      ]
+    },
+    "fit_no": {
+      "title": "It's probably not (yet) for you if...",
+      "points": [
+        "You're looking for an online booking platform for the general public (OTA)"
+      ]
+    },
+    "reassurance": {
+      "title": "No commitment",
+      "points": [
+        "No obligation to buy after the call",
+        "Questions about data security, importing your existing data, or setup time are welcome during the call (and in the FAQ)"
+      ]
+    },
+    "final_cta": {
+      "headline": "Pick a time that works for you"
+    }
+  },
+  "faq": {
+    "meta_title": "FAQ - Traviosoft",
+    "meta_description": "Answers to frequently asked questions about Traviosoft: data security, setup time, data import, available languages and more.",
+    "intro": {
+      "headline": "Frequently asked questions",
+      "text": "If your question isn't here, ask it directly during the demo."
+    },
+    "items": [
+      {
+        "question": "Is my data secure?",
+        "answer": "Yes. Your data sits on secure servers, and only the people you authorize at your agency can see it. It stays yours, and you can export it whenever you want."
+      },
+      {
+        "question": "How long does it take to get started?",
+        "answer": "It depends on what you bring over: how many clients, open quotes and suppliers you have. On the demo we look at your real data together and give you a realistic idea of the time involved."
+      },
+      {
+        "question": "Is it suitable if I work alone? What about a team of 10 or 15?",
+        "answer": "Both work. Traviosoft suits one person running everything from the first quote to the final invoice, and a team sharing the same trips, with users added as the team grows."
+      },
+      {
+        "question": "Can we import our existing clients, quotes or suppliers?",
+        "answer": "Usually yes. If your data is in Excel or exported from another tool, we can bring it in. We settle the best way to do it on the demo, based on what you already have."
+      },
+      {
+        "question": "Is the software available in my language?",
+        "answer": "The interface is available in French, English and Spanish, and each person on your team can pick their own."
+      },
+      {
+        "question": "What happens if I want to cancel?",
+        "answer": "Your data stays yours. If you decide to leave, we arrange an export so you take it with you. The exact terms are set out in your service agreement, and we are happy to walk you through them."
+      },
+      {
+        "question": "Does Traviosoft replace my website or my accounting software?",
+        "answer": "No. Traviosoft is the internal tool for running your quotes, orders, payments and suppliers. It doesn't replace your public website or your accounting software, though tracking your client and supplier invoices in it does make your accountant's job easier."
+      }
+    ],
+    "final_cta": {
+      "headline": "Have another question?",
+      "cta": "Book a demo"
+    }
+  },
+  "legal": {
+    "privacy_title": "Política de privacidade - Traviosoft",
+    "terms_title": "Condições de utilização - Traviosoft",
+    "notice_title": "Aviso legal - Traviosoft",
+    "back_home": "Voltar ao início",
+    "updated_label": "Última atualização",
+    "updated_date": "Novembro de 2026",
+    "privacy": {
+      "intro": "Esta política explica como tratamos a informação recolhida através do site traviosoft.com. Abrange apenas o site público. A utilização da aplicação Traviosoft pelos nossos clientes rege-se por um contrato separado.",
+      "sections": [
+        {
+          "heading": "Quem somos",
+          "body": [
+            "Este site é publicado por Sidoine Dantin EI, registada em França com o SIRET 941 883 779 00014, a empresa por trás do Traviosoft, software de gestão para agências de viagens à medida e DMC. Para qualquer questão sobre esta política ou sobre os seus dados, pode contactar-nos através de sidoine@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "O que recolhemos",
+          "body": [
+            "Quando marca uma demonstração, partilha os dados que introduz no formulário de marcação: normalmente o seu nome, o seu endereço de email e algumas informações sobre a sua agência. A marcação é feita através do serviço de agendamento da Google, pelo que os dados que aí submete são também tratados pela Google.",
+            "Como a maioria dos sites, o nosso fornecedor de alojamento regista nos registos do servidor alguns dados técnicos básicos, como o endereço IP e o tipo de navegador. Se aceitar os cookies de publicidade, o LinkedIn e a Meta também registam a sua visita a este site (ver «Publicidade e públicos»)."
+          ]
+        },
+        {
+          "heading": "Como usamos a sua informação",
+          "body": [
+            "Usamos os dados que nos fornece para responder ao seu pedido de demonstração, preparar a chamada e dar seguimento sobre o Traviosoft. Usamos os registos técnicos para manter o site seguro e a funcionar. Nunca vendemos os seus dados. Partilhamo-los apenas com os prestadores de serviços necessários ao funcionamento do site e da marcação, e com o LinkedIn e a Meta para a nossa publicidade, como descrito abaixo.",
+            "Quando a lei exige um fundamento jurídico, baseamo-nos no seu pedido (para organizar a demonstração que pediu), no seu consentimento (para os cookies de publicidade) e no nosso interesse legítimo (para manter o site seguro, manter o contacto com quem nos contactou e mostrar os nossos anúncios a empresas do setor das viagens)."
+          ]
+        },
+        {
+          "heading": "Serviços de terceiros",
+          "body": [
+            "O calendário das demonstrações é fornecido pela Google. O site é disponibilizado através da rede de alojamento e conteúdos da Cloudflare. Os nossos anúncios são publicados no LinkedIn (LinkedIn Ireland Unlimited Company) e no Facebook e Instagram (Meta Platforms Ireland Limited). Para os cookies de publicidade, o LinkedIn e a Meta atuam como responsáveis conjuntos pelo tratamento connosco; ao que fazem com os dados aplicam-se as respetivas políticas de privacidade. Alguns destes prestadores podem transferir dados para os Estados Unidos ao abrigo do Quadro de Privacidade de Dados UE-EUA ou das cláusulas contratuais-tipo da Comissão Europeia."
+          ]
+        },
+        {
+          "heading": "Publicidade e públicos",
+          "body": [
+            "Se aceitar os cookies de publicidade, o LinkedIn Insight Tag e o Meta Pixel registam que o seu navegador visitou este site, as páginas que viu e se abriu a página da demonstração ou clicou para nos contactar. Usamos esta informação para medir os nossos anúncios e voltar a mostrá-los a quem visitou o site. O LinkedIn e a Meta só nos dão totais e dimensões de públicos, nunca nomes.",
+            "Podemos também carregar no LinkedIn e na Meta uma lista de dados de contacto profissionais (nome da empresa, site e endereço de email profissional do gerente ou responsável de uma agência) para que os nossos anúncios cheguem a essas empresas do setor das viagens. Os dados são cifrados (hash) antes do carregamento, são usados apenas para encontrar correspondências com contas e são apagados pelas plataformas depois da correspondência. Fazemo-lo com base no nosso interesse legítimo em apresentar o Traviosoft a profissionais do setor das viagens.",
+            "Se nos contactar ou marcar uma demonstração, podemos também juntar o seu endereço de email profissional a estas listas, para que os nossos anúncios continuem a chegar até si enquanto avalia o Traviosoft. É cifrado (hash) da mesma forma antes do carregamento. Fazemo-lo com base no nosso interesse legítimo em manter o contacto com quem nos contactou, e pode opor-se a qualquer momento, como descrito abaixo.",
+            "Pode opor-se a qualquer momento: escreva para sidoine@traviosoft.com e retiramo-lo das nossas listas, altere a sua escolha em «Gerir cookies» no fundo de cada página, ou ajuste as definições de anúncios nas suas contas LinkedIn e Meta."
+          ]
+        },
+        {
+          "heading": "Cookies",
+          "body": [
+            "O site usa os cookies de que precisa para funcionar e para memorizar a sua língua e a sua escolha de cookies. Apenas com o seu consentimento, usa também cookies de publicidade do LinkedIn e da Meta. Recusar é tão fácil como aceitar, e o site funciona da mesma forma em ambos os casos. Voltamos a perguntar ao fim de seis meses. O calendário de marcação integrado pode definir os seus próprios cookies, geridos pela Google."
+          ]
+        },
+        {
+          "heading": "Durante quanto tempo os guardamos",
+          "body": [
+            "Guardamos a informação do seu pedido de demonstração enquanto estivermos em contacto sobre o Traviosoft, e durante um período razoável depois disso. Os registos técnicos são guardados apenas pelo curto tempo necessário à segurança e à manutenção.",
+            "Os cookies de publicidade duram no máximo 13 meses. Os dados de contacto carregados para públicos de publicidade são guardados enquanto a campanha decorrer e retirados das nossas listas quando se opuser."
+          ]
+        },
+        {
+          "heading": "Os seus direitos",
+          "body": [
+            "Pode pedir para ver os dados que guardamos sobre si, corrigi-los ou apagá-los. Para fazer um pedido, escreva-nos para sidoine@traviosoft.com. Como a empresa está sediada em França, pode também apresentar uma reclamação à autoridade francesa de proteção de dados (CNIL)."
+          ]
+        },
+        {
+          "heading": "Alterações a esta política",
+          "body": [
+            "Podemos atualizar esta política à medida que o site evolui. A data no topo indica a última alteração."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "intro": "Estas condições regem a utilização do site traviosoft.com. Aplicam-se apenas ao site público. A subscrição e a utilização da aplicação Traviosoft são regidas por um contrato separado que assinamos com cada cliente.",
+      "sections": [
+        {
+          "heading": "Quem publica este site",
+          "body": [
+            "Este site é publicado por Sidoine Dantin EI, registada em França com o SIRET 941 883 779 00014. Pode contactar-nos através de sidoine@traviosoft.com. O site está alojado na Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Estados Unidos."
+          ]
+        },
+        {
+          "heading": "Utilização deste site",
+          "body": [
+            "Ao navegar em traviosoft.com aceita estas condições. O site serve para apresentar o Traviosoft e permitir-lhe marcar uma demonstração. Compromete-se a não fazer uma utilização abusiva, por exemplo tentando perturbá-lo, aceder-lhe através de recolha automática de conteúdos ou comprometer a sua segurança."
+          ]
+        },
+        {
+          "heading": "A marcação da demonstração",
+          "body": [
+            "Marcar uma demonstração é gratuito e não cria qualquer obrigação de compra. Uma hora para a demonstração é proposta mediante disponibilidade e pode ser alterada ou cancelada por qualquer das partes. Qualquer preço discutido durante uma demonstração é uma estimativa para a sua situação, e não uma proposta vinculativa enquanto não constar de um contrato assinado."
+          ]
+        },
+        {
+          "heading": "A informação do site",
+          "body": [
+            "Mantemos o conteúdo deste site tão exato e atualizado quanto possível, mas é fornecido a título de informação geral. As funcionalidades, descrições e preços podem mudar com a evolução do produto. O site é fornecido «tal como está», sem garantia de que esteja sempre disponível ou livre de erros."
+          ]
+        },
+        {
+          "heading": "Propriedade intelectual",
+          "body": [
+            "O nome Traviosoft, os conteúdos, o design e os elementos visuais deste site pertencem ao Traviosoft. Não os pode copiar, reutilizar ou redistribuir sem a nossa autorização escrita."
+          ]
+        },
+        {
+          "heading": "Ligações e serviços externos",
+          "body": [
+            "O calendário das demonstrações é alojado pela Google e o site é disponibilizado através da Cloudflare. Não somos responsáveis pelo conteúdo nem pelas práticas destes serviços de terceiros, que se regem pelas suas próprias condições."
+          ]
+        },
+        {
+          "heading": "Responsabilidade",
+          "body": [
+            "Na medida permitida pela lei, não somos responsáveis por qualquer dano indireto resultante da utilização deste site. Nada nestas condições limita direitos de que não possa abdicar nos termos da lei aplicável."
+          ]
+        },
+        {
+          "heading": "Lei aplicável",
+          "body": [
+            "Estas condições regem-se pela lei francesa. Qualquer litígio relativo ao site será da competência dos tribunais franceses competentes."
+          ]
+        },
+        {
+          "heading": "Alterações a estas condições",
+          "body": [
+            "Podemos atualizar estas condições de tempos a tempos. A data no topo indica a última alteração. Ao continuar a utilizar o site, aceita a versão em vigor."
+          ]
+        }
+      ]
+    },
+    "notice": {
+      "intro": "Informação legal sobre o site traviosoft.com, prestada nos termos da lei francesa.",
+      "sections": [
+        {
+          "heading": "Editor do site",
+          "body": [
+            "Este site é publicado por Sidoine Dantin EI, empresa em nome individual (entreprise individuelle) registada em França com o SIRET 941 883 779 00014. Morada: 137 rue à Vaches, 62610 Balinghem, França. Diretor da publicação: Sidoine Dantin. Contacto: sidoine@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "Alojamento",
+          "body": [
+            "O site está alojado na Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Estados Unidos (cloudflare.com)."
+          ]
+        },
+        {
+          "heading": "Propriedade intelectual",
+          "body": [
+            "O nome Traviosoft, os conteúdos, o design e os elementos visuais deste site pertencem a Sidoine Dantin EI. É proibida qualquer reutilização sem autorização escrita."
+          ]
+        },
+        {
+          "heading": "Dados pessoais",
+          "body": [
+            "A forma como tratamos os dados recolhidos através do site está descrita na nossa Política de privacidade, onde também pode exercer os seus direitos, incluindo junto da autoridade francesa de proteção de dados (CNIL)."
+          ]
+        },
+        {
+          "heading": "Contacto",
+          "body": [
+            "Para qualquer questão sobre o site, escreva para sidoine@traviosoft.com."
+          ]
+        }
+      ]
+    }
+  }
+}

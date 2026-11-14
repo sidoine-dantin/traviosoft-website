@@ -11,6 +11,7 @@ import { Consent } from '@/components/site/consent';
 import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
+import { LANG_TAG, type Locale } from '@/content/types';
 import { baseUrl, siteName } from '@/lib/seo';
 import '../globals.css';
 
@@ -119,7 +120,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }));
 
   return (
-    <html lang={locale} className={`${bricolage.variable} ${schibsted.variable} ${dmMono.variable}`}>
+    <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable} ${dmMono.variable}`}>
       <body>
         <JsonLd data={org} />
         <JsonLd data={site} />

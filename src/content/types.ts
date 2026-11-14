@@ -11,7 +11,10 @@
  * - country-specific rules (REAV, Veri*Factu) are never headline features
  */
 
-export type Locale = 'es' | 'en' | 'fr';
+export type Locale = 'es' | 'en' | 'fr' | 'it' | 'pt';
+
+/** BCP 47 tag per locale, for hreflang and <html lang> (Portuguese is the European variant). */
+export const LANG_TAG: Record<Locale, string> = { es: 'es', en: 'en', fr: 'fr', it: 'it', pt: 'pt-PT' };
 
 export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
 
