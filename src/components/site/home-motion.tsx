@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 /**
  * Home page motion. Turns on html.motion (so nothing is hidden without JS or for people who ask
  * for reduced motion), then:
- * - reveals [data-reveal], .scraps, .ba, .coins and .facts as they come into view;
+ * - reveals [data-reveal], .scraps, .ba, .coins as they come into view;
  * - on wide screens pins the five-step section and highlights one step at a time while the
  *   page scrolls through it, with a gentle snap on each step; on narrow screens the step
  *   crossing the middle of the screen is highlighted instead.
@@ -16,7 +16,7 @@ export function HomeMotion() {
     const root = document.documentElement;
     root.classList.add('motion');
 
-    document.querySelectorAll<HTMLElement>('.scraps, .facts').forEach(list => {
+    document.querySelectorAll<HTMLElement>('.scraps').forEach(list => {
       Array.from(list.children).forEach((el, i) => (el as HTMLElement).style.setProperty('--i', String(i)));
     });
 
@@ -25,7 +25,7 @@ export function HomeMotion() {
         if (e.isIntersecting) { e.target.classList.add('in'); reveal.unobserve(e.target); }
       }
     }, { threshold: 0.2 });
-    document.querySelectorAll('[data-reveal], .scraps, .ba, .coins, .facts').forEach(el => reveal.observe(el));
+    document.querySelectorAll('[data-reveal], .scraps, .ba, .coins').forEach(el => reveal.observe(el));
 
     const pin = document.querySelector<HTMLElement>('.steps-pin');
     const list = pin?.querySelector<HTMLElement>('.steps');

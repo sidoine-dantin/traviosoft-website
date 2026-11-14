@@ -7,7 +7,6 @@ import { Link } from '@/i18n/navigation';
 import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { QuotePhone } from '@/components/site/visuals';
-import { KeyFacts } from '@/components/site/key-facts';
 import { PRICES } from '@/content/prices';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -96,9 +95,6 @@ export default async function HomePage({ params }: Props) {
             <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span><span className="lbl users">{h.coinUsers}</span>
           </div>
           <p className="price-note"><span className="extra-user">{h.extraUserLine}</span><Link href="/pricing">{h.priceNote}</Link></p>
-        </div>
-        <div className="wrap" style={{ marginTop: 'clamp(56px, 8vw, 96px)', color: 'var(--green)' }}>
-          <KeyFacts facts={h.facts} />
         </div>
       </section>
     </>
