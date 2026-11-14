@@ -49,7 +49,7 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 ## 5. Shape and motion
 
 - Tilt is fine when it means something: the messy "before" pile (overlapping, tilted notes), the two price circles turned in opposite directions. Product cards stay straight.
-- Subtle motion is welcome: elements in the home hero move at different speeds as you scroll (desktop only, off when the system asks for reduced motion); link hover where the arrow moves forward, the text lifts and the underline thickens.
+- Subtle motion is welcome: elements in the home hero move at different speeds as you scroll (desktop only, off when the system asks for reduced motion); link hover where the text gets bolder, the underline drops a little and the arrow moves forward (the text never moves up).
 - Background dotted routes: clean organic curves without hand-drawn wobbles, continuous, wandering left and right with a few loops, spread from top to bottom, both ends off screen, always behind the content.
 
 ## 6. Layout
@@ -96,16 +96,16 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 - Never show binding information that is untrue.
 - Wherever a price appears, it says "3 users" and carries an asterisk: per month, billed annually, excluding VAT, with the details on the Pricing page.
 - The extra-user price comes after the plan price and shows only the selected billing (60 yearly, 70 monthly).
-- Setup (390 EUR) appears crossed out and "free*" with yearly billing. Import of clean data is 290 EUR once on monthly billing and free yearly; messy data is on quote after a sample. The note reads "* With annual billing. Limited-time offer."
+- Setup (390 EUR) appears crossed out and "free*" with yearly billing. Import of clean data is 290 EUR once on monthly billing and free yearly; messy data is on quote after a sample. The note reads "* With annual billing. Limited-time offer." The crossed-out price shows the free part has a real value (so it never looks cheap), and "limited-time" keeps the option to end it later. It is not a launch discount, and no other offer or discount is made.
+- Pricing page: title, billing switch, the two plan cards, then the comparison table. No lead paragraph, no facts row, no text under the prices.
 - Only features that exist in the app's production release are presented as available.
 
 ## 12. Cookie banner
 
 - A centred card over a lightly dimmed page that stays usable, shown until the visitor answers.
+- The base banner names no vendors and says the least the law requires (what it is for, and where to change the choice). Vendors such as LinkedIn and Meta are named only where the law requires it: the detailed preferences and the cookie and privacy policy.
 - Accept is filled and stands out; Refuse has the same size and stays fully readable (CNIL and AEPD require refusing to be as easy as accepting). "Learn more" opens the privacy policy.
 
-## Open questions for the owner
+## When the owner asks to remove something
 
-- Cookie banner text: on 13 November the owner asked to say the least the law allows and not to name LinkedIn or Meta; the banner built on 14 November from the Infogreffe example names them.
-- The limited-time free setup and import offer is an exception to the earlier "no launch offer or discount" rule. Is it the only exception?
-- DM Mono is still loaded in the layout but unused. Remove it?
+Delete it. Do not move it elsewhere or reword it.

@@ -34,7 +34,6 @@
   --display: var(--font-schibsted), "Helvetica Neue", Arial, sans-serif;
   --body: var(--font-schibsted), "Helvetica Neue", Arial, sans-serif;
   --figure: var(--font-bricolage), "Arial Narrow", sans-serif; /* logo and price figures */
-  --mono: var(--font-dm-mono), ui-monospace, Menlo, monospace;
   --font-display: var(--display);
   --font-body: var(--body);
 
