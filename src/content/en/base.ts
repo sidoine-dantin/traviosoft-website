@@ -43,8 +43,7 @@ export const common: SiteContent['common'] = {
   perMonth: 'EUR / month',
   notFound: {
     title: 'Page not found',
-    body: 'There is nothing at this address. Check it for typos, or start again from the home page.',
-    home: 'Go to the home page'
+    body: 'There is nothing at this address.'
   }
 };
 
