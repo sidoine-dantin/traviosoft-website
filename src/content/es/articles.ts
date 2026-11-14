@@ -1,4 +1,5 @@
 import type { Article, ArticleBlock, Faq } from '../types';
+import { invoicingGuides } from './invoicing';
 import { PRICES } from '../prices';
 
 const UPDATED = '2026-11-03';
@@ -70,7 +71,7 @@ const compares: Cmp[] = [
       ['Versiones del presupuesto', 'Cada versión queda guardada y se puede reabrir', 'Un archivo por versión'],
       ['Reservas a proveedores', 'Lista por viaje con estados que se actualizan', 'Una columna o un documento aparte'],
       ['Facturas', 'Desde el viaje, con numeración por empresa y notas de abono', 'Tu propia plantilla de factura'],
-      ['Normas fiscales de España', 'Etiquetas REAV y Veri*Factu con QR, activables por país', 'Configuradas en tu propia plantilla'],
+      ['Normas fiscales de España', 'Etiquetas REAV, activables por país', 'Configuradas en tu propia plantilla'],
       ['Itinerario para el cliente', 'Página para compartir, día a día, en su idioma', 'PDF o Word enviado por correo'],
       ['Datos', 'Un espacio propio para tu agencia, alojado en la UE', 'Los archivos, donde los guardes']
     ],
@@ -103,7 +104,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Comparamos Traviosoft y Ezus: para quién es cada uno, precios publicados, idiomas y puesta en marcha, y en qué destaca cada uno para DMC y agencias a medida.',
     title: 'Traviosoft frente a Ezus: comparativa independiente para DMC y receptivos',
-    lead: 'Ezus es un software francés para DMC muy consolidado, con muchos clientes, precios públicos y soporte en cinco idiomas. Traviosoft muestra un precio con usuarios incluidos y añade REAV y Veri*Factu para agencias en España.',
+    lead: 'Ezus es un software francés para DMC muy consolidado, con muchos clientes, precios públicos y soporte en cinco idiomas. Traviosoft muestra un precio con usuarios incluidos y añade las etiquetas REAV para agencias en España.',
     card: 'Dos programas con precios públicos: para quién es cada uno y qué incluye.',
     basis:
       'Los datos de Ezus vienen de su sitio web y de directorios públicos, revisados el 3 de noviembre de 2026. Los precios cambian: comprueba siempre las páginas de precios actuales de ambos. Las cifras de clientes de Ezus son las que ellos publican.',
@@ -124,7 +125,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'Quieres un único precio con usuarios incluidos, y alta e importación incluidas con el pago anual.',
-      'Tu agencia está en España y quieres etiquetas REAV en las facturas y Veri*Factu con QR integrados.',
+      'Tu agencia está en España y quieres etiquetas REAV en tus facturas.',
       'Trabajas sobre todo en español y francés y quieres que documentos y plantillas de correo salgan en el idioma del cliente.',
       'Prefieres una herramienta construida alrededor del flujo de un viaje: solicitud, presupuesto con margen, reserva, cobro y factura.'
     ],
@@ -132,7 +133,7 @@ const compares: Cmp[] = [
       'Si usas Ezus y quieres cambiar, exporta antes tus productos, proveedores y clientes. Nosotros importamos productos, precios y proveedores desde tus hojas de cálculo durante el alta. Un consejo práctico: cambia fuera de temporada alta y termina los viajes abiertos donde están. La [página Cambiar](/switch) detalla los pasos.',
     faq: [
       { q: '¿Cómo es el precio de cada uno?', a: [`Traviosoft Classic cuesta ${PRICES.classic.yearly} EUR al mes con pago anual, ${PRICES.usersIncluded} usuarios incluidos, con alta e importación incluidas. Ezus Professional cuesta 75 EUR por usuario y mes, con un pack de onboarding de 1.990 EUR que incluye una implantación guiada. Comprueba las páginas de precios actuales de los dos.`] },
-      { q: '¿Ezus sirve para España?', a: ['Sí. Ezus tiene web y soporte en español. Traviosoft incluye además etiquetas REAV y Veri*Factu con QR para agencias en España.'] },
+      { q: '¿Ezus sirve para España?', a: ['Sí. Ezus tiene web y soporte en español. Traviosoft incluye además etiquetas REAV para agencias en España.'] },
       { q: '¿Puedo probar los dos?', a: ['Los dos trabajan con demostración. Lo más útil es llevar un viaje real tuyo a cada una y ver cómo construye cada uno el presupuesto con margen.'] }
     ]
   },
@@ -151,7 +152,7 @@ const compares: Cmp[] = [
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Gestión de agencias de viajes en España, sobre todo minoristas'],
       ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar'],
-      ['Conocido por', 'Presupuestos con margen por línea, catálogo por temporadas, página de itinerario para el cliente, REAV y Veri*Factu', 'Una larga trayectoria con agencias de viajes en España']
+      ['Conocido por', 'Presupuestos con margen por línea, catálogo por temporadas, página de itinerario para el cliente y REAV', 'Una larga trayectoria con agencias de viajes en España']
     ],
     otherBetter: [
       'Eres una agencia minorista que vende billetes, hoteles y paquetes de mayoristas. Un programa pensado para ese trabajo suele encajar mejor.',
@@ -189,7 +190,6 @@ const compares: Cmp[] = [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Autónomos y pymes de cualquier sector, de 1 a más de 100 personas'],
       ['Precio publicado', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Básico 34 EUR (2 usuarios), Estándar 69 EUR (4), Avanzado 115 EUR (7), Premium 229 EUR (15), sin IVA; con descuentos temporales'],
       ['Enfoque principal', 'El viaje: solicitudes, presupuestos con margen, reservas, itinerario, cobros y facturas', 'La empresa: facturación, contabilidad, nóminas y bancos'],
-      ['Veri*Factu', 'Sí, con QR', 'Sí, según su web'],
       ['Contabilidad, nóminas y bancos', 'Prepara los archivos para tu gestor', 'Su núcleo: contabilidad, nóminas y conciliación bancaria']
     ],
     otherBetter: [
@@ -241,7 +241,7 @@ const compares: Cmp[] = [
     usBetter: [
       'Quieres presupuestar, reservar y facturar todo el viaje en un solo sistema y arrancar con una puesta en marcha corta.',
       'Quieres ver el precio y los usuarios incluidos antes de pedir una demostración.',
-      'Tu mercado es España y vendes en español y francés, con REAV y Veri*Factu.',
+      'Tu mercado es España y vendes en español y francés, con REAV.',
       'Quieres que importemos tus productos, precios y proveedores desde tus hojas de cálculo durante la puesta en marcha.'
     ],
     switching:
@@ -260,7 +260,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Tourwriter es un software neozelandés para DMC de lujo y diseñadores de viajes. Comparamos para quién es cada uno, planes, precios, idiomas y en qué destaca cada uno.',
     title: 'Traviosoft frente a Tourwriter: dos programas para diseñar viajes',
-    lead: 'Tourwriter es un software neozelandés conocido por sus itinerarios muy cuidados, pensado para DMC y diseñadores de viajes de lujo que trabajan en inglés. Traviosoft tiene precios en euros con usuarios incluidos, trabaja en español y francés, e incluye REAV y Veri*Factu.',
+    lead: 'Tourwriter es un software neozelandés conocido por sus itinerarios muy cuidados, pensado para DMC y diseñadores de viajes de lujo que trabajan en inglés. Traviosoft tiene precios en euros con usuarios incluidos, trabaja en español y francés, e incluye REAV.',
     card: 'Itinerarios de lujo muy cuidados en inglés y un programa en euros, en español y francés.',
     basis:
       'Los datos de Tourwriter vienen de su web (páginas de planes y empresa), revisados el 3 de noviembre de 2026. Sus precios son "desde", en dólares, por usuario, con un presupuesto para cada equipo: el total real puede variar.',
@@ -279,7 +279,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'Quieres un precio en euros, con los usuarios incluidos en cada plan.',
-      'Tu agencia está en España y quieres REAV y Veri*Factu integrados.',
+      'Tu agencia está en España y quieres REAV integrado.',
       'Tus clientes hablan español o francés y quieres que presupuestos y correos salgan en su idioma.',
       'Quieres el alta y la importación incluidas con el pago anual.'
     ],
@@ -331,7 +331,7 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Cubre el viaje entero: solicitudes, catálogo con precios por temporada, presupuestos con margen y comisión, reservas, cobros y facturas, con REAV y Veri*Factu para España. Muestra el precio, y el alta y la importación están incluidas con el pago anual.'
+      text: 'Cubre el viaje entero: solicitudes, catálogo con precios por temporada, presupuestos con margen y comisión, reservas, cobros y facturas, con REAV para España. Muestra el precio, y el alta y la importación están incluidas con el pago anual.'
     },
     { type: 'h3', text: 'Ezus' },
     {
@@ -769,14 +769,14 @@ const reav: Article = {
 
 const verifactu: Article = {
   key: 'verifactu-guide',
-  kind: 'spain',
+  kind: 'invoicing',
   slug: 'verifactu-agencias-de-viajes',
   metaTitle: 'Veri*Factu para agencias de viajes: qué cambia',
   metaDescription:
     'Qué es Veri*Factu, a quién afecta, qué cambia en la facturación de una agencia de viajes, el código QR y cómo comprobar los plazos en la AEAT.',
   title: 'Veri*Factu para agencias de viajes: qué es y qué cambia',
-  lead: 'Veri*Factu es el sistema de la Agencia Tributaria por el que el programa de facturación envía cada factura a Hacienda al emitirla y añade un código QR. Se regula en el Real Decreto 1007/2023. Los plazos se han aplazado más de una vez: consulta el calendario vigente de la AEAT.',
-  updated: UPDATED,
+  lead: 'Veri*Factu es el sistema de la Agencia Tributaria por el que el programa de facturación envía cada factura a Hacienda al emitirla y añade un código QR. Se regula en el Real Decreto 1007/2023 y, según el Real Decreto-ley 15/2025, se aplica desde el 1 de enero de 2027 a las sociedades y desde el 1 de julio de 2027 al resto.',
+  updated: '2026-11-14',
   card: 'Qué es, quién debe cumplirlo y cómo cambia la factura de una agencia de viajes.',
   blocks: [
     {
@@ -812,12 +812,12 @@ const verifactu: Article = {
     { type: 'h2', text: 'Plazos', id: 'plazos' },
     {
       type: 'p',
-      text: 'Las fechas de entrada en vigor se han aplazado en varias ocasiones y pueden distinguir entre sociedades y autónomos. No fijamos aquí una fecha para no darte una cifra caducada: consulta el calendario vigente en la sede electrónica de la AEAT o pregunta a tu gestor.'
+      text: 'El Real Decreto-ley 15/2025 fija el 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y el 1 de julio de 2027 para autónomos y demás obligados. En octubre de 2026, Hacienda anunció un nuevo aplazamiento a 2028, que aún no se ha publicado en el BOE. Actualizado a 14 de noviembre de 2026: consulta el calendario vigente en la sede de la AEAT.'
     },
     { type: 'h2', text: 'Cómo lo resuelve Traviosoft', id: 'traviosoft' },
     {
       type: 'p',
-      text: 'En Traviosoft, el envío Veri*Factu con código QR está integrado: al emitir una factura desde un viaje, la factura queda registrada y lleva su QR, con la numeración propia de cada empresa. Se activa en los ajustes de país de España. No tienes que enviar nada a mano.'
+      text: 'En Traviosoft, al emitir una factura desde un viaje, la factura queda registrada y lleva su QR, con la numeración propia de cada empresa. Se activa en los ajustes de país de España. La [guía de facturación en España](/guides/facturacion-agencia-de-viajes-espana) resume también el REAV y la factura electrónica entre empresas.'
     },
     { type: 'h2', text: 'Preguntas frecuentes', id: 'faq' },
     {
@@ -837,11 +837,11 @@ const spainPage: Article = {
   slug: 'software-agencias-viajes-espana',
   metaTitle: 'Software para agencias de viajes y DMC en España',
   metaDescription:
-    'Traviosoft para una agencia en España: REAV en las facturas, Veri*Factu con QR, numeración por sociedad, exportación para el gestor y documentos en ES, EN y FR.',
+    'Traviosoft para una agencia en España: REAV en las facturas, numeración por sociedad, exportación para el gestor y documentos en cinco idiomas.',
   title: 'Software para agencias de viajes y DMC en España',
-  lead: 'Traviosoft sirve a una agencia o DMC en España con presupuestos con margen, reservas, cobros y facturas. Etiqueta el REAV en las facturas, envía Veri*Factu con QR, numera por sociedad, prepara archivos para tu gestor y saca los documentos en español, catalán, inglés, francés e italiano. Datos alojados en la UE.',
+  lead: 'Traviosoft sirve a una agencia o DMC en España con presupuestos con margen, reservas, cobros y facturas. Etiqueta el REAV en las facturas, numera por sociedad, prepara archivos para tu gestor y saca los documentos en español, catalán, inglés, francés e italiano. Datos alojados en la UE.',
   updated: UPDATED,
-  card: 'Lo que Traviosoft hace por una agencia española: REAV, Veri*Factu y exportación para el gestor.',
+  card: 'Lo que Traviosoft hace por una agencia española: REAV, series por sociedad y exportación para el gestor.',
   blocks: [
     {
       type: 'p',
@@ -852,7 +852,7 @@ const spainPage: Article = {
       type: 'list',
       items: [
         'REAV: las facturas llevan la etiqueta del régimen especial de agencias de viajes cuando lo aplicas.',
-        'Veri*Factu: el envío con código QR está integrado en la factura.',
+        'Facturas conformes a la normativa española: lo explicamos en la [guía de facturación en España](/guides/facturacion-agencia-de-viajes-espana).',
         'Numeración por sociedad: cada empresa de tu grupo mantiene su propia serie de facturas.',
         'Exportación para el gestor: un resumen en Excel o un zip con todas las facturas en PDF de cualquier periodo.',
         'Documentos para clientes extranjeros: presupuestos, correos, propuestas e itinerarios en español, catalán, inglés, francés e italiano, con tu marca.',
@@ -885,10 +885,9 @@ const spainPage: Article = {
   ]
 };
 
-// The REAV and Veri*Factu guides stay off the site until a tax adviser has read them.
-// To publish them, add reav and verifactu back to this list and to base.ts localLinks.
+// The REAV guide stays off the site until a tax adviser has read it.
+// To publish it, add reav back to the articles list.
 void reav;
-void verifactu;
 const aiTools: Article = {
   key: 'ai-assistant-mcp',
   kind: 'guide',
@@ -952,4 +951,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools, spainPage];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools, spainPage, verifactu, ...invoicingGuides];

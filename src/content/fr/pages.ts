@@ -379,6 +379,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'best', title: 'Comparatif des meilleurs logiciels', body: 'Les outils qu’utilisent les agences sur mesure et les DMC, côte à côte, et à qui chacun convient.' },
     { kind: 'compare', title: 'Pages de comparaison', body: 'Traviosoft à côté d’autres outils.' },
     { kind: 'guide', title: 'Guides', body: 'Des notes pratiques pour chiffrer, réserver et facturer un voyage sur mesure.' },
+    { kind: 'invoicing', title: 'Facturer dans votre pays', body: 'Comment facturent les agences de voyages en Espagne, en France, en Italie, au Portugal, en Allemagne, au Royaume-Uni et en Belgique, avec les dates de la facture électronique.' },
     { kind: 'glossary', title: 'Glossaire', body: 'Les termes d’agence de voyages et de logiciel, en une ligne chacun.' },
   ],
   glossaryTitle: 'Glossaire',

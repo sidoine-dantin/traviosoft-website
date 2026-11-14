@@ -135,6 +135,6 @@ export const visuals: SiteContent['visuals'] = {
     mailSubject: 'Your quote · Andalucía, 8 days', mailBody: 'Deposit 30% to confirm the trip.', payDeposit: 'Pay the deposit',
     settings: 'Settings', langs: 'Languages', currencies: 'Currencies',
     smith: 'Smith family', atlas: 'Atlas Travel', books: 'Your accounts',
-    countryTitle: 'Country settings · Spain', vatScheme: 'Travel agency VAT scheme', qr: 'QR code on every invoice'
+    countryTitle: 'Country settings', vatScheme: 'Travel agency VAT scheme', einvoice: 'E-invoicing', einvoiceNote: 'As your country requires'
   }
 };

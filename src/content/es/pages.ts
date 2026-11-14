@@ -379,6 +379,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'best', title: 'Comparativa de los mejores programas', body: 'Las herramientas que usan las agencias a medida y las DMC, una junto a otra, y a quién le encaja cada una.' },
     { kind: 'compare', title: 'Páginas de comparación', body: 'Traviosoft al lado de otras herramientas.' },
     { kind: 'guide', title: 'Guías', body: 'Notas prácticas para presupuestar, reservar y facturar un viaje a medida.' },
+    { kind: 'invoicing', title: 'Facturar en tu país', body: 'Cómo facturan las agencias de viajes en España, Francia, Italia, Portugal, Alemania, Reino Unido y Bélgica, con las fechas de la factura electrónica.' },
     { kind: 'glossary', title: 'Glosario', body: 'Los términos de agencia de viajes y de software, en una línea cada uno.' },
   ],
   glossaryTitle: 'Glosario',

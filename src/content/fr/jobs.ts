@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Factures d’acompte et finale', body: ['Faites depuis le voyage en un clic, avec les coordonnées du client et les bons montants.'] },
         { title: 'Avoirs', body: ['Une annulation ou une modification devient un avoir lié à la facture d’origine.'] },
         { title: 'Numérotation par société', body: ['Gérez deux sociétés depuis un seul endroit, chacune avec sa propre numérotation de factures.'] },
-        { title: 'Les règles fiscales de votre pays', body: ['Les régimes spéciaux de TVA pour les agences de voyages et la facturation électronique s’activent par pays dans les réglages. Les agences espagnoles, par exemple, disposent du REAV et de Veri*Factu.'] },
+        { title: 'Les règles fiscales de votre pays', body: ['Les régimes spéciaux de TVA pour les agences de voyages s’activent par pays dans les réglages, et la bonne mention apparaît sur vos factures.'] },
         { title: 'Prêt pour votre comptable', body: ['Un récapitulatif Excel ou un zip de tous les PDF en fin de mois, en deux clics.'] },
         { title: 'Export comptable', body: ['Vos ventes, achats et paiements sous forme d’écritures, prêts pour votre logiciel de comptabilité.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Quels prestataires de paiement fonctionnent ?', a: ['Vous ajoutez le lien de paiement du prestataire que vous utilisez déjà. Le client paie là-bas, et vous enregistrez le paiement sur le voyage.'] },
     { q: 'Mon comptable peut-il récupérer les fichiers ?', a: ['Oui. Exportez un récapitulatif Excel ou un zip de toutes les factures PDF pour n’importe quelle période.'] },
-    { q: 'Suit-il les règles de mon pays ?', a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Les régimes propres à chaque pays s’activent dans les réglages : aujourd’hui, cela inclut le REAV et Veri*Factu en Espagne. Pour les autres pays, demandez-nous pendant la démo.'] }
+    { q: 'Suit-il les règles de mon pays ?', a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Les régimes propres à chaque pays s’activent dans les réglages. Pour votre pays, demandez-nous pendant la démo.'] }
   ]
 };
 
@@ -325,7 +325,7 @@ const setup: JobPage = {
       visual: 'country',
       features: [
         { title: 'Régimes de TVA des agences de voyages', body: ['Quand un pays a un régime spécial de TVA pour les agences de voyages, les bonnes mentions apparaissent sur vos factures.'] },
-        { title: 'Facturation électronique', body: ['Là où la transmission est obligatoire, elle est intégrée à la facture. En Espagne, par exemple, Veri*Factu avec son code QR.'] }
+        { title: 'Facturation électronique', body: ['Selon le pays, les factures sont transmises depuis Traviosoft ou depuis votre logiciel de facturation.'] }
       ]
     },
     {

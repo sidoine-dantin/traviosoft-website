@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Deposit and final invoices', body: ['Made from the trip in one click, with the client’s details and the right amounts.'] },
         { title: 'Credit notes', body: ['A cancellation or a change becomes a credit note linked to the original invoice.'] },
         { title: 'Numbering per company', body: ['Run two companies from one place, each with its own invoice numbering.'] },
-        { title: 'Your country’s tax rules', body: ['Special VAT schemes for travel agencies and e-invoicing are switched on per country in the settings. Spanish agencies, for example, get REAV and Veri*Factu.'] },
+        { title: 'Your country’s tax rules', body: ['Special VAT schemes for travel agencies are switched on per country in the settings, and the right wording appears on your invoices.'] },
         { title: 'Ready for your accountant', body: ['An Excel recap or a zip of every PDF at the end of the month, in two clicks.'] },
         { title: 'Accounting export', body: ['Your sales, purchases and payments as journal entries, ready for your accounting software.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Which payment providers work?', a: ['You add the payment link of the provider you already use. The client pays there, and you record the payment on the trip.'] },
     { q: 'Can my accountant get the files?', a: ['Yes. Export an Excel recap or a zip of every invoice PDF for any period.'] },
-    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. Country-specific schemes are switched on in the settings: today that includes Spain’s REAV and Veri*Factu. For other countries, ask us in the demo.'] }
+    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. Country-specific schemes are switched on in the settings. For your country, ask us in the demo.'] }
   ]
 };
 
@@ -325,7 +325,7 @@ const setup: JobPage = {
       visual: 'country',
       features: [
         { title: 'Travel agency VAT schemes', body: ['Where a country has a special VAT scheme for travel agencies, the right labels appear on your invoices.'] },
-        { title: 'E-invoicing', body: ['Where filing is required, it is built into the invoice. In Spain, for example, Veri*Factu with its QR code.'] }
+        { title: 'E-invoicing', body: ['Depending on the country, invoices are sent from Traviosoft or from your invoicing software.'] }
       ]
     },
     {

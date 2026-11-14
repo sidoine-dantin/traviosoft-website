@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Facturas de señal y final', body: ['Hechas desde el viaje con un clic, con los datos del cliente y los importes correctos.'] },
         { title: 'Facturas rectificativas', body: ['Una cancelación o un cambio se convierte en una factura rectificativa vinculada a la factura original.'] },
         { title: 'Numeración por empresa', body: ['Gestiona dos empresas desde un solo sitio, cada una con su propia numeración de facturas.'] },
-        { title: 'Las normas fiscales de tu país', body: ['Los regímenes especiales de IVA para agencias de viajes y la facturación electrónica se activan por país en los ajustes. Las agencias españolas, por ejemplo, tienen REAV y Veri*Factu.'] },
+        { title: 'Las normas fiscales de tu país', body: ['Los regímenes especiales de IVA para agencias de viajes se activan por país en los ajustes, y la mención correcta aparece en tus facturas.'] },
         { title: 'Listo para tu gestoría', body: ['Un resumen en Excel o un zip con todos los PDF a final de mes, en dos clics.'] },
         { title: 'Exportación contable', body: ['Tus ventas, compras y pagos como asientos contables, listos para tu programa de contabilidad.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: '¿Qué proveedores de pago funcionan?', a: ['Añades el enlace de pago del proveedor que ya usas. El cliente paga allí y tú registras el pago en el viaje.'] },
     { q: '¿Puede mi gestoría obtener los archivos?', a: ['Sí. Exporta un resumen en Excel o un zip con todas las facturas en PDF de cualquier periodo.'] },
-    { q: '¿Sigue las normas de mi país?', a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. Los regímenes específicos de cada país se activan en los ajustes: hoy incluyen el REAV y Veri*Factu de España. Para otros países, pregúntanos en la demo.'] }
+    { q: '¿Sigue las normas de mi país?', a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. Los regímenes específicos de cada país se activan en los ajustes. Para tu país, pregúntanos en la demo.'] }
   ]
 };
 
@@ -325,7 +325,7 @@ const setup: JobPage = {
       visual: 'country',
       features: [
         { title: 'Regímenes de IVA para agencias de viajes', body: ['Cuando un país tiene un régimen especial de IVA para agencias de viajes, las menciones correctas aparecen en tus facturas.'] },
-        { title: 'Facturación electrónica', body: ['Donde es obligatorio el envío, va integrado en la factura. En España, por ejemplo, Veri*Factu con su código QR.'] }
+        { title: 'Facturación electrónica', body: ['Según el país, las facturas se envían desde Traviosoft o desde tu programa de facturación.'] }
       ]
     },
     {

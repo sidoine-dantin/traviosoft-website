@@ -1,4 +1,5 @@
 import type { Article, ArticleBlock, Faq } from '../types';
+import { invoicingGuides } from './invoicing';
 import { PRICES } from '../prices';
 
 const UPDATED = '2026-11-03';
@@ -70,7 +71,7 @@ const compares: Cmp[] = [
       ['Quote versions', 'Every version is saved and can be reopened', 'One file per version'],
       ['Supplier bookings', 'A list per trip with statuses that update themselves', 'A column or a separate document'],
       ['Invoices', 'Made from the trip, numbered per company, with credit notes', 'Your own invoice template'],
-      ['Spanish tax rules', 'REAV labels and Veri*Factu with QR, switched on per country', 'Set up in your own template'],
+      ['Spanish tax rules', 'REAV labels, switched on per country', 'Set up in your own template'],
       ['Client itinerary', 'A shareable page, day by day, in their language', 'A PDF or Word file sent by email'],
       ['Data', 'A separate space for your agency, hosted in the EU', 'Your files, wherever you store them']
     ],
@@ -103,7 +104,7 @@ const compares: Cmp[] = [
     metaDescription:
       'We compare Traviosoft and Ezus on who each is for, published prices, languages and getting started, and what each one does best for DMCs and tailor-made agencies.',
     title: 'Traviosoft vs Ezus: an independent comparison for DMCs and inbound agencies',
-    lead: 'Ezus is a well-established French software for DMCs, with many customers, public prices and support in five languages. Traviosoft shows one price with users included and adds REAV and Veri*Factu for agencies in Spain.',
+    lead: 'Ezus is a well-established French software for DMCs, with many customers, public prices and support in five languages. Traviosoft shows one price with users included and adds the REAV labels for agencies in Spain.',
     card: 'Two tools with public prices: who each is for and what each includes.',
     basis:
       'Ezus details come from its website and public directories, checked on 3 November 2026. Prices change, so always check both current pricing pages. Ezus customer numbers are the ones it publishes.',
@@ -124,7 +125,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'You want one price with users included, and setup and import included with yearly billing.',
-      'Your agency is in Spain and you want REAV labels on invoices and Veri*Factu with QR built in.',
+      'Your agency is in Spain and you want REAV labels on your invoices.',
       'You work mostly in Spanish and French and want documents and email templates in the client’s language.',
       'You prefer a tool built around the flow of one trip: request, quote with margin, booking, payment and invoice.'
     ],
@@ -132,7 +133,7 @@ const compares: Cmp[] = [
       'If you use Ezus and want to switch, export your products, suppliers and clients first. We import products, prices and suppliers from your spreadsheets during setup. A practical tip: switch outside high season and finish open trips where they are. The [Switching page](/switch) lists the steps.',
     faq: [
       { q: 'How is each one priced?', a: [`Traviosoft Classic is ${PRICES.classic.yearly} EUR a month with yearly billing, ${PRICES.usersIncluded} users included, with setup and import included. Ezus Professional is 75 EUR per user a month, with an onboarding pack of 1,990 EUR that includes a guided rollout. Check both current pricing pages.`] },
-      { q: 'Does Ezus work for Spain?', a: ['Yes. Ezus has a Spanish site and support. Traviosoft also includes REAV labels and Veri*Factu with QR for agencies in Spain.'] },
+      { q: 'Does Ezus work for Spain?', a: ['Yes. Ezus has a Spanish site and support. Traviosoft also includes REAV labels for agencies in Spain.'] },
       { q: 'Can I try both?', a: ['Both work with a demo. The most useful test is to bring one real trip of yours to each and see how each one builds the quote with margin.'] }
     ]
   },
@@ -151,7 +152,7 @@ const compares: Cmp[] = [
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Travel agency management in Spain, mostly retail agencies'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
-      ['Known for', 'Quotes with margin per line, a seasonal catalogue, a client itinerary page, REAV and Veri*Factu', 'A long record with travel agencies in Spain']
+      ['Known for', 'Quotes with margin per line, a seasonal catalogue, a client itinerary page and REAV', 'A long record with travel agencies in Spain']
     ],
     otherBetter: [
       'You are a retail agency selling tickets, hotels and wholesaler packages. A tool built for that work usually fits better.',
@@ -189,7 +190,6 @@ const compares: Cmp[] = [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Freelancers and SMEs in any sector, from 1 to over 100 people'],
       ['Published price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Basic 34 EUR (2 users), Standard 69 EUR (4), Advanced 115 EUR (7), Premium 229 EUR (15), excluding VAT; with temporary discounts'],
       ['Main focus', 'The trip: requests, quotes with margin, bookings, itinerary, payments and invoices', 'The company: invoicing, accounting, payroll and banks'],
-      ['Veri*Factu', 'Yes, with QR', 'Yes, according to its site'],
       ['Accounting, payroll and banks', 'Prepares the files for your accountant', 'Its core: accounting, payroll and bank reconciliation']
     ],
     otherBetter: [
@@ -241,7 +241,7 @@ const compares: Cmp[] = [
     usBetter: [
       'You want to quote, book and invoice the whole trip in one system and be up and running through a short setup.',
       'You want to see the price and the users included before asking for a demo.',
-      'Your market is Spain and you sell in Spanish and French, with REAV and Veri*Factu.',
+      'Your market is Spain and you sell in Spanish and French, with REAV.',
       'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
     ],
     switching:
@@ -260,7 +260,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Tourwriter is New Zealand software for luxury DMCs and travel designers. We compare who each is for, plans, prices, languages and what each one does best.',
     title: 'Traviosoft vs Tourwriter: two tools for designing trips',
-    lead: 'Tourwriter is New Zealand software known for polished itineraries, built for luxury DMCs and travel designers working in English. Traviosoft prices in euros with users included, works in Spanish and French, and includes REAV and Veri*Factu.',
+    lead: 'Tourwriter is New Zealand software known for polished itineraries, built for luxury DMCs and travel designers working in English. Traviosoft prices in euros with users included, works in Spanish and French, and includes REAV.',
     card: 'Polished luxury itineraries in English and a euro-priced tool in Spanish and French.',
     basis:
       'Tourwriter details come from its site (plans and company pages), checked on 3 November 2026. Its prices are "from" prices in US dollars, per user, with a quote for each team, so the real total can differ.',
@@ -279,7 +279,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'You want a price in euros with users included in each plan.',
-      'Your agency is in Spain and you want REAV and Veri*Factu built in.',
+      'Your agency is in Spain and you want REAV built in.',
       'Your clients speak Spanish or French and you want quotes and emails in their language.',
       'You want setup and import included with yearly billing.'
     ],
@@ -331,7 +331,7 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Covers the whole trip: requests, a catalogue with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV and Veri*Factu for Spain. It shows its price, and setup and import are included with yearly billing.'
+      text: 'Covers the whole trip: requests, a catalogue with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV for Spain. It shows its price, and setup and import are included with yearly billing.'
     },
     { type: 'h3', text: 'Ezus' },
     {
@@ -750,4 +750,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools, ...invoicingGuides];

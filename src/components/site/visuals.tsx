@@ -253,7 +253,7 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
       return (
         <Frag title={v.ex.countryTitle}>
           <Row a={v.ex.vatScheme} b={pill(v.ex.on, 'ok')} />
-          <Row a="Veri*Factu" s={v.ex.qr} b={pill(v.ex.on, 'ok')} />
+          <Row a={v.ex.einvoice} s={v.ex.einvoiceNote} b={null} />
         </Frag>
       );
     case 'languages': {

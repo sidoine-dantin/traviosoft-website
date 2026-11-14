@@ -137,6 +137,6 @@ export const visuals: SiteContent['visuals'] = {
     mailSubject: 'Tu presupuesto · Andalucía, 8 días', mailBody: 'Señal del 30% para confirmar el viaje.', payDeposit: 'Pagar la señal',
     settings: 'Ajustes', langs: 'Idiomas', currencies: 'Monedas',
     smith: 'Familia Smith', atlas: 'Atlas Travel', books: 'Tu contabilidad',
-    countryTitle: 'Ajustes por país · España', vatScheme: 'Régimen especial de agencias de viajes', qr: 'Código QR en cada factura'
+    countryTitle: 'Ajustes por país', vatScheme: 'Régimen especial de agencias de viajes', einvoice: 'Facturación electrónica', einvoiceNote: 'Según lo que exige tu país'
   }
 };

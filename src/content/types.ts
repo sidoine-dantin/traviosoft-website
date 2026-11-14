@@ -114,7 +114,7 @@ export type VisualText = {
     mailSubject: string; mailBody: string; payDeposit: string;
     settings: string; langs: string; currencies: string;
     smith: string; atlas: string; books: string;
-    countryTitle: string; vatScheme: string; qr: string;
+    countryTitle: string; vatScheme: string; einvoice: string; einvoiceNote: string;
   };
 };
 
@@ -127,7 +127,7 @@ export type ArticleBlock =
   | { type: 'callout'; text: string }
   | { type: 'faq'; items: Faq[] };
 
-export type ArticleKind = 'compare' | 'guide' | 'best' | 'spain';
+export type ArticleKind = 'compare' | 'guide' | 'best' | 'spain' | 'invoicing';
 
 export type Article = {
   /** shared key linking translations of the same article across locales */

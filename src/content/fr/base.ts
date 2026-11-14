@@ -135,6 +135,6 @@ export const visuals: SiteContent['visuals'] = {
     mailSubject: 'Votre devis · Andalousie, 8 jours', mailBody: 'Acompte de 30 % pour confirmer le voyage.', payDeposit: 'Payer l’acompte',
     settings: 'Réglages', langs: 'Langues', currencies: 'Devises',
     smith: 'Famille Smith', atlas: 'Atlas Travel', books: 'Votre comptabilité',
-    countryTitle: 'Réglages par pays · Espagne', vatScheme: 'Régime de TVA des agences de voyages', qr: 'QR code sur chaque facture'
+    countryTitle: 'Réglages par pays', vatScheme: 'Régime de TVA des agences de voyages', einvoice: 'Facturation électronique', einvoiceNote: 'Selon ce qu’exige votre pays'
   }
 };
