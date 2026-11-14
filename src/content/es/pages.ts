@@ -18,7 +18,6 @@ export const pricing: SiteContent['pricing'] = {
       yearly: String(PRICES.classic.yearly),
       monthly: String(PRICES.classic.monthly),
       priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.monthly} EUR al mes` },
-      summary: 'Todo para llevar la agencia, desde la primera solicitud hasta la última factura.'
     },
     {
       id: 'premium',
@@ -28,7 +27,6 @@ export const pricing: SiteContent['pricing'] = {
       monthly: String(PRICES.premium.monthly),
       priceNote: { yearly: `Usuario adicional: ${PRICES.extraUser.yearly} EUR al mes`, monthly: `Usuario adicional: ${PRICES.extraUser.monthly} EUR al mes` },
       hot: true,
-      summary: 'Todo Classic, más equipos, otras divisas, compras, varias marcas, el asistente y las conexiones.'
     }
   ],
   compareTitle: 'Compara los planes',

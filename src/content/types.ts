@@ -174,8 +174,6 @@ export type Plan = {
   /** extra-user price, shown for the billing period picked on the switch */
   priceNote: { yearly: string; monthly: string };
   hot?: boolean;
-  /** one sentence under the price; the feature detail lives in the comparison table */
-  summary: string;
 };
 
 /** A comparison cell: true = included, false = not included, a string = included, with this detail. */
