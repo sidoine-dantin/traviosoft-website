@@ -227,10 +227,16 @@
 .ba > div { border-radius: var(--radius); padding: clamp(24px, 3vw, 40px); min-height: 280px; }
 .ba .before { background: var(--cream-2); }
 .ba .after { background: var(--green); color: var(--cream); }
-.scraps { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.scrap { background: var(--white); border: 1.5px dashed var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: var(--muted); }
-.scrap:nth-child(odd) { transform: rotate(-2deg); }
-.scrap:nth-child(even) { transform: rotate(1.5deg); }
+.scraps { position: relative; height: 240px; margin-top: 22px; }
+.scrap { position: absolute; white-space: nowrap; background: var(--white); border: 1.5px dashed var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: var(--muted); box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .35); }
+/* A pile of loose notes: overlapping and tilted on purpose. */
+.scrap:nth-child(1) { left: 0; top: 10px; transform: rotate(-6deg); }
+.scrap:nth-child(2) { left: 36%; top: 0; transform: rotate(5deg); }
+.scrap:nth-child(3) { left: 10%; top: 62px; transform: rotate(3deg); z-index: 1; }
+.scrap:nth-child(4) { left: 50%; top: 96px; transform: rotate(-7deg); }
+.scrap:nth-child(5) { left: 2%; top: 128px; transform: rotate(-3deg); z-index: 1; }
+.scrap:nth-child(6) { left: 44%; top: 166px; transform: rotate(8deg); }
+@media (max-width: 560px) { .scraps { height: 260px; } .scrap:nth-child(2) { left: 22%; } .scrap:nth-child(4) { left: 26%; top: 104px; } .scrap:nth-child(5) { top: 160px; } .scrap:nth-child(6) { left: 18%; top: 200px; } }
 @media (max-width: 760px) { .ba { grid-template-columns: 1fr; } }
 
 /* ---------- job pages ---------- */
