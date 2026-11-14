@@ -55,7 +55,8 @@ export const pricing: SiteContent['pricing'] = {
   includedTitle: 'Los dos planes incluyen',
   included: [
     `${PRICES.usersIncluded} usuarios, y más cuando los necesites`,
-    `Alta e importación de datos, gratis con pago anual (${PRICES.setupMonthly} EUR una vez con pago mensual)`,
+    `Configuración de tu marca, tus documentos y tus reglas de precio, gratis con pago anual (${PRICES.setupMonthly} EUR una vez con pago mensual)`,
+    `Importación de tus hojas de cálculo o de la exportación de tu herramienta actual, gratis con pago anual (${PRICES.importMonthly} EUR una vez con pago mensual)`,
     'Soporte por email en español, inglés y francés',
     'Alojamiento en la Unión Europea, un espacio propio por agencia',
     'Tus datos exportables en formatos estándar',
@@ -68,7 +69,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Cómo se paga?',
-      a: ['Al año o al mes, como prefieras. El pago anual sale más barato por mes e incluye el alta. El mensual se puede dejar al final de cualquier mes.']
+      a: ['Al año o al mes, como prefieras. El pago anual sale más barato por mes e incluye el alta y la importación. El mensual se puede dejar al final de cualquier mes.']
     },
     {
       q: '¿Los precios llevan IVA?',
@@ -92,7 +93,11 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Qué incluye el alta?',
-      a: [`Importamos tu catálogo, clientes, proveedores y viajes abiertos desde tus hojas de cálculo, y configuramos tu marca y tus reglas de precio. Es gratis con pago anual y cuesta ${PRICES.setupMonthly} EUR una sola vez con pago mensual.`]
+      a: [`Configuramos tu marca, tus documentos, tus reglas de margen, IVA y comisión, y los accesos de tu equipo. Es gratis con pago anual y cuesta ${PRICES.setupMonthly} EUR una sola vez con pago mensual.`]
+    },
+    {
+      q: '¿Qué incluye la importación?',
+      a: [`Tu catálogo con sus precios, tus clientes y tus proveedores, desde hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Es gratis con pago anual y cuesta ${PRICES.importMonthly} EUR una sola vez con pago mensual.`, 'Los documentos Word, los PDF, los correos, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
     }
   ]
 };
@@ -174,12 +179,12 @@ export const switching: SiteContent['switching'] = {
     }
   ],
   importTitle: 'Qué pasa a Traviosoft',
-  importHead: ['Qué', 'Desde', 'Cómo'],
+  importHead: ['Qué', 'Desde', 'Precio'],
   importRows: [
-    { what: 'Catálogo, productos y tarifas', from: 'Hojas de cálculo', how: 'Lo importamos nosotros. Tú revisas una muestra.' },
-    { what: 'Clientes', from: 'Hojas de cálculo, los contactos de tu correo', how: 'Lo importamos nosotros. Los duplicados se fusionan contigo.' },
-    { what: 'Proveedores y contactos', from: 'Hojas de cálculo', how: 'Lo importamos nosotros. Tú revisas los contactos que más usas.' },
-    { what: 'Viajes abiertos', from: 'Excel, Word, la exportación de otra herramienta', how: 'Importamos los que elijas. Los revisas uno por uno.' }
+    { what: 'Catálogo, productos y tarifas', from: 'Hojas de cálculo, la exportación de otra herramienta', how: 'Incluido en la importación' },
+    { what: 'Clientes', from: 'Hojas de cálculo, la exportación de otra herramienta', how: 'Incluido en la importación' },
+    { what: 'Proveedores y contactos', from: 'Hojas de cálculo, la exportación de otra herramienta', how: 'Incluido en la importación' },
+    { what: 'Viajes en curso y otros archivos', from: 'Word, PDF, correos, archivos mezclados', how: 'Presupuesto aparte, tras ver una muestra' }
   ],
   seasonTitle: '¿Me va a descolocar la temporada?',
   seasonBody: [
@@ -194,7 +199,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: '¿Cuánto cuesta?',
-      a: [`El alta y la importación de datos son gratis con pago anual. Con pago mensual, ${PRICES.setupMonthly} EUR una sola vez.`]
+      a: [`El alta y la importación de tus hojas de cálculo son gratis con pago anual. Con pago mensual, el alta cuesta ${PRICES.setupMonthly} EUR una sola vez y la importación ${PRICES.importMonthly} EUR una sola vez.`, 'El precio de la importación cubre listas con una fila por elemento y las mismas columnas de arriba abajo. Los documentos Word, los PDF, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
     },
     {
       q: '¿Qué pasa con mis archivos antiguos?',
@@ -256,7 +261,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Puedo pagar al mes?',
-          a: [`Sí. Con pago mensual son ${PRICES.classic.monthly} EUR para Classic y ${PRICES.premium.monthly} EUR para Premium. El alta cuesta ${PRICES.setupMonthly} EUR una sola vez con pago mensual, y es gratis con pago anual.`]
+          a: [`Sí. Con pago mensual son ${PRICES.classic.monthly} EUR para Classic y ${PRICES.premium.monthly} EUR para Premium. El alta cuesta ${PRICES.setupMonthly} EUR y la importación de tus hojas de cálculo ${PRICES.importMonthly} EUR, una sola vez, con pago mensual; con pago anual, las dos son gratis.`]
         },
         {
           q: '¿Hay prueba gratuita?',

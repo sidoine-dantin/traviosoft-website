@@ -55,7 +55,8 @@ export const pricing: SiteContent['pricing'] = {
   includedTitle: 'Les deux offres incluent',
   included: [
     `${PRICES.usersIncluded} utilisateurs, et davantage quand vous en avez besoin`,
-    `Mise en place et import des données, offerts en annuel (${PRICES.setupMonthly} EUR une fois en mensuel)`,
+    `Mise en place de votre marque, de vos documents et de vos règles de prix, offerte en annuel (${PRICES.setupMonthly} EUR une fois en mensuel)`,
+    `Import de vos tableurs ou de l’export de votre outil actuel, offert en annuel (${PRICES.importMonthly} EUR une fois en mensuel)`,
     'Support par e-mail en espagnol, anglais et français',
     'Hébergement dans l’Union européenne, un espace séparé par agence',
     'Vos données exportables en formats standard',
@@ -68,7 +69,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Comment est-ce facturé ?',
-      a: ['À l’année ou au mois, au choix. L’annuel revient moins cher par mois et inclut la mise en place. Le mensuel s’arrête à la fin de n’importe quel mois.']
+      a: ['À l’année ou au mois, au choix. L’annuel revient moins cher par mois et inclut la mise en place et l’import. Le mensuel s’arrête à la fin de n’importe quel mois.']
     },
     {
       q: 'Les prix sont-ils hors TVA ?',
@@ -92,7 +93,11 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Que comprend la mise en place ?',
-      a: [`Nous importons votre catalogue, vos clients, vos prestataires et vos voyages en cours depuis vos tableurs, et nous configurons votre marque et vos règles de prix. Elle est offerte en annuel et coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel.`]
+      a: [`Nous configurons votre marque, vos documents, vos règles de marge, de TVA et de commission, et les accès de votre équipe. Elle est offerte en annuel et coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel.`]
+    },
+    {
+      q: 'Que comprend l’import ?',
+      a: [`Votre catalogue avec ses prix, vos clients et vos prestataires, depuis des tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Il est offert en annuel et coûte ${PRICES.importMonthly} EUR une seule fois en mensuel.`, 'Les documents Word, les PDF, les e-mails, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     }
   ]
 };
@@ -174,12 +179,12 @@ export const switching: SiteContent['switching'] = {
     }
   ],
   importTitle: 'Ce qui est repris',
-  importHead: ['Quoi', 'Depuis', 'Comment'],
+  importHead: ['Quoi', 'Depuis', 'Prix'],
   importRows: [
-    { what: 'Catalogue, produits et tarifs', from: 'Tableurs', how: 'Nous l’importons. Vous vérifiez un échantillon.' },
-    { what: 'Clients', from: 'Tableurs, vos contacts e-mail', how: 'Nous l’importons. Les doublons sont fusionnés avec vous.' },
-    { what: 'Prestataires et contacts', from: 'Tableurs', how: 'Nous l’importons. Vous vérifiez les contacts que vous utilisez le plus.' },
-    { what: 'Voyages en cours', from: 'Excel, Word, l’export d’un autre outil', how: 'Nous importons ceux que vous choisissez. Vous les vérifiez un par un.' }
+    { what: 'Catalogue, produits et tarifs', from: 'Tableurs, l’export d’un autre outil', how: 'Compris dans l’import' },
+    { what: 'Clients', from: 'Tableurs, l’export d’un autre outil', how: 'Compris dans l’import' },
+    { what: 'Prestataires et contacts', from: 'Tableurs, l’export d’un autre outil', how: 'Compris dans l’import' },
+    { what: 'Voyages en cours et autres fichiers', from: 'Word, PDF, e-mails, fichiers mélangés', how: 'Sur devis, après un échantillon' }
   ],
   seasonTitle: 'Cela va-t-il perturber ma saison ?',
   seasonBody: [
@@ -194,7 +199,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Combien cela coûte-t-il ?',
-      a: [`La mise en place et l’import des données sont offerts en annuel. En mensuel, ils coûtent ${PRICES.setupMonthly} EUR une seule fois.`]
+      a: [`La mise en place et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place coûte ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec une ligne par élément et les mêmes colonnes du début à la fin. Les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     },
     {
       q: 'Que deviennent mes anciens fichiers ?',
@@ -256,7 +261,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Puis-je payer au mois ?',
-          a: [`Oui. En mensuel, c’est ${PRICES.classic.monthly} EUR pour Classic et ${PRICES.premium.monthly} EUR pour Premium. La mise en place coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel, et elle est offerte en annuel.`]
+          a: [`Oui. En mensuel, c’est ${PRICES.classic.monthly} EUR pour Classic et ${PRICES.premium.monthly} EUR pour Premium. La mise en place coûte ${PRICES.setupMonthly} EUR et l’import de vos tableurs ${PRICES.importMonthly} EUR, une seule fois, en mensuel ; en annuel, les deux sont offerts.`]
         },
         {
           q: 'Y a-t-il un essai gratuit ?',

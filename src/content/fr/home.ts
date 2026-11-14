@@ -40,7 +40,8 @@ export const home: SiteContent['home'] = {
   afterBody:
     'La demande, le devis, les réservations, les paiements et les factures sont sur le même voyage, et toute l’équipe voit la même chose.',
   priceTitle: 'Tarifs',
-  priceBody: 'Mise en place et import de vos données',
+  priceBody: 'Mise en place',
+  priceImport: 'et import de vos tableurs',
   priceFree: 'offerts avec la facturation annuelle.',
   extraUserLine: `Utilisateur supplémentaire : ${PRICES.extraUser.yearly} EUR par mois*`,
   coin1: 'EUR/mois* · Classic',

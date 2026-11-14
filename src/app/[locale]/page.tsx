@@ -80,7 +80,7 @@ export default async function HomePage({ params }: Props) {
         <div className="wrap coins">
           <div>
             <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>
-            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceFree}</p>
+            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceImport} <s style={{ whiteSpace: "nowrap" }}>{PRICES.importMonthly} EUR</s> {h.priceFree}</p>
             <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
           </div>
           <div className="coin">
