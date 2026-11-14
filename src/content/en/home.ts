@@ -42,6 +42,6 @@ export const home: SiteContent['home'] = {
     { k: 'Price', v: `From ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included` },
     { k: 'For', v: 'Tailor-made agencies and DMCs' },
     { k: 'Data', v: 'A private space per agency, hosted in the EU' },
-    { k: 'Languages', v: 'Documents in Spanish, English, French and more' }
+    { k: 'Languages', v: 'Documents in Spanish, Catalan, English, French and Italian' }
   ]
 };

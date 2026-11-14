@@ -46,7 +46,7 @@ const sell: JobPage = {
       kicker: 'Presupuestos',
       title: 'Margen, IVA y comisión',
       lead: 'Define tus reglas de precio una vez y cada línea del presupuesto las aplica.',
-      visual: 'quote',
+      visual: 'margin',
       features: [
         { title: 'Margen, IVA y comisión', body: ['Un procedimiento de precios convierte tus tarifas netas en precios de venta: tu margen, el IVA que corresponde y la comisión cuando vende el viaje otra agencia o un colaborador.'] },
         { title: 'Precios por persona', body: ['Precio por adulto o por niño. El cliente ve un precio claro por persona y un total.'] },
@@ -64,7 +64,7 @@ const sell: JobPage = {
       visual: 'followup',
       features: [
         { title: 'Plantillas de email', body: ['Tus propios textos de email, en cada idioma. El presupuesto va adjunto y el email queda listo para enviar.'] },
-        { title: 'En el idioma del cliente', body: ['Español, inglés, francés y más. El presupuesto, el email y los documentos siguen el idioma del cliente.'] },
+        { title: 'En el idioma del cliente', body: ['Español, catalán, inglés, francés e italiano. El presupuesto, el email y los documentos siguen el idioma del cliente.'] },
         { title: 'Seguimiento a los 7 días', body: ['Una semana después del envío, el presupuesto aparece en tu lista de seguimiento.'] }
       ]
     },
@@ -85,7 +85,7 @@ const sell: JobPage = {
       kicker: 'Agencias colaboradoras',
       title: 'Vende a través de agencias colaboradoras',
       lead: 'Presupuesta a la agencia colaboradora, conserva a su cliente en el viaje y liquida su comisión con las mismas cifras.',
-      visual: 'quote',
+      visual: 'commission',
       features: [
         { title: 'La agencia y su cliente', body: ['El presupuesto va a la agencia colaboradora y los viajeros son sus clientes. Ambos están en el viaje, del primer presupuesto a la última factura.'] },
         { title: 'La comisión en el precio', body: ['Fija la comisión de la agencia en el presupuesto. Está en el precio de venta desde la primera línea y tu margen sigue a la vista para ti.'] },
@@ -120,7 +120,7 @@ const book: JobPage = {
       kicker: 'Reserva',
       title: 'La señal crea la reserva',
       lead: 'Registra el primer pago y el presupuesto queda aceptado: se crea la reserva con todos los servicios ya dentro.',
-      visual: 'order',
+      visual: 'confirm',
       features: [
         { title: 'Un solo paso', body: ['El primer pago acepta el presupuesto, crea la reserva y lista todos los servicios por reservar, todo a la vez.'] },
         { title: 'Todo viene del presupuesto', body: ['Viajeros, fechas, servicios y precios salen del presupuesto aceptado, tal como los vio el cliente.'] },
@@ -132,7 +132,7 @@ const book: JobPage = {
       kicker: 'Estados',
       title: 'Estados de reserva, viaje y pago',
       lead: 'Los estados cambian a medida que se confirman los servicios y llegan los cobros.',
-      visual: 'order',
+      visual: 'statuses',
       features: [
         { title: 'Una lista de reservas por viaje', body: ['Hotel, guía, coche, billetes: cada servicio indica si está por reservar, esperando al proveedor o confirmado.'] },
         { title: 'Etiquetas que se actualizan solas', body: ['Cuando se confirma el último servicio, el viaje aparece como reservado. Cuando se paga la liquidación, la etiqueta de pago se pone en verde.'] },
@@ -169,7 +169,7 @@ const book: JobPage = {
       kicker: 'Grupos',
       title: 'Grupos y rooming lists',
       lead: 'Listas de viajeros, servicios para parte del grupo y una rooming list por hotel.',
-      visual: 'order',
+      visual: 'rooming',
       features: [
         { title: 'La lista de viajeros', body: ['Pega o importa la lista desde una hoja de cálculo, o envía al organizador un enlace a un formulario. Hasta 200 viajeros por viaje.'] },
         { title: 'Servicios para parte del grupo', body: ['El día de golf para doce, la cena de gala para todos: cada servicio indica quién lo toma y las cifras de cada hotel lo siguen.'] },
@@ -215,7 +215,7 @@ const getPaid: JobPage = {
       kicker: 'Calendario de pagos',
       title: 'Señal y liquidación con vencimientos',
       lead: 'La señal y la liquidación se fijan en el presupuesto, con sus fechas de vencimiento.',
-      visual: 'payments',
+      visual: 'schedule',
       features: [
         { title: 'Señal y liquidación', body: ['Un porcentaje o un importe, cada uno con su fecha de vencimiento, en cada viaje.'] },
         { title: 'Lo que vence esta semana', body: ['Todos los pagos que vencen o ya han pasado su fecha, de todos tus viajes, en una lista.'] },
@@ -227,7 +227,7 @@ const getPaid: JobPage = {
       kicker: 'Enlaces de pago',
       title: 'Enlaces de pago en el email',
       lead: 'Tu enlace de pago sale con el email y el cliente paga desde él.',
-      visual: 'payments',
+      visual: 'paylink',
       features: [
         { title: 'Tu propio enlace de pago', body: ['Conecta el enlace de pago que ya usas. Sale junto con el email del presupuesto.'] },
         { title: 'Registra un pago con un clic', body: ['Una transferencia o un pago con tarjeta se registra en el viaje y la etiqueta de pago se actualiza sola.'] }
@@ -279,7 +279,7 @@ const setup: JobPage = {
   heroTitle: 'Marcas, idiomas, monedas y equipo',
   heroLead:
     'Ajustes de marcas, idiomas, monedas, normas fiscales por país y usuarios. Se aplican a todos los viajes.',
-  heroVisual: 'brands',
+  heroVisual: 'settings',
   chapters: [
     {
       id: 'brands',
@@ -296,7 +296,7 @@ const setup: JobPage = {
       id: 'languages',
       kicker: 'Idiomas',
       title: 'Documentos en el idioma del cliente',
-      lead: 'Presupuestos, emails, propuestas e itinerarios en español, inglés, francés y más.',
+      lead: 'Presupuestos, emails, propuestas e itinerarios en español, catalán, inglés, francés e italiano.',
       visual: 'languages',
       features: [
         { title: 'Documentos por idioma', body: ['Cada cliente tiene un idioma y todos los documentos lo siguen.'] },
@@ -309,7 +309,7 @@ const setup: JobPage = {
       kicker: 'Monedas',
       title: 'Varias monedas',
       lead: 'Lodges en dólares, un cliente en libras, tu contabilidad en euros. Cada presupuesto tiene su moneda y tus cifras cuadran en la tuya.',
-      visual: 'payments',
+      visual: 'currencies',
       features: [
         { title: 'Una moneda por cliente y por presupuesto', body: ['Presupuesta a un cliente británico en libras y a un colaborador estadounidense en dólares, desde el mismo catálogo.'], premium: true },
         { title: 'Precios de proveedor en su moneda', body: ['Guarda cada tarifa en la moneda en que factura el proveedor. El presupuesto la convierte al cambio del día, con el margen de seguridad que elijas.'], premium: true },
@@ -322,7 +322,7 @@ const setup: JobPage = {
       kicker: 'Ajustes por país',
       title: 'Normas fiscales por país',
       lead: 'Los regímenes fiscales y la facturación electrónica son ajustes que se activan en los países que los necesitan.',
-      visual: 'invoices',
+      visual: 'country',
       features: [
         { title: 'Regímenes de IVA para agencias de viajes', body: ['Cuando un país tiene un régimen especial de IVA para agencias de viajes, las menciones correctas aparecen en tus facturas.'] },
         { title: 'Facturación electrónica', body: ['Donde es obligatorio el envío, va integrado en la factura. En España, por ejemplo, Veri*Factu con su código QR.'] }

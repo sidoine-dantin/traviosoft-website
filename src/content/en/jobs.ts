@@ -46,7 +46,7 @@ const sell: JobPage = {
       kicker: 'Quotes',
       title: 'Margin, VAT and commission',
       lead: 'Set your pricing rules once, and every quote line applies them.',
-      visual: 'quote',
+      visual: 'margin',
       features: [
         { title: 'Margin, VAT and commission', body: ['A pricing procedure turns your net rates into selling prices: your margin, the right VAT, and the commission when an agency or a partner sells the trip.'] },
         { title: 'Per-person prices', body: ['Price per adult or per child. The client sees a clear price per person and a total.'] },
@@ -64,7 +64,7 @@ const sell: JobPage = {
       visual: 'followup',
       features: [
         { title: 'Email templates', body: ['Your own email texts, in each language. The quote is attached and the email is ready to go.'] },
-        { title: 'In the client’s language', body: ['Spanish, English, French and more. The quote, the email and the documents follow the client’s language.'] },
+        { title: 'In the client’s language', body: ['Spanish, Catalan, English, French and Italian. The quote, the email and the documents follow the client’s language.'] },
         { title: 'Follow-up after 7 days', body: ['A week after sending, the quote appears in your list to follow up.'] }
       ]
     },
@@ -85,7 +85,7 @@ const sell: JobPage = {
       kicker: 'Partner agencies',
       title: 'Sell through partner agencies',
       lead: 'Quote the partner agency, keep their client on the trip, and settle their commission from the same numbers.',
-      visual: 'quote',
+      visual: 'commission',
       features: [
         { title: 'The partner and their client', body: ['The quote goes to the partner agency, the travellers are their clients. Both stay on the trip, from the first quote to the last invoice.'] },
         { title: 'Commission in the price', body: ['Set the partner’s commission on the quote. It is in the selling price from the first line, and your margin stays visible to you.'] },
@@ -120,7 +120,7 @@ const book: JobPage = {
       kicker: 'Order',
       title: 'The deposit creates the order',
       lead: 'Record the first payment and the quote is accepted: the order is created with every service already on it.',
-      visual: 'order',
+      visual: 'confirm',
       features: [
         { title: 'One step', body: ['The first payment accepts the quote, creates the order and lists every service to book, all at once.'] },
         { title: 'Everything from the quote', body: ['Travellers, dates, services and prices come from the accepted quote, exactly as the client saw them.'] },
@@ -132,7 +132,7 @@ const book: JobPage = {
       kicker: 'Statuses',
       title: 'Booking, trip and payment statuses',
       lead: 'Statuses change as services are confirmed and payments come in.',
-      visual: 'order',
+      visual: 'statuses',
       features: [
         { title: 'A booking list per trip', body: ['Hotel, guide, car, tickets: each service shows whether it is to book, waiting for the supplier or confirmed.'] },
         { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked. When the balance is paid, the payment badge turns green.'] },
@@ -169,7 +169,7 @@ const book: JobPage = {
       kicker: 'Groups',
       title: 'Groups and rooming lists',
       lead: 'Traveller lists, services for part of the group, and a rooming list per hotel.',
-      visual: 'order',
+      visual: 'rooming',
       features: [
         { title: 'The travellers list', body: ['Paste or import the list from a spreadsheet, or send the organiser a form link. Up to 200 travellers per trip.'] },
         { title: 'Services for part of the group', body: ['The golf day for twelve, the gala dinner for everyone: each service lists who takes it, and the hotel counts follow.'] },
@@ -215,7 +215,7 @@ const getPaid: JobPage = {
       kicker: 'Payment schedule',
       title: 'Deposit and balance with due dates',
       lead: 'The deposit and the balance are set on the quote, with their due dates.',
-      visual: 'payments',
+      visual: 'schedule',
       features: [
         { title: 'Deposit and balance', body: ['A percentage or an amount, each with its due date, on every trip.'] },
         { title: 'What is due this week', body: ['Every payment due or past its date, across all your trips, in one list.'] },
@@ -227,7 +227,7 @@ const getPaid: JobPage = {
       kicker: 'Payment links',
       title: 'Payment links in the email',
       lead: 'Your payment link goes out with the email, and the client pays from it.',
-      visual: 'payments',
+      visual: 'paylink',
       features: [
         { title: 'Your own payment link', body: ['Connect the payment link you already use. It goes out with the quote email.'] },
         { title: 'Record a payment in one click', body: ['A bank transfer or a card payment is recorded on the trip, and the payment badge updates itself.'] }
@@ -279,7 +279,7 @@ const setup: JobPage = {
   heroTitle: 'Brands, languages, currencies and team',
   heroLead:
     'Settings for brands, languages, currencies, country tax rules and users. They apply to every trip.',
-  heroVisual: 'brands',
+  heroVisual: 'settings',
   chapters: [
     {
       id: 'brands',
@@ -296,7 +296,7 @@ const setup: JobPage = {
       id: 'languages',
       kicker: 'Languages',
       title: 'Documents in the client’s language',
-      lead: 'Quotes, emails, proposals and itineraries in Spanish, English, French and more.',
+      lead: 'Quotes, emails, proposals and itineraries in Spanish, Catalan, English, French and Italian.',
       visual: 'languages',
       features: [
         { title: 'Documents per language', body: ['Each client has a language, and every document follows it.'] },
@@ -309,7 +309,7 @@ const setup: JobPage = {
       kicker: 'Currencies',
       title: 'Several currencies',
       lead: 'Lodges in dollars, a client in pounds, your books in euros. Each quote has its own currency, and your numbers add up in yours.',
-      visual: 'payments',
+      visual: 'currencies',
       features: [
         { title: 'A currency per client and per quote', body: ['Quote a British client in pounds and an American partner in dollars, from the same catalogue.'], premium: true },
         { title: 'Supplier prices in their currency', body: ['Keep each rate in the currency the supplier invoices in. The quote converts it at the day’s rate, with a safety margin you choose.'], premium: true },
@@ -322,7 +322,7 @@ const setup: JobPage = {
       kicker: 'Country settings',
       title: 'Country tax rules',
       lead: 'Tax schemes and e-invoicing are settings, switched on for the countries that need them.',
-      visual: 'invoices',
+      visual: 'country',
       features: [
         { title: 'Travel agency VAT schemes', body: ['Where a country has a special VAT scheme for travel agencies, the right labels appear on your invoices.'] },
         { title: 'E-invoicing', body: ['Where filing is required, it is built into the invoice. In Spain, for example, Veri*Factu with its QR code.'] }

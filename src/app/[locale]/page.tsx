@@ -80,10 +80,10 @@ export default async function HomePage({ params }: Props) {
             <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody}</p>
             <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
           </div>
-          <div className="coin" style={{ background: 'var(--orange)', color: 'var(--cream)' }}>
+          <div className="coin">
             <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span>
           </div>
-          <div className="coin" style={{ background: 'var(--yellow)', color: 'var(--green)' }}>
+          <div className="coin">
             <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span>
           </div>
         </div>

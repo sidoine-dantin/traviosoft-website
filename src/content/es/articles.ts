@@ -112,7 +112,7 @@ const compares: Cmp[] = [
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'París, fundada en 2019'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Professional 75 EUR por usuario y mes (hasta 10 usuarios); Premium 100 EUR; Enterprise a consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pack de onboarding de 1.990 EUR con implantación guiada; importación de datos 390 EUR'],
-      ['Idiomas', 'Documentos en español, inglés, francés y más', 'Web y soporte en 5 idiomas: EN, FR, ES, IT, PT'],
+      ['Idiomas', 'Documentos en español, catalán, inglés, francés e italiano', 'Web y soporte en 5 idiomas: EN, FR, ES, IT, PT'],
       ['Alojamiento de datos', 'UE, un espacio propio por agencia', 'AWS Irlanda, según su web']
     ],
     otherBetter: [
@@ -220,7 +220,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Lemax es un software croata para turoperadores y DMC medianos y grandes. Comparamos para quién es cada uno, tamaño de equipo, precio y enfoque.',
     title: 'Traviosoft frente a Lemax: dos sistemas de gestión completos',
-    lead: 'Lemax es un software con más de 30 años, pensado para turoperadores y DMC medianos y grandes; su paquete Lemax GO está diseñado para equipos desde 15 usuarios, con precio acordado con cada cliente. Traviosoft cubre todo el viaje, de la primera solicitud a la última factura, en español, inglés y francés, con precio publicado.',
+    lead: 'Lemax es un software con más de 30 años, pensado para turoperadores y DMC medianos y grandes; su paquete Lemax GO está diseñado para equipos desde 15 usuarios, con precio acordado con cada cliente. Traviosoft cubre todo el viaje, de la primera solicitud a la última factura, con documentos en cinco idiomas y precio publicado.',
     card: 'Dos sistemas completos: una plataforma consolidada y un solo flujo de la solicitud a la factura con precio publicado.',
     basis:
       'Los datos de Lemax vienen de su sitio web y de prensa del sector, revisados el 3 de noviembre de 2026. Lemax acuerda el precio con cada cliente: lo indicamos como "A consultar". Sus cifras de clientes son las que ellos muestran.',
@@ -269,7 +269,7 @@ const compares: Cmp[] = [
       ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Wellington (Nueva Zelanda), fundada en 2004'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Starter desde 99 USD por usuario y mes; Pro desde 149 USD; Premium a consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pago único desde 1.199 USD, que incluye migración, configuración y formación'],
-      ['Idiomas', 'Documentos en español, inglés, francés y más', 'Inglés']
+      ['Idiomas', 'Documentos en español, catalán, inglés, francés e italiano', 'Inglés']
     ],
     otherBetter: [
       'Vendes viajes de lujo en inglés y quieres itinerarios con un diseño muy trabajado.',
@@ -287,7 +287,7 @@ const compares: Cmp[] = [
       'Si usas Tourwriter, exporta tus productos, precios y proveedores a una hoja de cálculo y nosotros los importamos en el alta. Lo habitual es terminar los viajes en curso donde están y abrir las solicitudes nuevas en Traviosoft. Más pasos en la [página Cambiar](/switch).',
     faq: [
       { q: '¿Cómo es el precio de Tourwriter?', a: ['Sus planes empiezan en 99 USD por usuario y mes (Starter) y 149 USD (Pro), con un pago único de puesta en marcha desde 1.199 USD que incluye migración y formación. Preparan un presupuesto para cada equipo, así que confirma el total con ellos.'] },
-      { q: '¿En qué idiomas trabaja cada uno?', a: ['Tourwriter trabaja en inglés. Traviosoft trabaja en español, inglés y francés, y envía los documentos en el idioma del cliente.'] },
+      { q: '¿En qué idiomas trabaja cada uno?', a: ['Tourwriter trabaja en inglés. Traviosoft trabaja en español, inglés y francés, y envía los documentos en el idioma del cliente: español, catalán, inglés, francés o italiano.'] },
       { q: '¿Puedo probar los dos?', a: ['Los dos ofrecen demostración. Lo más útil es llevar un viaje real tuyo a cada uno y comparar el itinerario que recibiría tu cliente.'] }
     ]
   }
@@ -317,7 +317,7 @@ const best: Article = {
       head: ['Programa', 'Para quién es', 'Tamaño de equipo', 'Precio', 'Idiomas', 'Fundación'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, EN, FR y más', 'Ver Sobre nosotros'],
+        ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, CA, EN, FR e IT', 'Ver Sobre nosotros'],
         ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); pack de onboarding 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT', '2019, París'],
         ['Tourplan', 'Turoperadores y DMC consolidados', 'A consultar', 'A consultar', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
         ['Tourwriter', 'DMC y diseñadores de viajes de lujo', 'De 1 a más de 20 personas según plan', 'Desde 99 USD por usuario y mes; puesta en marcha desde 1.199 USD', 'Inglés', '2004, Nueva Zelanda'],
@@ -839,7 +839,7 @@ const spainPage: Article = {
   metaDescription:
     'Traviosoft para una agencia en España: REAV en las facturas, Veri*Factu con QR, numeración por sociedad, exportación para el gestor y documentos en ES, EN y FR.',
   title: 'Software para agencias de viajes y DMC en España',
-  lead: 'Traviosoft sirve a una agencia o DMC en España con presupuestos con margen, reservas, cobros y facturas. Etiqueta el REAV en las facturas, envía Veri*Factu con QR, numera por sociedad, prepara archivos para tu gestor y saca los documentos en español, inglés y francés. Datos alojados en la UE.',
+  lead: 'Traviosoft sirve a una agencia o DMC en España con presupuestos con margen, reservas, cobros y facturas. Etiqueta el REAV en las facturas, envía Veri*Factu con QR, numera por sociedad, prepara archivos para tu gestor y saca los documentos en español, catalán, inglés, francés e italiano. Datos alojados en la UE.',
   updated: UPDATED,
   card: 'Lo que Traviosoft hace por una agencia española: REAV, Veri*Factu y exportación para el gestor.',
   blocks: [
@@ -855,7 +855,7 @@ const spainPage: Article = {
         'Veri*Factu: el envío con código QR está integrado en la factura.',
         'Numeración por sociedad: cada empresa de tu grupo mantiene su propia serie de facturas.',
         'Exportación para el gestor: un resumen en Excel o un zip con todas las facturas en PDF de cualquier periodo.',
-        'Documentos para clientes extranjeros: presupuestos, correos, propuestas e itinerarios en español, inglés y francés, con tu marca.',
+        'Documentos para clientes extranjeros: presupuestos, correos, propuestas e itinerarios en español, catalán, inglés, francés e italiano, con tu marca.',
         'Datos en la UE: cada agencia tiene su propio espacio, alojado en la Unión Europea.'
       ]
     },

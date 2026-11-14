@@ -17,6 +17,7 @@ export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
 
 /** Product fragments drawn in code (src/components/visuals.tsx). */
 export type VisualKey =
+  | 'margin' | 'commission' | 'confirm' | 'statuses' | 'rooming' | 'schedule' | 'paylink' | 'settings' | 'currencies' | 'country'
   | 'quote'
   | 'requests'
   | 'catalogue'
@@ -94,6 +95,24 @@ export type VisualText = {
   connections: string;
   days: string[];
   guide: string; halfDay: string; privateCar: string; transfers: string;
+  /** Example data that has words in it, so it reads in the page's language. */
+  ex: {
+    muller: string; event: string; reqTrip: string; reqLisbon: string; reqBarcelona: string; reqMallorca: string;
+    seasons: [string, string, string]; room: string; vat: string;
+    itinerary: [string, string, string, string];
+    mailHotel: string; mailGuide: string;
+    langNames: [string, string, string, string, string];
+    conWebsite: string; conWebsiteSub: string; conAccounting: string; conAccountingSub: string; conAi: string; on: string;
+    numLocale: string; date1: string; date2: string; date3: string;
+    net: string; commission: string; sellPrice: string;
+    commTitle: string; trip2Name: string;
+    rooming: string; double: string; twin: string; single: string;
+    supplierDue: string; toPay: string;
+    mailSubject: string; mailBody: string; payDeposit: string;
+    settings: string; langs: string; currencies: string;
+    smith: string; atlas: string; books: string;
+    countryTitle: string; vatScheme: string; qr: string;
+  };
 };
 
 export type ArticleBlock =

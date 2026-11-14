@@ -112,7 +112,7 @@ const compares: Cmp[] = [
       ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Paris, founded in 2019'],
       ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Professional 75 EUR per user a month (up to 10 users); Premium 100 EUR; Enterprise on request'],
       ['Getting started', 'Setup and import free with yearly billing', 'Onboarding pack of 1,990 EUR with a guided rollout; data import 390 EUR'],
-      ['Languages', 'Documents in Spanish, English, French and more', 'Site and support in 5 languages: EN, FR, ES, IT, PT'],
+      ['Languages', 'Documents in Spanish, Catalan, English, French and Italian', 'Site and support in 5 languages: EN, FR, ES, IT, PT'],
       ['Data hosting', 'EU, a separate space per agency', 'AWS Ireland, according to its site']
     ],
     otherBetter: [
@@ -220,7 +220,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Lemax is Croatian software for mid-size and large tour operators and DMCs. We compare who each is for, team size, pricing and focus.',
     title: 'Traviosoft vs Lemax: two complete management systems compared',
-    lead: 'Lemax is software with more than 30 years behind it, built for mid-size and large tour operators and DMCs. Its Lemax GO package is designed for teams from 15 users, priced with each client. Traviosoft covers the whole trip, from the first request to the last invoice, in Spanish, English and French, with a published price.',
+    lead: 'Lemax is software with more than 30 years behind it, built for mid-size and large tour operators and DMCs. Its Lemax GO package is designed for teams from 15 users, priced with each client. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
     card: 'Two complete systems: a long-established platform and one flow from request to invoice with a published price.',
     basis:
       'Lemax details come from its website and trade press, checked on 3 November 2026. Lemax agrees prices with each client, so we write "On request". Its customer numbers are the ones it shows.',
@@ -269,7 +269,7 @@ const compares: Cmp[] = [
       ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Wellington (New Zealand), founded in 2004'],
       ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Starter from 99 USD per user a month; Pro from 149 USD; Premium on request'],
       ['Getting started', 'Setup and import free with yearly billing', 'One-time fee from 1,199 USD, covering migration, setup and training'],
-      ['Languages', 'Documents in Spanish, English, French and more', 'English']
+      ['Languages', 'Documents in Spanish, Catalan, English, French and Italian', 'English']
     ],
     otherBetter: [
       'You sell luxury trips in English and want carefully designed itineraries.',
@@ -287,7 +287,7 @@ const compares: Cmp[] = [
       'If you use Tourwriter, export your products, prices and suppliers to a spreadsheet and we import them during setup. A common approach is to finish trips in progress where they are and open new requests in Traviosoft. More steps on the [Switching page](/switch).',
     faq: [
       { q: 'How is Tourwriter priced?', a: ['Its plans start from 99 USD per user a month (Starter) and 149 USD (Pro), with a one-time setup fee from 1,199 USD that covers migration and training. They prepare a quote for each team, so confirm the total with them.'] },
-      { q: 'Which languages does each work in?', a: ['Tourwriter works in English. Traviosoft works in Spanish, English and French, and sends documents in the client’s language.'] },
+      { q: 'Which languages does each work in?', a: ['Tourwriter works in English. Traviosoft works in Spanish, English and French, and sends documents in the client’s language: Spanish, Catalan, English, French or Italian.'] },
       { q: 'Can I try both?', a: ['Both offer a demo. The most useful test is to bring one real trip of yours to each and compare the itinerary your client would receive.'] }
     ]
   }
@@ -317,7 +317,7 @@ const best: Article = {
       head: ['Tool', 'Who it is for', 'Team size', 'Price', 'Languages', 'Founded'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', `Two plans, ${PRICES.usersIncluded} users included`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Documents in ES, EN, FR and more', 'See the About page'],
+        ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', `Two plans, ${PRICES.usersIncluded} users included`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Documents in ES, CA, EN, FR and IT', 'See the About page'],
         ['Ezus', 'DMCs, inbound agencies, tour operators and agencies', 'Professional up to 10 users; Enterprise from 30', '75 EUR per user a month (Professional); onboarding pack 1,990 EUR', 'Site and support in EN, FR, ES, IT, PT', '2019, Paris'],
         ['Tourplan', 'Established tour operators and DMCs', 'On request', 'On request', 'Site in English, Spanish and Japanese', '1986, New Zealand'],
         ['Tourwriter', 'Luxury DMCs and travel designers', '1 to 20+ people depending on plan', 'From 99 USD per user a month; setup from 1,199 USD', 'English', '2004, New Zealand'],

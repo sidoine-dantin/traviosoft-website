@@ -46,7 +46,7 @@ const sell: JobPage = {
       kicker: 'Devis',
       title: 'Marge, TVA et commission',
       lead: 'Définissez vos règles de prix une fois, et chaque ligne du devis les applique.',
-      visual: 'quote',
+      visual: 'margin',
       features: [
         { title: 'Marge, TVA et commission', body: ['Une procédure de prix transforme vos tarifs nets en prix de vente : votre marge, la bonne TVA et la commission quand une agence ou un partenaire vend le voyage.'] },
         { title: 'Prix par personne', body: ['Prix par adulte ou par enfant. Le client voit un prix clair par personne et un total.'] },
@@ -64,7 +64,7 @@ const sell: JobPage = {
       visual: 'followup',
       features: [
         { title: 'Modèles d’e-mail', body: ['Vos propres textes d’e-mail, dans chaque langue. Le devis est joint et l’e-mail est prêt à partir.'] },
-        { title: 'Dans la langue du client', body: ['Espagnol, anglais, français et plus. Le devis, l’e-mail et les documents suivent la langue du client.'] },
+        { title: 'Dans la langue du client', body: ['Espagnol, catalan, anglais, français et italien. Le devis, l’e-mail et les documents suivent la langue du client.'] },
         { title: 'Relance après 7 jours', body: ['Une semaine après l’envoi, le devis apparaît dans votre liste de relances.'] }
       ]
     },
@@ -85,7 +85,7 @@ const sell: JobPage = {
       kicker: 'Agences partenaires',
       title: 'Vendez via des agences partenaires',
       lead: 'Envoyez le devis à l’agence partenaire, gardez son client sur le voyage et réglez sa commission à partir des mêmes chiffres.',
-      visual: 'quote',
+      visual: 'commission',
       features: [
         { title: 'Le partenaire et son client', body: ['Le devis va à l’agence partenaire, les voyageurs sont ses clients. Les deux restent sur le voyage, du premier devis à la dernière facture.'] },
         { title: 'La commission dans le prix', body: ['Fixez la commission du partenaire sur le devis. Elle est dans le prix de vente dès la première ligne, et votre marge reste visible pour vous.'] },
@@ -120,7 +120,7 @@ const book: JobPage = {
       kicker: 'Voyage confirmé',
       title: 'L’acompte confirme le voyage',
       lead: 'Enregistrez le premier paiement et le devis est accepté : le voyage confirmé est créé avec toutes les prestations déjà dedans.',
-      visual: 'order',
+      visual: 'confirm',
       features: [
         { title: 'Une seule étape', body: ['Le premier paiement accepte le devis, confirme le voyage et liste toutes les prestations à réserver, en une fois.'] },
         { title: 'Tout vient du devis', body: ['Voyageurs, dates, prestations et prix viennent du devis accepté, tels que le client les a vus.'] },
@@ -132,7 +132,7 @@ const book: JobPage = {
       kicker: 'Statuts',
       title: 'Statuts de réservation, de voyage et de paiement',
       lead: 'Les statuts changent à mesure que les prestations sont confirmées et que les paiements arrivent.',
-      visual: 'order',
+      visual: 'statuses',
       features: [
         { title: 'Une liste de réservations par voyage', body: ['Hôtel, guide, voiture, billets : chaque prestation indique si elle est à réserver, en attente du prestataire ou confirmée.'] },
         { title: 'Des pastilles qui se mettent à jour seules', body: ['Quand la dernière prestation est confirmée, le voyage apparaît comme réservé. Quand le solde est payé, la pastille de paiement passe au vert.'] },
@@ -169,7 +169,7 @@ const book: JobPage = {
       kicker: 'Groupes',
       title: 'Groupes et rooming lists',
       lead: 'Listes de voyageurs, prestations pour une partie du groupe et une rooming list par hôtel.',
-      visual: 'order',
+      visual: 'rooming',
       features: [
         { title: 'La liste des voyageurs', body: ['Collez ou importez la liste depuis un tableur, ou envoyez à l’organisateur un lien vers un formulaire. Jusqu’à 200 voyageurs par voyage.'] },
         { title: 'Des prestations pour une partie du groupe', body: ['La journée golf pour douze, le dîner de gala pour tous : chaque prestation indique qui y participe, et les effectifs par hôtel suivent.'] },
@@ -215,7 +215,7 @@ const getPaid: JobPage = {
       kicker: 'Échéancier',
       title: 'Acompte et solde avec échéances',
       lead: 'L’acompte et le solde sont fixés dans le devis, avec leurs échéances.',
-      visual: 'payments',
+      visual: 'schedule',
       features: [
         { title: 'Acompte et solde', body: ['Un pourcentage ou un montant, chacun avec sa date d’échéance, sur chaque voyage.'] },
         { title: 'Ce qui est dû cette semaine', body: ['Tous les paiements dus ou échus, sur l’ensemble de vos voyages, dans une seule liste.'] },
@@ -227,7 +227,7 @@ const getPaid: JobPage = {
       kicker: 'Liens de paiement',
       title: 'Liens de paiement dans l’e-mail',
       lead: 'Votre lien de paiement part avec l’e-mail, et le client paie depuis ce lien.',
-      visual: 'payments',
+      visual: 'paylink',
       features: [
         { title: 'Votre propre lien de paiement', body: ['Connectez le lien de paiement que vous utilisez déjà. Il part avec l’e-mail du devis.'] },
         { title: 'Enregistrez un paiement en un clic', body: ['Un virement ou un paiement par carte est enregistré sur le voyage, et la pastille de paiement se met à jour seule.'] }
@@ -279,7 +279,7 @@ const setup: JobPage = {
   heroTitle: 'Marques, langues, devises et équipe',
   heroLead:
     'Réglages des marques, langues, devises, règles fiscales par pays et utilisateurs. Ils s’appliquent à chaque voyage.',
-  heroVisual: 'brands',
+  heroVisual: 'settings',
   chapters: [
     {
       id: 'brands',
@@ -296,7 +296,7 @@ const setup: JobPage = {
       id: 'languages',
       kicker: 'Langues',
       title: 'Des documents dans la langue du client',
-      lead: 'Devis, e-mails, propositions et programmes en espagnol, anglais, français et plus.',
+      lead: 'Devis, e-mails, propositions et programmes en espagnol, catalan, anglais, français et italien.',
       visual: 'languages',
       features: [
         { title: 'Documents par langue', body: ['Chaque client a une langue, et chaque document la suit.'] },
@@ -309,7 +309,7 @@ const setup: JobPage = {
       kicker: 'Devises',
       title: 'Plusieurs devises',
       lead: 'Des lodges en dollars, un client en livres, votre comptabilité en euros. Chaque devis a sa devise, et vos chiffres se totalisent dans la vôtre.',
-      visual: 'payments',
+      visual: 'currencies',
       features: [
         { title: 'Une devise par client et par devis', body: ['Chiffrez un client britannique en livres et un partenaire américain en dollars, depuis le même catalogue.'], premium: true },
         { title: 'Les prix fournisseurs dans leur devise', body: ['Gardez chaque tarif dans la devise de facturation du prestataire. Le devis le convertit au cours du jour, avec la marge de sécurité de votre choix.'], premium: true },
@@ -322,7 +322,7 @@ const setup: JobPage = {
       kicker: 'Réglages par pays',
       title: 'Règles fiscales par pays',
       lead: 'Les régimes fiscaux et la facturation électronique sont des réglages, activés pour les pays qui en ont besoin.',
-      visual: 'invoices',
+      visual: 'country',
       features: [
         { title: 'Régimes de TVA des agences de voyages', body: ['Quand un pays a un régime spécial de TVA pour les agences de voyages, les bonnes mentions apparaissent sur vos factures.'] },
         { title: 'Facturation électronique', body: ['Là où la transmission est obligatoire, elle est intégrée à la facture. En Espagne, par exemple, Veri*Factu avec son code QR.'] }

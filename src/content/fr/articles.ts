@@ -112,7 +112,7 @@ const compares: Cmp[] = [
       ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Paris, fondée en 2019'],
       ['Prix publié', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Professional 75 EUR par utilisateur et par mois (jusqu’à 10 utilisateurs) ; Premium 100 EUR ; Enterprise sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Pack d’onboarding de 1 990 EUR avec déploiement accompagné ; import de données 390 EUR'],
-      ['Langues', 'Documents en français, anglais, espagnol et plus', 'Site et support en 5 langues : EN, FR, ES, IT, PT'],
+      ['Langues', 'Documents en français, anglais, espagnol, italien et catalan', 'Site et support en 5 langues : EN, FR, ES, IT, PT'],
       ['Hébergement des données', 'UE, un espace à part pour chaque agence', 'AWS Irlande, d’après son site']
     ],
     otherBetter: [
@@ -220,7 +220,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Lemax est un logiciel croate pour tour-opérateurs et DMC moyens et grands. Pour qui est chacun, taille d’équipe, prix et approche comparés.',
     title: 'Traviosoft ou Lemax : deux systèmes de gestion complets',
-    lead: 'Lemax est un logiciel de plus de 30 ans, conçu pour les tour-opérateurs et DMC moyens et grands. Son offre Lemax GO s’adresse aux équipes à partir de 15 utilisateurs, avec un prix convenu avec chaque client. Traviosoft couvre tout le voyage, de la première demande à la dernière facture, en espagnol, anglais et français, avec un prix publié.',
+    lead: 'Lemax est un logiciel de plus de 30 ans, conçu pour les tour-opérateurs et DMC moyens et grands. Son offre Lemax GO s’adresse aux équipes à partir de 15 utilisateurs, avec un prix convenu avec chaque client. Traviosoft couvre tout le voyage, de la première demande à la dernière facture, avec des documents en cinq langues et un prix publié.',
     card: 'Deux systèmes complets : une plateforme établie et un seul flux de la demande à la facture avec prix publié.',
     basis:
       'Les informations sur Lemax viennent de son site et de la presse du secteur, vérifiées le 3 novembre 2026. Lemax convient de ses prix avec chaque client : nous écrivons "Sur demande". Ses chiffres de clients sont ceux qu’il affiche.',
@@ -269,7 +269,7 @@ const compares: Cmp[] = [
       ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Wellington (Nouvelle-Zélande), fondée en 2004'],
       ['Prix publié', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Starter à partir de 99 USD par utilisateur et par mois ; Pro à partir de 149 USD ; Premium sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Frais uniques à partir de 1 199 USD, migration, configuration et formation comprises'],
-      ['Langues', 'Documents en français, anglais, espagnol et plus', 'Anglais']
+      ['Langues', 'Documents en français, anglais, espagnol, italien et catalan', 'Anglais']
     ],
     otherBetter: [
       'Vous vendez des voyages de luxe en anglais et voulez des programmes très soignés.',
@@ -287,7 +287,7 @@ const compares: Cmp[] = [
       'Si vous utilisez Tourwriter, exportez vos produits, prix et fournisseurs vers un tableur : nous les importons pendant la mise en place. En général, on termine les voyages en cours là où ils sont et on ouvre les nouvelles demandes dans Traviosoft. Plus d’étapes sur la [page Changer](/switch).',
     faq: [
       { q: 'Comment Tourwriter est-il tarifé ?', a: ['Ses offres démarrent à 99 USD par utilisateur et par mois (Starter) et 149 USD (Pro), avec des frais de démarrage uniques à partir de 1 199 USD qui couvrent la migration et la formation. Ils établissent un devis pour chaque équipe : confirmez le total avec eux.'] },
-      { q: 'Dans quelles langues fonctionne chacun ?', a: ['Tourwriter fonctionne en anglais. Traviosoft fonctionne en français, anglais et espagnol, et envoie les documents dans la langue du client.'] },
+      { q: 'Dans quelles langues fonctionne chacun ?', a: ['Tourwriter fonctionne en anglais. Traviosoft fonctionne en français, anglais et espagnol, et envoie les documents dans la langue du client : français, anglais, espagnol, italien ou catalan.'] },
       { q: 'Puis-je essayer les deux ?', a: ['Les deux proposent une démonstration. Le test le plus utile : apporter un vrai voyage à chacun et comparer le programme que recevrait votre client.'] }
     ]
   }
