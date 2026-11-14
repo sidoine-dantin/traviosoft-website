@@ -208,7 +208,7 @@ export type SiteContent = {
     steps: { time: string; title: string; body: string; job: JobSlug }[];
     stepGo: string;
     baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
-    priceTitle: string; priceBody: string; coin1: string; coin2: string; priceLink: string;
+    priceTitle: string; priceBody: string; coin1: string; coin2: string; coinUsers: string; priceNote: string; priceLink: string;
     facts: { k: string; v: string }[];
   };
   jobs: Record<JobSlug, JobPage>;

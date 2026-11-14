@@ -41,8 +41,10 @@ export const home: SiteContent['home'] = {
     'La solicitud, el presupuesto, las reservas, los cobros y las facturas están en el mismo viaje, y todo el equipo ve lo mismo.',
   priceTitle: 'Precios',
   priceBody: `Dos planes, Classic y Premium, con ${PRICES.usersIncluded} usuarios incluidos. Pago anual o mensual.`,
-  coin1: 'EUR/mes · Classic',
-  coin2: 'EUR/mes · Premium',
+  coin1: 'EUR/mes* · Classic',
+  coin2: 'EUR/mes* · Premium',
+  coinUsers: `${PRICES.usersIncluded} usuarios`,
+  priceNote: '* Al mes, pago anual, IVA no incluido. Todos los detalles en la página de precios.',
   priceLink: 'Comparar planes',
   facts: [
     { k: 'Precio', v: `Desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos` },

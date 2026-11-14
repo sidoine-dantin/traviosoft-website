@@ -41,8 +41,10 @@ export const home: SiteContent['home'] = {
     'La demande, le devis, les réservations, les paiements et les factures sont sur le même voyage, et toute l’équipe voit la même chose.',
   priceTitle: 'Tarifs',
   priceBody: `Deux offres, Classic et Premium, avec ${PRICES.usersIncluded} utilisateurs inclus. Facturation annuelle ou mensuelle.`,
-  coin1: 'EUR/mois · Classic',
-  coin2: 'EUR/mois · Premium',
+  coin1: 'EUR/mois* · Classic',
+  coin2: 'EUR/mois* · Premium',
+  coinUsers: `${PRICES.usersIncluded} utilisateurs`,
+  priceNote: '* Par mois, facturation annuelle, hors TVA. Tous les détails sur la page Tarifs.',
   priceLink: 'Comparer les offres',
   facts: [
     { k: 'Prix', v: `Dès ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus` },

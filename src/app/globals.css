@@ -218,6 +218,10 @@
 /* ---------- price coins ---------- */
 .coins { display: grid; grid-template-columns: 1fr auto auto; gap: 48px; align-items: center; background: var(--yellow); border-radius: 32px; padding: clamp(32px, 5vw, 64px); }
 .coins .muted { color: var(--deep); }
+.coin .users { margin-top: 4px; opacity: .85; }
+.price-note { grid-column: 1 / -1; margin: 0; font-size: 13px; color: var(--deep); }
+.price-note a { color: inherit; text-decoration: none; }
+.price-note a:hover { text-decoration: underline; }
 .coin { width: 240px; height: 240px; border-radius: 50%; display: grid; place-content: center; text-align: center; background: var(--deep); color: var(--white); transform: rotate(-6deg); }
 .coin + .coin { transform: rotate(5deg); }
 .coin .n { font-family: var(--figure); font-weight: 800; font-variation-settings: "wdth" 75; font-size: 96px; line-height: .85; }

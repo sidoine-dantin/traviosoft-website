@@ -84,11 +84,12 @@ export default async function HomePage({ params }: Props) {
             <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}>{h.priceLink} →</Link></p>
           </div>
           <div className="coin">
-            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span>
+            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span><span className="lbl users">{h.coinUsers}</span>
           </div>
           <div className="coin">
-            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span>
+            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span><span className="lbl users">{h.coinUsers}</span>
           </div>
+          <p className="price-note"><Link href="/pricing">{h.priceNote}</Link></p>
         </div>
         <div className="wrap" style={{ marginTop: 'clamp(56px, 8vw, 96px)', color: 'var(--green)' }}>
           <KeyFacts facts={h.facts} />
