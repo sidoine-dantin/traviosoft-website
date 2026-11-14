@@ -19,7 +19,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'reav',
     term: 'REAV (il regime IVA speciale spagnolo per le agenzie di viaggio)',
-    def: 'Il regime IVA speciale spagnolo per le agenzie che vendono, in nome proprio, servizi acquistati da altri. L’IVA non si applica sul prezzo intero ma sul margine dell’agenzia. Verifica il tuo caso con il tuo commercialista.'
+    def: 'Il regime IVA speciale spagnolo per le agenzie che vendono, in nome proprio, servizi acquistati da altri. L’IVA non si applica sul prezzo intero ma sul margine dell’agenzia. È previsto dagli articoli da 141 a 147 della legge IVA spagnola (Ley 37/1992).'
   },
   {
     id: 'rooming-list',
@@ -74,6 +74,6 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'verifactu',
     term: 'Veri*Factu',
-    def: 'Un sistema dell’agenzia delle entrate spagnola (AEAT) in cui il software di fatturazione invia ogni fattura all’amministrazione fiscale al momento dell’emissione e aggiunge un codice QR. È previsto dal Real Decreto 1007/2023. Verifica le scadenze in vigore presso l’AEAT.'
+    def: 'Le regole dell’agenzia delle entrate spagnola (AEAT) per i software di fatturazione, previste dal Real Decreto 1007/2023: ogni fattura viene registrata senza possibilità di modifica e riporta un codice QR. In modalità Veri*Factu, il software invia anche ogni fattura all’amministrazione fiscale al momento dell’emissione. I software devono essere pronti entro il 1° gennaio 2027 per le società soggette all’imposta sulle società, ed entro il 1° luglio 2027 per gli altri.'
   }
 ];

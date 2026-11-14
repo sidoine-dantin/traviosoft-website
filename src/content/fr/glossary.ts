@@ -19,7 +19,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'reav',
     term: 'REAV (régime espagnol de TVA des agences de voyages)',
-    def: 'Régime spécial de TVA en Espagne pour les agences qui vendent en leur nom des prestations achetées à des tiers. La TVA ne porte pas sur le prix total mais sur la marge de l’agence, comme pour la TVA sur la marge en France. À valider avec votre comptable.'
+    def: 'Régime spécial de TVA en Espagne pour les agences qui vendent en leur nom des prestations achetées à des tiers. La TVA ne porte pas sur le prix total mais sur la marge de l’agence, comme pour la TVA sur la marge en France. Il est fixé par les articles 141 à 147 de la loi espagnole sur la TVA (Ley 37/1992).'
   },
   {
     id: 'rooming-list',
@@ -74,6 +74,6 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'verifactu',
     term: 'Veri*Factu',
-    def: 'Système de l’administration fiscale espagnole (AEAT) dans lequel le logiciel de facturation transmet chaque facture au fisc au moment de son émission et ajoute un code QR. Il est prévu par le décret royal 1007/2023. Vérifiez les échéances en vigueur auprès de l’AEAT.'
+    def: 'Les règles de l’administration fiscale espagnole (AEAT) pour les logiciels de facturation, fixées par le décret royal 1007/2023 : chaque facture est enregistrée sans modification possible et porte un code QR. En mode Veri*Factu, le logiciel transmet aussi chaque facture au fisc au moment de son émission. Les logiciels doivent être prêts au 1er janvier 2027 pour les sociétés soumises à l’impôt sur les sociétés, et au 1er juillet 2027 pour les autres.'
   }
 ];

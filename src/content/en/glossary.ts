@@ -19,7 +19,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'reav',
     term: 'REAV (Spain’s special VAT scheme for travel agencies)',
-    def: 'Spain’s special VAT scheme for agencies that sell, in their own name, services bought from others. VAT is not charged on the full price but on the agency’s margin. Check your case with your accountant.'
+    def: 'Spain’s special VAT scheme for agencies that sell, in their own name, services bought from others. VAT is not charged on the full price but on the agency’s margin. It is set out in articles 141 to 147 of the Spanish VAT law (Ley 37/1992).'
   },
   {
     id: 'rooming-list',
@@ -74,6 +74,6 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'verifactu',
     term: 'Veri*Factu',
-    def: 'A system of the Spanish tax authority (AEAT) in which the invoicing software sends each invoice to the tax office when it is issued and adds a QR code. It is set out in Royal Decree 1007/2023. Check the current deadlines with the AEAT.'
+    def: 'The rules of the Spanish tax authority (AEAT) for invoicing software, set out in Royal Decree 1007/2023: each invoice is recorded so that it cannot be altered, and carries a QR code. In the Veri*Factu mode, the software also sends each invoice to the tax office when it is issued. Software must be ready by 1 January 2027 for companies paying corporate tax, and by 1 July 2027 for the others.'
   }
 ];

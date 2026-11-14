@@ -19,7 +19,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'reav',
     term: 'REAV (o regime especial de IVA espanhol para agências de viagens)',
-    def: 'O regime especial de IVA espanhol para agências que vendem, em nome próprio, serviços comprados a terceiros. O IVA não incide sobre o preço total, mas sobre a margem da agência. Confirme o seu caso com o seu contabilista.'
+    def: 'O regime especial de IVA espanhol para agências que vendem, em nome próprio, serviços comprados a terceiros. O IVA não incide sobre o preço total, mas sobre a margem da agência. Está previsto nos artigos 141 a 147 da lei espanhola do IVA (Ley 37/1992).'
   },
   {
     id: 'rooming-list',
@@ -74,6 +74,6 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'verifactu',
     term: 'Veri*Factu',
-    def: 'Um sistema da administração fiscal espanhola (AEAT) em que o software de faturação envia cada fatura à administração fiscal no momento da emissão e acrescenta um código QR. Está previsto no Real Decreto 1007/2023. Confirme os prazos em vigor junto da AEAT.'
+    def: 'As regras da administração fiscal espanhola (AEAT) para o software de faturação, previstas no Real Decreto 1007/2023: cada fatura fica registada sem possibilidade de alteração e tem um código QR. Na modalidade Veri*Factu, o software envia também cada fatura à administração fiscal no momento da emissão. O software tem de estar pronto até 1 de janeiro de 2027 para as empresas sujeitas ao imposto sobre as sociedades, e até 1 de julho de 2027 para as restantes.'
   }
 ];

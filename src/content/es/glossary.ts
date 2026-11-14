@@ -19,7 +19,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'reav',
     term: 'REAV (Régimen Especial de Agencias de Viajes)',
-    def: 'Régimen especial del IVA en España para agencias de viajes que venden en nombre propio servicios comprados a terceros. El IVA no se calcula sobre el precio total, sino sobre el margen de la agencia. Consulta tu caso con tu gestor.'
+    def: 'Régimen especial del IVA en España para agencias de viajes que venden en nombre propio servicios comprados a terceros. El IVA no se calcula sobre el precio total, sino sobre el margen de la agencia. Lo regulan los artículos 141 a 147 de la Ley 37/1992 del IVA.'
   },
   {
     id: 'rooming-list',
@@ -74,6 +74,6 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'verifactu',
     term: 'Veri*Factu',
-    def: 'Sistema de la Agencia Tributaria (AEAT) por el que el programa de facturación envía cada factura a Hacienda en el momento de emitirla y añade un código QR. Se regula en el Real Decreto 1007/2023. Consulta los plazos vigentes en la AEAT.'
+    def: 'Las reglas de la Agencia Tributaria (AEAT) para los programas de facturación, recogidas en el Real Decreto 1007/2023: cada factura queda registrada sin posibilidad de alterarla y lleva un código QR. En la modalidad Veri*Factu, el programa además envía cada factura a Hacienda al emitirla. Los programas deben estar adaptados antes del 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y antes del 1 de julio de 2027 para el resto.'
   }
 ];

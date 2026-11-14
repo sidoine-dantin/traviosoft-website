@@ -795,7 +795,7 @@ const verifactu: Article = {
   metaDescription:
     'Qué es Veri*Factu, a quién afecta, qué cambia en la facturación de una agencia de viajes, el código QR y cómo comprobar los plazos en la AEAT.',
   title: 'Veri*Factu para agencias de viajes: qué es y qué cambia',
-  lead: 'Veri*Factu es el sistema de la Agencia Tributaria por el que el programa de facturación envía cada factura a Hacienda al emitirla y añade un código QR. Se regula en el Real Decreto 1007/2023 y, según el Real Decreto-ley 15/2025, se aplica desde el 1 de enero de 2027 a las sociedades y desde el 1 de julio de 2027 al resto.',
+  lead: 'Veri*Factu son las reglas de la Agencia Tributaria para los programas de facturación: cada factura queda registrada sin posibilidad de alterarla y lleva un código QR, y en la modalidad Veri*Factu se envía a Hacienda al emitirla. Lo regula el Real Decreto 1007/2023 y, según el Real Decreto-ley 15/2025, los programas deben estar adaptados antes del 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y antes del 1 de julio de 2027 para el resto.',
   updated: '2026-11-14',
   card: 'Qué es, quién debe cumplirlo y cómo cambia la factura de una agencia de viajes.',
   blocks: [
@@ -811,7 +811,7 @@ const verifactu: Article = {
     { type: 'h2', text: 'A quién afecta', id: 'a-quien' },
     {
       type: 'p',
-      text: 'A empresarios y profesionales que emiten facturas con un programa informático, lo que incluye a las agencias de viajes. Hay excepciones: quienes ya informan a Hacienda con el Suministro Inmediato de Información (SII) y los territorios con régimen foral propio, que tienen sus sistemas.'
+      text: 'A empresarios y profesionales que emiten facturas con un programa informático, lo que incluye a las agencias de viajes. Hay excepciones: quienes ya llevan sus libros registro con el Suministro Inmediato de Información (SII, artículo 62.6 del Reglamento del IVA) y los territorios con régimen foral propio, que tienen sus sistemas.'
     },
     { type: 'h2', text: 'Qué implica para una agencia', id: 'que-cambia' },
     {
@@ -826,12 +826,12 @@ const verifactu: Article = {
     { type: 'h2', text: 'El código QR', id: 'qr' },
     {
       type: 'p',
-      text: 'Las facturas incluyen un código QR que lleva a la sede de la AEAT, donde el cliente puede comprobar que la factura está registrada. En la modalidad Veri*Factu el QR va acompañado de la mención VERI*FACTU. Es una comprobación para el destinatario, no un trámite que tengas que hacer a mano.'
+      text: 'Las facturas incluyen un código QR que lleva a la sede de la AEAT, donde el cliente puede, si quiere, enviar los datos de la factura. En la modalidad Veri*Factu, la factura lleva además la mención «Factura verificable en la sede electrónica de la AEAT» o «VERI*FACTU», y la consulta confirma al cliente que la factura se ha enviado a Hacienda. Es una comprobación voluntaria para el destinatario, no un trámite que tengas que hacer a mano.'
     },
     { type: 'h2', text: 'Plazos', id: 'plazos' },
     {
       type: 'p',
-      text: 'El Real Decreto-ley 15/2025 fija el 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y el 1 de julio de 2027 para autónomos y demás obligados. El calendario vigente se publica en la sede de la AEAT y en el BOE.'
+      text: 'El Real Decreto-ley 15/2025, convalidado por el Congreso el 11 de diciembre de 2025, fija que los programas estén adaptados antes del 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y antes del 1 de julio de 2027 para autónomos y demás obligados. El calendario vigente se publica en la sede de la AEAT y en el BOE.'
     },
     { type: 'h2', text: 'Cómo lo resuelve Traviosoft', id: 'traviosoft' },
     {
@@ -904,7 +904,7 @@ const spainPage: Article = {
   ]
 };
 
-// The REAV guide stays off the site until a tax adviser has read it.
+// The REAV guide stays off the site until articles 141 to 147 of Ley 37/1992 are read from the BOE and its claims checked against them.
 // To publish it, add reav back to the articles list.
 void reav;
 const aiTools: Article = {
