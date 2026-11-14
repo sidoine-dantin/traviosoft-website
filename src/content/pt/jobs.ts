@@ -37,7 +37,7 @@ const sell: JobPage = {
         { title: 'Períodos de preço por data', body: ['Época baixa, média e alta, eventos especiais, tarifas de novos contratos. Cada produto guarda os seus preços por período, e o orçamento usa o que corresponde às datas da viagem.'] },
         { title: 'Vários fornecedores por produto', body: ['Tenha duas empresas de transfers ou três guias para o mesmo serviço, cada um com as suas tarifas, e escolha um por viagem.'] },
         { title: 'Opções', body: ['Tipos de quarto, meia-pensão, carro privado ou partilhado: as opções estão ligadas ao produto, com o seu próprio preço.'] },
-        { title: 'Pacotes prontos', body: ['Guarde uma vez os seus circuitos clássicos. Junte o pacote completo a um orçamento num clique e ajuste o que muda.'] },
+        { title: 'Pacotes prontos', body: ['Guarde uma vez os seus circuitos clássicos. Adicione o pacote completo a um orçamento num clique e ajuste o que muda.'] },
         { title: 'Traduções automáticas', body: ['Escreva uma vez a descrição de um produto. É traduzida para os seus clientes na língua deles.'] }
       ]
     },
@@ -98,7 +98,7 @@ const sell: JobPage = {
     { q: 'Posso importar o meu catálogo atual?', a: ['Sim. Durante a implementação importamos os seus produtos, preços e fornecedores a partir das suas folhas de cálculo. A implementação e a importação são gratuitas com faturação anual.'] },
     { q: 'Vários fornecedores podem vender o mesmo hotel ou serviço?', a: ['Sim. Um produto pode ter vários fornecedores, cada um com as suas tarifas. Escolhe o fornecedor em cada viagem.'] },
     { q: 'O que vê o meu cliente?', a: ['Um orçamento limpo com nomes pensados para ele, preços por pessoa, o que está incluído e o que não está, na língua dele e com a sua marca. As suas tarifas net e as suas margens ficam reservadas à sua equipa.'] },
-    { q: 'Tenho de usar o catálogo em todos os orçamentos?', a: ['Não. Um orçamento pode juntar linhas do catálogo e linhas livres.'] }
+    { q: 'Tenho de usar o catálogo em todos os orçamentos?', a: ['Não. Um orçamento pode adicionar linhas do catálogo e linhas livres.'] }
   ]
 };
 
@@ -124,7 +124,7 @@ const book: JobPage = {
       features: [
         { title: 'Um só passo', body: ['O primeiro pagamento aceita o orçamento, confirma a viagem e lista todos os serviços a reservar, de uma só vez.'] },
         { title: 'Tudo a partir do orçamento', body: ['Viajantes, datas, serviços e preços vêm do orçamento aceite, exatamente como o cliente os viu.'] },
-        { title: 'Alterações depois da confirmação', body: ['O cliente junta uma noite? Atualize a viagem e as reservas acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
+        { title: 'Alterações depois da confirmação', body: ['O cliente acrescenta uma noite? Atualize a viagem e as reservas acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
       ]
     },
     {
@@ -134,7 +134,7 @@ const book: JobPage = {
       lead: 'Os estados mudam à medida que os serviços são confirmados e os pagamentos chegam.',
       visual: 'statuses',
       features: [
-        { title: 'Uma lista de reservas por viagem', body: ['Hotel, guia, carro, bilhetes: cada serviço mostra se está a reservar, à espera do fornecedor ou confirmado.'] },
+        { title: 'Uma lista de reservas por viagem', body: ['Hotel, guia, carro, bilhetes: cada serviço mostra se está por reservar, à espera do fornecedor ou confirmado.'] },
         { title: 'Indicadores que se atualizam sozinhos', body: ['Quando o último serviço é confirmado, a viagem aparece como reservada. Quando o saldo é pago, o indicador de pagamento fica verde.'] },
         { title: 'Arquivo', body: ['As viagens concluídas vão para o arquivo e continuam pesquisáveis. Um registo apagado pode ser recuperado da reciclagem.'] }
       ]
@@ -146,10 +146,10 @@ const book: JobPage = {
       lead: 'Contactos, documentos e emails, guardados no fornecedor e na viagem.',
       visual: 'suppliers',
       features: [
-        { title: 'Emails dos fornecedores guardados por si', body: ['As confirmações e respostas dos fornecedores chegam à viagem a que pertencem.'] },
+        { title: 'Emails dos fornecedores guardados automaticamente', body: ['As confirmações e respostas dos fornecedores chegam à viagem a que pertencem.'] },
         { title: 'Vouchers de serviço', body: ['Envie a cada guia, motorista ou hotel um voucher claro com datas, nomes e detalhes, diretamente da viagem.'] },
         { title: 'Fichas de fornecedor', body: ['Contactos, contratos, fotografias e o que cada fornecedor inclui, guardados no fornecedor e reutilizados em cada viagem.'] },
-        { title: 'Pedidos de disponibilidade e encomendas a fornecedores', body: ['Peça disponibilidade a um hotel e depois envie a encomenda a partir da viagem. As respostas e as alterações voltam à reserva.'], premium: true }
+        { title: 'Pedidos de disponibilidade e notas de encomenda a fornecedores', body: ['Peça disponibilidade a um hotel e depois envie a nota de encomenda a partir da viagem. As respostas e as alterações voltam à reserva.'], premium: true }
       ]
     },
     {
@@ -192,7 +192,7 @@ const book: JobPage = {
   ],
   faq: [
     { q: 'Os meus guias e motoristas podem ver a viagem?', a: ['Recebem por email um voucher de serviço com o que precisam: datas, horas, nomes e ponto de encontro.'] },
-    { q: 'O que acontece se o cliente mudar uma data?', a: ['Atualize a viagem. Os serviços, a página de itinerário e os vouchers acompanham a alteração, e os serviços a reservar de novo voltam a aparecer como a reservar.'] },
+    { q: 'O que acontece se o cliente mudar uma data?', a: ['Atualize a viagem. Os serviços, a página de itinerário e os vouchers acompanham a alteração, e os serviços a reservar de novo voltam a aparecer como por reservar.'] },
     { q: 'Como chegam os emails dos fornecedores à viagem?', a: ['Os emails dos fornecedores ficam guardados automaticamente na viagem.'] }
   ]
 };
@@ -262,7 +262,7 @@ const getPaid: JobPage = {
     }
   ],
   faq: [
-    { q: 'Que meios de pagamento funcionam?', a: ['Junta o link de pagamento do serviço que já usa. O cliente paga aí, e regista o pagamento na viagem.'] },
+    { q: 'Que meios de pagamento funcionam?', a: ['Adiciona o link de pagamento do serviço que já usa. O cliente paga aí, e regista o pagamento na viagem.'] },
     { q: 'O meu contabilista pode receber os ficheiros?', a: ['Sim. Exporte um resumo em Excel ou um zip com todos os PDF das faturas para qualquer período.'] },
     { q: 'Segue as regras do meu país?', a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. Os regimes próprios de cada país ativam-se nas definições. Para o seu país, pergunte-nos na demonstração.'] }
   ]
@@ -300,7 +300,7 @@ const setup: JobPage = {
       visual: 'languages',
       features: [
         { title: 'Documentos por língua', body: ['Cada cliente tem uma língua, e cada documento segue-a.'] },
-        { title: 'Traduções automáticas', body: ['As descrições dos produtos do catálogo são traduzidas por si, e pode corrigir qualquer tradução.'] },
+        { title: 'Traduções automáticas', body: ['As descrições dos produtos do catálogo são traduzidas automaticamente, e pode corrigir qualquer tradução.'] },
         { title: 'Modelos de email por língua', body: ['Os seus próprios textos em cada língua, usados automaticamente.'] }
       ]
     },
@@ -308,13 +308,13 @@ const setup: JobPage = {
       id: 'currencies',
       kicker: 'Moedas',
       title: 'Várias moedas',
-      lead: 'Lodges em dólares, um cliente em libras, a sua contabilidade em euros. Cada orçamento tem a sua moeda, e os seus números somam na sua.',
+      lead: 'Lodges em dólares, um cliente em libras, a sua contabilidade em euros. Cada orçamento tem a sua moeda, e os totais somam-se na sua.',
       visual: 'currencies',
       features: [
         { title: 'Uma moeda por cliente e por orçamento', body: ['Faça o orçamento a um cliente britânico em libras e a um parceiro americano em dólares, a partir do mesmo catálogo.'], premium: true },
         { title: 'Os preços dos fornecedores na moeda deles', body: ['Guarde cada tarifa na moeda em que o fornecedor fatura. O orçamento converte-a ao câmbio do dia, com uma margem de segurança que escolhe.'], premium: true },
         { title: 'Câmbios diários', body: ['Os câmbios do Banco Central Europeu são obtidos em cada dia útil, ou define os seus.'], premium: true },
-        { title: 'A sua contabilidade numa só moeda', body: ['Faturas, pagamentos, margens e relatórios somam na sua moeda contabilística, com as diferenças de câmbio calculadas por si.'], premium: true }
+        { title: 'A sua contabilidade numa só moeda', body: ['Faturas, pagamentos, margens e relatórios somam-se na sua moeda contabilística, com as diferenças de câmbio calculadas automaticamente.'], premium: true }
       ]
     },
     {

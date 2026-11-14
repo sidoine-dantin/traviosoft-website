@@ -53,7 +53,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Pratiche e prenotazioni, con le email dei fornitori archiviate sul viaggio', classic: true, premium: true },
         { f: 'Voucher di servizio', classic: true, premium: true },
         { f: 'Gruppi: liste dei viaggiatori, link a un modulo e rooming list', classic: false, premium: true },
-        { f: 'Richieste di disponibilità e ordini ai fornitori', classic: false, premium: true }
+        { f: 'Richieste di disponibilità e ordini di acquisto ai fornitori', classic: false, premium: true }
       ]
     },
     {
@@ -92,7 +92,7 @@ export const pricing: SiteContent['pricing'] = {
   faq: [
     {
       q: 'Quale piano mi serve?',
-      a: ['Classic gestisce un’intera agenzia: richieste, preventivi, partner, prenotazioni, pagamenti e fatture. Premium aggiunge gruppi, promemoria di pagamento automatici, più team, vendita in altre valute e ordini ai fornitori.']
+      a: ['Classic gestisce un’intera agenzia: richieste, preventivi, partner, prenotazioni, pagamenti e fatture. Premium aggiunge gruppi, promemoria di pagamento automatici, più team, vendita in altre valute e ordini di acquisto ai fornitori.']
     },
     {
       q: 'Come viene fatturato?',
@@ -100,7 +100,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'I prezzi sono con o senza IVA?',
-      a: ['Senza. L’IVA si aggiunge in fattura secondo il tuo paese e la forma della tua azienda.']
+      a: ['Senza. L’IVA si aggiunge in fattura secondo il tuo paese e la forma giuridica della tua azienda.']
     },
     {
       q: 'E se aggiungo un utente?',
@@ -124,7 +124,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Cosa comprende l’importazione?',
-      a: [`Il tuo catalogo con i prezzi, i tuoi clienti e i tuoi fornitori, da fogli di calcolo o da un export del tuo strumento attuale, con una riga per elemento e le stesse colonne dall’inizio alla fine. È gratuita con fatturazione annuale e costa ${PRICES.importMonthly} EUR una tantum con fatturazione mensile.`, 'Documenti Word, PDF, email, viaggi in corso e liste da riordinare prima si importano su preventivo, dopo aver visto un esempio.']
+      a: [`Il tuo catalogo con i prezzi, i tuoi clienti e i tuoi fornitori, da fogli di calcolo o da un export del tuo strumento attuale, con una riga per elemento e le stesse colonne dall’inizio alla fine. È gratuita con fatturazione annuale e costa ${PRICES.importMonthly} EUR una tantum con fatturazione mensile.`, 'Documenti Word, PDF, email, viaggi in corso e liste da riordinare prima hanno un prezzo su preventivo, dopo aver visto un esempio.']
     }
   ]
 };
@@ -138,7 +138,7 @@ export const demo: SiteContent['demo'] = {
   agendaTitle: 'La chiamata',
   agenda: [
     { mins: '5', title: 'La tua agenzia', body: 'Dimensione del team, cosa vendi e gli strumenti che usi oggi.' },
-    { mins: '15', title: 'Un viaggio di esempio', body: 'La richiesta, il preventivo con il margine, la pratica, l’itinerario, il pagamento e la fattura. Un viaggio di coppia, un gruppo incentive o un safari.' },
+    { mins: '15', title: 'Un viaggio di esempio', body: 'La richiesta, il preventivo con il margine, le prenotazioni, il programma di viaggio, il pagamento e la fattura. Un viaggio di coppia, un gruppo incentive o un safari.' },
     { mins: '10', title: 'Prezzi e domande', body: 'Il piano per il tuo team, l’importazione dei tuoi dati e le tue domande.' }
   ],
   bringTitle: 'Chi invitare',
@@ -210,7 +210,7 @@ export const switching: SiteContent['switching'] = {
     { title: 'Incluso nel prezzo dell’importazione', body: 'Il tuo catalogo con le tariffe, i tuoi clienti, i tuoi fornitori e i loro contatti. Da fogli di calcolo o da un export del tuo strumento attuale.' },
     { title: 'Su preventivo', body: 'Viaggi in corso e altri file (Word, PDF, email). Ti diamo un prezzo dopo aver visto un esempio.' }
   ],
-  seasonTitle: 'Disturberà la mia stagione?',
+  seasonTitle: 'Creerà problemi durante la stagione?',
   seasonBody: [
     'Le nuove richieste entrano in Traviosoft dal giorno in cui sei operativo. I viaggi già in corso si concludono come sono iniziati.',
     'I viaggi aperti si spostano solo se vuoi, di solito quelli più lontani nel tempo. Un viaggio che parte la settimana prossima resta dov’è.',
@@ -223,7 +223,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Quanto costa?',
-      a: [`La configurazione e l’importazione dei tuoi fogli di calcolo sono gratuite con fatturazione annuale. Con fatturazione mensile, la configurazione costa ${PRICES.setupMonthly} EUR una tantum e l’importazione ${PRICES.importMonthly} EUR una tantum.`, 'Il prezzo dell’importazione copre liste con una riga per elemento e le stesse colonne dall’inizio alla fine. Documenti Word, PDF, viaggi in corso e liste da riordinare prima si quotano su preventivo, dopo aver visto un esempio.']
+      a: [`La configurazione e l’importazione dei tuoi fogli di calcolo sono gratuite con fatturazione annuale. Con fatturazione mensile, la configurazione costa ${PRICES.setupMonthly} EUR una tantum e l’importazione ${PRICES.importMonthly} EUR una tantum.`, 'Il prezzo dell’importazione copre liste con una riga per elemento e le stesse colonne dall’inizio alla fine. Documenti Word, PDF, viaggi in corso e liste da riordinare prima hanno un prezzo su preventivo, dopo aver visto un esempio.']
     },
     {
       q: 'Cosa succede ai miei vecchi file?',
@@ -234,7 +234,7 @@ export const switching: SiteContent['switching'] = {
       a: ['Sposta quelli aperti che vuoi e tieni il resto nel tuo archivio. I clienti passati vale la pena importarli; per i viaggi passati basta il tuo archivio.']
     },
     {
-      q: 'E se l’importazione è sbagliata?',
+      q: 'E se l’importazione va corretta?',
       a: ['Controlli un campione prima di partire, e lo sistemiamo con te. Qualsiasi cosa noti dopo, la correggi nell’app o ce la segnali.']
     }
   ]
@@ -318,7 +318,7 @@ export const faqPage: SiteContent['faqPage'] = {
           a: ['Sì. Durante l’avvio importiamo i tuoi prodotti, prezzi e fornitori dai tuoi fogli di calcolo. Configurazione e importazione sono gratuite con fatturazione annuale.']
         },
         {
-          q: 'Il passaggio disturberà la mia stagione?',
+          q: 'Il passaggio creerà problemi durante la stagione?',
           a: ['Avviene in parallelo. Inizia con le nuove richieste in Traviosoft e concludi i viaggi in corso come sono iniziati.']
         },
         {

@@ -44,13 +44,13 @@ const countries: Country[] = [
       'Un’agenzia che agisce solo come intermediaria e guadagna una commissione in nome del fornitore è tassata su quella commissione con il regime ordinario.'
     ],
     invoice: [
-      'Con il REAV, la fattura al cliente non riporta l’IVA in una riga separata.',
+      'Con il REAV, la fattura al cliente non deve riportare l’IVA in una riga separata.',
       'Riporta la dicitura “Régimen especial de las agencias de viajes”.',
       'Ogni società tiene la propria serie di fatture, e le correzioni si fanno con una fattura rettificativa (factura rectificativa).'
     ],
     einvoice: [
       'Veri*Factu: il Real Decreto 1007/2023 impone un software di fatturazione che conservi ogni registro di fattura senza alterazioni. Il Real Decreto-ley 15/2025 fissa l’avvio al 1° gennaio 2027 per le società soggette all’imposta sulle società e al 1° luglio 2027 per i lavoratori autonomi e gli altri.',
-      'Fattura elettronica B2B: il Real Decreto 238/2026 rende obbligatorie le fatture elettroniche strutturate tra imprese. Si applica 12 mesi dopo il relativo decreto ministeriale per le società con più di 8 milioni di EUR di fatturato, e 24 mesi dopo per le altre.',
+      'Fattura elettronica B2B: il Real Decreto 238/2026 rende obbligatorie le fatture elettroniche strutturate tra imprese. Si applica 12 mesi dopo l’entrata in vigore del decreto ministeriale sulla soluzione pubblica di fatturazione elettronica per le società con più di 8 milioni di EUR di fatturato, e 24 mesi dopo per le altre.',
       'Le imprese che già comunicano tramite il SII, e i Paesi Baschi e la Navarra, hanno sistemi propri.'
     ],
     change: [
@@ -76,8 +76,8 @@ const countries: Country[] = [
       'Il regime speciale delle agenzie di viaggio si applica quando l’agenzia vende viaggi in nome proprio usando servizi acquistati da altri. L’IVA è dovuta sul margine. La parte di un viaggio relativa a servizi eseguiti fuori dall’Unione europea è esente.'
     ],
     invoice: [
-      'La fattura può indicare senza ambiguità che l’operazione rientra nel regime speciale delle agenzie di viaggio.',
-      'L’amministrazione fiscale accetta che l’IVA del regime del margine non compaia separata in fattura.'
+      'La fattura deve fare riferimento al regime del margine, citando l’articolo del codice tributario o con una dicitura come “régime spécifique des agences de voyages”.',
+      'Nelle fatture ai clienti business, l’amministrazione fiscale accetta che l’IVA non compaia separata.'
     ],
     einvoice: [
       'Dal 1° settembre 2026 ogni impresa stabilita in Francia e registrata ai fini IVA deve poter ricevere fatture elettroniche.',
@@ -88,7 +88,7 @@ const countries: Country[] = [
     tool: OUTSIDE_SPAIN,
     faq: [
       { q: 'Devo poter ricevere fatture elettroniche se vendo solo a clienti privati?', a: ['Sì. Dal 1° settembre 2026 ogni impresa registrata ai fini IVA in Francia deve poterle ricevere, per esempio dai propri fornitori.'] },
-      { q: 'Il regime del margine si applica ai viaggi venduti alle imprese?', a: ['Può applicarsi, secondo l’operazione. Le condizioni sono fissate dal codice tributario francese.'] }
+      { q: 'Il regime del margine si applica ai viaggi venduti alle imprese?', a: ['Sì. Il regime dipende dall’operazione, non dal cliente, e si applica agli importi ricevuti da tutti i clienti.'] }
     ],
     sources: 'Fonti ufficiali: [BOFiP, regime delle agenzie di viaggio (BOI-TVA-SECT-60)](https://bofip.impots.gouv.fr/doctrine/BOI-TVA-SECT-60), [economie.gouv.fr, calendario della fattura elettronica](https://www.economie.gouv.fr/cedef/facturation-electronique-entreprises) e [impots.gouv.fr](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique).'
   },
@@ -108,9 +108,11 @@ const countries: Country[] = [
       'Riporta la dicitura “Sonderregelung für Reisebüros”.'
     ],
     einvoice: [
+      'Dal 1° gennaio 2025 ogni impresa deve poter ricevere fatture elettroniche.',
       'Dal 1° gennaio 2027 devono emetterle le imprese con più di 800.000 EUR di fatturato nell’anno precedente.',
       'Dal 1° gennaio 2028 devono emetterle tutte le imprese.',
       'Una fattura elettronica segue lo standard europeo EN 16931. Un semplice PDF non vale.',
+      'Sono esentate le fatture fino a 250 EUR e i titoli di viaggio.',
       'Le vendite ai clienti privati non sono coinvolte.'
     ],
     change: [

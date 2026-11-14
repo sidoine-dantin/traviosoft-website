@@ -416,21 +416,21 @@
         {
           "heading": "Ce que nous collectons",
           "body": [
-            "Lorsque vous réservez une démo, vous partagez les informations que vous saisissez dans le formulaire de réservation : en général votre nom, votre adresse email et quelques éléments sur votre agence. La réservation elle-même est gérée par l'outil de prise de rendez-vous de Google, qui traite donc aussi les informations que vous y saisissez.",
+            "Lorsque vous demandez une démo, vous nous écrivez par e-mail. Nous recevons ce que vous choisissez de nous dire : en général votre nom, votre adresse e-mail et quelques éléments sur votre agence.",
             "Comme la plupart des sites, notre hébergeur enregistre des données techniques de base, comme votre adresse IP et votre type de navigateur, dans ses journaux de serveur. Si vous acceptez les cookies publicitaires, LinkedIn et Meta enregistrent aussi votre visite sur ce site (voir « Publicité et audiences »)."
           ]
         },
         {
           "heading": "Comment nous utilisons vos informations",
           "body": [
-            "Nous utilisons les informations que vous nous donnez pour répondre à votre demande de démo, préparer l'appel et assurer le suivi concernant Traviosoft. Nous utilisons les journaux techniques pour garder le site sûr et fonctionnel. Nous ne vendons jamais vos données. Nous les partageons uniquement avec les prestataires nécessaires au site et à la réservation, et avec LinkedIn et Meta pour notre publicité, comme expliqué ci-dessous.",
+            "Nous utilisons les informations que vous nous donnez pour répondre à votre demande de démo, préparer l'appel et assurer le suivi concernant Traviosoft. Nous utilisons les journaux techniques pour garder le site sûr et fonctionnel. Nous ne vendons jamais vos données. Nous les partageons uniquement avec les prestataires nécessaires au site et à notre messagerie, et avec LinkedIn et Meta pour notre publicité, comme expliqué ci-dessous.",
             "Lorsque la loi exige une base légale, nous nous appuyons sur votre demande (pour organiser la démo demandée), sur votre consentement (pour les cookies publicitaires) et sur notre intérêt légitime (garder le site sûr, rester en contact avec les personnes qui nous ont écrit et montrer nos publicités aux entreprises du voyage)."
           ]
         },
         {
           "heading": "Services tiers",
           "body": [
-            "Le calendrier de démo est fourni par Google. Le site est diffusé via l'hébergement et le réseau de contenus de Cloudflare. Nos publicités sont diffusées sur LinkedIn (LinkedIn Ireland Unlimited Company) et sur Facebook et Instagram (Meta Platforms Ireland Limited). Pour les cookies publicitaires, LinkedIn et Meta sont responsables conjoints du traitement avec nous ; leurs propres politiques de confidentialité s'appliquent à l'usage qu'ils font des données. Certains de ces prestataires peuvent transférer des données vers les États-Unis dans le cadre du Data Privacy Framework UE-États-Unis ou des clauses contractuelles types de la Commission européenne."
+            "Le site est diffusé via l'hébergement et le réseau de contenus de Cloudflare. Nos publicités sont diffusées sur LinkedIn (LinkedIn Ireland Unlimited Company) et sur Facebook et Instagram (Meta Platforms Ireland Limited). Pour les cookies publicitaires, LinkedIn et Meta sont responsables conjoints du traitement avec nous ; leurs propres politiques de confidentialité s'appliquent à l'usage qu'ils font des données. Certains de ces prestataires peuvent transférer des données vers les États-Unis dans le cadre du Data Privacy Framework UE-États-Unis ou des clauses contractuelles types de la Commission européenne."
           ]
         },
         {
@@ -445,20 +445,20 @@
         {
           "heading": "Cookies",
           "body": [
-            "Le site utilise les cookies nécessaires à son fonctionnement et à la mémorisation de votre langue et de votre choix sur les cookies. Avec votre accord uniquement, il utilise aussi des cookies publicitaires de LinkedIn et Meta. Refuser est aussi simple qu'accepter, et le site fonctionne de la même façon dans les deux cas. Nous vous redemandons votre choix au bout de six mois. Le calendrier de réservation intégré peut déposer ses propres cookies, gérés par Google."
+            "Le site utilise les cookies nécessaires à son fonctionnement et à la mémorisation de votre langue et de votre choix sur les cookies. Avec votre accord uniquement, il utilise aussi des cookies publicitaires de LinkedIn et Meta. Refuser est aussi simple qu'accepter, et le site fonctionne de la même façon dans les deux cas. Nous vous redemandons votre choix au bout de six mois."
           ]
         },
         {
           "heading": "Combien de temps nous les conservons",
           "body": [
-            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant une durée raisonnable. Les journaux techniques ne sont conservés que le temps court nécessaire à la sécurité et à la maintenance.",
+            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant trois ans après notre dernier échange. Les journaux techniques ne sont conservés que le temps court nécessaire à la sécurité et à la maintenance.",
             "Les cookies publicitaires durent au maximum 13 mois. Les coordonnées transmises pour les audiences publicitaires sont conservées pendant la durée de la campagne et retirées de nos listes dès que vous vous y opposez."
           ]
         },
         {
           "heading": "Vos droits",
           "body": [
-            "Vous pouvez demander à consulter les données que nous détenons sur vous, à les corriger ou à les supprimer. Pour faire une demande, écrivez-nous à sidoine@traviosoft.com. L'entreprise étant établie en France, vous pouvez aussi introduire une réclamation auprès de la CNIL."
+            "Vous pouvez demander à consulter les données que nous détenons sur vous, à les corriger, à les supprimer, à en limiter l'utilisation ou à les recevoir dans un format portable. Vous pouvez aussi vous opposer à leur utilisation, et retirer votre consentement à tout moment. Pour faire une demande, écrivez-nous à sidoine@traviosoft.com : nous répondons sous un mois. Vous pouvez aussi introduire une réclamation auprès d'une autorité de protection des données, notamment celle du pays où vous vivez ou travaillez. L'entreprise étant établie en France, son autorité est la CNIL."
           ]
         },
         {
@@ -505,7 +505,7 @@
         {
           "heading": "Liens et services externes",
           "body": [
-            "Le calendrier de démo est hébergé par Google et le site est diffusé via Cloudflare. Nous ne sommes pas responsables du contenu ni des pratiques de ces services tiers, qui sont régis par leurs propres conditions."
+            "Le site est diffusé via Cloudflare, et nos publicités sont diffusées sur LinkedIn et Meta. Nous ne sommes pas responsables du contenu ni des pratiques de ces services tiers, qui sont régis par leurs propres conditions."
           ]
         },
         {
@@ -540,7 +540,7 @@
         {
           "heading": "Hébergement",
           "body": [
-            "Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis (cloudflare.com)."
+            "Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis, téléphone +1 650 319 8930 (cloudflare.com)."
           ]
         },
         {

@@ -104,17 +104,17 @@ const euVat: Article = {
 const netRates: Article = {
   key: 'net-commissionable-rates',
   kind: 'guide',
-  slug: 'tarifas-liquidas-e-tarifas-comissionaveis',
-  metaTitle: 'Tarifas líquidas e tarifas comissionáveis no turismo: definições e exemplos',
-  metaDescription: 'O que significam tarifas líquidas e tarifas comissionáveis no turismo, como se calculam um markup e uma comissão, e a diferença entre markup e margem, com exemplos.',
-  title: 'Tarifas líquidas e tarifas comissionáveis',
-  lead: 'Os fornecedores vendem às agências de viagens e às DMC de duas formas principais. Uma tarifa líquida é o preço que a agência paga, e a agência define o seu próprio preço de venda. Uma tarifa comissionável é um preço de venda fixado pelo fornecedor, sobre o qual a agência ganha uma percentagem.',
+  slug: 'tarifas-net-e-tarifas-comissionaveis',
+  metaTitle: 'Tarifas net e tarifas comissionáveis no turismo: definições e exemplos',
+  metaDescription: 'O que significam tarifas net e tarifas comissionáveis no turismo, como se calculam um markup e uma comissão, e a diferença entre markup e margem, com exemplos.',
+  title: 'Tarifas net e tarifas comissionáveis',
+  lead: 'Os fornecedores vendem às agências de viagens e às DMC de duas formas principais. Uma tarifa net é o preço que a agência paga, e a agência define o seu próprio preço de venda. Uma tarifa comissionável é um preço de venda fixado pelo fornecedor, sobre o qual a agência ganha uma percentagem.',
   updated: UPDATED,
   card: 'O que significam os dois tipos de tarifa, como se calculam markup e comissão, com exemplos.',
   blocks: [
-    { type: 'h2', text: 'Tarifa líquida', id: 'liquida' },
-    { type: 'p', text: 'Uma tarifa líquida é o preço que o fornecedor cobra à agência, sem nada incluído para a agência. A agência decide o preço de venda acrescentando um markup. O cliente não vê a tarifa líquida.' },
-    { type: 'p', text: 'Exemplo: um hotel dá uma tarifa líquida de 100 EUR por noite. Com um markup de 25%, o preço de venda é de 125 EUR. A agência fica com 25 EUR.' },
+    { type: 'h2', text: 'Tarifa net', id: 'liquida' },
+    { type: 'p', text: 'Uma tarifa net é o preço que o fornecedor cobra à agência, sem nada incluído para a agência. A agência decide o preço de venda acrescentando um markup. O cliente não vê a tarifa net.' },
+    { type: 'p', text: 'Exemplo: um hotel dá uma tarifa net de 100 EUR por noite. Com um markup de 25%, o preço de venda é de 125 EUR. A agência fica com 25 EUR.' },
     { type: 'h2', text: 'Tarifa comissionável', id: 'comissionavel' },
     { type: 'p', text: 'Uma tarifa comissionável é um preço de venda fixado pelo fornecedor, muitas vezes o seu preço ao público. A agência vende a esse preço e recebe uma comissão, uma percentagem acordada com o fornecedor.' },
     { type: 'p', text: 'Exemplo: a tarifa comissionável de um hotel é de 150 EUR por noite com uma comissão de 10%. O cliente paga 150 EUR, a agência ganha 15 EUR e o hotel recebe 135 EUR.' },
@@ -132,12 +132,12 @@ const netRates: Article = {
     { type: 'h2', text: 'Onde entram os impostos', id: 'impostos' },
     { type: 'p', text: 'A forma como o IVA se aplica ao markup ou à comissão depende do país e de a agência vender em nome próprio ou como intermediária. As páginas de "Faturação por país" descrevem as regras em vários países.' },
     { type: 'h2', text: 'No Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'No Traviosoft, um procedimento de preço transforma as tarifas líquidas em preços de venda, com a margem, o IVA e a comissão quando uma agência parceira vende a viagem.' },
+    { type: 'p', text: 'No Traviosoft, um procedimento de preço transforma as tarifas net em preços de venda, com a margem, o IVA e a comissão quando uma agência parceira vende a viagem.' },
     { type: 'h2', text: 'Perguntas frequentes', id: 'faq' },
     {
       type: 'faq',
       items: [
-        { q: 'Uma viagem pode misturar tarifas líquidas e comissionáveis?', a: ['Sim. Uma viagem combina muitas vezes hotéis com tarifa líquida e serviços vendidos a preço comissionável, como algumas excursões ou alguns transportes.'] },
+        { q: 'Uma viagem pode misturar tarifas net e comissionáveis?', a: ['Sim. Uma viagem combina muitas vezes hotéis com tarifa net e serviços vendidos a preço comissionável, como algumas excursões ou alguns transportes.'] },
         { q: 'Uma comissão é o mesmo que uma margem?', a: ['As duas são o que a agência ganha. Uma comissão é uma percentagem de um preço fixado por outra pessoa; uma margem resulta de um preço de venda que a própria agência fixa.'] }
       ]
     }

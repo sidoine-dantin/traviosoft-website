@@ -29,7 +29,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'net-rate',
     term: 'Tarifa net',
-    def: 'O preço que um fornecedor cobra à agência, sem margem nem comissão. É a base de cada orçamento: a agência junta a sua margem para chegar ao preço de venda.'
+    def: 'O preço que um fornecedor cobra à agência, sem margem nem comissão. É a base de cada orçamento: a agência acrescenta a sua margem para chegar ao preço de venda.'
   },
   {
     id: 'markup-margin',
@@ -69,7 +69,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'mice',
     term: 'MICE',
-    def: 'Sigla de Meetings, Incentives, Conferences and Exhibitions. São viagens de empresa com muitos participantes, blocos de quartos e programas à medida.'
+    def: 'Sigla de Meetings, Incentives, Conferences and Exhibitions: reuniões, viagens de incentivo, congressos e eventos. São viagens de empresa com muitos participantes, blocos de quartos e programas à medida.'
   },
   {
     id: 'verifactu',

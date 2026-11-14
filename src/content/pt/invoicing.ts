@@ -44,13 +44,13 @@ const countries: Country[] = [
       'Uma agência que atua apenas como intermediária e ganha uma comissão em nome do fornecedor é tributada sobre essa comissão no regime geral.'
     ],
     invoice: [
-      'No REAV, a fatura ao cliente não indica o IVA numa linha separada.',
+      'No REAV, a fatura ao cliente não tem de indicar o IVA numa linha separada.',
       'Inclui a menção “Régimen especial de las agencias de viajes”.',
       'Cada empresa tem a sua própria série de faturas, e as correções fazem-se com uma fatura retificativa (factura rectificativa).'
     ],
     einvoice: [
       'Veri*Factu: o Real Decreto 1007/2023 exige um software de faturação que conserve cada registo de fatura sem alterações. O Real Decreto-ley 15/2025 fixa o início a 1 de janeiro de 2027 para as empresas sujeitas ao imposto sobre as sociedades e a 1 de julho de 2027 para os trabalhadores independentes e os restantes.',
-      'Fatura eletrónica B2B: o Real Decreto 238/2026 torna obrigatórias as faturas eletrónicas estruturadas entre empresas. Aplica-se 12 meses após a respetiva portaria ministerial às empresas com mais de 8 milhões de EUR de volume de negócios, e 24 meses após a mesma às restantes.',
+      'Fatura eletrónica B2B: o Real Decreto 238/2026 torna obrigatórias as faturas eletrónicas estruturadas entre empresas. Aplica-se 12 meses após a entrada em vigor da portaria ministerial sobre a solução pública de faturação eletrónica às empresas com mais de 8 milhões de EUR de volume de negócios, e 24 meses após a mesma às restantes.',
       'As empresas que já comunicam através do SII, e o País Basco e Navarra, têm sistemas próprios.'
     ],
     change: [
@@ -76,8 +76,8 @@ const countries: Country[] = [
       'O regime especial das agências de viagens aplica-se quando a agência vende viagens em nome próprio utilizando serviços comprados a terceiros. O IVA é devido sobre a margem. A parte de uma viagem relativa a serviços prestados fora da União Europeia está isenta.'
     ],
     invoice: [
-      'A fatura pode indicar, sem ambiguidade, que a operação se enquadra no regime especial das agências de viagens.',
-      'A administração fiscal aceita que o IVA do regime da margem não apareça discriminado na fatura.'
+      'A fatura tem de fazer referência ao regime da margem, citando o artigo do código fiscal ou com uma menção como “régime spécifique des agences de voyages”.',
+      'Nas faturas a clientes empresariais, a administração fiscal aceita que o IVA não apareça discriminado.'
     ],
     einvoice: [
       'Desde 1 de setembro de 2026, todas as empresas estabelecidas em França e registadas para efeitos de IVA têm de poder receber faturas eletrónicas.',
@@ -88,7 +88,7 @@ const countries: Country[] = [
     tool: OUTSIDE_SPAIN,
     faq: [
       { q: 'Tenho de poder receber faturas eletrónicas se só vendo a clientes particulares?', a: ['Sim. Desde 1 de setembro de 2026, todas as empresas registadas para efeitos de IVA em França têm de poder recebê-las, por exemplo dos seus fornecedores.'] },
-      { q: 'O regime da margem aplica-se às viagens vendidas a empresas?', a: ['Pode aplicar-se, consoante a operação. As condições estão fixadas no código fiscal francês.'] }
+      { q: 'O regime da margem aplica-se às viagens vendidas a empresas?', a: ['Sim. O regime depende da operação, não do cliente, e aplica-se aos montantes recebidos de todos os clientes.'] }
     ],
     sources: 'Fontes oficiais: [BOFiP, regime das agências de viagens (BOI-TVA-SECT-60)](https://bofip.impots.gouv.fr/doctrine/BOI-TVA-SECT-60), [economie.gouv.fr, calendário da fatura eletrónica](https://www.economie.gouv.fr/cedef/facturation-electronique-entreprises) e [impots.gouv.fr](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique).'
   },
@@ -108,9 +108,11 @@ const countries: Country[] = [
       'Inclui a menção “Sonderregelung für Reisebüros”.'
     ],
     einvoice: [
+      'Desde 1 de janeiro de 2025, todas as empresas têm de poder receber faturas eletrónicas.',
       'A partir de 1 de janeiro de 2027, têm de as emitir as empresas com mais de 800 000 EUR de volume de negócios no ano anterior.',
       'A partir de 1 de janeiro de 2028, todas as empresas têm de as emitir.',
       'Uma fatura eletrónica segue a norma europeia EN 16931. Um simples PDF não conta.',
+      'As faturas até 250 EUR e os títulos de transporte estão isentos.',
       'As vendas a clientes particulares não estão abrangidas.'
     ],
     change: [

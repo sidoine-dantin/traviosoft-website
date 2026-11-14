@@ -44,13 +44,13 @@ const countries: Country[] = [
       'An agency that only acts as an intermediary and earns a commission in the supplier’s name is taxed on that commission under the general scheme.'
     ],
     invoice: [
-      'Under the REAV, the invoice to the client does not show VAT as a separate line.',
+      'Under the REAV, the invoice to the client does not have to show VAT as a separate line.',
       'It carries the mention “Régimen especial de las agencias de viajes”.',
       'Each company keeps its own invoice series, and corrections are made with a corrective invoice (factura rectificativa).'
     ],
     einvoice: [
       'Veri*Factu: Royal Decree 1007/2023 requires invoicing software that keeps every invoice record unaltered. Royal Decree-law 15/2025 sets the start on 1 January 2027 for companies paying corporate tax and 1 July 2027 for the self-employed and others.',
-      'B2B e-invoicing: Royal Decree 238/2026 makes structured e-invoices mandatory between businesses. It applies 12 months after its ministerial order for companies with more than 8 million EUR of turnover, and 24 months after it for the rest.',
+      'B2B e-invoicing: Royal Decree 238/2026 makes structured e-invoices mandatory between businesses. It applies 12 months after the ministerial order on the public e-invoicing system comes into force for companies with more than 8 million EUR of turnover, and 24 months after it for the rest.',
       'Businesses that already report through the SII, and the Basque Country and Navarre, have their own systems.'
     ],
     change: [
@@ -76,8 +76,8 @@ const countries: Country[] = [
       'The special scheme for travel agencies applies when the agency sells trips in its own name using services bought from others. VAT is due on the margin. The part of a trip that relates to services performed outside the European Union is exempt.'
     ],
     invoice: [
-      'The invoice may state unambiguously that the operation falls under the special scheme for travel agencies.',
-      'The tax administration accepts that margin-scheme VAT is not shown separately on the invoice.'
+      'The invoice must refer to the margin scheme, either by citing the article of the tax code or with a mention such as “régime spécifique des agences de voyages”.',
+      'On invoices to business clients, the tax administration accepts that the VAT is not shown separately.'
     ],
     einvoice: [
       'Since 1 September 2026, every business established in France and registered for VAT must be able to receive e-invoices.',
@@ -88,7 +88,7 @@ const countries: Country[] = [
     tool: OUTSIDE_SPAIN,
     faq: [
       { q: 'Must I be able to receive e-invoices if I only sell to private clients?', a: ['Yes. Since 1 September 2026, every VAT-registered business in France must be able to receive them, for example from its suppliers.'] },
-      { q: 'Does the margin scheme apply to trips sold to businesses?', a: ['It can, depending on the operation. The conditions are set out in the French tax code.'] }
+      { q: 'Does the margin scheme apply to trips sold to businesses?', a: ['Yes. The scheme depends on the operation, not on the client, and applies to amounts received from all clients.'] }
     ],
     sources: 'Official sources: [BOFiP, travel agency scheme (BOI-TVA-SECT-60)](https://bofip.impots.gouv.fr/doctrine/BOI-TVA-SECT-60), [economie.gouv.fr, e-invoicing calendar](https://www.economie.gouv.fr/cedef/facturation-electronique-entreprises) and [impots.gouv.fr](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique).'
   },
@@ -108,9 +108,11 @@ const countries: Country[] = [
       'It carries the wording “Sonderregelung für Reisebüros”.'
     ],
     einvoice: [
+      'Since 1 January 2025, every business must be able to receive e-invoices.',
       'From 1 January 2027, businesses with more than 800,000 EUR of turnover in the previous year must issue them.',
       'From 1 January 2028, all businesses must issue them.',
       'An e-invoice follows the European standard EN 16931. A plain PDF does not count.',
+      'Invoices up to 250 EUR and travel tickets are exempt.',
       'Sales to private clients are not covered.'
     ],
     change: [

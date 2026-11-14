@@ -53,7 +53,7 @@ function compare(c: Cmp): Article {
 }
 
 const SWITCH = (from: string) =>
-  `Se passi a Traviosoft da ${from}, durante la configurazione importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo, gratis con la fatturazione annuale. La pagina [Passare a Traviosoft](/switch) descrive le tappe.`;
+  `Se passi a Traviosoft da ${from}, durante la configurazione importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo, gratis con la fatturazione annuale. La pagina [Passare a Traviosoft](/switch) descrive i passaggi.`;
 
 const compares: Cmp[] = [
   {
@@ -94,7 +94,7 @@ const compares: Cmp[] = [
       'Fatturi a clienti all’estero e ti servono documenti in spagnolo, inglese e francese.'
     ],
     switching:
-      'Durante la configurazione importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo, gratis con la fatturazione annuale. La pagina [Passare a Traviosoft](/switch) descrive le tappe, e la guida "Da Excel a un gestionale per agenzie di viaggi" descrive cosa cambia.',
+      'Durante la configurazione importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo, gratis con la fatturazione annuale. La pagina [Passare a Traviosoft](/switch) descrive i passaggi, e la guida "Da Excel a un gestionale per agenzie di viaggi" descrive cosa cambia.',
     faq: [
       { q: 'Posso continuare a usare Excel accanto a Traviosoft?', a: ['Sì. Puoi importare i tuoi dati da Excel ed esportare un riepilogo Excel o uno zip con tutti i PDF delle fatture per il commercialista.'] },
       { q: 'Che fine fanno le formule di margine che ho già?', a: ['Diventano regole di prezzo. Invece di copiare la formula in ogni file, la definisci una volta e si applica a ogni riga di ogni preventivo.'] },
@@ -208,7 +208,7 @@ const compares: Cmp[] = [
       'La tua agenzia applica il REAV e vuoi le diciture su ogni fattura in automatico.'
     ],
     switching:
-      'Traviosoft gestisce il viaggio, dalla richiesta alla fattura, ed esporta un riepilogo Excel o uno zip di fatture PDF, che il commercialista può importare in Holded o in un altro programma di contabilità. La pagina [Passare a Traviosoft](/switch) descrive le tappe.',
+      'Traviosoft gestisce il viaggio, dalla richiesta alla fattura, ed esporta un riepilogo Excel o uno zip di fatture PDF, che il commercialista può importare in Holded o in un altro programma di contabilità. La pagina [Passare a Traviosoft](/switch) descrive i passaggi.',
     faq: [
       { q: 'Devo lasciare Holded per usare Traviosoft?', a: ['Non necessariamente. Molte agenzie tengono la contabilità dove si trova. L’importante è emettere ogni fattura in un solo posto, e concordare con il commercialista come riceve i dati.'] },
       { q: 'Holded e Traviosoft possono lavorare insieme?', a: ['Sì. Traviosoft gestisce il viaggio e le sue fatture, ed esporta un riepilogo Excel o uno zip di fatture PDF che il commercialista può importare in Holded o in qualsiasi altro programma di contabilità.'] },
@@ -592,13 +592,13 @@ const rooming: Article = {
   metaDescription:
     'Cos’è una rooming list nei viaggi di gruppo e nel MICE, le informazioni che contiene di solito, un esempio e come la usano gli hotel.',
   title: 'La rooming list per gruppi ed eventi MICE',
-  lead: 'Una rooming list dice all’hotel chi dorme in ogni camera di un gruppo, con la tipologia di camera, le date e le eventuali richieste. L’hotel la usa per assegnare le camere dell’allotment che tiene per il gruppo.',
+  lead: 'Una rooming list dice all’hotel chi dorme in ogni camera di un gruppo, con la tipologia di camera, le date e le eventuali richieste. L’hotel la usa per assegnare le camere del blocco che tiene per il gruppo.',
   updated: '2026-11-14',
   card: 'Cos’è una rooming list, le colonne che ha di solito e un esempio.',
   blocks: [
     {
       type: 'p',
-      text: 'Per un gruppo, l’hotel blocca un allotment di camere con un contratto. La rooming list dice come quelle camere si dividono tra i partecipanti. Il contratto di solito fissa la data entro cui l’hotel aspetta la lista e la data in cui le camere non usate dell’allotment vengono rilasciate.'
+      text: 'Per un gruppo, l’hotel riserva un blocco di camere con un contratto. La rooming list dice come quelle camere si dividono tra i partecipanti. Il contratto di solito fissa la data entro cui l’hotel aspetta la lista e la data in cui le camere non usate del blocco vengono rilasciate.'
     },
     { type: 'h2', text: 'Le colonne abituali', id: 'colonne' },
     {
@@ -690,7 +690,7 @@ const fromExcel: Article = {
     { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
     {
       type: 'p',
-      text: 'Durante la configurazione importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo. Configurazione e importazione sono gratuite con la fatturazione annuale. La pagina [Passare a Traviosoft](/switch) descrive le tappe.'
+      text: 'Durante la configurazione importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo. Configurazione e importazione sono gratuite con la fatturazione annuale. La pagina [Passare a Traviosoft](/switch) descrive i passaggi.'
     },
     { type: 'h2', text: 'Domande frequenti', id: 'faq' },
     {

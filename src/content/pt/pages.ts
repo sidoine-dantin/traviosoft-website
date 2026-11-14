@@ -6,9 +6,9 @@ const FREE = 'Gratuito com faturação anual*';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Preços: Classic desde ${PRICES.classic.yearly} EUR por mês, Premium desde ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Dois planos para agências de viagens à medida e DMC. O Classic gere toda a agência desde ${PRICES.classic.yearly} EUR por mês; o Premium junta grupos, várias equipas, moedas, compras e várias marcas. ${PRICES.usersIncluded} utilizadores incluídos, implementação gratuita com faturação anual.`,
+    `Dois planos para agências de viagens à medida e DMC. O Classic gere toda a agência desde ${PRICES.classic.yearly} EUR por mês; o Premium acrescenta grupos, várias equipas, moedas, compras e várias marcas. ${PRICES.usersIncluded} utilizadores incluídos, implementação gratuita com faturação anual.`,
   title: 'Preços',
-  lead: 'O Classic cobre toda a agência, do primeiro pedido à última fatura. O Premium junta grupos, várias equipas, outras moedas, compras e várias marcas.',
+  lead: 'O Classic cobre toda a agência, do primeiro pedido à última fatura. O Premium acrescenta grupos, várias equipas, outras moedas, compras e várias marcas.',
   yearly: 'Anual',
   monthly: 'Mensal',
   yearlyNote: 'Preços por mês, sem IVA.',
@@ -53,7 +53,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Viagens confirmadas e reservas, com os emails dos fornecedores guardados na viagem', classic: true, premium: true },
         { f: 'Vouchers de serviço', classic: true, premium: true },
         { f: 'Grupos: listas de viajantes, link de formulário e rooming lists', classic: false, premium: true },
-        { f: 'Pedidos de disponibilidade e encomendas a fornecedores', classic: false, premium: true }
+        { f: 'Pedidos de disponibilidade e notas de encomenda a fornecedores', classic: false, premium: true }
       ]
     },
     {
@@ -92,7 +92,7 @@ export const pricing: SiteContent['pricing'] = {
   faq: [
     {
       q: 'De que plano preciso?',
-      a: ['O Classic gere uma agência inteira: pedidos, orçamentos, parceiros, reservas, pagamentos e faturas. O Premium junta grupos, lembretes de pagamento automáticos, várias equipas, venda noutras moedas e encomendas a fornecedores.']
+      a: ['O Classic gere uma agência inteira: pedidos, orçamentos, parceiros, reservas, pagamentos e faturas. O Premium acrescenta grupos, lembretes de pagamento automáticos, várias equipas, venda noutras moedas e notas de encomenda a fornecedores.']
     },
     {
       q: 'Como é faturado?',
@@ -100,10 +100,10 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Os preços incluem IVA?',
-      a: ['Não. O IVA junta-se na fatura de acordo com o seu país e a forma da sua empresa.']
+      a: ['Não. O IVA é acrescentado na fatura de acordo com o seu país e a forma jurídica da sua empresa.']
     },
     {
-      q: 'E se juntar um utilizador?',
+      q: 'E se adicionar um utilizador?',
       a: [`Os dois planos incluem ${PRICES.usersIncluded} utilizadores. Cada utilizador adicional custa ${PRICES.extraUser.classic.yearly} EUR por mês no Classic e ${PRICES.extraUser.premium.yearly} EUR no Premium com faturação anual (${PRICES.extraUser.classic.monthly} e ${PRICES.extraUser.premium.monthly} EUR com faturação mensal).`]
     },
     {
@@ -138,7 +138,7 @@ export const demo: SiteContent['demo'] = {
   agendaTitle: 'A chamada',
   agenda: [
     { mins: '5', title: 'A sua agência', body: 'Dimensão da equipa, o que vende e as ferramentas que usa hoje.' },
-    { mins: '15', title: 'Uma viagem de exemplo', body: 'O pedido, o orçamento com a margem, a viagem confirmada, o itinerário, o pagamento e a fatura. Uma viagem a dois, um grupo de incentivos ou um safari.' },
+    { mins: '15', title: 'Uma viagem de exemplo', body: 'O pedido, o orçamento com a margem, as reservas, o programa, o pagamento e a fatura. Uma viagem a dois, um grupo de incentivo ou um safari.' },
     { mins: '10', title: 'Preços e perguntas', body: 'O plano para a sua equipa, a importação dos seus dados e as suas perguntas.' }
   ],
   bringTitle: 'Quem convidar',
@@ -191,7 +191,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       when: 'Semana 1',
-      title: 'Nós importamos, a sua equipa verifica',
+      title: 'Nós importamos, depois verifica',
       body: 'Carregamos tudo no espaço da sua agência. Abre-o, vê alguns produtos e alguns clientes, e diz-nos o que ajustar.'
     },
     {
@@ -200,7 +200,7 @@ export const switching: SiteContent['switching'] = {
       body: 'Configuramos as suas regras de margem, IVA e comissões e a sua marca. Faz um orçamento real com as suas próprias tarifas. Estamos disponíveis por email se precisar.'
     },
     {
-      when: 'Em produção',
+      when: 'Em funcionamento',
       title: 'Os novos pedidos entram na aplicação',
       body: 'A partir daí, cada novo pedido começa no Traviosoft. As viagens já em curso terminam como começaram.'
     }
@@ -231,10 +231,10 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Tenho de passar todas as viagens antigas?',
-      a: ['Passe as viagens em aberto que quiser e guarde o resto no seu arquivo. Os clientes antigos vale a pena importar; para as viagens passadas, o seu arquivo chega.']
+      a: ['Passe as viagens em aberto que quiser e guarde o resto no seu arquivo. Vale a pena importar os clientes antigos; para as viagens passadas, o seu arquivo chega.']
     },
     {
-      q: 'E se a importação tiver erros?',
+      q: 'E se a importação precisar de ajustes?',
       a: ['Verifica uma amostra antes de começar, e ajustamo-la consigo. O que notar depois, corrige na aplicação ou diz-nos.']
     }
   ]

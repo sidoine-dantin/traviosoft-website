@@ -64,7 +64,7 @@ const compares: Cmp[] = [
     metaDescription:
       'O Excel e o Word são o ponto de partida de quase todas as agências de viagens. Comparamos orçamentos, margens, reservas e faturas para mostrar quando compensa um software feito para viagens.',
     title: 'Traviosoft ou Excel e Word: quando passar para um software de gestão de viagens',
-    lead: 'O Excel e o Word são flexíveis, conhecidos e chegam para muitas agências que vendem poucas viagens por ano. Quando entram várias pessoas, épocas de preços e numeração de faturas, um software feito para viagens trata desse trabalho por si.',
+    lead: 'O Excel e o Word são flexíveis, conhecidos e chegam para muitas agências que vendem poucas viagens por ano. Quando entram várias pessoas, épocas de preços e numeração de faturas, um software feito para viagens trata desse trabalho no seu lugar.',
     card: 'Folha de cálculo ou software: quando compensa mudar e quando não.',
     basis:
       'O Excel e o Word são o ponto de partida de quase todas as agências, e muitas continuam satisfeitas com eles durante anos. Esta página mostra o que muda quando as viagens passam para um software feito para elas. Os dados do Traviosoft são os do nosso site a 3 de novembro de 2026.',
@@ -165,7 +165,7 @@ const compares: Cmp[] = [
       'Precisa de integrações de contabilidade ou com o contabilista que já tem a funcionar com eles.'
     ],
     usBetter: [
-      'Desenha viagens à medida ou recebe viajantes do estrangeiro, e cada orçamento é calculado serviço a serviço a partir das tarifas líquidas.',
+      'Desenha viagens à medida ou recebe viajantes do estrangeiro, e cada orçamento é calculado serviço a serviço a partir das tarifas net.',
       'Precisa de preços por época e de vários fornecedores para o mesmo serviço.',
       'Quer enviar aos clientes uma proposta e uma página de programa na língua deles, com a sua marca.',
       'Quer ver no site o preço e o que inclui cada plano.'
@@ -511,11 +511,11 @@ const quote: Article = {
   slug: 'orcamento-viagem-a-medida-com-margem',
   metaTitle: 'Como se calcula o preço de uma viagem à medida: margem e comissão',
   metaDescription:
-    'Como se calcula o preço de uma viagem à medida a partir das tarifas líquidas, com uma margem sobre o preço de venda e uma comissão, num exemplo com números.',
+    'Como se calcula o preço de uma viagem à medida a partir das tarifas net, com uma margem sobre o preço de venda e uma comissão, num exemplo com números.',
   title: 'Como se calcula o preço de uma viagem à medida',
-  lead: 'O preço de uma viagem à medida constrói-se com três montantes: o que os fornecedores cobram (as tarifas líquidas), o que a agência ganha (a margem) e, quando outra agência vende a viagem, a sua comissão. Esta página mostra o cálculo num exemplo.',
+  lead: 'O preço de uma viagem à medida constrói-se com três montantes: o que os fornecedores cobram (as tarifas net), o que a agência ganha (a margem) e, quando outra agência vende a viagem, a sua comissão. Esta página mostra o cálculo num exemplo.',
   updated: '2026-11-14',
-  card: 'Tarifas líquidas, margem sobre o preço de venda e comissão, calculadas num exemplo.',
+  card: 'Tarifas net, margem sobre o preço de venda e comissão, calculadas num exemplo.',
   blocks: [
     { type: 'h2', text: 'Markup e margem sobre o mesmo custo', id: 'conceitos' },
     {
@@ -538,7 +538,7 @@ const quote: Article = {
       head: ['Serviço', 'Cálculo', 'Custo líquido'],
       rows: [
         ['Hotel, quarto duplo', '4 noites x 100 EUR', '400 EUR'],
-        ['Transferes privados', '2 transferes x 60 EUR', '120 EUR'],
+        ['Transfers privados', '2 transfers x 60 EUR', '120 EUR'],
         ['Guia', '2 dias x 150 EUR', '300 EUR'],
         ['Aula de culinária', '2 pessoas x 40 EUR', '80 EUR'],
         ['Entradas', '2 pessoas x 50 EUR', '100 EUR'],
@@ -664,7 +664,7 @@ const fromExcel: Article = {
     {
       type: 'list',
       items: [
-        'Produtos com nome, fornecedor, preço líquido e período de validade.',
+        'Produtos com nome, fornecedor, preço net e período de validade.',
         'Fornecedores com contactos e condições.',
         'Clientes com língua e email.',
         'Regras de preço: margem, comissão e IVA, muitas vezes como fórmulas.',

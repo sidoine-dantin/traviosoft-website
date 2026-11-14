@@ -44,13 +44,13 @@ const countries: Country[] = [
       'Une agence qui agit seulement comme intermédiaire et touche une commission au nom du prestataire est imposée sur cette commission, au régime général.'
     ],
     invoice: [
-      'Dans le REAV, la facture au client ne montre pas la TVA sur une ligne à part.',
+      'Dans le REAV, la facture au client n’a pas à montrer la TVA sur une ligne à part.',
       'Elle porte la mention « Régimen especial de las agencias de viajes ».',
       'Chaque société garde sa propre série de factures, et les corrections passent par une facture rectificative.'
     ],
     einvoice: [
       'Veri*Factu : le décret royal 1007/2023 impose un logiciel de facturation qui garde chaque enregistrement de facture sans modification possible. Le décret-loi royal 15/2025 fixe le début au 1er janvier 2027 pour les sociétés soumises à l’impôt sur les sociétés, et au 1er juillet 2027 pour les indépendants et les autres.',
-      'Facture électronique entre entreprises : le décret royal 238/2026 rend obligatoires les factures électroniques structurées entre entreprises. Elles s’appliquent 12 mois après son arrêté ministériel pour les entreprises de plus de 8 millions d’euros de chiffre d’affaires, et 24 mois après pour les autres.',
+      'Facture électronique entre entreprises : le décret royal 238/2026 rend obligatoires les factures électroniques structurées entre entreprises. Elles s’appliquent 12 mois après l’entrée en vigueur de l’arrêté ministériel sur la solution publique de facturation électronique pour les entreprises de plus de 8 millions d’euros de chiffre d’affaires, et 24 mois après pour les autres.',
       'Les entreprises déjà dans le SII, ainsi que le Pays basque et la Navarre, ont leurs propres systèmes.'
     ],
     change: [
@@ -76,8 +76,8 @@ const countries: Country[] = [
       'Le régime particulier des agences de voyages s’applique quand l’agence vend des voyages en son nom avec des services achetés à d’autres. La TVA est due sur la marge. La partie d’un voyage qui se rapporte à des services exécutés hors de l’Union européenne est exonérée.'
     ],
     invoice: [
-      'La facture peut indiquer de manière non équivoque que l’opération relève du régime particulier des agences de voyages.',
-      'L’administration admet que la TVA du régime de la marge ne soit pas mentionnée à part sur la facture.'
+      'La facture doit faire référence au régime de la marge, soit en citant l’article du Code général des impôts, soit par une mention comme « régime spécifique des agences de voyages ».',
+      'Sur les factures aux clients professionnels, l’administration admet que la TVA ne soit pas mentionnée à part.'
     ],
     einvoice: [
       'Depuis le 1er septembre 2026, toute entreprise établie en France et assujettie à la TVA doit pouvoir recevoir des factures électroniques.',
@@ -88,7 +88,7 @@ const countries: Country[] = [
     tool: OUTSIDE_SPAIN,
     faq: [
       { q: 'Dois-je pouvoir recevoir des factures électroniques si je vends seulement à des particuliers ?', a: ['Oui. Depuis le 1er septembre 2026, toute entreprise assujettie à la TVA en France doit pouvoir les recevoir, par exemple celles de ses prestataires.'] },
-      { q: 'Le régime de la marge s’applique-t-il aux voyages vendus à des entreprises ?', a: ['Il peut s’appliquer, selon l’opération. Les conditions sont fixées par le Code général des impôts.'] }
+      { q: 'Le régime de la marge s’applique-t-il aux voyages vendus à des entreprises ?', a: ['Oui. Le régime dépend de l’opération, pas du client, et s’applique aux sommes reçues de tous les clients.'] }
     ],
     sources: 'Sources officielles : [BOFiP, régime des agences de voyages (BOI-TVA-SECT-60)](https://bofip.impots.gouv.fr/doctrine/BOI-TVA-SECT-60), [economie.gouv.fr, calendrier de la facturation électronique](https://www.economie.gouv.fr/cedef/facturation-electronique-entreprises) et [impots.gouv.fr](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique).'
   },
@@ -108,9 +108,11 @@ const countries: Country[] = [
       'Elle porte la mention « Sonderregelung für Reisebüros ».'
     ],
     einvoice: [
+      'Depuis le 1er janvier 2025, toute entreprise doit pouvoir recevoir des factures électroniques.',
       'À partir du 1er janvier 2027, les entreprises de plus de 800 000 euros de chiffre d’affaires l’année précédente doivent en émettre.',
       'À partir du 1er janvier 2028, toutes les entreprises doivent en émettre.',
       'Une facture électronique suit la norme européenne EN 16931. Un simple PDF ne compte pas.',
+      'Les factures jusqu’à 250 euros et les titres de transport sont exemptés.',
       'Les ventes aux particuliers ne sont pas concernées.'
     ],
     change: [

@@ -44,13 +44,13 @@ const countries: Country[] = [
       'Una agencia que solo media y cobra una comisión en nombre del proveedor tributa por esa comisión en el régimen general.'
     ],
     invoice: [
-      'En el REAV, la factura al cliente no desglosa el IVA.',
+      'En el REAV, la factura al cliente no tiene que desglosar el IVA.',
       'Lleva la mención «Régimen especial de las agencias de viajes».',
       'Cada sociedad mantiene su propia serie, y las correcciones se hacen con una factura rectificativa.'
     ],
     einvoice: [
       'Veri*Factu: el Real Decreto 1007/2023 exige un programa de facturación que conserve cada registro de factura sin posibilidad de alterarlo. El Real Decreto-ley 15/2025 fija el inicio el 1 de enero de 2027 para los contribuyentes del Impuesto sobre Sociedades y el 1 de julio de 2027 para autónomos y demás obligados.',
-      'Factura electrónica entre empresas: el Real Decreto 238/2026 hace obligatoria la factura electrónica estructurada entre empresarios. Se aplica 12 meses después de su orden ministerial para las empresas con más de 8 millones de euros de facturación, y 24 meses después para el resto.',
+      'Factura electrónica entre empresas: el Real Decreto 238/2026 hace obligatoria la factura electrónica estructurada entre empresarios. Se aplica 12 meses después de la entrada en vigor de la orden ministerial sobre la solución pública de facturación electrónica para las empresas con más de 8 millones de euros de facturación, y 24 meses después para el resto.',
       'Quienes ya están en el SII, y el País Vasco y Navarra, tienen sus propios sistemas.'
     ],
     change: [
@@ -76,8 +76,8 @@ const countries: Country[] = [
       'El régimen especial de las agencias de viajes se aplica cuando la agencia vende viajes en nombre propio con servicios comprados a otros. El IVA se paga sobre el margen. La parte del viaje que corresponde a servicios prestados fuera de la Unión Europea está exenta.'
     ],
     invoice: [
-      'La factura puede indicar de forma inequívoca que la operación se acoge al régimen especial de las agencias de viajes.',
-      'La administración admite que el IVA del régimen del margen no se desglose en la factura.'
+      'La factura debe hacer referencia al régimen del margen, citando el artículo del código tributario o con una mención como «régime spécifique des agences de voyages».',
+      'En las facturas a clientes empresariales, la administración admite que el IVA no se desglose.'
     ],
     einvoice: [
       'Desde el 1 de septiembre de 2026, toda empresa establecida en Francia y sujeta al IVA debe poder recibir facturas electrónicas.',
@@ -88,7 +88,7 @@ const countries: Country[] = [
     tool: OUTSIDE_SPAIN,
     faq: [
       { q: '¿Debo poder recibir facturas electrónicas si solo vendo a particulares?', a: ['Sí. Desde el 1 de septiembre de 2026, toda empresa sujeta al IVA en Francia debe poder recibirlas, por ejemplo las de sus proveedores.'] },
-      { q: '¿El régimen del margen se aplica a viajes vendidos a empresas?', a: ['Puede aplicarse, según la operación. Las condiciones las fija el código tributario francés.'] }
+      { q: '¿El régimen del margen se aplica a viajes vendidos a empresas?', a: ['Sí. El régimen depende de la operación, no del cliente, y se aplica a los importes cobrados a todos los clientes.'] }
     ],
     sources: 'Fuentes oficiales: [BOFiP, régimen de las agencias de viajes (BOI-TVA-SECT-60)](https://bofip.impots.gouv.fr/doctrine/BOI-TVA-SECT-60), [economie.gouv.fr, calendario de la factura electrónica](https://www.economie.gouv.fr/cedef/facturation-electronique-entreprises) e [impots.gouv.fr](https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique).'
   },
@@ -108,9 +108,11 @@ const countries: Country[] = [
       'Lleva la mención «Sonderregelung für Reisebüros».'
     ],
     einvoice: [
+      'Desde el 1 de enero de 2025, toda empresa debe poder recibir facturas electrónicas.',
       'A partir del 1 de enero de 2027, deben emitirlas las empresas con más de 800.000 euros de facturación el año anterior.',
       'A partir del 1 de enero de 2028, todas las empresas.',
       'Una factura electrónica sigue la norma europea EN 16931. Un PDF simple no cuenta.',
+      'Las facturas de hasta 250 euros y los billetes de transporte están exentos.',
       'Las ventas a particulares no están incluidas.'
     ],
     change: [

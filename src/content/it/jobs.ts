@@ -149,7 +149,7 @@ const book: JobPage = {
         { title: 'Email dei fornitori archiviate per te', body: ['Le conferme e le risposte dei fornitori arrivano sul viaggio a cui si riferiscono.'] },
         { title: 'Voucher di servizio', body: ['Invia a ogni guida, autista o hotel un voucher chiaro con date, nomi e dettagli, direttamente dal viaggio.'] },
         { title: 'Schede fornitore', body: ['Contatti, contratti, foto e cosa include ogni fornitore, conservati sul fornitore e riutilizzati in ogni viaggio.'] },
-        { title: 'Richieste di disponibilità e ordini ai fornitori', body: ['Chiedi la disponibilità a un hotel, poi invia l’ordine dal viaggio. Risposte e modifiche tornano sulla prenotazione.'], premium: true }
+        { title: 'Richieste di disponibilità e ordini di acquisto ai fornitori', body: ['Chiedi la disponibilità a un hotel, poi invia l’ordine di acquisto dal viaggio. Risposte e modifiche tornano sulla prenotazione.'], premium: true }
       ]
     },
     {
@@ -161,7 +161,7 @@ const book: JobPage = {
       features: [
         { title: 'Una pagina itinerario da condividere', body: ['Un solo link, giorno per giorno. Si apre su qualsiasi telefono.'] },
         { title: 'Nella lingua del viaggiatore e con il tuo marchio', body: ['L’itinerario segue la lingua del cliente e porta il tuo logo.'] },
-        { title: 'Sempre aggiornato', body: ['Cambi l’orario di un prelevamento sul viaggio e la pagina mostra il nuovo orario. Il link resta lo stesso.'] }
+        { title: 'Sempre aggiornato', body: ['Cambi l’orario di un pick-up sul viaggio e la pagina mostra il nuovo orario. Il link resta lo stesso.'] }
       ]
     },
     {
@@ -308,13 +308,13 @@ const setup: JobPage = {
       id: 'currencies',
       kicker: 'Valute',
       title: 'Più valute',
-      lead: 'Lodge in dollari, un cliente in sterline, la tua contabilità in euro. Ogni preventivo ha la sua valuta, e i tuoi numeri tornano nella tua.',
+      lead: 'Lodge in dollari, un cliente in sterline, la tua contabilità in euro. Ogni preventivo ha la sua valuta, e i totali si sommano nella tua.',
       visual: 'currencies',
       features: [
         { title: 'Una valuta per cliente e per preventivo', body: ['Fai il preventivo a un cliente britannico in sterline e a un partner americano in dollari, dallo stesso catalogo.'], premium: true },
         { title: 'I prezzi dei fornitori nella loro valuta', body: ['Tieni ogni tariffa nella valuta in cui fattura il fornitore. Il preventivo la converte al cambio del giorno, con un margine di sicurezza che scegli tu.'], premium: true },
         { title: 'Cambi giornalieri', body: ['I cambi della Banca centrale europea vengono aggiornati ogni giorno lavorativo, oppure imposti i tuoi.'], premium: true },
-        { title: 'La contabilità in una sola valuta', body: ['Fatture, pagamenti, margini e report tornano nella tua valuta contabile, con utili e perdite su cambi calcolati per te.'], premium: true }
+        { title: 'La contabilità in una sola valuta', body: ['Fatture, pagamenti, margini e report si sommano nella tua valuta contabile, con utili e perdite su cambi calcolati per te.'], premium: true }
       ]
     },
     {
@@ -348,14 +348,14 @@ const setup: JobPage = {
       features: [
         { title: 'Uno spazio separato per la tua agenzia', body: ['I tuoi dati stanno nel loro spazio, separati da quelli delle altre agenzie.'] },
         { title: 'Ospitato nell’UE', body: ['I tuoi dati restano nell’Unione europea, nel rispetto del GDPR.'] },
-        { title: 'Te ne vai con i tuoi dati', body: ['Se smetti, riavrai i tuoi dati in formati standard.'] }
+        { title: 'I tuoi dati vengono con te', body: ['Se smetti, riavrai i tuoi dati in formati standard.'] }
       ]
     },
     {
       id: 'connections',
       kicker: 'Collegamenti',
       title: 'Collegamenti',
-      lead: 'Gli altri tuoi software possono leggere e scrivere i tuoi dati Traviosoft, con gli stessi diritti che nell’app.',
+      lead: 'Gli altri software che usi possono leggere e scrivere i tuoi dati Traviosoft, con gli stessi diritti che nell’app.',
       visual: 'connections',
       features: [
         { title: 'Il tuo sito e la tua contabilità', body: ['Il tuo sito, il tuo strumento di contabilità o uno sviluppatore con cui lavori possono leggere e scrivere i tuoi dati Traviosoft.'], premium: true },

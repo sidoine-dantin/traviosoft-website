@@ -69,7 +69,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'mice',
     term: 'MICE',
-    def: 'Sigla di Meetings, Incentives, Conferences and Exhibitions. Sono viaggi aziendali con molti partecipanti, blocchi di camere e programmi su misura.'
+    def: 'Sigla di Meetings, Incentives, Conferences and Exhibitions: riunioni, viaggi incentive, congressi ed eventi. Sono viaggi aziendali con molti partecipanti, blocchi di camere e programmi su misura.'
   },
   {
     id: 'verifactu',
