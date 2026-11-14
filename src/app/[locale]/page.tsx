@@ -1,3 +1,4 @@
+import { HeroParallax } from '@/components/site/hero-parallax';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -24,6 +25,7 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <header className="hero on-cream">
+        <HeroParallax />
         <div className="wrap">
           <h1 className="hero-title">{h.title}</h1>
           <p className="hero-sub">{h.sub}</p>
