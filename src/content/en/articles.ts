@@ -1,5 +1,6 @@
 import type { Article, ArticleBlock, Faq } from '../types';
 import { invoicingGuides } from './invoicing';
+import { topicGuides } from './topics';
 import { PRICES } from '../prices';
 
 const UPDATED = '2026-11-03';
@@ -19,6 +20,7 @@ type Cmp = {
   usBetter: string[];
   switching: string;
   faq: Faq[];
+  updated?: string;
 };
 
 function compare(c: Cmp): Article {
@@ -44,7 +46,7 @@ function compare(c: Cmp): Article {
     metaDescription: c.metaDescription,
     title: c.title,
     lead: c.lead,
-    updated: UPDATED,
+    updated: c.updated ?? UPDATED,
     card: c.card,
     blocks
   };
@@ -289,6 +291,124 @@ const compares: Cmp[] = [
       { q: 'How is Tourwriter priced?', a: ['Its plans start from 99 USD per user a month (Starter) and 149 USD (Pro), with a one-time setup fee from 1,199 USD that covers migration and training. They prepare a quote for each team, so confirm the total with them.'] },
       { q: 'Which languages does each work in?', a: ['Tourwriter works in English. Traviosoft works in Spanish, English and French, and sends documents in the client’s language: Spanish, Catalan, English, French or Italian.'] },
       { q: 'Can I try both?', a: ['Both offer a demo. The most useful test is to bring one real trip of yours to each and compare the itinerary your client would receive.'] }
+    ]
+  },
+  {
+    key: 'vs-tourplan',
+    updated: '2026-11-14',
+    slug: 'traviosoft-vs-tourplan',
+    other: 'Tourplan',
+    metaTitle: 'Traviosoft vs Tourplan for DMCs and tour operators',
+    metaDescription:
+      'Tourplan is tour operator software used by DMCs and tour operators since 1986. We compare who each is for, company, price, getting started and languages.',
+    title: 'Traviosoft vs Tourplan: two systems for DMCs and tour operators',
+    lead: 'Tourplan has been making software for DMCs and tour operators since 1986, with sales, bookings and back office in a modular system used by 450 companies in 75 countries. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
+    card: 'A modular system with 40 years behind it and one flow from request to invoice with a published price.',
+    basis:
+      'Tourplan details come from its website (home and About pages), checked on 14 November 2026. Its site does not publish prices, so we write "On request".',
+    rows: [
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'DMCs, inbound and outbound tour operators: FIT, groups, MICE, tailor-made, series tours'],
+      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Since 1986, 5 offices across Africa, the Americas, Asia, Europe and the Pacific'],
+      ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
+      ['Getting started', 'Setup and import free with yearly billing', 'Hosting, installation, project management, training and support'],
+      ['Distribution', 'Connections to your website and accounting (Premium) and to your AI tools (both plans)', 'Web and XML distribution channels, and online interfaces for agents, clients and suppliers']
+    ],
+    otherBetter: [
+      'You want a modular system covering product, quotes, reservations, accounts and management reporting, with 40 years of history.',
+      'You distribute your product through web and XML channels and want interfaces for agents and suppliers.',
+      'You value a vendor working with 450 tour operators and DMCs in 75 countries, with offices on five continents.',
+      'You want a guided project with installation, project management and training.'
+    ],
+    usBetter: [
+      'You want to quote, book and invoice the whole trip in one system, up and running through a short setup.',
+      'You want a published price with users included in each plan.',
+      'Your clients speak Spanish, French, Catalan or Italian and you want documents in their language.',
+      'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
+    ],
+    switching:
+      'If you use Tourplan and want to move to Traviosoft, export your products, prices and suppliers to a spreadsheet and we import them during setup. A common approach is to finish trips in progress where they are and open new requests in Traviosoft, usually in the low season. See the [Switching page](/switch).',
+    faq: [
+      { q: 'Who is Tourplan for?', a: ['According to its site, DMCs and inbound and outbound tour operators, for FIT, group, MICE, tailor-made, series and specialist tours.'] },
+      { q: 'How is Tourplan priced?', a: ['Its site does not publish prices. Ask them for a quote.'] },
+      { q: 'Can I try both?', a: ['Both offer a demo. The most useful test is to bring one real trip of yours to each and compare the result.'] }
+    ]
+  },
+  {
+    key: 'vs-kaptio',
+    updated: '2026-11-14',
+    slug: 'traviosoft-vs-kaptio',
+    other: 'Kaptio',
+    metaTitle: 'Traviosoft vs Kaptio for tour operators and tailor-made travel',
+    metaDescription:
+      'Kaptio is software for multi-day travel: cruise, rail, group tours and tailor-made travel. We compare who each is for, company, price and getting started.',
+    title: 'Traviosoft vs Kaptio: two systems for multi-day trips',
+    lead: 'Kaptio, founded in Reykjavik in 2012, brings CRM, contracting, pricing, inventory, reservations, payments and operations together for cruise, rail, group tours and tailor-made travel. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
+    card: 'One platform for multi-day travel and one flow from request to invoice with a published price.',
+    basis:
+      'Kaptio details come from its website (home, platform and About pages), checked on 14 November 2026. Its site does not publish prices, so we write "On request".',
+    rows: [
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Multi-day travel: cruise, rail, group tours and tailor-made travel'],
+      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Founded in Reykjavik in 2012'],
+      ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
+      ['Getting started', 'Setup and import free with yearly billing', 'Starts with a discovery workshop'],
+      ['Modules', 'Requests, quotes, bookings, invoices and payments in one flow', 'Kaptio CRM, Kaptio Travel and Kaptio Edge']
+    ],
+    otherBetter: [
+      'You sell cruise, rail or group tours and want CRM, contracting, inventory and operations on one platform.',
+      'You want to start with a discovery workshop on your processes.',
+      'You want the AI assistants it lists as part of the platform.'
+    ],
+    usBetter: [
+      'You build tailor-made trips and want to quote, book and invoice them in one system, up and running through a short setup.',
+      'You want a published price with users included in each plan.',
+      'Your clients speak Spanish, French, Catalan or Italian and you want documents in their language.',
+      'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
+    ],
+    switching:
+      'If you use Kaptio and want to move to Traviosoft, export your products, prices and suppliers to a spreadsheet and we import them during setup. A common approach is to finish trips in progress where they are and open new requests in Traviosoft. See the [Switching page](/switch).',
+    faq: [
+      { q: 'Who is Kaptio for?', a: ['According to its site, companies selling multi-day travel: cruise, rail, group tours and tailor-made travel.'] },
+      { q: 'How is Kaptio priced?', a: ['Its site does not publish prices. Ask them for a quote.'] },
+      { q: 'Can I try both?', a: ['Kaptio starts with a discovery workshop and Traviosoft with a demo on a sample trip. Comparing the two on the same kind of trip is the most useful test.'] }
+    ]
+  },
+  {
+    key: 'vs-tourcms',
+    updated: '2026-11-14',
+    slug: 'traviosoft-vs-tourcms',
+    other: 'TourCMS',
+    metaTitle: 'Traviosoft vs TourCMS: tailor-made trips or tours and activities',
+    metaDescription:
+      'TourCMS is booking and channel management software for tours and activities operators. We compare who each is for, company, published prices and languages.',
+    title: 'Traviosoft vs TourCMS: tailor-made trips and tours and activities',
+    lead: 'TourCMS, operated by Palisis in Switzerland, has offered booking, distribution and channel management for tours and activities operators since 2003. Traviosoft is built for tailor-made trips, from the first request to the last invoice, with documents in five languages.',
+    card: 'Bookings and channel management for tours and activities, and one flow for tailor-made trips.',
+    basis:
+      'TourCMS details come from its website (home, features and prices pages), checked on 14 November 2026. Its prices are shown in US dollars.',
+    rows: [
+      ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Tours and activities operators: day tours, multi-day tours, attractions, DMCs'],
+      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Operated by Palisis AG, Uster (Switzerland); TourCMS since 2003'],
+      ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'From 49 USD a month (2 users) to 569 USD a month (500 users); bookings from connected partners from 1.9% per transaction'],
+      ['Getting started', 'Setup and import free with yearly billing', 'Free trial, no setup fee'],
+      ['Languages', 'Documents in Spanish, Catalan, English, French and Italian', 'Content in 22 languages']
+    ],
+    otherBetter: [
+      'You run tours or activities with departures sold online and through resellers.',
+      'You want channel management and a marketplace of agents, which it lists at more than 30,000.',
+      'You want to start with a free trial.'
+    ],
+    usBetter: [
+      'You build tailor-made trips, each one quoted with your margin and commission.',
+      'You want supplier bookings and invoices made from the same trip.',
+      'Your clients speak Spanish, French, Catalan or Italian and you want documents in their language.',
+      'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
+    ],
+    switching:
+      'If you use TourCMS and want to move to Traviosoft, export your products, prices and suppliers to a spreadsheet and we import them during setup. See the [Switching page](/switch).',
+    faq: [
+      { q: 'Who is TourCMS for?', a: ['According to its site, tours and activities operators: day tours, hop-on hop-off, attractions, multi-day tours, DMCs and walking tours.'] },
+      { q: 'How is TourCMS priced?', a: ['Its prices page lists four plans, from 49 USD a month (Small) to 569 USD a month (Enterprise), with a yearly option, plus a fee from 1.9% on bookings from connected partners.'] },
+      { q: 'Can I try both?', a: ['TourCMS offers a free trial and Traviosoft a demo on a sample trip.'] }
     ]
   }
 ];
@@ -683,4 +803,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...topicGuides, ...invoicingGuides];
