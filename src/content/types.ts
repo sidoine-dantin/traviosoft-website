@@ -16,6 +16,9 @@ export type Locale = 'es' | 'en' | 'fr';
 export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
 
 /** Product fragments drawn in code (src/components/visuals.tsx). */
+/** Generic line icons for the 'before' notes (no third-party logos: their brand rules do not allow it). */
+export type ScrapIcon = 'sheet' | 'doc' | 'chat' | 'bank' | 'book' | 'mail' | 'phone' | 'note' | 'pdf' | 'calc';
+
 export type VisualKey =
   | 'margin' | 'commission' | 'confirm' | 'statuses' | 'rooming' | 'schedule' | 'paylink' | 'settings' | 'currencies' | 'country'
   | 'quote'
@@ -204,7 +207,7 @@ export type SiteContent = {
     tripTitle: string;
     steps: { time: string; title: string; body: string; job: JobSlug }[];
     stepGo: string;
-    baTitle: string; beforeTitle: string; beforeScraps: string[]; afterTitle: string; afterBody: string;
+    baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
     priceTitle: string; priceBody: string; coin1: string; coin2: string; priceLink: string;
     facts: { k: string; v: string }[];
   };

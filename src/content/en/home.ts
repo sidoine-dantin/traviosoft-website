@@ -23,12 +23,18 @@ export const home: SiteContent['home'] = {
   baTitle: 'Before and after',
   beforeTitle: 'Today',
   beforeScraps: [
-    'Rates_2026_FINAL_v3.xlsx',
-    'Quote Smith.docx',
-    'WhatsApp: "did the hotel confirm?"',
-    'Deposit? check the bank',
-    'Invoice numbers in a notebook',
-    '42 unread emails'
+    { i: 'sheet', t: 'Rates_2026_FINAL_v3.xlsx' },
+    { i: 'doc', t: 'Quote Smith.docx' },
+    { i: 'chat', t: 'WhatsApp: "did the hotel confirm?"' },
+    { i: 'bank', t: 'Deposit? check the bank' },
+    { i: 'book', t: 'Invoice numbers in a notebook' },
+    { i: 'mail', t: '42 unread emails' },
+    { i: 'sheet', t: 'Rooming_list_Müller (2).xlsx' },
+    { i: 'phone', t: 'Call back the guide' },
+    { i: 'note', t: 'Who sent the quote?' },
+    { i: 'pdf', t: 'Voucher_final_FINAL.pdf' },
+    { i: 'calc', t: 'Margin: check again' },
+    { i: 'mail', t: 'RE: RE: RE: availability' }
   ],
   afterTitle: 'With Traviosoft',
   afterBody:

@@ -23,12 +23,18 @@ export const home: SiteContent['home'] = {
   baTitle: 'Avant et après',
   beforeTitle: 'Aujourd’hui',
   beforeScraps: [
-    'Tarifs_2026_FINAL_v3.xlsx',
-    'Devis Martin.docx',
-    'WhatsApp : « l’hôtel a confirmé ? »',
-    'Acompte ? vérifier la banque',
-    'Numéros de facture dans un cahier',
-    '42 e-mails non lus'
+    { i: 'sheet', t: 'Tarifs_2026_FINAL_v3.xlsx' },
+    { i: 'doc', t: 'Devis Martin.docx' },
+    { i: 'chat', t: 'WhatsApp : « l’hôtel a confirmé ? »' },
+    { i: 'bank', t: 'Acompte ? vérifier la banque' },
+    { i: 'book', t: 'Numéros de facture dans un cahier' },
+    { i: 'mail', t: '42 e-mails non lus' },
+    { i: 'sheet', t: 'Rooming_list_Müller (2).xlsx' },
+    { i: 'phone', t: 'Rappeler le guide' },
+    { i: 'note', t: 'Qui a envoyé le devis ?' },
+    { i: 'pdf', t: 'Voucher_final_FINAL.pdf' },
+    { i: 'calc', t: 'Marge : à recalculer' },
+    { i: 'mail', t: 'RE : RE : RE : disponibilités' }
   ],
   afterTitle: 'Avec Traviosoft',
   afterBody:

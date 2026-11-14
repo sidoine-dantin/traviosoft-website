@@ -236,16 +236,28 @@
 .ba > div { border-radius: var(--radius); padding: clamp(24px, 3vw, 40px); min-height: 280px; }
 .ba .before { background: var(--cream-2); }
 .ba .after { background: var(--green); color: var(--cream); }
-.scraps { position: relative; height: 240px; margin-top: 22px; }
-.scrap { position: absolute; white-space: nowrap; background: var(--white); border: 1.5px dashed var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: var(--muted); box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .35); }
+.scraps { position: relative; height: 330px; margin-top: 22px; }
+.scrap { position: absolute; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; background: var(--white); border: 1.5px dashed var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: var(--muted); box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .35); }
+.scrap-icon { flex: none; }
 /* A pile of loose notes: overlapping and tilted on purpose. */
 .scrap:nth-child(1) { left: 0; top: 10px; transform: rotate(-6deg); }
-.scrap:nth-child(2) { left: 36%; top: 0; transform: rotate(5deg); }
-.scrap:nth-child(3) { left: 10%; top: 62px; transform: rotate(3deg); z-index: 1; }
-.scrap:nth-child(4) { left: 50%; top: 96px; transform: rotate(-7deg); }
-.scrap:nth-child(5) { left: 2%; top: 128px; transform: rotate(-3deg); z-index: 1; }
-.scrap:nth-child(6) { left: 44%; top: 166px; transform: rotate(8deg); }
-@media (max-width: 560px) { .scraps { height: 260px; } .scrap:nth-child(2) { left: 22%; } .scrap:nth-child(4) { left: 26%; top: 104px; } .scrap:nth-child(5) { top: 160px; } .scrap:nth-child(6) { left: 18%; top: 200px; } }
+.scrap:nth-child(2) { left: 40%; top: 0; transform: rotate(5deg); }
+.scrap:nth-child(3) { left: 8%; top: 64px; transform: rotate(3deg); z-index: 1; }
+.scrap:nth-child(4) { left: 52%; top: 82px; transform: rotate(-7deg); }
+.scrap:nth-child(5) { left: 2%; top: 130px; transform: rotate(-3deg); z-index: 1; }
+.scrap:nth-child(6) { left: 46%; top: 150px; transform: rotate(8deg); }
+.scrap:nth-child(7) { left: 22%; top: 104px; transform: rotate(-11deg); }
+.scrap:nth-child(8) { left: 66%; top: 34px; transform: rotate(10deg); }
+.scrap:nth-child(9) { left: 12%; top: 196px; transform: rotate(5deg); z-index: 1; }
+.scrap:nth-child(10) { left: 54%; top: 214px; transform: rotate(-4deg); }
+.scrap:nth-child(11) { left: 30%; top: 256px; transform: rotate(-8deg); }
+.scrap:nth-child(12) { left: 0; top: 270px; transform: rotate(4deg); z-index: 1; }
+@media (max-width: 560px) {
+  .scraps { height: 380px; }
+  .scrap:nth-child(2) { left: 22%; } .scrap:nth-child(4) { left: 26%; top: 104px; } .scrap:nth-child(5) { top: 160px; } .scrap:nth-child(6) { left: 18%; top: 210px; }
+  .scrap:nth-child(7) { left: 4%; top: 250px; } .scrap:nth-child(8) { left: 40%; top: 46px; } .scrap:nth-child(9) { left: 30%; top: 290px; }
+  .scrap:nth-child(10) { left: 8%; top: 330px; } .scrap:nth-child(11), .scrap:nth-child(12) { display: none; }
+}
 @media (max-width: 760px) { .ba { grid-template-columns: 1fr; } }
 
 /* ---------- job pages ---------- */

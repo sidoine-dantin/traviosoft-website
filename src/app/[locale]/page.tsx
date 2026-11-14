@@ -1,3 +1,4 @@
+import { ScrapIcon } from '@/components/site/scrap-icon';
 import { HeroParallax } from '@/components/site/hero-parallax';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
@@ -64,7 +65,7 @@ export default async function HomePage({ params }: Props) {
             <div className="before">
               <p className="lbl muted">{h.beforeTitle}</p>
               <div className="scraps">
-                {h.beforeScraps.map(s => <span key={s} className="scrap">{s}</span>)}
+                {h.beforeScraps.map(s => <span key={s.t} className="scrap"><ScrapIcon k={s.i} />{s.t}</span>)}
               </div>
             </div>
             <div className="after">
