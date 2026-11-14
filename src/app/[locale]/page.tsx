@@ -1,5 +1,6 @@
 import { ScrapIcon } from '@/components/site/scrap-icon';
 import { HeroParallax } from '@/components/site/hero-parallax';
+import { HomeMotion } from '@/components/site/home-motion';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -25,8 +26,9 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <header className="hero on-cream">
+      <header className="hero on-cream snap">
         <HeroParallax />
+        <HomeMotion />
         <div className="wrap">
           <h1 className="hero-title">{h.title}</h1>
           <p className="hero-sub">{h.sub}</p>
@@ -39,9 +41,11 @@ export default async function HomePage({ params }: Props) {
         </div>
       </header>
 
-      <section className="on-green band">
+      <section className="on-green band steps-pin snap">
+        {h.steps.map((_, i) => <span key={i} className="snap-mark" aria-hidden="true" />)}
+        <div className="pin">
         <div className="wrap">
-          <h2 className="h2" style={{ maxWidth: '16ch', marginBottom: 'clamp(48px, 7vw, 80px)' }}>{h.tripTitle}</h2>
+          <h2 className="h2" data-reveal style={{ maxWidth: '16ch', marginBottom: 'clamp(48px, 7vw, 80px)' }}>{h.tripTitle}</h2>
           <ol className="steps">
             {h.steps.map((s, i) => (
               <li key={i}>
@@ -50,17 +54,18 @@ export default async function HomePage({ params }: Props) {
                   <span className="mono" style={{ opacity: 0.8 }}>{s.time}</span>
                   <b>{s.title}</b>
                   <p>{s.body}</p>
-                  <span className="go">{h.stepGo} →</span>
+                  <span className="go"><span className="arr-t">{h.stepGo}</span><span className="arr" aria-hidden="true">→</span></span>
                 </Link>
               </li>
             ))}
           </ol>
         </div>
+        </div>
       </section>
 
-      <section className="band">
+      <section className="band snap">
         <div className="wrap">
-          <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 40, maxWidth: '18ch' }}>{h.baTitle}</h2>
+          <h2 className="h2" data-reveal style={{ color: 'var(--green)', marginBottom: 40, maxWidth: '18ch' }}>{h.baTitle}</h2>
           <div className="ba">
             <div className="before">
               <p className="lbl muted">{h.beforeTitle}</p>
@@ -76,7 +81,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="band">
+      <section className="band snap">
         <div className="wrap coins">
           <div>
             <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>

@@ -210,17 +210,33 @@
 
 /* ---------- trip timeline ---------- */
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; position: relative; list-style: none; margin: 0; padding: 0; }
-.steps::before { content: ""; position: absolute; left: 4%; right: 4%; top: 9px; border-top: 4px dotted var(--yellow); }
-.steps > li { display: flex; }
-.step { position: relative; display: flex; flex-direction: column; gap: 10px; text-decoration: none; flex: 1; }
-.step .dot { width: 22px; height: 22px; border-radius: 50%; display: block; background: var(--yellow); color: var(--green); border: 3px solid var(--deep); transition: transform .2s; }
-.step:hover .dot { transform: scale(1.08); }
+.steps > li { display: flex; position: relative; }
+/* one dotted segment per step, from this dot's centre to the next dot's centre */
+.steps > li:not(:last-child)::after { content: ""; position: absolute; left: 11px; top: 9px; width: calc(100% + 24px); border-top: 4px dotted var(--yellow); transition: opacity .4s ease; }
+.step { position: relative; display: flex; flex-direction: column; gap: 10px; text-decoration: none; flex: 1; transition: opacity .4s ease; }
+.step .dot { position: relative; z-index: 1; width: 22px; height: 22px; border-radius: 50%; display: block; background: var(--yellow); color: var(--green); border: 3px solid var(--deep); transform-origin: center; transition: transform .45s cubic-bezier(.3, 1.6, .5, 1), box-shadow .45s ease; }
+.step:hover .dot { transform: scale(1.15); }
 .step b { font-size: 19px; line-height: 1.15; }
 .step p { font-size: 15px; opacity: .8; }
-.step .go { font-size: 14px; font-weight: 700; color: var(--yellow); margin-top: auto; padding-top: 2px; } /* same baseline in every column */
-@media (max-width: 900px) {
+.step .go { position: relative; align-self: flex-start; display: inline-flex; gap: 6px; font-size: 14px; font-weight: 700; color: var(--yellow); margin-top: auto; padding: 2px 0 5px; } /* same baseline in every column */
+.step .go::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform .25s ease, right .2s ease; }
+.step .go .arr { display: inline-block; transition: transform .2s ease; }
+.step .go .arr-t { transition: text-shadow .2s ease; }
+.step:hover .go::before, .step:focus-visible .go::before, .step:active .go::before { transform: scaleX(1); right: -5px; }
+.step:hover .go .arr, .step:focus-visible .go .arr { transform: translateX(5px); }
+.step:active .go .arr { transform: translateX(9px); }
+.step:active .go::before { right: -9px; }
+.step:hover .go .arr-t, .step:focus-visible .go .arr-t { text-shadow: .25px 0 0 currentColor, -.25px 0 0 currentColor; }
+/* scroll highlight: the step being read gets a bigger dot, the ones still to come wait a little dimmer */
+html.motion .steps[data-active] .step { opacity: .5; }
+html.motion .steps[data-active] li.seen .step, html.motion .steps[data-active] li.now .step { opacity: 1; }
+html.motion .steps[data-active] > li::after { opacity: .3; }
+html.motion .steps[data-active] > li.seen::after { opacity: 1; }
+@media (min-width: 921px) { html.motion .steps .dot { margin-bottom: 8px; } }
+html.motion .steps li.now .dot { transform: scale(1.6); box-shadow: 0 0 0 6px rgba(224, 243, 84, .22); }
+@media (max-width: 920px) {
   .steps { grid-template-columns: 1fr; gap: 34px; }
-  .steps::before { left: 9px; right: auto; top: 0; bottom: 0; border-top: 0; border-left: 4px dotted var(--yellow); }
+  .steps > li:not(:last-child)::after { left: 9px; top: 11px; width: 0; height: calc(100% + 34px); border-top: 0; border-left: 4px dotted var(--yellow); }
   .step { padding-left: 44px; }
   .step .dot { position: absolute; left: 0; top: 0; }
 }
@@ -243,11 +259,12 @@
 /* Text link with an arrow: on hover or press the text, the arrow and the underline get bolder
    (drawn, so nothing shifts), the underline drops a little and the arrow moves forward. */
 .arrow { position: relative; font-weight: 650; text-decoration: none; display: inline-flex; gap: 8px; align-items: center; padding-bottom: 6px; }
-.arrow::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s ease, height .2s ease; }
+.arrow::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s ease, height .2s ease, right .2s ease; }
 .arrow .arr-t { transition: text-shadow .2s ease; }
 .arrow .arr { display: inline-block; transition: transform .2s ease, text-shadow .2s ease; }
-.arrow:hover::before, .arrow:focus-visible::before { height: 3px; transform: translateY(4px); }
-.arrow:hover .arr-t, .arrow:focus-visible .arr-t, .arrow:hover .arr, .arrow:focus-visible .arr { text-shadow: .45px 0 0 currentColor, -.45px 0 0 currentColor, 0 .45px 0 currentColor; }
+.arrow:hover::before, .arrow:focus-visible::before { height: 3px; transform: translateY(4px); right: -5px; }
+.arrow:active::before { right: -9px; }
+.arrow:hover .arr-t, .arrow:focus-visible .arr-t, .arrow:hover .arr, .arrow:focus-visible .arr { text-shadow: .25px 0 0 currentColor, -.25px 0 0 currentColor; }
 .arrow:hover .arr, .arrow:focus-visible .arr { transform: translateX(5px); }
 .arrow:active .arr { transform: translateX(9px); }
 .arrow:hover { color: var(--orange-ink); }
@@ -470,6 +487,29 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 .callout { background: var(--yellow); color: var(--green); border-radius: var(--radius); padding: 22px 24px; margin: 28px 0; font-weight: 600; }
 .glossary dt { font-family: var(--display); font-weight: 600; font-size: 24px; margin-top: 36px; scroll-margin-top: 90px; }
 .glossary dd { margin: 8px 0 0; font-size: 18px; line-height: 1.6; max-width: 64ch; }
+
+
+/* ---------- home motion (html.motion is set by HomeMotion; without JS or with reduced motion nothing hides) ---------- */
+html.home-snap { scroll-snap-type: y proximity; }
+.snap { scroll-snap-align: start; }
+.steps-pin { position: relative; }
+.snap-mark { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; pointer-events: none; }
+html.motion .steps-pin.pinned { padding-block: 0; height: 320vh; }
+html.motion .steps-pin.pinned > .pin { position: sticky; top: 0; min-height: 100vh; display: flex; align-items: center; padding-block: 96px 48px; }
+html.motion .steps-pin.pinned > .pin > .wrap { width: 100%; }
+html.motion [data-reveal] { opacity: 0; translate: 0 28px; transition: opacity .8s ease, translate .8s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--d, 0) * 1ms); }
+html.motion [data-reveal].in { opacity: 1; translate: 0 0; }
+/* the paper pile falls into place, each scrap keeping its own tilt */
+html.motion .scraps .scrap { opacity: 0; translate: 0 -70px; transition: opacity .5s ease, translate .7s cubic-bezier(.3, 1.4, .5, 1); transition-delay: calc(var(--i, 0) * 70ms); }
+html.motion .scraps.in .scrap { opacity: 1; translate: 0 0; }
+html.motion .ba .after { opacity: 0; translate: 40px 0; transition: opacity .8s ease .9s, translate .9s cubic-bezier(.2, .7, .2, 1) .9s; }
+html.motion .ba.in .after { opacity: 1; translate: 0 0; }
+/* the two price coins roll in from the side */
+html.motion .coins .coin { opacity: 0; translate: 160px 0; rotate: 120deg; transition: opacity .6s ease, translate 1s cubic-bezier(.2, .8, .25, 1), rotate 1s cubic-bezier(.2, .8, .25, 1); }
+html.motion .coins .coin + .coin { transition-delay: .18s; }
+html.motion .coins.in .coin { opacity: 1; translate: 0 0; rotate: 0deg; }
+html.motion .facts > div { opacity: 0; translate: 0 18px; transition: opacity .6s ease, translate .6s ease; transition-delay: calc(var(--i, 0) * 80ms); }
+html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 
 /* ---------- reveal ---------- */
 @media (prefers-reduced-motion: reduce) {
