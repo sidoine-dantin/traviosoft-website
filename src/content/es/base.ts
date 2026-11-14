@@ -44,7 +44,11 @@ export const common: SiteContent['common'] = {
   faqTitle: 'Preguntas',
   backToResources: 'Todos los recursos',
   allResources: 'Ver todos los recursos',
-  perMonth: 'EUR / mes'
+  perMonth: 'EUR / mes',
+  notFound: {
+    title: 'Página no encontrada',
+    body: 'No hay nada en esta dirección.'
+  }
 };
 
 export const visuals: SiteContent['visuals'] = {
