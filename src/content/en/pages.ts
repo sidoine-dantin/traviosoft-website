@@ -204,12 +204,9 @@ export const switching: SiteContent['switching'] = {
     }
   ],
   importTitle: 'What comes over',
-  importHead: ['What', 'From', 'Price'],
-  importRows: [
-    { what: 'Catalogue, products and rates', from: 'Spreadsheets, another tool’s export', how: 'Included in the import' },
-    { what: 'Clients', from: 'Spreadsheets, another tool’s export', how: 'Included in the import' },
-    { what: 'Suppliers and contacts', from: 'Spreadsheets, another tool’s export', how: 'Included in the import' },
-    { what: 'Trips in progress and other files', from: 'Word, PDF, emails, mixed files', how: 'On quote, after a sample' }
+  importParts: [
+    { title: 'Included in the import price', body: 'Your catalogue with its rates, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
+    { title: 'On quote', body: 'Trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
   ],
   seasonTitle: 'Will it disrupt my season?',
   seasonBody: [

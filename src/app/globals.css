@@ -479,6 +479,11 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 .sr-only:focus { position: fixed; left: 12px; top: 12px; width: auto; height: auto; clip: auto; margin: 0; padding: 10px 14px; background: var(--green); color: var(--cream); z-index: 100; border-radius: 8px; }
 @media (max-width: 900px) { .job-hero-visual { display: none !important; } }
 /* wide tables in articles break out of the reading column */
+.prose .pairs section { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.prose .pairs section:last-child { border-bottom: 0; }
+.prose .pairs h3 { margin: 0 0 8px; }
+.prose .pairs p { margin: 4px 0 0; }
+.prose .pairs strong { color: var(--green); margin-right: 6px; }
 .prose .tbl-wrap { width: min(1120px, calc(100vw - 2 * var(--gutter))); margin-left: 50%; transform: translateX(-50%); }
 
 .back-link { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--orange-ink); }

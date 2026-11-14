@@ -204,12 +204,9 @@ export const switching: SiteContent['switching'] = {
     }
   ],
   importTitle: 'Ce qui est repris',
-  importHead: ['Quoi', 'Depuis', 'Prix'],
-  importRows: [
-    { what: 'Catalogue, produits et tarifs', from: 'Tableurs, l’export d’un autre outil', how: 'Compris dans l’import' },
-    { what: 'Clients', from: 'Tableurs, l’export d’un autre outil', how: 'Compris dans l’import' },
-    { what: 'Prestataires et contacts', from: 'Tableurs, l’export d’un autre outil', how: 'Compris dans l’import' },
-    { what: 'Voyages en cours et autres fichiers', from: 'Word, PDF, e-mails, fichiers mélangés', how: 'Sur devis, après un échantillon' }
+  importParts: [
+    { title: 'Compris dans le prix de l’import', body: 'Votre catalogue avec ses tarifs, vos clients, vos prestataires et leurs contacts. Depuis des tableurs ou un export de votre outil actuel.' },
+    { title: 'Sur devis', body: 'Les voyages en cours et les autres fichiers (Word, PDF, e-mails). Nous vous donnons un prix après avoir vu un échantillon.' }
   ],
   seasonTitle: 'Cela va-t-il perturber ma saison ?',
   seasonBody: [

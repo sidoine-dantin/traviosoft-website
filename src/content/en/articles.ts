@@ -699,21 +699,10 @@ const aiTools: Article = {
   updated: '2026-11-14',
   card: 'The built-in assistant, the MCP connector for Claude and ChatGPT, and how you stay in control.',
   blocks: [
-    { type: 'h2', text: 'Two ways to use AI', id: 'two-ways' },
-    {
-      type: 'table',
-      head: ['', 'Built-in assistant', 'MCP connector'],
-      rows: [
-        ['Where you use it', 'Inside Traviosoft', 'In your own AI tool (Claude, ChatGPT and others)'],
-        ['What it works on', 'Your agency’s data', 'Your agency’s data'],
-        ['Plans', 'Option on both plans, with usage limits', 'Included in both plans'],
-        ['Who can use it', 'The people you switch it on for', 'The people an administrator allows']
-      ]
-    },
     { type: 'h2', text: 'The built-in assistant', id: 'assistant' },
     {
       type: 'p',
-      text: 'The assistant sits in Traviosoft and works with the same rights as the person using it. Ask what needs you today. Have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices. It can also tick off booking tasks or list the payments that are due.'
+      text: 'The assistant sits in Traviosoft and works with the same rights as the person using it. Ask what needs you today. Have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices. It can also tick off booking tasks or list the payments that are due. It is an option on both plans, with usage limits, and you switch it on per person.'
     },
     {
       type: 'p',
@@ -722,7 +711,7 @@ const aiTools: Article = {
     { type: 'h2', text: 'The MCP connector', id: 'mcp' },
     {
       type: 'p',
-      text: 'MCP (Model Context Protocol) is the standard way an AI assistant plugs into another tool so it can work in it. With the Traviosoft connector your AI tool can look up a client, draft a quote or tell you which payments are late. It works on your real data rather than on what you paste into the chat.'
+      text: 'MCP (Model Context Protocol) is the standard way an AI assistant plugs into another tool so it can work in it. With the Traviosoft connector your AI tool can look up a client, draft a quote or tell you which payments are late. It works on your real data rather than on what you paste into the chat. It is included in both plans.'
     },
     {
       type: 'list',

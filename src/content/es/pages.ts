@@ -204,12 +204,9 @@ export const switching: SiteContent['switching'] = {
     }
   ],
   importTitle: 'Qué pasa a Traviosoft',
-  importHead: ['Qué', 'Desde', 'Precio'],
-  importRows: [
-    { what: 'Catálogo, productos y tarifas', from: 'Hojas de cálculo, la exportación de otra herramienta', how: 'Incluido en la importación' },
-    { what: 'Clientes', from: 'Hojas de cálculo, la exportación de otra herramienta', how: 'Incluido en la importación' },
-    { what: 'Proveedores y contactos', from: 'Hojas de cálculo, la exportación de otra herramienta', how: 'Incluido en la importación' },
-    { what: 'Viajes en curso y otros archivos', from: 'Word, PDF, correos, archivos mezclados', how: 'Presupuesto aparte, tras ver una muestra' }
+  importParts: [
+    { title: 'Incluido en el precio de la importación', body: 'Tu catálogo con sus tarifas, tus clientes, tus proveedores y sus contactos. Desde hojas de cálculo o una exportación de tu herramienta actual.' },
+    { title: 'Con presupuesto aparte', body: 'Los viajes en curso y los demás archivos (Word, PDF, correos). Te damos un precio después de ver una muestra.' }
   ],
   seasonTitle: '¿Me va a descolocar la temporada?',
   seasonBody: [

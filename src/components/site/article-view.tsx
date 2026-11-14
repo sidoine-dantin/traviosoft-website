@@ -29,7 +29,18 @@ function Block({ b }: { b: ArticleBlock }) {
       ? <ol>{b.items.map(i => <li key={i}><Inline text={i} /></li>)}</ol>
       : <ul>{b.items.map(i => <li key={i}><Inline text={i} /></li>)}</ul>;
     case 'callout': return <div className="callout"><Inline text={b.text} /></div>;
-    case 'table': return (
+    case 'table': if (b.head[0] === '') return (
+      // a side-by-side comparison reads as topics, each with what each product does
+      <div className="pairs">
+        {b.rows.map(r => (
+          <section key={r[0]}>
+            <h3>{r[0]}</h3>
+            {r.slice(1).map((cell, j) => <p key={j}><strong>{b.head[j + 1]}</strong> <Inline text={cell} /></p>)}
+          </section>
+        ))}
+      </div>
+    );
+    return (
       <div className="tbl-wrap" style={{ marginBlock: 24 }}>
         <table className="tbl stack">
           <thead><tr>{b.head.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>

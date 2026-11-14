@@ -238,7 +238,7 @@ export type SiteContent = {
     title: string; lead: string;
     timelineTitle: string;
     timeline: { when: string; title: string; body: string }[];
-    importTitle: string; importRows: { what: string; from: string; how: string }[]; importHead: string[];
+    importTitle: string; importParts: { title: string; body: string }[];
     seasonTitle: string; seasonBody: string[];
     faq: Faq[];
   };

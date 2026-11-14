@@ -632,21 +632,10 @@ const aiTools: Article = {
   updated: '2026-11-14',
   card: 'L’assistant intégré, le connecteur MCP pour Claude et ChatGPT, et comment vous gardez la main.',
   blocks: [
-    { type: 'h2', text: 'Deux façons d’utiliser l’IA', id: 'deux-facons' },
-    {
-      type: 'table',
-      head: ['', 'Assistant intégré', 'Connecteur MCP'],
-      rows: [
-        ['Où vous l’utilisez', 'Dans Traviosoft', 'Dans votre propre outil d’IA (Claude, ChatGPT et autres)'],
-        ['Sur quoi il travaille', 'Les données de votre agence', 'Les données de votre agence'],
-        ['Offres', 'En option dans les deux offres, avec des limites d’utilisation', 'Inclus dans les deux offres'],
-        ['Qui peut l’utiliser', 'Les personnes pour qui vous l’activez', 'Les personnes autorisées par un administrateur']
-      ]
-    },
     { type: 'h2', text: 'L’assistant intégré', id: 'assistant' },
     {
       type: 'p',
-      text: 'L’assistant se trouve dans Traviosoft et travaille avec les mêmes droits que la personne qui l’utilise. Demandez-lui ce qui vous attend aujourd’hui. Faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue. Il peut aussi cocher des tâches de réservation ou lister les paiements à venir.'
+      text: 'L’assistant se trouve dans Traviosoft et travaille avec les mêmes droits que la personne qui l’utilise. Demandez-lui ce qui vous attend aujourd’hui. Faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue. Il peut aussi cocher des tâches de réservation ou lister les paiements à venir. Il est en option dans les deux offres, avec des limites d’utilisation, et vous l’activez personne par personne.'
     },
     {
       type: 'p',
@@ -655,7 +644,7 @@ const aiTools: Article = {
     { type: 'h2', text: 'Le connecteur MCP', id: 'mcp' },
     {
       type: 'p',
-      text: 'Le MCP (Model Context Protocol) est la façon standard de brancher un assistant d’IA sur un autre outil pour qu’il puisse y travailler. Avec le connecteur Traviosoft, votre outil d’IA peut retrouver un client, préparer un devis ou vous dire quels paiements sont en retard. Il travaille sur vos vraies données et non sur ce que vous collez dans la conversation.'
+      text: 'Le MCP (Model Context Protocol) est la façon standard de brancher un assistant d’IA sur un autre outil pour qu’il puisse y travailler. Avec le connecteur Traviosoft, votre outil d’IA peut retrouver un client, préparer un devis ou vous dire quels paiements sont en retard. Il travaille sur vos vraies données et non sur ce que vous collez dans la conversation. Il est inclus dans les deux offres.'
     },
     {
       type: 'list',
