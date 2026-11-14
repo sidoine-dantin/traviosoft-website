@@ -278,7 +278,7 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
           <defs><path id="seal-c" d="M120,120 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0" /></defs>
           <circle cx="120" cy="120" r="118" fill="#015D47" />
           <circle cx="120" cy="120" r="70" fill="#E0F354" />
-          <text fontFamily="var(--display), Arial" fontWeight="800" fontSize="15" fill="#FFFFFF" letterSpacing="2">
+          <text fontFamily="var(--display), Arial" fontWeight="800" fontSize="15" fill="#FCFDFB" letterSpacing="2">
             <textPath href="#seal-c" textLength="570" lengthAdjust="spacing">{`${v.safe1.toUpperCase()} · ${v.safe2.toUpperCase()} · `}</textPath>
           </text>
           <text x="120" y="134" textAnchor="middle" fontFamily="var(--display), Arial" fontWeight="800" fontSize="44" fill="#015D47">EU</text>

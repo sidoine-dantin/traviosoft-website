@@ -15,11 +15,11 @@
   --deep: #013A2D;
   --yellow: #E0F354;
   --cream: #F7F8F6; /* page background */
-  --cream-2: #FFFFFF; /* surface */
+  --cream-2: #FCFDFB; /* surface */
   --ink: #14231E;
   --muted: #5E6661;
   --line: #E3E6E2;
-  --white: #FFFFFF;
+  --white: #FCFDFB; /* never pure white (user rule) */
 
   /* legacy names still used by the legal pages */
   --color-primary: var(--green);
@@ -177,7 +177,7 @@
 .col::before { content: ""; position: absolute; z-index: 0; left: 50%; bottom: 0; width: min(860px, 96%); height: 78%; transform: translateX(-50%); background: var(--yellow); border-radius: 999px 999px 0 0; }
 .col::after { content: ""; position: absolute; z-index: 1; left: calc(50% + 150px); top: 2px; width: 120px; height: 120px; border: 14px solid var(--green); border-radius: 50%; }
 .col .phone { position: relative; z-index: 2; }
-.tag { position: absolute; z-index: 3; border-radius: 14px; padding: 12px 16px; font-weight: 700; font-size: 15px; background: var(--white); color: var(--green); border: 1px solid var(--line); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, .3); white-space: nowrap; line-height: 1.2; }
+.tag { position: absolute; z-index: 3; border-radius: 14px; padding: 12px 16px; font-weight: 700; font-size: 15px; background: var(--white); color: var(--green); border: 1px solid var(--line); box-shadow: 0 14px 30px -18px rgba(1, 30, 22, .3); white-space: nowrap; line-height: 1.2; }
 .tag small { display: block; font-weight: 500; font-size: 12px; color: var(--muted); margin-top: 2px; }
 .t1 { left: 9%; top: 30%; }
 .t2 { right: 9%; top: 22%; }
@@ -242,7 +242,7 @@
 .ba .before { background: var(--cream-2); }
 .ba .after { background: var(--green); color: var(--cream); }
 .scraps { position: relative; height: 330px; margin-top: 22px; }
-.scrap { position: absolute; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; background: var(--white); border: 1.5px dashed var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: var(--muted); box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .35); }
+.scrap { position: absolute; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; background: var(--white); border: 1.5px dashed var(--muted); border-radius: 10px; padding: 8px 12px; font-size: 14px; font-weight: 600; color: var(--muted); box-shadow: 0 6px 16px -10px rgba(1, 30, 22, .35); }
 .scrap-icon { flex: none; }
 /* A pile of loose notes: overlapping and tilted on purpose. */
 .scrap:nth-child(1) { left: 0; top: 10px; transform: rotate(-6deg); }
@@ -504,7 +504,7 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 
 /* Example trip picker */
 .trip-pick { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.trip-pick a { display: grid; gap: 4px; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line); background: #fff; color: var(--ink); text-decoration: none; min-height: 44px; }
+.trip-pick a { display: grid; gap: 4px; padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line); background: var(--white); color: var(--ink); text-decoration: none; min-height: 44px; }
 .trip-pick a span { color: var(--muted); font-size: 15px; }
 .trip-pick a[aria-current="page"] { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
 .trip-pick a[aria-current="page"] strong { color: var(--green); }
@@ -515,7 +515,7 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 .consent-dim { position: fixed; inset: 0; z-index: 59; background: rgba(1, 58, 45, .28); pointer-events: none; }
 .consent { position: fixed; z-index: 60; left: 50%; bottom: max(16px, env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
   width: min(640px, calc(100% - 2 * var(--gutter))); padding: 22px 24px; border-radius: 20px;
-  background: var(--deep); color: var(--cream); box-shadow: 0 24px 60px -20px rgba(0, 0, 0, .5);
+  background: var(--deep); color: var(--cream); box-shadow: 0 24px 60px -20px rgba(1, 30, 22, .5);
   display: grid; gap: 18px; }
 .consent p { margin: 0; font-size: 16px; line-height: 1.5; min-width: 0; }
 .consent a { color: var(--yellow); text-decoration: underline; }
