@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Logo } from '@/components/site/logo';
+import { LangMenu } from './lang-menu';
 import type { Locale } from '@/content/types';
 
 type JobLink = { slug: string; name: string; menuLine: string };
@@ -14,8 +15,6 @@ type Props = {
   /** paths that exist in each locale; used to hide a language that has no version of this page */
   available?: Partial<Record<Locale, string>>;
 };
-
-const LOCALES: Locale[] = ['es', 'en', 'fr'];
 
 export default function Header({ locale, labels, jobs }: Props) {
   const pathname = usePathname();
@@ -90,15 +89,7 @@ export default function Header({ locale, labels, jobs }: Props) {
   // Locale-only pages (Spanish guides) have no twin: the switch goes to that locale's home.
   const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/resources' : pathname;
 
-  const langs = (
-    <div className="lang" aria-label="Language">
-      {LOCALES.map(l => (
-        <Link key={l} href={localeHref} locale={l} aria-current={l === locale ? 'true' : undefined} hrefLang={l}>
-          {l.toUpperCase()}
-        </Link>
-      ))}
-    </div>
-  );
+  const langs = <LangMenu locale={locale} href={localeHref} />;
 
   return (
     <header className={`top${scrolled ? ' scrolled' : ''}${hidden && !mobile ? ' away' : ''}${mobile ? ' open' : ''}`}>
@@ -171,7 +162,7 @@ export default function Header({ locale, labels, jobs }: Props) {
             <li><Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link></li>
           </ul>
           <div className="mobile-foot">
-            {langs}
+            <LangMenu locale={locale} href={localeHref} up />
             <Link className="quiet mobile-demo" href="/demo">{labels.demo}</Link>
           </div>
         </nav>

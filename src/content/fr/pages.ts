@@ -70,7 +70,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Plusieurs équipes', classic: false, premium: true },
         { f: 'Rôles personnalisés', classic: false, premium: true },
         { f: 'Plusieurs marques et sociétés dans un compte', classic: false, premium: true },
-        { f: 'Connexion de vos propres outils d’IA', classic: true, premium: true },
+        { f: 'Connecteur MCP pour vos propres outils d’IA (Claude, ChatGPT et autres)', classic: true, premium: true },
         { f: 'L’assistant intégré', classic: { text: 'En option, avec des limites d’utilisation', option: true }, premium: { text: 'En option, avec des limites d’utilisation', option: true } },
         { f: 'Accès API, pour que votre développeur relie votre site et vos autres logiciels', classic: false, premium: true }
       ]
@@ -79,14 +79,14 @@ export const pricing: SiteContent['pricing'] = {
       title: 'Mise en place et service',
       rows: [
         { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
-        { f: 'Import de vos tableurs ou de l’export de votre outil actuel', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
+        { f: 'Import de vos tableurs ou de l’export de votre outil actuel**', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Support par e-mail en espagnol, anglais et français', classic: true, premium: true },
         { f: 'Hébergement dans l’Union européenne', classic: true, premium: true },
-        { f: 'Vos données en fichiers Excel, sur simple demande', classic: true, premium: true }
+        { f: 'Export des données sur demande', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: `* Offre à durée limitée, réservée à la facturation annuelle. En facturation mensuelle, la mise en place (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois, au démarrage. Le prix fixe de l’import couvre vos tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis, après avoir vu un échantillon.`,
+  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
   faq: [
     {
       q: 'De quelle offre ai-je besoin ?',

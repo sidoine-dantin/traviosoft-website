@@ -220,7 +220,7 @@ export type SiteContent = {
     title: string; lead: string;
     yearly: string; monthly: string; yearlyNote: string;
     plans: Plan[];
-    compareTitle: string; compareFeature: string; yes: string; no: string; compare: CompareSection[]; compareNote: string;
+    compareTitle: string; compareFeature: string; yes: string; no: string; compare: CompareSection[]; compareNote: string[];
     faq: Faq[];
   };
   demo: {

@@ -70,7 +70,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Several teams', classic: false, premium: true },
         { f: 'Custom roles', classic: false, premium: true },
         { f: 'Several brands and companies in one account', classic: false, premium: true },
-        { f: 'Connection to your own AI tools', classic: true, premium: true },
+        { f: 'MCP connector for your own AI tools (Claude, ChatGPT and others)', classic: true, premium: true },
         { f: 'The built-in assistant', classic: { text: 'Optional, with usage limits', option: true }, premium: { text: 'Optional, with usage limits', option: true } },
         { f: 'API access, so your developer can connect your website and other software', classic: false, premium: true }
       ]
@@ -79,14 +79,14 @@ export const pricing: SiteContent['pricing'] = {
       title: 'Setup and service',
       rows: [
         { f: 'Setup of your brand, documents and pricing rules', classic: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` } },
-        { f: 'Import of your spreadsheets or your current tool’s export', classic: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` } },
+        { f: 'Import of your spreadsheets or your current tool’s export**', classic: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Support by email in Spanish, English and French', classic: true, premium: true },
         { f: 'Hosting in the European Union', classic: true, premium: true },
-        { f: 'Your data as Excel files, on request, at any time', classic: true, premium: true }
+        { f: 'Data export on request', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: `* Limited-time offer, with yearly billing only. With monthly billing, setup (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once, at the start. The fixed import price covers your spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. Other files (Word, PDF, emails, trips in progress) are imported on quote, once we have seen a sample.`,
+  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
   faq: [
     {
       q: 'Which plan do I need?',

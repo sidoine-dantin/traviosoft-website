@@ -4,7 +4,7 @@ type Props = {
   sections: CompareSection[];
   labels: { feature: string; yes: string; no: string };
   names: [string, string];
-  note: string;
+  note: string[];
 };
 
 function Cell({ v, labels }: { v: CompareCell; labels: Props['labels'] }) {
@@ -63,7 +63,7 @@ export function ComparePlans({ sections, labels, names, note }: Props) {
           </tbody>
         </table>
       ))}
-      <p className="cmp-note">{note}</p>
+      <div className="cmp-note">{note.map(n => <p key={n}>{n}</p>)}</div>
     </div>
   );
 }

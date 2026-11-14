@@ -70,7 +70,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Varios equipos', classic: false, premium: true },
         { f: 'Roles personalizados', classic: false, premium: true },
         { f: 'Varias marcas y sociedades en una cuenta', classic: false, premium: true },
-        { f: 'Conexión de tus propias herramientas de IA', classic: true, premium: true },
+        { f: 'Conector MCP para tus propias herramientas de IA (Claude, ChatGPT y otras)', classic: true, premium: true },
         { f: 'El asistente integrado', classic: { text: 'Opcional, con límites de uso', option: true }, premium: { text: 'Opcional, con límites de uso', option: true } },
         { f: 'Acceso API, para que tu desarrollador conecte tu web y tus otros programas', classic: false, premium: true }
       ]
@@ -79,14 +79,14 @@ export const pricing: SiteContent['pricing'] = {
       title: 'Alta y servicio',
       rows: [
         { f: 'Configuración de tu marca, tus documentos y tus reglas de precio', classic: { text: 'Gratis con pago anual*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.setupMonthly} EUR` } },
-        { f: 'Importación de tus hojas de cálculo o de la exportación de tu herramienta actual', classic: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` } },
+        { f: 'Importación de tus hojas de cálculo o de la exportación de tu herramienta actual**', classic: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Soporte por correo en español, inglés y francés', classic: true, premium: true },
         { f: 'Alojamiento en la Unión Europea', classic: true, premium: true },
-        { f: 'Tus datos en archivos Excel, cuando los pidas', classic: true, premium: true }
+        { f: 'Exportación de datos a petición', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: `* Oferta por tiempo limitado, solo con pago anual. Con pago mensual, el alta (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez, al empezar. El precio fijo de la importación cubre tus hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte, después de ver una muestra.`,
+  compareNote: [`* Oferta por tiempo limitado solo con pago anual. Con pago mensual, el alta (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez al empezar. Los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte.`, '** Para datos limpios y bien organizados.'],
   faq: [
     {
       q: '¿Qué plan necesito?',

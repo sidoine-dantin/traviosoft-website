@@ -687,4 +687,78 @@ const fromExcel: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel];
+const aiTools: Article = {
+  key: 'ai-assistant-mcp',
+  kind: 'guide',
+  slug: 'ai-assistant-mcp-travel-agency',
+  metaTitle: 'AI for travel agencies: built-in assistant and MCP connector for Claude, ChatGPT and Gemini',
+  metaDescription:
+    'How a travel agency can use AI on its own data: the assistant built into Traviosoft, and the MCP connector that links Claude, ChatGPT and other AI tools to your quotes, bookings and payments.',
+  title: 'AI in your travel agency',
+  lead: 'Traviosoft works with AI in two ways. The built-in assistant works inside the app for each person who uses it. The MCP connector lets the AI tool you already use, such as Claude or ChatGPT, read and update your agency’s data with your permission.',
+  updated: '2026-11-14',
+  card: 'The built-in assistant, the MCP connector for Claude and ChatGPT, and how you stay in control.',
+  blocks: [
+    { type: 'h2', text: 'Two ways to use AI', id: 'two-ways' },
+    {
+      type: 'table',
+      head: ['', 'Built-in assistant', 'MCP connector'],
+      rows: [
+        ['Where you use it', 'Inside Traviosoft', 'In your own AI tool (Claude, ChatGPT and others)'],
+        ['What it works on', 'Your agency’s data', 'Your agency’s data'],
+        ['Plans', 'Option on both plans, with usage limits', 'Included in both plans'],
+        ['Who can use it', 'The people you switch it on for', 'The people an administrator allows']
+      ]
+    },
+    { type: 'h2', text: 'The built-in assistant', id: 'assistant' },
+    {
+      type: 'p',
+      text: 'The assistant sits in Traviosoft and works with the same rights as the person using it. Ask what needs you today. Have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices. It can also tick off booking tasks or list the payments that are due.'
+    },
+    {
+      type: 'p',
+      text: 'Every change it proposes waits for your OK or can be undone. Over time it learns how your agency likes things done, and your team can correct what it learned line by line.'
+    },
+    { type: 'h2', text: 'The MCP connector', id: 'mcp' },
+    {
+      type: 'p',
+      text: 'MCP (Model Context Protocol) is the standard way an AI assistant plugs into another tool so it can work in it. With the Traviosoft connector your AI tool can look up a client, draft a quote or tell you which payments are late. It works on your real data rather than on what you paste into the chat.'
+    },
+    {
+      type: 'list',
+      items: [
+        'Claude (desktop or web): Settings, Connectors, Add custom connector, then paste your Traviosoft address.',
+        'ChatGPT: Settings, Connectors, Add, with the same address.',
+        'Automation tools such as n8n can connect too, to run tasks automatically.'
+      ]
+    },
+    {
+      type: 'p',
+      text: 'The AI tool sends you to Traviosoft to sign in. It shows what it asks to do and you can untick anything you would rather not allow.'
+    },
+    { type: 'h2', text: 'You stay in control', id: 'control' },
+    {
+      type: 'list',
+      items: [
+        'The connector is off until an administrator turns it on.',
+        'The administrator chooses who may connect an AI tool.',
+        'An AI tool never does more than the person who connected it can do in the app.',
+        'In safe mode every change waits in a review list for that person to approve.',
+        'Every action is recorded in the activity log under the name of the person who connected it.',
+        'Any connection can be cut off at once from Traviosoft.'
+      ]
+    },
+    { type: 'h2', text: 'Questions', id: 'faq' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Does it work with Gemini?', a: ['The connector works with any AI tool that supports MCP. Google supports MCP in its Gemini developer tools. Check whether your version of Gemini lets you add a custom connector.'] },
+        { q: 'Is the MCP connector included in my plan?', a: ['Yes. It is included in both Classic and Premium. The built-in assistant is an option on both plans, with usage limits.'] },
+        { q: 'Does the AI see all our data?', a: ['It sees what the person who connected it can see, and nothing more. An administrator can also allow reading only and block every change.'] },
+        { q: 'Can the AI send emails to clients on its own?', a: ['Changes wait for a person’s approval in safe mode, which is on by default. You decide what it may do.'] }
+      ]
+    }
+  ]
+};
+
+export const articles: Article[] = [best, ...comparisons, quote, rooming, startDmc, fromExcel, aiTools];
