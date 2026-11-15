@@ -417,35 +417,35 @@
           "heading": "Cosa raccogliamo",
           "body": [
             "Quando chiedi una demo, ci scrivi via email. Riceviamo ciò che scegli di dirci: di solito il tuo nome, il tuo indirizzo email e alcune informazioni sulla tua agenzia.",
-            "Come la maggior parte dei siti, il nostro fornitore di hosting registra nei log del server alcuni dati tecnici di base, come l’indirizzo IP e il tipo di browser. Se accetti i cookie pubblicitari, anche LinkedIn e Meta registrano la tua visita a questo sito (vedi «Pubblicità e pubblici»)."
+            "Come la maggior parte dei siti, il nostro fornitore di hosting registra nei log del server alcuni dati tecnici di base, come l’indirizzo IP e il tipo di browser. Se accetti i cookie pubblicitari, anche LinkedIn, Meta e Google registrano la tua visita a questo sito (vedi «Pubblicità e pubblici»)."
           ]
         },
         {
           "heading": "Come usiamo le tue informazioni",
           "body": [
-            "Usiamo i dati che ci fornisci per rispondere alla tua richiesta di demo, preparare la chiamata e ricontattarti su Traviosoft. Usiamo i log tecnici per mantenere il sito sicuro e funzionante. Non vendiamo mai i tuoi dati. Li condividiamo solo con i fornitori di servizi necessari a far funzionare il sito e la nostra email, e con LinkedIn e Meta per la nostra pubblicità come descritto sotto.",
+            "Usiamo i dati che ci fornisci per rispondere alla tua richiesta di demo, preparare la chiamata e ricontattarti su Traviosoft. Usiamo i log tecnici per mantenere il sito sicuro e funzionante. Non vendiamo mai i tuoi dati. Li condividiamo solo con i fornitori di servizi necessari a far funzionare il sito e la nostra email, e con LinkedIn, Meta e Google per la nostra pubblicità come descritto sotto.",
             "Quando la legge richiede una base giuridica, ci basiamo sulla tua richiesta (per organizzare la demo che hai chiesto), sul tuo consenso (per i cookie pubblicitari) e sul nostro legittimo interesse (per mantenere il sito sicuro, restare in contatto con chi ci ha scritto e mostrare i nostri annunci alle aziende del turismo)."
           ]
         },
         {
           "heading": "Servizi di terzi",
           "body": [
-            "Il sito è distribuito tramite la rete di hosting e contenuti di Cloudflare. I nostri annunci vengono pubblicati su LinkedIn (LinkedIn Ireland Unlimited Company) e su Facebook e Instagram (Meta Platforms Ireland Limited). Per i cookie pubblicitari, LinkedIn e Meta agiscono come contitolari del trattamento insieme a noi; per ciò che fanno con i dati si applicano le loro informative sulla privacy. Alcuni di questi fornitori possono trasferire dati negli Stati Uniti nell’ambito del Data Privacy Framework UE-USA o delle clausole contrattuali tipo della Commissione europea."
+            "Il sito è distribuito tramite la rete di hosting e contenuti di Cloudflare. I nostri annunci vengono pubblicati su LinkedIn (LinkedIn Ireland Unlimited Company), su Facebook e Instagram (Meta Platforms Ireland Limited) e sulla Ricerca Google, YouTube, Gmail e i siti partner (Google Ireland Limited). Per i cookie pubblicitari, LinkedIn, Meta e Google agiscono come contitolari del trattamento insieme a noi; per ciò che fanno con i dati si applicano le loro informative sulla privacy. Alcuni di questi fornitori possono trasferire dati negli Stati Uniti nell’ambito del Data Privacy Framework UE-USA o delle clausole contrattuali tipo della Commissione europea."
           ]
         },
         {
           "heading": "Pubblicità e pubblici",
           "body": [
-            "Se accetti i cookie pubblicitari, il LinkedIn Insight Tag e il Meta Pixel registrano che il tuo browser ha visitato questo sito, quali pagine hai visto e se hai aperto la pagina della demo o cliccato per contattarci. Usiamo queste informazioni per misurare i nostri annunci e per mostrarli di nuovo a chi ha visitato il sito. LinkedIn e Meta ci forniscono solo totali e dimensioni dei pubblici, mai nomi.",
+            "Se accetti i cookie pubblicitari, il LinkedIn Insight Tag, il Meta Pixel e il tag Google registrano che il tuo browser ha visitato questo sito, quali pagine hai visto e se hai aperto la pagina della demo o cliccato per contattarci. Usiamo queste informazioni per misurare i nostri annunci e per mostrarli di nuovo a chi ha visitato il sito. LinkedIn, Meta e Google ci forniscono solo totali e dimensioni dei pubblici, mai nomi.",
             "Possiamo anche caricare su LinkedIn e Meta un elenco di dati di contatto aziendali (ragione sociale, sito web e indirizzo email professionale del titolare o del responsabile di un’agenzia) affinché i nostri annunci raggiungano queste aziende del turismo. I dati vengono cifrati (hash) prima del caricamento, sono usati solo per trovare corrispondenze con gli account e vengono cancellati dalle piattaforme dopo la corrispondenza. Lo facciamo sulla base del nostro legittimo interesse a presentare Traviosoft ai professionisti del turismo.",
             "Se ci contatti o prenoti una demo, possiamo aggiungere anche il tuo indirizzo email professionale a questi elenchi, perché i nostri annunci continuino a raggiungerti mentre valuti Traviosoft. Viene cifrato (hash) allo stesso modo prima del caricamento. Lo facciamo sulla base del nostro legittimo interesse a restare in contatto con chi ci ha scritto, e puoi opporti in qualsiasi momento come descritto sotto.",
-            "Puoi opporti in qualsiasi momento: scrivi a sidoine@traviosoft.com e ti rimuoviamo dai nostri elenchi, cambia la tua scelta con «Gestisci i cookie» in fondo a ogni pagina, oppure modifica le impostazioni degli annunci nei tuoi account LinkedIn e Meta."
+            "Puoi opporti in qualsiasi momento: scrivi a sidoine@traviosoft.com e ti rimuoviamo dai nostri elenchi, cambia la tua scelta con «Gestisci i cookie» in fondo a ogni pagina, oppure modifica le impostazioni degli annunci nei tuoi account LinkedIn, Meta e Google."
           ]
         },
         {
           "heading": "Cookie",
           "body": [
-            "Il sito usa i cookie necessari al suo funzionamento e a ricordare la tua lingua e la tua scelta sui cookie. Solo con il tuo consenso usa anche i cookie pubblicitari di LinkedIn e Meta. Rifiutare è facile quanto accettare, e il sito funziona allo stesso modo in entrambi i casi. Ti chiediamo di nuovo dopo sei mesi."
+            "Il sito usa i cookie necessari al suo funzionamento e a ricordare la tua lingua e la tua scelta sui cookie. Solo con il tuo consenso usa anche i cookie pubblicitari di LinkedIn, Meta e Google. Rifiutare è facile quanto accettare, e il sito funziona allo stesso modo in entrambi i casi. Ti chiediamo di nuovo dopo sei mesi."
           ]
         },
         {
@@ -505,7 +505,7 @@
         {
           "heading": "Link e servizi esterni",
           "body": [
-            "Il sito è distribuito tramite Cloudflare, e i nostri annunci vengono pubblicati su LinkedIn e Meta. Non siamo responsabili dei contenuti o delle pratiche di questi servizi di terzi, che sono regolati dalle loro condizioni."
+            "Il sito è distribuito tramite Cloudflare, e i nostri annunci vengono pubblicati su LinkedIn, Meta e Google. Non siamo responsabili dei contenuti o delle pratiche di questi servizi di terzi, che sono regolati dalle loro condizioni."
           ]
         },
         {
