@@ -7,19 +7,258 @@ export const home: SiteContent['home'] = {
     `Solicitudes, presupuestos con tu margen, reservas, itinerarios, cobros y facturas en un solo sitio. Para agencias de viajes a medida y DMC. Desde ${PRICES.classic.yearly} EUR al mes, en la UE.`,
   title: 'Software para agencias de viajes a medida y DMC',
   sub: 'Solicitudes, presupuestos, reservas, cobros y facturas, en un solo sitio.',
-  tags: [
-    { t: 'Señal pagada ✓', s: 'enlace en el email' },
-    { t: 'Hotel confirmado', s: 'respuesta guardada en el viaje' }
+  proposal: {
+    "agency": "Ruta Sur Viajes",
+    "kind": "Propuesta de viaje",
+    "trip": "Andalucía, 8 días",
+    "meta": [
+      "2 viajeros",
+      "8 días",
+      "del 3 al 10 de mayo de 2027"
+    ],
+    "days": [
+      {
+        "t": "Día 1 · Sevilla",
+        "s": "Recogida en el aeropuerto y traslado a su hotel del casco antiguo, 3 noches."
+      },
+      {
+        "t": "Día 2 · El Alcázar y la catedral",
+        "s": "Visita guiada por la mañana, tarde libre en el barrio de Santa Cruz."
+      },
+      {
+        "t": "Día 4 · Hacia Ronda",
+        "s": "Recogida del coche de alquiler, 2 noches junto al Tajo."
+      }
+    ],
+    "total": "Total a pagar",
+    "vatIncl": "IVA incluido",
+    "photo": "Sevilla",
+    "stops": [
+      {
+        "day": "Día 1 · Lunes 3 de mayo",
+        "k": "Traslado",
+        "t": "Traslado aeropuerto de Sevilla",
+        "s": "Punto de encuentro: salida de llegadas"
+      },
+      {
+        "k": "Alojamiento",
+        "t": "Hotel en el casco antiguo de Sevilla",
+        "s": "Salida el 6 de mayo",
+        "link": "Abrir en Maps"
+      },
+      {
+        "day": "Día 2 · Martes 4 de mayo",
+        "k": "Actividad",
+        "t": "Alcázar y catedral",
+        "s": "Su guía: Lucía"
+      }
+    ]
+  },
+  tripTitle: "El recorrido de un viaje en Traviosoft",
+  moments: [
+    {
+      "time": "Lunes, 09:12",
+      "title": "Llega la solicitud",
+      "body": "Todas las solicitudes están en una sola lista, con cuánto tiempo llevan esperando y el siguiente paso.",
+      "go": "Ver las solicitudes",
+      "job": "sell"
+    },
+    {
+      "time": "Lunes, 11:40",
+      "title": "El presupuesto, con su margen",
+      "body": "Cada línea parte del coste del proveedor, y ve el margen del viaje antes de enviarlo.",
+      "go": "Ver los presupuestos",
+      "job": "sell"
+    },
+    {
+      "time": "Martes",
+      "title": "Cada reserva, al día",
+      "body": "Cuando el cliente acepta, cada proveedor recibe su solicitud y su respuesta queda guardada en la línea. Lo que falta por hacer está en las tareas.",
+      "go": "Ver las reservas",
+      "job": "book"
+    },
+    {
+      "time": "Antes de la salida",
+      "title": "Pagos y facturas desde el presupuesto",
+      "body": "Los vencimientos salen del presupuesto aceptado. El cliente paga desde el enlace del correo, y la factura recoge las mismas líneas.",
+      "go": "Ver los pagos",
+      "job": "get-paid"
+    }
   ],
-  tripTitle: 'Cómo avanza un viaje en Traviosoft',
-  steps: [
-    { time: '09:12', title: 'Entra la solicitud', body: 'Llega a una única lista, con su siguiente paso.', job: 'sell' },
-    { time: '11:40', title: 'Presupuesto enviado', body: 'Hecho con tus tarifas, con tu margen.', job: 'sell' },
-    { time: 'Día 2', title: 'Señal pagada', body: 'Pagada desde el enlace del email.', job: 'get-paid' },
-    { time: 'Día 3', title: 'Proveedores confirmados', body: 'Hotel y guía marcados en el viaje.', job: 'book' },
-    { time: 'Día 30', title: 'Factura final', body: 'Sale de las cifras del presupuesto.', job: 'get-paid' }
+  sitTitle: "Según su forma de trabajar",
+  sitLead: "Cada agencia tiene sus costumbres. Esto es lo que hace Traviosoft en los casos más habituales.",
+  situations: [
+    {
+      "t": "Vendo a agencias, no al viajero",
+      "s": "Comisiones, tarifas netas y la agencia que trae al cliente en cada presupuesto.",
+      "job": "sell"
+    },
+    {
+      "t": "Trabajo con grupos",
+      "s": "Lista de viajeros, rooming list y un formulario que rellena cada viajero.",
+      "job": "book"
+    },
+    {
+      "t": "Mis proveedores facturan en dólares o en dírhams",
+      "s": "Costes en su moneda, precios en la suya, con el tipo de cambio del presupuesto guardado.",
+      "job": "sell"
+    },
+    {
+      "t": "Trabajo con guías y conductores",
+      "s": "Hoja de servicio enviada al guía, y su pago seguido con el viaje.",
+      "job": "book"
+    },
+    {
+      "t": "Mis clientes pagan a plazos",
+      "s": "Vencimientos fijados en el presupuesto, recordatorios y pago en línea.",
+      "job": "get-paid"
+    },
+    {
+      "t": "Facturo en el régimen especial de agencias de viajes",
+      "s": "El IVA se calcula sobre su margen, con la mención del régimen en la factura.",
+      "job": "get-paid"
+    },
+    {
+      "t": "Mis tarifas cambian según la temporada",
+      "s": "Precios por temporada, edad o día, y el presupuesto toma el precio de las fechas del viaje.",
+      "job": "sell"
+    },
+    {
+      "t": "Tenemos varias marcas o sociedades",
+      "s": "Cada una tiene sus documentos, sus menciones y su numeración de facturas.",
+      "job": "setup"
+    }
   ],
-  stepGo: 'Ver cómo',
+  app: {
+    "user": "LG",
+    "lang": "ES",
+    "nav": {
+      "workspace": "Espacio de trabajo",
+      "dashboard": "Panel",
+      "calendar": "Calendario",
+      "analytics": "Analíticas",
+      "pipeline": "Pipeline",
+      "requests": "Solicitudes",
+      "quotes": "Presupuestos",
+      "orders": "Pedidos",
+      "finances": "Finanzas",
+      "resources": "Recursos",
+      "catalog": "Catálogo",
+      "clients": "Clientes",
+      "providers": "Proveedores",
+      "guide": "Inicio Rápido"
+    },
+    "client": "Familia García",
+    "trip": "Andalucía, 8 días",
+    "req": {
+      "newBtn": "Nueva solicitud",
+      "rows": [
+        {
+          "name": "Familia García",
+          "msg": "Andalucía en mayo, 2 adultos, hoteles con encanto",
+          "meta": "Web · del 3 al 10 de mayo de 2027",
+          "badge": "Nueva · 12 min",
+          "kind": "new",
+          "ago": "09:12"
+        },
+        {
+          "name": "Ana Ruiz",
+          "msg": "Lisboa y Oporto, 10 días",
+          "meta": "Correo · junio de 2027",
+          "badge": "Respondida",
+          "kind": "ok",
+          "ago": "Ayer"
+        },
+        {
+          "name": "Bertrand Lefèvre",
+          "msg": "Marruecos, grupo de 18",
+          "meta": "Teléfono · octubre de 2027",
+          "badge": "Respondida",
+          "kind": "ok",
+          "ago": "8 ene"
+        },
+        {"name": "Hannah Weber", "msg": "Norte de España en tren, 12 días", "meta": "Agencia colaboradora · septiembre de 2027", "badge": "Respondida", "kind": "ok", "ago": "7 ene"},
+        {"name": "Pierre Dubois", "msg": "Sevilla en un fin de semana, 4 adultos", "meta": "Web · abril de 2027", "badge": "Respondida", "kind": "ok", "ago": "5 ene"}
+      ]
+    },
+    "quote": {
+      "sent": "Enviado",
+      "viewPdf": "Ver PDF",
+      "startLabel": "Fecha de inicio",
+      "start": "03/05/2027",
+      "expiresLabel": "Vence el",
+      "expires": "25/01/2027",
+      "pax": "2 PAX",
+      "tabs": [
+        "Presupuesto",
+        "Pagos",
+        "Envío",
+        "Historial"
+      ],
+      "linesTitle": "Líneas del presupuesto",
+      "vatRegimeLabel": "Régimen IVA",
+      "vatRegime": "Régimen especial",
+      "unitIncl": "/ unidad IVA incl.",
+      "lines": [
+        "Traslado privado, aeropuerto de Sevilla",
+        "Hotel en Sevilla, habitación doble",
+        "Alcázar y catedral, visita guiada",
+        "Coche de alquiler, categoría B",
+        "Hotel en Ronda, habitación doble",
+        "Hotel en Granada, habitación doble",
+        "Alhambra, visita guiada"
+      ],
+      "totalTitle": "Total con IVA",
+      "perPerson": "Precio por persona",
+      "selling": "Precio de venta (IVA incl.)",
+      "cost": "Coste proveedor (IVA incl.)",
+      "margin": "Margen bruto",
+      "vatMargin": "IVA sobre el margen a declarar"
+    },
+    "order": {
+      "accepted": "Aceptado",
+      "bookingTitle": "Reservas",
+      "bookingCount": "5 de 7 confirmadas",
+      "providers": [
+        "Traslados Giralda",
+        "Hotel Sevilla Centro",
+        "Lucía Romero, guía",
+        "Autos Bética",
+        "Hotel Ronda Tajo",
+        "Hotel Granada Albaicín",
+        "Patronato de la Alhambra"
+      ],
+      "states": {
+        "confirmed": "Confirmado",
+        "ref": "Confirmado · ref. 48213",
+        "requested": "Pedido · pendiente de confirmación",
+        "toBook": "Por reservar"
+      },
+      "tasksTitle": "Tareas",
+      "tasks": [
+        "Enviar la confirmación al cliente",
+        "Reservar las entradas de la Alhambra"
+      ]
+    },
+    "pay": {
+      "schedTitle": "Vencimientos programados",
+      "deposit": "Anticipo 30 %",
+      "depositSub": "Tarjeta, desde el enlace del correo",
+      "balance": "Resto",
+      "dueLabel": "Vencimiento:",
+      "paid": "Pagado",
+      "upcoming": "Pendiente",
+      "invTitle": "Facturas",
+      "invDeposit": "Anticipo",
+      "invFinal": "Factura final",
+      "invPaid": "Pagada",
+      "invDraft": "Borrador",
+      "dates": [
+        "12/01/2027",
+        "03/04/2027"
+      ]
+    }
+  },
   baTitle: 'Antes y después',
   beforeTitle: 'Hoy',
   beforeScraps: [
