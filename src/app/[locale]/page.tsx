@@ -43,7 +43,6 @@ export default async function HomePage({ params }: Props) {
           <ol className="moments">
             {h.moments.map((m, i) => (
               <li key={i} className="moment" data-reveal>
-                <span className="moment-time">{m.time}</span>
                 <h3>{m.title}</h3>
                 <p>{m.body}</p>
                 <Link href={`/${m.job}`} className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{m.go}</span><span className="arr" aria-hidden="true">→</span></Link>
@@ -72,23 +71,6 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       <section className="band">
-        <div className="wrap coins">
-          <div>
-            <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>
-            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceImport} <s style={{ whiteSpace: "nowrap" }}>{PRICES.importMonthly} EUR</s> {h.priceFree}</p>
-            <p className="free-note">{h.priceFreeNote}</p>
-            <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{h.priceLink}</span><span className="arr" aria-hidden="true">→</span></Link></p>
-          </div>
-          <div className="coin">
-            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span><span className="lbl users">{h.coinUsers}</span>
-          </div>
-          <div className="coin">
-            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span><span className="lbl users">{h.coinUsers}</span>
-          </div>
-          <p className="price-note"><span className="extra-user">{h.extraUserLine}</span><Link href="/pricing">{h.priceNote}</Link></p>
-        </div>
-      </section>
-      <section className="band">
         <div className="wrap">
           <h2 className="h2" data-reveal style={{ color: 'var(--green)', marginBottom: 40, maxWidth: '18ch' }}>{h.baTitle}</h2>
           <div className="ba">
@@ -103,6 +85,23 @@ export default async function HomePage({ params }: Props) {
               <p style={{ fontSize: 'clamp(20px, 2.2vw, 26px)', fontWeight: 650, lineHeight: 1.35, marginTop: 22, maxWidth: '30ch' }}>{h.afterBody}</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="band">
+        <div className="wrap coins">
+          <div>
+            <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>
+            <p className="muted" style={{ fontSize: 18, marginTop: 16, maxWidth: '34ch' }}>{h.priceBody} <s style={{ whiteSpace: "nowrap" }}>{PRICES.setupMonthly} EUR</s> {h.priceImport} <s style={{ whiteSpace: "nowrap" }}>{PRICES.importMonthly} EUR</s> {h.priceFree}</p>
+            <p className="free-note">{h.priceFreeNote}</p>
+            <p style={{ marginTop: 24 }}><Link href="/pricing" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{h.priceLink}</span><span className="arr" aria-hidden="true">→</span></Link></p>
+          </div>
+          <div className="coin">
+            <span className="n num">{PRICES.classic.yearly}</span><span className="lbl">{h.coin1}</span><span className="lbl users">{h.coinUsers}</span>
+          </div>
+          <div className="coin">
+            <span className="n num">{PRICES.premium.yearly}</span><span className="lbl">{h.coin2}</span><span className="lbl users">{h.coinUsers}</span>
+          </div>
+          <p className="price-note"><span className="extra-user">{h.extraUserLine}</span><Link href="/pricing">{h.priceNote}</Link></p>
         </div>
       </section>
 

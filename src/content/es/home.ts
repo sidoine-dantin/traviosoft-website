@@ -56,28 +56,24 @@ export const home: SiteContent['home'] = {
   tripTitle: "El recorrido de un viaje en Traviosoft",
   moments: [
     {
-      "time": "Lunes, 09:12",
       "title": "Llega la solicitud",
       "body": "Todas las solicitudes están en una sola lista, con cuánto tiempo llevan esperando y el siguiente paso.",
       "go": "Ver las solicitudes",
       "job": "sell"
     },
     {
-      "time": "Lunes, 11:40",
       "title": "El presupuesto, con su margen",
       "body": "Cada línea parte del coste del proveedor, y ve el margen del viaje antes de enviarlo.",
       "go": "Ver los presupuestos",
       "job": "sell"
     },
     {
-      "time": "Martes",
       "title": "Cada reserva, al día",
       "body": "Cuando el cliente acepta, cada proveedor recibe su solicitud y su respuesta queda guardada en la línea. Lo que falta por hacer está en las tareas.",
       "go": "Ver las reservas",
       "job": "book"
     },
     {
-      "time": "Antes de la salida",
       "title": "Pagos y facturas desde el presupuesto",
       "body": "Los vencimientos salen del presupuesto aceptado. El cliente paga desde el enlace del correo, y la factura recoge las mismas líneas.",
       "go": "Ver los pagos",

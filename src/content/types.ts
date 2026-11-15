@@ -221,7 +221,7 @@ export type SiteContent = {
     proposal: ProposalText;
     tripTitle: string;
     /** Four moments of one sample trip, each with the app screen where it happens. */
-    moments: { time: string; title: string; body: string; go: string; job: JobSlug }[];
+    moments: { title: string; body: string; go: string; job: JobSlug }[];
     sitTitle: string; sitLead: string;
     /** Common ways of working, in the visitor's own words, each pointing to the page that covers it. */
     situations: { t: string; s: string; job: JobSlug }[];

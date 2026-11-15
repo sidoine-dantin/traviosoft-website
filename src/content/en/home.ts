@@ -56,28 +56,24 @@ export const home: SiteContent['home'] = {
   tripTitle: "The journey of a trip in Traviosoft",
   moments: [
     {
-      "time": "Monday, 09:12",
       "title": "The request comes in",
       "body": "Every request lands in one list, with how long it has waited and what comes next.",
       "go": "See requests",
       "job": "sell"
     },
     {
-      "time": "Monday, 11:40",
       "title": "The quote, with your margin",
       "body": "Each line starts from the supplier’s cost, and you see the margin on the whole trip before you send it.",
       "go": "See quotes",
       "job": "sell"
     },
     {
-      "time": "Tuesday",
       "title": "Every booking followed",
       "body": "Once the client accepts, each supplier gets its request and the answer is saved on the line. What is left to do stays in the tasks.",
       "go": "See bookings",
       "job": "book"
     },
     {
-      "time": "Before departure",
       "title": "Payments and invoices from the quote",
       "body": "The payment schedule comes from the accepted quote. The client pays from the link in the email, and the invoice takes the same lines.",
       "go": "See payments",
