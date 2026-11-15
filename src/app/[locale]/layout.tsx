@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, DM_Mono, Schibsted_Grotesk } from 'next/font/google';
+import { Bricolage_Grotesque, Schibsted_Grotesk } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -29,12 +29,6 @@ const schibsted = Schibsted_Grotesk({
   display: 'swap'
 });
 
-const dmMono = DM_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-dm-mono',
-  display: 'swap'
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -120,7 +114,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }));
 
   return (
-    <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable} ${dmMono.variable}`}>
+    <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable}`}>
       <body>
         <JsonLd data={org} />
         <JsonLd data={site} />
