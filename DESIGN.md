@@ -49,7 +49,7 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 ## 5. Shape and motion
 
 - Tilt is fine when it means something: the messy "before" pile (overlapping, tilted notes), the two price circles turned in opposite directions. Product cards stay straight.
-- Subtle motion is welcome: elements in the home hero move at different speeds as you scroll (desktop only, off when the system asks for reduced motion); link hover where the text gets bolder, the underline drops a little and the arrow moves forward (the text never moves up).
+- Subtle motion is welcome: elements in the home hero move at different speeds as you scroll (desktop only, off when the system asks for reduced motion); link hover where the text gets slightly bolder (a light shadow, not thick), the underline drops a little and extends under the arrow as it moves forward (the text never moves up). "See how" links show no underline until hover.
 - Background dotted routes: clean organic curves without hand-drawn wobbles, continuous, wandering left and right with a few loops, spread from top to bottom, both ends off screen, always behind the content.
 
 ## 6. Layout
@@ -58,6 +58,8 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 - Repeated elements line up (for example every "See how" link on the same line).
 - Hover menus forgive the mouse: a bridge to the panel and a short close delay.
 - Every page works from 360 px phones to 2560 px screens (`MOBILE.md`).
+- No attribute grids (side-by-side tables with an empty corner cell and short phrases): they read as AI. Comparisons are topics, a title and one line per product. Data tables and the pricing comparison are fine.
+- Home hero: no call to action (the header link is enough), no extra sentence, start from what the visitor looks for. The hero mock is the real quote document.
 - Pricing comparison: three columns (feature, Classic, Premium), grouped in sections, a tick or a dash, and text only where the plans differ. Leave room to breathe.
 
 ## 7. Product visuals and mock content
@@ -76,7 +78,8 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 - Positive words only: no lose, lost, never, forget, chasing, late, without, and no "No." to open an answer.
 - Non-technical: no database, API, MCP or CSV. Never "CRM". Natural words (FR "voyage confirmé", not "dossier").
 - Say what it does for the agency, not a list of features. Say the result, never the internal rule behind it.
-- Country settings (Veri*Factu, REAV) are not headline features: one line about local tax rules, details on the country page.
+- Country settings (Veri*Factu, REAV) are not headline features: one line about local tax rules, details on the country page. Veri*Factu appears only in the blog, never on product pages.
+- Blog: information only. No advice or recommendations, no downloadable templates. Legal topics state only facts read in official texts, with a clear note that it is not legal advice.
 - No summary paragraph that repeats the page, and no text that says what a visual already shows. Answers for search and AI tools go in the meta description, structured data and `llms.txt`.
 - Every text (pages, bios, profiles) is written on purpose, never filler.
 
