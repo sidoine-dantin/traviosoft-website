@@ -444,7 +444,7 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 /* ---------- demo agenda ---------- */
 .agenda { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
 .agenda li { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1.5px solid var(--line); }
-.agenda .mins { font-family: var(--figure); font-weight: 800; font-variation-settings: "wdth" 75; font-size: 44px; line-height: 1; color: var(--orange); }
+.agenda .mins { font-family: var(--display); font-weight: 700; font-size: 40px; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; color: var(--orange); }
 @media (max-width: 560px) { .agenda li { grid-template-columns: 1fr; gap: 6px; } }
 
 /* ---------- switching timeline ---------- */

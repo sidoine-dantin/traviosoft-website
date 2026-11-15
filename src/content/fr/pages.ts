@@ -128,7 +128,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Réserver une démo | Traviosoft',
+  metaTitle: 'Démo de logiciel pour agences de voyages | Traviosoft',
   metaDescription:
     'Un appel de 30 minutes : un voyage exemple dans Traviosoft, de la demande à la facture, puis les tarifs et vos questions.',
   title: 'Réserver une démo',
@@ -139,13 +139,9 @@ export const demo: SiteContent['demo'] = {
     { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, les réservations, le programme, le paiement et la facture. Un voyage en couple, un groupe incentive ou un safari.' },
     { mins: '10', title: 'Tarifs et questions', body: 'L’offre pour votre équipe, l’import de vos données et vos questions.' }
   ],
-  bringTitle: 'Qui inviter',
-  bring: [
-    'Les personnes qui font les devis ou les réservations',
-    'La personne qui suit les paiements et les factures'
-  ],
   afterTitle: 'Après l’appel',
   after: [
+    'La proposition et le programme jour par jour vus pendant l’appel',
     'Un court compte rendu par e-mail',
     'Le prix pour votre équipe, par écrit',
     'Un nouvel appel si vous le demandez'
@@ -153,6 +149,9 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Demandez un créneau',
   bookBody: 'Pour l’instant, les rendez-vous se prennent par e-mail. Envoyez le nom de votre agence, la taille de l’équipe et quelques jours qui vous conviennent, et nous répondons avec un horaire.',
   emailLabel: 'Écrivez à',
+  bookCta: 'Choisir un créneau',
+  bookCalendarBody: 'Choisissez un créneau de 30 minutes dans l’agenda.',
+  emailAltLabel: 'Ou écrivez à',
   email: 'hola@traviosoft.com',
   faq: [
     {

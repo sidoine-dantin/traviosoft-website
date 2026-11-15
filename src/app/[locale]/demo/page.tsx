@@ -4,6 +4,9 @@ import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { FaqList, FaqSchema } from '@/components/site/faq';
 
+/** Public booking page (Google Calendar appointment schedule). Empty: booking by email. */
+const BOOKING_URL = '';
+
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -29,7 +32,7 @@ export default async function DemoPage({ params }: Props) {
           <ol className="agenda">
             {d.agenda.map(a => (
               <li key={a.title}>
-                <span className="mins num">{a.mins}<span style={{ fontSize: 16, marginLeft: 4 }}>min</span></span>
+                <span className="mins">{a.mins}<span style={{ fontSize: 16, marginLeft: 4 }}>min</span></span>
                 <div><b style={{ fontSize: 19 }}>{a.title}</b><p className="muted" style={{ marginTop: 6 }}>{a.body}</p></div>
               </li>
             ))}
@@ -38,13 +41,12 @@ export default async function DemoPage({ params }: Props) {
         <div style={{ display: 'grid', gap: 20 }}>
           <div className="card" style={{ background: 'var(--green)', color: 'var(--cream)', borderColor: 'var(--green)' }}>
             <h2 className="h3">{d.bookTitle}</h2>
-            <p style={{ opacity: 0.9 }}>{d.bookBody}</p>
-            <p style={{ marginTop: 8 }}><span className="lbl" style={{ opacity: 0.7 }}>{d.emailLabel}</span><br />
-              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: 24, fontWeight: 800, color: 'var(--yellow)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
-          </div>
-          <div className="card">
-            <h2 className="h3" style={{ color: 'var(--green)' }}>{d.bringTitle}</h2>
-            <ul style={{ margin: 0, paddingLeft: 18, display: 'grid', gap: 6 }}>{d.bring.map(b => <li key={b}>{b}</li>)}</ul>
+            <p style={{ opacity: 0.9 }}>{BOOKING_URL ? d.bookCalendarBody : d.bookBody}</p>
+            {BOOKING_URL && (
+              <p style={{ marginTop: 16 }}><a className="btn yellow" href={BOOKING_URL} target="_blank" rel="noopener">{d.bookCta}</a></p>
+            )}
+            <p style={{ marginTop: BOOKING_URL ? 16 : 8 }}><span className="lbl" style={{ opacity: 0.75 }}>{BOOKING_URL ? d.emailAltLabel : d.emailLabel}</span><br />
+              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: BOOKING_URL ? 19 : 24, fontWeight: 700, color: 'var(--cream)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
           </div>
           <div className="card">
             <h2 className="h3" style={{ color: 'var(--green)' }}>{d.afterTitle}</h2>

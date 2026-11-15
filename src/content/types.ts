@@ -244,9 +244,10 @@ export type SiteContent = {
     title: string; lead: string;
     agendaTitle: string;
     agenda: { mins: string; title: string; body: string }[];
-    bringTitle: string; bring: string[];
     afterTitle: string; after: string[];
     bookTitle: string; bookBody: string; emailLabel: string; email: string;
+    /** shown once BOOKING_URL is set */
+    bookCta: string; bookCalendarBody: string; emailAltLabel: string;
     faq: Faq[];
   };
   switching: {

@@ -130,7 +130,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Marcar uma demonstração | Traviosoft',
+  metaTitle: 'Demonstração de software para agências de viagens | Traviosoft',
   metaDescription:
     'Uma chamada de 30 minutos: uma viagem de exemplo no Traviosoft, do pedido à fatura, e depois preços e perguntas.',
   title: 'Marcar uma demonstração',
@@ -141,13 +141,9 @@ export const demo: SiteContent['demo'] = {
     { mins: '15', title: 'Uma viagem de exemplo', body: 'O pedido, o orçamento com a margem, as reservas, o programa, o pagamento e a fatura. Uma viagem a dois, um grupo de incentivo ou um safari.' },
     { mins: '10', title: 'Preços e perguntas', body: 'O plano para a sua equipa, a importação dos seus dados e as suas perguntas.' }
   ],
-  bringTitle: 'Quem convidar',
-  bring: [
-    'As pessoas da equipa que fazem orçamentos ou reservas',
-    'Quem trata dos pagamentos e das faturas'
-  ],
   afterTitle: 'Depois da chamada',
   after: [
+    'A proposta e o programa dia a dia vistos na chamada',
     'Um breve resumo por email',
     'O preço para a sua equipa, por escrito',
     'Uma segunda chamada, se a pedir'
@@ -155,6 +151,9 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Peça uma hora',
   bookBody: 'Por agora a marcação é feita por email. Envie o nome da sua agência, a dimensão da equipa e alguns dias que lhe deem jeito, e respondemos com uma hora.',
   emailLabel: 'Escreva para',
+  bookCta: 'Escolher uma hora',
+  bookCalendarBody: 'Escolha um horário de 30 minutos no calendário.',
+  emailAltLabel: 'Ou escreva para',
   email: 'hola@traviosoft.com',
   faq: [
     {

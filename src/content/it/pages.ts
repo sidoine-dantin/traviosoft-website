@@ -130,7 +130,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Prenota una demo | Traviosoft',
+  metaTitle: 'Demo del software per agenzie di viaggio | Traviosoft',
   metaDescription:
     'Una chiamata di 30 minuti: un viaggio di esempio in Traviosoft dalla richiesta alla fattura, poi prezzi e domande.',
   title: 'Prenota una demo',
@@ -141,13 +141,9 @@ export const demo: SiteContent['demo'] = {
     { mins: '15', title: 'Un viaggio di esempio', body: 'La richiesta, il preventivo con il margine, le prenotazioni, il programma di viaggio, il pagamento e la fattura. Un viaggio di coppia, un gruppo incentive o un safari.' },
     { mins: '10', title: 'Prezzi e domande', body: 'Il piano per il tuo team, l’importazione dei tuoi dati e le tue domande.' }
   ],
-  bringTitle: 'Chi invitare',
-  bring: [
-    'Le persone del team che fanno preventivi o prenotazioni',
-    'Chi si occupa di pagamenti e fatture'
-  ],
   afterTitle: 'Dopo la chiamata',
   after: [
+    'La proposta e il programma giorno per giorno visti durante la chiamata',
     'Un breve riepilogo via email',
     'Il prezzo per il tuo team, per iscritto',
     'Una seconda chiamata, se la chiedi'
@@ -155,6 +151,9 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Chiedi un orario',
   bookBody: 'Per ora la prenotazione avviene via email. Inviaci il nome della tua agenzia, la dimensione del team e alcuni giorni che ti vanno bene, e ti rispondiamo con un orario.',
   emailLabel: 'Scrivi a',
+  bookCta: 'Scegli un orario',
+  bookCalendarBody: 'Scegli uno slot di 30 minuti nel calendario.',
+  emailAltLabel: 'Oppure scrivi a',
   email: 'hola@traviosoft.com',
   faq: [
     {

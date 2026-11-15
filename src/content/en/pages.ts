@@ -128,7 +128,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Book a demo | Traviosoft',
+  metaTitle: 'Travel agency software demo | Traviosoft',
   metaDescription:
     'A 30-minute call: a sample trip in Traviosoft from request to invoice, then pricing and questions.',
   title: 'Book a demo',
@@ -139,13 +139,9 @@ export const demo: SiteContent['demo'] = {
     { mins: '15', title: 'A sample trip', body: 'The request, the quote with margin, the order, the itinerary, the payment and the invoice. A couple’s trip, an incentive group or a safari.' },
     { mins: '10', title: 'Pricing and questions', body: 'The plan for your team, importing your data, and your questions.' }
   ],
-  bringTitle: 'Who to invite',
-  bring: [
-    'People on your team who quote or book',
-    'Whoever handles payments and invoices'
-  ],
   afterTitle: 'After the call',
   after: [
+    'The sample proposal and day-by-day itinerary from the call',
     'A short summary by email',
     'The price for your team, in writing',
     'A follow-up call if you ask for one'
@@ -153,6 +149,9 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Ask for a time',
   bookBody: 'Booking is by email for now. Send your agency name, team size and a few days that suit you, and we reply with a time.',
   emailLabel: 'Write to',
+  bookCta: 'Choose a time',
+  bookCalendarBody: 'Pick a 30-minute slot in the calendar.',
+  emailAltLabel: 'Or write to',
   email: 'hola@traviosoft.com',
   faq: [
     {
