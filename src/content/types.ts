@@ -89,29 +89,6 @@ export type ProposalText = {
   stops: { day?: string; k: string; t: string; s: string; link?: string }[];
 };
 
-/**
- * Labels of the app screens drawn on the home page. Interface words are copied from the app's
- * own translation files (apps/web/messages), so the screens say what the app says.
- */
-export type AppScreensText = {
-  user: string; lang: string;
-  nav: {
-    workspace: string; dashboard: string; calendar: string; analytics: string;
-    pipeline: string; requests: string; quotes: string; orders: string; finances: string;
-    resources: string; catalog: string; clients: string; providers: string; guide: string;
-  };
-  client: string; trip: string;
-  req: { newBtn: string; rows: { name: string; msg: string; meta: string; badge: string; kind: 'new' | 'ok'; ago: string }[] };
-  quote: {
-    sent: string; viewPdf: string; startLabel: string; start: string; expiresLabel: string; expires: string; pax: string;
-    tabs: [string, string, string, string]; linesTitle: string; vatRegimeLabel: string; vatRegime: string; unitIncl: string;
-    lines: [string, string, string, string, string, string, string];
-    totalTitle: string; perPerson: string; selling: string; cost: string; margin: string; vatMargin: string;
-  };
-  order: { accepted: string; bookingTitle: string; bookingCount: string; providers: [string, string, string, string, string, string, string]; states: { confirmed: string; ref: string; requested: string; toBook: string }; tasksTitle: string; tasks: [string, string] };
-  pay: { schedTitle: string; deposit: string; depositSub: string; balance: string; dueLabel: string; paid: string; upcoming: string; invTitle: string; invDeposit: string; invFinal: string; invPaid: string; invDraft: string; dates: [string, string] };
-};
-
 export type VisualText = {
   quoteLabel: string; trip: string; tripSub: string; total: string; sent: string;
   requests: string; newReq: string; quoted: string; waiting: string; won: string;
@@ -248,7 +225,6 @@ export type SiteContent = {
     sitTitle: string; sitLead: string;
     /** Common ways of working, in the visitor's own words, each pointing to the page that covers it. */
     situations: { t: string; s: string; job: JobSlug }[];
-    app: AppScreensText;
     baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
     priceTitle: string; priceBody: string; priceImport: string; priceFree: string; priceFreeNote: string; extraUserLine: string; coin1: string; coin2: string; coinUsers: string; priceNote: string; priceLink: string;
     facts: { k: string; v: string }[];

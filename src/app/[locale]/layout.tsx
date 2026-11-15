@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, DM_Mono, Geist, Schibsted_Grotesk } from 'next/font/google';
+import { Bricolage_Grotesque, DM_Mono, Schibsted_Grotesk } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -34,14 +34,6 @@ const dmMono = DM_Mono({
   weight: ['400', '500'],
   variable: '--font-dm-mono',
   display: 'swap'
-});
-
-// The app's own font, used only inside the app screens drawn on the home page.
-const geist = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist',
-  display: 'swap',
-  preload: false
 });
 
 export const metadata: Metadata = {
@@ -128,7 +120,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }));
 
   return (
-    <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable} ${dmMono.variable} ${geist.variable}`}>
+    <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable} ${dmMono.variable}`}>
       <body>
         <JsonLd data={org} />
         <JsonLd data={site} />

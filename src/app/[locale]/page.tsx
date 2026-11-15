@@ -6,7 +6,6 @@ import { Link } from '@/i18n/navigation';
 import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { HeroTrip } from '@/components/site/hero-trip';
-import { RequestsScreen, QuoteScreen, BookingScreen, PaymentScreen } from '@/components/site/app-screens';
 import { PRICES } from '@/content/prices';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -22,15 +21,8 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
   const c = getContent(locale);
   const h = c.home;
-  const a = h.app;
   const loc = c.visuals.ex.numLocale;
   const total = new Intl.NumberFormat(loc, { minimumFractionDigits: 2 }).format(2662) + ' EUR';
-  const screens = [
-    <RequestsScreen key="r" t={a} label={`${a.nav.requests}: ${a.client}`} />,
-    <QuoteScreen key="q" t={a} loc={loc} label={`${a.nav.quotes}: ${a.trip}`} />,
-    <BookingScreen key="b" t={a} label={`${a.nav.orders}: ${a.trip}`} />,
-    <PaymentScreen key="p" t={a} loc={loc} label={`${a.quote.tabs[1]}: ${a.trip}`} />
-  ];
 
   return (
     <>
@@ -50,14 +42,11 @@ export default async function HomePage({ params }: Props) {
           <h2 className="h2" data-reveal style={{ color: 'var(--green)', maxWidth: '18ch' }}>{h.tripTitle}</h2>
           <ol className="moments">
             {h.moments.map((m, i) => (
-              <li key={i} className="moment">
-                <div className="moment-t" data-reveal>
-                  <span className="moment-time">{m.time}</span>
-                  <h3>{m.title}</h3>
-                  <p>{m.body}</p>
-                  <Link href={`/${m.job}`} className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{m.go}</span><span className="arr" aria-hidden="true">→</span></Link>
-                </div>
-                <div className="moment-shot">{screens[i]}</div>
+              <li key={i} className="moment" data-reveal>
+                <span className="moment-time">{m.time}</span>
+                <h3>{m.title}</h3>
+                <p>{m.body}</p>
+                <Link href={`/${m.job}`} className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{m.go}</span><span className="arr" aria-hidden="true">→</span></Link>
               </li>
             ))}
           </ol>

@@ -8,7 +8,7 @@ export const home: SiteContent['home'] = {
   title: 'Software for tailor-made travel agencies and DMCs',
   sub: 'Requests, quotes, bookings, payments and invoices, in one place.',
   proposal: {
-    "agency": "Ruta Sur Viajes",
+    "agency": "Your agency",
     "kind": "Travel proposal",
     "trip": "Andalusia, 8 days",
     "meta": [
@@ -129,136 +129,6 @@ export const home: SiteContent['home'] = {
       "job": "setup"
     }
   ],
-  app: {
-    "user": "LG",
-    "lang": "EN",
-    "nav": {
-      "workspace": "Workspace",
-      "dashboard": "Dashboard",
-      "calendar": "Calendar",
-      "analytics": "Analytics",
-      "pipeline": "Pipeline",
-      "requests": "Requests",
-      "quotes": "Quotes",
-      "orders": "Orders",
-      "finances": "Finances",
-      "resources": "Resources",
-      "catalog": "Catalog",
-      "clients": "Clients",
-      "providers": "Providers",
-      "guide": "Quick Start"
-    },
-    "client": "Smith family",
-    "trip": "Andalusia, 8 days",
-    "req": {
-      "newBtn": "New request",
-      "rows": [
-        {
-          "name": "Smith family",
-          "msg": "Andalusia in May, 2 adults, small hotels with character",
-          "meta": "Website · 3 to 10 May 2027",
-          "badge": "New · 12 min",
-          "kind": "new",
-          "ago": "09:12"
-        },
-        {
-          "name": "Ana Ruiz",
-          "msg": "Lisbon and Porto, 10 days",
-          "meta": "Email · June 2027",
-          "badge": "Answered",
-          "kind": "ok",
-          "ago": "Yesterday"
-        },
-        {
-          "name": "Bertrand Lefèvre",
-          "msg": "Morocco, group of 18",
-          "meta": "Phone · October 2027",
-          "badge": "Answered",
-          "kind": "ok",
-          "ago": "8 Jan"
-        },
-        {"name": "Hannah Weber", "msg": "Northern Spain, 12 days, by train", "meta": "Partner agency · September 2027", "badge": "Answered", "kind": "ok", "ago": "7 Jan"},
-        {"name": "Pierre Dubois", "msg": "Seville for a weekend, 4 adults", "meta": "Website · April 2027", "badge": "Answered", "kind": "ok", "ago": "5 Jan"}
-      ]
-    },
-    "quote": {
-      "sent": "Sent",
-      "viewPdf": "View PDF",
-      "startLabel": "Start date",
-      "start": "03/05/2027",
-      "expiresLabel": "Expires on",
-      "expires": "25/01/2027",
-      "pax": "2 PAX",
-      "tabs": [
-        "Quote",
-        "Payments",
-        "Send",
-        "History"
-      ],
-      "linesTitle": "Quote lines",
-      "vatRegimeLabel": "VAT regime",
-      "vatRegime": "Margin scheme",
-      "unitIncl": "/ unit incl. VAT",
-      "lines": [
-        "Private transfer, Seville airport",
-        "Hotel in Seville, double room",
-        "Alcázar and cathedral, guided visit",
-        "Hire car, category B",
-        "Hotel in Ronda, double room",
-        "Hotel in Granada, double room",
-        "Alhambra, guided visit"
-      ],
-      "totalTitle": "Total incl. tax",
-      "perPerson": "Price per person",
-      "selling": "Selling price (incl. tax)",
-      "cost": "Supplier cost (incl. tax)",
-      "margin": "Gross margin",
-      "vatMargin": "VAT on the margin to declare"
-    },
-    "order": {
-      "accepted": "Accepted",
-      "bookingTitle": "Bookings",
-      "bookingCount": "5 of 7 confirmed",
-      "providers": [
-        "Traslados Giralda",
-        "Hotel Sevilla Centro",
-        "Lucía Romero, guide",
-        "Autos Bética",
-        "Hotel Ronda Tajo",
-        "Hotel Granada Albaicín",
-        "Patronato de la Alhambra"
-      ],
-      "states": {
-        "confirmed": "Confirmed",
-        "ref": "Confirmed · ref. 48213",
-        "requested": "Ordered · awaiting confirmation",
-        "toBook": "To book"
-      },
-      "tasksTitle": "Tasks",
-      "tasks": [
-        "Send the confirmation to the client",
-        "Book the Alhambra tickets"
-      ]
-    },
-    "pay": {
-      "schedTitle": "Scheduled milestones",
-      "deposit": "Deposit 30%",
-      "depositSub": "Card, from the link in the email",
-      "balance": "Balance",
-      "dueLabel": "Due:",
-      "paid": "Paid",
-      "upcoming": "Pending",
-      "invTitle": "Invoices",
-      "invDeposit": "Deposit (Anticipo)",
-      "invFinal": "Final invoice",
-      "invPaid": "Paid",
-      "invDraft": "Draft",
-      "dates": [
-        "12/01/2027",
-        "03/04/2027"
-      ]
-    }
-  },
   baTitle: 'Before and after',
   beforeTitle: 'Today',
   beforeScraps: [

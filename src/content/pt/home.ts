@@ -8,7 +8,7 @@ export const home: SiteContent['home'] = {
   title: 'Software de gestão para agências de viagens à medida e DMC',
   sub: 'Pedidos, orçamentos, reservas, pagamentos e faturas, num só lugar.',
   proposal: {
-    "agency": "Ruta Sur Viajes",
+    "agency": "A sua agência",
     "kind": "Proposta de viagem",
     "trip": "Andaluzia, 8 dias",
     "meta": [
@@ -129,136 +129,6 @@ export const home: SiteContent['home'] = {
       "job": "setup"
     }
   ],
-  app: {
-    "user": "LG",
-    "lang": "PT",
-    "nav": {
-      "workspace": "Espaço de trabalho",
-      "dashboard": "Painel",
-      "calendar": "Calendário",
-      "analytics": "Análises",
-      "pipeline": "Pipeline",
-      "requests": "Pedidos",
-      "quotes": "Orçamentos",
-      "orders": "Reservas",
-      "finances": "Finanças",
-      "resources": "Recursos",
-      "catalog": "Catálogo",
-      "clients": "Clientes",
-      "providers": "Fornecedores",
-      "guide": "Guia rápido"
-    },
-    "client": "Família Silva",
-    "trip": "Andaluzia, 8 dias",
-    "req": {
-      "newBtn": "Novo pedido",
-      "rows": [
-        {
-          "name": "Família Silva",
-          "msg": "Andaluzia em maio, 2 adultos, hotéis com charme",
-          "meta": "Site · de 3 a 10 de maio de 2027",
-          "badge": "Novo · 12 min",
-          "kind": "new",
-          "ago": "09:12"
-        },
-        {
-          "name": "Ana Ruiz",
-          "msg": "Lisboa e Porto, 10 dias",
-          "meta": "E-mail · junho de 2027",
-          "badge": "Respondido",
-          "kind": "ok",
-          "ago": "Ontem"
-        },
-        {
-          "name": "Bertrand Lefèvre",
-          "msg": "Marrocos, grupo de 18",
-          "meta": "Telefone · outubro de 2027",
-          "badge": "Respondido",
-          "kind": "ok",
-          "ago": "8 jan"
-        },
-        {"name": "Hannah Weber", "msg": "Norte de Espanha de comboio, 12 dias", "meta": "Agência parceira · setembro de 2027", "badge": "Respondido", "kind": "ok", "ago": "7 jan"},
-        {"name": "Pierre Dubois", "msg": "Sevilha num fim de semana, 4 adultos", "meta": "Site · abril de 2027", "badge": "Respondido", "kind": "ok", "ago": "5 jan"}
-      ]
-    },
-    "quote": {
-      "sent": "Enviado",
-      "viewPdf": "Ver PDF",
-      "startLabel": "Data de início",
-      "start": "03/05/2027",
-      "expiresLabel": "Expira em",
-      "expires": "25/01/2027",
-      "pax": "2 PAX",
-      "tabs": [
-        "Orçamento",
-        "Pagamentos",
-        "Envio",
-        "Histórico"
-      ],
-      "linesTitle": "Linhas do orçamento",
-      "vatRegimeLabel": "Regime de IVA",
-      "vatRegime": "Regime da margem",
-      "unitIncl": "/ unidade c/ IVA",
-      "lines": [
-        "Transfer privado, aeroporto de Sevilha",
-        "Hotel em Sevilha, quarto duplo",
-        "Alcázar e catedral, visita guiada",
-        "Carro de aluguer, categoria B",
-        "Hotel em Ronda, quarto duplo",
-        "Hotel em Granada, quarto duplo",
-        "Alhambra, visita guiada"
-      ],
-      "totalTitle": "Total c/ IVA",
-      "perPerson": "Preço por pessoa",
-      "selling": "Preço de venda (c/ IVA)",
-      "cost": "Custo do fornecedor (c/ IVA)",
-      "margin": "Margem bruta",
-      "vatMargin": "IVA sobre a margem a declarar"
-    },
-    "order": {
-      "accepted": "Aceite",
-      "bookingTitle": "Reservas",
-      "bookingCount": "5 de 7 confirmadas",
-      "providers": [
-        "Traslados Giralda",
-        "Hotel Sevilla Centro",
-        "Lucía Romero, guia",
-        "Autos Bética",
-        "Hotel Ronda Tajo",
-        "Hotel Granada Albaicín",
-        "Patronato de la Alhambra"
-      ],
-      "states": {
-        "confirmed": "Confirmado",
-        "ref": "Confirmado · ref. 48213",
-        "requested": "Encomendado · a aguardar confirmação",
-        "toBook": "Por reservar"
-      },
-      "tasksTitle": "Tarefas",
-      "tasks": [
-        "Enviar a confirmação ao cliente",
-        "Reservar os bilhetes da Alhambra"
-      ]
-    },
-    "pay": {
-      "schedTitle": "Prestações agendadas",
-      "deposit": "Adiantamento 30%",
-      "depositSub": "Cartão, a partir da ligação no e-mail",
-      "balance": "Saldo",
-      "dueLabel": "Vencimento:",
-      "paid": "Pago",
-      "upcoming": "Pendente",
-      "invTitle": "Faturas",
-      "invDeposit": "Adiantamento (Anticipo)",
-      "invFinal": "Fatura final",
-      "invPaid": "Paga",
-      "invDraft": "Rascunho",
-      "dates": [
-        "12/01/2027",
-        "03/04/2027"
-      ]
-    }
-  },
   baTitle: 'Antes e depois',
   beforeTitle: 'Hoje',
   beforeScraps: [
