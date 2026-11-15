@@ -22,8 +22,8 @@ export const home: SiteContent['home'] = {
         "s": "Airport pick-up and transfer to your hotel in the old town, for 3 nights."
       },
       {
-        "t": "Day 2 · The Alcázar and the cathedral",
-        "s": "Guided visit in the morning, free afternoon in the Santa Cruz quarter."
+        "t": "Day 2 · Córdoba",
+        "s": "Guided visit of the Mosque-Cathedral, back in Seville in the evening."
       },
       {
         "t": "Day 4 · On to Ronda",
@@ -32,7 +32,6 @@ export const home: SiteContent['home'] = {
     ],
     "total": "Total due",
     "vatIncl": "VAT included",
-    "photo": "Seville",
     "stops": [
       {
         "day": "Day 1 · Monday 3 May",
@@ -49,7 +48,7 @@ export const home: SiteContent['home'] = {
       {
         "day": "Day 2 · Tuesday 4 May",
         "k": "Activity",
-        "t": "Alcázar and cathedral",
+        "t": "Mosque-Cathedral of Córdoba",
         "s": "Your guide: Lucía"
       }
     ]

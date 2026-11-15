@@ -22,8 +22,8 @@ export const home: SiteContent['home'] = {
         "s": "Receção no aeroporto e transfer para o hotel no centro histórico, por 3 noites."
       },
       {
-        "t": "Dia 2 · O Alcázar e a catedral",
-        "s": "Visita guiada de manhã, tarde livre no bairro de Santa Cruz."
+        "t": "Dia 2 · Córdova",
+        "s": "Visita guiada à Mesquita-Catedral e regresso a Sevilha ao fim do dia."
       },
       {
         "t": "Dia 4 · A caminho de Ronda",
@@ -32,7 +32,6 @@ export const home: SiteContent['home'] = {
     ],
     "total": "Total a pagar",
     "vatIncl": "IVA incluído",
-    "photo": "Sevilha",
     "stops": [
       {
         "day": "Dia 1 · Segunda, 3 de maio",
@@ -49,7 +48,7 @@ export const home: SiteContent['home'] = {
       {
         "day": "Dia 2 · Terça, 4 de maio",
         "k": "Atividade",
-        "t": "Alcázar e catedral",
+        "t": "Mesquita-Catedral de Córdova",
         "s": "O seu guia: Lucía"
       }
     ]

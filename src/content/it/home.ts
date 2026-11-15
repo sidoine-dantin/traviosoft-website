@@ -22,8 +22,8 @@ export const home: SiteContent['home'] = {
         "s": "Accoglienza in aeroporto e transfer al tuo hotel nel centro storico, per 3 notti."
       },
       {
-        "t": "Giorno 2 · L’Alcázar e la cattedrale",
-        "s": "Visita guidata al mattino, pomeriggio libero nel quartiere di Santa Cruz."
+        "t": "Giorno 2 · Cordova",
+        "s": "Visita guidata della Moschea-Cattedrale, rientro a Siviglia in serata."
       },
       {
         "t": "Giorno 4 · Verso Ronda",
@@ -32,7 +32,6 @@ export const home: SiteContent['home'] = {
     ],
     "total": "Totale da pagare",
     "vatIncl": "IVA inclusa",
-    "photo": "Siviglia",
     "stops": [
       {
         "day": "Giorno 1 · Lunedì 3 maggio",
@@ -49,7 +48,7 @@ export const home: SiteContent['home'] = {
       {
         "day": "Giorno 2 · Martedì 4 maggio",
         "k": "Attività",
-        "t": "Alcázar e cattedrale",
+        "t": "Moschea-Cattedrale di Cordova",
         "s": "La sua guida: Lucía"
       }
     ]

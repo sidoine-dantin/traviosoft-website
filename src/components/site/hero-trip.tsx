@@ -1,5 +1,8 @@
 import type { ProposalText } from '@/content/types';
 
+/** Photos (Unsplash licence): Plaza de España by Tânia Mousinho, Giralda by Clara Brassard, Mosque-Cathedral of Córdoba by Jordi Vich Navarro, Puente Nuevo in Ronda by tommao wang. */
+const DAY_PHOTOS = ['/home/giralda.webp', '/home/cordoba.webp', '/home/ronda.webp'];
+
 /**
  * The home hero picture: what the agency sends its client. The travel proposal on a laptop-sized
  * sheet and the day-by-day itinerary on a phone, with the fields of the app's two documents
@@ -11,13 +14,13 @@ export function HeroTrip({ p, total }: { p: ProposalText; total: string }) {
     <div className="ht" role="img" aria-label={`${p.kind}: ${p.trip}`}>
       <div className="ht-sheet" aria-hidden="true">
         <div className="ht-sh-head"><span className="ht-ag"><b />{p.agency}</span><span>{p.kind}</span></div>
-        <div className="ht-cover"><em>{p.photo}</em></div>
+        <img className="ht-cover" src="/home/seville.webp" alt="" width={1200} height={380} decoding="async" fetchPriority="high" />
         <div className="ht-body">
           <h3 className="ht-title">{p.trip}</h3>
           <p className="ht-meta">{p.meta.map(m => <span key={m}>{m}</span>)}</p>
           <div className="ht-days">
-            {p.days.map(d => (
-              <div key={d.t} className="ht-day"><span className="ht-ph" /><div><b>{d.t}</b><p>{d.s}</p></div></div>
+            {p.days.map((d, i) => (
+              <div key={d.t} className="ht-day"><img className="ht-ph" src={DAY_PHOTOS[i]} alt="" width={240} height={240} loading="lazy" decoding="async" /><div><b>{d.t}</b><p>{d.s}</p></div></div>
             ))}
           </div>
           <p className="ht-total"><span>{p.total} <small>· {p.vatIncl}</small></span><strong>{total}</strong></p>

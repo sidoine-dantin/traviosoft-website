@@ -85,7 +85,7 @@ export type Link = { label: string; href: string };
 export type ProposalText = {
   agency: string; kind: string; trip: string; meta: [string, string, string];
   days: { t: string; s: string }[];
-  total: string; vatIncl: string; photo: string;
+  total: string; vatIncl: string;
   stops: { day?: string; k: string; t: string; s: string; link?: string }[];
 };
 

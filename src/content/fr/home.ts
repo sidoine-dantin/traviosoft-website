@@ -22,8 +22,8 @@ export const home: SiteContent['home'] = {
         "s": "Accueil à l’aéroport et transfert à votre hôtel du centre historique, pour 3 nuits."
       },
       {
-        "t": "Jour 2 · L’Alcázar et la cathédrale",
-        "s": "Visite guidée le matin, après-midi libre dans le quartier de Santa Cruz."
+        "t": "Jour 2 · Cordoue",
+        "s": "Visite guidée de la Mosquée-Cathédrale, retour à Séville le soir."
       },
       {
         "t": "Jour 4 · Route vers Ronda",
@@ -32,7 +32,6 @@ export const home: SiteContent['home'] = {
     ],
     "total": "Total à régler",
     "vatIncl": "TVA incluse",
-    "photo": "Séville",
     "stops": [
       {
         "day": "Jour 1 · Lundi 3 mai",
@@ -49,7 +48,7 @@ export const home: SiteContent['home'] = {
       {
         "day": "Jour 2 · Mardi 4 mai",
         "k": "Activité",
-        "t": "Alcázar et cathédrale",
+        "t": "Mosquée-Cathédrale de Cordoue",
         "s": "Votre guide : Lucía"
       }
     ]

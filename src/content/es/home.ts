@@ -22,8 +22,8 @@ export const home: SiteContent['home'] = {
         "s": "Recogida en el aeropuerto y traslado a su hotel del casco antiguo, 3 noches."
       },
       {
-        "t": "Día 2 · El Alcázar y la catedral",
-        "s": "Visita guiada por la mañana, tarde libre en el barrio de Santa Cruz."
+        "t": "Día 2 · Córdoba",
+        "s": "Visita guiada a la Mezquita-Catedral y regreso a Sevilla por la tarde."
       },
       {
         "t": "Día 4 · Hacia Ronda",
@@ -32,7 +32,6 @@ export const home: SiteContent['home'] = {
     ],
     "total": "Total a pagar",
     "vatIncl": "IVA incluido",
-    "photo": "Sevilla",
     "stops": [
       {
         "day": "Día 1 · Lunes 3 de mayo",
@@ -49,7 +48,7 @@ export const home: SiteContent['home'] = {
       {
         "day": "Día 2 · Martes 4 de mayo",
         "k": "Actividad",
-        "t": "Alcázar y catedral",
+        "t": "Mezquita-Catedral de Córdoba",
         "s": "Su guía: Lucía"
       }
     ]
