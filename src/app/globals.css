@@ -227,10 +227,11 @@
 
 /* ---------- home: four moments of one trip, text only ---------- */
 .moments { list-style: none; margin: clamp(40px, 6vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); counter-reset: m; }
-.moment { display: grid; align-content: start; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+.moment { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line); }
 .moment h3 { margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(21px, 2vw, 26px); line-height: 1.2; color: var(--ink); }
 .moment p { margin: 0; font-size: 17px; color: var(--muted); }
-.moment .arrow { justify-self: start; margin-top: 6px; }
+/* Links sit on one line across the four steps, whatever the text length. */
+.moment .arrow { margin-top: auto; padding-top: 6px; }
 /* "See how" links: no underline until hover or press. */
 .moment .arrow::before { transform: scaleX(0); transform-origin: left; }
 .moment .arrow:hover::before, .moment .arrow:focus-visible::before, .moment .arrow:active::before { transform: translateY(4px) scaleX(1); }
