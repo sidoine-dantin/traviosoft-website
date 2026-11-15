@@ -55,30 +55,11 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "The journey of a trip in Traviosoft",
   moments: [
-    {
-      "title": "The request comes in",
-      "body": "Every request lands in one list, with how long it has waited and what comes next.",
-      "go": "See requests",
-      "job": "sell"
-    },
-    {
-      "title": "The quote, with your margin",
-      "body": "Each line starts from the supplier’s cost, and you see the margin on the whole trip before you send it.",
-      "go": "See quotes",
-      "job": "sell"
-    },
-    {
-      "title": "Every booking followed",
-      "body": "Once the client accepts, each supplier gets its request and the answer is saved on the line. What is left to do stays in the tasks.",
-      "go": "See bookings",
-      "job": "book"
-    },
-    {
-      "title": "Payments and invoices from the quote",
-      "body": "The payment schedule comes from the accepted quote. The client pays from the link in the email, and the invoice takes the same lines.",
-      "go": "See payments",
-      "job": "get-paid"
-    }
+    {"rec": "Andalusia · 2 travellers", "title": "The request", "body": "It lands in the list of requests, with how long it has waited and what comes next.", "go": "See requests", "job": "sell"},
+    {"rec": "Margin {margin} EUR", "title": "The quote", "body": "Each line starts from the supplier’s cost. You see the margin on the trip before you send the proposal.", "go": "See quotes", "job": "sell"},
+    {"rec": "Hotel in Seville: confirmed", "title": "The bookings", "body": "Once the client accepts, each supplier gets its request, and the answer is saved on the line.", "go": "See bookings", "job": "book"},
+    {"rec": "Deposit {deposit} EUR: paid", "title": "The payments", "body": "The payment schedule comes from the accepted quote. The client pays from the link in the email.", "go": "See payments", "job": "get-paid"},
+    {"rec": "Final invoice: {total} EUR", "title": "The invoice", "body": "It takes the lines of the accepted quote.", "go": "See invoices", "job": "get-paid"}
   ],
   sitTitle: "However you work",
   sitLead: "Every agency has its own habits. Here is what Traviosoft does in the most common cases.",
@@ -144,7 +125,7 @@ export const home: SiteContent['home'] = {
   afterBody:
     'The request, the quote, the bookings, the payments and the invoices are on the same trip, and the whole team sees the same thing.',
   priceTitle: 'Pricing',
-  priceBody: 'Setup',
+  priceBody: 'Setup and onboarding',
   priceImport: 'and import of your spreadsheets',
   priceFree: 'free*',
   priceFreeNote: '* With yearly billing. Limited-time offer.',

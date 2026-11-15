@@ -80,7 +80,7 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Implementação e apoio',
       rows: [
-        { f: 'Configuração da sua marca, dos documentos e das regras de preço', classic: { text: FREE, was: `${PRICES.setupMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Configuração da sua marca, dos documentos e das regras de preço, e formação da sua equipa', classic: { text: FREE, was: `${PRICES.setupMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Importação das suas folhas de cálculo ou da exportação da sua ferramenta atual**', classic: { text: FREE, was: `${PRICES.importMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.importMonthly} EUR` } },
         { f: 'Apoio por email em espanhol, inglês e francês', classic: true, premium: true },
         { f: 'Alojamento na União Europeia', classic: true, premium: true },
@@ -88,7 +88,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Oferta por tempo limitado, só com faturação anual. Com faturação mensal, a configuração (${PRICES.setupMonthly} EUR) e a importação (${PRICES.importMonthly} EUR) pagam-se uma vez no início. Outros ficheiros (Word, PDF, emails, viagens em curso) importam-se mediante orçamento.`, '** Para dados limpos e bem organizados.'],
+  compareNote: [`* Oferta por tempo limitado, só com faturação anual. Com faturação mensal, a configuração e o acompanhamento (${PRICES.setupMonthly} EUR) e a importação (${PRICES.importMonthly} EUR) pagam-se uma vez no início. Outros ficheiros (Word, PDF, emails, viagens em curso) importam-se mediante orçamento.`, '** Para dados limpos e bem organizados.'],
   faq: [
     {
       q: 'De que plano preciso?',
@@ -119,8 +119,8 @@ export const pricing: SiteContent['pricing'] = {
       a: ['Sim. Recebe os seus dados em formatos normalizados.']
     },
     {
-      q: 'O que inclui a configuração?',
-      a: [`Configuramos a sua marca, os seus documentos, as suas regras de margem, IVA e comissões, e os acessos da sua equipa. É gratuita com faturação anual e custa ${PRICES.setupMonthly} EUR uma única vez com faturação mensal.`]
+      q: 'O que incluem a configuração e o acompanhamento?',
+      a: [`Configuramos a sua marca, os seus documentos, as suas regras de margem, IVA e comissões, e os acessos da sua equipa. Depois formamos a sua equipa por videochamada e continuamos disponíveis por email nas primeiras semanas. São gratuitos com faturação anual e custam ${PRICES.setupMonthly} EUR uma única vez com faturação mensal.`]
     },
     {
       q: 'O que inclui a importação?',
@@ -197,7 +197,7 @@ export const switching: SiteContent['switching'] = {
     {
       when: 'Semana 2',
       title: 'O seu primeiro orçamento real',
-      body: 'Configuramos as suas regras de margem, IVA e comissões e a sua marca. Faz um orçamento real com as suas próprias tarifas. Estamos disponíveis por email se precisar.'
+      body: 'Configuramos as suas regras de margem, IVA e comissões e a sua marca, e formamos a sua equipa por videochamada. Faz um orçamento real com as suas próprias tarifas. Estamos disponíveis por email se precisar.'
     },
     {
       when: 'Em funcionamento',
@@ -223,7 +223,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Quanto custa?',
-      a: [`A configuração e a importação das suas folhas de cálculo são gratuitas com faturação anual. Com faturação mensal, a configuração custa ${PRICES.setupMonthly} EUR uma única vez e a importação ${PRICES.importMonthly} EUR uma única vez.`, 'O preço da importação cobre listas com uma linha por elemento e as mesmas colunas do início ao fim. Documentos Word, PDF, viagens em curso e listas que precisam de ser organizadas primeiro têm preço mediante orçamento, depois de vermos uma amostra.']
+      a: [`A configuração, o acompanhamento e a importação das suas folhas de cálculo são gratuitos com faturação anual. Com faturação mensal, a configuração e o acompanhamento custam ${PRICES.setupMonthly} EUR uma única vez e a importação ${PRICES.importMonthly} EUR uma única vez.`, 'O preço da importação cobre listas com uma linha por elemento e as mesmas colunas do início ao fim. Documentos Word, PDF, viagens em curso e listas que precisam de ser organizadas primeiro têm preço mediante orçamento, depois de vermos uma amostra.']
     },
     {
       q: 'O que acontece aos meus ficheiros antigos?',
@@ -285,7 +285,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Posso pagar mensalmente?',
-          a: [`Sim. Com faturação mensal, o Classic custa ${PRICES.classic.monthly} EUR e o Premium ${PRICES.premium.monthly} EUR. A configuração custa ${PRICES.setupMonthly} EUR uma única vez e a importação das suas folhas de cálculo ${PRICES.importMonthly} EUR uma única vez com faturação mensal; ambas são gratuitas com faturação anual.`]
+          a: [`Sim. Com faturação mensal, o Classic custa ${PRICES.classic.monthly} EUR e o Premium ${PRICES.premium.monthly} EUR. A configuração e o acompanhamento custam ${PRICES.setupMonthly} EUR uma única vez e a importação das suas folhas de cálculo ${PRICES.importMonthly} EUR uma única vez com faturação mensal; com faturação anual, são todos gratuitos.`]
         },
         {
           q: 'Há um período de experiência gratuito?',

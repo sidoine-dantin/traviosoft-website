@@ -55,30 +55,11 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "Le parcours d’un voyage dans Traviosoft",
   moments: [
-    {
-      "title": "La demande arrive",
-      "body": "Toutes les demandes sont dans une seule liste, avec depuis combien de temps elles attendent et la suite à donner.",
-      "go": "Voir les demandes",
-      "job": "sell"
-    },
-    {
-      "title": "Le devis, avec votre marge",
-      "body": "Chaque ligne part du coût du prestataire, et vous voyez la marge du voyage avant de l’envoyer.",
-      "go": "Voir les devis",
-      "job": "sell"
-    },
-    {
-      "title": "Chaque réservation suivie",
-      "body": "Quand le client accepte, chaque prestataire reçoit sa demande et sa réponse est enregistrée sur la ligne. Ce qui reste à faire est dans les tâches.",
-      "go": "Voir les réservations",
-      "job": "book"
-    },
-    {
-      "title": "Paiements et factures depuis le devis",
-      "body": "Les échéances viennent du devis accepté. Le client paie depuis le lien de l’e-mail, et la facture reprend les mêmes lignes.",
-      "go": "Voir les paiements",
-      "job": "get-paid"
-    }
+    {"rec": "Andalousie · 2 voyageurs", "title": "La demande", "body": "Elle arrive dans la liste des demandes, avec depuis combien de temps elle attend et la suite à donner.", "go": "Voir les demandes", "job": "sell"},
+    {"rec": "Marge {margin} EUR", "title": "Le devis", "body": "Chaque ligne part du coût du prestataire. Vous voyez la marge du voyage avant d’envoyer la proposition.", "go": "Voir les devis", "job": "sell"},
+    {"rec": "Hôtel à Séville : confirmé", "title": "Les réservations", "body": "Quand le client accepte, chaque prestataire reçoit sa demande, et sa réponse est enregistrée sur la ligne.", "go": "Voir les réservations", "job": "book"},
+    {"rec": "Acompte {deposit} EUR : payé", "title": "Les paiements", "body": "Les échéances viennent du devis accepté. Le client paie depuis le lien de l’e-mail.", "go": "Voir les paiements", "job": "get-paid"},
+    {"rec": "Facture finale : {total} EUR", "title": "La facture", "body": "Elle reprend les lignes du devis accepté.", "go": "Voir les factures", "job": "get-paid"}
   ],
   sitTitle: "Selon votre façon de travailler",
   sitLead: "Chaque agence a ses habitudes. Voici ce que fait Traviosoft dans les cas les plus courants.",
@@ -144,7 +125,7 @@ export const home: SiteContent['home'] = {
   afterBody:
     'La demande, le devis, les réservations, les paiements et les factures sont sur le même voyage, et toute l’équipe voit la même chose.',
   priceTitle: 'Tarifs',
-  priceBody: 'Mise en place',
+  priceBody: 'Mise en place et accompagnement',
   priceImport: 'et import de vos tableurs',
   priceFree: 'offerts*',
   priceFreeNote: '* Avec la facturation annuelle. Offre à durée limitée.',

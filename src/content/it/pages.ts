@@ -80,7 +80,7 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Avvio e assistenza',
       rows: [
-        { f: 'Configurazione del tuo marchio, dei documenti e delle regole di prezzo', classic: { text: FREE, was: `${PRICES.setupMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Configurazione del tuo marchio, dei documenti e delle regole di prezzo, e formazione del tuo team', classic: { text: FREE, was: `${PRICES.setupMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Importazione dei tuoi fogli di calcolo o dell’export del tuo strumento attuale**', classic: { text: FREE, was: `${PRICES.importMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.importMonthly} EUR` } },
         { f: 'Assistenza via email in spagnolo, inglese e francese', classic: true, premium: true },
         { f: 'Hosting nell’Unione europea', classic: true, premium: true },
@@ -88,7 +88,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Offerta a tempo limitato, solo con fatturazione annuale. Con fatturazione mensile, la configurazione (${PRICES.setupMonthly} EUR) e l’importazione (${PRICES.importMonthly} EUR) si pagano una volta all’inizio. Altri file (Word, PDF, email, viaggi in corso) si importano su preventivo.`, '** Per dati puliti e ben organizzati.'],
+  compareNote: [`* Offerta a tempo limitato, solo con fatturazione annuale. Con fatturazione mensile, la configurazione e l’affiancamento (${PRICES.setupMonthly} EUR) e l’importazione (${PRICES.importMonthly} EUR) si pagano una volta all’inizio. Altri file (Word, PDF, email, viaggi in corso) si importano su preventivo.`, '** Per dati puliti e ben organizzati.'],
   faq: [
     {
       q: 'Quale piano mi serve?',
@@ -119,8 +119,8 @@ export const pricing: SiteContent['pricing'] = {
       a: ['Sì. Riavrai i tuoi dati in formati standard.']
     },
     {
-      q: 'Cosa comprende la configurazione?',
-      a: [`Configuriamo il tuo marchio, i tuoi documenti, le tue regole di margine, IVA e commissioni, e gli accessi del tuo team. È gratuita con fatturazione annuale e costa ${PRICES.setupMonthly} EUR una tantum con fatturazione mensile.`]
+      q: 'Cosa comprendono la configurazione e l’affiancamento?',
+      a: [`Configuriamo il tuo marchio, i tuoi documenti, le tue regole di margine, IVA e commissioni, e gli accessi del tuo team. Poi formiamo il tuo team in videochiamata e restiamo disponibili via email nelle prime settimane. Sono gratuiti con fatturazione annuale e costano ${PRICES.setupMonthly} EUR una tantum con fatturazione mensile.`]
     },
     {
       q: 'Cosa comprende l’importazione?',
@@ -197,7 +197,7 @@ export const switching: SiteContent['switching'] = {
     {
       when: 'Settimana 2',
       title: 'Il tuo primo preventivo reale',
-      body: 'Configuriamo le tue regole di margine, IVA e commissioni e il tuo marchio. Prepari un preventivo reale con le tue tariffe. Siamo raggiungibili via email se ti blocchi.'
+      body: 'Configuriamo le tue regole di margine, IVA e commissioni e il tuo marchio, poi formiamo il tuo team in videochiamata. Prepari un preventivo reale con le tue tariffe. Siamo raggiungibili via email se ti blocchi.'
     },
     {
       when: 'Operativi',
@@ -223,7 +223,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Quanto costa?',
-      a: [`La configurazione e l’importazione dei tuoi fogli di calcolo sono gratuite con fatturazione annuale. Con fatturazione mensile, la configurazione costa ${PRICES.setupMonthly} EUR una tantum e l’importazione ${PRICES.importMonthly} EUR una tantum.`, 'Il prezzo dell’importazione copre liste con una riga per elemento e le stesse colonne dall’inizio alla fine. Documenti Word, PDF, viaggi in corso e liste da riordinare prima hanno un prezzo su preventivo, dopo aver visto un esempio.']
+      a: [`La configurazione, l’affiancamento e l’importazione dei tuoi fogli di calcolo sono gratuiti con fatturazione annuale. Con fatturazione mensile, la configurazione e l’affiancamento costano ${PRICES.setupMonthly} EUR una tantum e l’importazione ${PRICES.importMonthly} EUR una tantum.`, 'Il prezzo dell’importazione copre liste con una riga per elemento e le stesse colonne dall’inizio alla fine. Documenti Word, PDF, viaggi in corso e liste da riordinare prima hanno un prezzo su preventivo, dopo aver visto un esempio.']
     },
     {
       q: 'Cosa succede ai miei vecchi file?',
@@ -285,7 +285,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Posso pagare mensilmente?',
-          a: [`Sì. Con fatturazione mensile, Classic costa ${PRICES.classic.monthly} EUR e Premium ${PRICES.premium.monthly} EUR. La configurazione costa ${PRICES.setupMonthly} EUR una tantum e l’importazione dei tuoi fogli di calcolo ${PRICES.importMonthly} EUR una tantum con fatturazione mensile; entrambe sono gratuite con fatturazione annuale.`]
+          a: [`Sì. Con fatturazione mensile, Classic costa ${PRICES.classic.monthly} EUR e Premium ${PRICES.premium.monthly} EUR. La configurazione e l’affiancamento costano ${PRICES.setupMonthly} EUR una tantum e l’importazione dei tuoi fogli di calcolo ${PRICES.importMonthly} EUR una tantum con fatturazione mensile; con fatturazione annuale sono tutti gratuiti.`]
         },
         {
           q: 'C’è una prova gratuita?',

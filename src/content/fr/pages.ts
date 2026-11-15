@@ -78,7 +78,7 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Mise en place et service',
       rows: [
-        { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix, et formation de votre équipe', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Import de vos tableurs ou de l’export de votre outil actuel**', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Support par e-mail en espagnol, anglais et français', classic: true, premium: true },
         { f: 'Hébergement dans l’Union européenne', classic: true, premium: true },
@@ -86,7 +86,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
+  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place et l’accompagnement (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
   faq: [
     {
       q: 'De quelle offre ai-je besoin ?',
@@ -117,8 +117,8 @@ export const pricing: SiteContent['pricing'] = {
       a: ['Oui. Vous récupérez vos données dans des formats standard.']
     },
     {
-      q: 'Que comprend la mise en place ?',
-      a: [`Nous configurons votre marque, vos documents, vos règles de marge, de TVA et de commission, et les accès de votre équipe. Elle est offerte en annuel et coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel.`]
+      q: 'Que comprennent la mise en place et l’accompagnement ?',
+      a: [`Nous configurons votre marque, vos documents, vos règles de marge, de TVA et de commission, et les accès de votre équipe. Puis nous formons votre équipe en visio et restons disponibles par e-mail pendant les premières semaines. L’ensemble est offert en annuel et coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel.`]
     },
     {
       q: 'Que comprend l’import ?',
@@ -195,7 +195,7 @@ export const switching: SiteContent['switching'] = {
     {
       when: 'Semaine 2',
       title: 'Votre premier vrai devis',
-      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
+      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque, puis nous formons votre équipe en visio. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
     },
     {
       when: 'En service',
@@ -221,7 +221,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Combien cela coûte-t-il ?',
-      a: [`La mise en place et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place coûte ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec une ligne par élément et les mêmes colonnes du début à la fin. Les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+      a: [`La mise en place, l’accompagnement et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec une ligne par élément et les mêmes colonnes du début à la fin. Les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     },
     {
       q: 'Que deviennent mes anciens fichiers ?',
@@ -283,7 +283,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Puis-je payer au mois ?',
-          a: [`Oui. En mensuel, c’est ${PRICES.classic.monthly} EUR pour Classic et ${PRICES.premium.monthly} EUR pour Premium. La mise en place coûte ${PRICES.setupMonthly} EUR et l’import de vos tableurs ${PRICES.importMonthly} EUR, une seule fois, en mensuel ; en annuel, les deux sont offerts.`]
+          a: [`Oui. En mensuel, c’est ${PRICES.classic.monthly} EUR pour Classic et ${PRICES.premium.monthly} EUR pour Premium. La mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR et l’import de vos tableurs ${PRICES.importMonthly} EUR, une seule fois, en mensuel ; en annuel, les deux sont offerts.`]
         },
         {
           q: 'Y a-t-il un essai gratuit ?',

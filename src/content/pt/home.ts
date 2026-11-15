@@ -55,30 +55,11 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "O percurso de uma viagem no Traviosoft",
   moments: [
-    {
-      "title": "Chega o pedido",
-      "body": "Todos os pedidos ficam numa só lista, com o tempo que já esperaram e o passo seguinte.",
-      "go": "Ver os pedidos",
-      "job": "sell"
-    },
-    {
-      "title": "O orçamento, com a sua margem",
-      "body": "Cada linha parte do custo do fornecedor, e vê a margem da viagem antes de a enviar.",
-      "go": "Ver os orçamentos",
-      "job": "sell"
-    },
-    {
-      "title": "Cada reserva acompanhada",
-      "body": "Quando o cliente aceita, cada fornecedor recebe o seu pedido e a resposta fica registada na linha. O que falta fazer está nas tarefas.",
-      "go": "Ver as reservas",
-      "job": "book"
-    },
-    {
-      "title": "Pagamentos e faturas a partir do orçamento",
-      "body": "As prestações vêm do orçamento aceite. O cliente paga a partir da ligação no e-mail, e a fatura retoma as mesmas linhas.",
-      "go": "Ver os pagamentos",
-      "job": "get-paid"
-    }
+    {"rec": "Andaluzia · 2 viajantes", "title": "O pedido", "body": "Chega à lista de pedidos, com o tempo que já esperou e o passo seguinte.", "go": "Ver os pedidos", "job": "sell"},
+    {"rec": "Margem {margin} EUR", "title": "O orçamento", "body": "Cada linha parte do custo do fornecedor. Vê a margem da viagem antes de enviar a proposta.", "go": "Ver os orçamentos", "job": "sell"},
+    {"rec": "Hotel em Sevilha: confirmado", "title": "As reservas", "body": "Quando o cliente aceita, cada fornecedor recebe o seu pedido, e a resposta fica registada na linha.", "go": "Ver as reservas", "job": "book"},
+    {"rec": "Adiantamento {deposit} EUR: pago", "title": "Os pagamentos", "body": "As prestações vêm do orçamento aceite. O cliente paga a partir da ligação no e-mail.", "go": "Ver os pagamentos", "job": "get-paid"},
+    {"rec": "Fatura final: {total} EUR", "title": "A fatura", "body": "Retoma as linhas do orçamento aceite.", "go": "Ver as faturas", "job": "get-paid"}
   ],
   sitTitle: "Conforme a sua forma de trabalhar",
   sitLead: "Cada agência tem os seus hábitos. Eis o que o Traviosoft faz nos casos mais comuns.",
@@ -144,9 +125,9 @@ export const home: SiteContent['home'] = {
   afterBody:
     'O pedido, o orçamento, as reservas, os pagamentos e as faturas estão na mesma viagem, e toda a equipa vê o mesmo.',
   priceTitle: 'Preços',
-  priceBody: 'Configuração',
+  priceBody: 'Configuração e acompanhamento',
   priceImport: 'e importação das suas folhas de cálculo',
-  priceFree: 'gratuitas*',
+  priceFree: 'gratuitos*',
   priceFreeNote: '* Com faturação anual. Oferta por tempo limitado.',
   extraUserLine: `Utilizador adicional: ${PRICES.extraUser.classic.yearly} EUR (Classic) ou ${PRICES.extraUser.premium.yearly} EUR (Premium) por mês*`,
   coin1: 'EUR/mês* · Classic',

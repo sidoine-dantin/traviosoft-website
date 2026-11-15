@@ -22,7 +22,9 @@ export default async function HomePage({ params }: Props) {
   const c = getContent(locale);
   const h = c.home;
   const loc = c.visuals.ex.numLocale;
-  const total = new Intl.NumberFormat(loc, { minimumFractionDigits: 2 }).format(2662) + ' EUR';
+  // The sample trip of the hero: cost 2210, margin 452, total 2662, 30% deposit 798.60.
+  const money = (v: number) => new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
+  const total = money(2662) + ' EUR';
 
   return (
     <>
@@ -43,7 +45,9 @@ export default async function HomePage({ params }: Props) {
           <ol className="moments">
             {h.moments.map((m, i) => (
               <li key={i} className="moment" data-reveal>
+                <span className="moment-dot" aria-hidden="true" />
                 <h3>{m.title}</h3>
+                <span className="moment-rec">{m.rec.replace('{margin}', money(452)).replace('{deposit}', money(798.6)).replace('{total}', money(2662))}</span>
                 <p>{m.body}</p>
                 <Link href={`/${m.job}`} className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{m.go}</span><span className="arr" aria-hidden="true">→</span></Link>
               </li>

@@ -78,7 +78,7 @@ export const pricing: SiteContent['pricing'] = {
     {
       title: 'Setup and service',
       rows: [
-        { f: 'Setup of your brand, documents and pricing rules', classic: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Setup of your brand, documents and pricing rules, and training for your team', classic: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Import of your spreadsheets or your current tool’s export**', classic: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` } },
         { f: 'Support by email in Spanish, English and French', classic: true, premium: true },
         { f: 'Hosting in the European Union', classic: true, premium: true },
@@ -86,7 +86,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
+  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup and onboarding (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
   faq: [
     {
       q: 'Which plan do I need?',
@@ -117,8 +117,8 @@ export const pricing: SiteContent['pricing'] = {
       a: ['Yes. You get your data back in standard formats.']
     },
     {
-      q: 'What does setup include?',
-      a: [`We set up your brand, your documents and your margin, VAT and commission rules, and your team’s access. It is free with yearly billing and ${PRICES.setupMonthly} EUR once with monthly billing.`]
+      q: 'What do setup and onboarding include?',
+      a: [`We set up your brand, your documents and your margin, VAT and commission rules, and your team’s access. Then we train your team by video call and stay available by email during the first weeks. Both are free with yearly billing and ${PRICES.setupMonthly} EUR once with monthly billing.`]
     },
     {
       q: 'What does the import include?',
@@ -195,7 +195,7 @@ export const switching: SiteContent['switching'] = {
     {
       when: 'Week 2',
       title: 'Your first real quote',
-      body: 'We set up your margin, VAT and commission rules and your brand. You build a real quote from your own rates. We are on email if you get stuck.'
+      body: 'We set up your margin, VAT and commission rules and your brand, then train your team by video call. You build a real quote from your own rates. We are on email if you get stuck.'
     },
     {
       when: 'Live',
@@ -221,7 +221,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'What does it cost?',
-      a: [`Setup and the import of your spreadsheets are free with yearly billing. With monthly billing, setup is ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one row per item and the same columns all the way down. Word documents, PDFs, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
+      a: [`Setup, onboarding and the import of your spreadsheets are free with yearly billing. With monthly billing, setup and onboarding are ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one row per item and the same columns all the way down. Word documents, PDFs, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
     },
     {
       q: 'What happens to my old files?',
@@ -283,7 +283,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Can I pay monthly?',
-          a: [`Yes. Monthly billing is ${PRICES.classic.monthly} EUR for Classic and ${PRICES.premium.monthly} EUR for Premium. Setup is ${PRICES.setupMonthly} EUR once and the import of your spreadsheets ${PRICES.importMonthly} EUR once with monthly billing, and both are free with yearly billing.`]
+          a: [`Yes. Monthly billing is ${PRICES.classic.monthly} EUR for Classic and ${PRICES.premium.monthly} EUR for Premium. Setup and onboarding are ${PRICES.setupMonthly} EUR once and the import of your spreadsheets ${PRICES.importMonthly} EUR once with monthly billing, and both are free with yearly billing.`]
         },
         {
           q: 'Is there a free trial?',

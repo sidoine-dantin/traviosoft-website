@@ -226,17 +226,21 @@
 @media (max-width: 860px) { .ht { grid-template-columns: minmax(0, 1fr); } .ht-phone { display: none; } .ht-title { font-size: 26px; } .ht-cover { height: 110px; } .ht-sh-head, .ht-body { padding-inline: 18px; } .hero + .moments-band { padding-top: clamp(64px, 11vw, 150px); } }
 
 /* ---------- home: four moments of one trip, text only ---------- */
-.moments { list-style: none; margin: clamp(40px, 6vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); counter-reset: m; }
-.moment { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line); }
-.moment h3 { margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(21px, 2vw, 26px); line-height: 1.2; color: var(--ink); }
-.moment p { margin: 0; font-size: 17px; color: var(--muted); }
+.moments { list-style: none; margin: clamp(40px, 6vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 32px); }
+.moment { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+/* The route of the trip: a dotted line from one step to the next. */
+.moment:not(:last-child)::after { content: ""; position: absolute; left: 9px; top: 8px; width: calc(100% + clamp(20px, 2.4vw, 32px)); border-top: 3px dotted var(--green); opacity: .45; }
+.moment-dot { position: relative; z-index: 1; width: 19px; height: 19px; border-radius: 50%; background: var(--yellow); border: 3px solid var(--green); margin-bottom: 6px; }
+/* What happens to the hero's sample trip at this step. */
+.moment-rec { font-size: 14px; font-weight: 600; color: var(--deep); background: var(--cream-2); border: 1px solid var(--line); border-radius: 8px; padding: 5px 10px; }
+.moment h3 { margin: 0; font-family: var(--display); font-weight: 700; font-size: clamp(20px, 1.8vw, 23px); line-height: 1.2; color: var(--ink); }
+.moment p { margin: 0; font-size: 16px; color: var(--muted); }
 /* Links sit on one line across the four steps, whatever the text length. */
 .moment .arrow { margin-top: auto; padding-top: 6px; }
 /* "See how" links: no underline until hover or press. */
 .moment .arrow::before { transform: scaleX(0); transform-origin: left; }
 .moment .arrow:hover::before, .moment .arrow:focus-visible::before, .moment .arrow:active::before { transform: translateY(4px) scaleX(1); }
-@media (max-width: 980px) { .moments { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; } }
-@media (max-width: 560px) { .moments { grid-template-columns: minmax(0, 1fr); row-gap: 40px; } }
+@media (max-width: 980px) { .moments { grid-template-columns: minmax(0, 1fr); row-gap: 36px; } .moment { padding-left: 40px; } .moment-dot { position: absolute; left: 0; top: 2px; } .moment:not(:last-child)::after { left: 8px; top: 22px; width: 0; height: calc(100% + 36px - 22px); border-top: 0; border-left: 3px dotted var(--green); } }
 
 /* ---------- home: common ways of working ---------- */
 .sits-band { padding-top: 0; }
