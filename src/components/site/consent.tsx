@@ -20,7 +20,9 @@ const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID ||
 const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '999533615909262';
 // Google Ads tag (account 919-449-5984) and the conversion label of its "Demo click" action.
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18573914748';
-const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '2FpoCKbfgrgdEPzk3ZhF'; // "Demo click"
+const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '2FpoCKbfgrgdEPzk3ZhF'; // "Demo click" (secondary: observed, not bid on)
+// "Demo booked" (primary): fired when a booking is confirmed in the booking tool.
+export const GOOGLE_ADS_BOOKED_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_BOOKED_LABEL || 'sYaeCKL217kdEPzk3ZhF';
 const ENABLED = Boolean(LINKEDIN_ID || META_ID || GOOGLE_ADS_ID);
 
 const KEY = 'tv-consent';
@@ -148,11 +150,20 @@ function trackPage(pathname: string) {
   if (page === 'pricing' || page === 'demo') w.fbq?.('track', 'ViewContent', { content_name: page });
 }
 
+/**
+ * Sends one Google Ads conversion (by its label). Does nothing unless the visitor
+ * accepted and the tag is loaded, so it is safe to call from anywhere.
+ */
+export function googleConversion(label: string) {
+  if (!GOOGLE_ADS_ID || !label || !loaded || snapshot() !== 'granted') return;
+  (window as Win).gtag?.('event', 'conversion', { send_to: `${GOOGLE_ADS_ID}/${label}` });
+}
+
 /** "Demo click" conversion on LinkedIn and Google Ads. */
 function demoConversion() {
   const w = window as Win;
   if (LINKEDIN_ID && LINKEDIN_CONVERSION_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_CONVERSION_ID) });
-  if (GOOGLE_ADS_ID && GOOGLE_ADS_DEMO_LABEL) w.gtag?.('event', 'conversion', { send_to: `${GOOGLE_ADS_ID}/${GOOGLE_ADS_DEMO_LABEL}` });
+  googleConversion(GOOGLE_ADS_DEMO_LABEL);
 }
 
 /*
