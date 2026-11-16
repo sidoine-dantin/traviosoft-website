@@ -1,0 +1,82 @@
+'use client';
+
+import { bookedConversion } from './consent';
+
+/*
+ * "Choose a time" button for the demo page. Cal.com's script loads only when the
+ * visitor clicks (a service they asked for), then the booking window opens over
+ * the page. A completed booking (Cal.com "bookingSuccessfulV2") is passed to the
+ * ad tags, which send nothing without consent. Without JavaScript, or if the
+ * script cannot load, the link opens the booking page in a new tab.
+ */
+
+type CalApi = ((...args: unknown[]) => void) & { q?: unknown[] };
+type CalRoot = CalApi & { loaded?: boolean; ns: Record<string, CalApi> };
+type Win = Window & { Cal?: CalRoot };
+
+const ORIGIN = 'https://app.cal.com';
+const NS = 'demo';
+
+function loadCal(fallback: string): CalRoot {
+  const w = window as Win;
+  if (!w.Cal) {
+    const queue = (api: CalApi, args: unknown[]) => api.q!.push(args);
+    const cal = ((...args: unknown[]) => {
+      const root = w.Cal!;
+      if (!root.loaded) {
+        const s = document.createElement('script');
+        s.src = `${ORIGIN}/embed/embed.js`;
+        s.async = true;
+        s.onerror = () => { window.location.href = fallback; };
+        document.head.appendChild(s);
+        root.loaded = true;
+      }
+      if (args[0] === 'init' && typeof args[1] === 'string') {
+        const name = args[1];
+        const api = ((...a: unknown[]) => queue(api, a)) as CalApi;
+        api.q = [];
+        root.ns[name] = root.ns[name] ?? api;
+        queue(root.ns[name], args);
+        queue(root, ['initNamespace', name]);
+        return;
+      }
+      queue(root, args);
+    }) as CalRoot;
+    cal.q = [];
+    cal.ns = {};
+    w.Cal = cal;
+  }
+  return w.Cal;
+}
+
+let ready = false;
+function openBooking(calLink: string) {
+  const cal = loadCal(`https://cal.com/${calLink}`);
+  if (!ready) {
+    ready = true;
+    cal('init', NS, { origin: ORIGIN });
+    cal.ns[NS]('on', { action: 'bookingSuccessfulV2', callback: () => bookedConversion() });
+  }
+  cal.ns[NS]('modal', { calLink, config: { layout: 'month_view' } });
+}
+
+export function BookDemo({ calLink, label }: { calLink: string; label: string }) {
+  return (
+    <a
+      className="btn yellow"
+      href={`https://cal.com/${calLink}`}
+      target="_blank"
+      rel="noopener"
+      onClick={e => {
+        e.preventDefault();
+        try {
+          openBooking(calLink);
+        } catch {
+          window.open(`https://cal.com/${calLink}`, '_blank', 'noopener');
+        }
+      }}
+    >
+      {label}
+    </a>
+  );
+}

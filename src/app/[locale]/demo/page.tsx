@@ -3,9 +3,10 @@ import { setRequestLocale } from 'next-intl/server';
 import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { FaqList, FaqSchema } from '@/components/site/faq';
+import { BookDemo } from '@/components/site/book-demo';
 
-/** Public booking page (Google Calendar appointment schedule). Empty: booking by email. */
-const BOOKING_URL = '';
+/** Cal.com event ("user/event"), opened over the page. Empty: booking by email. */
+const CAL_LINK = '';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -41,12 +42,12 @@ export default async function DemoPage({ params }: Props) {
         <div style={{ display: 'grid', gap: 20 }}>
           <div className="card" style={{ background: 'var(--green)', color: 'var(--cream)', borderColor: 'var(--green)' }}>
             <h2 className="h3">{d.bookTitle}</h2>
-            <p style={{ opacity: 0.9 }}>{BOOKING_URL ? d.bookCalendarBody : d.bookBody}</p>
-            {BOOKING_URL && (
-              <p style={{ marginTop: 16 }}><a className="btn yellow" href={BOOKING_URL} target="_blank" rel="noopener">{d.bookCta}</a></p>
+            <p style={{ opacity: 0.9 }}>{CAL_LINK ? d.bookCalendarBody : d.bookBody}</p>
+            {CAL_LINK && (
+              <p style={{ marginTop: 16 }}><BookDemo calLink={CAL_LINK} label={d.bookCta} /></p>
             )}
-            <p style={{ marginTop: BOOKING_URL ? 16 : 8 }}><span className="lbl" style={{ opacity: 0.75 }}>{BOOKING_URL ? d.emailAltLabel : d.emailLabel}</span><br />
-              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: BOOKING_URL ? 19 : 24, fontWeight: 700, color: 'var(--cream)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
+            <p style={{ marginTop: CAL_LINK ? 16 : 8 }}><span className="lbl" style={{ opacity: 0.75 }}>{CAL_LINK ? d.emailAltLabel : d.emailLabel}</span><br />
+              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: CAL_LINK ? 19 : 24, fontWeight: 700, color: 'var(--cream)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
           </div>
           <div className="card">
             <h2 className="h3" style={{ color: 'var(--green)' }}>{d.afterTitle}</h2>

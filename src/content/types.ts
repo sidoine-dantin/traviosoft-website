@@ -246,7 +246,7 @@ export type SiteContent = {
     agenda: { mins: string; title: string; body: string }[];
     afterTitle: string; after: string[];
     bookTitle: string; bookBody: string; emailLabel: string; email: string;
-    /** shown once BOOKING_URL is set */
+    /** shown once the Cal.com link (CAL_LINK) is set */
     bookCta: string; bookCalendarBody: string; emailAltLabel: string;
     faq: Faq[];
   };

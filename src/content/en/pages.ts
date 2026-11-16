@@ -150,7 +150,7 @@ export const demo: SiteContent['demo'] = {
   bookBody: 'Booking is by email for now. Send your agency name, team size and a few days that suit you, and we reply with a time.',
   emailLabel: 'Write to',
   bookCta: 'Choose a time',
-  bookCalendarBody: 'Pick a 30-minute slot in the calendar.',
+  bookCalendarBody: '30 minutes on Google Meet. The invitation arrives by email.',
   emailAltLabel: 'Or write to',
   email: 'hola@traviosoft.com',
   faq: [

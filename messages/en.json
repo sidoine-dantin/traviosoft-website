@@ -416,7 +416,7 @@
         {
           "heading": "What we collect",
           "body": [
-            "When you ask for a demo, you write to us by email. We receive what you choose to tell us: usually your name, your email address and a few facts about your agency.",
+            "When you ask for a demo, you choose a time in our booking window (Cal.com) or write to us by email. We receive what you enter or choose to tell us: usually your name, your email address, the name of your agency and a few facts about it.",
             "Like most websites, our hosting provider records basic technical data such as your IP address and browser type in its server logs. If you accept advertising cookies, LinkedIn, Meta and Google also record your visit to this site (see \"Advertising and audiences\")."
           ]
         },
@@ -430,13 +430,13 @@
         {
           "heading": "Third-party services",
           "body": [
-            "The website is delivered through Cloudflare's hosting and content network. Our ads run on LinkedIn (LinkedIn Ireland Unlimited Company), on Facebook and Instagram (Meta Platforms Ireland Limited), and on Google Search, YouTube, Gmail and partner websites (Google Ireland Limited). For the advertising cookies, LinkedIn, Meta and Google act as joint controllers with us; their own privacy policies apply to what they do with the data. Some of these providers may transfer data to the United States under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
+            "The website is delivered through Cloudflare's hosting and content network. Demo bookings are handled by Cal.com, Inc., which loads only when you open the booking window, receives what you enter there and adds the call to our calendar. Our ads run on LinkedIn (LinkedIn Ireland Unlimited Company), on Facebook and Instagram (Meta Platforms Ireland Limited), and on Google Search, YouTube, Gmail and partner websites (Google Ireland Limited). For the advertising cookies, LinkedIn, Meta and Google act as joint controllers with us; their own privacy policies apply to what they do with the data. Some of these providers may transfer data to the United States under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
           ]
         },
         {
           "heading": "Advertising and audiences",
           "body": [
-            "If you accept advertising cookies, the LinkedIn Insight Tag, the Meta Pixel and the Google tag record that your browser visited this site, which pages you saw and whether you opened the demo page or clicked to contact us. We use this to measure our ads and to show them again to people who visited the site. LinkedIn, Meta and Google give us only totals and audience sizes, never names.",
+            "If you accept advertising cookies, the LinkedIn Insight Tag, the Meta Pixel and the Google tag record that your browser visited this site, which pages you saw and whether you opened the demo page, clicked to contact us or booked a demo. We use this to measure our ads and to show them again to people who visited the site. LinkedIn, Meta and Google give us only totals and audience sizes, never names.",
             "We may also upload a list of business contact details (company name, website, and the professional email address of an agency's owner or manager) to LinkedIn and Meta so that our ads reach those travel businesses. The details are encrypted (hashed) before the upload, are used only to match accounts, and are deleted by the platforms after matching. We do this on the basis of our legitimate interest in presenting Traviosoft to travel professionals.",
             "If you contact us or book a demo, we may also add your professional email address to these lists, so that our ads keep reaching you while you look at Traviosoft. It is hashed in the same way before the upload. We do this on the basis of our legitimate interest in staying in contact with people who reached out to us, and you can object at any time as described below.",
             "You can object at any time: write to sidoine@traviosoft.com and we remove you from our lists, change your choice with \"Cookie settings\" at the bottom of every page, or adjust your ad settings in your LinkedIn, Meta and Google accounts."

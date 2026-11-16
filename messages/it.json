@@ -416,7 +416,7 @@
         {
           "heading": "Cosa raccogliamo",
           "body": [
-            "Quando chiedi una demo, ci scrivi via email. Riceviamo ciò che scegli di dirci: di solito il tuo nome, il tuo indirizzo email e alcune informazioni sulla tua agenzia.",
+            "Quando chiedi una demo, scegli un orario nella nostra finestra di prenotazione (Cal.com) oppure ci scrivi via email. Riceviamo ciò che inserisci o scegli di dirci: di solito il tuo nome, il tuo indirizzo email, il nome della tua agenzia e alcune informazioni su di essa.",
             "Come la maggior parte dei siti, il nostro fornitore di hosting registra nei log del server alcuni dati tecnici di base, come l’indirizzo IP e il tipo di browser. Se accetti i cookie pubblicitari, anche LinkedIn, Meta e Google registrano la tua visita a questo sito (vedi «Pubblicità e pubblici»)."
           ]
         },
@@ -430,13 +430,13 @@
         {
           "heading": "Servizi di terzi",
           "body": [
-            "Il sito è distribuito tramite la rete di hosting e contenuti di Cloudflare. I nostri annunci vengono pubblicati su LinkedIn (LinkedIn Ireland Unlimited Company), su Facebook e Instagram (Meta Platforms Ireland Limited) e sulla Ricerca Google, YouTube, Gmail e i siti partner (Google Ireland Limited). Per i cookie pubblicitari, LinkedIn, Meta e Google agiscono come contitolari del trattamento insieme a noi; per ciò che fanno con i dati si applicano le loro informative sulla privacy. Alcuni di questi fornitori possono trasferire dati negli Stati Uniti nell’ambito del Data Privacy Framework UE-USA o delle clausole contrattuali tipo della Commissione europea."
+            "Il sito è distribuito tramite la rete di hosting e contenuti di Cloudflare. Le prenotazioni delle demo passano da Cal.com, Inc., che si carica solo quando apri la finestra di prenotazione, riceve ciò che vi inserisci e aggiunge la chiamata al nostro calendario. I nostri annunci vengono pubblicati su LinkedIn (LinkedIn Ireland Unlimited Company), su Facebook e Instagram (Meta Platforms Ireland Limited) e sulla Ricerca Google, YouTube, Gmail e i siti partner (Google Ireland Limited). Per i cookie pubblicitari, LinkedIn, Meta e Google agiscono come contitolari del trattamento insieme a noi; per ciò che fanno con i dati si applicano le loro informative sulla privacy. Alcuni di questi fornitori possono trasferire dati negli Stati Uniti nell’ambito del Data Privacy Framework UE-USA o delle clausole contrattuali tipo della Commissione europea."
           ]
         },
         {
           "heading": "Pubblicità e pubblici",
           "body": [
-            "Se accetti i cookie pubblicitari, il LinkedIn Insight Tag, il Meta Pixel e il tag Google registrano che il tuo browser ha visitato questo sito, quali pagine hai visto e se hai aperto la pagina della demo o cliccato per contattarci. Usiamo queste informazioni per misurare i nostri annunci e per mostrarli di nuovo a chi ha visitato il sito. LinkedIn, Meta e Google ci forniscono solo totali e dimensioni dei pubblici, mai nomi.",
+            "Se accetti i cookie pubblicitari, il LinkedIn Insight Tag, il Meta Pixel e il tag Google registrano che il tuo browser ha visitato questo sito, quali pagine hai visto e se hai aperto la pagina della demo, cliccato per contattarci o prenotato una demo. Usiamo queste informazioni per misurare i nostri annunci e per mostrarli di nuovo a chi ha visitato il sito. LinkedIn, Meta e Google ci forniscono solo totali e dimensioni dei pubblici, mai nomi.",
             "Possiamo anche caricare su LinkedIn e Meta un elenco di dati di contatto aziendali (ragione sociale, sito web e indirizzo email professionale del titolare o del responsabile di un’agenzia) affinché i nostri annunci raggiungano queste aziende del turismo. I dati vengono cifrati (hash) prima del caricamento, sono usati solo per trovare corrispondenze con gli account e vengono cancellati dalle piattaforme dopo la corrispondenza. Lo facciamo sulla base del nostro legittimo interesse a presentare Traviosoft ai professionisti del turismo.",
             "Se ci contatti o prenoti una demo, possiamo aggiungere anche il tuo indirizzo email professionale a questi elenchi, perché i nostri annunci continuino a raggiungerti mentre valuti Traviosoft. Viene cifrato (hash) allo stesso modo prima del caricamento. Lo facciamo sulla base del nostro legittimo interesse a restare in contatto con chi ci ha scritto, e puoi opporti in qualsiasi momento come descritto sotto.",
             "Puoi opporti in qualsiasi momento: scrivi a sidoine@traviosoft.com e ti rimuoviamo dai nostri elenchi, cambia la tua scelta con «Gestisci i cookie» in fondo a ogni pagina, oppure modifica le impostazioni degli annunci nei tuoi account LinkedIn, Meta e Google."

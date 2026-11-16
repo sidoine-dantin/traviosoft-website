@@ -23,6 +23,8 @@ const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18573914748';
 const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '2FpoCKbfgrgdEPzk3ZhF'; // "Demo click" (secondary: observed, not bid on)
 // "Demo booked" (primary): fired when a booking is confirmed in the booking tool.
 export const GOOGLE_ADS_BOOKED_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_BOOKED_LABEL || 'sYaeCKL217kdEPzk3ZhF';
+/** LinkedIn conversion for a booked demo; empty until it exists in Campaign Manager. */
+const LINKEDIN_BOOKED_ID = process.env.NEXT_PUBLIC_LINKEDIN_BOOKED_CONVERSION_ID || '';
 const ENABLED = Boolean(LINKEDIN_ID || META_ID || GOOGLE_ADS_ID);
 
 const KEY = 'tv-consent';
@@ -166,10 +168,23 @@ function demoConversion() {
   googleConversion(GOOGLE_ADS_DEMO_LABEL);
 }
 
+/**
+ * A demo was booked in the Cal.com window: the main conversion on Google Ads
+ * ("Demo booked"), Meta (Schedule) and LinkedIn. Nothing is sent without consent.
+ */
+export function bookedConversion() {
+  if (snapshot() !== 'granted' || !loaded) return;
+  const w = window as Win;
+  googleConversion(GOOGLE_ADS_BOOKED_LABEL);
+  if (META_ID) w.fbq?.('track', 'Schedule');
+  if (LINKEDIN_ID && LINKEDIN_BOOKED_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_BOOKED_ID) });
+}
+
 /*
  * Interest signals for retargeting: a click on a "Book a demo" link (any link to
- * the demo page) is a Meta Schedule, a click on the demo email address is a Meta
- * Contact, and both count as a LinkedIn and a Google Ads conversion.
+ * the demo page) is a Meta DemoClick, a click on the demo email address is a Meta
+ * Contact, and both count as a LinkedIn and a Google Ads "Demo click" (secondary).
+ * Meta Schedule is kept for real bookings (bookedConversion).
  */
 function trackClick(target: EventTarget | null) {
   const a = (target as Element | null)?.closest?.('a[href]');
@@ -189,7 +204,7 @@ function trackClick(target: EventTarget | null) {
     return;
   }
   if (path.split('/').filter(Boolean).pop() === 'demo') {
-    if (META_ID) w.fbq?.('track', 'Schedule');
+    if (META_ID) w.fbq?.('trackCustom', 'DemoClick');
     demoConversion();
   }
 }
