@@ -5,7 +5,8 @@ import { bookedConversion } from './consent';
 /*
  * "Choose a time" button for the demo page. Cal.com's script loads only when the
  * visitor clicks (a service they asked for), then the booking window opens over
- * the page. A completed booking (Cal.com "bookingSuccessfulV2") is passed to the
+ * the page. A completed booking (Cal.com "bookingSuccessfulV2", or the older
+ * "bookingSuccessful") is passed to the
  * ad tags, which send nothing without consent. Without JavaScript, or if the
  * script cannot load, the link opens the booking page in a new tab.
  */
@@ -55,7 +56,17 @@ function openBooking(calLink: string) {
   if (!ready) {
     ready = true;
     cal('init', NS, { origin: ORIGIN });
-    cal.ns[NS]('on', { action: 'bookingSuccessfulV2', callback: () => bookedConversion() });
+    // V2 replaces the older event; both are heard and one booking counts once.
+    let last = '';
+    const onBooked = (e: { detail?: { data?: { uid?: string; booking?: { uid?: string } } } }) => {
+      const d = e?.detail?.data;
+      const uid = d?.uid ?? d?.booking?.uid ?? String(Math.floor(Date.now() / 10000));
+      if (uid === last) return;
+      last = uid;
+      bookedConversion();
+    };
+    cal.ns[NS]('on', { action: 'bookingSuccessfulV2', callback: onBooked });
+    cal.ns[NS]('on', { action: 'bookingSuccessful', callback: onBooked });
   }
   cal.ns[NS]('modal', { calLink, config: { layout: 'month_view' } });
 }

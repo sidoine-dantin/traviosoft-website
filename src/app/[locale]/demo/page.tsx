@@ -6,7 +6,7 @@ import { FaqList, FaqSchema } from '@/components/site/faq';
 import { BookDemo } from '@/components/site/book-demo';
 
 /** Cal.com event ("user/event"), opened over the page. Empty: booking by email. */
-const CAL_LINK = '';
+const CAL_LINK = 'traviosoft/demo';
 
 type Props = { params: Promise<{ locale: string }> };
 
