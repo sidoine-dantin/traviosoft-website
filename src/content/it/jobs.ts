@@ -20,7 +20,7 @@ const sell: JobPage = {
       lead: 'Ogni richiesta in un’unica lista con il passo successivo, che arrivi via email, telefono o WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'Un’unica lista di richieste', body: ['Ogni richiesta ha uno stato: nuova, preventivo inviato o in attesa di risposta.'] },
+        { title: 'Stato di ogni richiesta', body: ['Ogni richiesta ha uno stato: nuova, preventivo inviato o in attesa di risposta.'] },
         { title: 'Una richiesta diventa un progetto', body: ['Quando una richiesta si fa concreta, diventa un progetto. Il cliente, le date, i viaggiatori e le tue note restano insieme per tutto il viaggio.'] },
         { title: 'Una scheda per cliente', body: ['Scrivi un nome o un’email che hai già e Traviosoft ti mostra il cliente esistente: ogni cliente ha un solo storico.'] },
         { title: 'Promemoria', body: ['Metti una data su una richiesta. Torna sulla tua dashboard il giorno giusto.'] },
@@ -48,7 +48,7 @@ const sell: JobPage = {
       lead: 'Imposta una volta le tue regole di prezzo, e ogni riga del preventivo le applica.',
       visual: 'margin',
       features: [
-        { title: 'Margine, IVA e commissioni', body: ['Una procedura di prezzo trasforma le tue tariffe nette in prezzi di vendita: il tuo margine, l’IVA corretta e la commissione quando un’agenzia o un partner vende il viaggio.'] },
+        { title: 'Procedure di prezzo', body: ['Una procedura di prezzo trasforma le tue tariffe nette in prezzi di vendita: il tuo margine, l’IVA corretta e la commissione quando un’agenzia o un partner vende il viaggio.'] },
         { title: 'Prezzi a persona', body: ['Prezzo per adulto o per bambino. Il cliente vede un prezzo chiaro a persona e un totale.'] },
         { title: 'Nomi per il cliente', body: ['Il tuo team vede il nome interno di ogni servizio, il cliente vede il nome pensato per lui.'] },
         { title: 'Incluso e non incluso', body: ['Cosa comprende il prezzo e cosa no, elencato nel preventivo.'] },
@@ -98,7 +98,7 @@ const sell: JobPage = {
     { q: 'Posso importare il mio catalogo attuale?', a: ['Sì. Durante l’avvio importiamo i tuoi prodotti, prezzi e fornitori dai tuoi fogli di calcolo. Avvio e importazione sono gratuiti con la fatturazione annuale.'] },
     { q: 'Più fornitori possono vendere lo stesso hotel o servizio?', a: ['Sì. Un prodotto può avere più fornitori, ognuno con le sue tariffe. Scegli il fornitore per ogni viaggio.'] },
     { q: 'Cosa vede il mio cliente?', a: ['Un preventivo pulito con i nomi pensati per lui, prezzi a persona, cosa è incluso e cosa no, nella sua lingua e con il tuo marchio. Le tue tariffe nette e i tuoi margini restano riservati al tuo team.'] },
-    { q: 'Devo usare il catalogo per ogni preventivo?', a: ['No. Un preventivo può combinare righe del catalogo e righe libere.'] }
+    { q: 'Devo usare il catalogo per ogni preventivo?', a: ['Un preventivo può combinare righe del catalogo e righe libere.'] }
   ]
 };
 
@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Fatture di acconto e finali', body: ['Create dal viaggio con un clic, con i dati del cliente e gli importi giusti.'] },
         { title: 'Note di credito', body: ['Un annullamento o una modifica diventa una nota di credito collegata alla fattura originale.'] },
         { title: 'Numerazione per società', body: ['Gestisci due società dallo stesso posto, ognuna con la sua numerazione delle fatture.'] },
-        { title: 'Le regole fiscali del tuo paese', body: ['I regimi IVA speciali per le agenzie di viaggio si attivano per paese nelle impostazioni, e la dicitura corretta compare sulle tue fatture.'] },
+        { title: 'L’IVA delle agenzie di viaggio in Spagna', body: ['Il regime IVA spagnolo per le agenzie di viaggio (REAV) è integrato, e la sua dicitura compare sulle tue fatture. Negli altri paesi, le fatture passano dal tuo software di fatturazione.'] },
         { title: 'Pronto per il commercialista', body: ['Un riepilogo Excel o uno zip con tutti i PDF a fine mese, in due clic.'] },
         { title: 'Esportazione contabile', body: ['Vendite, acquisti e pagamenti come registrazioni contabili, pronti per il tuo software di contabilità.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Quali sistemi di pagamento funzionano?', a: ['Aggiungi il link di pagamento del servizio che usi già. Il cliente paga lì, e tu registri il pagamento sul viaggio.'] },
     { q: 'Il mio commercialista può avere i file?', a: ['Sì. Esporta un riepilogo Excel o uno zip con tutti i PDF delle fatture per qualsiasi periodo.'] },
-    { q: 'Segue le regole del mio paese?', a: ['La numerazione delle fatture per società e le note di credito funzionano ovunque. I regimi specifici di un paese si attivano nelle impostazioni. Per il tuo paese, chiedicelo durante la demo.'] }
+    { q: 'Segue le regole del mio paese?', a: ['La numerazione delle fatture per società e le note di credito funzionano ovunque. Il regime IVA spagnolo per le agenzie di viaggio è integrato. Negli altri paesi, le fatture passano dal tuo software di fatturazione. Per il tuo paese, chiedicelo durante la demo.'] }
   ]
 };
 
@@ -321,10 +321,10 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Impostazioni del paese',
       title: 'Regole fiscali del paese',
-      lead: 'Regimi fiscali e fatturazione elettronica sono impostazioni, attivate per i paesi che li richiedono.',
+      lead: 'Regimi fiscali e fatturazione elettronica sono impostazioni. La Spagna è integrata.',
       visual: 'country',
       features: [
-        { title: 'Regimi IVA delle agenzie di viaggio', body: ['Dove un paese prevede un regime IVA speciale per le agenzie di viaggio, la dicitura corretta compare sulle tue fatture.'] },
+        { title: 'Regimi IVA delle agenzie di viaggio', body: ['Per la Spagna, il regime IVA delle agenzie di viaggio (REAV) e la sua dicitura sulle tue fatture sono integrati.'] },
         { title: 'Fatturazione elettronica', body: ['A seconda del paese, le fatture partono da Traviosoft o dal tuo software di fatturazione.'] }
       ]
     },

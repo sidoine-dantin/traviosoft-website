@@ -86,7 +86,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup and onboarding (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
+  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup and onboarding (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Seasonal rates and other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
   faq: [
     {
       q: 'Which plan do I need?',
@@ -122,7 +122,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'What does the import include?',
-      a: [`Your catalogue with its prices, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
+      a: [`Your catalogue with one price per product, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Seasonal rates, Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
     }
   ]
 };
@@ -146,17 +146,17 @@ export const demo: SiteContent['demo'] = {
     'The price for your team, in writing',
     'A follow-up call if you ask for one'
   ],
-  bookTitle: 'Ask for a time',
+  bookTitle: 'Pick a time for your demo',
   bookBody: 'Booking is by email for now. Send your agency name, team size and a few days that suit you, and we reply with a time.',
   emailLabel: 'Write to',
-  bookCta: 'Choose a time',
+  bookCta: 'Open the calendar',
   bookCalendarBody: '30 minutes on Google Meet. The invitation arrives by email.',
   emailAltLabel: 'Or write to',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: 'Is there a free trial?',
-      a: ['No. There is a 30-minute demo.']
+      a: ['There is a 30-minute demo on a sample trip.']
     },
     {
       q: 'Who runs the demo?',
@@ -164,11 +164,11 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: 'Do I need to prepare anything?',
-      a: ['No.']
+      a: ['Nothing to prepare.']
     },
     {
       q: 'Will you ask for my data?',
-      a: ['No. The demo uses a sample trip with invented data.']
+      a: ['The demo uses a sample trip with invented data.']
     }
   ]
 };
@@ -204,8 +204,8 @@ export const switching: SiteContent['switching'] = {
   ],
   importTitle: 'What comes over',
   importParts: [
-    { title: 'Included in the import price', body: 'Your catalogue with its rates, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
-    { title: 'On quote', body: 'Trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
+    { title: 'Included in the import price', body: 'Your catalogue with one price per product, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
+    { title: 'On quote', body: 'Seasonal rates, trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
   ],
   seasonTitle: 'Will it disrupt my season?',
   seasonBody: [
@@ -220,7 +220,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'What does it cost?',
-      a: [`Setup, onboarding and the import of your spreadsheets are free with yearly billing. With monthly billing, setup and onboarding are ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one row per item and the same columns all the way down. Word documents, PDFs, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
+      a: [`Setup, onboarding and the import of your spreadsheets are free with yearly billing. With monthly billing, setup and onboarding are ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one price per product, one row per item and the same columns all the way down. Seasonal rates, Word documents, PDFs, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
     },
     {
       q: 'What happens to my old files?',
@@ -286,7 +286,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Is there a free trial?',
-          a: ['No. There is a 30-minute demo.']
+          a: ['There is a 30-minute demo on a sample trip.']
         }
       ]
     },
@@ -320,7 +320,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Does it follow my country’s rules?',
-          a: ['Invoice numbering per company and credit notes work everywhere. Tax schemes and e-invoicing are switched on per country in the settings. For other countries, ask us what is covered.']
+          a: ['Invoice numbering per company and credit notes work everywhere. The Spanish VAT scheme for travel agencies is built in. In other countries, invoices go through your invoicing software. For your country, ask us during the demo.']
         }
       ]
     }
@@ -338,7 +338,7 @@ export const about: SiteContent['about'] = {
       title: 'Where it comes from',
       body: [
         'The agency ran on Excel for the rates, Word for the quotes and WhatsApp for everything else. In a busy week, every deposit and every hotel confirmation depended on someone remembering it.',
-        'The first version was built there, on the agency’s own trips.'
+        'The first version was built there, on the agency’s own trips. The agency still runs on it every day.'
       ]
     },
     {
@@ -361,8 +361,10 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origin', v: 'A tailor-made agency in Barcelona' },
+    { k: 'Origin', v: 'Built in Barcelona, published from France' },
+    { k: 'In use', v: 'Every day at a tailor-made agency in Barcelona' },
     { k: 'For', v: 'Tailor-made agencies and DMCs' },
+    { k: 'Documents', v: 'In Spanish, Catalan, English, French and Italian' },
     { k: 'Support', v: 'By email, in Spanish, English and French' },
     { k: 'Data', v: 'A private space per agency, hosted in the EU' }
   ]

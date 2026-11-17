@@ -66,10 +66,13 @@ export default function Header({ locale, labels, jobs }: Props) {
     };
   }, [mobile]);
 
-  useEffect(() => {
+  // A new page closes the menus (adjusting state during render, as React recommends, not in an effect).
+  const [shownPath, setShownPath] = useState(pathname);
+  if (pathname !== shownPath) {
+    setShownPath(pathname);
     setOpen(false);
     setMobile(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!open) return;

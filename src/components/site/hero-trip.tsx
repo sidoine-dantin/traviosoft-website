@@ -1,4 +1,5 @@
 import type { ProposalText } from '@/content/types';
+import { HeroCount } from './hero-count';
 
 /** Photos (Unsplash licence): Plaza de España by Tânia Mousinho, Giralda by Clara Brassard, Mosque-Cathedral of Córdoba by Jordi Vich Navarro, Puente Nuevo in Ronda by tommao wang. */
 const DAY_PHOTOS = ['/home/giralda.webp', '/home/cordoba.webp', '/home/ronda.webp'];
@@ -9,7 +10,7 @@ const DAY_PHOTOS = ['/home/giralda.webp', '/home/cordoba.webp', '/home/ronda.web
  * (proposal: agency, cover photo, days, total to pay incl. VAT; itinerary: kind of service,
  * meeting point, open in Maps, your guide, no prices).
  */
-export function HeroTrip({ p, total }: { p: ProposalText; total: string }) {
+export function HeroTrip({ p, amount, locale }: { p: ProposalText; amount: number; locale: string }) {
   return (
     <div className="ht" role="img" aria-label={`${p.kind}: ${p.trip}`}>
       <div className="ht-sheet" aria-hidden="true">
@@ -20,10 +21,10 @@ export function HeroTrip({ p, total }: { p: ProposalText; total: string }) {
           <p className="ht-meta">{p.meta.map(m => <span key={m}>{m}</span>)}</p>
           <div className="ht-days">
             {p.days.map((d, i) => (
-              <div key={d.t} className="ht-day"><img className="ht-ph" src={DAY_PHOTOS[i]} alt="" width={240} height={240} loading="lazy" decoding="async" /><div><b>{d.t}</b><p>{d.s}</p></div></div>
+              <div key={d.t} className="ht-day" style={{ '--i': i } as React.CSSProperties}><img className="ht-ph" src={DAY_PHOTOS[i]} alt="" width={240} height={240} loading="lazy" decoding="async" /><div><b>{d.t}</b><p>{d.s}</p></div></div>
             ))}
           </div>
-          <p className="ht-total"><span>{p.total} <small>· {p.vatIncl}</small></span><strong>{total}</strong></p>
+          <p className="ht-total"><span>{p.total} <small>· {p.vatIncl}</small></span><HeroCount value={amount} locale={locale} currency="EUR" /></p>
         </div>
       </div>
       <div className="ht-phone" aria-hidden="true">
@@ -32,7 +33,7 @@ export function HeroTrip({ p, total }: { p: ProposalText; total: string }) {
           <div className="ht-ph-top"><small>{p.agency}</small><b>{p.trip}</b></div>
           <div className="ht-stops">
             {p.stops.map((s, i) => (
-              <div key={i}>
+              <div key={i} className="ht-stp" style={{ '--i': i } as React.CSSProperties}>
                 {s.day && <p className="ht-dayl">{s.day}</p>}
                 <div className="ht-stop"><small>{s.k}</small><b>{s.t}</b><span>{s.s}</span>{s.link && <em>{s.link}</em>}</div>
               </div>

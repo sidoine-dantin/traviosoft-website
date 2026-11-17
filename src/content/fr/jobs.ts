@@ -20,7 +20,7 @@ const sell: JobPage = {
       lead: 'Chaque demande dans une liste avec sa prochaine étape, qu’elle arrive par e-mail, par téléphone ou par WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'Une seule liste de demandes', body: ['Chaque demande a un statut : nouvelle, devis envoyé ou en attente de réponse.'] },
+        { title: 'Statut de chaque demande', body: ['Chaque demande a un statut : nouvelle, devis envoyé ou en attente de réponse.'] },
         { title: 'Une demande devient un projet', body: ['Quand une demande devient sérieuse, elle devient un projet. Le client, les dates, les voyageurs et vos notes restent ensemble pendant tout le voyage.'] },
         { title: 'Une fiche par client', body: ['Saisissez un nom ou une adresse e-mail que vous avez déjà : Traviosoft vous montre le client existant, et chaque client garde un seul historique.'] },
         { title: 'Rappels', body: ['Mettez une date sur une demande. Elle revient sur votre tableau de bord le bon jour.'] },
@@ -48,7 +48,7 @@ const sell: JobPage = {
       lead: 'Définissez vos règles de prix une fois, et chaque ligne du devis les applique.',
       visual: 'margin',
       features: [
-        { title: 'Marge, TVA et commission', body: ['Une procédure de prix transforme vos tarifs nets en prix de vente : votre marge, la bonne TVA et la commission quand une agence ou un partenaire vend le voyage.'] },
+        { title: 'Procédures de prix', body: ['Une procédure de prix transforme vos tarifs nets en prix de vente : votre marge, la bonne TVA et la commission quand une agence ou un partenaire vend le voyage.'] },
         { title: 'Prix par personne', body: ['Prix par adulte ou par enfant. Le client voit un prix clair par personne et un total.'] },
         { title: 'Noms côté client', body: ['Votre équipe voit le nom interne de chaque prestation, le client voit son nom destiné aux clients.'] },
         { title: 'Inclus et non inclus', body: ['Ce que le prix couvre et ce qu’il ne couvre pas, listé sur le devis.'] },
@@ -98,7 +98,7 @@ const sell: JobPage = {
     { q: 'Puis-je importer mon catalogue actuel ?', a: ['Oui. Nous importons vos produits, prix et prestataires depuis vos tableurs pendant la mise en place. La mise en place et l’import sont gratuits avec la facturation annuelle.'] },
     { q: 'Plusieurs prestataires peuvent-ils vendre le même hôtel ou le même service ?', a: ['Oui. Un produit peut avoir plusieurs prestataires, chacun avec ses tarifs. Vous choisissez le prestataire par voyage.'] },
     { q: 'Que voit mon client ?', a: ['Un devis net, avec des noms côté client, des prix par personne, ce qui est inclus et non inclus, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe.'] },
-    { q: 'Dois-je utiliser le catalogue pour chaque devis ?', a: ['Non. Un devis peut mêler lignes du catalogue et lignes ponctuelles.'] }
+    { q: 'Dois-je utiliser le catalogue pour chaque devis ?', a: ['Un devis peut mêler lignes du catalogue et lignes ponctuelles.'] }
   ]
 };
 
@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Factures d’acompte et finale', body: ['Faites depuis le voyage en un clic, avec les coordonnées du client et les bons montants.'] },
         { title: 'Avoirs', body: ['Une annulation ou une modification devient un avoir lié à la facture d’origine.'] },
         { title: 'Numérotation par société', body: ['Gérez deux sociétés depuis un seul endroit, chacune avec sa propre numérotation de factures.'] },
-        { title: 'Les règles fiscales de votre pays', body: ['Les régimes spéciaux de TVA pour les agences de voyages s’activent par pays dans les réglages, et la bonne mention apparaît sur vos factures.'] },
+        { title: 'La TVA des agences de voyages en Espagne', body: ['Le régime espagnol de TVA des agences de voyages (REAV) est intégré, et sa mention apparaît sur vos factures. Dans les autres pays, les factures passent par votre logiciel de facturation.'] },
         { title: 'Prêt pour votre comptable', body: ['Un récapitulatif Excel ou un zip de tous les PDF en fin de mois, en deux clics.'] },
         { title: 'Export comptable', body: ['Vos ventes, achats et paiements sous forme d’écritures, prêts pour votre logiciel de comptabilité.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Quels prestataires de paiement fonctionnent ?', a: ['Vous ajoutez le lien de paiement du prestataire que vous utilisez déjà. Le client paie là-bas, et vous enregistrez le paiement sur le voyage.'] },
     { q: 'Mon comptable peut-il récupérer les fichiers ?', a: ['Oui. Exportez un récapitulatif Excel ou un zip de toutes les factures PDF pour n’importe quelle période.'] },
-    { q: 'Suit-il les règles de mon pays ?', a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Les régimes propres à chaque pays s’activent dans les réglages. Pour votre pays, demandez-nous pendant la démo.'] }
+    { q: 'Suit-il les règles de mon pays ?', a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Le régime espagnol de TVA des agences de voyages est intégré. Dans les autres pays, les factures passent par votre logiciel de facturation. Pour votre pays, demandez-nous pendant la démo.'] }
   ]
 };
 
@@ -321,10 +321,10 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Réglages par pays',
       title: 'Règles fiscales par pays',
-      lead: 'Les régimes fiscaux et la facturation électronique sont des réglages, activés pour les pays qui en ont besoin.',
+      lead: 'Les régimes fiscaux et la facturation électronique sont des réglages. L’Espagne est intégrée.',
       visual: 'country',
       features: [
-        { title: 'Régimes de TVA des agences de voyages', body: ['Quand un pays a un régime spécial de TVA pour les agences de voyages, les bonnes mentions apparaissent sur vos factures.'] },
+        { title: 'Régimes de TVA des agences de voyages', body: ['Pour l’Espagne, le régime de TVA des agences de voyages (REAV) et sa mention sur vos factures sont intégrés.'] },
         { title: 'Facturation électronique', body: ['Selon le pays, les factures sont transmises depuis Traviosoft ou depuis votre logiciel de facturation.'] }
       ]
     },

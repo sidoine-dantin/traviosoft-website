@@ -88,7 +88,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Oferta por tempo limitado, só com faturação anual. Com faturação mensal, a configuração e o acompanhamento (${PRICES.setupMonthly} EUR) e a importação (${PRICES.importMonthly} EUR) pagam-se uma vez no início. Outros ficheiros (Word, PDF, emails, viagens em curso) importam-se mediante orçamento.`, '** Para dados limpos e bem organizados.'],
+  compareNote: [`* Oferta por tempo limitado, só com faturação anual. Com faturação mensal, a configuração e o acompanhamento (${PRICES.setupMonthly} EUR) e a importação (${PRICES.importMonthly} EUR) pagam-se uma vez no início. Tarifas por época e outros ficheiros (Word, PDF, emails, viagens em curso) importam-se mediante orçamento.`, '** Para dados limpos e bem organizados.'],
   faq: [
     {
       q: 'De que plano preciso?',
@@ -100,7 +100,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Os preços incluem IVA?',
-      a: ['Não. O IVA é acrescentado na fatura de acordo com o seu país e a forma jurídica da sua empresa.']
+      a: ['Os preços são sem IVA. O IVA é acrescentado na fatura de acordo com o seu país e a forma jurídica da sua empresa.']
     },
     {
       q: 'E se adicionar um utilizador?',
@@ -124,7 +124,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'O que inclui a importação?',
-      a: [`O seu catálogo com os preços, os seus clientes e os seus fornecedores, a partir de folhas de cálculo ou de uma exportação da sua ferramenta atual, com uma linha por elemento e as mesmas colunas do início ao fim. É gratuita com faturação anual e custa ${PRICES.importMonthly} EUR uma única vez com faturação mensal.`, 'Documentos Word, PDF, emails, viagens em curso e listas que precisam de ser organizadas primeiro têm preço mediante orçamento, depois de vermos uma amostra.']
+      a: [`O seu catálogo com um preço por produto, os seus clientes e os seus fornecedores, a partir de folhas de cálculo ou de uma exportação da sua ferramenta atual, com uma linha por elemento e as mesmas colunas do início ao fim. É gratuita com faturação anual e custa ${PRICES.importMonthly} EUR uma única vez com faturação mensal.`, 'Tarifas por época, documentos Word, PDF, emails, viagens em curso e listas que precisam de ser organizadas primeiro têm preço mediante orçamento, depois de vermos uma amostra.']
     }
   ]
 };
@@ -148,17 +148,17 @@ export const demo: SiteContent['demo'] = {
     'O preço para a sua equipa, por escrito',
     'Uma segunda chamada, se a pedir'
   ],
-  bookTitle: 'Peça uma hora',
+  bookTitle: 'Escolha uma hora para a sua demonstração',
   bookBody: 'Por agora a marcação é feita por email. Envie o nome da sua agência, a dimensão da equipa e alguns dias que lhe deem jeito, e respondemos com uma hora.',
   emailLabel: 'Escreva para',
-  bookCta: 'Escolher uma hora',
+  bookCta: 'Abrir o calendário',
   bookCalendarBody: '30 minutos no Google Meet. O convite chega por email.',
   emailAltLabel: 'Ou escreva para',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: 'Há um período de experiência gratuito?',
-      a: ['Não. Há uma demonstração de 30 minutos.']
+      a: ['Há uma demonstração de 30 minutos sobre uma viagem de exemplo.']
     },
     {
       q: 'Quem faz a demonstração?',
@@ -166,11 +166,11 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: 'Preciso de preparar alguma coisa?',
-      a: ['Não.']
+      a: ['Nada a preparar.']
     },
     {
       q: 'Vão pedir-me os meus dados?',
-      a: ['Não. A demonstração usa uma viagem de exemplo com dados inventados.']
+      a: ['A demonstração usa uma viagem de exemplo com dados inventados.']
     }
   ]
 };
@@ -206,8 +206,8 @@ export const switching: SiteContent['switching'] = {
   ],
   importTitle: 'O que é importado',
   importParts: [
-    { title: 'Incluído no preço da importação', body: 'O seu catálogo com as tarifas, os seus clientes, os seus fornecedores e os respetivos contactos. A partir de folhas de cálculo ou de uma exportação da sua ferramenta atual.' },
-    { title: 'Mediante orçamento', body: 'Viagens em curso e outros ficheiros (Word, PDF, emails). Damos-lhe um preço depois de vermos uma amostra.' }
+    { title: 'Incluído no preço da importação', body: 'O seu catálogo com um preço por produto, os seus clientes, os seus fornecedores e os respetivos contactos. A partir de folhas de cálculo ou de uma exportação da sua ferramenta atual.' },
+    { title: 'Mediante orçamento', body: 'Tarifas por época, viagens em curso e outros ficheiros (Word, PDF, emails). Damos-lhe um preço depois de vermos uma amostra.' }
   ],
   seasonTitle: 'Vai perturbar a minha época?',
   seasonBody: [
@@ -222,7 +222,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Quanto custa?',
-      a: [`A configuração, o acompanhamento e a importação das suas folhas de cálculo são gratuitos com faturação anual. Com faturação mensal, a configuração e o acompanhamento custam ${PRICES.setupMonthly} EUR uma única vez e a importação ${PRICES.importMonthly} EUR uma única vez.`, 'O preço da importação cobre listas com uma linha por elemento e as mesmas colunas do início ao fim. Documentos Word, PDF, viagens em curso e listas que precisam de ser organizadas primeiro têm preço mediante orçamento, depois de vermos uma amostra.']
+      a: [`A configuração, o acompanhamento e a importação das suas folhas de cálculo são gratuitos com faturação anual. Com faturação mensal, a configuração e o acompanhamento custam ${PRICES.setupMonthly} EUR uma única vez e a importação ${PRICES.importMonthly} EUR uma única vez.`, 'O preço da importação cobre listas com um preço por produto, uma linha por elemento e as mesmas colunas do início ao fim. Tarifas por época, documentos Word, PDF, viagens em curso e listas que precisam de ser organizadas primeiro têm preço mediante orçamento, depois de vermos uma amostra.']
     },
     {
       q: 'O que acontece aos meus ficheiros antigos?',
@@ -288,7 +288,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Há um período de experiência gratuito?',
-          a: ['Não. Há uma demonstração de 30 minutos.']
+          a: ['Há uma demonstração de 30 minutos sobre uma viagem de exemplo.']
         }
       ]
     },
@@ -322,7 +322,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Segue as regras do meu país?',
-          a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. Os regimes fiscais e a faturação eletrónica ativam-se por país nas definições. Para outros países, pergunte-nos o que está coberto.']
+          a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. O regime espanhol de IVA das agências de viagens está integrado. Noutros países, as faturas passam pelo seu software de faturação. Para o seu país, pergunte-nos durante a demonstração.']
         }
       ]
     }
@@ -340,7 +340,7 @@ export const about: SiteContent['about'] = {
       title: 'De onde vem',
       body: [
         'A agência trabalhava com Excel para as tarifas, Word para os orçamentos e WhatsApp para tudo o resto. Numa semana cheia, cada adiantamento e cada confirmação de hotel dependiam da memória de alguém.',
-        'A primeira versão nasceu aí, sobre as viagens da própria agência.'
+        'A primeira versão nasceu aí, sobre as viagens da própria agência. A agência continua a usá-lo todos os dias.'
       ]
     },
     {
@@ -363,8 +363,10 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origem', v: 'Uma agência à medida em Barcelona' },
+    { k: 'Origem', v: 'Criado em Barcelona, publicado a partir de França' },
+    { k: 'Em uso', v: 'Todos os dias numa agência à medida em Barcelona' },
     { k: 'Para', v: 'Agências à medida e DMC' },
+    { k: 'Documentos', v: 'Em espanhol, catalão, inglês, francês e italiano' },
     { k: 'Apoio', v: 'Por email, em espanhol, inglês e francês' },
     { k: 'Dados', v: 'Um espaço privado por agência, alojado na UE' }
   ]

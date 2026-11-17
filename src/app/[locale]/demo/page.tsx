@@ -40,7 +40,7 @@ export default async function DemoPage({ params }: Props) {
           </ol>
         </div>
         <div style={{ display: 'grid', gap: 20 }}>
-          <div className="card" style={{ background: 'var(--green)', color: 'var(--cream)', borderColor: 'var(--green)' }}>
+          <div className="card" style={{ background: 'var(--deep)', color: 'var(--cream)', borderColor: 'var(--deep)' }}>
             <h2 className="h3">{d.bookTitle}</h2>
             <p style={{ opacity: 0.9 }}>{CAL_LINK ? d.bookCalendarBody : d.bookBody}</p>
             {CAL_LINK && (

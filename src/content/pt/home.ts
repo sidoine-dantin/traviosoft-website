@@ -62,7 +62,6 @@ export const home: SiteContent['home'] = {
     {"rec": "Fatura final: {total} EUR", "title": "A fatura", "body": "Retoma as linhas do orçamento aceite.", "go": "Ver as faturas", "job": "get-paid"}
   ],
   sitTitle: "Conforme a sua forma de trabalhar",
-  sitLead: "Cada agência tem os seus hábitos. Eis o que o Traviosoft faz nos casos mais comuns.",
   situations: [
     {
       "t": "Vendo a agências, não ao viajante",
@@ -124,6 +123,7 @@ export const home: SiteContent['home'] = {
   afterTitle: 'Com o Traviosoft',
   afterBody:
     'O pedido, o orçamento, as reservas, os pagamentos e as faturas estão na mesma viagem, e toda a equipa vê o mesmo.',
+  setupLine: 'Configuramos tudo consigo e formamos a sua equipa por videochamada.',
   priceTitle: 'Preços',
   priceBody: 'Configuração e acompanhamento',
   priceImport: 'e importação das suas folhas de cálculo',

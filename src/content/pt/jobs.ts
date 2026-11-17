@@ -20,7 +20,7 @@ const sell: JobPage = {
       lead: 'Cada pedido numa só lista com o passo seguinte, quer chegue por email, telefone ou WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'Uma só lista de pedidos', body: ['Cada pedido tem um estado: novo, orçamento enviado ou à espera de resposta.'] },
+        { title: 'Estado de cada pedido', body: ['Cada pedido tem um estado: novo, orçamento enviado ou à espera de resposta.'] },
         { title: 'Um pedido torna-se um projeto', body: ['Quando um pedido avança, torna-se um projeto. O cliente, as datas, os viajantes e as suas notas ficam juntos durante toda a viagem.'] },
         { title: 'Uma ficha por cliente', body: ['Escreva um nome ou um email que já tem e o Traviosoft mostra o cliente existente: cada cliente mantém um só histórico.'] },
         { title: 'Lembretes', body: ['Ponha uma data num pedido. Ele volta ao seu painel no dia certo.'] },
@@ -48,7 +48,7 @@ const sell: JobPage = {
       lead: 'Defina uma vez as suas regras de preço, e cada linha do orçamento aplica-as.',
       visual: 'margin',
       features: [
-        { title: 'Margem, IVA e comissões', body: ['Um procedimento de preço transforma as suas tarifas net em preços de venda: a sua margem, o IVA correto e a comissão quando uma agência ou um parceiro vende a viagem.'] },
+        { title: 'Procedimentos de preço', body: ['Um procedimento de preço transforma as suas tarifas net em preços de venda: a sua margem, o IVA correto e a comissão quando uma agência ou um parceiro vende a viagem.'] },
         { title: 'Preços por pessoa', body: ['Preço por adulto ou por criança. O cliente vê um preço claro por pessoa e um total.'] },
         { title: 'Nomes para o cliente', body: ['A sua equipa vê o nome interno de cada serviço, o cliente vê o nome pensado para ele.'] },
         { title: 'Incluído e não incluído', body: ['O que o preço inclui e o que não inclui, indicado no orçamento.'] },
@@ -98,7 +98,7 @@ const sell: JobPage = {
     { q: 'Posso importar o meu catálogo atual?', a: ['Sim. Durante a implementação importamos os seus produtos, preços e fornecedores a partir das suas folhas de cálculo. A implementação e a importação são gratuitas com faturação anual.'] },
     { q: 'Vários fornecedores podem vender o mesmo hotel ou serviço?', a: ['Sim. Um produto pode ter vários fornecedores, cada um com as suas tarifas. Escolhe o fornecedor em cada viagem.'] },
     { q: 'O que vê o meu cliente?', a: ['Um orçamento limpo com nomes pensados para ele, preços por pessoa, o que está incluído e o que não está, na língua dele e com a sua marca. As suas tarifas net e as suas margens ficam reservadas à sua equipa.'] },
-    { q: 'Tenho de usar o catálogo em todos os orçamentos?', a: ['Não. Um orçamento pode adicionar linhas do catálogo e linhas livres.'] }
+    { q: 'Tenho de usar o catálogo em todos os orçamentos?', a: ['Um orçamento pode adicionar linhas do catálogo e linhas livres.'] }
   ]
 };
 
@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Faturas de adiantamento e finais', body: ['Feitas a partir da viagem num clique, com os dados do cliente e os valores certos.'] },
         { title: 'Notas de crédito', body: ['Um cancelamento ou uma alteração dá origem a uma nota de crédito ligada à fatura original.'] },
         { title: 'Numeração por empresa', body: ['Gira duas empresas a partir do mesmo sítio, cada uma com a sua numeração de faturas.'] },
-        { title: 'As regras fiscais do seu país', body: ['Os regimes especiais de IVA das agências de viagens ativam-se por país nas definições, e as menções corretas aparecem nas suas faturas.'] },
+        { title: 'O IVA das agências de viagens em Espanha', body: ['O regime espanhol de IVA das agências de viagens (REAV) está integrado, e a sua menção aparece nas suas faturas. Noutros países, as faturas passam pelo seu software de faturação.'] },
         { title: 'Pronto para o seu contabilista', body: ['Um resumo em Excel ou um zip com todos os PDF no fim do mês, em dois cliques.'] },
         { title: 'Exportação contabilística', body: ['As suas vendas, compras e pagamentos como lançamentos contabilísticos, prontos para o seu software de contabilidade.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Que meios de pagamento funcionam?', a: ['Adiciona o link de pagamento do serviço que já usa. O cliente paga aí, e regista o pagamento na viagem.'] },
     { q: 'O meu contabilista pode receber os ficheiros?', a: ['Sim. Exporte um resumo em Excel ou um zip com todos os PDF das faturas para qualquer período.'] },
-    { q: 'Segue as regras do meu país?', a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. Os regimes próprios de cada país ativam-se nas definições. Para o seu país, pergunte-nos na demonstração.'] }
+    { q: 'Segue as regras do meu país?', a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. O regime espanhol de IVA das agências de viagens está integrado. Noutros países, as faturas passam pelo seu software de faturação. Para o seu país, pergunte-nos na demonstração.'] }
   ]
 };
 
@@ -321,10 +321,10 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Definições do país',
       title: 'Regras fiscais do país',
-      lead: 'Regimes fiscais e faturação eletrónica são definições, ativadas para os países que os exigem.',
+      lead: 'Regimes fiscais e faturação eletrónica são definições. Espanha está integrada.',
       visual: 'country',
       features: [
-        { title: 'Regimes de IVA das agências de viagens', body: ['Onde um país tem um regime especial de IVA para agências de viagens, as menções corretas aparecem nas suas faturas.'] },
+        { title: 'Regimes de IVA das agências de viagens', body: ['Para Espanha, o regime de IVA das agências de viagens (REAV) e a sua menção nas suas faturas estão integrados.'] },
         { title: 'Faturação eletrónica', body: ['Consoante o país, as faturas são enviadas a partir do Traviosoft ou do seu software de faturação.'] }
       ]
     },

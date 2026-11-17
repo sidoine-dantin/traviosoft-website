@@ -24,7 +24,6 @@ export default async function HomePage({ params }: Props) {
   const loc = c.visuals.ex.numLocale;
   // The sample trip of the hero: cost 2210, margin 452, total 2662, 30% deposit 798.60.
   const money = (v: number) => new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
-  const total = money(2662) + ' EUR';
 
   return (
     <>
@@ -35,7 +34,7 @@ export default async function HomePage({ params }: Props) {
           <p className="hero-sub">{h.sub}</p>
         </div>
         <div className="hero-stage">
-          <HeroTrip p={h.proposal} total={total} />
+          <HeroTrip p={h.proposal} amount={2662} locale={loc} />
         </div>
       </header>
 
@@ -59,7 +58,6 @@ export default async function HomePage({ params }: Props) {
       <section className="band sits-band">
         <div className="wrap">
           <h2 className="h2" data-reveal style={{ color: 'var(--green)', maxWidth: '20ch' }}>{h.sitTitle}</h2>
-          <p className="muted sit-lead">{h.sitLead}</p>
           <ul className="sits">
             {h.situations.map(x => (
               <li key={x.t}>
@@ -89,6 +87,7 @@ export default async function HomePage({ params }: Props) {
               <p style={{ fontSize: 'clamp(20px, 2.2vw, 26px)', fontWeight: 650, lineHeight: 1.35, marginTop: 22, maxWidth: '30ch' }}>{h.afterBody}</p>
             </div>
           </div>
+          <p className="setup-line" data-reveal>{h.setupLine} <Link href="/switch" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{c.footer.switching}</span><span className="arr" aria-hidden="true">→</span></Link></p>
         </div>
       </section>
       <section className="band">

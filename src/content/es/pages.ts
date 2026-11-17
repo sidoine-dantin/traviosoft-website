@@ -86,7 +86,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Oferta por tiempo limitado solo con pago anual. Con pago mensual, el alta y el acompañamiento (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez al empezar. Los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte.`, '** Para datos limpios y bien organizados.'],
+  compareNote: [`* Oferta por tiempo limitado solo con pago anual. Con pago mensual, el alta y el acompañamiento (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez al empezar. Las tarifas por temporada y los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte.`, '** Para datos limpios y bien organizados.'],
   faq: [
     {
       q: '¿Qué plan necesito?',
@@ -98,7 +98,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Los precios llevan IVA?',
-      a: ['No. El IVA se añade en la factura según tu país y la situación de tu empresa.']
+      a: ['Los precios son sin IVA. El IVA se añade en la factura según tu país y la situación de tu empresa.']
     },
     {
       q: '¿Qué pasa si añado un usuario?',
@@ -122,7 +122,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Qué incluye la importación?',
-      a: [`Tu catálogo con sus precios, tus clientes y tus proveedores, desde hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Es gratis con pago anual y cuesta ${PRICES.importMonthly} EUR una sola vez con pago mensual.`, 'Los documentos Word, los PDF, los correos, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
+      a: [`Tu catálogo con un precio por producto, tus clientes y tus proveedores, desde hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Es gratis con pago anual y cuesta ${PRICES.importMonthly} EUR una sola vez con pago mensual.`, 'Las tarifas por temporada, los documentos Word, los PDF, los correos, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
     }
   ]
 };
@@ -146,17 +146,17 @@ export const demo: SiteContent['demo'] = {
     'El precio para tu equipo, por escrito',
     'Una llamada de seguimiento si la pides'
   ],
-  bookTitle: 'Pide hora',
+  bookTitle: 'Elige una hora para tu demo',
   bookBody: 'De momento, la cita se pide por email. Envíanos el nombre de tu agencia, el tamaño del equipo y unos días que te vengan bien, y te respondemos con una hora.',
   emailLabel: 'Escribe a',
-  bookCta: 'Elegir una hora',
+  bookCta: 'Abrir el calendario',
   bookCalendarBody: '30 minutos por Google Meet. La invitación llega por email.',
   emailAltLabel: 'O escribe a',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: '¿Hay prueba gratuita?',
-      a: ['No. Hay una demo de 30 minutos.']
+      a: ['Hay una demo de 30 minutos sobre un viaje de muestra.']
     },
     {
       q: '¿Quién hace la demo?',
@@ -164,11 +164,11 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: '¿Tengo que preparar algo?',
-      a: ['No.']
+      a: ['Nada que preparar.']
     },
     {
       q: '¿Me pediréis mis datos?',
-      a: ['No. La demo usa un viaje de muestra con datos inventados.']
+      a: ['La demo usa un viaje de muestra con datos inventados.']
     }
   ]
 };
@@ -204,8 +204,8 @@ export const switching: SiteContent['switching'] = {
   ],
   importTitle: 'Qué pasa a Traviosoft',
   importParts: [
-    { title: 'Incluido en el precio de la importación', body: 'Tu catálogo con sus tarifas, tus clientes, tus proveedores y sus contactos. Desde hojas de cálculo o una exportación de tu herramienta actual.' },
-    { title: 'Con presupuesto aparte', body: 'Los viajes en curso y los demás archivos (Word, PDF, correos). Te damos un precio después de ver una muestra.' }
+    { title: 'Incluido en el precio de la importación', body: 'Tu catálogo con un precio por producto, tus clientes, tus proveedores y sus contactos. Desde hojas de cálculo o una exportación de tu herramienta actual.' },
+    { title: 'Con presupuesto aparte', body: 'Las tarifas por temporada, los viajes en curso y los demás archivos (Word, PDF, correos). Te damos un precio después de ver una muestra.' }
   ],
   seasonTitle: '¿Me va a descolocar la temporada?',
   seasonBody: [
@@ -220,7 +220,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: '¿Cuánto cuesta?',
-      a: [`El alta, el acompañamiento y la importación de tus hojas de cálculo son gratis con pago anual. Con pago mensual, el alta y el acompañamiento cuestan ${PRICES.setupMonthly} EUR una sola vez y la importación ${PRICES.importMonthly} EUR una sola vez.`, 'El precio de la importación cubre listas con una fila por elemento y las mismas columnas de arriba abajo. Los documentos Word, los PDF, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
+      a: [`El alta, el acompañamiento y la importación de tus hojas de cálculo son gratis con pago anual. Con pago mensual, el alta y el acompañamiento cuestan ${PRICES.setupMonthly} EUR una sola vez y la importación ${PRICES.importMonthly} EUR una sola vez.`, 'El precio de la importación cubre listas con un precio por producto, una fila por elemento y las mismas columnas de arriba abajo. Las tarifas por temporada, los documentos Word, los PDF, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
     },
     {
       q: '¿Qué pasa con mis archivos antiguos?',
@@ -286,7 +286,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Hay prueba gratuita?',
-          a: ['No. Hay una demo de 30 minutos.']
+          a: ['Hay una demo de 30 minutos sobre un viaje de muestra.']
         }
       ]
     },
@@ -320,7 +320,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Cumple la normativa de mi país?',
-          a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. Los regímenes fiscales y la facturación electrónica se activan por país en los ajustes. Para otros países, pregúntanos qué está cubierto.']
+          a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. El régimen especial de las agencias de viajes de España está integrado. En otros países, las facturas pasan por tu programa de facturación. Para tu país, pregúntanos durante la demo.']
         }
       ]
     }
@@ -338,7 +338,7 @@ export const about: SiteContent['about'] = {
       title: 'De dónde viene',
       body: [
         'La agencia funcionaba con Excel para las tarifas, Word para los presupuestos y WhatsApp para todo lo demás. En una semana de mucho trabajo, cada señal y cada confirmación de hotel dependían de que alguien se acordara.',
-        'La primera versión se construyó allí, con los viajes de la propia agencia.'
+        'La primera versión se construyó allí, con los viajes de la propia agencia. La agencia sigue trabajando con él cada día.'
       ]
     },
     {
@@ -361,8 +361,10 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origen', v: 'Una agencia a medida de Barcelona' },
+    { k: 'Origen', v: 'Creado en Barcelona, editado desde Francia' },
+    { k: 'En uso', v: 'Cada día en una agencia a medida de Barcelona' },
     { k: 'Para', v: 'Agencias a medida y DMC' },
+    { k: 'Documentos', v: 'En español, catalán, inglés, francés e italiano' },
     { k: 'Soporte', v: 'Por email, en español, inglés y francés' },
     { k: 'Datos', v: 'Un espacio privado por agencia, alojado en la UE' }
   ]

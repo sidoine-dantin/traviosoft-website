@@ -20,7 +20,7 @@ const sell: JobPage = {
       lead: 'Every enquiry in one list with its next step, whether it came by email, phone or WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'One list of requests', body: ['Each request has a status: new, quoted or waiting for an answer.'] },
+        { title: 'Request statuses', body: ['Each request has a status: new, quoted or waiting for an answer.'] },
         { title: 'A request becomes a project', body: ['When a request turns serious, it becomes a project. The client, the dates, the travellers and your notes stay together for the whole trip.'] },
         { title: 'One record per client', body: ['Type a name or an email you already have and Traviosoft shows the existing client, so each client keeps one history.'] },
         { title: 'Reminders', body: ['Put a date on a request. It comes back on your dashboard on the right day.'] },
@@ -48,7 +48,7 @@ const sell: JobPage = {
       lead: 'Set your pricing rules once, and every quote line applies them.',
       visual: 'margin',
       features: [
-        { title: 'Margin, VAT and commission', body: ['A pricing procedure turns your net rates into selling prices: your margin, the right VAT, and the commission when an agency or a partner sells the trip.'] },
+        { title: 'Pricing procedures', body: ['A pricing procedure turns your net rates into selling prices: your margin, the right VAT, and the commission when an agency or a partner sells the trip.'] },
         { title: 'Per-person prices', body: ['Price per adult or per child. The client sees a clear price per person and a total.'] },
         { title: 'Client-facing names', body: ['Your team sees the internal name of each service, the client sees its client-facing name.'] },
         { title: 'Included and not included', body: ['What the price covers and what it does not, listed on the quote.'] },
@@ -98,7 +98,7 @@ const sell: JobPage = {
     { q: 'Can I import my current catalogue?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
     { q: 'Can several suppliers sell the same hotel or service?', a: ['Yes. A product can have several suppliers, each with its own rates. You choose the supplier per trip.'] },
     { q: 'What does my client see?', a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team.'] },
-    { q: 'Do I have to use the catalogue for every quote?', a: ['No. A quote can mix catalogue lines and one-off lines.'] }
+    { q: 'Do I have to use the catalogue for every quote?', a: ['A quote can mix catalogue lines and one-off lines.'] }
   ]
 };
 
@@ -243,7 +243,7 @@ const getPaid: JobPage = {
         { title: 'Deposit and final invoices', body: ['Made from the trip in one click, with the client’s details and the right amounts.'] },
         { title: 'Credit notes', body: ['A cancellation or a change becomes a credit note linked to the original invoice.'] },
         { title: 'Numbering per company', body: ['Run two companies from one place, each with its own invoice numbering.'] },
-        { title: 'Your country’s tax rules', body: ['Special VAT schemes for travel agencies are switched on per country in the settings, and the right wording appears on your invoices.'] },
+        { title: 'Spanish travel agency VAT', body: ['The Spanish VAT scheme for travel agencies (REAV) is built in, and its wording appears on your invoices. In other countries, invoices go through your invoicing software.'] },
         { title: 'Ready for your accountant', body: ['An Excel recap or a zip of every PDF at the end of the month, in two clicks.'] },
         { title: 'Accounting export', body: ['Your sales, purchases and payments as journal entries, ready for your accounting software.'], premium: true }
       ]
@@ -264,7 +264,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Which payment providers work?', a: ['You add the payment link of the provider you already use. The client pays there, and you record the payment on the trip.'] },
     { q: 'Can my accountant get the files?', a: ['Yes. Export an Excel recap or a zip of every invoice PDF for any period.'] },
-    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. Country-specific schemes are switched on in the settings. For your country, ask us in the demo.'] }
+    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. The Spanish VAT scheme for travel agencies is built in. In other countries, invoices go through your invoicing software. For your country, ask us in the demo.'] }
   ]
 };
 
@@ -321,10 +321,10 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Country settings',
       title: 'Country tax rules',
-      lead: 'Tax schemes and e-invoicing are settings, switched on for the countries that need them.',
+      lead: 'Tax schemes and e-invoicing are settings. Spain is built in.',
       visual: 'country',
       features: [
-        { title: 'Travel agency VAT schemes', body: ['Where a country has a special VAT scheme for travel agencies, the right labels appear on your invoices.'] },
+        { title: 'Travel agency VAT schemes', body: ['For Spain, the travel agency VAT scheme (REAV) and its wording on your invoices are built in.'] },
         { title: 'E-invoicing', body: ['Depending on the country, invoices are sent from Traviosoft or from your invoicing software.'] }
       ]
     },

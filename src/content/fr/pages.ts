@@ -86,7 +86,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place et l’accompagnement (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
+  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place et l’accompagnement (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les tarifs par saison et les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
   faq: [
     {
       q: 'De quelle offre ai-je besoin ?',
@@ -122,7 +122,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Que comprend l’import ?',
-      a: [`Votre catalogue avec ses prix, vos clients et vos prestataires, depuis des tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Il est offert en annuel et coûte ${PRICES.importMonthly} EUR une seule fois en mensuel.`, 'Les documents Word, les PDF, les e-mails, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+      a: [`Votre catalogue avec un prix par produit, vos clients et vos prestataires, depuis des tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Il est offert en annuel et coûte ${PRICES.importMonthly} EUR une seule fois en mensuel.`, 'Les tarifs par saison, les documents Word, les PDF, les e-mails, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     }
   ]
 };
@@ -146,17 +146,17 @@ export const demo: SiteContent['demo'] = {
     'Le prix pour votre équipe, par écrit',
     'Un nouvel appel si vous le demandez'
   ],
-  bookTitle: 'Demandez un créneau',
+  bookTitle: 'Choisissez un créneau pour votre démo',
   bookBody: 'Pour l’instant, les rendez-vous se prennent par e-mail. Envoyez le nom de votre agence, la taille de l’équipe et quelques jours qui vous conviennent, et nous répondons avec un horaire.',
   emailLabel: 'Écrivez à',
-  bookCta: 'Choisir un créneau',
+  bookCta: 'Ouvrir l’agenda',
   bookCalendarBody: '30 minutes sur Google Meet. L’invitation arrive par e-mail.',
   emailAltLabel: 'Ou écrivez à',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: 'Y a-t-il un essai gratuit ?',
-      a: ['Non. Il y a une démo de 30 minutes.']
+      a: ['Il y a une démo de 30 minutes sur un voyage exemple.']
     },
     {
       q: 'Qui fait la démo ?',
@@ -164,11 +164,11 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: 'Dois-je préparer quelque chose ?',
-      a: ['Non.']
+      a: ['Rien à préparer.']
     },
     {
       q: 'Allez-vous me demander mes données ?',
-      a: ['Non. La démo utilise un voyage exemple avec des données inventées.']
+      a: ['La démo utilise un voyage exemple avec des données inventées.']
     }
   ]
 };
@@ -204,8 +204,8 @@ export const switching: SiteContent['switching'] = {
   ],
   importTitle: 'Ce qui est repris',
   importParts: [
-    { title: 'Compris dans le prix de l’import', body: 'Votre catalogue avec ses tarifs, vos clients, vos prestataires et leurs contacts. Depuis des tableurs ou un export de votre outil actuel.' },
-    { title: 'Sur devis', body: 'Les voyages en cours et les autres fichiers (Word, PDF, e-mails). Nous vous donnons un prix après avoir vu un échantillon.' }
+    { title: 'Compris dans le prix de l’import', body: 'Votre catalogue avec un prix par produit, vos clients, vos prestataires et leurs contacts. Depuis des tableurs ou un export de votre outil actuel.' },
+    { title: 'Sur devis', body: 'Les tarifs par saison, les voyages en cours et les autres fichiers (Word, PDF, e-mails). Nous vous donnons un prix après avoir vu un échantillon.' }
   ],
   seasonTitle: 'Cela va-t-il perturber ma saison ?',
   seasonBody: [
@@ -220,7 +220,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Combien cela coûte-t-il ?',
-      a: [`La mise en place, l’accompagnement et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec une ligne par élément et les mêmes colonnes du début à la fin. Les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+      a: [`La mise en place, l’accompagnement et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec un prix par produit, une ligne par élément et les mêmes colonnes du début à la fin. Les tarifs par saison, les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     },
     {
       q: 'Que deviennent mes anciens fichiers ?',
@@ -286,7 +286,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Y a-t-il un essai gratuit ?',
-          a: ['Non. Il y a une démo de 30 minutes.']
+          a: ['Il y a une démo de 30 minutes sur un voyage exemple.']
         }
       ]
     },
@@ -320,7 +320,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Est-ce conforme aux règles de mon pays ?',
-          a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Les régimes de TVA et la facturation électronique s’activent pays par pays dans les paramètres. Pour les autres pays, demandez-nous ce qui est couvert.']
+          a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Le régime espagnol de TVA des agences de voyages est intégré. Dans les autres pays, les factures passent par votre logiciel de facturation. Pour votre pays, demandez-nous pendant la démo.']
         }
       ]
     }
@@ -338,7 +338,7 @@ export const about: SiteContent['about'] = {
       title: 'D’où il vient',
       body: [
         'L’agence fonctionnait avec Excel pour les tarifs, Word pour les devis et WhatsApp pour tout le reste. Pendant une semaine chargée, chaque acompte et chaque confirmation d’hôtel dépendaient de la mémoire de quelqu’un.',
-        'La première version a été construite là, sur les voyages de l’agence.'
+        'La première version a été construite là, sur les voyages de l’agence. L’agence l’utilise toujours tous les jours.'
       ]
     },
     {
@@ -361,8 +361,10 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origine', v: 'Une agence sur mesure de Barcelone' },
+    { k: 'Origine', v: 'Conçu à Barcelone, édité depuis la France' },
+    { k: 'En service', v: 'Tous les jours dans une agence sur mesure de Barcelone' },
     { k: 'Pour', v: 'Agences sur mesure et DMC' },
+    { k: 'Documents', v: 'En espagnol, catalan, anglais, français et italien' },
     { k: 'Support', v: 'Par email, en espagnol, anglais et français' },
     { k: 'Données', v: 'Un espace privé par agence, hébergé dans l’UE' }
   ]
