@@ -326,9 +326,9 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'About Traviosoft',
   metaDescription:
-    'Traviosoft is a management system for tailor-made travel agencies and DMCs. Support by email from the people who build the product, data hosted in the EU.',
+    'Traviosoft is management software for tailor-made travel agencies and DMCs. Support by email from the people who build the product, data hosted in the EU.',
   title: 'About Traviosoft',
-  lead: 'Traviosoft is a management system for tailor-made agencies and DMCs.',
+  lead: 'Traviosoft is management software for tailor-made travel agencies and DMCs.',
   blocks: [
     {
       title: 'What it does',

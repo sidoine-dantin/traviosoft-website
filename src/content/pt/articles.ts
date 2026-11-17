@@ -221,7 +221,7 @@ const compares: Cmp[] = [
     metaTitle: 'Traviosoft ou Lemax: software para DMC e operadores turísticos',
     metaDescription:
       'O Lemax é um software croata para operadores turísticos e DMC de média e grande dimensão. Comparamos a quem se destina cada um, dimensão da equipa, preços e foco.',
-    title: 'Traviosoft ou Lemax: dois sistemas de gestão completos em comparação',
+    title: 'Traviosoft ou Lemax: dois programas de gestão completos em comparação',
     lead: 'O Lemax é um software com mais de 30 anos de história, feito para operadores turísticos e DMC de média e grande dimensão. O seu pacote Lemax GO destina-se a equipas a partir de 15 utilizadores, com um preço definido com cada cliente. O Traviosoft cobre toda a viagem, do primeiro pedido à última fatura, com documentos em cinco línguas e um preço publicado.',
     card: 'Dois sistemas completos: uma plataforma consolidada e um único percurso do pedido à fatura com preço publicado.',
     basis:

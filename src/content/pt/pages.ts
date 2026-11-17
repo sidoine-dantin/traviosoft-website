@@ -330,7 +330,7 @@ export const about: SiteContent['about'] = {
   metaDescription:
     'O Traviosoft é um software de gestão para agências de viagens à medida e DMC. Apoio por email das pessoas que desenvolvem o produto, dados alojados na UE.',
   title: 'Sobre nós',
-  lead: 'O Traviosoft é um software de gestão para agências à medida e DMC.',
+  lead: 'O Traviosoft é um software de gestão para agências de viagens à medida e DMC.',
   blocks: [
     {
       title: 'O que faz',

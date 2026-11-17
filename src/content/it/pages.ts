@@ -328,9 +328,9 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'Chi siamo | Traviosoft',
   metaDescription:
-    'Traviosoft è un gestionale per agenzie di viaggi su misura e DMC. Assistenza via email dalle persone che sviluppano il prodotto, dati ospitati nell’UE.',
+    'Traviosoft è un software gestionale per agenzie di viaggi su misura e DMC. Assistenza via email dalle persone che sviluppano il prodotto, dati ospitati nell’UE.',
   title: 'Chi siamo',
-  lead: 'Traviosoft è un gestionale per agenzie su misura e DMC.',
+  lead: 'Traviosoft è un software gestionale per agenzie di viaggi su misura e DMC.',
   blocks: [
     {
       title: 'Cosa fa',

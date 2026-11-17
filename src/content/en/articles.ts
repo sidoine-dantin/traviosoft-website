@@ -220,7 +220,7 @@ const compares: Cmp[] = [
     metaTitle: 'Traviosoft vs Lemax: software for DMCs and tour operators',
     metaDescription:
       'Lemax is Croatian software for mid-size and large tour operators and DMCs. We compare who each is for, team size, pricing and focus.',
-    title: 'Traviosoft vs Lemax: two complete management systems compared',
+    title: 'Traviosoft vs Lemax: complete management software compared',
     lead: 'Lemax is software with more than 30 years behind it, built for mid-size and large tour operators and DMCs. Its Lemax GO package is designed for teams from 15 users, priced with each client. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
     card: 'Two complete systems: a long-established platform and one flow from request to invoice with a published price.',
     basis:
