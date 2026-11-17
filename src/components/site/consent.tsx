@@ -24,7 +24,7 @@ const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '
 // "Demo booked" (primary): fired when a booking is confirmed in the booking tool.
 export const GOOGLE_ADS_BOOKED_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_BOOKED_LABEL || 'sYaeCKL217kdEPzk3ZhF';
 /** LinkedIn conversion for a booked demo; empty until it exists in Campaign Manager. */
-const LINKEDIN_BOOKED_ID = process.env.NEXT_PUBLIC_LINKEDIN_BOOKED_CONVERSION_ID || '';
+const LINKEDIN_BOOKED_ID = process.env.NEXT_PUBLIC_LINKEDIN_BOOKED_CONVERSION_ID || '32357682'; // "Demo booked"
 const ENABLED = Boolean(LINKEDIN_ID || META_ID || GOOGLE_ADS_ID);
 
 const KEY = 'tv-consent';
