@@ -80,7 +80,7 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Setup of your brand, documents and pricing rules, and training for your team', classic: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Import of your spreadsheets or your current tool’s export**', classic: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Free with yearly billing*', was: `${PRICES.importMonthly} EUR` } },
-        { f: 'Support by email in Spanish, English and French', classic: true, premium: true },
+        { f: 'Support by email', classic: true, premium: true },
         { f: 'Hosting in the European Union', classic: true, premium: true },
         { f: 'Data export on request', classic: true, premium: true }
       ]
@@ -338,7 +338,7 @@ export const about: SiteContent['about'] = {
       title: 'Where it comes from',
       body: [
         'The agency ran on Excel for the rates, Word for the quotes and WhatsApp for everything else. In a busy week, every deposit and every hotel confirmation depended on someone remembering it.',
-        'The first version was built there, on the agency’s own trips. The agency still runs on it every day.'
+        'The first version was built there, on the agency’s own trips.'
       ]
     },
     {
@@ -350,7 +350,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'Support',
       body: [
-        'Support is by email, in Spanish, English and French, from the people who build the product.'
+        'Support is by email from the people who build the product.'
       ]
     },
     {
@@ -361,11 +361,7 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origin', v: 'Built in Barcelona, published from France' },
-    { k: 'In use', v: 'Every day at a tailor-made agency in Barcelona' },
     { k: 'For', v: 'Tailor-made agencies and DMCs' },
-    { k: 'Documents', v: 'In Spanish, Catalan, English, French and Italian' },
-    { k: 'Support', v: 'By email, in Spanish, English and French' },
     { k: 'Data', v: 'A private space per agency, hosted in the EU' }
   ]
 };

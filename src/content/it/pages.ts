@@ -82,7 +82,7 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Configurazione del tuo marchio, dei documenti e delle regole di prezzo, e formazione del tuo team', classic: { text: FREE, was: `${PRICES.setupMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Importazione dei tuoi fogli di calcolo o dell’export del tuo strumento attuale**', classic: { text: FREE, was: `${PRICES.importMonthly} EUR` }, premium: { text: FREE, was: `${PRICES.importMonthly} EUR` } },
-        { f: 'Assistenza via email in spagnolo, inglese e francese', classic: true, premium: true },
+        { f: 'Assistenza via email', classic: true, premium: true },
         { f: 'Hosting nell’Unione europea', classic: true, premium: true },
         { f: 'Esportazione dei dati su richiesta', classic: true, premium: true }
       ]
@@ -340,7 +340,7 @@ export const about: SiteContent['about'] = {
       title: 'Da dove viene',
       body: [
         'L’agenzia lavorava con Excel per le tariffe, Word per i preventivi e WhatsApp per tutto il resto. In una settimana piena, ogni acconto e ogni conferma di un hotel dipendevano dalla memoria di qualcuno.',
-        'La prima versione è nata lì, sui viaggi dell’agenzia. L’agenzia lo usa ancora ogni giorno.'
+        'La prima versione è nata lì, sui viaggi dell’agenzia.'
       ]
     },
     {
@@ -352,7 +352,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'Assistenza',
       body: [
-        'L’assistenza è via email, in spagnolo, inglese e francese, dalle persone che sviluppano il prodotto.'
+        'L’assistenza è via email dalle persone che sviluppano il prodotto.'
       ]
     },
     {
@@ -363,11 +363,7 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origine', v: 'Creato a Barcellona, pubblicato dalla Francia' },
-    { k: 'In uso', v: 'Ogni giorno in un’agenzia su misura di Barcellona' },
     { k: 'Per', v: 'Agenzie su misura e DMC' },
-    { k: 'Documenti', v: 'In spagnolo, catalano, inglese, francese e italiano' },
-    { k: 'Assistenza', v: 'Via email, in spagnolo, inglese e francese' },
     { k: 'Dati', v: 'Uno spazio privato per agenzia, ospitato nell’UE' }
   ]
 };

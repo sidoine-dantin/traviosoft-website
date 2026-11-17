@@ -80,7 +80,7 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix, et formation de votre équipe', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Import de vos tableurs ou de l’export de votre outil actuel**', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
-        { f: 'Support par e-mail en espagnol, anglais et français', classic: true, premium: true },
+        { f: 'Support par e-mail', classic: true, premium: true },
         { f: 'Hébergement dans l’Union européenne', classic: true, premium: true },
         { f: 'Export des données sur demande', classic: true, premium: true }
       ]
@@ -338,7 +338,7 @@ export const about: SiteContent['about'] = {
       title: 'D’où il vient',
       body: [
         'L’agence fonctionnait avec Excel pour les tarifs, Word pour les devis et WhatsApp pour tout le reste. Pendant une semaine chargée, chaque acompte et chaque confirmation d’hôtel dépendaient de la mémoire de quelqu’un.',
-        'La première version a été construite là, sur les voyages de l’agence. L’agence l’utilise toujours tous les jours.'
+        'La première version a été construite là, sur les voyages de l’agence.'
       ]
     },
     {
@@ -350,7 +350,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'Support',
       body: [
-        'Le support se fait par e-mail, en espagnol, en anglais et en français, par les personnes qui construisent le produit.'
+        'Le support se fait par e-mail par les personnes qui construisent le produit.'
       ]
     },
     {
@@ -361,11 +361,7 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origine', v: 'Conçu à Barcelone, édité depuis la France' },
-    { k: 'En service', v: 'Tous les jours dans une agence sur mesure de Barcelone' },
     { k: 'Pour', v: 'Agences sur mesure et DMC' },
-    { k: 'Documents', v: 'En espagnol, catalan, anglais, français et italien' },
-    { k: 'Support', v: 'Par email, en espagnol, anglais et français' },
     { k: 'Données', v: 'Un espace privé par agence, hébergé dans l’UE' }
   ]
 };
