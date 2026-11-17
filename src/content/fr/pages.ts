@@ -182,22 +182,18 @@ export const switching: SiteContent['switching'] = {
   timelineTitle: 'Comment cela se passe',
   timeline: [
     {
-      when: 'Jour 1',
       title: 'Vous nous envoyez vos fichiers',
       body: 'Vos tarifs, clients, prestataires et voyages en cours, en tableurs ou en export d’un autre outil.'
     },
     {
-      when: 'Semaine 1',
       title: 'Nous importons, vous vérifiez',
       body: 'Nous chargeons tout dans l’espace de votre agence. Vous l’ouvrez, vous regardez quelques produits et quelques clients, et vous nous dites quoi ajuster.'
     },
     {
-      when: 'Semaine 2',
       title: 'Votre premier vrai devis',
       body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque, puis nous formons votre équipe en visio. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
     },
     {
-      when: 'En service',
       title: 'Les nouvelles demandes entrent dans l’application',
       body: 'À partir de là, chaque nouvelle demande commence dans Traviosoft. Les voyages déjà en cours se terminent comme ils ont commencé.'
     }

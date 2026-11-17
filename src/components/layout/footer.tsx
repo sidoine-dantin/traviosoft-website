@@ -5,8 +5,10 @@ import { CookieSettingsLink } from '@/components/site/consent';
 
 export default function Footer({ c }: { c: SiteContent }) {
   const f = c.footer;
-  const firstCompare = c.articles.find(a => a.kind === 'compare');
-  const firstGuide = c.articles.find(a => a.kind === 'guide');
+  // No listing page: each comparison and each blog post is linked from here.
+  const short = (t: string) => t.split(':')[0].trim();
+  const compares = c.articles.filter(a => a.kind === 'compare' || a.kind === 'best');
+  const posts = c.articles.filter(a => a.kind !== 'compare' && a.kind !== 'best');
   return (
     <footer className="foot">
       <div className="wrap">
@@ -25,11 +27,15 @@ export default function Footer({ c }: { c: SiteContent }) {
             </ul>
           </div>
           <div>
-            <h4>{f.resources}</h4>
+            <h4>{f.compare}</h4>
             <ul>
-              <li><Link href="/resources">{c.nav.resources}</Link></li>
-              {firstCompare && <li><Link href="/resources#compare">{f.compare}</Link></li>}
-              {firstGuide && <li><Link href="/resources#guide">{f.guides}</Link></li>}
+              {compares.map(a => <li key={a.slug}><Link href={`/compare/${a.slug}`}>{short(a.title)}</Link></li>)}
+            </ul>
+          </div>
+          <div>
+            <h4>{f.guides}</h4>
+            <ul>
+              {posts.map(a => <li key={a.slug}><Link href={`/guides/${a.slug}`}>{short(a.title)}</Link></li>)}
               <li><Link href="/glossary">{f.glossary}</Link></li>
               {f.localLinks.map(l => (
                 <li key={l.href}><Link href={l.href}>{l.label}</Link></li>

@@ -20,7 +20,7 @@ export const footer: SiteContent['footer'] = {
   faq: 'FAQ',
   about: 'Chi siamo',
   glossary: 'Glossario',
-  guides: 'Guide',
+  guides: 'Blog',
   compare: 'Confronti',
   privacy: 'Privacy',
   terms: 'Condizioni',

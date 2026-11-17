@@ -184,22 +184,18 @@ export const switching: SiteContent['switching'] = {
   timelineTitle: 'Come funziona',
   timeline: [
     {
-      when: 'Giorno 1',
       title: 'Ci invii i tuoi file',
       body: 'Le tue tariffe, i clienti, i fornitori e i viaggi aperti, in fogli di calcolo o come export di un altro strumento.'
     },
     {
-      when: 'Settimana 1',
       title: 'Noi importiamo, tu controlli',
       body: 'Carichiamo tutto nello spazio della tua agenzia. Lo apri, guardi qualche prodotto e qualche cliente, e ci dici cosa sistemare.'
     },
     {
-      when: 'Settimana 2',
       title: 'Il tuo primo preventivo reale',
       body: 'Configuriamo le tue regole di margine, IVA e commissioni e il tuo marchio, poi formiamo il tuo team in videochiamata. Prepari un preventivo reale con le tue tariffe. Siamo raggiungibili via email se ti blocchi.'
     },
     {
-      when: 'Operativi',
       title: 'Le nuove richieste entrano nell’app',
       body: 'Da quel momento, ogni nuova richiesta parte in Traviosoft. I viaggi già in corso si concludono come sono iniziati.'
     }

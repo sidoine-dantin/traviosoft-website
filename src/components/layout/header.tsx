@@ -90,7 +90,7 @@ export default function Header({ locale, labels, jobs }: Props) {
 
   const isJob = jobs.some(j => pathname === `/${j.slug}`);
   // Locale-only pages (Spanish guides) have no twin: the switch goes to that locale's home.
-  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/resources' : pathname;
+  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/' : pathname;
 
   const langs = <LangMenu locale={locale} href={localeHref} />;
 
@@ -124,7 +124,6 @@ export default function Header({ locale, labels, jobs }: Props) {
             )}
           </div>
           <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
-          <Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link>
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           {langs}
@@ -162,7 +161,6 @@ export default function Header({ locale, labels, jobs }: Props) {
           </ul>
           <ul className="mobile-links">
             <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
-            <li><Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link></li>
           </ul>
           <div className="mobile-foot">
             <LangMenu locale={locale} href={localeHref} up />

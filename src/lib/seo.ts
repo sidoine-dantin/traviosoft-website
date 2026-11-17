@@ -17,7 +17,6 @@ export const pagePaths = [
   '/switch',
   '/faq',
   '/about',
-  '/resources',
   '/glossary',
   '/legal/privacy',
   '/legal/terms',

@@ -182,22 +182,18 @@ export const switching: SiteContent['switching'] = {
   timelineTitle: 'How it goes',
   timeline: [
     {
-      when: 'Day 1',
       title: 'You send us your files',
       body: 'Your rates, clients, suppliers and open trips, in spreadsheets or as an export from another tool.'
     },
     {
-      when: 'Week 1',
       title: 'We import, you check',
       body: 'We load everything into your agency’s space. You open it, look at a few products and a few clients, and tell us what to adjust.'
     },
     {
-      when: 'Week 2',
       title: 'Your first real quote',
       body: 'We set up your margin, VAT and commission rules and your brand, then train your team by video call. You build a real quote from your own rates. We are on email if you get stuck.'
     },
     {
-      when: 'Live',
       title: 'New requests go in the app',
       body: 'From then on, every new request starts in Traviosoft. Trips already running finish the way they started.'
     }

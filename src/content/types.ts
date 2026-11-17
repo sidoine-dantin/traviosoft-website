@@ -254,7 +254,7 @@ export type SiteContent = {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;
     timelineTitle: string;
-    timeline: { when: string; title: string; body: string }[];
+    timeline: { title: string; body: string }[];
     importTitle: string; importParts: { title: string; body: string }[];
     seasonTitle: string; seasonBody: string[];
     faq: Faq[];

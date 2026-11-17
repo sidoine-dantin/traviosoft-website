@@ -28,7 +28,7 @@ export default async function SwitchPage({ params }: Props) {
           <h2 className="h2" style={{ color: 'var(--green)', marginBottom: 36 }}>{s.timelineTitle}</h2>
           <ol className="timeline">
             {s.timeline.map(t => (
-              <li key={t.title}><span className="mono" style={{ color: 'var(--orange-ink)' }}>{t.when}</span><h3 className="h3" style={{ margin: '10px 0 8px' }}>{t.title}</h3><p className="muted">{t.body}</p></li>
+              <li key={t.title}><h3 className="h3" style={{ margin: '0 0 8px' }}>{t.title}</h3><p className="muted">{t.body}</p></li>
             ))}
           </ol>
         </div>
