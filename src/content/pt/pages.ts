@@ -151,7 +151,7 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Escolha uma hora para a sua demonstração',
   bookBody: 'Por agora a marcação é feita por email. Envie o nome da sua agência, a dimensão da equipa e alguns dias que lhe deem jeito, e respondemos com uma hora.',
   emailLabel: 'Escreva para',
-  bookCta: 'Abrir o calendário',
+  bookCta: 'Escolher uma hora',
   bookCalendarBody: '30 minutos no Google Meet. O convite chega por email.',
   emailAltLabel: 'Ou escreva para',
   email: 'hola@traviosoft.com',

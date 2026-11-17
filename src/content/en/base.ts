@@ -27,6 +27,14 @@ export const footer: SiteContent['footer'] = {
   notice: 'Legal notice',
   hosted: 'Hosted in the EU',
   rights: 'Traviosoft',
+  /** blog posts shown in the footer, with short labels */
+  posts: [
+    { slug: 'tailor-made-quote-with-margins', label: 'Pricing a tailor-made trip' },
+    { slug: 'rooming-list-template-groups-mice', label: 'Rooming lists' },
+    { slug: 'move-from-excel-to-travel-software', label: 'From Excel to software' },
+    { slug: 'gdpr-travel-agency', label: 'GDPR for agencies' },
+    { slug: 'eu-vat-margin-scheme-travel-agents-vida', label: 'EU VAT margin scheme' }
+  ],
   localLinks: [],
   consent: {
     text: 'With your consent, we use advertising cookies to measure visits from our ads and to show you our ads on other sites. You can change your choice at any time at the bottom of every page.',

@@ -5,10 +5,10 @@ import { CookieSettingsLink } from '@/components/site/consent';
 
 export default function Footer({ c }: { c: SiteContent }) {
   const f = c.footer;
-  // No listing page: each comparison and each blog post is linked from here.
-  const short = (t: string) => t.split(':')[0].trim();
-  const compares = c.articles.filter(a => a.kind === 'compare' || a.kind === 'best');
-  const posts = c.articles.filter(a => a.kind !== 'compare' && a.kind !== 'best');
+  // No listing page: the comparisons and a few blog posts are linked from here, as short inline lists.
+  const vs = (t: string) => t.split(':')[0].replace(/^Traviosoft\s+(vs|ou|o|frente a|contro|ou)\s+/i, '').trim();
+  const compares = c.articles.filter(a => a.kind === 'compare');
+  const hasPost = (slug: string) => c.articles.some(a => a.slug === slug);
   return (
     <footer className="foot">
       <div className="wrap">
@@ -27,22 +27,6 @@ export default function Footer({ c }: { c: SiteContent }) {
             </ul>
           </div>
           <div>
-            <h4>{f.compare}</h4>
-            <ul>
-              {compares.map(a => <li key={a.slug}><Link href={`/compare/${a.slug}`}>{short(a.title)}</Link></li>)}
-            </ul>
-          </div>
-          <div>
-            <h4>{f.guides}</h4>
-            <ul>
-              {posts.map(a => <li key={a.slug}><Link href={`/guides/${a.slug}`}>{short(a.title)}</Link></li>)}
-              <li><Link href="/glossary">{f.glossary}</Link></li>
-              {f.localLinks.map(l => (
-                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
-              ))}
-            </ul>
-          </div>
-          <div>
             <h4>{f.company}</h4>
             <ul>
               <li><Link href="/about">{f.about}</Link></li>
@@ -58,6 +42,22 @@ export default function Footer({ c }: { c: SiteContent }) {
               <li><Link href="/legal/terms">{f.terms}</Link></li>
               <li><Link href="/legal/notice">{f.notice}</Link></li>
               <CookieSettingsLink label={f.consent.settings} />
+            </ul>
+          </div>
+        </div>
+        <div className="foot-more">
+          <div>
+            <h4>{f.compare}</h4>
+            <ul className="foot-inline">
+              {compares.map(a => <li key={a.slug}><Link href={`/compare/${a.slug}`}>{vs(a.title)}</Link></li>)}
+            </ul>
+          </div>
+          <div>
+            <h4>{f.guides}</h4>
+            <ul className="foot-inline">
+              {f.posts.filter(p => hasPost(p.slug)).map(p => <li key={p.slug}><Link href={`/guides/${p.slug}`}>{p.label}</Link></li>)}
+              <li><Link href="/glossary">{f.glossary}</Link></li>
+              {f.localLinks.map(l => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}
             </ul>
           </div>
         </div>

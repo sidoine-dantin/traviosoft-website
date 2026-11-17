@@ -204,6 +204,7 @@ export type SiteContent = {
     privacy: string; terms: string; notice: string;
     hosted: string; rights: string;
     /** extra footer links that only exist in this locale (e.g. Spain page) */
+    posts: { slug: string; label: string }[];
     localLinks: Link[];
     /** cookie banner, shown only when an ad measurement tag is configured */
     consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };

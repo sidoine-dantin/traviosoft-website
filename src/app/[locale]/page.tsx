@@ -38,7 +38,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </header>
 
-      <section className="band moments-band">
+      <section className="band home-band moments-band">
         <div className="wrap">
           <h2 className="h2" data-reveal style={{ color: 'var(--green)', maxWidth: '18ch' }}>{h.tripTitle}</h2>
           <ol className="moments">
@@ -55,7 +55,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="band sits-band">
+      <section className="band home-band sits-band">
         <div className="wrap">
           <h2 className="h2" data-reveal style={{ color: 'var(--green)', maxWidth: '20ch' }}>{h.sitTitle}</h2>
           <ul className="sits">
@@ -72,7 +72,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className="band">
+      <section className="band home-band">
         <div className="wrap">
           <h2 className="h2" data-reveal style={{ color: 'var(--green)', marginBottom: 40, maxWidth: '18ch' }}>{h.baTitle}</h2>
           <div className="ba">
@@ -90,7 +90,7 @@ export default async function HomePage({ params }: Props) {
           <p className="setup-line" data-reveal>{h.setupLine} <Link href="/switch" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{c.footer.switching}</span><span className="arr" aria-hidden="true">→</span></Link></p>
         </div>
       </section>
-      <section className="band">
+      <section className="band home-band">
         <div className="wrap coins">
           <div>
             <h2 className="h2" style={{ color: 'var(--green)' }}>{h.priceTitle}</h2>

@@ -149,7 +149,7 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Choisissez un créneau pour votre démo',
   bookBody: 'Pour l’instant, les rendez-vous se prennent par e-mail. Envoyez le nom de votre agence, la taille de l’équipe et quelques jours qui vous conviennent, et nous répondons avec un horaire.',
   emailLabel: 'Écrivez à',
-  bookCta: 'Ouvrir l’agenda',
+  bookCta: 'Choisir un créneau',
   bookCalendarBody: '30 minutes sur Google Meet. L’invitation arrive par e-mail.',
   emailAltLabel: 'Ou écrivez à',
   email: 'hola@traviosoft.com',

@@ -1,6 +1,10 @@
 'use client';
 
+import { useEffect } from 'react';
 import { bookedConversion } from './consent';
+
+/** The header's "Book a demo" sends this when the visitor is already on the demo page. */
+export const OPEN_BOOKING_EVENT = 'tv-open-booking';
 
 /*
  * "Choose a time" button for the demo page. Cal.com's script loads only when the
@@ -51,7 +55,7 @@ function loadCal(fallback: string): CalRoot {
 }
 
 let ready = false;
-function openBooking(calLink: string) {
+function openBooking(calLink: string, locale: string) {
   const cal = loadCal(`https://cal.com/${calLink}`);
   if (!ready) {
     ready = true;
@@ -71,7 +75,20 @@ function openBooking(calLink: string) {
   cal.ns[NS]('modal', { calLink, config: { layout: 'month_view' } });
 }
 
-export function BookDemo({ calLink, label }: { calLink: string; label: string }) {
+function open(calLink: string, locale: string) {
+  try {
+    openBooking(calLink, locale);
+  } catch {
+    window.open(`https://cal.com/${calLink}`, '_blank', 'noopener');
+  }
+}
+
+export function BookDemo({ calLink, label, locale }: { calLink: string; label: string; locale: string }) {
+  useEffect(() => {
+    const onOpen = () => open(calLink, locale);
+    window.addEventListener(OPEN_BOOKING_EVENT, onOpen);
+    return () => window.removeEventListener(OPEN_BOOKING_EVENT, onOpen);
+  }, [calLink, locale]);
   return (
     <a
       className="btn yellow"
@@ -80,11 +97,7 @@ export function BookDemo({ calLink, label }: { calLink: string; label: string })
       rel="noopener"
       onClick={e => {
         e.preventDefault();
-        try {
-          openBooking(calLink);
-        } catch {
-          window.open(`https://cal.com/${calLink}`, '_blank', 'noopener');
-        }
+        open(calLink, locale);
       }}
     >
       {label}

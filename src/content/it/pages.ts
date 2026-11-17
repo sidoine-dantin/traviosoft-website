@@ -151,7 +151,7 @@ export const demo: SiteContent['demo'] = {
   bookTitle: 'Scegli un orario per la tua demo',
   bookBody: 'Per ora la prenotazione avviene via email. Inviaci il nome della tua agenzia, la dimensione del team e alcuni giorni che ti vanno bene, e ti rispondiamo con un orario.',
   emailLabel: 'Scrivi a',
-  bookCta: 'Apri il calendario',
+  bookCta: 'Scegli un orario',
   bookCalendarBody: '30 minuti su Google Meet. L’invito arriva via email.',
   emailAltLabel: 'Oppure scrivi a',
   email: 'hola@traviosoft.com',

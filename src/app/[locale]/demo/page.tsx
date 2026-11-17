@@ -44,7 +44,7 @@ export default async function DemoPage({ params }: Props) {
             <h2 className="h3">{d.bookTitle}</h2>
             <p style={{ opacity: 0.9 }}>{CAL_LINK ? d.bookCalendarBody : d.bookBody}</p>
             {CAL_LINK && (
-              <p style={{ marginTop: 16 }}><BookDemo calLink={CAL_LINK} label={d.bookCta} /></p>
+              <p style={{ marginTop: 16 }}><BookDemo calLink={CAL_LINK} label={d.bookCta} locale={locale} /></p>
             )}
             <p style={{ marginTop: CAL_LINK ? 16 : 8 }}><span className="lbl" style={{ opacity: 0.75 }}>{CAL_LINK ? d.emailAltLabel : d.emailLabel}</span><br />
               <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: CAL_LINK ? 19 : 24, fontWeight: 700, color: 'var(--cream)', overflowWrap: 'anywhere' }}>{d.email}</a></p>

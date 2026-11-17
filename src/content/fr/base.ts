@@ -27,6 +27,14 @@ export const footer: SiteContent['footer'] = {
   notice: 'Mentions légales',
   hosted: 'Hébergé dans l’UE',
   rights: 'Traviosoft',
+  /** blog posts shown in the footer, with short labels */
+  posts: [
+    { slug: 'devis-voyage-sur-mesure-avec-marge', label: 'Prix d’un voyage sur mesure' },
+    { slug: 'rooming-list-groupes-mice', label: 'La rooming list' },
+    { slug: 'de-excel-a-un-logiciel-agence-de-voyages', label: 'D’Excel à un logiciel' },
+    { slug: 'rgpd-agence-de-voyages', label: 'RGPD et agences' },
+    { slug: 'tva-regime-marge-agences-de-voyages-ue-vida', label: 'TVA sur la marge' }
+  ],
   localLinks: [],
   consent: {
     text: 'Avec votre accord, nous utilisons des cookies publicitaires pour mesurer les visites venues de nos annonces et vous montrer nos annonces sur d’autres sites. Vous pouvez changer d’avis à tout moment en bas de chaque page.',

@@ -27,6 +27,14 @@ export const footer: SiteContent['footer'] = {
   notice: 'Aviso legal',
   hosted: 'Alojado en la UE',
   rights: 'Traviosoft',
+  /** blog posts shown in the footer, with short labels */
+  posts: [
+    { slug: 'presupuesto-viaje-a-medida-con-margen', label: 'Precio de un viaje a medida' },
+    { slug: 'rooming-list-grupos-mice', label: 'La rooming list' },
+    { slug: 'de-excel-a-un-software-de-agencia', label: 'De Excel a un software' },
+    { slug: 'rgpd-agencia-de-viajes', label: 'RGPD y agencias' },
+    { slug: 'iva-regimen-margen-agencias-de-viajes-ue-vida', label: 'IVA de las agencias en la UE' }
+  ],
   localLinks: [
     { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' }
   ],
