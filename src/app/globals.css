@@ -171,17 +171,29 @@
 
 /* ---------- footer ---------- */
 .foot { background: var(--green); color: var(--cream); padding-block: 72px 40px; }
-.foot-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
-/* second row: comparisons and blog posts as short wrapping lists */
-.foot-more { margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(247, 248, 246, .2); display: grid; grid-template-columns: 1fr 1fr; gap: 32px 56px; }
-.foot .foot-inline { display: flex; flex-wrap: wrap; gap: 10px 22px; }
-@media (max-width: 900px) { .foot-more { grid-template-columns: 1fr; } }
+.foot-grid { --fcols: 5; --fgap: 32px; display: grid; grid-template-columns: repeat(var(--fcols), minmax(0, 1fr)); column-gap: var(--fgap); row-gap: 56px; }
+/* One grid for both rows, so the lower lists line up with the columns above.
+   Top: about (2 columns), product, company, legal. Bottom: comparisons (2 columns), blog (3 columns). */
+.foot-brand { grid-column: span 2; }
+.foot-compare { grid-column: span 2; }
+.foot-blog { grid-column: span 3; }
+.foot .foot-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--fgap); }
+.foot-blog .foot-cols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* variant: four columns, about takes one, blog takes two */
+.foot-grid.f4 { --fcols: 4; }
+.foot-grid.f4 .foot-brand { grid-column: span 1; }
+.foot-grid.f4 .foot-blog { grid-column: span 2; }
+.foot-grid.f4 .foot-blog .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) {
+  .foot-grid, .foot-grid.f4 { --fcols: 2; }
+  .foot-brand, .foot-compare, .foot-blog, .foot-grid.f4 .foot-brand, .foot-grid.f4 .foot-blog { grid-column: 1 / -1; }
+  .foot-blog .foot-cols, .foot-grid.f4 .foot-blog .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .foot h4 { font-size: 14px; font-weight: 650; opacity: .7; margin-bottom: 14px; }
 .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
 .foot a { text-decoration: none; opacity: .92; }
 .foot a:hover { opacity: 1; text-decoration: underline; }
 .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(247, 248, 246, .2); display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; font-size: 14px; opacity: .85; }
-@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-brand { grid-column: 1 / -1; } }
 
 /* ---------- home hero: what the agency sends its client ---------- */
 .hero { overflow: hidden; }
@@ -656,6 +668,7 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
   .consent-actions { grid-template-columns: 1fr 1fr; }
   .consent-more { grid-column: 1 / -1; order: 3; border: 0; min-height: 44px; }
 }
-.foot-linkbtn { opacity: .92; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; min-height: 44px; }
+.foot-linkbtn { opacity: .92; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; line-height: inherit; }
+@media (pointer: coarse) { .foot-linkbtn { min-height: 44px; } }
 .foot-linkbtn:hover { text-decoration: underline; }
 .screen .num, .frag .num { font-variant-numeric: normal; }

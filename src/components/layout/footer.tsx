@@ -44,17 +44,15 @@ export default function Footer({ c }: { c: SiteContent }) {
               <CookieSettingsLink label={f.consent.settings} />
             </ul>
           </div>
-        </div>
-        <div className="foot-more">
-          <div>
+          <div className="foot-compare">
             <h4>{f.compare}</h4>
-            <ul className="foot-inline">
+            <ul className="foot-cols">
               {compares.map(a => <li key={a.slug}><Link href={`/compare/${a.slug}`}>{vs(a.title)}</Link></li>)}
             </ul>
           </div>
-          <div>
+          <div className="foot-blog">
             <h4>{f.guides}</h4>
-            <ul className="foot-inline">
+            <ul className="foot-cols">
               {f.posts.filter(p => hasPost(p.slug)).map(p => <li key={p.slug}><Link href={`/guides/${p.slug}`}>{p.label}</Link></li>)}
               <li><Link href="/glossary">{f.glossary}</Link></li>
               {f.localLinks.map(l => <li key={l.href}><Link href={l.href}>{l.label}</Link></li>)}
