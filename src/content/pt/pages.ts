@@ -332,17 +332,10 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'Sobre nós | Traviosoft',
   metaDescription:
-    'O Traviosoft nasceu dentro de uma agência de viagens à medida em Barcelona que trabalhava com Excel, Word e WhatsApp. Apoio por email das pessoas que desenvolvem o produto, dados alojados na UE.',
+    'O Traviosoft é um software de gestão para agências de viagens à medida e DMC. Apoio por email das pessoas que desenvolvem o produto, dados alojados na UE.',
   title: 'Sobre nós',
-  lead: 'O Traviosoft nasceu dentro de uma agência de viagens à medida em Barcelona. É um software de gestão para agências à medida e DMC.',
+  lead: 'O Traviosoft é um software de gestão para agências à medida e DMC.',
   blocks: [
-    {
-      title: 'De onde vem',
-      body: [
-        'A agência trabalhava com Excel para as tarifas, Word para os orçamentos e WhatsApp para tudo o resto. Numa semana cheia, cada adiantamento e cada confirmação de hotel dependiam da memória de alguém.',
-        'A primeira versão nasceu aí, sobre as viagens da própria agência.'
-      ]
-    },
     {
       title: 'O que faz',
       body: [

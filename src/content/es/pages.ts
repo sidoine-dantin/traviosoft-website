@@ -328,19 +328,12 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'Sobre Traviosoft: nació en una agencia de Barcelona',
+  metaTitle: 'Sobre Traviosoft',
   metaDescription:
-    'Traviosoft nació en una agencia de viajes a medida de Barcelona que usaba Excel, Word y WhatsApp. Soporte por email de las personas que construyen el producto y datos alojados en la UE.',
+    'Traviosoft es un sistema de gestión para agencias de viajes a medida y DMC. Soporte por email de las personas que construyen el producto y datos alojados en la UE.',
   title: 'Sobre Traviosoft',
-  lead: 'Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Es un sistema de gestión para agencias a medida y DMC.',
+  lead: 'Traviosoft es un sistema de gestión para agencias a medida y DMC.',
   blocks: [
-    {
-      title: 'De dónde viene',
-      body: [
-        'La agencia funcionaba con Excel para las tarifas, Word para los presupuestos y WhatsApp para todo lo demás. En una semana de mucho trabajo, cada señal y cada confirmación de hotel dependían de que alguien se acordara.',
-        'La primera versión se construyó allí, con los viajes de la propia agencia.'
-      ]
-    },
     {
       title: 'Qué hace',
       body: [

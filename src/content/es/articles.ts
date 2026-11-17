@@ -112,7 +112,6 @@ const compares: Cmp[] = [
       'Los datos de Ezus vienen de su sitio web y de directorios públicos, revisados el 3 de noviembre de 2026. Los precios cambian: comprueba siempre las páginas de precios actuales de ambos. Las cifras de clientes de Ezus son las que ellos publican.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC, receptivos, turoperadores y agencias; FIT, grupos y MICE'],
-      ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'París, fundada en 2019'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Professional 75 EUR por usuario y mes (hasta 10 usuarios); Premium 100 EUR; Enterprise a consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pack de onboarding de 1.990 EUR con implantación guiada; importación de datos 390 EUR'],
       ['Idiomas', 'Documentos en español, catalán, inglés, francés e italiano', 'Web y soporte en 5 idiomas: EN, FR, ES, IT, PT'],
@@ -228,7 +227,6 @@ const compares: Cmp[] = [
       'Los datos de Lemax vienen de su sitio web y de prensa del sector, revisados el 3 de noviembre de 2026. Lemax acuerda el precio con cada cliente: lo indicamos como "A consultar". Sus cifras de clientes son las que ellos muestran.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Turoperadores y DMC medianos y grandes'],
-      ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Croacia, fundada en 1990'],
       ['Tamaño de equipo', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, 'Lemax GO desde 15 usuarios'],
       ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar; se acuerda con cada cliente antes de firmar'],
       ['Implantación', 'Alta e importación sin coste con pago anual', 'Dicen "en producción en 90 días" para Lemax GO'],
@@ -268,7 +266,6 @@ const compares: Cmp[] = [
       'Los datos de Tourwriter vienen de su web (páginas de planes y empresa), revisados el 3 de noviembre de 2026. Sus precios son "desde", en dólares, por usuario, con un presupuesto para cada equipo: el total real puede variar.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC y diseñadores de viajes de lujo, viajes FIT de varios días'],
-      ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Wellington (Nueva Zelanda), fundada en 2004'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Starter desde 99 USD por usuario y mes; Pro desde 149 USD; Premium a consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Pago único desde 1.199 USD, que incluye migración, configuración y formación'],
       ['Idiomas', 'Documentos en español, catalán, inglés, francés e italiano', 'Inglés']
@@ -308,7 +305,6 @@ const compares: Cmp[] = [
       'Los datos de Tourplan vienen de su web (inicio y página Sobre nosotros), revisados el 14 de noviembre de 2026. Su web no publica precios, así que escribimos "A consultar".',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'DMC y turoperadores receptivos y emisores: FIT, grupos, MICE, a medida, circuitos'],
-      ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Desde 1986, 5 oficinas en África, América, Asia, Europa y el Pacífico'],
       ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Alojamiento, instalación, gestión del proyecto, formación y soporte'],
       ['Distribución', 'Conexiones con tu web y tu contabilidad (Premium) y con tus herramientas de IA (los dos planes)', 'Canales de distribución web y XML, e interfaces en línea para agentes, clientes y proveedores']
@@ -348,7 +344,6 @@ const compares: Cmp[] = [
       'Los datos de Kaptio vienen de su web (inicio, plataforma y Sobre nosotros), revisados el 14 de noviembre de 2026. Su web no publica precios, así que escribimos "A consultar".',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Viajes de varios días: cruceros, tren, circuitos en grupo y a medida'],
-      ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Fundada en Reikiavik en 2012'],
       ['Precio', `Classic desde ${PRICES.classic.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'A consultar'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Empieza con un taller de descubrimiento'],
       ['Módulos', 'Solicitudes, presupuestos, reservas, facturas y pagos en un solo flujo', 'Kaptio CRM, Kaptio Travel y Kaptio Edge']
@@ -387,7 +382,6 @@ const compares: Cmp[] = [
       'Los datos de TourCMS vienen de su web (inicio, funciones y precios), revisados el 14 de noviembre de 2026. Sus precios están en dólares estadounidenses.',
     rows: [
       ['Pensado para', 'Receptivos, DMC y agencias a medida', 'Operadores de excursiones y actividades: excursiones de un día, circuitos, atracciones, DMC'],
-      ['Empresa', 'Nacido en una agencia a medida de Barcelona; ver la página Sobre nosotros', 'Gestionado por Palisis AG, Uster (Suiza); TourCMS desde 2003'],
       ['Precio publicado', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'De 49 USD al mes (2 usuarios) a 569 USD al mes (500 usuarios); reservas de socios conectados desde el 1,9 % por transacción'],
       ['Puesta en marcha', 'Alta e importación sin coste con pago anual', 'Prueba gratuita, sin coste de alta'],
       ['Idiomas', 'Documentos en español, catalán, inglés, francés e italiano', 'Contenidos en 22 idiomas']

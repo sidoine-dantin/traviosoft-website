@@ -115,7 +115,6 @@ const compares: Cmp[] = [
       'I dati di Ezus provengono dal suo sito e da elenchi pubblici, verificati il 3 novembre 2026. I prezzi cambiano: controlla sempre le pagine prezzi aggiornate di entrambi. Il numero di clienti di Ezus è quello che pubblica.',
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'DMC, agenzie incoming, tour operator e agenzie; FIT, gruppi e MICE'],
-      ['Azienda', 'Nata dentro un’agenzia di viaggi su misura a Barcellona; vedi la pagina Chi siamo', 'Parigi, fondata nel 2019'],
       ['Prezzo pubblicato', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Professional 75 EUR per utente al mese (fino a 10 utenti); Premium 100 EUR; Enterprise su richiesta'],
       ['Avvio', 'Configurazione e importazione gratuite con la fatturazione annuale', 'Pacchetto di onboarding da 1.990 EUR con avviamento guidato; importazione dati 390 EUR'],
       ['Lingue', 'Documenti in spagnolo, catalano, inglese, francese e italiano', 'Sito e assistenza in 5 lingue: EN, FR, ES, IT, PT'],
@@ -229,7 +228,6 @@ const compares: Cmp[] = [
       'I dati di Lemax provengono dal suo sito e dalla stampa di settore, verificati il 3 novembre 2026. Lemax concorda i prezzi con ciascun cliente, quindi scriviamo "Su richiesta". Il numero di clienti è quello che mostra.',
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'Tour operator e DMC medi e grandi'],
-      ['Azienda', 'Nata dentro un’agenzia di viaggi su misura a Barcellona; vedi la pagina Chi siamo', 'Croazia, fondata nel 1990'],
       ['Dimensione del team', `Due piani, ${PRICES.usersIncluded} utenti inclusi`, 'Lemax GO da 15 utenti'],
       ['Prezzo', `Classic da ${PRICES.classic.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Su richiesta; concordato con ciascun cliente prima della firma'],
       ['Avviamento', 'Configurazione e importazione gratuite con la fatturazione annuale', 'Dichiara "operativi in 90 giorni" per Lemax GO'],
@@ -268,7 +266,6 @@ const compares: Cmp[] = [
       'I dati di Tourwriter provengono dal suo sito (pagine piani e azienda), verificati il 3 novembre 2026. I suoi prezzi sono prezzi "a partire da" in dollari USA, per utente, con un preventivo per ogni team, quindi il totale reale può essere diverso.',
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'DMC di lusso e travel designer, viaggi FIT di più giorni'],
-      ['Azienda', 'Nata dentro un’agenzia di viaggi su misura a Barcellona; vedi la pagina Chi siamo', 'Wellington (Nuova Zelanda), fondata nel 2004'],
       ['Prezzo pubblicato', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Starter da 99 USD per utente al mese; Pro da 149 USD; Premium su richiesta'],
       ['Avvio', 'Configurazione e importazione gratuite con la fatturazione annuale', 'Costo una tantum da 1.199 USD, per migrazione, configurazione e formazione'],
       ['Lingue', 'Documenti in spagnolo, catalano, inglese, francese e italiano', 'Inglese']
@@ -307,7 +304,6 @@ const compares: Cmp[] = [
       'I dati di Tourplan provengono dal suo sito (home e pagina Chi siamo), verificati il 14 novembre 2026. Il suo sito non pubblica prezzi, quindi scriviamo "Su richiesta".',
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'DMC, tour operator incoming e outgoing: FIT, gruppi, MICE, su misura, tour in serie'],
-      ['Azienda', 'Nata dentro un’agenzia di viaggi su misura a Barcellona; vedi la pagina Chi siamo', 'Dal 1986, 5 sedi tra Africa, Americhe, Asia, Europa e Pacifico'],
       ['Prezzo', `Classic da ${PRICES.classic.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Su richiesta'],
       ['Avvio', 'Configurazione e importazione gratuite con la fatturazione annuale', 'Hosting, installazione, gestione del progetto, formazione e assistenza'],
       ['Distribuzione', 'Collegamenti al tuo sito e alla contabilità (Premium) e ai tuoi strumenti di IA (entrambi i piani)', 'Canali di distribuzione web e XML, e interfacce online per agenti, clienti e fornitori']
@@ -346,7 +342,6 @@ const compares: Cmp[] = [
       'I dati di Kaptio provengono dal suo sito (home, piattaforma e pagina Chi siamo), verificati il 14 novembre 2026. Il suo sito non pubblica prezzi, quindi scriviamo "Su richiesta".',
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'Viaggi di più giorni: crociere, treni, tour di gruppo e viaggi su misura'],
-      ['Azienda', 'Nata dentro un’agenzia di viaggi su misura a Barcellona; vedi la pagina Chi siamo', 'Fondata a Reykjavik nel 2012'],
       ['Prezzo', `Classic da ${PRICES.classic.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Su richiesta'],
       ['Avvio', 'Configurazione e importazione gratuite con la fatturazione annuale', 'Comincia con un workshop di analisi'],
       ['Moduli', 'Richieste, preventivi, prenotazioni, fatture e pagamenti in un unico percorso', 'Kaptio CRM, Kaptio Travel e Kaptio Edge']
@@ -384,7 +379,6 @@ const compares: Cmp[] = [
       'I dati di TourCMS provengono dal suo sito (home, funzionalità e pagina prezzi), verificati il 14 novembre 2026. I suoi prezzi sono indicati in dollari USA.',
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'Operatori di tour e attività: escursioni giornaliere, tour di più giorni, attrazioni, DMC'],
-      ['Azienda', 'Nata dentro un’agenzia di viaggi su misura a Barcellona; vedi la pagina Chi siamo', 'Gestito da Palisis AG, Uster (Svizzera); TourCMS dal 2003'],
       ['Prezzo pubblicato', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Da 49 USD al mese (2 utenti) a 569 USD al mese (500 utenti); prenotazioni dai partner collegati dall’1,9% per transazione'],
       ['Avvio', 'Configurazione e importazione gratuite con la fatturazione annuale', 'Prova gratuita, senza costi di attivazione'],
       ['Lingue', 'Documenti in spagnolo, catalano, inglese, francese e italiano', 'Contenuti in 22 lingue']

@@ -112,7 +112,6 @@ const compares: Cmp[] = [
       'Ezus details come from its website and public directories, checked on 3 November 2026. Prices change, so always check both current pricing pages. Ezus customer numbers are the ones it publishes.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'DMCs, inbound agencies, tour operators and agencies; FIT, groups and MICE'],
-      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Paris, founded in 2019'],
       ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Professional 75 EUR per user a month (up to 10 users); Premium 100 EUR; Enterprise on request'],
       ['Getting started', 'Setup and import free with yearly billing', 'Onboarding pack of 1,990 EUR with a guided rollout; data import 390 EUR'],
       ['Languages', 'Documents in Spanish, Catalan, English, French and Italian', 'Site and support in 5 languages: EN, FR, ES, IT, PT'],
@@ -228,7 +227,6 @@ const compares: Cmp[] = [
       'Lemax details come from its website and trade press, checked on 3 November 2026. Lemax agrees prices with each client, so we write "On request". Its customer numbers are the ones it shows.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Mid-size and large tour operators and DMCs'],
-      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Croatia, founded in 1990'],
       ['Team size', `Two plans, ${PRICES.usersIncluded} users included`, 'Lemax GO from 15 users'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request; agreed with each client before signing'],
       ['Rollout', 'Setup and import free with yearly billing', 'Says "live in 90 days" for Lemax GO'],
@@ -268,7 +266,6 @@ const compares: Cmp[] = [
       'Tourwriter details come from its site (plans and company pages), checked on 3 November 2026. Its prices are "from" prices in US dollars, per user, with a quote for each team, so the real total can differ.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Luxury DMCs and travel designers, multi-day FIT trips'],
-      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Wellington (New Zealand), founded in 2004'],
       ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Starter from 99 USD per user a month; Pro from 149 USD; Premium on request'],
       ['Getting started', 'Setup and import free with yearly billing', 'One-time fee from 1,199 USD, covering migration, setup and training'],
       ['Languages', 'Documents in Spanish, Catalan, English, French and Italian', 'English']
@@ -308,7 +305,6 @@ const compares: Cmp[] = [
       'Tourplan details come from its website (home and About pages), checked on 14 November 2026. Its site does not publish prices, so we write "On request".',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'DMCs, inbound and outbound tour operators: FIT, groups, MICE, tailor-made, series tours'],
-      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Since 1986, 5 offices across Africa, the Americas, Asia, Europe and the Pacific'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
       ['Getting started', 'Setup and import free with yearly billing', 'Hosting, installation, project management, training and support'],
       ['Distribution', 'Connections to your website and accounting (Premium) and to your AI tools (both plans)', 'Web and XML distribution channels, and online interfaces for agents, clients and suppliers']
@@ -348,7 +344,6 @@ const compares: Cmp[] = [
       'Kaptio details come from its website (home, platform and About pages), checked on 14 November 2026. Its site does not publish prices, so we write "On request".',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Multi-day travel: cruise, rail, group tours and tailor-made travel'],
-      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Founded in Reykjavik in 2012'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
       ['Getting started', 'Setup and import free with yearly billing', 'Starts with a discovery workshop'],
       ['Modules', 'Requests, quotes, bookings, invoices and payments in one flow', 'Kaptio CRM, Kaptio Travel and Kaptio Edge']
@@ -387,7 +382,6 @@ const compares: Cmp[] = [
       'TourCMS details come from its website (home, features and prices pages), checked on 14 November 2026. Its prices are shown in US dollars.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Tours and activities operators: day tours, multi-day tours, attractions, DMCs'],
-      ['Company', 'Born inside a tailor-made agency in Barcelona; see the About page', 'Operated by Palisis AG, Uster (Switzerland); TourCMS since 2003'],
       ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'From 49 USD a month (2 users) to 569 USD a month (500 users); bookings from connected partners from 1.9% per transaction'],
       ['Getting started', 'Setup and import free with yearly billing', 'Free trial, no setup fee'],
       ['Languages', 'Documents in Spanish, Catalan, English, French and Italian', 'Content in 22 languages']

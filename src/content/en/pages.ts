@@ -330,17 +330,10 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'About Traviosoft',
   metaDescription:
-    'Traviosoft started inside a tailor-made travel agency in Barcelona that ran on Excel, Word and WhatsApp. Support by email from the people who build the product, data hosted in the EU.',
+    'Traviosoft is a management system for tailor-made travel agencies and DMCs. Support by email from the people who build the product, data hosted in the EU.',
   title: 'About Traviosoft',
-  lead: 'Traviosoft started inside a tailor-made travel agency in Barcelona. It is a management system for tailor-made agencies and DMCs.',
+  lead: 'Traviosoft is a management system for tailor-made agencies and DMCs.',
   blocks: [
-    {
-      title: 'Where it comes from',
-      body: [
-        'The agency ran on Excel for the rates, Word for the quotes and WhatsApp for everything else. In a busy week, every deposit and every hotel confirmation depended on someone remembering it.',
-        'The first version was built there, on the agency’s own trips.'
-      ]
-    },
     {
       title: 'What it does',
       body: [
