@@ -29,6 +29,7 @@ const sell: JobPage = {
     },
     {
       id: 'catalogue',
+      layout: 'bento',
       kicker: 'Catalogue',
       title: 'Products with prices by date',
       lead: 'Hotels, transfers, guides and activities, each with prices by date. A quote uses the price for the travel dates.',
@@ -43,6 +44,7 @@ const sell: JobPage = {
     },
     {
       id: 'quotes',
+      layout: 'stage',
       kicker: 'Quotes',
       title: 'Margin, VAT and commission',
       lead: 'Set your pricing rules once, and every quote line applies them.',
@@ -58,6 +60,7 @@ const sell: JobPage = {
     },
     {
       id: 'send',
+      layout: 'flow',
       kicker: 'Send and follow up',
       title: 'Sending and follow-up',
       lead: 'The quote goes by email in the client’s language. Seven days later it comes back to you for a follow-up.',
@@ -82,6 +85,7 @@ const sell: JobPage = {
     },
     {
       id: 'partners',
+      layout: 'bento',
       kicker: 'Partner agencies',
       title: 'Sell through partner agencies',
       lead: 'Quote the partner agency, keep their client on the trip, and settle their commission from the same numbers.',
@@ -117,6 +121,7 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
+      layout: 'stage',
       kicker: 'Order',
       title: 'The deposit creates the order',
       lead: 'Record the first payment and the quote is accepted: the order is created with every service already on it.',
@@ -141,6 +146,7 @@ const book: JobPage = {
     },
     {
       id: 'suppliers',
+      layout: 'bento',
       kicker: 'Suppliers',
       title: 'Supplier records and emails',
       lead: 'Contacts, documents and emails, filed on the supplier and on the trip.',
@@ -166,6 +172,7 @@ const book: JobPage = {
     },
     {
       id: 'groups',
+      layout: 'bento',
       kicker: 'Groups',
       title: 'Groups and rooming lists',
       lead: 'Traveller lists, services for part of the group, and a rooming list per hotel.',
@@ -212,6 +219,7 @@ const getPaid: JobPage = {
   chapters: [
     {
       id: 'schedule',
+      layout: 'flow',
       kicker: 'Payment schedule',
       title: 'Deposit and balance with due dates',
       lead: 'The deposit and the balance are set on the quote, with their due dates.',
@@ -235,6 +243,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'invoices',
+      layout: 'stage',
       kicker: 'Invoices',
       title: 'Invoices from the trip',
       lead: 'Deposit and final invoices are made from the trip, with the amounts of the quote.',
@@ -250,6 +259,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'dashboard',
+      layout: 'bento',
       kicker: 'Dashboard',
       title: 'Sales, trips and cash',
       lead: 'Sales, trips, money in and money out, for the period you choose.',
@@ -283,6 +293,7 @@ const setup: JobPage = {
   chapters: [
     {
       id: 'brands',
+      layout: 'bento',
       kicker: 'Brands',
       title: 'Several brands in one account',
       lead: 'Run a second brand or a second company from the same place, each with its own look and its own numbering.',
@@ -306,6 +317,7 @@ const setup: JobPage = {
     },
     {
       id: 'currencies',
+      layout: 'stage',
       kicker: 'Currencies',
       title: 'Several currencies',
       lead: 'Lodges in dollars, a client in pounds, your books in euros. Each quote has its own currency, and your numbers add up in yours.',
@@ -330,6 +342,7 @@ const setup: JobPage = {
     },
     {
       id: 'team',
+      layout: 'bento',
       kicker: 'Team',
       title: 'Users and teams',
       lead: 'Everyone works on the same clients, quotes and bookings.',

@@ -29,6 +29,7 @@ const sell: JobPage = {
     },
     {
       id: 'catalogue',
+      layout: 'bento',
       kicker: 'Catálogo',
       title: 'Produtos com preços por data',
       lead: 'Hotéis, transfers, guias e atividades, cada um com os seus preços por data. O orçamento usa o preço das datas da viagem.',
@@ -43,6 +44,7 @@ const sell: JobPage = {
     },
     {
       id: 'quotes',
+      layout: 'stage',
       kicker: 'Orçamentos',
       title: 'Margem, IVA e comissões',
       lead: 'Defina uma vez as suas regras de preço, e cada linha do orçamento aplica-as.',
@@ -58,6 +60,7 @@ const sell: JobPage = {
     },
     {
       id: 'send',
+      layout: 'flow',
       kicker: 'Envio e seguimento',
       title: 'Envio e seguimento',
       lead: 'O orçamento segue por email na língua do cliente. Sete dias depois, volta para si para um seguimento.',
@@ -82,6 +85,7 @@ const sell: JobPage = {
     },
     {
       id: 'partners',
+      layout: 'bento',
       kicker: 'Agências parceiras',
       title: 'Vender através de agências parceiras',
       lead: 'Faça o orçamento à agência parceira, mantenha o cliente dela na viagem e liquide a comissão a partir dos mesmos números.',
@@ -117,6 +121,7 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
+      layout: 'stage',
       kicker: 'Viagem confirmada',
       title: 'O adiantamento confirma a viagem',
       lead: 'Registe o primeiro pagamento e o orçamento fica aceite: a viagem confirmada é criada com todos os serviços já incluídos.',
@@ -141,6 +146,7 @@ const book: JobPage = {
     },
     {
       id: 'suppliers',
+      layout: 'bento',
       kicker: 'Fornecedores',
       title: 'Fichas e emails dos fornecedores',
       lead: 'Contactos, documentos e emails, guardados no fornecedor e na viagem.',
@@ -166,6 +172,7 @@ const book: JobPage = {
     },
     {
       id: 'groups',
+      layout: 'bento',
       kicker: 'Grupos',
       title: 'Grupos e rooming lists',
       lead: 'Listas de viajantes, serviços para parte do grupo e uma rooming list por hotel.',
@@ -212,6 +219,7 @@ const getPaid: JobPage = {
   chapters: [
     {
       id: 'schedule',
+      layout: 'flow',
       kicker: 'Plano de pagamentos',
       title: 'Adiantamento e saldo com datas',
       lead: 'O adiantamento e o saldo são definidos no orçamento, com as suas datas de vencimento.',
@@ -235,6 +243,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'invoices',
+      layout: 'stage',
       kicker: 'Faturas',
       title: 'Faturas a partir da viagem',
       lead: 'As faturas de adiantamento e finais são feitas a partir da viagem, com os valores do orçamento.',
@@ -250,6 +259,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'dashboard',
+      layout: 'bento',
       kicker: 'Painel',
       title: 'Vendas, viagens e tesouraria',
       lead: 'Vendas, viagens, entradas e saídas, para o período que escolher.',
@@ -283,6 +293,7 @@ const setup: JobPage = {
   chapters: [
     {
       id: 'brands',
+      layout: 'bento',
       kicker: 'Marcas',
       title: 'Várias marcas numa só conta',
       lead: 'Gira uma segunda marca ou uma segunda empresa a partir do mesmo sítio, cada uma com o seu aspeto e a sua numeração.',
@@ -306,6 +317,7 @@ const setup: JobPage = {
     },
     {
       id: 'currencies',
+      layout: 'stage',
       kicker: 'Moedas',
       title: 'Várias moedas',
       lead: 'Lodges em dólares, um cliente em libras, a sua contabilidade em euros. Cada orçamento tem a sua moeda, e os totais somam-se na sua.',
@@ -330,6 +342,7 @@ const setup: JobPage = {
     },
     {
       id: 'team',
+      layout: 'bento',
       kicker: 'Equipa',
       title: 'Utilizadores e equipas',
       lead: 'Todos trabalham sobre os mesmos clientes, orçamentos e reservas.',

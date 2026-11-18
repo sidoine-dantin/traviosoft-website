@@ -29,6 +29,7 @@ const sell: JobPage = {
     },
     {
       id: 'catalogue',
+      layout: 'bento',
       kicker: 'Catalogue',
       title: 'Des produits avec des prix par date',
       lead: 'Hôtels, transferts, guides et activités, chacun avec des prix par date. Le devis utilise le prix des dates du voyage.',
@@ -43,6 +44,7 @@ const sell: JobPage = {
     },
     {
       id: 'quotes',
+      layout: 'stage',
       kicker: 'Devis',
       title: 'Marge, TVA et commission',
       lead: 'Définissez vos règles de prix une fois, et chaque ligne du devis les applique.',
@@ -58,6 +60,7 @@ const sell: JobPage = {
     },
     {
       id: 'send',
+      layout: 'flow',
       kicker: 'Envoi et relance',
       title: 'Envoi et relance',
       lead: 'Le devis part par e-mail dans la langue du client. Sept jours plus tard, il revient vers vous pour une relance.',
@@ -82,6 +85,7 @@ const sell: JobPage = {
     },
     {
       id: 'partners',
+      layout: 'bento',
       kicker: 'Agences partenaires',
       title: 'Vendez via des agences partenaires',
       lead: 'Envoyez le devis à l’agence partenaire, gardez son client sur le voyage et réglez sa commission à partir des mêmes chiffres.',
@@ -117,6 +121,7 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
+      layout: 'stage',
       kicker: 'Voyage confirmé',
       title: 'L’acompte confirme le voyage',
       lead: 'Enregistrez le premier paiement et le devis est accepté : le voyage confirmé est créé avec toutes les prestations déjà dedans.',
@@ -141,6 +146,7 @@ const book: JobPage = {
     },
     {
       id: 'suppliers',
+      layout: 'bento',
       kicker: 'Prestataires',
       title: 'Fiches et e-mails des prestataires',
       lead: 'Contacts, documents et e-mails, classés sur le prestataire et sur le voyage.',
@@ -166,6 +172,7 @@ const book: JobPage = {
     },
     {
       id: 'groups',
+      layout: 'bento',
       kicker: 'Groupes',
       title: 'Groupes et rooming lists',
       lead: 'Listes de voyageurs, prestations pour une partie du groupe et une rooming list par hôtel.',
@@ -212,6 +219,7 @@ const getPaid: JobPage = {
   chapters: [
     {
       id: 'schedule',
+      layout: 'flow',
       kicker: 'Échéancier',
       title: 'Acompte et solde avec échéances',
       lead: 'L’acompte et le solde sont fixés dans le devis, avec leurs échéances.',
@@ -235,6 +243,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'invoices',
+      layout: 'stage',
       kicker: 'Factures',
       title: 'Des factures depuis le voyage',
       lead: 'Les factures d’acompte et finale sont faites à partir du voyage, avec les montants du devis.',
@@ -250,6 +259,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'dashboard',
+      layout: 'bento',
       kicker: 'Tableau de bord',
       title: 'Ventes, voyages et trésorerie',
       lead: 'Ventes, voyages, encaissements et décaissements, sur la période de votre choix.',
@@ -283,6 +293,7 @@ const setup: JobPage = {
   chapters: [
     {
       id: 'brands',
+      layout: 'bento',
       kicker: 'Marques',
       title: 'Plusieurs marques dans un compte',
       lead: 'Gérez une deuxième marque ou une deuxième société au même endroit, chacune avec son identité et sa numérotation.',
@@ -306,6 +317,7 @@ const setup: JobPage = {
     },
     {
       id: 'currencies',
+      layout: 'stage',
       kicker: 'Devises',
       title: 'Plusieurs devises',
       lead: 'Des lodges en dollars, un client en livres, votre comptabilité en euros. Chaque devis a sa devise, et vos chiffres se totalisent dans la vôtre.',
@@ -330,6 +342,7 @@ const setup: JobPage = {
     },
     {
       id: 'team',
+      layout: 'bento',
       kicker: 'Équipe',
       title: 'Utilisateurs et équipes',
       lead: 'Tout le monde travaille sur les mêmes clients, devis et réservations.',

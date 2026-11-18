@@ -29,6 +29,7 @@ const sell: JobPage = {
     },
     {
       id: 'catalogue',
+      layout: 'bento',
       kicker: 'Catalogo',
       title: 'Prodotti con prezzi per data',
       lead: 'Hotel, transfer, guide e attività, ognuno con i suoi prezzi per data. Il preventivo usa il prezzo delle date del viaggio.',
@@ -43,6 +44,7 @@ const sell: JobPage = {
     },
     {
       id: 'quotes',
+      layout: 'stage',
       kicker: 'Preventivi',
       title: 'Margine, IVA e commissioni',
       lead: 'Imposta una volta le tue regole di prezzo, e ogni riga del preventivo le applica.',
@@ -58,6 +60,7 @@ const sell: JobPage = {
     },
     {
       id: 'send',
+      layout: 'flow',
       kicker: 'Invio e sollecito',
       title: 'Invio e sollecito',
       lead: 'Il preventivo parte via email nella lingua del cliente. Sette giorni dopo torna da te per un sollecito.',
@@ -82,6 +85,7 @@ const sell: JobPage = {
     },
     {
       id: 'partners',
+      layout: 'bento',
       kicker: 'Agenzie partner',
       title: 'Vendere tramite agenzie partner',
       lead: 'Fai il preventivo all’agenzia partner, tieni il suo cliente sul viaggio e liquida la sua commissione dagli stessi numeri.',
@@ -117,6 +121,7 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
+      layout: 'stage',
       kicker: 'Pratica',
       title: 'L’acconto apre la pratica',
       lead: 'Registra il primo pagamento e il preventivo è accettato: la pratica viene creata con tutti i servizi già dentro.',
@@ -141,6 +146,7 @@ const book: JobPage = {
     },
     {
       id: 'suppliers',
+      layout: 'bento',
       kicker: 'Fornitori',
       title: 'Schede ed email dei fornitori',
       lead: 'Contatti, documenti ed email, archiviati sul fornitore e sul viaggio.',
@@ -166,6 +172,7 @@ const book: JobPage = {
     },
     {
       id: 'groups',
+      layout: 'bento',
       kicker: 'Gruppi',
       title: 'Gruppi e rooming list',
       lead: 'Liste dei viaggiatori, servizi per una parte del gruppo e una rooming list per hotel.',
@@ -212,6 +219,7 @@ const getPaid: JobPage = {
   chapters: [
     {
       id: 'schedule',
+      layout: 'flow',
       kicker: 'Scadenze di pagamento',
       title: 'Acconto e saldo con le scadenze',
       lead: 'L’acconto e il saldo sono definiti nel preventivo, con le loro scadenze.',
@@ -235,6 +243,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'invoices',
+      layout: 'stage',
       kicker: 'Fatture',
       title: 'Fatture dal viaggio',
       lead: 'Le fatture di acconto e finali nascono dal viaggio, con gli importi del preventivo.',
@@ -250,6 +259,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'dashboard',
+      layout: 'bento',
       kicker: 'Dashboard',
       title: 'Vendite, viaggi e liquidità',
       lead: 'Vendite, viaggi, entrate e uscite, per il periodo che scegli.',
@@ -283,6 +293,7 @@ const setup: JobPage = {
   chapters: [
     {
       id: 'brands',
+      layout: 'bento',
       kicker: 'Marchi',
       title: 'Più marchi in un solo account',
       lead: 'Gestisci un secondo marchio o una seconda società dallo stesso posto, ognuno con il suo stile e la sua numerazione.',
@@ -306,6 +317,7 @@ const setup: JobPage = {
     },
     {
       id: 'currencies',
+      layout: 'stage',
       kicker: 'Valute',
       title: 'Più valute',
       lead: 'Lodge in dollari, un cliente in sterline, la tua contabilità in euro. Ogni preventivo ha la sua valuta, e i totali si sommano nella tua.',
@@ -330,6 +342,7 @@ const setup: JobPage = {
     },
     {
       id: 'team',
+      layout: 'bento',
       kicker: 'Team',
       title: 'Utenti e team',
       lead: 'Tutti lavorano sugli stessi clienti, preventivi e prenotazioni.',
