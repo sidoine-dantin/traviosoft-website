@@ -6,7 +6,16 @@ import { FaqList, FaqSchema } from '@/components/site/faq';
 import { BookDemo } from '@/components/site/book-demo';
 
 /** Cal.com event ("user/event"), opened over the page. Empty: booking by email. */
-const CAL_LINK = 'traviosoft/demo';
+// One Cal.com event per language: each event's "Interface language" is set to that language in Cal.com,
+// so the booking window matches the page whatever the visitor's browser or Cal.com account says.
+// Until an event exists, its language points at the original event.
+const CAL_LINKS: Record<string, string> = {
+  en: 'traviosoft/demo',
+  fr: 'traviosoft/demo',
+  es: 'traviosoft/demo',
+  it: 'traviosoft/demo',
+  pt: 'traviosoft/demo',
+};
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,6 +30,7 @@ export default async function DemoPage({ params }: Props) {
   setRequestLocale(locale);
   const c = getContent(locale);
   const d = c.demo;
+  const CAL_LINK = CAL_LINKS[locale] ?? CAL_LINKS.en;
   return (
     <>
       <section className="wrap" style={{ paddingBlock: 'clamp(56px, 8vw, 100px) 40px' }}>
