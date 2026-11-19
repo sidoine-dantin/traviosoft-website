@@ -383,7 +383,7 @@
 .chapter-bar a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 15px; font-weight: 650; color: var(--green); background: var(--white); border: 1px solid var(--line); white-space: nowrap; transition: background .2s, color .2s; }
 .chapter-bar a:hover { border-color: var(--green); }
 .chapter-bar a[aria-current="true"] { background: var(--green); border-color: var(--green); color: var(--cream); }
-@media (max-width: 920px) { html[data-bar="hidden"] .chapter-bar, html[data-bar="hidden"] .cmp-head { top: 0; } }
+@media (max-width: 920px) { html[data-bar="hidden"] .chapter-bar, html[data-bar="hidden"] .cmp-head, html[data-bar="hidden"] .explorer-nav { top: 0; } }
 
 /* ---------- next job ---------- */
 .next-job { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; text-decoration: none; }
@@ -664,29 +664,24 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .foot-linkbtn:hover { text-decoration: underline; }
 .screen .num, .frag .num { font-variant-numeric: normal; }
 
-/* ---------- product topics: one block, topic names as tabs, every topic the same shape ---------- */
-.explorer-grid { display: grid; gap: 48px; }
-.explorer-tabs { display: flex; gap: 0; }
-.explorer-tabs button { font: inherit; display: flex; align-items: baseline; gap: 10px; min-height: 56px; padding: 14px 4px; background: none; border: 0; color: var(--muted); font-size: 17px; font-weight: 650; text-align: left; cursor: pointer; transition: color .2s; }
-.explorer-tabs button:hover { color: var(--green); }
-.explorer-tabs button[aria-selected="true"] { color: var(--green); }
+/* ---------- product topics: all topics in a row down the page, their names in a list on the side that follows the scroll ---------- */
+.explorer-grid { display: grid; grid-template-columns: minmax(180px, 230px) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.explorer-nav { position: sticky; top: 120px; min-width: 0; }
+.explorer-nav ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-left: 1.5px solid var(--line); }
+.explorer-nav a { display: flex; align-items: baseline; gap: 10px; min-height: 52px; padding: 13px 0 13px 20px; position: relative; text-decoration: none; color: var(--muted); font-size: 17px; font-weight: 650; line-height: 1.35; transition: color .2s; }
+.explorer-nav a::before { content: ""; position: absolute; left: -1.5px; top: 8px; bottom: 8px; width: 4px; border-radius: 0 4px 4px 0; background: transparent; transition: background .2s; }
+.explorer-nav a:hover, .explorer-nav a[aria-current="true"] { color: var(--green); }
+.explorer-nav a[aria-current="true"]::before { background: var(--green); }
 .explorer-n { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: .02em; opacity: .7; }
-
-/* line: a row of names over one rule, the chosen one underlined in yellow */
-.explorer-line .explorer-tabs { border-bottom: 1.5px solid var(--line); gap: clamp(20px, 3vw, 40px); overflow-x: auto; scrollbar-width: none; }
-.explorer-line .explorer-tabs::-webkit-scrollbar { display: none; }
-.explorer-line .explorer-tabs button { flex: none; position: relative; white-space: nowrap; }
-.explorer-line .explorer-tabs button::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1.5px; height: 4px; border-radius: 4px 4px 0 0; background: transparent; transition: background .2s; }
-.explorer-line .explorer-tabs button[aria-selected="true"]::after { background: var(--green); }
-
-/* side: the names in a column on the left, the topic on the right */
-.explorer-side .explorer-grid { grid-template-columns: minmax(180px, 230px) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
-.explorer-side .explorer-tabs { flex-direction: column; border-left: 1.5px solid var(--line); position: sticky; top: 120px; }
-.explorer-side .explorer-tabs button { padding: 12px 0 12px 20px; min-height: 52px; position: relative; }
-.explorer-side .explorer-tabs button::before { content: ""; position: absolute; left: -1.5px; top: 8px; bottom: 8px; width: 4px; border-radius: 0 4px 4px 0; background: transparent; }
-.explorer-side .explorer-tabs button[aria-selected="true"]::before { background: var(--green); }
-.explorer-side .topic { grid-template-columns: 1fr; }
-.explorer-side .topic-visual { justify-content: flex-start; }
+.explorer-topics { display: grid; gap: clamp(140px, 14vw, 220px); }
+.explorer-topic { scroll-margin-top: 120px; }
+.explorer .topic { grid-template-columns: minmax(0, 1fr); }
+.explorer .topic-visual { justify-content: flex-start; position: static; }
+@media (min-width: 1240px) {
+  .explorer .topic { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .explorer .topic-visual { position: sticky; top: 140px; justify-content: center; }
+  .explorer .topic-points { grid-template-columns: 1fr; }
+}
 
 .topic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
 .topic-copy .h2 { color: var(--green); margin: 0 0 14px; }
@@ -696,14 +691,17 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .topic-points h3 { font-size: 17px; font-weight: 650; line-height: 1.35; margin: 0 0 6px; }
 .topic-points p { color: var(--muted); font-size: 15.5px; }
 .topic-visual { display: flex; justify-content: center; position: sticky; top: 140px; min-width: 0; }
-.explorer-next { margin-top: 48px; font: inherit; font-weight: 650; font-size: 16px; color: var(--green); background: none; border: 1.5px solid var(--green); border-radius: 999px; min-height: 48px; padding: 0 22px; cursor: pointer; }
-.explorer-next:hover { background: var(--green); color: var(--cream); }
 
 @media (max-width: 900px) {
-  .explorer-side .explorer-grid { grid-template-columns: 1fr; }
-  .explorer-side .explorer-tabs { flex-direction: row; border-left: 0; border-bottom: 1.5px solid var(--line); position: static; overflow-x: auto; scrollbar-width: none; gap: 24px; }
-  .explorer-side .explorer-tabs button { flex: none; white-space: nowrap; padding: 14px 4px; }
-  .explorer-side .explorer-tabs button::before { left: 0; right: 0; top: auto; bottom: -1.5px; width: auto; height: 4px; border-radius: 4px 4px 0 0; }
+  .explorer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .explorer-nav { top: 68px; z-index: 40; margin-inline: calc(var(--gutter) * -1); background: var(--cream); border-bottom: 1.5px solid var(--line); transition: top .25s ease; }
+  .explorer-nav ol { flex-direction: row; border-left: 0; overflow-x: auto; scrollbar-width: none; gap: 24px; padding-inline: var(--gutter); }
+  .explorer-nav ol::-webkit-scrollbar { display: none; }
+  .explorer-nav li { flex: none; }
+  .explorer-nav a { white-space: nowrap; padding: 12px 2px; min-height: 48px; font-size: 16px; }
+  .explorer-nav a::before { left: 0; right: 0; top: auto; bottom: -1.5px; width: auto; height: 4px; border-radius: 4px 4px 0 0; }
+  .explorer-topic { scroll-margin-top: 140px; }
+  .explorer-topics { gap: 120px; }
   .topic { grid-template-columns: 1fr; }
   .topic-visual { position: static; }
 }

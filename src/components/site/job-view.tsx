@@ -5,7 +5,6 @@ import { FaqList, FaqSchema } from './faq';
 import { ChapterExplorer } from './chapter-explorer';
 import type { Chapter } from '@/content/types';
 
-const TABS = process.env.NEXT_PUBLIC_TOPIC_TABS === 'side' ? 'side' : 'line';
 
 const ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup'];
 
@@ -25,7 +24,7 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
         </div>
       </section>
 
-      <ChapterExplorer labels={j.chapters.map(ch => ch.kicker)} label={c.common.onThisPage} next={c.common.next} variant={TABS}>
+      <ChapterExplorer labels={j.chapters.map(ch => ch.kicker)} label={c.common.onThisPage}>
         {j.chapters.map(ch => <Topic key={ch.id} ch={ch} c={c} />)}
       </ChapterExplorer>
 

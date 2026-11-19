@@ -1,57 +1,61 @@
 'use client';
 
-import { Children, useId, useRef, useState, type ReactNode } from 'react';
+import { Children, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 
-type Props = { labels: string[]; label: string; next: string; variant?: 'line' | 'side'; children: ReactNode };
+type Props = { labels: string[]; label: string; children: ReactNode };
 
-/** The topics of a product page in one block: the topic names are tabs, one topic shows at a time. */
-export function ChapterExplorer({ labels, label, next, variant = 'line', children }: Props) {
+/**
+ * The topics of a product page, one after the other. The topic names stay in a list on the side
+ * (a row on top on phones); the one being read is marked as the visitor scrolls, and a name takes
+ * the visitor to its topic.
+ */
+export function ChapterExplorer({ labels, label, children }: Props) {
   const [on, setOn] = useState(0);
-  const id = useId();
-  const top = useRef<HTMLDivElement>(null);
-  const panels = Children.toArray(children);
-  const go = (i: number, scroll = false) => {
-    setOn(i);
-    document.getElementById(`${id}-t${i}`)?.focus({ preventScroll: true });
-    if (scroll) top.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  const id = useId().replace(/:/g, '');
+  const nav = useRef<HTMLElement>(null);
+  const topics = Children.toArray(children);
+
+  useEffect(() => {
+    const els = labels.map((_, i) => document.getElementById(`${id}-p${i}`)).filter(Boolean) as HTMLElement[];
+    // The topic that crosses a line a third of the way down the screen is the one being read.
+    const pick = () => {
+      const line = window.innerHeight / 3;
+      let cur = 0;
+      els.forEach((el, i) => { if (el.getBoundingClientRect().top <= line) cur = i; });
+      setOn(cur);
+    };
+    pick();
+    window.addEventListener('scroll', pick, { passive: true });
+    window.addEventListener('resize', pick);
+    return () => { window.removeEventListener('scroll', pick); window.removeEventListener('resize', pick); };
+  }, [id, labels]);
+
+  // On phones the names are a row that scrolls sideways: keep the current one in view.
+  useEffect(() => {
+    const row = nav.current?.querySelector('ol');
+    const link = row?.children[on] as HTMLElement | undefined;
+    if (!row || !link || row.scrollWidth <= row.clientWidth) return;
+    row.scrollTo({ left: link.offsetLeft - 16, behavior: 'smooth' });
+  }, [on]);
+
   return (
-    <section className={`band explorer explorer-${variant}`}>
-      <div className="wrap explorer-grid" ref={top}>
-        <div className="explorer-tabs" role="tablist" aria-label={label} aria-orientation={variant === 'side' ? 'vertical' : 'horizontal'}>
-          {labels.map((l, i) => (
-            <button
-              key={l}
-              type="button"
-              role="tab"
-              id={`${id}-t${i}`}
-              aria-selected={on === i}
-              aria-controls={`${id}-p${i}`}
-              tabIndex={on === i ? 0 : -1}
-              onClick={() => go(i)}
-              onKeyDown={e => {
-                const back = e.key === 'ArrowLeft' || e.key === 'ArrowUp';
-                const fwd = e.key === 'ArrowRight' || e.key === 'ArrowDown';
-                if (!back && !fwd) return;
-                e.preventDefault();
-                go((on + (fwd ? 1 : -1) + labels.length) % labels.length);
-              }}
-            >
-              <span className="explorer-n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-              <span>{l}</span>
-            </button>
-          ))}
-        </div>
-        <div className="explorer-panels">
-          {panels.map((p, i) => (
-            <div key={i} role="tabpanel" id={`${id}-p${i}`} aria-labelledby={`${id}-t${i}`} hidden={on !== i}>
-              {p}
-              {i < labels.length - 1 && (
-                <button type="button" className="explorer-next" onClick={() => go(i + 1, true)}>
-                  {next}: {labels[i + 1]} <span aria-hidden="true">→</span>
-                </button>
-              )}
-            </div>
+    <section className="band explorer">
+      <div className="wrap explorer-grid">
+        <nav className="explorer-nav" aria-label={label} ref={nav}>
+          <ol>
+            {labels.map((l, i) => (
+              <li key={l}>
+                <a href={`#${id}-p${i}`} aria-current={on === i ? 'true' : undefined}>
+                  <span className="explorer-n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{l}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+        <div className="explorer-topics">
+          {topics.map((t, i) => (
+            <div key={i} id={`${id}-p${i}`} className="explorer-topic">{t}</div>
           ))}
         </div>
       </div>
