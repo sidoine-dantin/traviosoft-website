@@ -2,15 +2,15 @@ import type { JobPage, JobSlug } from '../types';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Sell: requests, catalogue and quotes with your margins | Traviosoft',
+  metaTitle: 'Sell: requests, catalog and quotes with your margins | Traviosoft',
   metaDescription:
-    'Every request in one list, a catalogue with season prices and several suppliers, quotes built with your margin, VAT and commission, sent in the client’s language with a follow-up after 7 days.',
+    'Every request in one list, a catalog with season prices and several suppliers, quotes built with your margin, VAT and commission, sent in the client’s language with a follow-up after 7 days.',
   name: 'Sell',
   menuLine: 'From the first request to the accepted quote',
   step: '1 of 4',
-  heroTitle: 'Requests, catalogue and quotes',
+  heroTitle: 'Requests, catalog and quotes',
   heroLead:
-    'Every request in one list, a catalogue with your rates by season, and quotes built from it with your margin and commission.',
+    'Every request in one list, a catalog with your rates by season, and quotes built from it with your margin and commission.',
   heroVisual: 'quote',
   chapters: [
     {
@@ -29,7 +29,7 @@ const sell: JobPage = {
     },
     {
       id: 'catalogue',
-      kicker: 'Catalogue',
+      kicker: 'Catalog',
       title: 'Products with prices by date',
       lead: 'Hotels, transfers, guides and activities, each with prices by date. A quote uses the price for the travel dates.',
       visual: 'catalogue',
@@ -95,10 +95,10 @@ const sell: JobPage = {
     }
   ],
   faq: [
-    { q: 'Can I import my current catalogue?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
+    { q: 'Can I import my current catalog?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
     { q: 'Can several suppliers sell the same hotel or service?', a: ['Yes. A product can have several suppliers, each with its own rates. You choose the supplier per trip.'] },
     { q: 'What does my client see?', a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team.'] },
-    { q: 'Do I have to use the catalogue for every quote?', a: ['A quote can mix catalogue lines and one-off lines.'] }
+    { q: 'Do I have to use the catalog for every quote?', a: ['A quote can mix catalog lines and one-off lines.'] }
   ]
 };
 
@@ -300,7 +300,7 @@ const setup: JobPage = {
       visual: 'languages',
       features: [
         { title: 'Documents per language', body: ['Each client has a language, and every document follows it.'] },
-        { title: 'Automatic translations', body: ['Product descriptions in your catalogue are translated for you, and you can correct any translation.'] },
+        { title: 'Automatic translations', body: ['Product descriptions in your catalog are translated for you, and you can correct any translation.'] },
         { title: 'Email templates per language', body: ['Your own wording in each language, used automatically.'] }
       ]
     },
@@ -311,7 +311,7 @@ const setup: JobPage = {
       lead: 'Lodges in dollars, a client in pounds, your books in euros. Each quote has its own currency, and your numbers add up in yours.',
       visual: 'currencies',
       features: [
-        { title: 'A currency per client and per quote', body: ['Quote a British client in pounds and an American partner in dollars, from the same catalogue.'], premium: true },
+        { title: 'A currency per client and per quote', body: ['Quote a British client in pounds and an American partner in dollars, from the same catalog.'], premium: true },
         { title: 'Supplier prices in their currency', body: ['Keep each rate in the currency the supplier invoices in. The quote converts it at the day’s rate, with a safety margin you choose.'], premium: true },
         { title: 'Daily exchange rates', body: ['European Central Bank rates are fetched every working day, or you set your own.'], premium: true },
         { title: 'Your books in one currency', body: ['Invoices, payments, margins and reports add up in your accounting currency, with exchange gains and losses worked out for you.'], premium: true }
@@ -360,7 +360,7 @@ const setup: JobPage = {
       features: [
         { title: 'Your website and accounting', body: ['Your website, your accounting tool or a developer you work with can read and write your Traviosoft data.'], premium: true },
         { title: 'Your AI tools', body: ['Connect the AI assistant you already use, such as Claude or ChatGPT, to your Traviosoft data, with the same rights as the person who connects it.'], premium: true },
-        { title: 'The assistant inside Traviosoft', body: ['Ask what needs you today, have a quote prepared from your catalogue, or turn a supplier price list into catalogue prices. Every change waits for your OK.'], premium: true }
+        { title: 'The assistant inside Traviosoft', body: ['Ask what needs you today, have a quote prepared from your catalog, or turn a supplier price list into catalog prices. Every change waits for your OK.'], premium: true }
       ]
     }
   ],

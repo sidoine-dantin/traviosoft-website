@@ -38,7 +38,7 @@ export const pricing: SiteContent['pricing'] = {
       title: 'Sell',
       rows: [
         { f: 'Requests and quotes with your margin and commission', classic: true, premium: true },
-        { f: 'Catalogue with season prices', classic: true, premium: true },
+        { f: 'Catalog with season prices', classic: true, premium: true },
         { f: 'Partner agencies and commission statements', classic: true, premium: true },
         { f: 'Proposal page and day-by-day itinerary, with your logo and colours', classic: true, premium: true },
         { f: 'Documents in the client’s language', classic: true, premium: true },
@@ -122,7 +122,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'What does the import include?',
-      a: [`Your catalogue with one price per product, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Seasonal rates, Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
+      a: [`Your catalog with one price per product, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Seasonal rates, Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
     }
   ]
 };
@@ -200,7 +200,7 @@ export const switching: SiteContent['switching'] = {
   ],
   importTitle: 'What comes over',
   importParts: [
-    { title: 'Included in the import price', body: 'Your catalogue with one price per product, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
+    { title: 'Included in the import price', body: 'Your catalog with one price per product, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
     { title: 'On quote', body: 'Seasonal rates, trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
   ],
   seasonTitle: 'Will it disrupt my season?',
@@ -265,7 +265,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Is there an AI assistant?',
-          a: ['Yes, as an option on both plans, with usage limits. Ask it what needs you today, have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices; every change waits for your OK. Connecting the AI assistant you already use to your Traviosoft data is included in both plans.']
+          a: ['Yes, as an option on both plans, with usage limits. Ask it what needs you today, have it prepare a quote from your catalog or turn a supplier price list into catalog prices; every change waits for your OK. Connecting the AI assistant you already use to your Traviosoft data is included in both plans.']
         }
       ]
     },
@@ -307,7 +307,7 @@ export const faqPage: SiteContent['faqPage'] = {
       title: 'Switching',
       items: [
         {
-          q: 'Can I import my current catalogue?',
+          q: 'Can I import my current catalog?',
           a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.']
         },
         {

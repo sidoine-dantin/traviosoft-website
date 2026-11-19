@@ -73,7 +73,7 @@ export const visuals: SiteContent['visuals'] = {
   quoted: 'Quoted',
   waiting: 'Waiting',
   won: 'Accepted',
-  catalogue: 'Catalogue · Hotel Alfonso XIII',
+  catalogue: 'Catalog · Hotel Alfonso XIII',
   season: 'High season',
   suppliers: 'suppliers',
   margin: 'margin',

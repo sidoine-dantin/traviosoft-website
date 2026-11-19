@@ -146,14 +146,14 @@ const compares: Cmp[] = [
     metaDescription:
       'GIAV is long-established Spanish software for travel agencies. We compare its focus with Traviosoft for inbound and tailor-made travel.',
     title: 'Traviosoft vs GIAV: two ways to run a travel agency',
-    lead: 'GIAV is travel agency management software with many years in Spain and a long record with retail agencies. Traviosoft is built for inbound and tailor-made travel. If you mainly sell catalogue trips, GIAV may fit better.',
+    lead: 'GIAV is travel agency management software with many years in Spain and a long record with retail agencies. Traviosoft is built for inbound and tailor-made travel. If you mainly sell catalog trips, GIAV may fit better.',
     card: 'A long-established tool for retail agencies and one for tailor-made and inbound travel.',
     basis:
       'GIAV details come from directories and trade press. GIAV presents its prices and plans in a demo, so we describe its focus. Traviosoft details are those on our site on 3 November 2026.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Travel agency management in Spain, mostly retail agencies'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
-      ['Known for', 'Quotes with margin per line, a seasonal catalogue, a client itinerary page and REAV', 'A long record with travel agencies in Spain']
+      ['Known for', 'Quotes with margin per line, a seasonal catalog, a client itinerary page and REAV', 'A long record with travel agencies in Spain']
     ],
     otherBetter: [
       'You are a retail agency selling tickets, hotels and wholesaler packages. A tool built for that work usually fits better.',
@@ -201,7 +201,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'Your daily work is calculating, sending and following up travel quotes with margin.',
-      'You need a catalogue with seasonal prices and several suppliers per service.',
+      'You need a catalog with seasonal prices and several suppliers per service.',
       'You want a booking list per trip, service sheets and a client itinerary.',
       'Your agency applies REAV and you want the labels on every invoice automatically.'
     ],
@@ -445,7 +445,7 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Covers the whole trip: requests, a catalogue with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV for Spain. It shows its price, and setup and import are included with yearly billing.'
+      text: 'Covers the whole trip: requests, a catalog with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV for Spain. It shows its price, and setup and import are included with yearly billing.'
     },
     { type: 'h3', text: 'Ezus' },
     {
@@ -673,7 +673,7 @@ const fromExcel: Article = {
     {
       type: 'list',
       items: [
-        'Prices are kept by season and by supplier, and a quote reads them from the catalogue.',
+        'Prices are kept by season and by supplier, and a quote reads them from the catalog.',
         'Pricing rules are set once and apply to every quote line.',
         'Each quote version is kept with the trip.',
         'Bookings, payments and invoices are linked to the same trip.',
@@ -716,7 +716,7 @@ const aiTools: Article = {
     { type: 'h2', text: 'The built-in assistant', id: 'assistant' },
     {
       type: 'p',
-      text: 'The assistant sits in Traviosoft and works with the same rights as the person using it. Ask what needs you today. Have it prepare a quote from your catalogue or turn a supplier price list into catalogue prices. It can also tick off booking tasks or list the payments that are due. It is an option on both plans, with usage limits, and you switch it on per person.'
+      text: 'The assistant sits in Traviosoft and works with the same rights as the person using it. Ask what needs you today. Have it prepare a quote from your catalog or turn a supplier price list into catalog prices. It can also tick off booking tasks or list the payments that are due. It is an option on both plans, with usage limits, and you switch it on per person.'
     },
     {
       type: 'p',
