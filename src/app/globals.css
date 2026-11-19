@@ -435,7 +435,7 @@ a.card:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -26px rgba(1
 .cmp-table tr { display: grid; grid-template-columns: var(--cmp-cols); gap: 24px; align-items: center; padding: 18px 16px; border-radius: 12px; }
 .cmp-table tbody tr:nth-child(odd) { background: var(--tint); }
 .cmp-table th { text-align: left; font-weight: 500; font-size: 17px; line-height: 1.45; color: var(--ink); }
-.cmp-cell { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; line-height: 1.4; color: var(--ink); }
+.cmp-cell { display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 1.4; color: var(--ink); }
 .cmp-cell svg { flex: none; width: 24px; height: 24px; }
 .cmp-yes circle { fill: var(--green); }
 .cmp-yes path { fill: none; stroke: var(--cream); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
