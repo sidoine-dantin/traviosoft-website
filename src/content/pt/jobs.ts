@@ -106,25 +106,25 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Reservar e acompanhar a viagem: reservas, fornecedores, itinerário do cliente | Traviosoft',
   metaDescription:
-    'O primeiro pagamento transforma o orçamento em viagem confirmada. Os estados de reserva, viagem e pagamento atualizam-se sozinhos, os emails dos fornecedores ficam guardados na viagem e o seu cliente recebe um itinerário dia a dia.',
+    'O primeiro pagamento transforma o orçamento numa reserva. Os estados de reserva, viagem e pagamento atualizam-se sozinhos, os emails dos fornecedores ficam guardados na viagem e o seu cliente recebe um itinerário dia a dia.',
   name: 'Reservar e acompanhar',
   menuLine: 'Do orçamento aceite à viagem concluída',
   step: '2 de 4',
-  heroTitle: 'Viagens confirmadas, reservas e itinerário do cliente',
+  heroTitle: 'Reservas, fornecedores e itinerário do cliente',
   heroLead:
-    'Quando o cliente paga o adiantamento, o orçamento torna-se uma viagem confirmada com todos os serviços a reservar. Cada viagem tem a sua lista de reservas, os emails dos fornecedores e uma página de itinerário para o viajante.',
+    'Quando o cliente paga o adiantamento, o orçamento torna-se uma reserva com todos os serviços a reservar. Cada viagem tem a sua lista de serviços a reservar, os emails dos fornecedores e uma página de itinerário para o viajante.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
-      kicker: 'Viagem confirmada',
-      title: 'O adiantamento confirma a viagem',
-      lead: 'Registe o primeiro pagamento e o orçamento fica aceite: a viagem confirmada é criada com todos os serviços já incluídos.',
+      kicker: 'Reserva',
+      title: 'O adiantamento cria a reserva',
+      lead: 'Registe o primeiro pagamento e o orçamento fica aceite: a reserva é criada com todos os serviços já incluídos.',
       visual: 'confirm',
       features: [
-        { title: 'Um só passo', body: ['O primeiro pagamento aceita o orçamento, confirma a viagem e lista todos os serviços a reservar, de uma só vez.'] },
+        { title: 'Um só passo', body: ['O primeiro pagamento aceita o orçamento, cria a reserva e lista todos os serviços a reservar, de uma só vez.'] },
         { title: 'Tudo a partir do orçamento', body: ['Viajantes, datas, serviços e preços vêm do orçamento aceite, exatamente como o cliente os viu.'] },
-        { title: 'Alterações depois da confirmação', body: ['O cliente acrescenta uma noite? Atualize a viagem e as reservas acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
+        { title: 'Alterações depois da confirmação', body: ['O cliente acrescenta uma noite? Atualize a reserva e os serviços acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
       ]
     },
     {

@@ -247,7 +247,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'O que é o Traviosoft?',
-          a: ['Um software de gestão web para agências de viagens à medida e DMC. Cobre o pedido, o orçamento, a viagem confirmada e as reservas, o itinerário do cliente, os pagamentos e as faturas.']
+          a: ['Um software de gestão web para agências de viagens à medida e DMC. Cobre o pedido, o orçamento, a reserva com os serviços a reservar, o itinerário do cliente, os pagamentos e as faturas.']
         },
         {
           q: 'Vários fornecedores podem vender o mesmo hotel ou serviço?',
