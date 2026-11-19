@@ -45,6 +45,7 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 - No pill rows, no section numbers, no "1 of 4" breadcrumbs.
 - Cards and paragraphs do not all have the same length. Some are a few words, some longer.
 - No "Premium" pill next to features. Which plan includes what appears only on the Pricing page.
+- **No separator lines, ever.** No border between items, no hairline under a header or a sticky bar, no rail beside a list, no row lines in tables or product mocks, no `<hr>`. Separate things with space and grouping, type (weight, size, a green title), soft tinted surfaces (`--tint` zebra rows, rounded `--white` panels on the page background, a background change between sections), a green dot for the current item, and a soft green-tinted shadow under a sticky bar. Lines that carry meaning stay: the dotted route of a timeline, field and button outlines.
 
 ## 5. Shape and motion
 
