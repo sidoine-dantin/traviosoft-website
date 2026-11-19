@@ -57,11 +57,7 @@ export type Chapter = {
   lead: string;
   visual: VisualKey;
   features: Feature[];
-  /** how the chapter is laid out; 'tabs' when not set */
-  layout?: ChapterLayout;
 };
-
-export type ChapterLayout = 'tabs' | 'bento' | 'flow' | 'stage';
 
 export type Faq = { q: string; a: string[] };
 
