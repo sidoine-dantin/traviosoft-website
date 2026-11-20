@@ -3,12 +3,14 @@ import type { JobSlug, SiteContent } from '@/content/types';
 import { Visual } from './visuals';
 import { FaqList, FaqSchema } from './faq';
 import { ChapterExplorer } from './chapter-explorer';
+import { TopicVideo } from './topic-video';
+import { topicVideo } from '@/content/topic-videos';
 import type { Chapter } from '@/content/types';
 
 
 const ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup'];
 
-export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
+export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; locale: string }) {
   const j = c.jobs[slug];
   const next = ORDER[(ORDER.indexOf(slug) + 1) % ORDER.length];
   const nj = c.jobs[next];
@@ -25,7 +27,7 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
       </section>
 
       <ChapterExplorer labels={j.chapters.map(ch => ch.kicker)} label={c.common.onThisPage}>
-        {j.chapters.map(ch => <Topic key={ch.id} ch={ch} c={c} />)}
+        {j.chapters.map(ch => <Topic key={ch.id} ch={ch} c={c} locale={locale} />)}
       </ChapterExplorer>
 
       <section className="band">
@@ -53,7 +55,8 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
 }
 
 /** Every topic has the same shape: title, one line, the points, and the screenshot beside them. */
-function Topic({ ch, c }: { ch: Chapter; c: SiteContent }) {
+function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string }) {
+  const video = topicVideo(locale, ch.id);
   return (
     <div className="topic" id={ch.id}>
       <div className="topic-copy">
@@ -65,7 +68,11 @@ function Topic({ ch, c }: { ch: Chapter; c: SiteContent }) {
           ))}
         </ul>
       </div>
-      <div className="topic-visual"><Visual k={ch.visual} v={c.visuals} /></div>
+      <div className="topic-visual">
+        {video
+          ? <TopicVideo src={video} label={ch.title} pause={c.common.pauseVideo} play={c.common.playVideo} />
+          : <Visual k={ch.visual} v={c.visuals} />}
+      </div>
     </div>
   );
 }

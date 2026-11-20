@@ -700,3 +700,12 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
   .topic-visual { position: static; }
 }
 @media (max-width: 600px) { .topic-points { grid-template-columns: 1fr; } }
+
+/* ---------- topic video: a silent loop of the app beside the topic text ---------- */
+.topic-video { position: relative; margin: 0; width: 100%; max-width: 560px; aspect-ratio: 1; }
+.topic-video video { display: block; width: 100%; height: 100%; object-fit: contain; background: var(--cream); border-radius: 24px; }
+.topic-video-btn { position: absolute; right: 14px; bottom: 14px; width: 44px; height: 44px; border-radius: 50%; border: 0; display: grid; place-items: center; background: rgba(1, 93, 71, .1); color: var(--green); cursor: pointer; opacity: .75; transition: opacity .2s, background .2s; }
+.topic-video-btn svg { width: 18px; height: 18px; fill: currentColor; }
+.topic-video:hover .topic-video-btn, .topic-video-btn:focus-visible, .topic-video-btn[data-stopped] { opacity: 1; }
+.topic-video-btn:hover { background: rgba(1, 93, 71, .18); }
+.topic-video-btn:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }

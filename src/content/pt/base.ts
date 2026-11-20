@@ -50,6 +50,8 @@ export const common: SiteContent['common'] = {
   premium: 'Premium',
   next: 'Seguinte',
   onThisPage: 'Nesta página',
+  pauseVideo: 'Pausar o vídeo',
+  playVideo: 'Reproduzir o vídeo',
   updated: 'Última atualização',
   readMore: 'Ler',
   faqTitle: 'Perguntas',

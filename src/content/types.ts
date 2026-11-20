@@ -210,7 +210,7 @@ export type SiteContent = {
     consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };
   };
   common: {
-    premium: string; next: string; onThisPage: string; updated: string; readMore: string;
+    premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
     notFound: { title: string; body: string };
   };
