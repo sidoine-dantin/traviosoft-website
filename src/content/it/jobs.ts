@@ -117,13 +117,13 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
-      kicker: 'Pratica',
-      title: 'L’acconto apre la pratica',
-      lead: 'Registra il primo pagamento e il preventivo è accettato: la pratica viene creata con tutti i servizi già dentro.',
+      kicker: 'Prenotazioni',
+      title: 'Ogni prenotazione pronta per il viaggio',
+      lead: 'Appena il cliente paga l’acconto, tutti i servizi del viaggio sono in un’unica lista. Un clic invia le richieste di prenotazione, i fornitori confermano e il viaggio è pronto.',
       visual: 'confirm',
       features: [
-        { title: 'Un solo passaggio', body: ['Il primo pagamento accetta il preventivo, crea la pratica ed elenca tutti i servizi da prenotare, in una volta sola.'] },
-        { title: 'Tutto dal preventivo', body: ['Viaggiatori, date, servizi e prezzi arrivano dal preventivo accettato, esattamente come li ha visti il cliente.'] },
+        { title: 'Tutti i servizi in una lista', body: ['Il preventivo accettato porta l’hotel, la guida, l’auto e le visite, con date, viaggiatori e prezzi. Niente da riscrivere.'] },
+        { title: 'Richieste di prenotazione in un clic', body: ['Ogni fornitore riceve la sua richiesta di prenotazione via email, con le date e i viaggiatori. Le risposte vengono archiviate sul viaggio.'] },
         { title: 'Modifiche dopo la conferma', body: ['Il cliente aggiunge una notte? Aggiorna il viaggio e la pratica si adegua, così il team lavora sempre sull’ultima versione.'] }
       ]
     },

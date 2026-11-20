@@ -117,13 +117,13 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
-      kicker: 'Order',
-      title: 'The deposit creates the order',
-      lead: 'Record the first payment and the quote is accepted: the order is created with every service already on it.',
+      kicker: 'Bookings',
+      title: 'Every booking ready for the trip',
+      lead: 'Once the client pays the deposit, every service of the trip is on one list. One click sends the booking requests, the suppliers confirm, and the trip is ready.',
       visual: 'confirm',
       features: [
-        { title: 'One step', body: ['The first payment accepts the quote, creates the order and lists every service to book, all at once.'] },
-        { title: 'Everything from the quote', body: ['Travellers, dates, services and prices come from the accepted quote, exactly as the client saw them.'] },
+        { title: 'Every service on one list', body: ['The accepted quote brings the hotel, the guide, the car and the visits, with their dates, travellers and prices. Nothing to type again.'] },
+        { title: 'Booking requests in one click', body: ['Each supplier gets its booking request by email, with the dates and the travellers. Their replies are filed on the trip.'] },
         { title: 'Changes after confirmation', body: ['The client adds a night? Update the trip and the order follows, so the team works from the latest version.'] }
       ]
     },

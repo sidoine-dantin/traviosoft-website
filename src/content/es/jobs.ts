@@ -117,13 +117,13 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
-      kicker: 'Reserva',
-      title: 'La señal crea la reserva',
-      lead: 'Registra el primer pago y el presupuesto queda aceptado: se crea la reserva con todos los servicios ya dentro.',
+      kicker: 'Reservas',
+      title: 'Cada reserva lista para el viaje',
+      lead: 'En cuanto el cliente paga la señal, todos los servicios del viaje están en una sola lista. Un clic envía las solicitudes de reserva, los proveedores confirman y el viaje está listo.',
       visual: 'confirm',
       features: [
-        { title: 'Un solo paso', body: ['El primer pago acepta el presupuesto, crea la reserva y lista todos los servicios por reservar, todo a la vez.'] },
-        { title: 'Todo viene del presupuesto', body: ['Viajeros, fechas, servicios y precios salen del presupuesto aceptado, tal como los vio el cliente.'] },
+        { title: 'Todos los servicios en una lista', body: ['El presupuesto aceptado trae el hotel, el guía, el coche y las visitas, con sus fechas, viajeros y precios. Nada que volver a escribir.'] },
+        { title: 'Solicitudes de reserva en un clic', body: ['Cada proveedor recibe su solicitud de reserva por email, con las fechas y los viajeros. Sus respuestas se archivan en el viaje.'] },
         { title: 'Cambios tras la confirmación', body: ['¿El cliente añade una noche? Actualiza el viaje y la reserva lo sigue, así el equipo trabaja siempre con la última versión.'] }
       ]
     },

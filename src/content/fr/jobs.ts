@@ -117,13 +117,13 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
-      kicker: 'Voyage confirmé',
-      title: 'L’acompte confirme le voyage',
-      lead: 'Enregistrez le premier paiement et le devis est accepté : le voyage confirmé est créé avec toutes les prestations déjà dedans.',
+      kicker: 'Réservations',
+      title: 'Chaque réservation prête pour le voyage',
+      lead: 'Dès que le client paie l’acompte, toutes les prestations du voyage sont sur une seule liste. Un clic envoie les demandes de réservation, les prestataires confirment, et le voyage est prêt.',
       visual: 'confirm',
       features: [
-        { title: 'Une seule étape', body: ['Le premier paiement accepte le devis, confirme le voyage et liste toutes les prestations à réserver, en une fois.'] },
-        { title: 'Tout vient du devis', body: ['Voyageurs, dates, prestations et prix viennent du devis accepté, tels que le client les a vus.'] },
+        { title: 'Toutes les prestations sur une liste', body: ['Le devis accepté apporte l’hôtel, le guide, la voiture et les visites, avec leurs dates, voyageurs et prix. Rien à ressaisir.'] },
+        { title: 'Les demandes de réservation en un clic', body: ['Chaque prestataire reçoit sa demande de réservation par e-mail, avec les dates et les voyageurs. Ses réponses sont classées sur le voyage.'] },
         { title: 'Changements après confirmation', body: ['Le client ajoute une nuit ? Mettez le devis à jour et le voyage confirmé suit, pour que l’équipe travaille toujours sur la dernière version.'] }
       ]
     },

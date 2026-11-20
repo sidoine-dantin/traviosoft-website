@@ -117,13 +117,13 @@ const book: JobPage = {
   chapters: [
     {
       id: 'order',
-      kicker: 'Reserva',
-      title: 'O adiantamento cria a reserva',
-      lead: 'Registe o primeiro pagamento e o orçamento fica aceite: a reserva é criada com todos os serviços já incluídos.',
+      kicker: 'Reservas',
+      title: 'Cada reserva pronta para a viagem',
+      lead: 'Assim que o cliente paga o adiantamento, todos os serviços da viagem ficam numa só lista. Um clique envia os pedidos de reserva, os fornecedores confirmam e a viagem fica pronta.',
       visual: 'confirm',
       features: [
-        { title: 'Um só passo', body: ['O primeiro pagamento aceita o orçamento, cria a reserva e lista todos os serviços a reservar, de uma só vez.'] },
-        { title: 'Tudo a partir do orçamento', body: ['Viajantes, datas, serviços e preços vêm do orçamento aceite, exatamente como o cliente os viu.'] },
+        { title: 'Todos os serviços numa lista', body: ['O orçamento aceite traz o hotel, o guia, o carro e as visitas, com as datas, os viajantes e os preços. Nada para escrever de novo.'] },
+        { title: 'Pedidos de reserva num clique', body: ['Cada fornecedor recebe o seu pedido de reserva por e-mail, com as datas e os viajantes. As respostas ficam guardadas na viagem.'] },
         { title: 'Alterações depois da confirmação', body: ['O cliente acrescenta uma noite? Atualize a reserva e os serviços acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
       ]
     },

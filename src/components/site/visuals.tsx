@@ -167,10 +167,10 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
       return (
         <div className="grid-2" style={{ width: 420, maxWidth: '100%' }} role="img" aria-label={v.brands}>
           <div className="tile" style={{ background: 'var(--white)', border: '1px solid var(--line)', minHeight: 150, justifyContent: 'center', alignItems: 'center' }}>
-            <span style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 28, color: 'var(--green)', lineHeight: 1 }}>Sur & Co.</span>
+            <span style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 22, color: 'var(--green)', lineHeight: 1.15, textAlign: 'center' }}>{v.brandA}</span>
           </div>
           <div className="tile" style={{ background: 'var(--deep)', color: 'var(--cream)', minHeight: 150, justifyContent: 'center', alignItems: 'center' }}>
-            <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 30, lineHeight: 1 }}>Alma Events</span>
+            <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 22, lineHeight: 1.15, textAlign: 'center' }}>{v.brandB}</span>
           </div>
         </div>
       );
@@ -235,7 +235,7 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'settings':
       return (
         <Frag title={v.ex.settings}>
-          <Row a={v.brands} s="Sur & Co. · Alma Events" b={null} />
+          <Row a={v.brands} s={`${v.brandA} · ${v.brandB}`} b={null} />
           <Row a={v.ex.langs} s="ES · CA · EN · FR · IT" b={null} />
           <Row a={v.ex.currencies} s="EUR · GBP · USD" b={null} />
           <Row a={v.team} s={`3 ${v.seats}`} b={null} />
