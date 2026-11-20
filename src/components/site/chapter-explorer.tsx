@@ -1,25 +1,25 @@
 'use client';
 
-import { Children, useEffect, useId, useRef, useState, type ReactNode } from 'react';
+import { Children, useEffect, useId, useState, type ReactNode } from 'react';
 
-type Props = { labels: string[]; label: string; children: ReactNode };
+type Props = { titles: string[]; label: string; children: ReactNode };
 
 /**
- * The topics of a product page, one after the other. The topic names stay in a list on the side
- * (a row on top on phones); the one being read is marked as the visitor scrolls, and a name takes
- * the visitor to its topic.
+ * The topics of a product page, one after the other. Beside them, one large title follows the
+ * scroll: it shows the topic being read and slides to the next one as the visitor moves on.
+ * A counter and small dots above it say where the visitor is and take them to a topic. On phones the titles
+ * stay in the topics themselves.
  */
-export function ChapterExplorer({ labels, label, children }: Props) {
+export function ChapterExplorer({ titles, label, children }: Props) {
   const [on, setOn] = useState(0);
   const id = useId().replace(/:/g, '');
-  const nav = useRef<HTMLElement>(null);
   const topics = Children.toArray(children);
 
   useEffect(() => {
-    const els = labels.map((_, i) => document.getElementById(`${id}-p${i}`)).filter(Boolean) as HTMLElement[];
-    // The topic that crosses a line a third of the way down the screen is the one being read.
+    const els = titles.map((_, i) => document.getElementById(`${id}-p${i}`)).filter(Boolean) as HTMLElement[];
+    // The topic that crosses a line halfway down the screen is the one being read.
     const pick = () => {
-      const line = window.innerHeight / 3;
+      const line = window.innerHeight / 2;
       let cur = 0;
       els.forEach((el, i) => { if (el.getBoundingClientRect().top <= line) cur = i; });
       setOn(cur);
@@ -28,31 +28,32 @@ export function ChapterExplorer({ labels, label, children }: Props) {
     window.addEventListener('scroll', pick, { passive: true });
     window.addEventListener('resize', pick);
     return () => { window.removeEventListener('scroll', pick); window.removeEventListener('resize', pick); };
-  }, [id, labels]);
+  }, [id, titles]);
 
-  // On phones the names are a row that scrolls sideways: keep the current one in view.
-  useEffect(() => {
-    const row = nav.current?.querySelector('ol');
-    const link = row?.children[on] as HTMLElement | undefined;
-    if (!row || !link || row.scrollWidth <= row.clientWidth) return;
-    row.scrollTo({ left: link.offsetLeft - 16, behavior: 'smooth' });
-  }, [on]);
+  const n = String(titles.length).padStart(2, '0');
 
   return (
     <section className="band explorer">
       <div className="wrap explorer-grid">
-        <nav className="explorer-nav" aria-label={label} ref={nav}>
-          <ol>
-            {labels.map((l, i) => (
-              <li key={l}>
-                <a href={`#${id}-p${i}`} aria-current={on === i ? 'true' : undefined}>
-                  <span className="explorer-n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-                  <span>{l}</span>
-                </a>
-              </li>
+        <div className="explorer-side">
+          <div className="explorer-where">
+            <span className="explorer-n" aria-hidden="true">{String(on + 1).padStart(2, '0')} / {n}</span>
+            <nav className="explorer-dots" aria-label={label}>
+              <ol>
+                {titles.map((t, i) => (
+                  <li key={i}>
+                    <a href={`#${id}-p${i}`} aria-current={on === i ? 'true' : undefined}><span className="sr-only">{t}</span></a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </div>
+          <div className="explorer-titles" aria-hidden="true">
+            {titles.map((t, i) => (
+              <span key={i} className="explorer-title h2" data-pos={i < on ? 'past' : i > on ? 'next' : 'now'}>{t}</span>
             ))}
-          </ol>
-        </nav>
+          </div>
+        </div>
         <div className="explorer-topics">
           {topics.map((t, i) => (
             <div key={i} id={`${id}-p${i}`} className="explorer-topic">{t}</div>
