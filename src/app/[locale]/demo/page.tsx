@@ -8,13 +8,12 @@ import { BookDemo } from '@/components/site/book-demo';
 /** Cal.com event ("user/event"), opened over the page. Empty: booking by email. */
 // One Cal.com event per language: each event's "Interface language" is set to that language in Cal.com,
 // so the booking window matches the page whatever the visitor's browser or Cal.com account says.
-// Until an event exists, its language points at the original event.
 const CAL_LINKS: Record<string, string> = {
-  en: 'traviosoft/demo',
+  en: 'traviosoft/demo-en',
   fr: 'traviosoft/demo',
-  es: 'traviosoft/demo',
-  it: 'traviosoft/demo',
-  pt: 'traviosoft/demo',
+  es: 'traviosoft/demo-es',
+  it: 'traviosoft/demo-it',
+  pt: 'traviosoft/demo-pt',
 };
 
 type Props = { params: Promise<{ locale: string }> };
