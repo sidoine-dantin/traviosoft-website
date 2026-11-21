@@ -707,6 +707,13 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
   .explorer-topics { gap: 120px; }
   .topic { grid-template-columns: 1fr; }
   .topic-visual { position: static; }
+  /* on phones: the title, then the video, then the words */
+  .explorer .topic { gap: 0; }
+  .explorer .topic-copy { display: contents; }
+  .explorer .topic-copy .h2 { order: 0; margin-bottom: 4px; }
+  .explorer .topic-visual { order: 1; margin-bottom: 8px; }
+  .explorer .topic-copy .lead { order: 2; }
+  .explorer .topic-points { order: 3; }
 }
 @media (max-width: 600px) { .topic-points { grid-template-columns: 1fr; } }
 

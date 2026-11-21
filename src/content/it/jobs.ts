@@ -22,9 +22,7 @@ const sell: JobPage = {
       features: [
         { title: 'Stato di ogni richiesta', body: ['Ogni richiesta ha uno stato: nuova, preventivo inviato o in attesa di risposta.'] },
         { title: 'Una richiesta diventa un progetto', body: ['Quando una richiesta si fa concreta, diventa un progetto. Il cliente, le date, i viaggiatori e le tue note restano insieme per tutto il viaggio.'] },
-        { title: 'Una scheda per cliente', body: ['Scrivi un nome o un’email che hai già e Traviosoft ti mostra il cliente esistente: ogni cliente ha un solo storico.'] },
-        { title: 'Promemoria', body: ['Metti una data su una richiesta. Torna sulla tua dashboard il giorno giusto.'] },
-        { title: 'Motivi delle richieste non andate a buon fine', body: ['Chiudi una richiesta con un motivo: prezzo, tempi, destinazione.'] }
+        { title: 'Promemoria', body: ['Metti una data su una richiesta. Torna sulla tua dashboard il giorno giusto.'] }
       ]
     },
     {
@@ -36,9 +34,7 @@ const sell: JobPage = {
       features: [
         { title: 'Periodi di prezzo per data', body: ['Bassa, media e alta stagione, eventi speciali, tariffe dei nuovi contratti. Ogni prodotto conserva i suoi prezzi per periodo, e il preventivo usa quello che corrisponde alle date del viaggio.'] },
         { title: 'Più fornitori per prodotto', body: ['Tieni due società di transfer o tre guide per lo stesso servizio, ognuna con le sue tariffe, e scegline una per viaggio.'] },
-        { title: 'Opzioni', body: ['Tipi di camera, mezza pensione, auto privata o condivisa: le opzioni sono legate al prodotto, con il loro prezzo.'] },
-        { title: 'Pacchetti pronti', body: ['Salva una volta i tuoi itinerari classici. Aggiungi il pacchetto intero a un preventivo con un clic, poi modifica ciò che cambia.'] },
-        { title: 'Traduzioni automatiche', body: ['Scrivi una volta la descrizione di un prodotto. Viene tradotta per i tuoi clienti nella loro lingua.'] }
+        { title: 'Pacchetti pronti', body: ['Salva una volta i tuoi itinerari classici. Aggiungi il pacchetto intero a un preventivo con un clic, poi modifica ciò che cambia.'] }
       ]
     },
     {
@@ -49,11 +45,8 @@ const sell: JobPage = {
       visual: 'margin',
       features: [
         { title: 'Procedure di prezzo', body: ['Una procedura di prezzo trasforma le tue tariffe nette in prezzi di vendita: il tuo margine, l’IVA corretta e la commissione quando un’agenzia o un partner vende il viaggio.'] },
-        { title: 'Prezzi a persona', body: ['Prezzo per adulto o per bambino. Il cliente vede un prezzo chiaro a persona e un totale.'] },
-        { title: 'Nomi per il cliente', body: ['Il tuo team vede il nome interno di ogni servizio, il cliente vede il nome pensato per lui.'] },
         { title: 'Incluso e non incluso', body: ['Cosa comprende il prezzo e cosa no, elencato nel preventivo.'] },
-        { title: 'Versioni', body: ['Il cliente chiede un hotel più economico? Crea una nuova versione. La precedente resta, e puoi riaprirla in qualsiasi momento.'] },
-        { title: 'Validità', body: ['Indica fino a quando vale il prezzo.'] }
+        { title: 'Versioni', body: ['Il cliente chiede un hotel più economico? Crea una nuova versione. La precedente resta, e puoi riaprirla in qualsiasi momento.'] }
       ]
     },
     {
@@ -89,8 +82,7 @@ const sell: JobPage = {
       features: [
         { title: 'Il partner e il suo cliente', body: ['Il preventivo va all’agenzia partner, i viaggiatori sono suoi clienti. Entrambi restano sul viaggio, dal primo preventivo all’ultima fattura.'] },
         { title: 'La commissione nel prezzo', body: ['Indica la commissione del partner sul preventivo. È nel prezzo di vendita fin dalla prima riga, e il tuo margine resta visibile per te.'] },
-        { title: 'Estratti conto delle commissioni', body: ['Quanto devi a ogni partner, per periodo, dai viaggi che ti ha inviato. Lo liquidi con un clic.'] },
-        { title: 'Documenti nella lingua del partner', body: ['Il partner riceve il preventivo e la proposta nella sua lingua e con il tuo marchio, pronti da girare al suo cliente.'] }
+        { title: 'Estratti conto delle commissioni', body: ['Quanto devi a ogni partner, per periodo, dai viaggi che ti ha inviato. Lo liquidi con un clic.'] }
       ]
     }
   ],
@@ -148,7 +140,6 @@ const book: JobPage = {
       features: [
         { title: 'Email dei fornitori archiviate per te', body: ['Le conferme e le risposte dei fornitori arrivano sul viaggio a cui si riferiscono.'] },
         { title: 'Voucher di servizio', body: ['Invia a ogni guida, autista o hotel un voucher chiaro con date, nomi e dettagli, direttamente dal viaggio.'] },
-        { title: 'Schede fornitore', body: ['Contatti, contratti, foto e cosa include ogni fornitore, conservati sul fornitore e riutilizzati in ogni viaggio.'] },
         { title: 'Richieste di disponibilità e ordini di acquisto ai fornitori', body: ['Chiedi la disponibilità a un hotel, poi invia l’ordine di acquisto dal viaggio. Risposte e modifiche tornano sulla prenotazione.'], premium: true }
       ]
     },
@@ -173,8 +164,7 @@ const book: JobPage = {
       features: [
         { title: 'La lista dei viaggiatori', body: ['Incolla o importa la lista da un foglio di calcolo, oppure invia all’organizzatore il link a un modulo. Fino a 200 viaggiatori per viaggio.'] },
         { title: 'Servizi per una parte del gruppo', body: ['La giornata di golf per dodici, la cena di gala per tutti: ogni servizio indica chi lo prende, e i conteggi per l’hotel si adeguano.'] },
-        { title: 'Una rooming list per hotel', body: ['Camere costruite a partire da chi dorme con chi, numerate per hotel, pronte da inviare in PDF o in foglio di calcolo.'] },
-        { title: 'Diete e accessibilità a colpo d’occhio', body: ['Numero di pasti vegetariani, allergie ed esigenze di accessibilità per servizio, per il ristorante e la guida.'] }
+        { title: 'Una rooming list per hotel', body: ['Camere costruite a partire da chi dorme con chi, numerate per hotel, pronte da inviare in PDF o in foglio di calcolo.'] }
       ]
     },
     {
@@ -242,10 +232,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Fatture di acconto e finali', body: ['Create dal viaggio con un clic, con i dati del cliente e gli importi giusti.'] },
         { title: 'Note di credito', body: ['Un annullamento o una modifica diventa una nota di credito collegata alla fattura originale.'] },
-        { title: 'Numerazione per società', body: ['Gestisci due società dallo stesso posto, ognuna con la sua numerazione delle fatture.'] },
-        { title: 'L’IVA delle agenzie di viaggio in Spagna', body: ['Il regime IVA spagnolo per le agenzie di viaggio (REAV) è integrato, e la sua dicitura compare sulle tue fatture. Negli altri paesi, le fatture passano dal tuo software di fatturazione.'] },
-        { title: 'Pronto per il commercialista', body: ['Un riepilogo Excel o uno zip con tutti i PDF a fine mese, in due clic.'] },
-        { title: 'Esportazione contabile', body: ['Vendite, acquisti e pagamenti come registrazioni contabili, pronti per il tuo software di contabilità.'], premium: true }
+        { title: 'Pronto per il commercialista', body: ['Un riepilogo Excel o uno zip con tutti i PDF a fine mese, in due clic.'] }
       ]
     },
     {
@@ -313,7 +300,6 @@ const setup: JobPage = {
       features: [
         { title: 'Una valuta per cliente e per preventivo', body: ['Fai il preventivo a un cliente britannico in sterline e a un partner americano in dollari, dallo stesso catalogo.'], premium: true },
         { title: 'I prezzi dei fornitori nella loro valuta', body: ['Tieni ogni tariffa nella valuta in cui fattura il fornitore. Il preventivo la converte al cambio del giorno, con un margine di sicurezza che scegli tu.'], premium: true },
-        { title: 'Cambi giornalieri', body: ['I cambi della Banca centrale europea vengono aggiornati ogni giorno lavorativo, oppure imposti i tuoi.'], premium: true },
         { title: 'La contabilità in una sola valuta', body: ['Fatture, pagamenti, margini e report si sommano nella tua valuta contabile, con utili e perdite su cambi calcolati per te.'], premium: true }
       ]
     },

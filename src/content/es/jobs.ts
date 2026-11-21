@@ -22,9 +22,7 @@ const sell: JobPage = {
       features: [
         { title: 'Estado de cada solicitud', body: ['Cada solicitud tiene un estado: nueva, presupuestada o en espera de respuesta.'] },
         { title: 'Una solicitud pasa a ser un proyecto', body: ['Cuando una solicitud va en serio, se convierte en proyecto. El cliente, las fechas, los viajeros y tus notas se quedan juntos durante todo el viaje.'] },
-        { title: 'Una ficha por cliente', body: ['Escribe un nombre o un email que ya tengas y Traviosoft te muestra el cliente existente, así cada cliente conserva un solo historial.'] },
-        { title: 'Recordatorios', body: ['Pon una fecha a una solicitud. Vuelve a aparecer en tu panel el día que toca.'] },
-        { title: 'Motivos de las solicitudes perdidas', body: ['Cierra una solicitud con su motivo: precio, plazos, destino.'] }
+        { title: 'Recordatorios', body: ['Pon una fecha a una solicitud. Vuelve a aparecer en tu panel el día que toca.'] }
       ]
     },
     {
@@ -36,9 +34,7 @@ const sell: JobPage = {
       features: [
         { title: 'Periodos de precio por fecha', body: ['Temporada baja, media y alta, eventos especiales, tarifas de contratos nuevos. Cada producto guarda sus precios por periodo y el presupuesto usa el que corresponde a las fechas del viaje.'] },
         { title: 'Varios proveedores por producto', body: ['Ten dos empresas de traslados o tres guías para el mismo servicio, cada uno con sus tarifas, y elige uno por viaje.'] },
-        { title: 'Opciones', body: ['Tipos de habitación, media pensión, coche privado o compartido: las opciones viven en el producto, con su propio precio.'] },
-        { title: 'Paquetes preparados', body: ['Guarda una vez tus rutas clásicas. Añade el paquete entero a un presupuesto con un clic y ajusta lo que cambie.'] },
-        { title: 'Traducciones automáticas', body: ['Escribe la descripción de un producto una vez. Se traduce para tus clientes a su idioma.'] }
+        { title: 'Paquetes preparados', body: ['Guarda una vez tus rutas clásicas. Añade el paquete entero a un presupuesto con un clic y ajusta lo que cambie.'] }
       ]
     },
     {
@@ -49,11 +45,8 @@ const sell: JobPage = {
       visual: 'margin',
       features: [
         { title: 'Procedimientos de precios', body: ['Un procedimiento de precios convierte tus tarifas netas en precios de venta: tu margen, el IVA que corresponde y la comisión cuando vende el viaje otra agencia o un colaborador.'] },
-        { title: 'Precios por persona', body: ['Precio por adulto o por niño. El cliente ve un precio claro por persona y un total.'] },
-        { title: 'Nombres para el cliente', body: ['Tu equipo ve el nombre interno de cada servicio y el cliente ve su nombre para clientes.'] },
         { title: 'Incluido y no incluido', body: ['Lo que cubre el precio y lo que no, en una lista en el presupuesto.'] },
-        { title: 'Versiones', body: ['¿El cliente pide un hotel más barato? Haz una versión nueva. La anterior se conserva y puedes reabrirla cuando quieras.'] },
-        { title: 'Fecha de caducidad', body: ['Fija cuánto tiempo vale el precio.'] }
+        { title: 'Versiones', body: ['¿El cliente pide un hotel más barato? Haz una versión nueva. La anterior se conserva y puedes reabrirla cuando quieras.'] }
       ]
     },
     {
@@ -89,8 +82,7 @@ const sell: JobPage = {
       features: [
         { title: 'La agencia y su cliente', body: ['El presupuesto va a la agencia colaboradora y los viajeros son sus clientes. Ambos están en el viaje, del primer presupuesto a la última factura.'] },
         { title: 'La comisión en el precio', body: ['Fija la comisión de la agencia en el presupuesto. Está en el precio de venta desde la primera línea y tu margen sigue a la vista para ti.'] },
-        { title: 'Liquidaciones de comisión', body: ['Lo que debes a cada agencia, por periodo, según los viajes que te envió. Se liquida con un clic.'] },
-        { title: 'Documentos en el idioma de la agencia', body: ['La agencia recibe el presupuesto y la propuesta en su idioma y con tu marca, listos para pasar a su cliente.'] }
+        { title: 'Liquidaciones de comisión', body: ['Lo que debes a cada agencia, por periodo, según los viajes que te envió. Se liquida con un clic.'] }
       ]
     }
   ],
@@ -148,7 +140,6 @@ const book: JobPage = {
       features: [
         { title: 'Emails de proveedores archivados por ti', body: ['Las confirmaciones y respuestas de los proveedores llegan al viaje al que pertenecen.'] },
         { title: 'Bonos de servicio', body: ['Envía a cada guía, conductor u hotel un bono claro con fechas, nombres y detalles, directamente desde el viaje.'] },
-        { title: 'Fichas de proveedor', body: ['Contactos, contratos, fotos y lo que incluye cada proveedor, guardados con el proveedor y reutilizados en cada viaje.'] },
         { title: 'Peticiones de disponibilidad y órdenes de compra', body: ['Pide disponibilidad a un hotel y envía después la orden de compra desde el viaje. Las respuestas y los cambios vuelven a la reserva.'], premium: true }
       ]
     },
@@ -173,8 +164,7 @@ const book: JobPage = {
       features: [
         { title: 'La lista de viajeros', body: ['Pega o importa la lista desde una hoja de cálculo, o envía al organizador un enlace a un formulario. Hasta 200 viajeros por viaje.'] },
         { title: 'Servicios para parte del grupo', body: ['El día de golf para doce, la cena de gala para todos: cada servicio indica quién lo toma y las cifras de cada hotel lo siguen.'] },
-        { title: 'Una rooming list por hotel', body: ['Habitaciones creadas según quién comparte con quién, numeradas por hotel, listas para enviar en PDF o en hoja de cálculo.'] },
-        { title: 'Dietas y accesibilidad de un vistazo', body: ['Cuántos menús vegetarianos, alergias y necesidades de accesibilidad por servicio, para el restaurante y el guía.'] }
+        { title: 'Una rooming list por hotel', body: ['Habitaciones creadas según quién comparte con quién, numeradas por hotel, listas para enviar en PDF o en hoja de cálculo.'] }
       ]
     },
     {
@@ -242,10 +232,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Facturas de señal y final', body: ['Hechas desde el viaje con un clic, con los datos del cliente y los importes correctos.'] },
         { title: 'Facturas rectificativas', body: ['Una cancelación o un cambio se convierte en una factura rectificativa vinculada a la factura original.'] },
-        { title: 'Numeración por empresa', body: ['Gestiona dos empresas desde un solo sitio, cada una con su propia numeración de facturas.'] },
-        { title: 'El IVA de las agencias de viajes en España', body: ['El régimen especial de las agencias de viajes (REAV) está integrado, y su mención aparece en tus facturas. En otros países, las facturas pasan por tu programa de facturación.'] },
-        { title: 'Listo para tu gestoría', body: ['Un resumen en Excel o un zip con todos los PDF a final de mes, en dos clics.'] },
-        { title: 'Exportación contable', body: ['Tus ventas, compras y pagos como asientos contables, listos para tu programa de contabilidad.'], premium: true }
+        { title: 'Listo para tu gestoría', body: ['Un resumen en Excel o un zip con todos los PDF a final de mes, en dos clics.'] }
       ]
     },
     {
@@ -313,7 +300,6 @@ const setup: JobPage = {
       features: [
         { title: 'Una moneda por cliente y por presupuesto', body: ['Presupuesta a un cliente británico en libras y a un colaborador estadounidense en dólares, desde el mismo catálogo.'], premium: true },
         { title: 'Precios de proveedor en su moneda', body: ['Guarda cada tarifa en la moneda en que factura el proveedor. El presupuesto la convierte al cambio del día, con el margen de seguridad que elijas.'], premium: true },
-        { title: 'Tipos de cambio diarios', body: ['Los tipos del Banco Central Europeo se cargan cada día laborable, o fijas los tuyos.'], premium: true },
         { title: 'Tu contabilidad en una moneda', body: ['Facturas, cobros, márgenes e informes cuadran en tu moneda contable, con las diferencias de cambio calculadas por ti.'], premium: true }
       ]
     },
