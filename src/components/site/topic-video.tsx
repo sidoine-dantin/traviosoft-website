@@ -9,17 +9,19 @@ type Props = { src: string; label: string; pause: string; play: string };
  * plays while it is in view and stops when it leaves. There is no visible control: the whole
  * video is the button, so a click, a tap, or Enter/Space on the keyboard stops or restarts it
  * (WCAG 2.2.2). A small play sign shows only while it is stopped. With reduced motion it does
- * not start on its own and shows its last frame.
+ * not start on its own and shows its last frame. Otherwise there is no poster: the video opens on
+ * the empty page colour and builds up, so no finished screen flashes before it starts.
  */
 export function TopicVideo({ src, label, pause, play }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [stopped, setStopped] = useState(false); // the visitor stopped it, or asked for reduced motion
+  const [still, setStill] = useState(false); // reduced motion: show the finished screen instead
 
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.dataset.held = '1'; const raf = requestAnimationFrame(() => setStopped(true)); return () => cancelAnimationFrame(raf); }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.dataset.held = '1'; const raf = requestAnimationFrame(() => { setStopped(true); setStill(true); }); return () => cancelAnimationFrame(raf); }
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !v.dataset.held) v.play().catch(() => {});
       else v.pause();
@@ -40,7 +42,7 @@ export function TopicVideo({ src, label, pause, play }: Props) {
       <video
         ref={ref}
         src={`${src}.mp4`}
-        poster={`${src}.webp`}
+        poster={still ? `${src}.webp` : undefined}
         muted
         loop
         playsInline
