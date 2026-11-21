@@ -5,7 +5,6 @@ import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { Plans } from '@/components/site/plans';
 import { FaqList, FaqSchema } from '@/components/site/faq';
-import { ComparePlans } from '@/components/site/compare-plans';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,10 +25,13 @@ export default async function PricingPage({ params }: Props) {
         <h1 className="h1" style={{ color: 'var(--green)' }}>{p.title}</h1>
       </section>
       <section className="wrap" style={{ paddingBottom: 'clamp(64px, 8vw, 110px)' }}>
-        <Plans plans={p.plans} labels={{ yearly: p.yearly, monthly: p.monthly, yearlyNote: p.yearlyNote }} />
-        <div className="cmp-wrap">
-          <h2 className="sr-only">{p.compareTitle}</h2>
-          <ComparePlans sections={p.compare} names={[p.plans[0].name, p.plans[1].name]} labels={{ feature: p.compareFeature, yes: p.yes, no: p.no }} note={p.compareNote} />
+        <h2 className="sr-only">{p.compareTitle}</h2>
+        <Plans
+          plans={p.plans}
+          labels={{ yearly: p.yearly, monthly: p.monthly, yearlyNote: p.yearlyNote }}
+          compare={{ sections: p.compare, labels: { feature: p.compareFeature, yes: p.yes, no: p.no }, note: p.compareNote }}
+        />
+        <div>
           <p style={{ marginTop: 36 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{p.productLink}</span><span className="arr" aria-hidden="true">→</span></Link></p>
         </div>
       </section>

@@ -154,23 +154,24 @@
   .top { transition: transform 250ms var(--ease-enter), border-color .2s; }
   .top.away { transition-timing-function: var(--ease-exit), ease; transition-duration: 200ms, .2s; }
   .top.away { transform: translateY(-100%); }
-  /* full-screen menu: everything in reach of the thumb, the page behind stays put */
-  .top.open { background: var(--cream); backdrop-filter: none; -webkit-backdrop-filter: none; }
-  .mobile-panel { display: flex; flex-direction: column; position: fixed; inset: 68px 0 0; overflow-y: auto; overscroll-behavior: contain; background: var(--cream); padding: 8px var(--gutter) max(24px, env(safe-area-inset-bottom)); animation: fade-rise 200ms var(--ease-enter) backwards; }
-  .mobile-kicker { color: var(--orange-ink); margin: 16px 0 6px; }
+  /* Full-screen menu: the bar and the menu form one fixed layer over the whole screen, so the bar
+     stays at the top whatever the page behind is doing, and the page behind stays put. */
+  .top.open { position: fixed; inset: 0; height: 100dvh; display: flex; flex-direction: column; transform: none; background: var(--cream); backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; }
+  .top.open > .wrap { flex: none; width: 100%; }
+  .mobile-panel { display: flex; flex-direction: column; flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 8px var(--gutter) max(20px, env(safe-area-inset-bottom)); animation: fade-rise 200ms var(--ease-enter) backwards; }
+  .mobile-kicker { color: var(--muted); margin: 12px 0 4px; }
   .mobile-panel ul { list-style: none; margin: 0; padding: 0; }
-  .mobile-jobs a { display: block; padding: 12px 0; text-decoration: none; min-height: 64px; }
-  .mobile-jobs b { display: block; font-size: 18px; }
+  .mobile-jobs a, .mobile-links a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 12px 0; min-height: 56px; text-decoration: none; color: var(--ink); }
+  .mobile-jobs b, .mobile-links b { display: block; font-size: 19px; line-height: 1.25; }
   .mobile-jobs small { display: block; color: var(--muted); font-size: 15px; line-height: 1.35; margin-top: 2px; }
-  .mobile-links { margin-top: 8px !important; }
-  .mobile-links a { display: flex; align-items: center; min-height: 52px; font-weight: 700; font-size: 18px; text-decoration: none; }
-  .mobile-panel a[aria-current="page"] { color: var(--orange-ink); }
+  .mobile-panel .arr { color: var(--green); font-weight: 700; font-size: 18px; }
+  .mobile-links { margin-top: 12px !important; }
   .mobile-panel a[aria-current="page"] b { color: var(--orange-ink); }
-  .mobile-foot { margin-top: auto; padding-top: 28px; display: flex; flex-direction: column; gap: 16px; }
-  .mobile-foot .lang-menu { align-self: flex-start; }
-  .mobile-foot .lang-btn { min-height: 48px; padding: 0 14px; font-size: 16px; border: 1.5px solid var(--line); border-radius: 999px; }
+  .mobile-foot { margin-top: auto; padding-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .mobile-demo { align-self: stretch; display: flex; justify-content: center; align-items: center; min-height: 54px; border-radius: 999px; background: var(--green); color: var(--cream); font-weight: 700; font-size: 17px; text-decoration: none; }
+  .mobile-foot .lang-btn { min-height: 48px; padding: 0 14px; font-size: 16px; }
+  .mobile-foot .lang-menu.up .lang-list { left: 50%; transform-origin: bottom center; translate: -50% 0; }
   .mobile-foot .lang-list a { min-height: 48px; font-size: 16px; }
-  .mobile-demo { display: flex; justify-content: center; align-items: center; min-height: 52px; font-size: 17px; }
   html.menu-open, html.menu-open body { overflow: hidden; }
 }
 
@@ -304,7 +305,7 @@
 @media (max-width: 760px) { .about-blocks { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- price coins ---------- */
-.coins { display: grid; grid-template-columns: 1fr auto auto; gap: 48px; align-items: center; background: var(--yellow); border-radius: 32px; padding: clamp(32px, 5vw, 64px); }
+.coins { overflow: hidden; display: grid; grid-template-columns: 1fr auto auto; gap: 48px; align-items: center; background: var(--yellow); border-radius: 32px; padding: clamp(32px, 5vw, 64px); }
 .coins .muted { color: var(--deep); }
 .coin .users { margin-top: 4px; opacity: .85; }
 .free-note { margin-top: 8px; font-size: 14px; color: var(--ink); opacity: .8; }
@@ -448,7 +449,14 @@ a.card:hover { box-shadow: 0 22px 40px -26px rgba(1, 58, 45, .5); }
 .cmp { margin-top: 0; --cmp-cols: var(--plan-cols); }
 .cmp-head { position: sticky; top: 68px; z-index: 40; transition: top .25s ease; display: grid; grid-template-columns: var(--cmp-cols); gap: 24px; padding: 16px 16px;
   background: var(--cream); font-weight: 700; color: var(--green); }
-.cmp-head span:first-child { color: var(--muted); font-weight: 600; }
+.cmp-head { align-items: center; }
+.cmp-head-ctl { min-width: 0; }
+.toggle.small { padding: 3px; gap: 2px; }
+.toggle.small button { padding: 7px 12px; font-size: 14px; }
+/* a one-off fee with monthly billing: its price, and the yearly offer under it */
+.cmp-cell.cmp-fee { flex-direction: column; align-items: flex-start; gap: 2px; }
+.cmp-fee b { font-size: 17px; font-weight: 750; color: var(--ink); white-space: nowrap; }
+.cmp-fee-note { color: var(--muted); font-size: 13px; }
 .cmp-table { width: 100%; border-collapse: collapse; margin-top: 44px; }
 .cmp-table caption { text-align: left; font-size: clamp(20px, 2vw, 24px); font-weight: 700; color: var(--green); padding: 0 16px 10px; }
 .cmp-table tr { display: grid; grid-template-columns: var(--cmp-cols); gap: 24px; align-items: center; padding: 18px 16px; border-radius: 12px; }
@@ -480,6 +488,8 @@ a.card:hover { box-shadow: 0 22px 40px -26px rgba(1, 58, 45, .5); }
   .cmp-was { display: block; }
   .cmp-head { padding-inline: 10px; }
   .cmp-head span + span { text-align: center; }
+  .cmp-cell.cmp-fee { align-items: center; }
+  .toggle.small button { padding: 7px 9px; font-size: 13px; }
 }
 
 /* ---------- tables ---------- */
@@ -552,7 +562,8 @@ table.tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size:
 
 /* ---------- home motion (html.motion is set by HomeMotion; without JS or with reduced motion nothing hides) ---------- */
 /* elements waiting off to the side must not widen the page on a phone */
-html.motion body { overflow-x: clip; }
+/* Safety net: nothing may ever make a phone page scroll sideways (iOS needs it on html too). */
+html, body { overflow-x: clip; }
 html.motion [data-reveal] { opacity: 0; translate: 0 12px; transition: opacity 400ms var(--ease-enter), translate 400ms var(--ease-enter); transition-delay: calc(var(--d, 0) * 1ms); }
 html.motion [data-reveal].in { opacity: 1; translate: 0 0; }
 /* the messy pile: scraps drop onto it one after another, with a small settle */
