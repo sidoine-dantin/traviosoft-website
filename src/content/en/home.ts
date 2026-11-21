@@ -49,7 +49,7 @@ export const home: SiteContent['home'] = {
         "day": "Day 2 · Tuesday 4 May",
         "k": "Activity",
         "t": "Mosque-Cathedral of Córdoba",
-        "s": "Your guide: Lucía"
+        "s": "Your guide: Valentina"
       }
     ]
   },
@@ -108,7 +108,7 @@ export const home: SiteContent['home'] = {
   beforeTitle: 'Today',
   beforeScraps: [
     { i: 'sheet', t: 'Rates_2026_FINAL_v3.xlsx' },
-    { i: 'doc', t: 'Quote Smith.docx' },
+    { i: 'doc', t: 'Quote Whitcombe.docx' },
     { i: 'chat', t: 'WhatsApp: "did the hotel confirm?"' },
     { i: 'bank', t: 'Deposit? check the bank' },
     { i: 'book', t: 'Invoice numbers in a notebook' },

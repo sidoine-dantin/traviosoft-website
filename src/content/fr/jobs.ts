@@ -183,7 +183,7 @@ const book: JobPage = {
   faq: [
     { q: 'Mes guides et chauffeurs peuvent-ils voir le voyage ?', a: ['Ils reçoivent par e-mail une fiche de service avec ce dont ils ont besoin : dates, horaires, noms et point de rendez-vous.'] },
     { q: 'Que se passe-t-il si le client change une date ?', a: ['Mettez le voyage à jour. Les prestations, la page du programme et les fiches de service suivent le changement, et les prestations à réserver de nouveau repassent en à réserver.'] },
-    { q: 'Comment les e-mails des prestataires arrivent-ils sur le voyage ?', a: ['Les e-mails des prestataires sont classés automatiquement dans le voyage.'] }
+    { q: 'Les réponses des prestataires arrivent-elles sur le voyage ?', a: ['Oui. Les demandes de réservation partent de Traviosoft depuis votre propre boîte mail, et la réponse de chaque prestataire est classée sur son voyage, où toute l’équipe la voit.'] }
   ]
 };
 

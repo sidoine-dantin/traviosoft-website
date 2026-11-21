@@ -25,11 +25,17 @@ export default function Header({ locale, labels, jobs }: Props) {
   const [hidden, setHidden] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
+  // The open menu takes the bar out of the page, which can move it; closing puts the reader back here.
+  const openedAt = useRef(0);
 
   // On phones the bar slides away while reading down and comes back on the first scroll up.
   useEffect(() => {
     let last = window.scrollY;
     const onScroll = () => {
+      // pinning the page under the open menu, and putting it back, is not the reader scrolling
+      const html = document.documentElement;
+      if (html.classList.contains('menu-open')) return;
+      if (html.dataset.restoring) { delete html.dataset.restoring; last = window.scrollY; return; }
       const y = window.scrollY;
       setScrolled(y > 8);
       if (Math.abs(y - last) < 6) return;
@@ -50,7 +56,12 @@ export default function Header({ locale, labels, jobs }: Props) {
   useEffect(() => {
     if (!mobile) return;
     const html = document.documentElement;
+    const body = document.body;
+    // The page behind is pinned where it was (iOS ignores overflow: hidden for touch scrolling),
+    // and put back exactly there when the menu closes.
+    const y = openedAt.current;
     html.classList.add('menu-open');
+    Object.assign(body.style, { position: 'fixed', top: `${-y}px`, left: '0', right: '0' });
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMobile(false);
@@ -62,6 +73,11 @@ export default function Header({ locale, labels, jobs }: Props) {
     window.addEventListener('resize', onResize);
     return () => {
       html.classList.remove('menu-open');
+      Object.assign(body.style, { position: '', top: '', left: '', right: '' });
+      html.style.scrollBehavior = 'auto';
+      if (window.scrollY !== y) html.dataset.restoring = '1';
+      window.scrollTo(0, y);
+      html.style.scrollBehavior = '';
       document.removeEventListener('keydown', onKey);
       window.removeEventListener('resize', onResize);
     };
@@ -143,7 +159,7 @@ export default function Header({ locale, labels, jobs }: Props) {
             className="burger"
             aria-expanded={mobile}
             aria-controls="mobile-menu"
-            onClick={() => setMobile(m => !m)}
+            onClick={() => { if (!mobile) openedAt.current = window.scrollY; setMobile(m => !m); }}
           >
             <span>{mobile ? labels.close : labels.menuLabel}</span>
             <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
@@ -164,16 +180,22 @@ export default function Header({ locale, labels, jobs }: Props) {
               <li key={j.slug}>
                 <Link href={`/${j.slug}`} aria-current={pathname === `/${j.slug}` ? 'page' : undefined}>
                   <span><b>{j.name}</b><small>{j.menuLine}</small></span>
+                  <span className="arr" aria-hidden="true">→</span>
                 </Link>
               </li>
             ))}
           </ul>
           <ul className="mobile-links">
-            <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
+            <li>
+              <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>
+                <b>{labels.pricing}</b>
+                <span className="arr" aria-hidden="true">→</span>
+              </Link>
+            </li>
           </ul>
           <div className="mobile-foot">
+            <Link className="mobile-demo" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
             <LangMenu locale={locale} href={localeHref} up />
-            <Link className="quiet mobile-demo" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
           </div>
         </nav>
       )}

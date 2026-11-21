@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { CompareCell, CompareSection } from '@/content/types';
 
 type Props = {
@@ -5,9 +6,13 @@ type Props = {
   labels: { feature: string; yes: string; no: string };
   names: [string, string];
   note: string[];
+  /** the billing chosen above: a one-off fee that is free with yearly billing shows its real price with monthly */
+  yearly: boolean;
+  /** the billing switch, pinned in the header row */
+  toggle: ReactNode;
 };
 
-function Cell({ v, labels }: { v: CompareCell; labels: Props['labels'] }) {
+function Cell({ v, labels, yearly }: { v: CompareCell; labels: Props['labels']; yearly: boolean }) {
   if (v === false) {
     return (
       <span className="cmp-cell">
@@ -22,6 +27,15 @@ function Cell({ v, labels }: { v: CompareCell; labels: Props['labels'] }) {
       <span className="cmp-cell">
         <svg className="cmp-opt" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.25" /><path d="M12 7.5v9M7.5 12h9" /></svg>
         <span className="cmp-detail">{v.text}</span>
+      </span>
+    );
+  }
+  if (typeof v === 'object' && v.was && !yearly) {
+    // monthly billing: the fee is charged, so its price, not a tick; the yearly offer as a note
+    return (
+      <span className="cmp-cell cmp-fee">
+        <b className="num">{v.was}</b>
+        <span className="cmp-fee-note">{v.text}</span>
       </span>
     );
   }
@@ -40,11 +54,11 @@ function Cell({ v, labels }: { v: CompareCell; labels: Props['labels'] }) {
 }
 
 /** Feature-by-feature comparison of the two plans, grouped by job. */
-export function ComparePlans({ sections, labels, names, note }: Props) {
+export function ComparePlans({ sections, labels, names, note, yearly, toggle }: Props) {
   return (
     <div className="cmp">
-      <div className="cmp-head" aria-hidden="true">
-        <span>{labels.feature}</span><span>{names[0]}</span><span>{names[1]}</span>
+      <div className="cmp-head">
+        <div className="cmp-head-ctl">{toggle}</div><span aria-hidden="true">{names[0]}</span><span aria-hidden="true">{names[1]}</span>
       </div>
       {sections.map(s => (
         <table key={s.title} className="cmp-table">
@@ -56,8 +70,8 @@ export function ComparePlans({ sections, labels, names, note }: Props) {
             {s.rows.map(r => (
               <tr key={r.f}>
                 <th scope="row">{r.f}</th>
-                <td><Cell v={r.classic} labels={labels} /></td>
-                <td><Cell v={r.premium} labels={labels} /></td>
+                <td><Cell v={r.classic} labels={labels} yearly={yearly} /></td>
+                <td><Cell v={r.premium} labels={labels} yearly={yearly} /></td>
               </tr>
             ))}
           </tbody>

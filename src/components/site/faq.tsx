@@ -1,4 +1,5 @@
 import type { Faq } from '@/content/types';
+import { breathe } from '@/lib/breathe';
 
 export function FaqList({ items }: { items: Faq[] }) {
   return (
@@ -6,7 +7,7 @@ export function FaqList({ items }: { items: Faq[] }) {
       {items.map((f, i) => (
         <details key={i}>
           <summary>{f.q}</summary>
-          <div className="a">{f.a.map((p, j) => <p key={j}>{p}</p>)}</div>
+          <div className="a">{f.a.flatMap(breathe).map((p, j) => <p key={j}>{p}</p>)}</div>
         </details>
       ))}
     </div>

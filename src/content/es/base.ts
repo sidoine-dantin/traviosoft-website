@@ -141,12 +141,12 @@ export const visuals: SiteContent['visuals'] = {
     conWebsite: 'Web', conWebsiteSub: 'Solicitudes desde tu web', conAccounting: 'Contabilidad', conAccountingSub: 'Ventas, compras, pagos', conAi: 'Asistente IA', on: 'Activo',
     numLocale: 'es-ES', date1: '14 mar', date2: '12 abr', date3: '9 may',
     net: 'Coste neto', commission: 'Comisión de la agencia 10%', sellPrice: 'Precio de venta',
-    commTitle: 'Comisiones · Viajes Norte · abril', trip2Name: 'Lisboa → Oporto, 6 días',
+    commTitle: 'Comisiones · Agencia colaboradora · abril', trip2Name: 'Lisboa → Oporto, 6 días',
     rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Doble', twin: 'Twin', single: 'Individual',
     supplierDue: 'Proveedor · vence', toPay: 'Por pagar',
     mailSubject: 'Tu presupuesto · Andalucía, 8 días', mailBody: 'Señal del 30% para confirmar el viaje.', payDeposit: 'Pagar la señal',
     settings: 'Ajustes', langs: 'Idiomas', currencies: 'Monedas',
-    smith: 'Familia Smith', atlas: 'Atlas Travel', books: 'Tu contabilidad',
+    smith: 'Familia Whitcombe', atlas: 'Familia Brooks', books: 'Tu contabilidad',
     countryTitle: 'Ajustes por país', vatScheme: 'Régimen especial de agencias de viajes', einvoice: 'Facturación electrónica', einvoiceNote: 'Según lo que exige tu país'
   }
 };

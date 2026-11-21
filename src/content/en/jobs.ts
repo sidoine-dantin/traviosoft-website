@@ -183,7 +183,7 @@ const book: JobPage = {
   faq: [
     { q: 'Can my guides and drivers see the trip?', a: ['They receive a service sheet by email with what they need: dates, times, names and the meeting point.'] },
     { q: 'What happens if the client changes a date?', a: ['Update the trip. The services, the itinerary page and the service sheets follow the change, and the services to rebook show again as to book.'] },
-    { q: 'How do supplier emails reach the trip?', a: ['Supplier emails are filed on the trip automatically.'] }
+    { q: 'Do supplier replies end up on the trip?', a: ['Yes. Booking requests go out from Traviosoft through your own mailbox, and each supplier’s reply is filed on its trip, where the whole team sees it.'] }
   ]
 };
 
