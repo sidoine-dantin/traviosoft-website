@@ -1,277 +1,182 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
-import { usePathname, Link, useRouter } from '@/i18n/navigation';
-import { useParams } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { OPEN_BOOKING_EVENT } from '@/components/site/book-demo';
+import { Link, usePathname } from '@/i18n/navigation';
+import { Logo } from '@/components/site/logo';
+import { LangMenu } from './lang-menu';
+import type { Locale } from '@/content/types';
 
-const NAV_LINKS = [
-  { key: 'product', href: '/product' },
-  { key: 'pricing', href: '/pricing' },
-  { key: 'about', href: '/about' },
-  { key: 'faq', href: '/faq' }
-] as const;
+type JobLink = { slug: string; name: string; menuLine: string };
 
-const LOCALES = [
-  { code: 'es', label: 'ES' },
-  { code: 'en', label: 'EN' },
-  { code: 'fr', label: 'FR' }
-] as const;
+type Props = {
+  locale: Locale;
+  labels: { product: string; pricing: string; resources: string; demo: string; menuLabel: string; close: string; skip: string };
+  jobs: JobLink[];
+  /** paths that exist in each locale; used to hide a language that has no version of this page */
+  available?: Partial<Record<Locale, string>>;
+};
 
-export default function Header() {
-  const t = useTranslations('nav');
+export default function Header({ locale, labels, jobs }: Props) {
   const pathname = usePathname();
-  const params = useParams();
-  const router = useRouter();
-  const currentLocale = params.locale as string;
+  const [open, setOpen] = useState(false);
+  const [mobile, setMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const burgerRef = useRef<HTMLButtonElement>(null);
 
+  // On phones the bar slides away while reading down and comes back on the first scroll up.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 8);
+      if (Math.abs(y - last) < 6) return;
+      setHidden(y > last && y > 160);
+      last = y;
+    };
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Other sticky bars (the chapter bar on product pages) follow the header.
   useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
+    document.documentElement.dataset.bar = hidden && !mobile ? 'hidden' : 'shown';
+  }, [hidden, mobile]);
 
-  function isActive(href: string) {
-    if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
+  // Full-screen menu: the page behind does not scroll, Escape closes it and focus returns to the button.
+  useEffect(() => {
+    if (!mobile) return;
+    const html = document.documentElement;
+    html.classList.add('menu-open');
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setMobile(false);
+        burgerRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    const onResize = () => window.innerWidth > 920 && setMobile(false);
+    window.addEventListener('resize', onResize);
+    return () => {
+      html.classList.remove('menu-open');
+      document.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [mobile]);
+
+  // A new page closes the menus (adjusting state during render, as React recommends, not in an effect).
+  const [shownPath, setShownPath] = useState(pathname);
+  if (pathname !== shownPath) {
+    setShownPath(pathname);
+    setOpen(false);
+    setMobile(false);
   }
 
-  function switchLocale(locale: string) {
-    router.replace(pathname, { locale });
-  }
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
 
-  // Every page leads with a dark hero except the legal pages (light background).
-  // At the very top of a dark-hero page the header is transparent, so its text
-  // must be light to stay legible; once scrolled the bar turns white and the
-  // dark palette takes over.
-  const overDarkHero = !pathname.startsWith('/legal');
-  const lightOnDark = !scrolled && overDarkHero;
+  const isJob = jobs.some(j => pathname === `/${j.slug}`);
+  // Locale-only pages (Spanish guides) have no twin: the switch goes to that locale's home.
+  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/' : pathname;
 
-  const logoColor = lightOnDark ? 'white' : 'var(--color-primary)';
-  const navActiveColor = lightOnDark ? 'white' : 'var(--color-primary)';
-  const navInactiveColor = lightOnDark ? 'oklch(0.86 0.02 118)' : 'var(--color-muted)';
-  const navHoverColor = lightOnDark ? 'white' : 'var(--color-ink)';
-  const dividerColor = lightOnDark ? 'oklch(1 0 0 / 0.28)' : 'var(--color-border)';
-  const ctaStyle = lightOnDark
-    ? { backgroundColor: 'white', color: 'var(--color-primary)' }
-    : {};
+  // On the demo page itself, "Book a demo" opens the booking window instead of reloading the page.
+  const openBookingHere = (e: React.MouseEvent) => {
+    if (pathname !== '/demo') return;
+    e.preventDefault();
+    setMobile(false);
+    window.dispatchEvent(new Event(OPEN_BOOKING_EVENT));
+  };
+
+  const langs = <LangMenu locale={locale} href={localeHref} />;
 
   return (
-    <header
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        borderBottom: scrolled ? '1px solid var(--color-border)' : '1px solid transparent',
-        backgroundColor: scrolled ? 'oklch(1 0 0 / 0.92)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        transition: 'background-color 0.25s ease-out, border-color 0.25s ease-out, backdrop-filter 0.25s ease-out'
-      }}
-    >
-      <div style={{
-        maxWidth: '1280px',
-        margin: '0 auto',
-        padding: '0 1.5rem',
-        height: '64px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '1rem'
-      }}>
-        {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{
-            fontFamily: 'var(--font-display, Georgia, serif)',
-            fontSize: '1.375rem',
-            color: logoColor,
-            fontWeight: 400,
-            letterSpacing: '-0.01em',
-            transition: 'color 0.25s ease-out'
-          }}>
-            Traviosoft
-          </span>
-        </Link>
-
-        {/* Desktop nav */}
-        <nav
-          aria-label="Main navigation"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.25rem',
-            flex: 1,
-            justifyContent: 'center'
-          }}
-          className="desktop-nav"
-        >
-          {NAV_LINKS.map(({ key, href }) => (
-            <Link
-              key={key}
-              href={href}
-              style={{
-                padding: '0.375rem 0.75rem',
-                borderRadius: '4px',
-                fontSize: '0.9375rem',
-                fontWeight: isActive(href) ? 500 : 400,
-                color: isActive(href) ? navActiveColor : navInactiveColor,
-                textDecoration: 'none',
-                transition: 'color 0.15s ease-out',
-                whiteSpace: 'nowrap'
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = navHoverColor; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = isActive(href) ? navActiveColor : navInactiveColor; }}
+    <header className={`top${scrolled ? ' scrolled' : ''}${hidden && !mobile ? ' away' : ''}${mobile ? ' open' : ''}`}>
+      <a href="#main" className="sr-only">{labels.skip}</a>
+      <div className="wrap">
+        <Logo />
+        <nav className="nav" aria-label="Main">
+          <div className="menu" ref={menuRef}>
+            <button
+              type="button"
+              aria-expanded={open}
+              aria-controls="product-menu"
+              onClick={() => setOpen(o => !o)}
+              style={isJob ? { color: 'var(--orange-ink)' } : undefined}
             >
-              {t(key)}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right side: language + CTA */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.75rem',
-          flexShrink: 0
-        }}>
-          {/* Language switcher */}
-          <div
-            role="group"
-            aria-label="Language"
-            style={{ display: 'flex', alignItems: 'center', gap: '0' }}
-            className="desktop-nav"
-          >
-            {LOCALES.map(({ code, label }, idx) => (
-              <button
-                key={code}
-                onClick={() => switchLocale(code)}
-                aria-current={currentLocale === code ? 'true' : undefined}
-                style={{
-                  padding: '0.25rem 0.5rem',
-                  fontSize: '0.8125rem',
-                  fontWeight: currentLocale === code ? 600 : 400,
-                  color: currentLocale === code ? navActiveColor : navInactiveColor,
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                  borderRight: idx < LOCALES.length - 1 ? `1px solid ${dividerColor}` : 'none',
-                  lineHeight: 1,
-                  transition: 'color 0.15s ease-out'
-                }}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <Link href="/demo" className="btn-primary" style={{ fontSize: '0.875rem', padding: '0.5rem 1.125rem', ...ctaStyle }}>
-            {t('book_demo')}
-          </Link>
-
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMenuOpen(o => !o)}
-            aria-expanded={menuOpen}
-            aria-label="Toggle menu"
-            className="mobile-menu-btn"
-            style={{
-              display: 'none',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              padding: '0.25rem',
-              color: lightOnDark ? 'white' : 'var(--color-ink)'
-            }}
-          >
-            {menuOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M3 12h18M3 6h18M3 18h18" />
-              </svg>
+              {labels.product} <span aria-hidden="true">▾</span>
+            </button>
+            {open && (
+              <div className="menu-panel" id="product-menu">
+                {jobs.map(j => (
+                  <Link key={j.slug} href={`/${j.slug}`}>
+                    <span>
+                      <b>{j.name}</b>
+                      <small>{j.menuLine}</small>
+                    </span>
+                  </Link>
+                ))}
+              </div>
             )}
+          </div>
+          <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
+        </nav>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          {langs}
+          <Link className="quiet" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
+          <button
+            ref={burgerRef}
+            type="button"
+            className="burger"
+            aria-expanded={mobile}
+            aria-controls="mobile-menu"
+            onClick={() => setMobile(m => !m)}
+          >
+            <span>{mobile ? labels.close : labels.menuLabel}</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              {mobile ? (
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+              )}
+            </svg>
           </button>
         </div>
       </div>
-
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div
-          style={{
-            backgroundColor: 'oklch(1 0 0 / 0.97)',
-            backdropFilter: 'blur(12px)',
-            borderTop: '1px solid var(--color-border)',
-            padding: '1rem 1.5rem 1.5rem'
-          }}
-          className="mobile-menu"
-        >
-          <nav aria-label="Mobile navigation">
-            {NAV_LINKS.map(({ key, href }) => (
-              <Link
-                key={key}
-                href={href}
-                style={{
-                  display: 'block',
-                  padding: '0.75rem 0',
-                  borderBottom: '1px solid var(--color-border)',
-                  fontSize: '1rem',
-                  fontWeight: isActive(href) ? 500 : 400,
-                  color: isActive(href) ? 'var(--color-primary)' : 'var(--color-ink)',
-                  textDecoration: 'none'
-                }}
-              >
-                {t(key)}
-              </Link>
+      {mobile && (
+        <nav className="mobile-panel" id="mobile-menu" aria-label="Main">
+          <p className="lbl mobile-kicker">{labels.product}</p>
+          <ul className="mobile-jobs">
+            {jobs.map(j => (
+              <li key={j.slug}>
+                <Link href={`/${j.slug}`} aria-current={pathname === `/${j.slug}` ? 'page' : undefined}>
+                  <span><b>{j.name}</b><small>{j.menuLine}</small></span>
+                </Link>
+              </li>
             ))}
-          </nav>
-
-          <div style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div role="group" aria-label="Language" style={{ display: 'flex', gap: '0' }}>
-              {LOCALES.map(({ code, label }, idx) => (
-                <button
-                  key={code}
-                  onClick={() => switchLocale(code)}
-                  style={{
-                    padding: '0.25rem 0.625rem',
-                    fontSize: '0.875rem',
-                    fontWeight: currentLocale === code ? 600 : 400,
-                    color: currentLocale === code ? 'var(--color-primary)' : 'var(--color-muted)',
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    borderRight: idx < LOCALES.length - 1 ? '1px solid var(--color-border)' : 'none'
-                  }}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-            <Link href="/demo" className="btn-primary" style={{ fontSize: '0.875rem' }}>
-              {t('book_demo')}
-            </Link>
+          </ul>
+          <ul className="mobile-links">
+            <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
+          </ul>
+          <div className="mobile-foot">
+            <LangMenu locale={locale} href={localeHref} up />
+            <Link className="quiet mobile-demo" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
           </div>
-        </div>
+        </nav>
       )}
-
-      <style>{`
-        @media (max-width: 900px) {
-          .desktop-nav { display: none !important; }
-          .mobile-menu-btn { display: flex !important; }
-        }
-        @media (min-width: 901px) {
-          .mobile-menu { display: none !important; }
-        }
-      `}</style>
     </header>
   );
 }

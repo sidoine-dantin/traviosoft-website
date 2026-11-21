@@ -1,111 +1,144 @@
-import type { Metadata } from 'next';
-import { Geist, DM_Serif_Display } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Bricolage_Grotesque, Schibsted_Grotesk } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { baseUrl, siteName } from '@/lib/seo';
+import { JsonLd } from '@/components/site/json-ld';
+import { Consent } from '@/components/site/consent';
+import { ScrollTop } from '@/components/site/scroll-top';
+import { PRICES } from '@/content/prices';
+import { getContent } from '@/content';
+import { LANG_TAG, type Locale } from '@/content/types';
+import { baseUrl, siteName, ORG_ID, SITE_ID, SOFTWARE_ID, PROFILES } from '@/lib/seo';
 import '../globals.css';
 
-const geistSans = Geist({
+const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
-  variable: '--font-geist-sans',
+  axes: ['wdth', 'opsz'],
+  variable: '--font-bricolage',
   display: 'swap'
 });
 
-const dmSerifDisplay = DM_Serif_Display({
+// Titles and text: Schibsted Grotesk. Bricolage only for the logo and price figures.
+const schibsted = Schibsted_Grotesk({
   subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
-  variable: '--font-dm-serif',
+  variable: '--font-schibsted',
   display: 'swap'
 });
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true }
-  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
     : undefined
 };
 
-type Props = {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+// Phone browser bars take the page colour; zoom stays allowed (no maximum-scale).
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#F7F8F6'
 };
+
+export function generateStaticParams() {
+  return routing.locales.map(locale => ({ locale }));
+}
+
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!(routing.locales as readonly string[]).includes(locale)) notFound();
+  setRequestLocale(locale);
 
   const messages = await getMessages();
-  const t = await getTranslations({ locale, namespace: 'home' });
-  const description = t('meta_description');
+  const c = getContent(locale);
 
-  const organizationJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: siteName,
-    url: baseUrl,
-    logo: `${baseUrl}/icon.svg`,
-    description
-  };
-
-  const websiteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteName,
-    url: baseUrl,
-    inLanguage: routing.locales
-  };
-
-  const softwareJsonLd = {
+  // Plain facts, kept identical to the visible text on Home and Pricing.
+  const software = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': SOFTWARE_ID,
+    name: siteName,
+    url: `${baseUrl}/${locale}`,
+    applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Travel agency and DMC management software',
+    operatingSystem: 'Web',
+    description: c.home.metaDescription,
+    inLanguage: routing.locales,
+    offers: [
+      {
+        '@type': 'Offer',
+        name: c.pricing.plans[0]?.name,
+        price: String(PRICES.classic.yearly),
+        priceCurrency: 'EUR',
+        description: c.pricing.plans[0]?.users,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(PRICES.classic.yearly),
+          priceCurrency: 'EUR',
+          unitCode: 'MON',
+          billingDuration: 'P1Y',
+          valueAddedTaxIncluded: false
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: c.pricing.plans[1]?.name,
+        price: String(PRICES.premium.yearly),
+        priceCurrency: 'EUR',
+        description: c.pricing.plans[1]?.users,
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: String(PRICES.premium.yearly),
+          priceCurrency: 'EUR',
+          unitCode: 'MON',
+          billingDuration: 'P1Y',
+          valueAddedTaxIncluded: false
+        }
+      }
+    ],
+    image: `${baseUrl}/og/${locale}.png`,
+    publisher: { '@id': ORG_ID }
+  };
+  // One organisation for every page and language, so search engines and AI tools tie the
+  // site, the software and the public profiles to the same company.
+  const org = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': ORG_ID,
     name: siteName,
     url: baseUrl,
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
-    description,
-    inLanguage: routing.locales,
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'EUR',
-      price: '0',
-      description: 'Book a demo'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: siteName,
-      url: baseUrl
-    }
+    logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png`, width: 512, height: 512 },
+    description: c.footer.tagline,
+    email: 'hola@traviosoft.com',
+    sameAs: PROFILES
   };
+  const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: baseUrl, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
+
+  const jobs = (['sell', 'book', 'get-paid', 'setup'] as const).map(s => ({
+    slug: s,
+    name: c.jobs[s].name,
+    menuLine: c.jobs[s].menuLine
+  }));
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${dmSerifDisplay.variable}`}>
-      <body style={{ fontFamily: 'var(--font-body, system-ui, sans-serif)' }}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
-        />
+    <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable}`}>
+      <body>
+        <JsonLd data={org} />
+        <JsonLd data={site} />
+        <JsonLd data={software} />
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <Header locale={c.locale} labels={c.nav} jobs={jobs} />
+          <main id="main">{children}</main>
+          <Footer c={c} />
+          <ScrollTop />
+          <Consent text={c.footer.consent.text} accept={c.footer.consent.accept} refuse={c.footer.consent.refuse} more={c.footer.consent.more} policy={c.footer.consent.policy} />
         </NextIntlClientProvider>
       </body>
     </html>

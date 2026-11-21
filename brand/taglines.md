@@ -7,9 +7,9 @@ status: working document, à tester en conditions réelles (cold outreach, page 
 
 | Langue | Tagline | Notes |
 |---|---|---|
-| ES | "La herramienta de gestión diseñada para agencias de viaje boutique." | Reprise de la stratégie commerciale, déjà testée dans les séquences d'emailing |
-| FR | "Le logiciel de gestion conçu pour les agences de voyage boutique." | Variante directe de la version ES |
-| EN | "The management software built for boutique travel agencies." | Variante directe |
+| ES | "El sistema de gestión para agencias de viajes a medida y DMC." | Reprise de la stratégie commerciale, déjà testée dans les séquences d'emailing |
+| FR | "Le système de gestion pour les agences de voyages sur mesure et DMC." | Variante directe de la version ES |
+| EN | "The management system for tailor-made travel agencies and DMCs." | Variante directe |
 
 # Sous-titres / accroches secondaires (page d'accueil)
 

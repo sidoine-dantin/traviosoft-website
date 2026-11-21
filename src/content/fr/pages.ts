@@ -1,0 +1,358 @@
+import type { SiteContent } from '../types';
+import { PRICES } from '../prices';
+
+export const pricing: SiteContent['pricing'] = {
+  metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR | Traviosoft`,
+  metaDescription:
+    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les groupes, plusieurs équipes, les devises, les achats et plusieurs marques. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
+  title: 'Tarifs',
+  productLink: 'Voir le produit',
+  lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les groupes, plusieurs équipes, les autres devises, les achats et plusieurs marques.',
+  yearly: 'Annuel',
+  monthly: 'Mensuel',
+  yearlyNote: 'Prix par mois, hors TVA.',
+  plans: [
+    {
+      id: 'classic',
+      name: 'Classic',
+      users: `${PRICES.usersIncluded} utilisateurs inclus`,
+      yearly: String(PRICES.classic.yearly),
+      monthly: String(PRICES.classic.monthly),
+      priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.classic.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.classic.monthly} EUR par mois` },
+    },
+    {
+      id: 'premium',
+      name: 'Premium',
+      users: `${PRICES.usersIncluded} utilisateurs inclus`,
+      yearly: String(PRICES.premium.yearly),
+      monthly: String(PRICES.premium.monthly),
+      priceNote: { yearly: `Utilisateur supplémentaire : ${PRICES.extraUser.premium.yearly} EUR par mois`, monthly: `Utilisateur supplémentaire : ${PRICES.extraUser.premium.monthly} EUR par mois` },
+      hot: true,
+    }
+  ],
+  compareTitle: 'Comparer les offres',
+  compareFeature: 'Fonction',
+  yes: 'Inclus',
+  no: 'Non inclus',
+  compare: [
+    {
+      title: 'Vendre',
+      rows: [
+        { f: 'Demandes et devis avec votre marge et votre commission', classic: true, premium: true },
+        { f: 'Catalogue avec prix par saison', classic: true, premium: true },
+        { f: 'Agences partenaires et relevés de commission', classic: true, premium: true },
+        { f: 'Page de proposition et programme jour par jour, avec votre logo et vos couleurs', classic: true, premium: true },
+        { f: 'Documents dans la langue du client', classic: true, premium: true },
+        { f: 'Multi-devises', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Réserver',
+      rows: [
+        { f: 'Voyages confirmés et réservations, avec les e-mails des prestataires classés sur le voyage', classic: true, premium: true },
+        { f: 'Fiches de service', classic: true, premium: true },
+        { f: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists', classic: false, premium: true },
+        { f: 'Demandes de disponibilité et bons de commande aux prestataires', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Encaisser',
+      rows: [
+        { f: 'Échéanciers et liens de paiement', classic: true, premium: true },
+        { f: 'Rappels de paiement automatiques', classic: false, premium: true },
+        { f: 'Factures et avoirs', classic: 'En Espagne : intégrées. Ailleurs : via votre logiciel de facturation', premium: 'En Espagne : intégrées. Ailleurs : via votre logiciel de facturation' },
+        { f: 'Tableau de bord', classic: true, premium: true },
+        { f: 'Export comptable', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Équipe et connexions',
+      rows: [
+        { f: 'Plusieurs équipes', classic: false, premium: true },
+        { f: 'Rôles personnalisés', classic: false, premium: true },
+        { f: 'Plusieurs marques et sociétés dans un compte', classic: false, premium: true },
+        { f: 'Connecteur MCP pour vos propres outils d’IA (Claude, ChatGPT et autres)', classic: true, premium: true },
+        { f: 'L’assistant intégré', classic: { text: 'En option, avec des limites d’utilisation', option: true }, premium: { text: 'En option, avec des limites d’utilisation', option: true } },
+        { f: 'Accès API, pour que votre développeur relie votre site et vos autres logiciels', classic: false, premium: true }
+      ]
+    },
+    {
+      title: 'Mise en place et service',
+      rows: [
+        { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix, et formation de votre équipe', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
+        { f: 'Import de vos tableurs ou de l’export de votre outil actuel**', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
+        { f: 'Support par e-mail', classic: true, premium: true },
+        { f: 'Hébergement dans l’Union européenne', classic: true, premium: true },
+        { f: 'Export des données sur demande', classic: true, premium: true }
+      ]
+    }
+  ],
+  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place et l’accompagnement (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les tarifs par saison et les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
+  faq: [
+    {
+      q: 'De quelle offre ai-je besoin ?',
+      a: ['Classic gère une agence entière : demandes, devis, partenaires, réservations, paiements et factures. Premium ajoute les groupes, les rappels de paiement automatiques, plusieurs équipes, la vente dans d’autres devises et les bons de commande aux prestataires.']
+    },
+    {
+      q: 'Comment est-ce facturé ?',
+      a: ['À l’année ou au mois, au choix. L’annuel revient moins cher par mois et inclut la mise en place et l’import. Le mensuel s’arrête à la fin de n’importe quel mois.']
+    },
+    {
+      q: 'Les prix sont-ils hors TVA ?',
+      a: ['Oui. La TVA s’ajoute sur la facture selon votre pays et le statut de votre société.']
+    },
+    {
+      q: 'Et si j’ajoute un utilisateur ?',
+      a: [`Les deux offres incluent ${PRICES.usersIncluded} utilisateurs. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.classic.yearly} EUR par mois avec Classic et ${PRICES.extraUser.premium.yearly} EUR avec Premium en annuel (${PRICES.extraUser.classic.monthly} et ${PRICES.extraUser.premium.monthly} EUR en mensuel).`]
+    },
+    {
+      q: 'Puis-je changer d’offre ?',
+      a: ['Oui. Passez de Classic à Premium à tout moment : les nouvelles fonctions sont là le jour même. Vos données restent telles quelles.']
+    },
+    {
+      q: 'Puis-je résilier ?',
+      a: ['Oui. Les offres mensuelles s’arrêtent à la fin du mois de la résiliation. Les offres annuelles vont jusqu’au bout de l’année payée et s’arrêtent là.']
+    },
+    {
+      q: 'Puis-je récupérer mes données en partant ?',
+      a: ['Oui. Vous récupérez vos données dans des formats standard.']
+    },
+    {
+      q: 'Que comprennent la mise en place et l’accompagnement ?',
+      a: [`Nous configurons votre marque, vos documents, vos règles de marge, de TVA et de commission, et les accès de votre équipe. Puis nous formons votre équipe en visio et restons disponibles par e-mail pendant les premières semaines. L’ensemble est offert en annuel et coûte ${PRICES.setupMonthly} EUR une seule fois en mensuel.`]
+    },
+    {
+      q: 'Que comprend l’import ?',
+      a: [`Votre catalogue avec un prix par produit, vos clients et vos prestataires, depuis des tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Il est offert en annuel et coûte ${PRICES.importMonthly} EUR une seule fois en mensuel.`, 'Les tarifs par saison, les documents Word, les PDF, les e-mails, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+    }
+  ]
+};
+
+export const demo: SiteContent['demo'] = {
+  metaTitle: 'Démo de logiciel pour agences de voyages | Traviosoft',
+  metaDescription:
+    'Un appel de 30 minutes : un voyage exemple dans Traviosoft, de la demande à la facture, puis les tarifs et vos questions.',
+  title: 'Réserver une démo',
+  lead: 'Un appel de 30 minutes. Nous parcourons un voyage exemple dans Traviosoft, de la première demande à la facture finale.',
+  agendaTitle: 'L’appel',
+  agenda: [
+    { mins: '5', title: 'Votre agence', body: 'Taille de l’équipe, ce que vous vendez et les outils que vous utilisez aujourd’hui.' },
+    { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, les réservations, le programme, le paiement et la facture.' },
+    { mins: '10', title: 'Tarifs et questions', body: 'L’offre pour votre équipe, l’import de vos données et vos questions.' }
+  ],
+  afterTitle: 'Après l’appel',
+  after: [
+    'La proposition et le programme jour par jour vus pendant l’appel',
+    'Un court compte rendu par e-mail',
+    'Le prix pour votre équipe, par écrit',
+    'Un nouvel appel si vous le demandez'
+  ],
+  bookTitle: 'Choisissez un créneau pour votre démo',
+  bookBody: 'Pour l’instant, les rendez-vous se prennent par e-mail. Envoyez le nom de votre agence, la taille de l’équipe et quelques jours qui vous conviennent, et nous répondons avec un horaire.',
+  emailLabel: 'Écrivez à',
+  bookCta: 'Choisir un créneau',
+  bookCalendarBody: '30 minutes sur Google Meet. L’invitation arrive par e-mail.',
+  emailAltLabel: 'Ou écrivez à',
+  email: 'hola@traviosoft.com',
+  faq: [
+    {
+      q: 'Y a-t-il un essai gratuit ?',
+      a: ['Il y a une démo de 30 minutes sur un voyage exemple.']
+    },
+    {
+      q: 'Qui fait la démo ?',
+      a: ['Une personne de l’équipe Traviosoft, en espagnol, en anglais ou en français.']
+    },
+    {
+      q: 'Dois-je préparer quelque chose ?',
+      a: ['Rien à préparer.']
+    },
+    {
+      q: 'Allez-vous me demander mes données ?',
+      a: ['La démo utilise un voyage exemple avec des données inventées.']
+    }
+  ]
+};
+
+export const switching: SiteContent['switching'] = {
+  metaTitle: 'Passer d’Excel à Traviosoft | Traviosoft',
+  metaDescription:
+    'Passer d’Excel, Word et WhatsApp à Traviosoft en pleine saison : ce que nous importons, ce que vous vérifiez, et comment finir les voyages en cours.',
+  title: 'Passer à Traviosoft',
+  lead: 'Le changement se fait par étapes, en parallèle des voyages en cours.',
+  timelineTitle: 'Comment cela se passe',
+  timeline: [
+    {
+      title: 'Vous nous envoyez vos fichiers',
+      body: 'Vos tarifs, clients, prestataires et voyages en cours, en tableurs ou en export d’un autre outil.'
+    },
+    {
+      title: 'Nous importons, vous vérifiez',
+      body: 'Nous chargeons tout dans l’espace de votre agence. Vous l’ouvrez, vous regardez quelques produits et quelques clients, et vous nous dites quoi ajuster.'
+    },
+    {
+      title: 'Votre premier vrai devis',
+      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque, puis nous formons votre équipe en visio. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
+    },
+    {
+      title: 'Les nouvelles demandes entrent dans l’application',
+      body: 'À partir de là, chaque nouvelle demande commence dans Traviosoft. Les voyages déjà en cours se terminent comme ils ont commencé.'
+    }
+  ],
+  importTitle: 'Ce qui est repris',
+  importParts: [
+    { title: 'Compris dans le prix de l’import', body: 'Votre catalogue avec un prix par produit, vos clients, vos prestataires et leurs contacts. Depuis des tableurs ou un export de votre outil actuel.' },
+    { title: 'Sur devis', body: 'Les tarifs par saison, les voyages en cours et les autres fichiers (Word, PDF, e-mails). Nous vous donnons un prix après avoir vu un échantillon.' }
+  ],
+  seasonTitle: 'Cela va-t-il perturber ma saison ?',
+  seasonBody: [
+    'Les nouvelles demandes entrent dans Traviosoft dès la mise en service. Les voyages déjà en cours se terminent comme ils ont commencé.',
+    'Les voyages en cours ne sont repris que si vous le souhaitez, et en général ceux qui sont encore loin. Un voyage qui part la semaine prochaine reste où il est.',
+    'En haute saison, nous importons d’abord et passons en service lors d’une semaine plus calme.'
+  ],
+  faq: [
+    {
+      q: 'Pouvez-vous importer depuis mon outil actuel ?',
+      a: ['S’il exporte vers un tableur, oui. Envoyez-nous un export d’exemple et nous vous disons exactement ce qui est repris.']
+    },
+    {
+      q: 'Combien cela coûte-t-il ?',
+      a: [`La mise en place, l’accompagnement et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec un prix par produit, une ligne par élément et les mêmes colonnes du début à la fin. Les tarifs par saison, les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+    },
+    {
+      q: 'Que deviennent mes anciens fichiers ?',
+      a: ['Ils restent exactement où ils sont. Nous importons des copies.']
+    },
+    {
+      q: 'Dois-je reprendre tous les anciens voyages ?',
+      a: ['Reprenez les voyages en cours que vous voulez et gardez le reste dans vos archives. Les anciens clients valent la peine d’être importés ; pour les voyages passés, vos archives suffisent.']
+    },
+    {
+      q: 'Et si l’import doit être ajusté ?',
+      a: ['Vous vérifiez un échantillon avant la mise en service, et nous l’ajustons avec vous. Ce que vous repérez plus tard, vous le corrigez dans l’application ou vous nous le signalez.']
+    }
+  ]
+};
+
+export const faqPage: SiteContent['faqPage'] = {
+  metaTitle: 'Questions fréquentes | Traviosoft',
+  metaDescription:
+    'Ce que fait Traviosoft, son prix, l’hébergement de vos données et le passage depuis Excel.',
+  title: 'Questions fréquentes',
+  lead: 'Si votre question n’est pas ici, écrivez à hola@traviosoft.com.',
+  groups: [
+    {
+      title: 'Produit',
+      items: [
+        {
+          q: 'Qu’est-ce que Traviosoft ?',
+          a: ['Un logiciel web de gestion pour les agences de voyages sur mesure et les DMC. Il couvre la demande, le devis, la commande et les réservations, l’itinéraire client, les paiements et les factures.']
+        },
+        {
+          q: 'Plusieurs prestataires peuvent-ils vendre le même hôtel ou le même service ?',
+          a: ['Oui. Un produit peut avoir plusieurs prestataires, chacun avec ses propres tarifs. Vous choisissez le prestataire voyage par voyage.']
+        },
+        {
+          q: 'Que voit mon client ?',
+          a: ['Un devis net avec des intitulés pensés pour le client, des prix par personne, ce qui est compris et ce qui ne l’est pas, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe.']
+        },
+        {
+          q: 'Mes guides et mes chauffeurs peuvent-ils voir le voyage ?',
+          a: ['Ils reçoivent par e-mail une fiche de service avec les dates, les heures, les noms et le point de rendez-vous.']
+        },
+        {
+          q: 'Travaillez-vous avec des DMC qui vendent via des agences partenaires ?',
+          a: ['Oui. Envoyez le devis à l’agence partenaire, gardez son client sur le voyage, ajoutez la commission du partenaire et réglez-la à partir d’un relevé par période.']
+        },
+        {
+          q: 'Y a-t-il un assistant IA ?',
+          a: ['Oui, en option dans les deux offres, avec des limites d’utilisation. Demandez-lui ce qui vous attend aujourd’hui, faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue ; chaque changement attend votre accord. La connexion à vos données Traviosoft de l’assistant d’IA que vous utilisez déjà est incluse dans les deux offres.']
+        }
+      ]
+    },
+    {
+      title: 'Prix et facturation',
+      items: [
+        {
+          q: 'Combien cela coûte-t-il ?',
+          a: [`Classic coûte ${PRICES.classic.yearly} EUR par mois et Premium ${PRICES.premium.yearly} EUR par mois, en facturation annuelle, avec ${PRICES.usersIncluded} utilisateurs inclus. Chaque utilisateur supplémentaire coûte ${PRICES.extraUser.classic.yearly} EUR par mois avec Classic et ${PRICES.extraUser.premium.yearly} EUR avec Premium. La TVA n’est pas incluse.`]
+        },
+        {
+          q: 'Puis-je payer au mois ?',
+          a: [`Oui. En mensuel, c’est ${PRICES.classic.monthly} EUR pour Classic et ${PRICES.premium.monthly} EUR pour Premium. La mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR et l’import de vos tableurs ${PRICES.importMonthly} EUR, une seule fois, en mensuel ; en annuel, les deux sont offerts.`]
+        },
+        {
+          q: 'Y a-t-il un essai gratuit ?',
+          a: ['Il y a une démo de 30 minutes sur un voyage exemple.']
+        }
+      ]
+    },
+    {
+      title: 'Données et sécurité',
+      items: [
+        {
+          q: 'Où sont mes données ?',
+          a: ['Dans un espace à part pour votre agence, hébergé dans l’Union européenne, séparé de toutes les autres agences.']
+        },
+        {
+          q: 'Puis-je partir avec mes données ?',
+          a: ['Oui. Vous récupérez vos données dans des formats standard.']
+        },
+        {
+          q: 'Qui peut voir quoi ?',
+          a: ['Avec Classic, chaque utilisateur voit les voyages de l’agence. Avec Premium, chaque équipe et chaque personne peut avoir ses propres clients, voyages et droits.']
+        }
+      ]
+    },
+    {
+      title: 'Changement d’outil',
+      items: [
+        {
+          q: 'Puis-je importer mon catalogue actuel ?',
+          a: ['Oui. Pendant la mise en place, nous importons vos produits, vos prix et vos prestataires depuis vos tableurs. La mise en place et l’import sont offerts en annuel.']
+        },
+        {
+          q: 'Le changement va-t-il perturber ma saison ?',
+          a: ['Il se fait en parallèle. Commencez par les nouvelles demandes dans Traviosoft et terminez les voyages en cours comme avant.']
+        },
+        {
+          q: 'Est-ce conforme aux règles de mon pays ?',
+          a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Le régime espagnol de TVA des agences de voyages est intégré. Dans les autres pays, les factures passent par votre logiciel de facturation. Pour votre pays, demandez-nous pendant la démo.']
+        }
+      ]
+    }
+  ]
+};
+
+export const about: SiteContent['about'] = {
+  metaTitle: 'À propos de Traviosoft',
+  metaDescription:
+    'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC : chaque voyage en un seul endroit, de la première demande à la facture finale, avec vos données hébergées dans l’UE.',
+  title: 'À propos de Traviosoft',
+  lead: 'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC. Chaque voyage tient en un seul endroit, de la première demande à la facture finale.',
+  blocks: [
+    { title: 'Pensé pour le sur-mesure', body: ['Chaque voyage est différent. Traviosoft calcule chaque prestation à partir du tarif net du prestataire, accepte plusieurs prestataires par prestation, et gère les groupes, les devises et les documents dans la langue du client.'] },
+    { title: 'Un voyage, les mêmes chiffres partout', body: ['Le devis accepté donne les réservations, l’échéancier et les factures. Toute l’agence travaille sur les mêmes chiffres, sans rien ressaisir.'] },
+    { title: 'Vos données', body: ['Chaque agence a son propre espace privé. Vos données sont hébergées dans l’Union européenne, et vous pouvez les exporter à tout moment.'] },
+    { title: 'Travailler avec nous', body: ['Nous configurons votre compte et importons vos données avec vous. Le support se fait par e-mail, avec les personnes qui développent Traviosoft.'] }
+  ]
+};
+
+export const resources: SiteContent['resources'] = {
+  metaTitle: 'Ressources pour agences de voyages sur mesure | Traviosoft',
+  metaDescription:
+    'Comparatifs, guides et un glossaire pour les agences sur mesure et les DMC qui choisissent un logiciel. En langage clair, sans inscription.',
+  title: 'Ressources',
+  lead: 'Comparatifs, guides et un glossaire.',
+  groups: [
+    { kind: 'best', title: 'Comparatif des meilleurs logiciels', body: 'Les outils qu’utilisent les agences sur mesure et les DMC, côte à côte, et à qui chacun convient.' },
+    { kind: 'compare', title: 'Pages de comparaison', body: 'Traviosoft à côté d’autres outils.' },
+    { kind: 'guide', title: 'Guides', body: 'Des notes pratiques pour chiffrer, réserver et facturer un voyage sur mesure.' },
+    { kind: 'invoicing', title: 'Facturer dans votre pays', body: 'Comment facturent les agences de voyages en Espagne, en France, en Allemagne et en Belgique, avec les dates de la facture électronique.' },
+    { kind: 'glossary', title: 'Glossaire', body: 'Les termes d’agence de voyages et de logiciel, en une ligne chacun.' },
+  ],
+  glossaryTitle: 'Glossaire',
+  glossaryMeta:
+    'Des définitions claires des termes qu’utilisent les agences de voyages sur mesure et les DMC : tarif net, commission, feuille de service, rooming list, acompte et plus.',
+  glossaryLead: 'Les mots que vous utilisez chaque jour, et ceux du logiciel, en une ligne chacun.'
+};

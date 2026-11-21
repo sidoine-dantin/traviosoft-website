@@ -7,26 +7,23 @@ status: working document (base pour la rédaction du site, pas pour publication 
 
 ## Le vrai concurrent
 
-Le concurrent de Traviosoft n'est pas un autre logiciel de gestion. C'est **Excel, Word, WhatsApp et la boîte mail** : la combinaison d'outils que la grande majorité des agences de voyage boutique utilisent encore pour gérer devis, paiements, prestataires et suivi client.
+Traviosoft se place au niveau des logiciels de voyage établis (Tourplan, Lemax, Kaptio, Ezus, Tourwriter). Le point de départ de beaucoup d'agences est **Excel, Word, WhatsApp et la boîte mail** : la combinaison d'outils qu'elles utilisent encore pour gérer devis, paiements, prestataires et suivi client.
 
-Ce n'est pas un produit qui "vole" ces clients à un concurrent. C'est un produit qui remplace le chaos organisé par un seul outil structuré.
+Traviosoft remplace ce chaos organisé par un seul système structuré.
 
 ## Promesse centrale
 
-**Un seul outil pour piloter une agence boutique de bout en bout** : demande client → devis (avec PDF) → commande → coordination prestataires/guides → suivi des paiements (échéances) → factures → reporting.
+**Un seul système pour piloter chaque voyage, de la première demande à la dernière facture** : demande client → devis (avec PDF) → commande → coordination prestataires/guides → suivi des paiements (échéances) → factures → reporting.
 
 ## ICP (profil client idéal)
 
 - Agences de voyage sur-mesure / luxe, DMC, réceptifs spécialisés
-- 2 à 15 personnes
-- Marché prioritaire : Espagne (Barcelone, Madrid, Séville, Valence, Bilbao, Malaga, San Sebastian), mais produit pertinent pour toute agence boutique francophone/anglophone/hispanophone
+- Marché prioritaire : Espagne (Barcelone, Madrid, Séville, Valence, Bilbao, Malaga, San Sebastian), mais produit pertinent pour toute agence sur mesure et DMC francophone/anglophone/hispanophone
 - Décideur : propriétaire ou directeur, souvent la même personne
 - Douleurs : devis lents et peu pro, suivi des paiements manuel, coordination prestataires par email/WhatsApp, zéro visibilité sur le pipeline
 
 À ne pas cibler pour l'instant (à garder en tête pour le ton, sans l'écrire explicitement sur le site) :
-- Grandes agences / réseaux
 - Agences en ligne pures (OTA)
-- Agences à très gros volume (100+ devis/mois)
 
 ## Les 4 piliers de valeur
 
@@ -67,9 +64,9 @@ L'interface est disponible en français, anglais et espagnol. Argument pertinent
 
 ## Récit fondateur / crédibilité
 
-Traviosoft est né d'un besoin réel : l'outil a été conçu avec et pour une agence de voyage boutique basée à Barcelone, spécialisée dans les voyages sur-mesure, qui l'utilise au quotidien pour gérer l'intégralité de son activité (devis, commandes, paiements, prestataires).
+Traviosoft est né d'un besoin réel : l'outil a été conçu avec et pour une agence de voyage sur mesure basée à Barcelone, qui l'utilise au quotidien pour gérer l'intégralité de son activité (devis, commandes, paiements, prestataires).
 
-Ce point doit être formulé **honnêtement**, sans donner l'impression d'un produit déjà déployé chez des dizaines de clients. Ton recommandé : "conçu à partir de vrais besoins d'agence, testé en conditions réelles" plutôt que "utilisé par X agences".
+Ce point doit être formulé **honnêtement**, sans donner l'impression d'un produit déjà déployé chez des dizaines de clients. Ton recommandé : "conçu à partir de vrais besoins d'agence, utilisé sur de vrais voyages" plutôt que "utilisé par X agences". Forces à mettre en avant : support par email en ES/EN/FR par les personnes qui construisent le produit ; données hébergées dans l'UE.
 
 Ne jamais inventer :
 - de logos clients
@@ -79,6 +76,6 @@ Ne jamais inventer :
 ## Ton de voix
 
 - Direct, concret, sans jargon marketing creux ("révolutionnaire", "disruptif")
-- Empathique sur la douleur métier (on connaît le quotidien d'une agence boutique)
-- Transparent sur le fait que c'est un produit jeune mais sérieux et conçu par quelqu'un qui comprend le métier
+- Empathique sur la douleur métier (on connaît le quotidien d'une agence sur mesure ou d'un DMC)
+- Assuré et établi, au même registre que les éditeurs reconnus du secteur, sans jargon d'entreprise ; conçu par des gens qui comprennent le métier
 - Jamais survendre une fonctionnalité qui n'existe pas dans l'app

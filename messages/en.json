@@ -21,14 +21,14 @@
     "privacy": "Privacy policy",
     "terms": "Terms of service",
     "legal_notice": "Legal notice",
-    "tagline": "Management software for boutique travel agencies",
+    "tagline": "Management software for tailor-made travel agencies and DMCs",
     "copyright": "Traviosoft"
   },
   "home": {
-    "meta_title": "Traviosoft - The management software for boutique travel agencies",
-    "meta_description": "Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for boutique travel agencies and DMCs. Book a 30-minute demo.",
+    "meta_title": "Traviosoft - The management software for tailor-made travel agencies and DMCs",
+    "meta_description": "Traviosoft centralizes quotes, orders, payments, suppliers and invoicing for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
     "hero": {
-      "headline": "The management software built for boutique travel agencies",
+      "headline": "The management software built for tailor-made travel agencies and DMCs",
       "subheadline": "Quotes, orders, payments and suppliers, all in one place, no more scattered spreadsheets and Word documents.",
       "cta_primary": "Book a demo",
       "cta_secondary": "See how it works"
@@ -71,7 +71,7 @@
     },
     "trust": {
       "title": "Built from real-world use, not from an abstract spec sheet",
-      "text": "Traviosoft was built with, and for, a boutique travel agency based in Spain, specializing in tailor-made trips. The product keeps evolving in contact with agencies like yours, with a simple goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
+      "text": "Traviosoft was built with, and for, a tailor-made travel agency based in Spain. The product keeps evolving in contact with agencies like yours, with one goal: replace scattered spreadsheets and Word documents with a tool designed for the job.",
       "cta": "Book a demo and talk it through"
     },
     "multilang": {
@@ -86,7 +86,7 @@
   },
   "product": {
     "meta_title": "Features - Traviosoft",
-    "meta_description": "See what changes when quotes, orders, payments, suppliers and invoicing live in one tool built for boutique travel agencies. Book a 30-minute demo.",
+    "meta_description": "See what changes when quotes, orders, payments, suppliers and invoicing live in one tool built for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
     "intro": {
       "headline": "Less time fighting admin. More time selling trips.",
       "text": "You didn't start a travel agency to wrestle with spreadsheets. Here's what your days look like once every quote, payment and supplier lives in one place.",
@@ -258,7 +258,7 @@
   },
   "pricing": {
     "meta_title": "Pricing - Traviosoft",
-    "meta_description": "A simple pricing model, no hidden fees, built for boutique travel agencies. Book a demo to get your quote.",
+    "meta_description": "A clear pricing model, with every feature in every plan, for tailor-made travel agencies and DMCs. Book a demo to get your quote.",
     "intro": {
       "headline": "One product, shaped around your agency. Priced for your team size.",
       "text": "Traviosoft adapts to the way your agency works, not the other way around. The only thing that sets your price is how many people on your team use it."
@@ -267,7 +267,7 @@
       "title": "A Traviosoft that fits your agency, sized to your team",
       "points": [
         "Tailored to the way your agency works, so it feels made for you",
-        "A price set by your team size (small team, growing team, full team), so you only pay for the seats you use",
+        "A price set by your team size (3 users, 5 users or more), so you only pay for the seats you use",
         "No hidden setup or onboarding fees",
         "Monthly or annual billing, your choice"
       ],
@@ -289,18 +289,18 @@
   },
   "about": {
     "meta_title": "About - Traviosoft",
-    "meta_description": "Traviosoft was born from the real-world needs of a boutique travel agency. Discover the philosophy behind the product.",
+    "meta_description": "Traviosoft was born from the real-world needs of a tailor-made travel agency. Discover the philosophy behind the product.",
     "intro": {
-      "headline": "Made for the boutique agencies big software forgets",
+      "headline": "Made for tailor-made travel agencies and DMCs",
       "text": "Traviosoft started with a real problem: a travel agency juggling Excel, Word and endless chat messages just to keep its trips moving. We built the tool that agency actually needed, and kept going from there."
     },
     "story": {
       "title": "Built with a real agency",
-      "text": "Traviosoft was developed with, and for, a boutique travel agency based in Spain that specializes in tailor-made trips. Every part of it comes from a real day-to-day need we watched the team run into."
+      "text": "Traviosoft was developed with, and for, a tailor-made travel agency based in Spain. Every part of it comes from a real day-to-day need we watched the team run into."
     },
     "philosophy": {
-      "title": "Built for small teams",
-      "text": "Most travel management software is built for large organizations, with heavy processes and modules a small agency will never open. Traviosoft is the simple version: focused on what a 2-to-15-person team running tailor-made trips actually does every day."
+      "title": "Built around the whole trip",
+      "text": "Traviosoft covers the whole trip, from the first request to the last invoice, around what a tailor-made agency or DMC does every day: pricing service by service, coordinating suppliers, collecting payments and invoicing."
     },
     "support": {
       "title": "Real people who know the job",
@@ -333,7 +333,7 @@
       "title": "Traviosoft is a particularly good fit if...",
       "points": [
         "You run a tailor-made travel agency, a DMC or a specialized inbound operator",
-        "Your team has between 2 and 15 people",
+        "You want one system for the whole trip, from the first request to the last invoice",
         "You currently manage quotes, payments or suppliers with Excel, Word or software that wasn't built for travel agencies",
         "You want to make your quotes and client documents more professional without overhauling your whole setup"
       ]
@@ -341,7 +341,6 @@
     "fit_no": {
       "title": "It's probably not (yet) for you if...",
       "points": [
-        "You handle several hundred quotes a month with a large dedicated sales team",
         "You're looking for an online booking platform for the general public (OTA)"
       ]
     },
@@ -374,7 +373,7 @@
       },
       {
         "question": "Is it suitable if I work alone? What about a team of 10 or 15?",
-        "answer": "Both work. Traviosoft is built for teams of 2 to 15, and it works just as well for one person running everything from the first quote to the final invoice."
+        "answer": "Both work. Traviosoft suits one person running everything from the first quote to the final invoice, and a team sharing the same trips, with users added as the team grows."
       },
       {
         "question": "Can we import our existing clients, quotes or suppliers?",
@@ -404,52 +403,62 @@
     "notice_title": "Legal Notice - Traviosoft",
     "back_home": "Back to home",
     "updated_label": "Last updated",
-    "updated_date": "June 2026",
+    "updated_date": "November 2026",
     "privacy": {
       "intro": "This policy explains how we handle information collected through the traviosoft.com website. It covers the public website only. The use of the Traviosoft application by our customers is governed by a separate agreement.",
       "sections": [
         {
           "heading": "Who we are",
           "body": [
-            "This website is published by Sidoine Dantin EI, registered in France under SIRET 941 883 779 00014, the business behind Traviosoft, management software for boutique travel agencies. For any question about this policy or your data, you can contact us at sidoine@traviosoft.com."
+            "This website is published by Sidoine Dantin EI, registered in France under SIRET 941 883 779 00014, the business behind Traviosoft, management software for tailor-made travel agencies and DMCs. For any question about this policy or your data, you can contact us at privacy@traviosoft.com."
           ]
         },
         {
           "heading": "What we collect",
           "body": [
-            "When you book a demo, you share the details you enter in the booking form: usually your name, your email address, and a few facts about your agency. The booking itself is handled by Google's appointment scheduling, so the information you submit there is also processed by Google.",
-            "Like most websites, our hosting provider records basic technical data such as your IP address and browser type in its server logs. We do not use advertising trackers or build marketing profiles."
+            "When you ask for a demo, you choose a time in our booking window (Cal.com) or write to us by email. We receive what you enter or choose to tell us: usually your name, your email address, the name of your agency and a few facts about it.",
+            "Like most websites, our hosting provider records basic technical data such as your IP address and browser type in its server logs. If you accept advertising cookies, LinkedIn, Meta and Google also record your visit to this site (see \"Advertising and audiences\")."
           ]
         },
         {
           "heading": "How we use your information",
           "body": [
-            "We use the details you give us to answer your demo request, prepare the call, and follow up about Traviosoft. We use technical logs to keep the site secure and working. We never sell your data, and we do not share it except with the service providers needed to run the site and the booking.",
-            "Where the law requires a legal basis, we rely on your request (to organize the demo you asked for) and on our legitimate interest in keeping the site safe and in contact with people who reached out to us."
+            "We use the details you give us to answer your demo request, prepare the call, and follow up about Traviosoft. We use technical logs to keep the site secure and working. We never sell your data. We share it only with the service providers needed to run the site and our email, and with LinkedIn, Meta and Google for our advertising as described below.",
+            "Where the law requires a legal basis, we rely on your request (to organize the demo you asked for), on your consent (for advertising cookies) and on our legitimate interest (to keep the site safe, to stay in contact with people who reached out to us, and to show our ads to travel businesses)."
           ]
         },
         {
           "heading": "Third-party services",
           "body": [
-            "The demo calendar is provided by Google. Booking a slot is subject to Google's own terms and privacy policy. The website is delivered through Cloudflare's hosting and content network. These providers process limited data on our behalf to make the booking and the site work."
+            "The website is delivered through Cloudflare's hosting and content network. Demo bookings are handled by Cal.com, Inc., which loads only when you open the booking window, receives what you enter there and adds the call to our calendar. Our ads run on LinkedIn (LinkedIn Ireland Unlimited Company), on Facebook and Instagram (Meta Platforms Ireland Limited), and on Google Search, YouTube, Gmail and partner websites (Google Ireland Limited). For the advertising cookies, LinkedIn and Meta act as joint controllers with us for their tags. Google acts as an independent controller. Their own privacy policies apply to what they do with the data. Some of these providers may transfer data to the United States under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
+          ]
+        },
+        {
+          "heading": "Advertising and audiences",
+          "body": [
+            "If you accept advertising cookies, the LinkedIn Insight Tag, the Meta Pixel and the Google tag record that your browser visited this site, which pages you saw and whether you opened the demo page, clicked to contact us or booked a demo. We use this to measure our ads and to show them again to people who visited the site. LinkedIn, Meta and Google give us only totals and audience sizes, never names.",
+            "We may also share a list of company names and websites with LinkedIn so that our ads reach those travel businesses. The list holds no names of people and no email addresses. We do this on the basis of our legitimate interest in presenting Traviosoft to travel professionals.",
+            "If you contact us or book a demo, we may also add your professional email address to our ad audience lists on LinkedIn and Meta, so that our ads keep reaching you while you look at Traviosoft. It is encrypted (hashed) before the upload, used only to match accounts and deleted by the platforms after matching. We do this on the basis of our legitimate interest in staying in contact with people who reached out to us, and you can object at any time as described below.",
+            "You can object at any time: write to privacy@traviosoft.com and we remove you from our lists, change your choice with \"Cookie settings\" at the bottom of every page, or adjust your ad settings in your LinkedIn, Meta and Google accounts."
           ]
         },
         {
           "heading": "Cookies",
           "body": [
-            "The website uses only the cookies needed for it to function and to remember your language choice. The embedded booking calendar may set its own cookies, managed by Google. We do not run advertising cookies."
+            "The website uses the cookies it needs to work and to remember your language and your cookie choice. With your consent only, it also uses LinkedIn, Meta and Google advertising cookies. Refusing is as easy as accepting, and the site works the same either way. We ask again after six months."
           ]
         },
         {
           "heading": "How long we keep it",
           "body": [
-            "We keep the information from your demo request for as long as we are in contact about Traviosoft, and a reasonable period afterwards. Technical logs are kept only for the short time needed for security and maintenance."
+            "We keep the information from your demo request for as long as we are in contact about Traviosoft, and for three years after our last exchange. Technical logs are kept only for the short time needed for security and maintenance.",
+            "Advertising cookies last at most 13 months. Contact details uploaded for advertising audiences are kept for as long as the campaign runs and are removed from our lists when you object."
           ]
         },
         {
           "heading": "Your rights",
           "body": [
-            "You can ask to see the data we hold about you, to correct it, or to have it deleted. To make a request, email us at sidoine@traviosoft.com. As the business is based in France, you can also lodge a complaint with the French data protection authority (CNIL)."
+            "You can ask to see the data we hold about you, to correct it, to have it deleted, to restrict its use or to receive it in a portable format. You can also object to its use, and withdraw your consent at any time. To make a request, email us at privacy@traviosoft.com: we answer within one month. You can also lodge a complaint with a data protection authority, in particular in the country where you live or work. As the business is based in France, its authority is the CNIL."
           ]
         },
         {
@@ -466,7 +475,7 @@
         {
           "heading": "Who publishes this site",
           "body": [
-            "This website is published by Sidoine Dantin EI, registered in France under SIRET 941 883 779 00014. You can contact us at sidoine@traviosoft.com. The site is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States."
+            "This website is published by Sidoine Dantin EI, registered in France under SIRET 941 883 779 00014. You can contact us at privacy@traviosoft.com. The site is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States."
           ]
         },
         {
@@ -496,7 +505,7 @@
         {
           "heading": "External links and services",
           "body": [
-            "The demo calendar is hosted by Google and the site is delivered through Cloudflare. We are not responsible for the content or practices of these third-party services, which are governed by their own terms."
+            "The site is delivered through Cloudflare, and our ads run on LinkedIn, Meta and Google. We are not responsible for the content or practices of these third-party services, which are governed by their own terms."
           ]
         },
         {
@@ -525,13 +534,13 @@
         {
           "heading": "Site publisher",
           "body": [
-            "This website is published by Sidoine Dantin EI, a sole proprietorship (entreprise individuelle) registered in France under SIRET 941 883 779 00014. Registered address: 137 rue à Vaches, 62610 Balinghem, France. Director of publication: Sidoine Dantin. Contact: sidoine@traviosoft.com."
+            "This website is published by Sidoine Dantin EI, a sole proprietorship (entreprise individuelle) registered in France under SIRET 941 883 779 00014. Registered address: 137 rue à Vaches, 62610 Balinghem, France. Director of publication: Sidoine Dantin. Contact: privacy@traviosoft.com."
           ]
         },
         {
           "heading": "Hosting",
           "body": [
-            "The website is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States (cloudflare.com)."
+            "The website is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States, phone +1 650 319 8930 (cloudflare.com)."
           ]
         },
         {
@@ -549,7 +558,7 @@
         {
           "heading": "Contact",
           "body": [
-            "For any question about the site, write to sidoine@traviosoft.com."
+            "For any question about the site, write to privacy@traviosoft.com."
           ]
         }
       ]
