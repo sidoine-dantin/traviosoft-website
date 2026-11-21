@@ -1,6 +1,6 @@
 # Design and content rules
 
-Standing rules for the website (and the ads, emails and brand profiles that share its look and voice). They come from the owner's review of every draft and preview up to 14 November 2026. Where two remarks conflicted, the latest one is the rule. Check a change against this file and `MOBILE.md` before pushing.
+Standing rules for the website (and the ads, emails and brand profiles that share its look and voice). They come from the owner's review of every draft and preview up to 20 November 2026. Where two remarks conflicted, the latest one is the rule. Check a change against this file and `MOBILE.md` before pushing.
 
 Code: tokens in `src/app/globals.css`, fonts in `src/app/[locale]/layout.tsx`, prices in `src/content/prices.ts`.
 
@@ -39,23 +39,43 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 - Rejected, do not bring back: Funnel Display ("AI coded"), Archivo bold, Bricolage everywhere, DM Mono or any mono font.
 - Logo: lowercase "traviosoft" in Bricolage with the yellow disc and dotted route. Never an uppercase condensed wordmark.
 
+### Typography details (owner, 20 November 2026)
+
+- Tabs and other selectable labels reserve their bold width, so selecting one never shifts the layout: the label is an `inline-grid` with a hidden bold copy of the text in the same cell (`::after { content: attr(data-text); font-weight: 700; visibility: hidden }`, both in `grid-area: 1 / 1`).
+- Labels and buttons use `text-box-trim: trim-both; text-box-edge: cap alphabetic`, so the text sits truly centred.
+- Links use `text-underline-offset: 0.2em`, so the underline clears g and y (the hover state drops it a little further, section 5).
+- Superscripts (the price asterisk) use `line-height: 0; position: relative; vertical-align: baseline; top: -0.5em`, so they never push lines apart.
+- Headlines use a fluid size with `clamp()` (for example `clamp(2rem, 1rem + 5vw, 4rem)`) instead of jumping at breakpoints.
+- Acronyms (VAT, DMC, REAV) use `font-variant-caps: all-small-caps` instead of full capitals.
+- Quotes and apostrophes are always curly in visible text, with each language's own marks (“ ” ’ in English, « » in French, « » or “ ” in Spanish, Italian and Portuguese). Never straight ' or ".
+- File names truncate in the middle so the extension stays visible: in a flex row, the name part has `overflow: hidden; text-overflow: ellipsis; white-space: nowrap` and the extension `flex-shrink: 0`.
+- Narrow columns use `hyphens: auto`, with the page's real language in the `lang` attribute of `<html>`.
+- Card titles stop at two lines (`line-clamp: 2`, with the `-webkit-` fallback).
+- Text is left-aligned. Centre only a short title or a single line, never a paragraph or a form.
+
 ## 4. No AI look
 
 - No capitalised labels or eyebrows above titles, no full stop at the end of a title, no mono text, no tight letter-spacing (logo excepted).
 - No pill rows, no section numbers, no "1 of 4" breadcrumbs.
 - Cards and paragraphs do not all have the same length. Some are a few words, some longer.
 - No "Premium" pill next to features. Which plan includes what appears only on the Pricing page.
+- No emojis anywhere (site, ads, posts, emails). Icons only from one consistent set, and as few as possible. No decorative status dots.
 - **No separator lines, ever.** No border between items, no hairline under a header or a sticky bar, no rail beside a list, no row lines in tables or product mocks, no `<hr>`. Separate things with space and grouping, type (weight, size, a green title), soft tinted surfaces (`--tint` zebra rows, rounded `--white` panels on the page background, a background change between sections), a green dot for the current item, and a soft green-tinted shadow under a sticky bar. Lines that carry meaning stay: the dotted route of a timeline, field and button outlines.
 
 ## 5. Shape and motion
 
+- Round shapes are true circles, one radius, never ellipses or ovals (owner, 19 November 2026). This covers background shapes on the site, banners, covers and ads.
 - Tilt is fine when it means something: the messy "before" pile (overlapping, tilted notes), the two price circles turned in opposite directions. Product cards stay straight.
 - Subtle motion is welcome: elements in the home hero move at different speeds as you scroll (desktop only, off when the system asks for reduced motion); link hover where the text gets slightly bolder (a light shadow, not thick), the underline drops a little and extends under the arrow as it moves forward (the text never moves up). "See how" links show no underline until hover.
 - Background dotted routes: clean organic curves without hand-drawn wobbles, continuous, wandering left and right with a few loops, spread from top to bottom, both ends off screen, always behind the content.
+- A plain one-colour section looks empty: give it a background shape (light and dark circles, a dotted route), never decoration that implies a meaning.
+- Videos (product topics, ads, social) tell one story with rhythm: steps overlap instead of step, pause, step; the camera keeps moving; speed varies with easing, never linear. One topic per video. Slides with transitions are not a video. On the site they play silent and loop.
 
 ## 6. Layout
 
 - Breathable: few elements per screen, generous space. The home stays light.
+- Much more space between sections, site-wide (owner, 19 November 2026): the next section's title never shows while the visitor is still reading the current one.
+- Product pages share one layout: every topic has the same shape (title, lead, points in two columns, visual on the right). The topic names sit in a side list that follows the scroll and marks the current topic; on phones it becomes a sticky row. No pill selectors, no different presentation per topic.
 - Repeated elements line up (for example every "See how" link on the same line).
 - Hover menus forgive the mouse: a bridge to the panel and a short close delay.
 - Every page works from 360 px phones to 2560 px screens (`MOBILE.md`).
@@ -68,6 +88,9 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 - Visuals are drawn in HTML (`src/components/site/visuals.tsx`) and must be factually right: documents go out in 5 languages (Spanish, Catalan, English, French, Italian); the interface and support are in Spanish, English and French.
 - Example text, dates and numbers follow the page language and its number format (FR 4 860, not 4,860).
 - Show the real output only if it matches the app. If it cannot be accurate, show nothing (the example trips page was removed for this reason).
+- No screens of the app on the site: they show too much, age fast and invite copying. The visuals are the client documents (proposal, itinerary on a phone) and text.
+- Devices are drawn generic: a phone may look phone-like but carries no maker's frame, logo or name.
+- The sample agency on documents is "Your agency". No invented brand or person names.
 - No third-party logos (Word, Excel, WhatsApp, banks): their brand rules forbid it. Name them in plain text and use our own grey icons.
 - No faces, names, testimonials, client logos, stars, ratings or review scores.
 
@@ -99,8 +122,8 @@ Every colour, shape, detail and movement has a reason the visitor could guess. I
 
 - Never show binding information that is untrue.
 - Wherever a price appears, it says "3 users" and carries an asterisk: per month, billed annually, excluding VAT, with the details on the Pricing page.
-- The extra-user price comes after the plan price and shows only the selected billing (60 yearly, 70 monthly).
-- Setup (390 EUR) appears crossed out and "free*" with yearly billing. Import of clean data is 290 EUR once on monthly billing and free yearly; messy data is on quote after a sample. The note reads "* With annual billing. Limited-time offer." The crossed-out price shows the free part has a real value (so it never looks cheap), and "limited-time" keeps the option to end it later. It is not a launch discount, and no other offer or discount is made.
+- The extra-user price comes after the plan price and shows only the selected billing (Classic 60 yearly or 70 monthly, Premium 80 yearly or 95 monthly). Every number comes from `src/content/prices.ts`.
+- Setup and onboarding (790 EUR) appear crossed out and "free*" with yearly billing. Import of clean data is 490 EUR once on monthly billing and free yearly; messy data is on quote after a sample. The note reads "* With annual billing. Limited-time offer." The crossed-out price shows the free part has a real value (so it never looks cheap), and "limited-time" keeps the option to end it later. It is not a launch discount, and no other offer or discount is made.
 - Pricing page: title, billing switch, the two plan cards, then the comparison table. No lead paragraph, no facts row, no text under the prices.
 - Only features that exist in the app's production release are presented as available.
 
