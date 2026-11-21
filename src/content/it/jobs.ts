@@ -183,7 +183,7 @@ const book: JobPage = {
   faq: [
     { q: 'Le mie guide e i miei autisti possono vedere il viaggio?', a: ['Ricevono via email un voucher di servizio con ciò che serve: date, orari, nomi e punto di incontro.'] },
     { q: 'Cosa succede se il cliente cambia una data?', a: ['Aggiorna il viaggio. I servizi, la pagina itinerario e i voucher seguono la modifica, e i servizi da riprenotare tornano da prenotare.'] },
-    { q: 'Come arrivano le email dei fornitori sul viaggio?', a: ['Le email dei fornitori vengono archiviate automaticamente sul viaggio.'] }
+    { q: 'Le risposte dei fornitori finiscono sul viaggio?', a: ['Sì. Le richieste di prenotazione partono da Traviosoft dalla tua casella di posta, e la risposta di ogni fornitore viene archiviata sul suo viaggio, dove tutto il team la vede.'] }
   ]
 };
 

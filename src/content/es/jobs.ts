@@ -183,7 +183,7 @@ const book: JobPage = {
   faq: [
     { q: '¿Pueden mis guías y conductores ver el viaje?', a: ['Reciben por email un bono de servicio con lo que necesitan: fechas, horas, nombres y punto de encuentro.'] },
     { q: '¿Qué pasa si el cliente cambia una fecha?', a: ['Actualiza el viaje. Los servicios, la página del itinerario y los bonos siguen el cambio, y los servicios que hay que volver a reservar aparecen otra vez como por reservar.'] },
-    { q: '¿Cómo llegan los emails de los proveedores al viaje?', a: ['Los emails de los proveedores se archivan solos en el viaje.'] }
+    { q: '¿Las respuestas de los proveedores quedan en el viaje?', a: ['Sí. Las solicitudes de reserva salen de Traviosoft desde tu propio buzón, y la respuesta de cada proveedor se archiva en su viaje, donde todo el equipo la ve.'] }
   ]
 };
 
