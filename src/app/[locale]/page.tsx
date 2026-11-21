@@ -22,8 +22,8 @@ export default async function HomePage({ params }: Props) {
   const c = getContent(locale);
   const h = c.home;
   const loc = c.visuals.ex.numLocale;
-  // The sample trip of the hero: cost 2210, margin 452, total 2662, 30% deposit 798.60.
-  const money = (v: number) => new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(v);
+  // The sample trip of the hero: cost 2210, margin 450, total 2660, 30% deposit 798 (whole euros, they add up).
+  const money = (v: number) => new Intl.NumberFormat(loc, { maximumFractionDigits: 0 }).format(v);
 
   return (
     <>
@@ -42,7 +42,7 @@ export default async function HomePage({ params }: Props) {
             <circle cx="520" cy="120" r="9" fill="var(--yellow)" />
             <circle cx="1140" cy="120" r="9" fill="var(--yellow)" />
           </svg>
-          <HeroTrip p={h.proposal} amount={2662} locale={loc} />
+          <HeroTrip p={h.proposal} amount={2660} locale={loc} />
         </div>
       </header>
 
@@ -54,7 +54,7 @@ export default async function HomePage({ params }: Props) {
               <li key={i} className="moment" data-reveal>
                 <span className="moment-dot" aria-hidden="true" />
                 <h3>{m.title}</h3>
-                <span className="moment-rec">{m.rec.replace('{margin}', money(452)).replace('{deposit}', money(798.6)).replace('{total}', money(2662))}</span>
+                <span className="moment-rec">{m.rec.replace('{margin}', money(450)).replace('{deposit}', money(798)).replace('{total}', money(2660))}</span>
                 <p>{m.body}</p>
                 <Link href={`/${m.job}`} className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{m.go}</span><span className="arr" aria-hidden="true">→</span></Link>
               </li>

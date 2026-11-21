@@ -150,8 +150,8 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'invoices':
       return (
         <Frag title={v.invoices}>
-          <Row a="F-2026-0142" s={v.depositInvoice} b={<span className="num">{n(v, 1458, 2)}</span>} />
-          <Row a="F-2026-0157" s={v.finalInvoice} b={<span className="num">{n(v, 3402, 2)}</span>} />
+          <Row a="F-2026-0142" s={v.depositInvoice} b={<span className="num">{n(v, 1458)}</span>} />
+          <Row a="F-2026-0157" s={v.finalInvoice} b={<span className="num">{n(v, 3402)}</span>} />
           <Row a="R-2026-0009" s={v.creditNote} b={<span className="num">{n(v, -120, 2)}</span>} />
         </Frag>
       );

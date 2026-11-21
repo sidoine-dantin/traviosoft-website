@@ -11,7 +11,7 @@ export function HeroCount({ value, locale, currency }: { value: number; locale: 
   useEffect(() => {
     const el = ref.current;
     if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const fmt = new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmt = new Intl.NumberFormat(locale, { maximumFractionDigits: 0 });
     const final = el.textContent;
     const mounted = performance.now();
     const dur = 900;
@@ -38,5 +38,5 @@ export function HeroCount({ value, locale, currency }: { value: number; locale: 
     io.observe(el);
     return () => { io.disconnect(); cancelAnimationFrame(raf); el.textContent = final; };
   }, [value, locale, currency]);
-  return <strong ref={ref}>{`${new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value)} ${currency}`}</strong>;
+  return <strong ref={ref}>{`${new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(value)} ${currency}`}</strong>;
 }
