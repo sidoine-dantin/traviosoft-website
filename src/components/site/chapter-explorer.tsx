@@ -1,13 +1,13 @@
 'use client';
 
+import { Drop, DOT_STEP, DOT_Y } from './drop';
 import { Children, useCallback, useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 
 type Props = { titles: string[]; leads: string[]; label: string; children: ReactNode };
 
 const PINNED = '(min-width: 901px)';
 const HEADER = 68;
-const DOT_STEP = 30; // the dots' spacing (.explorer-dots a height)
-const DOT_Y = 15; // the centre of a dot in its row // the sticky header; the stage holds still just under it
+ // the sticky header; the stage holds still just under it
 
 /**
  * The pinned layout's measures, from the track's position. The stage holds still over `len` pixels
@@ -45,21 +45,6 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
   const stage = useRef<HTMLDivElement>(null);
   const drop = useRef<SVGGElement>(null);
 
-  /** Draws the drop: on topic i, pulled down by p (0 to 1) towards the next dot. */
-  const pull = useCallback((i: number, p: number, last: boolean) => {
-    const g = drop.current;
-    if (!g) return;
-    const e = p * p; // starts gently, pulls harder towards the end
-    const [main, neck, tail] = Array.from(g.querySelectorAll('circle'));
-    const ty = DOT_Y + (last ? 9 : 26) * e;
-    g.style.transform = `translateY(${i * DOT_STEP}px)`;
-    main.setAttribute('cy', (DOT_Y + 2 * e).toFixed(2));
-    main.setAttribute('r', (7 - 0.8 * e).toFixed(2));
-    tail.setAttribute('cy', ty.toFixed(2));
-    tail.setAttribute('r', (5 - e).toFixed(2));
-    neck.setAttribute('cy', ((DOT_Y + ty) / 2 + 1).toFixed(2));
-    neck.setAttribute('r', (5 - 2.4 * e).toFixed(2));
-  }, []);
   const topics = Children.toArray(children);
   const n = titles.length;
 
@@ -81,6 +66,9 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
     const t = track.current;
     if (!t) return;
     const els = titles.map((_, i) => document.getElementById(`${id}-p${i}`)).filter(Boolean) as HTMLElement[];
+    const dropper = drop.current ? new Drop(drop.current, 0) : null;
+    let lastY = window.scrollY;
+    let dir = 1;
     const pick = () => {
       const vh = window.innerHeight;
       const r = t.getBoundingClientRect();
@@ -97,9 +85,16 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
           stage.current!.style.transform = `translateY(${y.toFixed(1)}px)`;
         }
         const i = Math.floor(at);
-        // How far the visitor is through this topic (0 to 1): the current dot is pulled down towards
-        // the next one like a drop, so every bit of scroll shows, not only the change of topic.
-        pull(i, at - i, i === n - 1);
+        // How far the visitor is through this topic: the drop stretches towards the dot it is heading
+        // for (down or up, from the way the visitor scrolls), so every bit of scroll shows; it only
+        // moves to another dot when the topic changes.
+        const p = at - i;
+        const y = window.scrollY;
+        if (y !== lastY) dir = y > lastY ? 1 : -1;
+        lastY = y;
+        const ramp = (x: number) => { const q = Math.min(1, Math.max(0, (x - 0.3) / 0.7)); return q * q * (3 - 2 * q); };
+        const room = (dir > 0 ? i < n - 1 : i > 0) ? 1 : 0.35; // at the ends there is no dot to reach for
+        dropper?.set(i, dir > 0 ? ramp(p) * room : -ramp(1 - p) * room);
         setOn(i);
       } else {
         // phones: the topic that crosses a line halfway down the screen is the one being read
@@ -123,6 +118,7 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
     window.addEventListener('resize', pick);
     window.addEventListener('hashchange', fromHash);
     return () => {
+      dropper?.destroy();
       cancelAnimationFrame(raf);
       cancelAnimationFrame(raf2);
       window.removeEventListener('scroll', pick);
@@ -146,7 +142,7 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
                     <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9" />
                   </filter>
                 </defs>
-                <g ref={drop} className="explorer-drop-move" style={{ transform: `translateY(${shown * DOT_STEP}px)` }}>
+                <g ref={drop}>
                   <g filter={`url(#${id}-goo)`}>
                     <circle cx="16" cy={DOT_Y} r="7" />
                     <circle cx="16" cy={DOT_Y} r="5" />
