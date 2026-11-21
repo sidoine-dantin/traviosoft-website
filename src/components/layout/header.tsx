@@ -1,27 +1,21 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { OPEN_BOOKING_EVENT } from '@/components/site/book-demo';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Logo } from '@/components/site/logo';
+import { LangMenu } from './lang-menu';
 import type { Locale } from '@/content/types';
 
 type JobLink = { slug: string; name: string; menuLine: string };
 
 type Props = {
   locale: Locale;
-  labels: { product: string; pricing: string; example: string; demo: string; menuLabel: string; close: string; skip: string };
+  labels: { product: string; pricing: string; resources: string; demo: string; menuLabel: string; close: string; skip: string };
   jobs: JobLink[];
   /** paths that exist in each locale; used to hide a language that has no version of this page */
   available?: Partial<Record<Locale, string>>;
 };
-
-const DOT = [
-  { background: 'var(--yellow)', color: 'var(--green)' },
-  { background: 'var(--orange)', color: 'var(--cream)' },
-  { background: 'var(--green)', color: 'var(--yellow)' },
-  { background: 'var(--ink)', color: 'var(--yellow)' }
-];
-const LOCALES: Locale[] = ['es', 'en', 'fr'];
 
 export default function Header({ locale, labels, jobs }: Props) {
   const pathname = usePathname();
@@ -31,11 +25,17 @@ export default function Header({ locale, labels, jobs }: Props) {
   const [hidden, setHidden] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
+  // The open menu takes the bar out of the page, which can move it; closing puts the reader back here.
+  const openedAt = useRef(0);
 
   // On phones the bar slides away while reading down and comes back on the first scroll up.
   useEffect(() => {
     let last = window.scrollY;
     const onScroll = () => {
+      // pinning the page under the open menu, and putting it back, is not the reader scrolling
+      const html = document.documentElement;
+      if (html.classList.contains('menu-open')) return;
+      if (html.dataset.restoring) { delete html.dataset.restoring; last = window.scrollY; return; }
       const y = window.scrollY;
       setScrolled(y > 8);
       if (Math.abs(y - last) < 6) return;
@@ -56,7 +56,12 @@ export default function Header({ locale, labels, jobs }: Props) {
   useEffect(() => {
     if (!mobile) return;
     const html = document.documentElement;
+    const body = document.body;
+    // The page behind is pinned where it was (iOS ignores overflow: hidden for touch scrolling),
+    // and put back exactly there when the menu closes.
+    const y = openedAt.current;
     html.classList.add('menu-open');
+    Object.assign(body.style, { position: 'fixed', top: `${-y}px`, left: '0', right: '0' });
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMobile(false);
@@ -68,15 +73,23 @@ export default function Header({ locale, labels, jobs }: Props) {
     window.addEventListener('resize', onResize);
     return () => {
       html.classList.remove('menu-open');
+      Object.assign(body.style, { position: '', top: '', left: '', right: '' });
+      html.style.scrollBehavior = 'auto';
+      if (window.scrollY !== y) html.dataset.restoring = '1';
+      window.scrollTo(0, y);
+      html.style.scrollBehavior = '';
       document.removeEventListener('keydown', onKey);
       window.removeEventListener('resize', onResize);
     };
   }, [mobile]);
 
-  useEffect(() => {
+  // A new page closes the menus (adjusting state during render, as React recommends, not in an effect).
+  const [shownPath, setShownPath] = useState(pathname);
+  if (pathname !== shownPath) {
+    setShownPath(pathname);
     setOpen(false);
     setMobile(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -94,17 +107,17 @@ export default function Header({ locale, labels, jobs }: Props) {
 
   const isJob = jobs.some(j => pathname === `/${j.slug}`);
   // Locale-only pages (Spanish guides) have no twin: the switch goes to that locale's home.
-  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/resources' : pathname;
+  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/' : pathname;
 
-  const langs = (
-    <div className="lang" aria-label="Language">
-      {LOCALES.map(l => (
-        <Link key={l} href={localeHref} locale={l} aria-current={l === locale ? 'true' : undefined} hrefLang={l}>
-          {l.toUpperCase()}
-        </Link>
-      ))}
-    </div>
-  );
+  // On the demo page itself, "Book a demo" opens the booking window instead of reloading the page.
+  const openBookingHere = (e: React.MouseEvent) => {
+    if (pathname !== '/demo') return;
+    e.preventDefault();
+    setMobile(false);
+    window.dispatchEvent(new Event(OPEN_BOOKING_EVENT));
+  };
+
+  const langs = <LangMenu locale={locale} href={localeHref} />;
 
   return (
     <header className={`top${scrolled ? ' scrolled' : ''}${hidden && !mobile ? ' away' : ''}${mobile ? ' open' : ''}`}>
@@ -124,9 +137,8 @@ export default function Header({ locale, labels, jobs }: Props) {
             </button>
             {open && (
               <div className="menu-panel" id="product-menu">
-                {jobs.map((j, i) => (
+                {jobs.map(j => (
                   <Link key={j.slug} href={`/${j.slug}`}>
-                    <span className="menu-dot" style={DOT[i]}>{i + 1}</span>
                     <span>
                       <b>{j.name}</b>
                       <small>{j.menuLine}</small>
@@ -137,18 +149,17 @@ export default function Header({ locale, labels, jobs }: Props) {
             )}
           </div>
           <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
-          <Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link>
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           {langs}
-          <Link className="quiet" href="/demo">{labels.demo}</Link>
+          <Link className="quiet" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
           <button
             ref={burgerRef}
             type="button"
             className="burger"
             aria-expanded={mobile}
             aria-controls="mobile-menu"
-            onClick={() => setMobile(m => !m)}
+            onClick={() => { if (!mobile) openedAt.current = window.scrollY; setMobile(m => !m); }}
           >
             <span>{mobile ? labels.close : labels.menuLabel}</span>
             <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
@@ -165,22 +176,26 @@ export default function Header({ locale, labels, jobs }: Props) {
         <nav className="mobile-panel" id="mobile-menu" aria-label="Main">
           <p className="lbl mobile-kicker">{labels.product}</p>
           <ul className="mobile-jobs">
-            {jobs.map((j, i) => (
+            {jobs.map(j => (
               <li key={j.slug}>
                 <Link href={`/${j.slug}`} aria-current={pathname === `/${j.slug}` ? 'page' : undefined}>
-                  <span className="menu-dot" style={DOT[i]} aria-hidden="true">{i + 1}</span>
                   <span><b>{j.name}</b><small>{j.menuLine}</small></span>
+                  <span className="arr" aria-hidden="true">→</span>
                 </Link>
               </li>
             ))}
           </ul>
           <ul className="mobile-links">
-            <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
-            <li><Link href="/example" aria-current={pathname === '/example' ? 'page' : undefined}>{labels.example}</Link></li>
+            <li>
+              <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>
+                <b>{labels.pricing}</b>
+                <span className="arr" aria-hidden="true">→</span>
+              </Link>
+            </li>
           </ul>
           <div className="mobile-foot">
-            {langs}
-            <Link className="quiet mobile-demo" href="/demo">{labels.demo}</Link>
+            <Link className="mobile-demo" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
+            <LangMenu locale={locale} href={localeHref} up />
           </div>
         </nav>
       )}

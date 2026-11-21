@@ -6,3 +6,7 @@ main = ".open-next/worker.js"
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
+
+# Serve the prerendered pages from the static assets (see scripts/cache-to-assets.mjs).
+[build]
+command = "node scripts/cache-to-assets.mjs"

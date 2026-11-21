@@ -2,7 +2,7 @@ import { Link } from '@/i18n/navigation';
 import type { Article, ArticleBlock, SiteContent } from '@/content/types';
 import { FaqList, FaqSchema } from './faq';
 import { JsonLd } from './json-ld';
-import { baseUrl } from '@/lib/seo';
+import { baseUrl, ORG_ID } from '@/lib/seo';
 
 /** Inline [label](/path) links and **bold** inside article text. */
 function Inline({ text }: { text: string }) {
@@ -29,8 +29,19 @@ function Block({ b }: { b: ArticleBlock }) {
       ? <ol>{b.items.map(i => <li key={i}><Inline text={i} /></li>)}</ol>
       : <ul>{b.items.map(i => <li key={i}><Inline text={i} /></li>)}</ul>;
     case 'callout': return <div className="callout"><Inline text={b.text} /></div>;
-    case 'table': return (
-      <div className="tbl-wrap" style={{ margin: '24px 0' }}>
+    case 'table': if (b.head[0] === '') return (
+      // a side-by-side comparison reads as topics, each with what each product does
+      <div className="pairs">
+        {b.rows.map(r => (
+          <section key={r[0]}>
+            <h3>{r[0]}</h3>
+            {r.slice(1).map((cell, j) => <p key={j}><strong>{b.head[j + 1]}</strong> <Inline text={cell} /></p>)}
+          </section>
+        ))}
+      </div>
+    );
+    return (
+      <div className="tbl-wrap" style={{ marginBlock: 24 }}>
         <table className="tbl stack">
           <thead><tr>{b.head.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
           <tbody>{b.rows.map((r, i) => (
@@ -55,15 +66,25 @@ export function ArticleView({ c, a, path }: { c: SiteContent; a: Article; path: 
     dateModified: a.updated,
     datePublished: a.updated,
     mainEntityOfPage: `${baseUrl}/${c.locale}${path}`,
-    author: { '@type': 'Organization', name: 'Traviosoft', url: baseUrl },
-    publisher: { '@type': 'Organization', name: 'Traviosoft', url: baseUrl }
+    image: `${baseUrl}/og/${c.locale}.png`,
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID }
+  };
+  // Home > article, so results show the site's structure instead of a bare address.
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Traviosoft', item: `${baseUrl}/${c.locale}` },
+      { '@type': 'ListItem', position: 2, name: a.title, item: `${baseUrl}/${c.locale}${path}` }
+    ]
   };
   return (
     <article>
       <JsonLd data={schema} />
+      <JsonLd data={breadcrumb} />
       <header className="narrow article-head">
-        <p className="mono"><Link href="/resources" className="back-link">← {c.common.backToResources}</Link></p>
-        <h1 className="h1" style={{ marginTop: 20 }}>{a.title}</h1>
+        <h1 className="h1">{a.title}</h1>
         <p className="lead muted" style={{ marginTop: 20, maxWidth: '60ch' }}>{a.lead}</p>
         <p className="updated">{c.common.updated}: <time dateTime={a.updated}>{date}</time></p>
       </header>

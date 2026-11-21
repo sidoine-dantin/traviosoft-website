@@ -3,7 +3,6 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Producto',
   pricing: 'Precios',
-  example: 'Viajes de ejemplo',
   demo: 'Reservar una demo',
   menuLabel: 'Menú',
   close: 'Cerrar',
@@ -21,24 +20,40 @@ export const footer: SiteContent['footer'] = {
   faq: 'Preguntas frecuentes',
   about: 'Sobre nosotros',
   glossary: 'Glosario',
-  guides: 'Guías',
+  guides: 'Blog',
   compare: 'Comparativas',
   privacy: 'Privacidad',
   terms: 'Condiciones',
   notice: 'Aviso legal',
-  hosted: 'Alojado en la UE',
+  hosted: 'Tus datos alojados en la UE',
   rights: 'Traviosoft',
+  /** blog posts shown in the footer, with short labels */
+  posts: [
+    { slug: 'presupuesto-viaje-a-medida-con-margen', label: 'Precio de un viaje a medida' },
+    { slug: 'rooming-list-grupos-mice', label: 'La rooming list' },
+    { slug: 'de-excel-a-un-software-de-agencia', label: 'De Excel a un software' },
+    { slug: 'rgpd-agencia-de-viajes', label: 'RGPD y agencias' },
+    { slug: 'iva-regimen-margen-agencias-de-viajes-ue-vida', label: 'IVA de las agencias en la UE' }
+  ],
   localLinks: [
-    { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' },
-    { label: 'Guía REAV', href: '/guides/guia-reav-agencias-de-viajes' },
-    { label: 'Veri*Factu para agencias', href: '/guides/verifactu-agencias-de-viajes' }
-  ]
+    { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' }
+  ],
+  consent: {
+    text: 'Usamos cookies necesarias, por ejemplo para recordar tu idioma. Con tu consentimiento, también usamos cookies publicitarias para medir nuestros anuncios y mostrarlos en otros sitios.',
+    accept: 'Aceptar todas',
+    refuse: 'Solo necesarias',
+    more: 'Más información',
+    settings: 'Configurar cookies',
+    policy: 'Política de privacidad'
+  }
 };
 
 export const common: SiteContent['common'] = {
   premium: 'Premium',
   next: 'Siguiente',
   onThisPage: 'En esta página',
+  pauseVideo: 'Pausar el vídeo',
+  playVideo: 'Reproducir el vídeo',
   updated: 'Última actualización',
   readMore: 'Leer',
   faqTitle: 'Preguntas',
@@ -81,7 +96,7 @@ export const visuals: SiteContent['visuals'] = {
   paid: 'Pagado',
   partial: 'Señal pagada',
   supplierMail: 'Emails de proveedores',
-  filed: 'Archivado en el viaje',
+  filed: 'Guardado en el viaje',
   serviceSheet: 'Bono enviado',
   yourTrip: 'Tu viaje',
   dayLabel: 'Día',
@@ -103,9 +118,9 @@ export const visuals: SiteContent['visuals'] = {
   brands: 'Marcas',
   brandA: 'Tu agencia',
   brandB: 'Tu segunda marca',
-  languages: 'El mismo presupuesto, tres idiomas',
+  languages: 'Un presupuesto, cinco idiomas',
   team: 'Equipo',
-  seats: 'usuarios en uso',
+  seats: 'usuarios',
   owner: 'Propietario',
   sales2: 'Ventas',
   ops: 'Operaciones',
@@ -116,5 +131,22 @@ export const visuals: SiteContent['visuals'] = {
   guide: 'Guía · Alhambra',
   halfDay: '½ día · privado',
   privateCar: 'coche privado',
-  transfers: 'Traslados'
+  transfers: 'Traslados',
+  ex: {
+    muller: 'Familia Müller', event: 'Evento · 40 personas', reqTrip: 'Andalucía · mayo', reqLisbon: 'Lisboa → Oporto · 6 personas', reqBarcelona: 'Barcelona · 3 días', reqMallorca: 'Mallorca · 7 días',
+    seasons: ['ene – mar', 'abr – jun', 'jul – ago'], room: 'Doble · AD', vat: '10% IVA',
+    itinerary: ['Entrada 15:00', '10:00 · guía', 'Coche a las 09:00', '08:30 · entradas'],
+    mailHotel: 'RE: 2 adultos, 12–15 mayo', mailGuide: 'RE: Alhambra, 14 mayo',
+    langNames: ['Español', 'Català', 'English', 'Français', 'Italiano'],
+    conWebsite: 'Web', conWebsiteSub: 'Solicitudes desde tu web', conAccounting: 'Contabilidad', conAccountingSub: 'Ventas, compras, pagos', conAi: 'Asistente IA', on: 'Activo',
+    numLocale: 'es-ES', date1: '14 mar', date2: '12 abr', date3: '9 may',
+    net: 'Coste neto', commission: 'Comisión de la agencia 10%', sellPrice: 'Precio de venta',
+    commTitle: 'Comisiones · Agencia colaboradora · abril', trip2Name: 'Lisboa → Oporto, 6 días',
+    rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Doble', twin: 'Twin', single: 'Individual',
+    supplierDue: 'Proveedor · vence', toPay: 'Por pagar',
+    mailSubject: 'Tu presupuesto · Andalucía, 8 días', mailBody: 'Señal del 30% para confirmar el viaje.', payDeposit: 'Pagar la señal',
+    settings: 'Ajustes', langs: 'Idiomas', currencies: 'Monedas',
+    smith: 'Familia Whitcombe', atlas: 'Familia Brooks', books: 'Tu contabilidad',
+    countryTitle: 'Ajustes por país', vatScheme: 'Régimen especial de agencias de viajes', einvoice: 'Facturación electrónica', einvoiceNote: 'Según lo que exige tu país'
+  }
 };

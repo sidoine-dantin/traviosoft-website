@@ -6,7 +6,7 @@ import type { ArticleKind } from '@/content/types';
 import { buildMetadata } from '@/lib/seo';
 import { ArticleView } from '@/components/site/article-view';
 
-const KINDS: ArticleKind[] = ['guide', 'spain'];
+const KINDS: ArticleKind[] = ['guide', 'spain', 'invoicing'];
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export const dynamicParams = false;

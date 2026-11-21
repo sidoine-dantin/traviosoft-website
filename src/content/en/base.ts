@@ -3,7 +3,6 @@ import type { SiteContent } from '../types';
 export const nav: SiteContent['nav'] = {
   product: 'Product',
   pricing: 'Pricing',
-  example: 'Example trips',
   demo: 'Book a demo',
   menuLabel: 'Menu',
   close: 'Close',
@@ -21,20 +20,38 @@ export const footer: SiteContent['footer'] = {
   faq: 'FAQ',
   about: 'About',
   glossary: 'Glossary',
-  guides: 'Guides',
+  guides: 'Blog',
   compare: 'Compare',
   privacy: 'Privacy',
   terms: 'Terms',
   notice: 'Legal notice',
-  hosted: 'Hosted in the EU',
+  hosted: 'Your data hosted in the EU',
   rights: 'Traviosoft',
-  localLinks: []
+  /** blog posts shown in the footer, with short labels */
+  posts: [
+    { slug: 'tailor-made-quote-with-margins', label: 'Pricing a tailor-made trip' },
+    { slug: 'rooming-list-template-groups-mice', label: 'Rooming lists' },
+    { slug: 'move-from-excel-to-travel-software', label: 'From Excel to software' },
+    { slug: 'gdpr-travel-agency', label: 'GDPR for agencies' },
+    { slug: 'eu-vat-margin-scheme-travel-agents-vida', label: 'EU VAT margin scheme' }
+  ],
+  localLinks: [],
+  consent: {
+    text: 'We use necessary cookies, for example to remember your language. With your consent, we also use advertising cookies to measure our ads and show them on other sites.',
+    accept: 'Accept all',
+    refuse: 'Necessary only',
+    more: 'Learn more',
+    settings: 'Cookie settings',
+    policy: 'Privacy policy'
+  }
 };
 
 export const common: SiteContent['common'] = {
   premium: 'Premium',
   next: 'Next',
   onThisPage: 'On this page',
+  pauseVideo: 'Pause the video',
+  playVideo: 'Play the video',
   updated: 'Last updated',
   readMore: 'Read',
   faqTitle: 'Questions',
@@ -58,7 +75,7 @@ export const visuals: SiteContent['visuals'] = {
   quoted: 'Quoted',
   waiting: 'Waiting',
   won: 'Accepted',
-  catalogue: 'Catalogue · Hotel Alfonso XIII',
+  catalogue: 'Catalog · Hotel Alfonso XIII',
   season: 'High season',
   suppliers: 'suppliers',
   margin: 'margin',
@@ -77,7 +94,7 @@ export const visuals: SiteContent['visuals'] = {
   paid: 'Paid',
   partial: 'Deposit paid',
   supplierMail: 'Supplier emails',
-  filed: 'Filed on the trip',
+  filed: 'Saved to the trip',
   serviceSheet: 'Service sheet sent',
   yourTrip: 'Your trip',
   dayLabel: 'Day',
@@ -99,9 +116,9 @@ export const visuals: SiteContent['visuals'] = {
   brands: 'Brands',
   brandA: 'Your agency',
   brandB: 'Your second brand',
-  languages: 'Same quote, three languages',
+  languages: 'One quote, five languages',
   team: 'Team',
-  seats: 'seats used',
+  seats: 'users',
   owner: 'Owner',
   sales2: 'Sales',
   ops: 'Operations',
@@ -112,5 +129,22 @@ export const visuals: SiteContent['visuals'] = {
   guide: 'Guide · Alhambra',
   halfDay: '½ day · private',
   privateCar: 'private car',
-  transfers: 'Transfers'
+  transfers: 'Transfers',
+  ex: {
+    muller: 'Müller family', event: 'Event · 40 people', reqTrip: 'Andalucía · May', reqLisbon: 'Lisboa → Porto · 6 people', reqBarcelona: 'Barcelona · 3 days', reqMallorca: 'Mallorca · 7 days',
+    seasons: ['Jan – Mar', 'Apr – Jun', 'Jul – Aug'], room: 'Double · B&B', vat: '10% VAT',
+    itinerary: ['Check-in 15:00', '10:00 · guide', 'Car at 09:00', '08:30 · tickets'],
+    mailHotel: 'RE: 2 adults, 12–15 May', mailGuide: 'RE: Alhambra, 14 May',
+    langNames: ['Español', 'Català', 'English', 'Français', 'Italiano'],
+    conWebsite: 'Website', conWebsiteSub: 'Requests from your site', conAccounting: 'Accounting', conAccountingSub: 'Sales, purchases, payments', conAi: 'AI assistant', on: 'On',
+    numLocale: 'en-GB', date1: '14 Mar', date2: '12 Apr', date3: '9 May',
+    net: 'Net cost', commission: 'Partner commission 10%', sellPrice: 'Selling price',
+    commTitle: 'Commission · Partner agency · April', trip2Name: 'Lisboa → Porto, 6 days',
+    rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Double', twin: 'Twin', single: 'Single',
+    supplierDue: 'Supplier · due', toPay: 'To pay',
+    mailSubject: 'Your quote · Andalucía, 8 days', mailBody: 'Deposit 30% to confirm the trip.', payDeposit: 'Pay the deposit',
+    settings: 'Settings', langs: 'Languages', currencies: 'Currencies',
+    smith: 'Whitcombe family', atlas: 'Brooks family', books: 'Your accounts',
+    countryTitle: 'Country settings', vatScheme: 'Travel agency VAT scheme', einvoice: 'E-invoicing', einvoiceNote: 'As your country requires'
+  }
 };
