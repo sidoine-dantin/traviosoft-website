@@ -37,9 +37,9 @@ export const footer: SiteContent['footer'] = {
   ],
   localLinks: [],
   consent: {
-    text: 'With your consent, we use advertising cookies to measure visits from our ads and to show you our ads on other sites. You can change your choice at any time at the bottom of every page.',
-    accept: 'Accept',
-    refuse: 'Refuse',
+    text: 'We use necessary cookies, for example to remember your language. With your consent, we also use advertising cookies to measure our ads and show them on other sites.',
+    accept: 'Accept all',
+    refuse: 'Necessary only',
     more: 'Learn more',
     settings: 'Cookie settings',
     policy: 'Privacy policy'

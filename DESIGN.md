@@ -117,7 +117,7 @@ Same rule as the app (`apps/web/DESIGN.md` "Motion" in the monorepo): every move
 |---|---|
 | Product menu, language list | 120 ms fade from 97%, closes at once |
 | Phone menu | 200 ms fade and 8 px rise |
-| Cookie banner | dim layer fades in 200 ms, card from 97% in 180 ms |
+| Cookie banner | corner card fades in and rises 8 px in 200 ms |
 | Buttons (demo, cookie choices, language, menu) | shrink to 97% while pressed, 100 ms; text links don't |
 | Text links with an arrow | text a little bolder, underline drops and extends under the arrow, arrow moves forward; text never moves up |
 | Cards | shadow deepens on hover; the card does not lift |
