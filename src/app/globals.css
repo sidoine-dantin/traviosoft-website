@@ -456,7 +456,11 @@ a.card:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -26px rgba(1
   .cmp-table th { font-size: 15px; }
   .cmp-table tr { padding: 14px 10px; }
   /* a detail does not fit in a narrow column: it goes on its own line under the feature */
-  .cmp-cell { flex-direction: column; gap: 6px; font-size: 13px; }
+  .cmp-cell { flex-direction: column; gap: 6px; font-size: 13px; text-align: center; }
+  /* stacked under the icon, so the text, the old price and the column name share its centre line */
+  .cmp-was { display: block; }
+  .cmp-head { padding-inline: 10px; }
+  .cmp-head span + span { text-align: center; }
 }
 
 /* ---------- tables ---------- */
