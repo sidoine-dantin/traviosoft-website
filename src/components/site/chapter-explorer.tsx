@@ -2,15 +2,16 @@
 
 import { Children, useEffect, useId, useState, type ReactNode } from 'react';
 
-type Props = { titles: string[]; label: string; children: ReactNode };
+type Props = { titles: string[]; leads: string[]; label: string; children: ReactNode };
 
 /**
  * The topics of a product page, one after the other. Beside them, one large title follows the
  * scroll: it shows the topic being read and slides to the next one as the visitor moves on.
  * Small dots above it say where the visitor is and take them to a topic. On phones the titles
- * stay in the topics themselves.
+ * stay in the topics themselves. The topic's lead sentence sits under the title and changes with it,
+ * so each topic opens with its title and what it brings, and the points beside it go into detail.
  */
-export function ChapterExplorer({ titles, label, children }: Props) {
+export function ChapterExplorer({ titles, leads, label, children }: Props) {
   const [on, setOn] = useState(0);
   const id = useId().replace(/:/g, '');
   const topics = Children.toArray(children);
@@ -47,7 +48,10 @@ export function ChapterExplorer({ titles, label, children }: Props) {
           </div>
           <div className="explorer-titles" aria-hidden="true">
             {titles.map((t, i) => (
-              <span key={i} className="explorer-title h2" data-pos={i < on ? 'past' : i > on ? 'next' : 'now'}>{t}</span>
+              <div key={i} className="explorer-now" data-pos={i < on ? 'past' : i > on ? 'next' : 'now'}>
+                <span className="explorer-title h2">{t}</span>
+                {leads[i] && <p className="explorer-lead lead muted">{leads[i]}</p>}
+              </div>
             ))}
           </div>
         </div>

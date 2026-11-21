@@ -55,53 +55,53 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "Il percorso di un viaggio in Traviosoft",
   moments: [
-    {"rec": "Andalusia · 2 viaggiatori", "title": "La richiesta", "body": "Arriva nella lista delle richieste, con da quanto tempo aspetta e il passo successivo.", "go": "Vedi le richieste", "job": "sell"},
-    {"rec": "Margine {margin} EUR", "title": "Il preventivo", "body": "Ogni riga parte dal costo del fornitore. Vedi il margine del viaggio prima di inviare la proposta.", "go": "Vedi i preventivi", "job": "sell"},
-    {"rec": "Hotel a Siviglia: confermato", "title": "Le prenotazioni", "body": "Quando il cliente accetta, ogni fornitore riceve la sua richiesta, e la risposta viene salvata sulla riga.", "go": "Vedi le prenotazioni", "job": "book"},
-    {"rec": "Acconto {deposit} EUR: pagato", "title": "I pagamenti", "body": "Le scadenze vengono dal preventivo accettato. Il cliente paga dal link nell’email.", "go": "Vedi i pagamenti", "job": "get-paid"},
-    {"rec": "Fattura finale: {total} EUR", "title": "La fattura", "body": "Riprende le righe del preventivo accettato.", "go": "Vedi le fatture", "job": "get-paid"}
+    {"rec": "Andalusia · 2 viaggiatori", "title": "La richiesta", "body": "Arriva nella lista delle richieste, con da quanto tempo aspetta e il passo successivo.", "go": "Vedi le richieste", "job": "sell#requests"},
+    {"rec": "Margine {margin} EUR", "title": "Il preventivo", "body": "Ogni riga parte dal costo del fornitore. Vedi il margine del viaggio prima di inviare la proposta.", "go": "Vedi i preventivi", "job": "sell#quotes"},
+    {"rec": "Hotel a Siviglia: confermato", "title": "Le prenotazioni", "body": "Quando il cliente accetta, ogni fornitore riceve la sua richiesta, e la risposta viene salvata sulla riga.", "go": "Vedi le prenotazioni", "job": "book#order"},
+    {"rec": "Acconto {deposit} EUR: pagato", "title": "I pagamenti", "body": "Le scadenze vengono dal preventivo accettato. Il cliente paga dal link nell’email.", "go": "Vedi i pagamenti", "job": "get-paid#schedule"},
+    {"rec": "Fattura finale: {total} EUR", "title": "La fattura", "body": "Riprende le righe del preventivo accettato.", "go": "Vedi le fatture", "job": "get-paid#invoices"}
   ],
   sitTitle: "Secondo il tuo modo di lavorare",
   situations: [
     {
       "t": "Vendo ad agenzie, non al viaggiatore",
       "s": "Commissioni, tariffe nette e l’agenzia che porta il cliente su ogni preventivo.",
-      "job": "sell"
+      "job": "sell#partners"
     },
     {
       "t": "Lavoro con i gruppi",
       "s": "Elenco dei viaggiatori, rooming list e un modulo che ogni viaggiatore compila da sé.",
-      "job": "book"
+      "job": "book#groups"
     },
     {
       "t": "I miei fornitori fatturano in dollari o in dirham",
       "s": "Costi nella loro valuta, prezzi nella tua, con il cambio del preventivo conservato.",
-      "job": "sell"
+      "job": "setup#currencies"
     },
     {
       "t": "Lavoro con guide e autisti",
       "s": "Scheda servizio inviata alla guida, e il suo pagamento seguito con il viaggio.",
-      "job": "book"
+      "job": "book#suppliers"
     },
     {
       "t": "I miei clienti pagano a rate",
       "s": "Scadenze fissate nel preventivo, solleciti e pagamento online.",
-      "job": "get-paid"
+      "job": "get-paid#schedule"
     },
     {
       "t": "Fatturo in regime del margine",
       "s": "L’IVA è calcolata sul tuo margine, con la dicitura del regime in fattura.",
-      "job": "get-paid"
+      "job": "setup#country"
     },
     {
       "t": "Le mie tariffe cambiano con la stagione",
       "s": "Prezzi per stagione, età o giorno, e il preventivo prende il prezzo delle date del viaggio.",
-      "job": "sell"
+      "job": "sell#catalogue"
     },
     {
       "t": "Abbiamo più marchi o società",
       "s": "Ognuno ha i suoi documenti, le sue diciture e la sua numerazione delle fatture.",
-      "job": "setup"
+      "job": "setup#brands"
     }
   ],
   baTitle: 'Prima e dopo',

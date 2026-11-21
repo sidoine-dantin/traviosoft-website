@@ -55,53 +55,53 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "Le parcours d’un voyage dans Traviosoft",
   moments: [
-    {"rec": "Andalousie · 2 voyageurs", "title": "La demande", "body": "Elle arrive dans la liste des demandes, avec depuis combien de temps elle attend et la suite à donner.", "go": "Voir les demandes", "job": "sell"},
-    {"rec": "Marge {margin} EUR", "title": "Le devis", "body": "Chaque ligne part du coût du prestataire. Vous voyez la marge du voyage avant d’envoyer la proposition.", "go": "Voir les devis", "job": "sell"},
-    {"rec": "Hôtel à Séville : confirmé", "title": "Les réservations", "body": "Quand le client accepte, chaque prestataire reçoit sa demande, et sa réponse est enregistrée sur la ligne.", "go": "Voir les réservations", "job": "book"},
-    {"rec": "Acompte {deposit} EUR : payé", "title": "Les paiements", "body": "Les échéances viennent du devis accepté. Le client paie depuis le lien de l’e-mail.", "go": "Voir les paiements", "job": "get-paid"},
-    {"rec": "Facture finale : {total} EUR", "title": "La facture", "body": "Elle reprend les lignes du devis accepté.", "go": "Voir les factures", "job": "get-paid"}
+    {"rec": "Andalousie · 2 voyageurs", "title": "La demande", "body": "Elle arrive dans la liste des demandes, avec depuis combien de temps elle attend et la suite à donner.", "go": "Voir les demandes", "job": "sell#requests"},
+    {"rec": "Marge {margin} EUR", "title": "Le devis", "body": "Chaque ligne part du coût du prestataire. Vous voyez la marge du voyage avant d’envoyer la proposition.", "go": "Voir les devis", "job": "sell#quotes"},
+    {"rec": "Hôtel à Séville : confirmé", "title": "Les réservations", "body": "Quand le client accepte, chaque prestataire reçoit sa demande, et sa réponse est enregistrée sur la ligne.", "go": "Voir les réservations", "job": "book#order"},
+    {"rec": "Acompte {deposit} EUR : payé", "title": "Les paiements", "body": "Les échéances viennent du devis accepté. Le client paie depuis le lien de l’e-mail.", "go": "Voir les paiements", "job": "get-paid#schedule"},
+    {"rec": "Facture finale : {total} EUR", "title": "La facture", "body": "Elle reprend les lignes du devis accepté.", "go": "Voir les factures", "job": "get-paid#invoices"}
   ],
   sitTitle: "Selon votre façon de travailler",
   situations: [
     {
       "t": "Je vends à des agences, pas au voyageur",
       "s": "Commissions, tarifs nets et l’agence qui apporte le client sur chaque devis.",
-      "job": "sell"
+      "job": "sell#partners"
     },
     {
       "t": "Je fais des groupes",
       "s": "Liste des voyageurs, rooming list et formulaire que chaque voyageur remplit lui-même.",
-      "job": "book"
+      "job": "book#groups"
     },
     {
       "t": "Mes prestataires facturent en dollars ou en dirhams",
       "s": "Coûts dans leur devise, prix dans la vôtre, avec le taux du devis gardé.",
-      "job": "sell"
+      "job": "setup#currencies"
     },
     {
       "t": "Je travaille avec des guides et des chauffeurs",
       "s": "Fiche de service envoyée au guide, et son paiement suivi avec le voyage.",
-      "job": "book"
+      "job": "book#suppliers"
     },
     {
       "t": "Mes clients paient en plusieurs fois",
       "s": "Échéances prévues dans le devis, relances et paiement en ligne.",
-      "job": "get-paid"
+      "job": "get-paid#schedule"
     },
     {
       "t": "Je facture au régime de la marge",
       "s": "La TVA est calculée sur votre marge, avec la mention du régime sur la facture.",
-      "job": "get-paid"
+      "job": "setup#country"
     },
     {
       "t": "Mes tarifs changent selon la saison",
       "s": "Prix par saison, par âge ou par jour, et le devis prend le prix des dates du voyage.",
-      "job": "sell"
+      "job": "sell#catalogue"
     },
     {
       "t": "Nous avons plusieurs marques ou sociétés",
       "s": "Chacune a ses documents, ses mentions et sa numérotation de factures.",
-      "job": "setup"
+      "job": "setup#brands"
     }
   ],
   baTitle: 'Avant et après',

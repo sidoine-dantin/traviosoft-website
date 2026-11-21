@@ -55,53 +55,53 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "O percurso de uma viagem no Traviosoft",
   moments: [
-    {"rec": "Andaluzia · 2 viajantes", "title": "O pedido", "body": "Chega à lista de pedidos, com o tempo que já esperou e o passo seguinte.", "go": "Ver os pedidos", "job": "sell"},
-    {"rec": "Margem {margin} EUR", "title": "O orçamento", "body": "Cada linha parte do custo do fornecedor. Vê a margem da viagem antes de enviar a proposta.", "go": "Ver os orçamentos", "job": "sell"},
-    {"rec": "Hotel em Sevilha: confirmado", "title": "As reservas", "body": "Quando o cliente aceita, cada fornecedor recebe o seu pedido, e a resposta fica registada na linha.", "go": "Ver as reservas", "job": "book"},
-    {"rec": "Adiantamento {deposit} EUR: pago", "title": "Os pagamentos", "body": "As prestações vêm do orçamento aceite. O cliente paga a partir da ligação no e-mail.", "go": "Ver os pagamentos", "job": "get-paid"},
-    {"rec": "Fatura final: {total} EUR", "title": "A fatura", "body": "Retoma as linhas do orçamento aceite.", "go": "Ver as faturas", "job": "get-paid"}
+    {"rec": "Andaluzia · 2 viajantes", "title": "O pedido", "body": "Chega à lista de pedidos, com o tempo que já esperou e o passo seguinte.", "go": "Ver os pedidos", "job": "sell#requests"},
+    {"rec": "Margem {margin} EUR", "title": "O orçamento", "body": "Cada linha parte do custo do fornecedor. Vê a margem da viagem antes de enviar a proposta.", "go": "Ver os orçamentos", "job": "sell#quotes"},
+    {"rec": "Hotel em Sevilha: confirmado", "title": "As reservas", "body": "Quando o cliente aceita, cada fornecedor recebe o seu pedido, e a resposta fica registada na linha.", "go": "Ver as reservas", "job": "book#order"},
+    {"rec": "Adiantamento {deposit} EUR: pago", "title": "Os pagamentos", "body": "As prestações vêm do orçamento aceite. O cliente paga a partir da ligação no e-mail.", "go": "Ver os pagamentos", "job": "get-paid#schedule"},
+    {"rec": "Fatura final: {total} EUR", "title": "A fatura", "body": "Retoma as linhas do orçamento aceite.", "go": "Ver as faturas", "job": "get-paid#invoices"}
   ],
   sitTitle: "Conforme a sua forma de trabalhar",
   situations: [
     {
       "t": "Vendo a agências, não ao viajante",
       "s": "Comissões, tarifas net e a agência que traz o cliente em cada orçamento.",
-      "job": "sell"
+      "job": "sell#partners"
     },
     {
       "t": "Trabalho com grupos",
       "s": "Lista de viajantes, rooming list e um formulário que cada viajante preenche.",
-      "job": "book"
+      "job": "book#groups"
     },
     {
       "t": "Os meus fornecedores faturam em dólares ou dirhams",
       "s": "Custos na moeda deles, preços na sua, com a taxa de câmbio do orçamento guardada.",
-      "job": "sell"
+      "job": "setup#currencies"
     },
     {
       "t": "Trabalho com guias e motoristas",
       "s": "Ficha de serviço enviada ao guia, e o pagamento dele acompanhado com a viagem.",
-      "job": "book"
+      "job": "book#suppliers"
     },
     {
       "t": "Os meus clientes pagam em prestações",
       "s": "Prestações definidas no orçamento, lembretes e pagamento online.",
-      "job": "get-paid"
+      "job": "get-paid#schedule"
     },
     {
       "t": "Faturo no regime da margem",
       "s": "O IVA é calculado sobre a sua margem, com a menção do regime na fatura.",
-      "job": "get-paid"
+      "job": "setup#country"
     },
     {
       "t": "As minhas tarifas mudam com a época",
       "s": "Preços por época, idade ou dia, e o orçamento usa o preço das datas da viagem.",
-      "job": "sell"
+      "job": "sell#catalogue"
     },
     {
       "t": "Temos várias marcas ou empresas",
       "s": "Cada uma tem os seus documentos, menções e numeração de faturas.",
-      "job": "setup"
+      "job": "setup#brands"
     }
   ],
   baTitle: 'Antes e depois',

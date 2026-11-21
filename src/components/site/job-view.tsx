@@ -26,7 +26,7 @@ export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; lo
         </div>
       </section>
 
-      <ChapterExplorer titles={j.chapters.map(ch => ch.title)} label={c.common.onThisPage}>
+      <ChapterExplorer titles={j.chapters.map(ch => ch.title)} leads={j.chapters.map(ch => ch.lead)} label={c.common.onThisPage}>
         {j.chapters.map(ch => <Topic key={ch.id} ch={ch} c={c} locale={locale} />)}
       </ChapterExplorer>
 

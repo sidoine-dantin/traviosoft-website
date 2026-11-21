@@ -17,6 +17,8 @@ export type Locale = 'es' | 'en' | 'fr' | 'it' | 'pt';
 export const LANG_TAG: Record<Locale, string> = { es: 'es', en: 'en', fr: 'fr', it: 'it', pt: 'pt-PT' };
 
 export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
+/** A product page, optionally with the topic to land on (`sell#quotes`). */
+export type JobLink = JobSlug | `${JobSlug}#${string}`;
 
 /** Product fragments drawn in code (src/components/visuals.tsx). */
 /** Generic line icons for the 'before' notes (no third-party logos: their brand rules do not allow it). */
@@ -223,10 +225,10 @@ export type SiteContent = {
     tripTitle: string;
     /** Four moments of one sample trip, each with the app screen where it happens. */
     /** rec: one line from the sample trip shown in the hero; {margin} {deposit} {total} are filled in the page's number format. */
-  moments: { rec: string; title: string; body: string; go: string; job: JobSlug }[];
+  moments: { rec: string; title: string; body: string; go: string; job: JobLink }[];
     sitTitle: string; setupLine: string;
     /** Common ways of working, in the visitor's own words, each pointing to the page that covers it. */
-    situations: { t: string; s: string; job: JobSlug }[];
+    situations: { t: string; s: string; job: JobLink }[];
     baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
     priceTitle: string; priceBody: string; priceImport: string; priceFree: string; priceFreeNote: string; extraUserLine: string; coin1: string; coin2: string; coinUsers: string; priceNote: string; priceLink: string;
     facts: { k: string; v: string }[];

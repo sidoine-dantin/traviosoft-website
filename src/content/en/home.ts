@@ -55,53 +55,53 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "The journey of a trip in Traviosoft",
   moments: [
-    {"rec": "Andalusia · 2 travellers", "title": "The request", "body": "It lands in the list of requests, with how long it has waited and what comes next.", "go": "See requests", "job": "sell"},
-    {"rec": "Margin {margin} EUR", "title": "The quote", "body": "Each line starts from the supplier’s cost. You see the margin on the trip before you send the proposal.", "go": "See quotes", "job": "sell"},
-    {"rec": "Hotel in Seville: confirmed", "title": "The bookings", "body": "Once the client accepts, each supplier gets its request, and the answer is saved on the line.", "go": "See bookings", "job": "book"},
-    {"rec": "Deposit {deposit} EUR: paid", "title": "The payments", "body": "The payment schedule comes from the accepted quote. The client pays from the link in the email.", "go": "See payments", "job": "get-paid"},
-    {"rec": "Final invoice: {total} EUR", "title": "The invoice", "body": "It takes the lines of the accepted quote.", "go": "See invoices", "job": "get-paid"}
+    {"rec": "Andalusia · 2 travellers", "title": "The request", "body": "It lands in the list of requests, with how long it has waited and what comes next.", "go": "See requests", "job": "sell#requests"},
+    {"rec": "Margin {margin} EUR", "title": "The quote", "body": "Each line starts from the supplier’s cost. You see the margin on the trip before you send the proposal.", "go": "See quotes", "job": "sell#quotes"},
+    {"rec": "Hotel in Seville: confirmed", "title": "The bookings", "body": "Once the client accepts, each supplier gets its request, and the answer is saved on the line.", "go": "See bookings", "job": "book#order"},
+    {"rec": "Deposit {deposit} EUR: paid", "title": "The payments", "body": "The payment schedule comes from the accepted quote. The client pays from the link in the email.", "go": "See payments", "job": "get-paid#schedule"},
+    {"rec": "Final invoice: {total} EUR", "title": "The invoice", "body": "It takes the lines of the accepted quote.", "go": "See invoices", "job": "get-paid#invoices"}
   ],
   sitTitle: "However you work",
   situations: [
     {
       "t": "I sell to agencies, not to travellers",
       "s": "Commissions, net rates and the agency that brings the client on each quote.",
-      "job": "sell"
+      "job": "sell#partners"
     },
     {
       "t": "I run groups",
       "s": "Traveller list, rooming list and a form each traveller fills in.",
-      "job": "book"
+      "job": "book#groups"
     },
     {
       "t": "My suppliers bill in dollars or dirhams",
       "s": "Costs in their currency, prices in yours, with the rate of the quote kept.",
-      "job": "sell"
+      "job": "setup#currencies"
     },
     {
       "t": "I work with guides and drivers",
       "s": "A service sheet sent to the guide, and their payment followed with the trip.",
-      "job": "book"
+      "job": "book#suppliers"
     },
     {
       "t": "My clients pay in instalments",
       "s": "Payment dates set in the quote, reminders and online payment.",
-      "job": "get-paid"
+      "job": "get-paid#schedule"
     },
     {
       "t": "I invoice under the margin scheme",
       "s": "VAT worked out on your margin, with the scheme’s mention on the invoice.",
-      "job": "get-paid"
+      "job": "setup#country"
     },
     {
       "t": "My rates change with the season",
       "s": "Prices by season, age or day, and the quote takes the price of the trip dates.",
-      "job": "sell"
+      "job": "sell#catalogue"
     },
     {
       "t": "We have several brands or companies",
       "s": "Each one has its own documents, invoice mentions and numbering.",
-      "job": "setup"
+      "job": "setup#brands"
     }
   ],
   baTitle: 'Before and after',
