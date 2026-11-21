@@ -7,7 +7,7 @@ type Props = { titles: string[]; label: string; children: ReactNode };
 /**
  * The topics of a product page, one after the other. Beside them, one large title follows the
  * scroll: it shows the topic being read and slides to the next one as the visitor moves on.
- * A counter and small dots above it say where the visitor is and take them to a topic. On phones the titles
+ * Small dots above it say where the visitor is and take them to a topic. On phones the titles
  * stay in the topics themselves.
  */
 export function ChapterExplorer({ titles, label, children }: Props) {
@@ -30,14 +30,11 @@ export function ChapterExplorer({ titles, label, children }: Props) {
     return () => { window.removeEventListener('scroll', pick); window.removeEventListener('resize', pick); };
   }, [id, titles]);
 
-  const n = String(titles.length).padStart(2, '0');
-
   return (
     <section className="band explorer">
       <div className="wrap explorer-grid">
         <div className="explorer-side">
           <div className="explorer-where">
-            <span className="explorer-n" aria-hidden="true">{String(on + 1).padStart(2, '0')} / {n}</span>
             <nav className="explorer-dots" aria-label={label}>
               <ol>
                 {titles.map((t, i) => (

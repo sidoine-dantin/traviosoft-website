@@ -238,6 +238,8 @@ export type SiteContent = {
     yearly: string; monthly: string; yearlyNote: string;
     plans: Plan[];
     compareTitle: string; compareFeature: string; yes: string; no: string; compare: CompareSection[]; compareNote: string[];
+    /** the link under the comparison to the product pages */
+    productLink: string;
     faq: Faq[];
   };
   demo: {

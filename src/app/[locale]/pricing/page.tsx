@@ -30,7 +30,7 @@ export default async function PricingPage({ params }: Props) {
         <div className="cmp-wrap">
           <h2 className="sr-only">{p.compareTitle}</h2>
           <ComparePlans sections={p.compare} names={[p.plans[0].name, p.plans[1].name]} labels={{ feature: p.compareFeature, yes: p.yes, no: p.no }} note={p.compareNote} />
-          <p style={{ marginTop: 36 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{c.jobs.sell.name} · {c.jobs.book.name} · {c.jobs['get-paid'].name}</span><span className="arr" aria-hidden="true">→</span></Link></p>
+          <p style={{ marginTop: 36 }}><Link href="/sell" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{p.productLink}</span><span className="arr" aria-hidden="true">→</span></Link></p>
         </div>
       </section>
       <section className="band on-cream2">

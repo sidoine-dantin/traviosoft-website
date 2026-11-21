@@ -6,6 +6,7 @@ export const pricing: SiteContent['pricing'] = {
   metaDescription:
     `Dos planes para agencias de viajes a medida y DMC. Classic gestiona toda la agencia desde ${PRICES.classic.yearly} EUR al mes; Premium añade grupos, varios equipos, divisas, compras y varias marcas. ${PRICES.usersIncluded} usuarios incluidos, alta gratis con pago anual.`,
   title: 'Precios',
+  productLink: 'Ver el producto',
   lead: 'Classic cubre toda la agencia, desde la primera solicitud hasta la última factura. Premium añade grupos, varios equipos, otras divisas, compras y varias marcas.',
   yearly: 'Anual',
   monthly: 'Mensual',

@@ -176,6 +176,11 @@
 
 /* ---------- footer ---------- */
 .foot { background: var(--green); color: var(--cream); padding-block: 72px 40px; }
+/* the background shapes sit behind the columns; hidden on phones like the hero's */
+.foot { position: relative; overflow: hidden; }
+.foot-bg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+.foot > .wrap { position: relative; }
+@media (max-width: 860px) { .foot-bg { display: none; } }
 .foot-grid { --fcols: 4; --fgap: 32px; display: grid; grid-template-columns: repeat(var(--fcols), minmax(0, 1fr)); column-gap: var(--fgap); row-gap: 56px; }
 /* One grid for both rows, so the lower lists line up with the columns above.
    Top: about, product, company, legal. Bottom: comparisons (2 columns), blog (2 columns). */
@@ -682,7 +687,6 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .explorer-grid { display: grid; grid-template-columns: minmax(240px, 320px) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
 .explorer-side { position: sticky; top: max(140px, calc(50vh - 150px)); min-width: 0; }
 .explorer-where { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.explorer-n { font-family: var(--display); font-size: 14px; font-weight: 700; letter-spacing: .04em; color: var(--muted); font-variant-numeric: tabular-nums; }
 .explorer-titles { display: grid; }
 .explorer-title { grid-area: 1 / 1; align-self: start; color: var(--green); font-size: clamp(36px, 3.6vw, 52px); transition: opacity .35s ease .18s, transform .6s cubic-bezier(.2, .7, .2, 1) .12s; }
 /* the old title leaves quickly, then the new one rises into place */

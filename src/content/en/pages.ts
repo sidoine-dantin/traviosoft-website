@@ -6,6 +6,7 @@ export const pricing: SiteContent['pricing'] = {
   metaDescription:
     `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchasing and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
   title: 'Pricing',
+  productLink: 'See the product',
   lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds groups, several teams, other currencies, purchasing and several brands.',
   yearly: 'Yearly',
   monthly: 'Monthly',
