@@ -76,7 +76,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agencias colaboradoras',
-      title: 'Vende a través de agencias colaboradoras',
+      title: 'Las comisiones y tu margen real',
       lead: 'Presupuesta a la agencia colaboradora, conserva a su cliente en el viaje y liquida su comisión con las mismas cifras.',
       visual: 'commission',
       features: [
@@ -122,12 +122,12 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Estados',
-      title: 'Estados de reserva, viaje y pago',
-      lead: 'Los estados cambian a medida que se confirman los servicios y llegan los cobros.',
+      title: 'Estados de reserva en cada viaje',
+      lead: 'Ves de un vistazo qué servicios están confirmados y cuáles esperan al proveedor.',
       visual: 'statuses',
       features: [
         { title: 'Una lista de reservas por viaje', body: ['Hotel, guía, coche, billetes: cada servicio indica si está por reservar, esperando al proveedor o confirmado.'] },
-        { title: 'Etiquetas que se actualizan solas', body: ['Cuando se confirma el último servicio, el viaje aparece como reservado. Cuando se paga la liquidación, la etiqueta de pago se pone en verde.'] },
+        { title: 'Etiquetas que se actualizan solas', body: ['Cuando se confirma el último servicio, el viaje aparece como reservado.'] },
         { title: 'Archivo', body: ['Los viajes terminados van al archivo y se pueden seguir buscando. Un registro borrado se puede recuperar desde la papelera.'] }
       ]
     },
@@ -317,8 +317,8 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Equipo',
-      title: 'Usuarios y equipos',
-      lead: 'Todos trabajan sobre los mismos clientes, presupuestos y reservas.',
+      title: 'Cada vendedor con sus clientes y sus ventas',
+      lead: 'Cada vendedor trabaja con sus propios clientes y viajes, y tú ves las ventas de toda la agencia.',
       visual: 'team',
       features: [
         { title: 'Usuarios incluidos en tu plan', body: ['3 usuarios en los dos planes, y más cuando crezca tu equipo.'] },

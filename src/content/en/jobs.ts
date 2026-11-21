@@ -76,7 +76,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Partner agencies',
-      title: 'Sell through partner agencies',
+      title: 'Commissions and your real margin',
       lead: 'Quote the partner agency, keep their client on the trip, and settle their commission from the same numbers.',
       visual: 'commission',
       features: [
@@ -122,12 +122,12 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Statuses',
-      title: 'Booking, trip and payment statuses',
-      lead: 'Statuses change as services are confirmed and payments come in.',
+      title: 'Booking statuses on every trip',
+      lead: 'You see at a glance which services are confirmed and which are waiting for the supplier.',
       visual: 'statuses',
       features: [
         { title: 'A booking list per trip', body: ['Hotel, guide, car, tickets: each service shows whether it is to book, waiting for the supplier or confirmed.'] },
-        { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked. When the balance is paid, the payment badge turns green.'] },
+        { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked.'] },
         { title: 'Archive', body: ['Finished trips go to the archive and stay searchable. A deleted record can be restored from the trash.'] }
       ]
     },
@@ -317,8 +317,8 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Team',
-      title: 'Users and teams',
-      lead: 'Everyone works on the same clients, quotes and bookings.',
+      title: 'Each seller with their own clients and sales',
+      lead: 'Each seller works on their own clients and trips, and you see the sales of the whole agency.',
       visual: 'team',
       features: [
         { title: 'Users included in your plan', body: ['3 users on both plans, and more whenever your team grows.'] },

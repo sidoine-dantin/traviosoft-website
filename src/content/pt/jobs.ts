@@ -76,7 +76,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agências parceiras',
-      title: 'Vender através de agências parceiras',
+      title: 'As comissões e a sua margem real',
       lead: 'Faça o orçamento à agência parceira, mantenha o cliente dela na viagem e liquide a comissão a partir dos mesmos números.',
       visual: 'commission',
       features: [
@@ -122,12 +122,12 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Estados',
-      title: 'Estados de reserva, viagem e pagamento',
-      lead: 'Os estados mudam à medida que os serviços são confirmados e os pagamentos chegam.',
+      title: 'Estados de reserva em cada viagem',
+      lead: 'Vê num relance que serviços estão confirmados e quais aguardam o fornecedor.',
       visual: 'statuses',
       features: [
         { title: 'Uma lista de reservas por viagem', body: ['Hotel, guia, carro, bilhetes: cada serviço mostra se está por reservar, à espera do fornecedor ou confirmado.'] },
-        { title: 'Indicadores que se atualizam sozinhos', body: ['Quando o último serviço é confirmado, a viagem aparece como reservada. Quando o saldo é pago, o indicador de pagamento fica verde.'] },
+        { title: 'Indicadores que se atualizam sozinhos', body: ['Quando o último serviço é confirmado, a viagem aparece como reservada.'] },
         { title: 'Arquivo', body: ['As viagens concluídas vão para o arquivo e continuam pesquisáveis. Um registo apagado pode ser recuperado da reciclagem.'] }
       ]
     },
@@ -317,8 +317,8 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Equipa',
-      title: 'Utilizadores e equipas',
-      lead: 'Todos trabalham sobre os mesmos clientes, orçamentos e reservas.',
+      title: 'Clientes e vendas de cada vendedor',
+      lead: 'Cada vendedor trabalha com os seus próprios clientes e viagens, e vê as vendas de toda a agência.',
       visual: 'team',
       features: [
         { title: 'Utilizadores incluídos no plano', body: ['3 utilizadores nos dois planos, e mais sempre que a sua equipa crescer.'] },

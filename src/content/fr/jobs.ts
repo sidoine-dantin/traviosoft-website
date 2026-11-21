@@ -76,7 +76,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agences partenaires',
-      title: 'Vendez via des agences partenaires',
+      title: 'Les commissions et votre vraie marge',
       lead: 'Envoyez le devis à l’agence partenaire, gardez son client sur le voyage et réglez sa commission à partir des mêmes chiffres.',
       visual: 'commission',
       features: [
@@ -122,12 +122,12 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Statuts',
-      title: 'Statuts de réservation, de voyage et de paiement',
-      lead: 'Les statuts changent à mesure que les prestations sont confirmées et que les paiements arrivent.',
+      title: 'Les statuts de réservation de chaque voyage',
+      lead: 'Vous voyez d’un coup d’œil les prestations confirmées et celles en attente du prestataire.',
       visual: 'statuses',
       features: [
         { title: 'Une liste de réservations par voyage', body: ['Hôtel, guide, voiture, billets : chaque prestation indique si elle est à réserver, en attente du prestataire ou confirmée.'] },
-        { title: 'Des pastilles qui se mettent à jour seules', body: ['Quand la dernière prestation est confirmée, le voyage apparaît comme réservé. Quand le solde est payé, la pastille de paiement passe au vert.'] },
+        { title: 'Des pastilles qui se mettent à jour seules', body: ['Quand la dernière prestation est confirmée, le voyage passe en réservé.'] },
         { title: 'Archives', body: ['Les voyages terminés vont aux archives et restent consultables. Un élément supprimé peut être restauré depuis la corbeille.'] }
       ]
     },
@@ -317,8 +317,8 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Équipe',
-      title: 'Utilisateurs et équipes',
-      lead: 'Tout le monde travaille sur les mêmes clients, devis et réservations.',
+      title: 'Chaque vendeur avec ses clients et ses ventes',
+      lead: 'Chaque vendeur travaille sur ses propres clients et voyages, et vous voyez les ventes de toute l’agence.',
       visual: 'team',
       features: [
         { title: 'Utilisateurs inclus dans votre offre', body: ['3 utilisateurs dans les deux offres, et davantage dès que votre équipe grandit.'] },

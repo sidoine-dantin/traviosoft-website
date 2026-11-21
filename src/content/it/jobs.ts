@@ -76,7 +76,7 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agenzie partner',
-      title: 'Vendere tramite agenzie partner',
+      title: 'Le commissioni e il tuo margine reale',
       lead: 'Fai il preventivo all’agenzia partner, tieni il suo cliente sul viaggio e liquida la sua commissione dagli stessi numeri.',
       visual: 'commission',
       features: [
@@ -122,12 +122,12 @@ const book: JobPage = {
     {
       id: 'status',
       kicker: 'Stati',
-      title: 'Stati di prenotazione, viaggio e pagamento',
-      lead: 'Gli stati cambiano man mano che i servizi vengono confermati e i pagamenti arrivano.',
+      title: 'Stati di prenotazione su ogni viaggio',
+      lead: 'Vedi a colpo d’occhio quali servizi sono confermati e quali aspettano il fornitore.',
       visual: 'statuses',
       features: [
         { title: 'Una lista di prenotazioni per viaggio', body: ['Hotel, guida, auto, biglietti: ogni servizio mostra se è da prenotare, in attesa del fornitore o confermato.'] },
-        { title: 'Indicatori che si aggiornano da soli', body: ['Quando l’ultimo servizio è confermato, il viaggio risulta prenotato. Quando il saldo è pagato, l’indicatore del pagamento diventa verde.'] },
+        { title: 'Indicatori che si aggiornano da soli', body: ['Quando l’ultimo servizio è confermato, il viaggio risulta prenotato.'] },
         { title: 'Archivio', body: ['I viaggi conclusi vanno in archivio e restano ricercabili. Un elemento eliminato si può recuperare dal cestino.'] }
       ]
     },
@@ -317,8 +317,8 @@ const setup: JobPage = {
     {
       id: 'team',
       kicker: 'Team',
-      title: 'Utenti e team',
-      lead: 'Tutti lavorano sugli stessi clienti, preventivi e prenotazioni.',
+      title: 'Ogni venditore con i suoi clienti e le sue vendite',
+      lead: 'Ogni venditore lavora sui propri clienti e viaggi, e tu vedi le vendite di tutta l’agenzia.',
       visual: 'team',
       features: [
         { title: 'Utenti inclusi nel piano', body: ['3 utenti in entrambi i piani, e altri quando il tuo team cresce.'] },
