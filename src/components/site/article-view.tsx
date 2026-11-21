@@ -73,8 +73,7 @@ export function ArticleView({ c, a, path }: { c: SiteContent; a: Article; path: 
     <article>
       <JsonLd data={schema} />
       <header className="narrow article-head">
-        <p className="mono"><Link href="/resources" className="back-link">← {c.common.backToResources}</Link></p>
-        <h1 className="h1" style={{ marginTop: 20 }}>{a.title}</h1>
+        <h1 className="h1">{a.title}</h1>
         <p className="lead muted" style={{ marginTop: 20, maxWidth: '60ch' }}>{a.lead}</p>
         <p className="updated">{c.common.updated}: <time dateTime={a.updated}>{date}</time></p>
       </header>

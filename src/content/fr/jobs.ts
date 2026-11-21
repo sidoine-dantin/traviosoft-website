@@ -20,11 +20,9 @@ const sell: JobPage = {
       lead: 'Chaque demande dans une liste avec sa prochaine étape, qu’elle arrive par e-mail, par téléphone ou par WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'Une seule liste de demandes', body: ['Chaque demande a un statut : nouvelle, devis envoyé ou en attente de réponse.'] },
+        { title: 'Statut de chaque demande', body: ['Chaque demande a un statut : nouvelle, devis envoyé ou en attente de réponse.'] },
         { title: 'Une demande devient un projet', body: ['Quand une demande devient sérieuse, elle devient un projet. Le client, les dates, les voyageurs et vos notes restent ensemble pendant tout le voyage.'] },
-        { title: 'Une fiche par client', body: ['Saisissez un nom ou une adresse e-mail que vous avez déjà : Traviosoft vous montre le client existant, et chaque client garde un seul historique.'] },
-        { title: 'Rappels', body: ['Mettez une date sur une demande. Elle revient sur votre tableau de bord le bon jour.'] },
-        { title: 'Motifs des demandes perdues', body: ['Clôturez une demande avec un motif : prix, délais, destination.'] }
+        { title: 'Rappels', body: ['Mettez une date sur une demande. Elle revient sur votre tableau de bord le bon jour.'] }
       ]
     },
     {
@@ -36,9 +34,7 @@ const sell: JobPage = {
       features: [
         { title: 'Périodes de prix par date', body: ['Basse, moyenne et haute saison, événements spéciaux, tarifs des nouveaux contrats. Chaque produit garde ses prix par période, et le devis utilise celui qui correspond aux dates du voyage.'] },
         { title: 'Plusieurs prestataires par produit', body: ['Gardez deux sociétés de transfert ou trois guides pour le même service, chacun avec ses tarifs, et choisissez-en un par voyage.'] },
-        { title: 'Options', body: ['Types de chambre, demi-pension, voiture privée ou partagée : les options sont rattachées au produit, avec leur propre prix.'] },
-        { title: 'Forfaits prêts à l’emploi', body: ['Enregistrez une fois vos circuits classiques. Ajoutez le forfait complet à un devis en un clic, puis ajustez ce qui change.'] },
-        { title: 'Traductions automatiques', body: ['Rédigez la description d’un produit une fois. Elle est traduite pour vos clients dans leur langue.'] }
+        { title: 'Forfaits prêts à l’emploi', body: ['Enregistrez une fois vos circuits classiques. Ajoutez le forfait complet à un devis en un clic, puis ajustez ce qui change.'] }
       ]
     },
     {
@@ -48,12 +44,9 @@ const sell: JobPage = {
       lead: 'Définissez vos règles de prix une fois, et chaque ligne du devis les applique.',
       visual: 'margin',
       features: [
-        { title: 'Marge, TVA et commission', body: ['Une procédure de prix transforme vos tarifs nets en prix de vente : votre marge, la bonne TVA et la commission quand une agence ou un partenaire vend le voyage.'] },
-        { title: 'Prix par personne', body: ['Prix par adulte ou par enfant. Le client voit un prix clair par personne et un total.'] },
-        { title: 'Noms côté client', body: ['Votre équipe voit le nom interne de chaque prestation, le client voit son nom destiné aux clients.'] },
+        { title: 'Procédures de prix', body: ['Une procédure de prix transforme vos tarifs nets en prix de vente : votre marge, la bonne TVA et la commission quand une agence ou un partenaire vend le voyage.'] },
         { title: 'Inclus et non inclus', body: ['Ce que le prix couvre et ce qu’il ne couvre pas, listé sur le devis.'] },
-        { title: 'Versions', body: ['Le client demande un hôtel moins cher ? Créez une nouvelle version. La précédente reste, et vous pouvez la rouvrir à tout moment.'] },
-        { title: 'Date d’expiration', body: ['Fixez la durée de validité du prix.'] }
+        { title: 'Versions', body: ['Le client demande un hôtel moins cher ? Créez une nouvelle version. La précédente reste, et vous pouvez la rouvrir à tout moment.'] }
       ]
     },
     {
@@ -83,14 +76,13 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agences partenaires',
-      title: 'Vendez via des agences partenaires',
+      title: 'Les commissions et votre vraie marge',
       lead: 'Envoyez le devis à l’agence partenaire, gardez son client sur le voyage et réglez sa commission à partir des mêmes chiffres.',
       visual: 'commission',
       features: [
         { title: 'Le partenaire et son client', body: ['Le devis va à l’agence partenaire, les voyageurs sont ses clients. Les deux restent sur le voyage, du premier devis à la dernière facture.'] },
         { title: 'La commission dans le prix', body: ['Fixez la commission du partenaire sur le devis. Elle est dans le prix de vente dès la première ligne, et votre marge reste visible pour vous.'] },
-        { title: 'Relevés de commission', body: ['Ce que vous devez à chaque partenaire, par période, d’après les voyages qu’il vous a envoyés. Réglé en un clic.'] },
-        { title: 'Documents dans la langue du partenaire', body: ['Le partenaire reçoit le devis et la proposition dans sa langue et à votre marque, prêts à transmettre à son client.'] }
+        { title: 'Relevés de commission', body: ['Ce que vous devez à chaque partenaire, par période, d’après les voyages qu’il vous a envoyés. Réglé en un clic.'] }
       ]
     }
   ],
@@ -98,7 +90,7 @@ const sell: JobPage = {
     { q: 'Puis-je importer mon catalogue actuel ?', a: ['Oui. Nous importons vos produits, prix et prestataires depuis vos tableurs pendant la mise en place. La mise en place et l’import sont gratuits avec la facturation annuelle.'] },
     { q: 'Plusieurs prestataires peuvent-ils vendre le même hôtel ou le même service ?', a: ['Oui. Un produit peut avoir plusieurs prestataires, chacun avec ses tarifs. Vous choisissez le prestataire par voyage.'] },
     { q: 'Que voit mon client ?', a: ['Un devis net, avec des noms côté client, des prix par personne, ce qui est inclus et non inclus, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe.'] },
-    { q: 'Dois-je utiliser le catalogue pour chaque devis ?', a: ['Non. Un devis peut mêler lignes du catalogue et lignes ponctuelles.'] }
+    { q: 'Dois-je utiliser le catalogue pour chaque devis ?', a: ['Un devis peut mêler lignes du catalogue et lignes ponctuelles.'] }
   ]
 };
 
@@ -106,36 +98,36 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Réserver et suivre le voyage | Traviosoft',
   metaDescription:
-    'Le premier paiement confirme le voyage. Les statuts se mettent à jour seuls, les e-mails des prestataires sont classés et le client reçoit son programme.',
+    'Toutes les prestations du voyage sur une liste. Les statuts se mettent à jour seuls, les e-mails des prestataires sont classés et le client reçoit son programme.',
   name: 'Réserver et suivre',
   menuLine: 'Du devis accepté au voyage terminé',
   step: '2 sur 4',
   heroTitle: 'Voyages confirmés, réservations et programme client',
   heroLead:
-    'Quand le client paie l’acompte, le voyage est confirmé avec toutes les prestations à réserver. Chaque voyage a sa liste de réservations, les e-mails de ses prestataires et une page de programme pour le voyageur.',
+    'Toutes les prestations du voyage sont sur une seule liste de réservations. Les demandes partent aux prestataires en un clic, leurs réponses sont classées sur le voyage, et le voyageur a sa page de programme.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
-      kicker: 'Voyage confirmé',
-      title: 'L’acompte confirme le voyage',
-      lead: 'Enregistrez le premier paiement et le devis est accepté : le voyage confirmé est créé avec toutes les prestations déjà dedans.',
+      kicker: 'Réservations',
+      title: 'Chaque réservation prête pour le voyage',
+      lead: 'Toutes les prestations du voyage sont sur une seule liste. Un clic envoie les demandes de réservation, les prestataires confirment, et le voyage est prêt.',
       visual: 'confirm',
       features: [
-        { title: 'Une seule étape', body: ['Le premier paiement accepte le devis, confirme le voyage et liste toutes les prestations à réserver, en une fois.'] },
-        { title: 'Tout vient du devis', body: ['Voyageurs, dates, prestations et prix viennent du devis accepté, tels que le client les a vus.'] },
+        { title: 'Toutes les prestations sur une liste', body: ['Le devis accepté apporte l’hôtel, le guide, la voiture et les visites, avec leurs dates, voyageurs et prix. Rien à ressaisir.'] },
+        { title: 'Les demandes de réservation en un clic', body: ['Chaque prestataire reçoit sa demande de réservation par e-mail, avec les dates et les voyageurs. Ses réponses sont classées sur le voyage.'] },
         { title: 'Changements après confirmation', body: ['Le client ajoute une nuit ? Mettez le devis à jour et le voyage confirmé suit, pour que l’équipe travaille toujours sur la dernière version.'] }
       ]
     },
     {
       id: 'status',
       kicker: 'Statuts',
-      title: 'Statuts de réservation, de voyage et de paiement',
-      lead: 'Les statuts changent à mesure que les prestations sont confirmées et que les paiements arrivent.',
+      title: 'Les statuts de réservation de chaque voyage',
+      lead: 'Vous voyez d’un coup d’œil les prestations confirmées et celles en attente du prestataire.',
       visual: 'statuses',
       features: [
         { title: 'Une liste de réservations par voyage', body: ['Hôtel, guide, voiture, billets : chaque prestation indique si elle est à réserver, en attente du prestataire ou confirmée.'] },
-        { title: 'Des pastilles qui se mettent à jour seules', body: ['Quand la dernière prestation est confirmée, le voyage apparaît comme réservé. Quand le solde est payé, la pastille de paiement passe au vert.'] },
+        { title: 'Des pastilles qui se mettent à jour seules', body: ['Quand la dernière prestation est confirmée, le voyage passe en réservé.'] },
         { title: 'Archives', body: ['Les voyages terminés vont aux archives et restent consultables. Un élément supprimé peut être restauré depuis la corbeille.'] }
       ]
     },
@@ -148,7 +140,6 @@ const book: JobPage = {
       features: [
         { title: 'E-mails des prestataires classés pour vous', body: ['Les confirmations et réponses des prestataires arrivent dans le voyage auquel elles appartiennent.'] },
         { title: 'Fiches de service', body: ['Envoyez à chaque guide, chauffeur ou hôtel une fiche claire avec dates, noms et détails, directement depuis le voyage.'] },
-        { title: 'Fiches prestataires', body: ['Contacts, contrats, photos et ce que chaque prestataire inclut, conservés avec le prestataire et réutilisés à chaque voyage.'] },
         { title: 'Demandes de disponibilité et bons de commande', body: ['Demandez une disponibilité à un hôtel, puis envoyez le bon de commande depuis le voyage. Les réponses et les changements reviennent sur la réservation.'], premium: true }
       ]
     },
@@ -173,8 +164,7 @@ const book: JobPage = {
       features: [
         { title: 'La liste des voyageurs', body: ['Collez ou importez la liste depuis un tableur, ou envoyez à l’organisateur un lien vers un formulaire. Jusqu’à 200 voyageurs par voyage.'] },
         { title: 'Des prestations pour une partie du groupe', body: ['La journée golf pour douze, le dîner de gala pour tous : chaque prestation indique qui y participe, et les effectifs par hôtel suivent.'] },
-        { title: 'Une rooming list par hôtel', body: ['Des chambres composées selon qui partage avec qui, numérotées par hôtel, prêtes à envoyer en PDF ou en tableur.'] },
-        { title: 'Régimes et accessibilité d’un coup d’œil', body: ['Le nombre de repas végétariens, d’allergies et de besoins d’accessibilité par prestation, pour le restaurant et le guide.'] }
+        { title: 'Une rooming list par hôtel', body: ['Des chambres composées selon qui partage avec qui, numérotées par hôtel, prêtes à envoyer en PDF ou en tableur.'] }
       ]
     },
     {
@@ -242,10 +232,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Factures d’acompte et finale', body: ['Faites depuis le voyage en un clic, avec les coordonnées du client et les bons montants.'] },
         { title: 'Avoirs', body: ['Une annulation ou une modification devient un avoir lié à la facture d’origine.'] },
-        { title: 'Numérotation par société', body: ['Gérez deux sociétés depuis un seul endroit, chacune avec sa propre numérotation de factures.'] },
-        { title: 'Les règles fiscales de votre pays', body: ['Les régimes spéciaux de TVA pour les agences de voyages s’activent par pays dans les réglages, et la bonne mention apparaît sur vos factures.'] },
-        { title: 'Prêt pour votre comptable', body: ['Un récapitulatif Excel ou un zip de tous les PDF en fin de mois, en deux clics.'] },
-        { title: 'Export comptable', body: ['Vos ventes, achats et paiements sous forme d’écritures, prêts pour votre logiciel de comptabilité.'], premium: true }
+        { title: 'Prêt pour votre comptable', body: ['Un récapitulatif Excel ou un zip de tous les PDF en fin de mois, en deux clics.'] }
       ]
     },
     {
@@ -264,7 +251,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Quels prestataires de paiement fonctionnent ?', a: ['Vous ajoutez le lien de paiement du prestataire que vous utilisez déjà. Le client paie là-bas, et vous enregistrez le paiement sur le voyage.'] },
     { q: 'Mon comptable peut-il récupérer les fichiers ?', a: ['Oui. Exportez un récapitulatif Excel ou un zip de toutes les factures PDF pour n’importe quelle période.'] },
-    { q: 'Suit-il les règles de mon pays ?', a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Les régimes propres à chaque pays s’activent dans les réglages. Pour votre pays, demandez-nous pendant la démo.'] }
+    { q: 'Suit-il les règles de mon pays ?', a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Le régime espagnol de TVA des agences de voyages est intégré. Dans les autres pays, les factures passent par votre logiciel de facturation. Pour votre pays, demandez-nous pendant la démo.'] }
   ]
 };
 
@@ -313,7 +300,6 @@ const setup: JobPage = {
       features: [
         { title: 'Une devise par client et par devis', body: ['Chiffrez un client britannique en livres et un partenaire américain en dollars, depuis le même catalogue.'], premium: true },
         { title: 'Les prix fournisseurs dans leur devise', body: ['Gardez chaque tarif dans la devise de facturation du prestataire. Le devis le convertit au cours du jour, avec la marge de sécurité de votre choix.'], premium: true },
-        { title: 'Taux de change quotidiens', body: ['Les taux de la Banque centrale européenne sont récupérés chaque jour ouvré, ou vous fixez les vôtres.'], premium: true },
         { title: 'Votre comptabilité dans une seule devise', body: ['Factures, paiements, marges et rapports se totalisent dans votre devise comptable, avec les gains et pertes de change calculés pour vous.'], premium: true }
       ]
     },
@@ -321,18 +307,18 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Réglages par pays',
       title: 'Règles fiscales par pays',
-      lead: 'Les régimes fiscaux et la facturation électronique sont des réglages, activés pour les pays qui en ont besoin.',
+      lead: 'Les régimes fiscaux et la facturation électronique sont des réglages. L’Espagne est intégrée.',
       visual: 'country',
       features: [
-        { title: 'Régimes de TVA des agences de voyages', body: ['Quand un pays a un régime spécial de TVA pour les agences de voyages, les bonnes mentions apparaissent sur vos factures.'] },
+        { title: 'Régimes de TVA des agences de voyages', body: ['Pour l’Espagne, le régime de TVA des agences de voyages (REAV) et sa mention sur vos factures sont intégrés.'] },
         { title: 'Facturation électronique', body: ['Selon le pays, les factures sont transmises depuis Traviosoft ou depuis votre logiciel de facturation.'] }
       ]
     },
     {
       id: 'team',
       kicker: 'Équipe',
-      title: 'Utilisateurs et équipes',
-      lead: 'Tout le monde travaille sur les mêmes clients, devis et réservations.',
+      title: 'Chaque vendeur avec ses clients et ses ventes',
+      lead: 'Chaque vendeur travaille sur ses propres clients et voyages, et vous voyez les ventes de toute l’agence.',
       visual: 'team',
       features: [
         { title: 'Utilisateurs inclus dans votre offre', body: ['3 utilisateurs dans les deux offres, et davantage dès que votre équipe grandit.'] },

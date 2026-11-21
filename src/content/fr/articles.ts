@@ -112,7 +112,6 @@ const compares: Cmp[] = [
       'Les informations sur Ezus viennent de son site et d’annuaires publics, vérifiés le 3 novembre 2026. Les prix changent : consultez toujours les pages de tarifs actuelles. Les chiffres de clients d’Ezus sont ceux qu’il publie lui-même.',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'DMC, réceptifs, tour-opérateurs et agences ; FIT, groupes et MICE'],
-      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Paris, fondée en 2019'],
       ['Prix publié', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Professional 75 EUR par utilisateur et par mois (jusqu’à 10 utilisateurs) ; Premium 100 EUR ; Enterprise sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Pack d’onboarding de 1 990 EUR avec déploiement accompagné ; import de données 390 EUR'],
       ['Langues', 'Documents en français, anglais, espagnol, italien et catalan', 'Site et support en 5 langues : EN, FR, ES, IT, PT'],
@@ -221,14 +220,13 @@ const compares: Cmp[] = [
     metaTitle: 'Traviosoft ou Lemax : logiciel pour DMC et tour-opérateurs',
     metaDescription:
       'Lemax est un logiciel croate pour tour-opérateurs et DMC moyens et grands. Pour qui est chacun, taille d’équipe, prix et approche comparés.',
-    title: 'Traviosoft ou Lemax : deux systèmes de gestion complets',
+    title: 'Traviosoft ou Lemax : deux logiciels de gestion complets',
     lead: 'Lemax est un logiciel de plus de 30 ans, conçu pour les tour-opérateurs et DMC moyens et grands. Son offre Lemax GO s’adresse aux équipes à partir de 15 utilisateurs, avec un prix convenu avec chaque client. Traviosoft couvre tout le voyage, de la première demande à la dernière facture, avec des documents en cinq langues et un prix publié.',
     card: 'Deux systèmes complets : une plateforme établie et un seul flux de la demande à la facture avec prix publié.',
     basis:
       'Les informations sur Lemax viennent de son site et de la presse du secteur, vérifiées le 3 novembre 2026. Lemax convient de ses prix avec chaque client : nous écrivons "Sur demande". Ses chiffres de clients sont ceux qu’il affiche.',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Tour-opérateurs et DMC moyens et grands'],
-      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Croatie, fondée en 1990'],
       ['Taille d’équipe', `Deux offres, ${PRICES.usersIncluded} utilisateurs inclus`, 'Lemax GO à partir de 15 utilisateurs'],
       ['Prix', `Classic à partir de ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Sur demande ; convenu avec chaque client avant la signature'],
       ['Déploiement', 'Installation et import sans frais avec la facturation annuelle', 'Annonce une mise en service "en 90 jours" pour Lemax GO'],
@@ -268,7 +266,6 @@ const compares: Cmp[] = [
       'Les informations sur Tourwriter viennent de son site (pages offres et société), vérifiées le 3 novembre 2026. Ses prix sont des prix "à partir de" en dollars, par utilisateur, avec un devis pour chaque équipe : le total réel peut différer.',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'DMC de luxe et concepteurs de voyages, circuits FIT de plusieurs jours'],
-      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Wellington (Nouvelle-Zélande), fondée en 2004'],
       ['Prix publié', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Starter à partir de 99 USD par utilisateur et par mois ; Pro à partir de 149 USD ; Premium sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Frais uniques à partir de 1 199 USD, migration, configuration et formation comprises'],
       ['Langues', 'Documents en français, anglais, espagnol, italien et catalan', 'Anglais']
@@ -308,7 +305,6 @@ const compares: Cmp[] = [
       'Les informations sur Tourplan viennent de son site (accueil et page À propos), vérifiées le 14 novembre 2026. Son site ne publie pas de prix : nous écrivons "Sur demande".',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'DMC, voyagistes réceptifs et émetteurs : individuels, groupes, MICE, sur mesure, circuits'],
-      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Depuis 1986, 5 bureaux en Afrique, aux Amériques, en Asie, en Europe et dans le Pacifique'],
       ['Prix', `Classic à partir de ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Hébergement, installation, gestion de projet, formation et support'],
       ['Distribution', 'Connexions à votre site et à votre comptabilité (Premium) et à vos outils d’IA (les deux offres)', 'Canaux de distribution web et XML, et interfaces en ligne pour agents, clients et prestataires']
@@ -348,7 +344,6 @@ const compares: Cmp[] = [
       'Les informations sur Kaptio viennent de son site (accueil, plateforme et À propos), vérifiées le 14 novembre 2026. Son site ne publie pas de prix : nous écrivons "Sur demande".',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Voyages de plusieurs jours : croisières, train, circuits en groupe et sur mesure'],
-      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Fondée à Reykjavik en 2012'],
       ['Prix', `Classic à partir de ${PRICES.classic.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Sur demande'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Commence par un atelier de découverte'],
       ['Modules', 'Demandes, devis, réservations, factures et paiements dans un seul flux', 'Kaptio CRM, Kaptio Travel et Kaptio Edge']
@@ -387,7 +382,6 @@ const compares: Cmp[] = [
       'Les informations sur TourCMS viennent de son site (accueil, fonctionnalités et prix), vérifiées le 14 novembre 2026. Ses prix sont affichés en dollars américains.',
     rows: [
       ['Conçu pour', 'Réceptifs, DMC et agences sur mesure', 'Opérateurs d’excursions et d’activités : excursions à la journée, circuits, attractions, DMC'],
-      ['Société', 'Né dans une agence sur mesure à Barcelone ; voir la page À propos', 'Exploité par Palisis AG, Uster (Suisse) ; TourCMS depuis 2003'],
       ['Prix publié', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'De 49 USD par mois (2 utilisateurs) à 569 USD par mois (500 utilisateurs) ; réservations des partenaires connectés à partir de 1,9 % par transaction'],
       ['Démarrage', 'Installation et import sans frais avec la facturation annuelle', 'Essai gratuit, sans frais de mise en place'],
       ['Langues', 'Documents en français, anglais, espagnol, italien et catalan', 'Contenus en 22 langues']

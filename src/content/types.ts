@@ -204,12 +204,13 @@ export type SiteContent = {
     privacy: string; terms: string; notice: string;
     hosted: string; rights: string;
     /** extra footer links that only exist in this locale (e.g. Spain page) */
+    posts: { slug: string; label: string }[];
     localLinks: Link[];
     /** cookie banner, shown only when an ad measurement tag is configured */
     consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };
   };
   common: {
-    premium: string; next: string; onThisPage: string; updated: string; readMore: string;
+    premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
     notFound: { title: string; body: string };
   };
@@ -223,7 +224,7 @@ export type SiteContent = {
     /** Four moments of one sample trip, each with the app screen where it happens. */
     /** rec: one line from the sample trip shown in the hero; {margin} {deposit} {total} are filled in the page's number format. */
   moments: { rec: string; title: string; body: string; go: string; job: JobSlug }[];
-    sitTitle: string; sitLead: string;
+    sitTitle: string; setupLine: string;
     /** Common ways of working, in the visitor's own words, each pointing to the page that covers it. */
     situations: { t: string; s: string; job: JobSlug }[];
     baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
@@ -244,16 +245,17 @@ export type SiteContent = {
     title: string; lead: string;
     agendaTitle: string;
     agenda: { mins: string; title: string; body: string }[];
-    bringTitle: string; bring: string[];
     afterTitle: string; after: string[];
     bookTitle: string; bookBody: string; emailLabel: string; email: string;
+    /** shown once the Cal.com link (CAL_LINK) is set */
+    bookCta: string; bookCalendarBody: string; emailAltLabel: string;
     faq: Faq[];
   };
   switching: {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;
     timelineTitle: string;
-    timeline: { when: string; title: string; body: string }[];
+    timeline: { title: string; body: string }[];
     importTitle: string; importParts: { title: string; body: string }[];
     seasonTitle: string; seasonBody: string[];
     faq: Faq[];

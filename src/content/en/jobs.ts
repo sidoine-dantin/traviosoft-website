@@ -2,15 +2,15 @@ import type { JobPage, JobSlug } from '../types';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Sell: requests, catalogue and quotes with your margins | Traviosoft',
+  metaTitle: 'Sell: requests, catalog and quotes with your margins | Traviosoft',
   metaDescription:
-    'Every request in one list, a catalogue with season prices and several suppliers, quotes built with your margin, VAT and commission, sent in the client’s language with a follow-up after 7 days.',
+    'Every request in one list, a catalog with season prices and several suppliers, quotes built with your margin, VAT and commission, sent in the client’s language with a follow-up after 7 days.',
   name: 'Sell',
   menuLine: 'From the first request to the accepted quote',
   step: '1 of 4',
-  heroTitle: 'Requests, catalogue and quotes',
+  heroTitle: 'Requests, catalog and quotes',
   heroLead:
-    'Every request in one list, a catalogue with your rates by season, and quotes built from it with your margin and commission.',
+    'Every request in one list, a catalog with your rates by season, and quotes built from it with your margin and commission.',
   heroVisual: 'quote',
   chapters: [
     {
@@ -20,25 +20,21 @@ const sell: JobPage = {
       lead: 'Every enquiry in one list with its next step, whether it came by email, phone or WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'One list of requests', body: ['Each request has a status: new, quoted or waiting for an answer.'] },
+        { title: 'Request statuses', body: ['Each request has a status: new, quoted or waiting for an answer.'] },
         { title: 'A request becomes a project', body: ['When a request turns serious, it becomes a project. The client, the dates, the travellers and your notes stay together for the whole trip.'] },
-        { title: 'One record per client', body: ['Type a name or an email you already have and Traviosoft shows the existing client, so each client keeps one history.'] },
-        { title: 'Reminders', body: ['Put a date on a request. It comes back on your dashboard on the right day.'] },
-        { title: 'Reasons for lost requests', body: ['Close a request with a reason: price, timing, destination.'] }
+        { title: 'Reminders', body: ['Put a date on a request. It comes back on your dashboard on the right day.'] }
       ]
     },
     {
       id: 'catalogue',
-      kicker: 'Catalogue',
+      kicker: 'Catalog',
       title: 'Products with prices by date',
       lead: 'Hotels, transfers, guides and activities, each with prices by date. A quote uses the price for the travel dates.',
       visual: 'catalogue',
       features: [
         { title: 'Price periods by date', body: ['Low, mid and high season, special events, new contract rates. Each product keeps its prices by period, and the quote uses the one that matches the travel dates.'] },
         { title: 'Several suppliers per product', body: ['Keep two transfer companies or three guides for the same service, each with its own rates, and choose one per trip.'] },
-        { title: 'Options', body: ['Room types, half board, a private or shared car: options live on the product, with their own price.'] },
-        { title: 'Ready-made packages', body: ['Save your classic routes once. Add the whole package to a quote in one click, then adjust what changes.'] },
-        { title: 'Automatic translations', body: ['Write a product description once. It is translated for your clients in their language.'] }
+        { title: 'Ready-made packages', body: ['Save your classic routes once. Add the whole package to a quote in one click, then adjust what changes.'] }
       ]
     },
     {
@@ -48,12 +44,9 @@ const sell: JobPage = {
       lead: 'Set your pricing rules once, and every quote line applies them.',
       visual: 'margin',
       features: [
-        { title: 'Margin, VAT and commission', body: ['A pricing procedure turns your net rates into selling prices: your margin, the right VAT, and the commission when an agency or a partner sells the trip.'] },
-        { title: 'Per-person prices', body: ['Price per adult or per child. The client sees a clear price per person and a total.'] },
-        { title: 'Client-facing names', body: ['Your team sees the internal name of each service, the client sees its client-facing name.'] },
+        { title: 'Pricing procedures', body: ['A pricing procedure turns your net rates into selling prices: your margin, the right VAT, and the commission when an agency or a partner sells the trip.'] },
         { title: 'Included and not included', body: ['What the price covers and what it does not, listed on the quote.'] },
-        { title: 'Versions', body: ['The client asks for a cheaper hotel? Make a new version. The previous one stays, and you can reopen it at any time.'] },
-        { title: 'Expiry date', body: ['Set how long the price is valid.'] }
+        { title: 'Versions', body: ['The client asks for a cheaper hotel? Make a new version. The previous one stays, and you can reopen it at any time.'] }
       ]
     },
     {
@@ -83,22 +76,21 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Partner agencies',
-      title: 'Sell through partner agencies',
+      title: 'Commissions and your real margin',
       lead: 'Quote the partner agency, keep their client on the trip, and settle their commission from the same numbers.',
       visual: 'commission',
       features: [
         { title: 'The partner and their client', body: ['The quote goes to the partner agency, the travellers are their clients. Both stay on the trip, from the first quote to the last invoice.'] },
         { title: 'Commission in the price', body: ['Set the partner’s commission on the quote. It is in the selling price from the first line, and your margin stays visible to you.'] },
-        { title: 'Commission statements', body: ['What you owe each partner, per period, from the trips they sent you. Settle it in one click.'] },
-        { title: 'Documents in the partner’s language', body: ['The partner gets the quote and the proposal in their language and with your brand, ready to pass on to their client.'] }
+        { title: 'Commission statements', body: ['What you owe each partner, per period, from the trips they sent you. Settle it in one click.'] }
       ]
     }
   ],
   faq: [
-    { q: 'Can I import my current catalogue?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
+    { q: 'Can I import my current catalog?', a: ['Yes. We import your products, prices and suppliers from your spreadsheets during setup. Setup and import are free with yearly billing.'] },
     { q: 'Can several suppliers sell the same hotel or service?', a: ['Yes. A product can have several suppliers, each with its own rates. You choose the supplier per trip.'] },
     { q: 'What does my client see?', a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team.'] },
-    { q: 'Do I have to use the catalogue for every quote?', a: ['No. A quote can mix catalogue lines and one-off lines.'] }
+    { q: 'Do I have to use the catalog for every quote?', a: ['A quote can mix catalog lines and one-off lines.'] }
   ]
 };
 
@@ -106,36 +98,36 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Book and run the trip: orders, suppliers, client itinerary | Traviosoft',
   metaDescription:
-    'The first payment turns the quote into an order. Booking, trip and payment statuses update themselves, supplier emails are filed on the trip, and your client gets a day-by-day itinerary.',
+    'Every service of the trip on one booking list. Booking, trip and payment statuses update themselves, supplier emails are filed on the trip, and your client gets a day-by-day itinerary.',
   name: 'Book and run',
   menuLine: 'From the accepted quote to the trip done',
   step: '2 of 4',
   heroTitle: 'Orders, bookings and the client itinerary',
   heroLead:
-    'When the client pays the deposit, the quote becomes an order with every service to book. Each trip has its booking list, its supplier emails and an itinerary page for the traveller.',
+    'Every service of the trip is on one booking list. Booking requests go to suppliers in one click, their replies are filed on the trip, and the traveller gets an itinerary page.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
-      kicker: 'Order',
-      title: 'The deposit creates the order',
-      lead: 'Record the first payment and the quote is accepted: the order is created with every service already on it.',
+      kicker: 'Bookings',
+      title: 'Every booking ready for the trip',
+      lead: 'Every service of the trip is on one list. One click sends the booking requests, the suppliers confirm, and the trip is ready.',
       visual: 'confirm',
       features: [
-        { title: 'One step', body: ['The first payment accepts the quote, creates the order and lists every service to book, all at once.'] },
-        { title: 'Everything from the quote', body: ['Travellers, dates, services and prices come from the accepted quote, exactly as the client saw them.'] },
+        { title: 'Every service on one list', body: ['The accepted quote brings the hotel, the guide, the car and the visits, with their dates, travellers and prices. Nothing to type again.'] },
+        { title: 'Booking requests in one click', body: ['Each supplier gets its booking request by email, with the dates and the travellers. Their replies are filed on the trip.'] },
         { title: 'Changes after confirmation', body: ['The client adds a night? Update the trip and the order follows, so the team works from the latest version.'] }
       ]
     },
     {
       id: 'status',
       kicker: 'Statuses',
-      title: 'Booking, trip and payment statuses',
-      lead: 'Statuses change as services are confirmed and payments come in.',
+      title: 'Booking statuses on every trip',
+      lead: 'You see at a glance which services are confirmed and which are waiting for the supplier.',
       visual: 'statuses',
       features: [
         { title: 'A booking list per trip', body: ['Hotel, guide, car, tickets: each service shows whether it is to book, waiting for the supplier or confirmed.'] },
-        { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked. When the balance is paid, the payment badge turns green.'] },
+        { title: 'Badges that update themselves', body: ['When the last service is confirmed, the trip shows as booked.'] },
         { title: 'Archive', body: ['Finished trips go to the archive and stay searchable. A deleted record can be restored from the trash.'] }
       ]
     },
@@ -148,7 +140,6 @@ const book: JobPage = {
       features: [
         { title: 'Supplier emails filed for you', body: ['Confirmations and replies from suppliers land on the trip they belong to.'] },
         { title: 'Service sheets', body: ['Send each guide, driver or hotel a clear sheet with dates, names and details, straight from the trip.'] },
-        { title: 'Supplier records', body: ['Contacts, contracts, photos and what each supplier includes, kept with the supplier and reused on every trip.'] },
         { title: 'Availability requests and purchase orders', body: ['Ask a hotel for availability, then send the purchase order from the trip. Answers and changes come back on the booking.'], premium: true }
       ]
     },
@@ -173,8 +164,7 @@ const book: JobPage = {
       features: [
         { title: 'The travellers list', body: ['Paste or import the list from a spreadsheet, or send the organiser a form link. Up to 200 travellers per trip.'] },
         { title: 'Services for part of the group', body: ['The golf day for twelve, the gala dinner for everyone: each service lists who takes it, and the hotel counts follow.'] },
-        { title: 'A rooming list per hotel', body: ['Rooms built from who shares with whom, numbered per hotel, ready to send as a PDF or a spreadsheet.'] },
-        { title: 'Diet and access at a glance', body: ['Counts of vegetarian meals, allergies and access needs per service, for the restaurant and the guide.'] }
+        { title: 'A rooming list per hotel', body: ['Rooms built from who shares with whom, numbered per hotel, ready to send as a PDF or a spreadsheet.'] }
       ]
     },
     {
@@ -242,10 +232,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Deposit and final invoices', body: ['Made from the trip in one click, with the client’s details and the right amounts.'] },
         { title: 'Credit notes', body: ['A cancellation or a change becomes a credit note linked to the original invoice.'] },
-        { title: 'Numbering per company', body: ['Run two companies from one place, each with its own invoice numbering.'] },
-        { title: 'Your country’s tax rules', body: ['Special VAT schemes for travel agencies are switched on per country in the settings, and the right wording appears on your invoices.'] },
-        { title: 'Ready for your accountant', body: ['An Excel recap or a zip of every PDF at the end of the month, in two clicks.'] },
-        { title: 'Accounting export', body: ['Your sales, purchases and payments as journal entries, ready for your accounting software.'], premium: true }
+        { title: 'Ready for your accountant', body: ['An Excel recap or a zip of every PDF at the end of the month, in two clicks.'] }
       ]
     },
     {
@@ -264,7 +251,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Which payment providers work?', a: ['You add the payment link of the provider you already use. The client pays there, and you record the payment on the trip.'] },
     { q: 'Can my accountant get the files?', a: ['Yes. Export an Excel recap or a zip of every invoice PDF for any period.'] },
-    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. Country-specific schemes are switched on in the settings. For your country, ask us in the demo.'] }
+    { q: 'Does it follow my country’s rules?', a: ['Invoice numbering per company and credit notes work everywhere. The Spanish VAT scheme for travel agencies is built in. In other countries, invoices go through your invoicing software. For your country, ask us in the demo.'] }
   ]
 };
 
@@ -300,7 +287,7 @@ const setup: JobPage = {
       visual: 'languages',
       features: [
         { title: 'Documents per language', body: ['Each client has a language, and every document follows it.'] },
-        { title: 'Automatic translations', body: ['Product descriptions in your catalogue are translated for you, and you can correct any translation.'] },
+        { title: 'Automatic translations', body: ['Product descriptions in your catalog are translated for you, and you can correct any translation.'] },
         { title: 'Email templates per language', body: ['Your own wording in each language, used automatically.'] }
       ]
     },
@@ -311,9 +298,8 @@ const setup: JobPage = {
       lead: 'Lodges in dollars, a client in pounds, your books in euros. Each quote has its own currency, and your numbers add up in yours.',
       visual: 'currencies',
       features: [
-        { title: 'A currency per client and per quote', body: ['Quote a British client in pounds and an American partner in dollars, from the same catalogue.'], premium: true },
+        { title: 'A currency per client and per quote', body: ['Quote a British client in pounds and an American partner in dollars, from the same catalog.'], premium: true },
         { title: 'Supplier prices in their currency', body: ['Keep each rate in the currency the supplier invoices in. The quote converts it at the day’s rate, with a safety margin you choose.'], premium: true },
-        { title: 'Daily exchange rates', body: ['European Central Bank rates are fetched every working day, or you set your own.'], premium: true },
         { title: 'Your books in one currency', body: ['Invoices, payments, margins and reports add up in your accounting currency, with exchange gains and losses worked out for you.'], premium: true }
       ]
     },
@@ -321,18 +307,18 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Country settings',
       title: 'Country tax rules',
-      lead: 'Tax schemes and e-invoicing are settings, switched on for the countries that need them.',
+      lead: 'Tax schemes and e-invoicing are settings. Spain is built in.',
       visual: 'country',
       features: [
-        { title: 'Travel agency VAT schemes', body: ['Where a country has a special VAT scheme for travel agencies, the right labels appear on your invoices.'] },
+        { title: 'Travel agency VAT schemes', body: ['For Spain, the travel agency VAT scheme (REAV) and its wording on your invoices are built in.'] },
         { title: 'E-invoicing', body: ['Depending on the country, invoices are sent from Traviosoft or from your invoicing software.'] }
       ]
     },
     {
       id: 'team',
       kicker: 'Team',
-      title: 'Users and teams',
-      lead: 'Everyone works on the same clients, quotes and bookings.',
+      title: 'Each seller with their own clients and sales',
+      lead: 'Each seller works on their own clients and trips, and you see the sales of the whole agency.',
       visual: 'team',
       features: [
         { title: 'Users included in your plan', body: ['3 users on both plans, and more whenever your team grows.'] },
@@ -360,7 +346,7 @@ const setup: JobPage = {
       features: [
         { title: 'Your website and accounting', body: ['Your website, your accounting tool or a developer you work with can read and write your Traviosoft data.'], premium: true },
         { title: 'Your AI tools', body: ['Connect the AI assistant you already use, such as Claude or ChatGPT, to your Traviosoft data, with the same rights as the person who connects it.'], premium: true },
-        { title: 'The assistant inside Traviosoft', body: ['Ask what needs you today, have a quote prepared from your catalogue, or turn a supplier price list into catalogue prices. Every change waits for your OK.'], premium: true }
+        { title: 'The assistant inside Traviosoft', body: ['Ask what needs you today, have a quote prepared from your catalog, or turn a supplier price list into catalog prices. Every change waits for your OK.'], premium: true }
       ]
     }
   ],

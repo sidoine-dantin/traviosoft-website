@@ -10,9 +10,9 @@ export const PRICES = {
   /** per extra user, per month, by plan (same step as the plan prices) */
   extraUser: { classic: { yearly: 60, monthly: 70 }, premium: { yearly: 80, monthly: 95 } },
   /** one-off setup fee with monthly billing (free with yearly) */
-  setupMonthly: 390,
+  setupMonthly: 790,
   /** one-off fee to import clean spreadsheets or another tool's export, with monthly billing (free with yearly); other files on quote */
-  importMonthly: 290
+  importMonthly: 490
 } as const;
 
 const SEP = { en: ',', es: '.', fr: ' ' } as const;

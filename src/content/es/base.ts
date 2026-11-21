@@ -20,13 +20,21 @@ export const footer: SiteContent['footer'] = {
   faq: 'Preguntas frecuentes',
   about: 'Sobre nosotros',
   glossary: 'Glosario',
-  guides: 'Guías',
+  guides: 'Blog',
   compare: 'Comparativas',
   privacy: 'Privacidad',
   terms: 'Condiciones',
   notice: 'Aviso legal',
   hosted: 'Alojado en la UE',
   rights: 'Traviosoft',
+  /** blog posts shown in the footer, with short labels */
+  posts: [
+    { slug: 'presupuesto-viaje-a-medida-con-margen', label: 'Precio de un viaje a medida' },
+    { slug: 'rooming-list-grupos-mice', label: 'La rooming list' },
+    { slug: 'de-excel-a-un-software-de-agencia', label: 'De Excel a un software' },
+    { slug: 'rgpd-agencia-de-viajes', label: 'RGPD y agencias' },
+    { slug: 'iva-regimen-margen-agencias-de-viajes-ue-vida', label: 'IVA de las agencias en la UE' }
+  ],
   localLinks: [
     { label: 'Software para agencias en España', href: '/guides/software-agencias-viajes-espana' }
   ],
@@ -44,6 +52,8 @@ export const common: SiteContent['common'] = {
   premium: 'Premium',
   next: 'Siguiente',
   onThisPage: 'En esta página',
+  pauseVideo: 'Pausar el vídeo',
+  playVideo: 'Reproducir el vídeo',
   updated: 'Última actualización',
   readMore: 'Leer',
   faqTitle: 'Preguntas',

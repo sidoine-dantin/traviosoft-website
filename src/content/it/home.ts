@@ -62,7 +62,6 @@ export const home: SiteContent['home'] = {
     {"rec": "Fattura finale: {total} EUR", "title": "La fattura", "body": "Riprende le righe del preventivo accettato.", "go": "Vedi le fatture", "job": "get-paid"}
   ],
   sitTitle: "Secondo il tuo modo di lavorare",
-  sitLead: "Ogni agenzia ha le sue abitudini. Ecco cosa fa Traviosoft nei casi più comuni.",
   situations: [
     {
       "t": "Vendo ad agenzie, non al viaggiatore",
@@ -124,6 +123,7 @@ export const home: SiteContent['home'] = {
   afterTitle: 'Con Traviosoft',
   afterBody:
     'La richiesta, il preventivo, le prenotazioni, i pagamenti e le fatture sono sullo stesso viaggio, e tutto il team vede la stessa cosa.',
+  setupLine: 'Lo configuriamo con te e formiamo il tuo team in videochiamata.',
   priceTitle: 'Prezzi',
   priceBody: 'Configurazione e affiancamento',
   priceImport: 'e importazione dei tuoi fogli di calcolo',

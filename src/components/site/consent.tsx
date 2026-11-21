@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { Mark } from './logo';
 
 /*
- * Ad measurement (LinkedIn Insight Tag, Meta Pixel), loaded only after the
+ * Ad measurement (LinkedIn Insight Tag, Meta Pixel, Google tag for Google Ads), loaded only after the
  * visitor accepts. The IDs come from build-time variables; with neither set,
  * nothing is loaded and no banner is shown.
  *
@@ -18,7 +18,14 @@ import { Mark } from './logo';
 const LINKEDIN_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '10081602';
 const LINKEDIN_CONVERSION_ID = process.env.NEXT_PUBLIC_LINKEDIN_CONVERSION_ID || '32264978'; // "Demo click"
 const META_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '999533615909262';
-const ENABLED = Boolean(LINKEDIN_ID || META_ID);
+// Google Ads tag (account 919-449-5984) and the conversion label of its "Demo click" action.
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18573914748';
+const GOOGLE_ADS_DEMO_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_DEMO_LABEL || '2FpoCKbfgrgdEPzk3ZhF'; // "Demo click" (secondary: observed, not bid on)
+// "Demo booked" (primary): fired when a booking is confirmed in the booking tool.
+export const GOOGLE_ADS_BOOKED_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_BOOKED_LABEL || 'sYaeCKL217kdEPzk3ZhF';
+/** LinkedIn conversion for a booked demo; empty until it exists in Campaign Manager. */
+const LINKEDIN_BOOKED_ID = process.env.NEXT_PUBLIC_LINKEDIN_BOOKED_CONVERSION_ID || '32357682'; // "Demo booked"
+const ENABLED = Boolean(LINKEDIN_ID || META_ID || GOOGLE_ADS_ID);
 
 const KEY = 'tv-consent';
 const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 182;
@@ -32,6 +39,8 @@ type Win = Window & {
   _linkedin_partner_id?: string;
   _linkedin_data_partner_ids?: string[];
   lintrk?: ((...args: unknown[]) => void) & { q?: unknown[] };
+  dataLayer?: unknown[];
+  gtag?: (...args: unknown[]) => void;
 };
 
 function readChoice(): Choice | null {
@@ -111,26 +120,71 @@ function loadTags() {
     addScript('https://connect.facebook.net/en_US/fbevents.js');
     w.fbq('init', META_ID);
   }
+  if (GOOGLE_ADS_ID) {
+    w.dataLayer = w.dataLayer ?? [];
+    // gtag needs the real `arguments` object, not an array.
+    w.gtag = function gtag() {
+      w.dataLayer!.push(arguments);
+    };
+    // The tag only ever runs after the visitor accepted, so advertising consent is granted; no analytics.
+    w.gtag('consent', 'default', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'denied',
+    });
+    w.gtag('js', new Date());
+    w.gtag('config', GOOGLE_ADS_ID, { send_page_view: false });
+    addScript(`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`);
+  }
 }
 
-/** Every page counts as a view; pricing and demo pages also mark interest (Meta ViewContent). */
+/**
+ * Every page counts as a view; pricing and demo pages also mark interest (Meta ViewContent).
+ * Google Ads builds its remarketing lists from these page views (by URL).
+ */
 function trackPage(pathname: string) {
   const w = window as Win;
+  if (GOOGLE_ADS_ID) w.gtag?.('event', 'page_view', { send_to: GOOGLE_ADS_ID, page_location: window.location.href });
   if (!META_ID) return;
   w.fbq?.('track', 'PageView');
   const page = pathname.split('/').filter(Boolean).pop();
   if (page === 'pricing' || page === 'demo') w.fbq?.('track', 'ViewContent', { content_name: page });
 }
 
-function linkedinConversion() {
+/**
+ * Sends one Google Ads conversion (by its label). Does nothing unless the visitor
+ * accepted and the tag is loaded, so it is safe to call from anywhere.
+ */
+export function googleConversion(label: string) {
+  if (!GOOGLE_ADS_ID || !label || !loaded || snapshot() !== 'granted') return;
+  (window as Win).gtag?.('event', 'conversion', { send_to: `${GOOGLE_ADS_ID}/${label}` });
+}
+
+/** "Demo click" conversion on LinkedIn and Google Ads. */
+function demoConversion() {
   const w = window as Win;
   if (LINKEDIN_ID && LINKEDIN_CONVERSION_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_CONVERSION_ID) });
+  googleConversion(GOOGLE_ADS_DEMO_LABEL);
+}
+
+/**
+ * A demo was booked in the Cal.com window: the main conversion on Google Ads
+ * ("Demo booked"), Meta (Schedule) and LinkedIn. Nothing is sent without consent.
+ */
+export function bookedConversion() {
+  if (snapshot() !== 'granted' || !loaded) return;
+  const w = window as Win;
+  googleConversion(GOOGLE_ADS_BOOKED_LABEL);
+  if (META_ID) w.fbq?.('track', 'Schedule');
+  if (LINKEDIN_ID && LINKEDIN_BOOKED_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_BOOKED_ID) });
 }
 
 /*
  * Interest signals for retargeting: a click on a "Book a demo" link (any link to
- * the demo page) is a Meta Schedule, a click on the demo email address is a Meta
- * Contact, and both count as a LinkedIn conversion.
+ * the demo page) is a Meta DemoClick, a click on the demo email address is a Meta
+ * Contact, and both count as a LinkedIn and a Google Ads "Demo click" (secondary).
+ * Meta Schedule is kept for real bookings (bookedConversion).
  */
 function trackClick(target: EventTarget | null) {
   const a = (target as Element | null)?.closest?.('a[href]');
@@ -139,7 +193,7 @@ function trackClick(target: EventTarget | null) {
   const w = window as Win;
   if (href.startsWith('mailto:')) {
     if (META_ID) w.fbq?.('track', 'Contact');
-    linkedinConversion();
+    demoConversion();
     return;
   }
   let path = '';
@@ -150,8 +204,8 @@ function trackClick(target: EventTarget | null) {
     return;
   }
   if (path.split('/').filter(Boolean).pop() === 'demo') {
-    if (META_ID) w.fbq?.('track', 'Schedule');
-    linkedinConversion();
+    if (META_ID) w.fbq?.('trackCustom', 'DemoClick');
+    demoConversion();
   }
 }
 

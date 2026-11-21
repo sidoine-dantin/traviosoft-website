@@ -2,11 +2,15 @@ import { Link } from '@/i18n/navigation';
 import type { JobSlug, SiteContent } from '@/content/types';
 import { Visual } from './visuals';
 import { FaqList, FaqSchema } from './faq';
-import { ChapterBar } from './chapter-bar';
+import { ChapterExplorer } from './chapter-explorer';
+import { TopicVideo } from './topic-video';
+import { topicVideo } from '@/content/topic-videos';
+import type { Chapter } from '@/content/types';
+
 
 const ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup'];
 
-export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
+export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; locale: string }) {
   const j = c.jobs[slug];
   const next = ORDER[(ORDER.indexOf(slug) + 1) % ORDER.length];
   const nj = c.jobs[next];
@@ -22,33 +26,9 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
         </div>
       </section>
 
-      <div>
-      <ChapterBar items={j.chapters.map(ch => ({ id: ch.id, label: ch.kicker }))} label={c.common.onThisPage} />
-      {j.chapters.map((ch, i) => {
-        const tone = i % 2 === 0 ? 'on-cream2' : 'on-cream';
-        return (
-          <section key={ch.id} id={ch.id} className={`${tone} band chapter-band`}>
-            <div className={`wrap chapter${i % 2 ? ' flip' : ''}`}>
-              <div className="chapter-copy">
-                <h2 className="h2" style={{ color: 'var(--green)' }}>{ch.title}</h2>
-                <p className="lead muted">{ch.lead}</p>
-                <div className="feat-list">
-                  {ch.features.map(f => (
-                    <details className="feat" key={f.title}>
-                      <summary>
-                        <span>{f.title}</span>
-                      </summary>
-                      <div className="feat-body">{f.body.map((p, k) => <p key={k}>{p}</p>)}</div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="chapter-visual"><Visual k={ch.visual} v={c.visuals} /></div>
-            </div>
-          </section>
-        );
-      })}
-      </div>
+      <ChapterExplorer titles={j.chapters.map(ch => ch.title)} label={c.common.onThisPage}>
+        {j.chapters.map(ch => <Topic key={ch.id} ch={ch} c={c} locale={locale} />)}
+      </ChapterExplorer>
 
       <section className="band">
         <div className="narrow">
@@ -71,5 +51,28 @@ export function JobView({ c, slug }: { c: SiteContent; slug: JobSlug }) {
         </div>
       </section>
     </>
+  );
+}
+
+/** Every topic has the same shape: title, one line, the points, and the screenshot beside them. */
+function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string }) {
+  const video = topicVideo(locale, ch.id);
+  return (
+    <div className="topic" id={ch.id}>
+      <div className="topic-copy">
+        <h2 className="h2">{ch.title}</h2>
+        <p className="lead muted">{ch.lead}</p>
+        <ul className="topic-points">
+          {ch.features.map(f => (
+            <li key={f.title}><h3>{f.title}</h3>{f.body.map((p, k) => <p key={k}>{p}</p>)}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="topic-visual">
+        {video
+          ? <TopicVideo src={video} label={ch.title} pause={c.common.pauseVideo} play={c.common.playVideo} />
+          : <Visual k={ch.visual} v={c.visuals} />}
+      </div>
+    </div>
   );
 }

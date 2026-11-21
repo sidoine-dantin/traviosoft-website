@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { OPEN_BOOKING_EVENT } from '@/components/site/book-demo';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Logo } from '@/components/site/logo';
 import { LangMenu } from './lang-menu';
@@ -66,10 +67,13 @@ export default function Header({ locale, labels, jobs }: Props) {
     };
   }, [mobile]);
 
-  useEffect(() => {
+  // A new page closes the menus (adjusting state during render, as React recommends, not in an effect).
+  const [shownPath, setShownPath] = useState(pathname);
+  if (pathname !== shownPath) {
+    setShownPath(pathname);
     setOpen(false);
     setMobile(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -87,7 +91,15 @@ export default function Header({ locale, labels, jobs }: Props) {
 
   const isJob = jobs.some(j => pathname === `/${j.slug}`);
   // Locale-only pages (Spanish guides) have no twin: the switch goes to that locale's home.
-  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/resources' : pathname;
+  const localeHref = pathname.startsWith('/guides/') || pathname.startsWith('/compare/') || pathname.startsWith('/best/') ? '/' : pathname;
+
+  // On the demo page itself, "Book a demo" opens the booking window instead of reloading the page.
+  const openBookingHere = (e: React.MouseEvent) => {
+    if (pathname !== '/demo') return;
+    e.preventDefault();
+    setMobile(false);
+    window.dispatchEvent(new Event(OPEN_BOOKING_EVENT));
+  };
 
   const langs = <LangMenu locale={locale} href={localeHref} />;
 
@@ -121,11 +133,10 @@ export default function Header({ locale, labels, jobs }: Props) {
             )}
           </div>
           <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
-          <Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link>
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           {langs}
-          <Link className="quiet" href="/demo">{labels.demo}</Link>
+          <Link className="quiet" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
           <button
             ref={burgerRef}
             type="button"
@@ -159,11 +170,10 @@ export default function Header({ locale, labels, jobs }: Props) {
           </ul>
           <ul className="mobile-links">
             <li><Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link></li>
-            <li><Link href="/resources" aria-current={pathname === '/resources' ? 'page' : undefined}>{labels.resources}</Link></li>
           </ul>
           <div className="mobile-foot">
             <LangMenu locale={locale} href={localeHref} up />
-            <Link className="quiet mobile-demo" href="/demo">{labels.demo}</Link>
+            <Link className="quiet mobile-demo" href="/demo" onClick={openBookingHere}>{labels.demo}</Link>
           </div>
         </nav>
       )}

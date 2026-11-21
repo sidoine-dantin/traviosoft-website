@@ -20,11 +20,9 @@ const sell: JobPage = {
       lead: 'Cada pedido numa só lista com o passo seguinte, quer chegue por email, telefone ou WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'Uma só lista de pedidos', body: ['Cada pedido tem um estado: novo, orçamento enviado ou à espera de resposta.'] },
+        { title: 'Estado de cada pedido', body: ['Cada pedido tem um estado: novo, orçamento enviado ou à espera de resposta.'] },
         { title: 'Um pedido torna-se um projeto', body: ['Quando um pedido avança, torna-se um projeto. O cliente, as datas, os viajantes e as suas notas ficam juntos durante toda a viagem.'] },
-        { title: 'Uma ficha por cliente', body: ['Escreva um nome ou um email que já tem e o Traviosoft mostra o cliente existente: cada cliente mantém um só histórico.'] },
-        { title: 'Lembretes', body: ['Ponha uma data num pedido. Ele volta ao seu painel no dia certo.'] },
-        { title: 'Motivos dos pedidos não concretizados', body: ['Feche um pedido com um motivo: preço, prazos, destino.'] }
+        { title: 'Lembretes', body: ['Ponha uma data num pedido. Ele volta ao seu painel no dia certo.'] }
       ]
     },
     {
@@ -36,9 +34,7 @@ const sell: JobPage = {
       features: [
         { title: 'Períodos de preço por data', body: ['Época baixa, média e alta, eventos especiais, tarifas de novos contratos. Cada produto guarda os seus preços por período, e o orçamento usa o que corresponde às datas da viagem.'] },
         { title: 'Vários fornecedores por produto', body: ['Tenha duas empresas de transfers ou três guias para o mesmo serviço, cada um com as suas tarifas, e escolha um por viagem.'] },
-        { title: 'Opções', body: ['Tipos de quarto, meia-pensão, carro privado ou partilhado: as opções estão ligadas ao produto, com o seu próprio preço.'] },
-        { title: 'Pacotes prontos', body: ['Guarde uma vez os seus circuitos clássicos. Adicione o pacote completo a um orçamento num clique e ajuste o que muda.'] },
-        { title: 'Traduções automáticas', body: ['Escreva uma vez a descrição de um produto. É traduzida para os seus clientes na língua deles.'] }
+        { title: 'Pacotes prontos', body: ['Guarde uma vez os seus circuitos clássicos. Adicione o pacote completo a um orçamento num clique e ajuste o que muda.'] }
       ]
     },
     {
@@ -48,12 +44,9 @@ const sell: JobPage = {
       lead: 'Defina uma vez as suas regras de preço, e cada linha do orçamento aplica-as.',
       visual: 'margin',
       features: [
-        { title: 'Margem, IVA e comissões', body: ['Um procedimento de preço transforma as suas tarifas net em preços de venda: a sua margem, o IVA correto e a comissão quando uma agência ou um parceiro vende a viagem.'] },
-        { title: 'Preços por pessoa', body: ['Preço por adulto ou por criança. O cliente vê um preço claro por pessoa e um total.'] },
-        { title: 'Nomes para o cliente', body: ['A sua equipa vê o nome interno de cada serviço, o cliente vê o nome pensado para ele.'] },
+        { title: 'Procedimentos de preço', body: ['Um procedimento de preço transforma as suas tarifas net em preços de venda: a sua margem, o IVA correto e a comissão quando uma agência ou um parceiro vende a viagem.'] },
         { title: 'Incluído e não incluído', body: ['O que o preço inclui e o que não inclui, indicado no orçamento.'] },
-        { title: 'Versões', body: ['O cliente pede um hotel mais barato? Crie uma nova versão. A anterior fica guardada e pode reabri-la a qualquer momento.'] },
-        { title: 'Validade', body: ['Indique até quando o preço é válido.'] }
+        { title: 'Versões', body: ['O cliente pede um hotel mais barato? Crie uma nova versão. A anterior fica guardada e pode reabri-la a qualquer momento.'] }
       ]
     },
     {
@@ -83,14 +76,13 @@ const sell: JobPage = {
     {
       id: 'partners',
       kicker: 'Agências parceiras',
-      title: 'Vender através de agências parceiras',
+      title: 'As comissões e a sua margem real',
       lead: 'Faça o orçamento à agência parceira, mantenha o cliente dela na viagem e liquide a comissão a partir dos mesmos números.',
       visual: 'commission',
       features: [
         { title: 'O parceiro e o cliente dele', body: ['O orçamento vai para a agência parceira, os viajantes são clientes dela. Ambos ficam na viagem, do primeiro orçamento à última fatura.'] },
         { title: 'A comissão no preço', body: ['Indique a comissão do parceiro no orçamento. Está no preço de venda desde a primeira linha, e a sua margem continua visível para si.'] },
-        { title: 'Extratos de comissões', body: ['O que deve a cada parceiro, por período, das viagens que lhe enviou. Liquida-o num clique.'] },
-        { title: 'Documentos na língua do parceiro', body: ['O parceiro recebe o orçamento e a proposta na língua dele e com a sua marca, prontos a passar ao cliente.'] }
+        { title: 'Extratos de comissões', body: ['O que deve a cada parceiro, por período, das viagens que lhe enviou. Liquida-o num clique.'] }
       ]
     }
   ],
@@ -98,7 +90,7 @@ const sell: JobPage = {
     { q: 'Posso importar o meu catálogo atual?', a: ['Sim. Durante a implementação importamos os seus produtos, preços e fornecedores a partir das suas folhas de cálculo. A implementação e a importação são gratuitas com faturação anual.'] },
     { q: 'Vários fornecedores podem vender o mesmo hotel ou serviço?', a: ['Sim. Um produto pode ter vários fornecedores, cada um com as suas tarifas. Escolhe o fornecedor em cada viagem.'] },
     { q: 'O que vê o meu cliente?', a: ['Um orçamento limpo com nomes pensados para ele, preços por pessoa, o que está incluído e o que não está, na língua dele e com a sua marca. As suas tarifas net e as suas margens ficam reservadas à sua equipa.'] },
-    { q: 'Tenho de usar o catálogo em todos os orçamentos?', a: ['Não. Um orçamento pode adicionar linhas do catálogo e linhas livres.'] }
+    { q: 'Tenho de usar o catálogo em todos os orçamentos?', a: ['Um orçamento pode adicionar linhas do catálogo e linhas livres.'] }
   ]
 };
 
@@ -106,36 +98,36 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Reservar e acompanhar a viagem: reservas, fornecedores, itinerário do cliente | Traviosoft',
   metaDescription:
-    'O primeiro pagamento transforma o orçamento em viagem confirmada. Os estados de reserva, viagem e pagamento atualizam-se sozinhos, os emails dos fornecedores ficam guardados na viagem e o seu cliente recebe um itinerário dia a dia.',
+    'Todos os serviços da viagem numa só lista. Os estados de reserva, viagem e pagamento atualizam-se sozinhos, os emails dos fornecedores ficam guardados na viagem e o seu cliente recebe um itinerário dia a dia.',
   name: 'Reservar e acompanhar',
   menuLine: 'Do orçamento aceite à viagem concluída',
   step: '2 de 4',
-  heroTitle: 'Viagens confirmadas, reservas e itinerário do cliente',
+  heroTitle: 'Reservas, fornecedores e itinerário do cliente',
   heroLead:
-    'Quando o cliente paga o adiantamento, o orçamento torna-se uma viagem confirmada com todos os serviços a reservar. Cada viagem tem a sua lista de reservas, os emails dos fornecedores e uma página de itinerário para o viajante.',
+    'Todos os serviços da viagem ficam numa só lista de reservas. Os pedidos seguem para os fornecedores num clique, as respostas ficam guardadas na viagem e o viajante tem a sua página de itinerário.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
-      kicker: 'Viagem confirmada',
-      title: 'O adiantamento confirma a viagem',
-      lead: 'Registe o primeiro pagamento e o orçamento fica aceite: a viagem confirmada é criada com todos os serviços já incluídos.',
+      kicker: 'Reservas',
+      title: 'Cada reserva pronta para a viagem',
+      lead: 'Todos os serviços da viagem ficam numa só lista. Um clique envia os pedidos de reserva, os fornecedores confirmam e a viagem fica pronta.',
       visual: 'confirm',
       features: [
-        { title: 'Um só passo', body: ['O primeiro pagamento aceita o orçamento, confirma a viagem e lista todos os serviços a reservar, de uma só vez.'] },
-        { title: 'Tudo a partir do orçamento', body: ['Viajantes, datas, serviços e preços vêm do orçamento aceite, exatamente como o cliente os viu.'] },
-        { title: 'Alterações depois da confirmação', body: ['O cliente acrescenta uma noite? Atualize a viagem e as reservas acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
+        { title: 'Todos os serviços numa lista', body: ['O orçamento aceite traz o hotel, o guia, o carro e as visitas, com as datas, os viajantes e os preços. Nada para escrever de novo.'] },
+        { title: 'Pedidos de reserva num clique', body: ['Cada fornecedor recebe o seu pedido de reserva por e-mail, com as datas e os viajantes. As respostas ficam guardadas na viagem.'] },
+        { title: 'Alterações depois da confirmação', body: ['O cliente acrescenta uma noite? Atualize a reserva e os serviços acompanham, para que a equipa trabalhe sempre sobre a última versão.'] }
       ]
     },
     {
       id: 'status',
       kicker: 'Estados',
-      title: 'Estados de reserva, viagem e pagamento',
-      lead: 'Os estados mudam à medida que os serviços são confirmados e os pagamentos chegam.',
+      title: 'Estados de reserva em cada viagem',
+      lead: 'Vê num relance que serviços estão confirmados e quais aguardam o fornecedor.',
       visual: 'statuses',
       features: [
         { title: 'Uma lista de reservas por viagem', body: ['Hotel, guia, carro, bilhetes: cada serviço mostra se está por reservar, à espera do fornecedor ou confirmado.'] },
-        { title: 'Indicadores que se atualizam sozinhos', body: ['Quando o último serviço é confirmado, a viagem aparece como reservada. Quando o saldo é pago, o indicador de pagamento fica verde.'] },
+        { title: 'Indicadores que se atualizam sozinhos', body: ['Quando o último serviço é confirmado, a viagem aparece como reservada.'] },
         { title: 'Arquivo', body: ['As viagens concluídas vão para o arquivo e continuam pesquisáveis. Um registo apagado pode ser recuperado da reciclagem.'] }
       ]
     },
@@ -148,7 +140,6 @@ const book: JobPage = {
       features: [
         { title: 'Emails dos fornecedores guardados automaticamente', body: ['As confirmações e respostas dos fornecedores chegam à viagem a que pertencem.'] },
         { title: 'Vouchers de serviço', body: ['Envie a cada guia, motorista ou hotel um voucher claro com datas, nomes e detalhes, diretamente da viagem.'] },
-        { title: 'Fichas de fornecedor', body: ['Contactos, contratos, fotografias e o que cada fornecedor inclui, guardados no fornecedor e reutilizados em cada viagem.'] },
         { title: 'Pedidos de disponibilidade e notas de encomenda a fornecedores', body: ['Peça disponibilidade a um hotel e depois envie a nota de encomenda a partir da viagem. As respostas e as alterações voltam à reserva.'], premium: true }
       ]
     },
@@ -173,8 +164,7 @@ const book: JobPage = {
       features: [
         { title: 'A lista de viajantes', body: ['Cole ou importe a lista de uma folha de cálculo, ou envie ao organizador o link de um formulário. Até 200 viajantes por viagem.'] },
         { title: 'Serviços para parte do grupo', body: ['O dia de golfe para doze, o jantar de gala para todos: cada serviço indica quem o faz, e as contagens para o hotel acompanham.'] },
-        { title: 'Uma rooming list por hotel', body: ['Quartos montados a partir de quem fica com quem, numerados por hotel, prontos a enviar em PDF ou em folha de cálculo.'] },
-        { title: 'Dietas e acessibilidade num relance', body: ['Número de refeições vegetarianas, alergias e necessidades de acessibilidade por serviço, para o restaurante e para o guia.'] }
+        { title: 'Uma rooming list por hotel', body: ['Quartos montados a partir de quem fica com quem, numerados por hotel, prontos a enviar em PDF ou em folha de cálculo.'] }
       ]
     },
     {
@@ -242,10 +232,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Faturas de adiantamento e finais', body: ['Feitas a partir da viagem num clique, com os dados do cliente e os valores certos.'] },
         { title: 'Notas de crédito', body: ['Um cancelamento ou uma alteração dá origem a uma nota de crédito ligada à fatura original.'] },
-        { title: 'Numeração por empresa', body: ['Gira duas empresas a partir do mesmo sítio, cada uma com a sua numeração de faturas.'] },
-        { title: 'As regras fiscais do seu país', body: ['Os regimes especiais de IVA das agências de viagens ativam-se por país nas definições, e as menções corretas aparecem nas suas faturas.'] },
-        { title: 'Pronto para o seu contabilista', body: ['Um resumo em Excel ou um zip com todos os PDF no fim do mês, em dois cliques.'] },
-        { title: 'Exportação contabilística', body: ['As suas vendas, compras e pagamentos como lançamentos contabilísticos, prontos para o seu software de contabilidade.'], premium: true }
+        { title: 'Pronto para o seu contabilista', body: ['Um resumo em Excel ou um zip com todos os PDF no fim do mês, em dois cliques.'] }
       ]
     },
     {
@@ -264,7 +251,7 @@ const getPaid: JobPage = {
   faq: [
     { q: 'Que meios de pagamento funcionam?', a: ['Adiciona o link de pagamento do serviço que já usa. O cliente paga aí, e regista o pagamento na viagem.'] },
     { q: 'O meu contabilista pode receber os ficheiros?', a: ['Sim. Exporte um resumo em Excel ou um zip com todos os PDF das faturas para qualquer período.'] },
-    { q: 'Segue as regras do meu país?', a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. Os regimes próprios de cada país ativam-se nas definições. Para o seu país, pergunte-nos na demonstração.'] }
+    { q: 'Segue as regras do meu país?', a: ['A numeração de faturas por empresa e as notas de crédito funcionam em todo o lado. O regime espanhol de IVA das agências de viagens está integrado. Noutros países, as faturas passam pelo seu software de faturação. Para o seu país, pergunte-nos na demonstração.'] }
   ]
 };
 
@@ -313,7 +300,6 @@ const setup: JobPage = {
       features: [
         { title: 'Uma moeda por cliente e por orçamento', body: ['Faça o orçamento a um cliente britânico em libras e a um parceiro americano em dólares, a partir do mesmo catálogo.'], premium: true },
         { title: 'Os preços dos fornecedores na moeda deles', body: ['Guarde cada tarifa na moeda em que o fornecedor fatura. O orçamento converte-a ao câmbio do dia, com uma margem de segurança que escolhe.'], premium: true },
-        { title: 'Câmbios diários', body: ['Os câmbios do Banco Central Europeu são obtidos em cada dia útil, ou define os seus.'], premium: true },
         { title: 'A sua contabilidade numa só moeda', body: ['Faturas, pagamentos, margens e relatórios somam-se na sua moeda contabilística, com as diferenças de câmbio calculadas automaticamente.'], premium: true }
       ]
     },
@@ -321,18 +307,18 @@ const setup: JobPage = {
       id: 'country',
       kicker: 'Definições do país',
       title: 'Regras fiscais do país',
-      lead: 'Regimes fiscais e faturação eletrónica são definições, ativadas para os países que os exigem.',
+      lead: 'Regimes fiscais e faturação eletrónica são definições. Espanha está integrada.',
       visual: 'country',
       features: [
-        { title: 'Regimes de IVA das agências de viagens', body: ['Onde um país tem um regime especial de IVA para agências de viagens, as menções corretas aparecem nas suas faturas.'] },
+        { title: 'Regimes de IVA das agências de viagens', body: ['Para Espanha, o regime de IVA das agências de viagens (REAV) e a sua menção nas suas faturas estão integrados.'] },
         { title: 'Faturação eletrónica', body: ['Consoante o país, as faturas são enviadas a partir do Traviosoft ou do seu software de faturação.'] }
       ]
     },
     {
       id: 'team',
       kicker: 'Equipa',
-      title: 'Utilizadores e equipas',
-      lead: 'Todos trabalham sobre os mesmos clientes, orçamentos e reservas.',
+      title: 'Clientes e vendas de cada vendedor',
+      lead: 'Cada vendedor trabalha com os seus próprios clientes e viagens, e vê as vendas de toda a agência.',
       visual: 'team',
       features: [
         { title: 'Utilizadores incluídos no plano', body: ['3 utilizadores nos dois planos, e mais sempre que a sua equipa crescer.'] },

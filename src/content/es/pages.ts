@@ -80,13 +80,13 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Configuración de tu marca, tus documentos y tus reglas de precio, y formación de tu equipo', classic: { text: 'Gratis con pago anual*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Importación de tus hojas de cálculo o de la exportación de tu herramienta actual**', classic: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Gratis con pago anual*', was: `${PRICES.importMonthly} EUR` } },
-        { f: 'Soporte por correo en español, inglés y francés', classic: true, premium: true },
+        { f: 'Soporte por correo', classic: true, premium: true },
         { f: 'Alojamiento en la Unión Europea', classic: true, premium: true },
         { f: 'Exportación de datos a petición', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: [`* Oferta por tiempo limitado solo con pago anual. Con pago mensual, el alta y el acompañamiento (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez al empezar. Los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte.`, '** Para datos limpios y bien organizados.'],
+  compareNote: [`* Oferta por tiempo limitado solo con pago anual. Con pago mensual, el alta y el acompañamiento (${PRICES.setupMonthly} EUR) y la importación (${PRICES.importMonthly} EUR) se cobran una sola vez al empezar. Las tarifas por temporada y los demás archivos (Word, PDF, correos, viajes en curso) se importan con presupuesto aparte.`, '** Para datos limpios y bien organizados.'],
   faq: [
     {
       q: '¿Qué plan necesito?',
@@ -98,7 +98,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Los precios llevan IVA?',
-      a: ['No. El IVA se añade en la factura según tu país y la situación de tu empresa.']
+      a: ['Los precios son sin IVA. El IVA se añade en la factura según tu país y la situación de tu empresa.']
     },
     {
       q: '¿Qué pasa si añado un usuario?',
@@ -122,13 +122,13 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: '¿Qué incluye la importación?',
-      a: [`Tu catálogo con sus precios, tus clientes y tus proveedores, desde hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Es gratis con pago anual y cuesta ${PRICES.importMonthly} EUR una sola vez con pago mensual.`, 'Los documentos Word, los PDF, los correos, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
+      a: [`Tu catálogo con un precio por producto, tus clientes y tus proveedores, desde hojas de cálculo o una exportación de tu herramienta actual, con una fila por elemento y las mismas columnas de arriba abajo. Es gratis con pago anual y cuesta ${PRICES.importMonthly} EUR una sola vez con pago mensual.`, 'Las tarifas por temporada, los documentos Word, los PDF, los correos, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
     }
   ]
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Reservar una demo | Traviosoft',
+  metaTitle: 'Demo de software para agencias de viajes | Traviosoft',
   metaDescription:
     'Una llamada de 30 minutos: un viaje de muestra en Traviosoft de la solicitud a la factura, y después precios y preguntas.',
   title: 'Reservar una demo',
@@ -139,25 +139,24 @@ export const demo: SiteContent['demo'] = {
     { mins: '15', title: 'Un viaje de muestra', body: 'La solicitud, el presupuesto con margen, la reserva, el itinerario, el cobro y la factura. Un viaje en pareja, un grupo de incentivo o un safari.' },
     { mins: '10', title: 'Precios y preguntas', body: 'El plan para tu equipo, la importación de tus datos y tus preguntas.' }
   ],
-  bringTitle: 'A quién invitar',
-  bring: [
-    'Quien haga presupuestos o reservas en tu equipo',
-    'Quien lleve los cobros y las facturas'
-  ],
   afterTitle: 'Después de la llamada',
   after: [
+    'La propuesta y el programa día a día vistos en la llamada',
     'Un resumen breve por email',
     'El precio para tu equipo, por escrito',
     'Una llamada de seguimiento si la pides'
   ],
-  bookTitle: 'Pide hora',
+  bookTitle: 'Elige una hora para tu demo',
   bookBody: 'De momento, la cita se pide por email. Envíanos el nombre de tu agencia, el tamaño del equipo y unos días que te vengan bien, y te respondemos con una hora.',
   emailLabel: 'Escribe a',
+  bookCta: 'Elegir una hora',
+  bookCalendarBody: '30 minutos por Google Meet. La invitación llega por email.',
+  emailAltLabel: 'O escribe a',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: '¿Hay prueba gratuita?',
-      a: ['No. Hay una demo de 30 minutos.']
+      a: ['Hay una demo de 30 minutos sobre un viaje de muestra.']
     },
     {
       q: '¿Quién hace la demo?',
@@ -165,11 +164,11 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: '¿Tengo que preparar algo?',
-      a: ['No.']
+      a: ['Nada que preparar.']
     },
     {
       q: '¿Me pediréis mis datos?',
-      a: ['No. La demo usa un viaje de muestra con datos inventados.']
+      a: ['La demo usa un viaje de muestra con datos inventados.']
     }
   ]
 };
@@ -183,30 +182,26 @@ export const switching: SiteContent['switching'] = {
   timelineTitle: 'Cómo es el proceso',
   timeline: [
     {
-      when: 'Día 1',
       title: 'Nos envías tus archivos',
       body: 'Tus tarifas, clientes, proveedores y viajes abiertos, en hojas de cálculo o como exportación de otra herramienta.'
     },
     {
-      when: 'Semana 1',
       title: 'Importamos y tú revisas',
       body: 'Lo cargamos todo en el espacio de tu agencia. Lo abres, miras unos cuantos productos y unos cuantos clientes, y nos dices qué ajustar.'
     },
     {
-      when: 'Semana 2',
       title: 'Tu primer presupuesto de verdad',
       body: 'Configuramos tu margen, tu IVA, tus reglas de comisión y tu marca, y formamos a tu equipo por videollamada. Haces un presupuesto real con tus propias tarifas. Si te atascas, estamos por email.'
     },
     {
-      when: 'En marcha',
       title: 'Las solicitudes nuevas entran en la aplicación',
       body: 'A partir de ahí, cada solicitud nueva empieza en Traviosoft. Los viajes que ya estaban en curso terminan como empezaron.'
     }
   ],
   importTitle: 'Qué pasa a Traviosoft',
   importParts: [
-    { title: 'Incluido en el precio de la importación', body: 'Tu catálogo con sus tarifas, tus clientes, tus proveedores y sus contactos. Desde hojas de cálculo o una exportación de tu herramienta actual.' },
-    { title: 'Con presupuesto aparte', body: 'Los viajes en curso y los demás archivos (Word, PDF, correos). Te damos un precio después de ver una muestra.' }
+    { title: 'Incluido en el precio de la importación', body: 'Tu catálogo con un precio por producto, tus clientes, tus proveedores y sus contactos. Desde hojas de cálculo o una exportación de tu herramienta actual.' },
+    { title: 'Con presupuesto aparte', body: 'Las tarifas por temporada, los viajes en curso y los demás archivos (Word, PDF, correos). Te damos un precio después de ver una muestra.' }
   ],
   seasonTitle: '¿Me va a descolocar la temporada?',
   seasonBody: [
@@ -221,7 +216,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: '¿Cuánto cuesta?',
-      a: [`El alta, el acompañamiento y la importación de tus hojas de cálculo son gratis con pago anual. Con pago mensual, el alta y el acompañamiento cuestan ${PRICES.setupMonthly} EUR una sola vez y la importación ${PRICES.importMonthly} EUR una sola vez.`, 'El precio de la importación cubre listas con una fila por elemento y las mismas columnas de arriba abajo. Los documentos Word, los PDF, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
+      a: [`El alta, el acompañamiento y la importación de tus hojas de cálculo son gratis con pago anual. Con pago mensual, el alta y el acompañamiento cuestan ${PRICES.setupMonthly} EUR una sola vez y la importación ${PRICES.importMonthly} EUR una sola vez.`, 'El precio de la importación cubre listas con un precio por producto, una fila por elemento y las mismas columnas de arriba abajo. Las tarifas por temporada, los documentos Word, los PDF, los viajes en curso y las listas que hay que ordenar antes se presupuestan aparte, después de ver una muestra.']
     },
     {
       q: '¿Qué pasa con mis archivos antiguos?',
@@ -287,7 +282,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Hay prueba gratuita?',
-          a: ['No. Hay una demo de 30 minutos.']
+          a: ['Hay una demo de 30 minutos sobre un viaje de muestra.']
         }
       ]
     },
@@ -321,7 +316,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Cumple la normativa de mi país?',
-          a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. Los regímenes fiscales y la facturación electrónica se activan por país en los ajustes. Para otros países, pregúntanos qué está cubierto.']
+          a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. El régimen especial de las agencias de viajes de España está integrado. En otros países, las facturas pasan por tu programa de facturación. Para tu país, pregúntanos durante la demo.']
         }
       ]
     }
@@ -329,19 +324,12 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'Sobre Traviosoft: nació en una agencia de Barcelona',
+  metaTitle: 'Sobre Traviosoft',
   metaDescription:
-    'Traviosoft nació en una agencia de viajes a medida de Barcelona que usaba Excel, Word y WhatsApp. Soporte por email de las personas que construyen el producto y datos alojados en la UE.',
+    'Traviosoft es un software de gestión para agencias de viajes a medida y DMC. Soporte por email de las personas que construyen el producto y datos alojados en la UE.',
   title: 'Sobre Traviosoft',
-  lead: 'Traviosoft nació dentro de una agencia de viajes a medida de Barcelona. Es un sistema de gestión para agencias a medida y DMC.',
+  lead: 'Traviosoft es un software de gestión para agencias de viajes a medida y DMC.',
   blocks: [
-    {
-      title: 'De dónde viene',
-      body: [
-        'La agencia funcionaba con Excel para las tarifas, Word para los presupuestos y WhatsApp para todo lo demás. En una semana de mucho trabajo, cada señal y cada confirmación de hotel dependían de que alguien se acordara.',
-        'La primera versión se construyó allí, con los viajes de la propia agencia.'
-      ]
-    },
     {
       title: 'Qué hace',
       body: [
@@ -351,7 +339,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'Soporte',
       body: [
-        'El soporte es por email, en español, inglés y francés, de las personas que construyen el producto.'
+        'El soporte es por email de las personas que construyen el producto.'
       ]
     },
     {
@@ -362,9 +350,7 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origen', v: 'Una agencia a medida de Barcelona' },
     { k: 'Para', v: 'Agencias a medida y DMC' },
-    { k: 'Soporte', v: 'Por email, en español, inglés y francés' },
     { k: 'Datos', v: 'Un espacio privado por agencia, alojado en la UE' }
   ]
 };

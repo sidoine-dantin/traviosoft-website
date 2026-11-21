@@ -80,13 +80,13 @@ export const pricing: SiteContent['pricing'] = {
       rows: [
         { f: 'Mise en place de votre marque, de vos documents et de vos règles de prix, et formation de votre équipe', classic: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.setupMonthly} EUR` } },
         { f: 'Import de vos tableurs ou de l’export de votre outil actuel**', classic: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` }, premium: { text: 'Offert en annuel*', was: `${PRICES.importMonthly} EUR` } },
-        { f: 'Support par e-mail en espagnol, anglais et français', classic: true, premium: true },
+        { f: 'Support par e-mail', classic: true, premium: true },
         { f: 'Hébergement dans l’Union européenne', classic: true, premium: true },
         { f: 'Export des données sur demande', classic: true, premium: true }
       ]
     }
   ],
-  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place et l’accompagnement (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
+  compareNote: [`* Offre à durée limitée réservée à la facturation annuelle. En mensuel, la mise en place et l’accompagnement (${PRICES.setupMonthly} EUR) et l’import (${PRICES.importMonthly} EUR) sont facturés une seule fois au démarrage. Les tarifs par saison et les autres fichiers (Word, PDF, e-mails, voyages en cours) sont importés sur devis.`, '** Pour des données propres et bien organisées.'],
   faq: [
     {
       q: 'De quelle offre ai-je besoin ?',
@@ -122,13 +122,13 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'Que comprend l’import ?',
-      a: [`Votre catalogue avec ses prix, vos clients et vos prestataires, depuis des tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Il est offert en annuel et coûte ${PRICES.importMonthly} EUR une seule fois en mensuel.`, 'Les documents Word, les PDF, les e-mails, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+      a: [`Votre catalogue avec un prix par produit, vos clients et vos prestataires, depuis des tableurs ou un export de votre outil actuel, avec une ligne par élément et les mêmes colonnes du début à la fin. Il est offert en annuel et coûte ${PRICES.importMonthly} EUR une seule fois en mensuel.`, 'Les tarifs par saison, les documents Word, les PDF, les e-mails, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     }
   ]
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Réserver une démo | Traviosoft',
+  metaTitle: 'Démo de logiciel pour agences de voyages | Traviosoft',
   metaDescription:
     'Un appel de 30 minutes : un voyage exemple dans Traviosoft, de la demande à la facture, puis les tarifs et vos questions.',
   title: 'Réserver une démo',
@@ -139,25 +139,24 @@ export const demo: SiteContent['demo'] = {
     { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, les réservations, le programme, le paiement et la facture. Un voyage en couple, un groupe incentive ou un safari.' },
     { mins: '10', title: 'Tarifs et questions', body: 'L’offre pour votre équipe, l’import de vos données et vos questions.' }
   ],
-  bringTitle: 'Qui inviter',
-  bring: [
-    'Les personnes qui font les devis ou les réservations',
-    'La personne qui suit les paiements et les factures'
-  ],
   afterTitle: 'Après l’appel',
   after: [
+    'La proposition et le programme jour par jour vus pendant l’appel',
     'Un court compte rendu par e-mail',
     'Le prix pour votre équipe, par écrit',
     'Un nouvel appel si vous le demandez'
   ],
-  bookTitle: 'Demandez un créneau',
+  bookTitle: 'Choisissez un créneau pour votre démo',
   bookBody: 'Pour l’instant, les rendez-vous se prennent par e-mail. Envoyez le nom de votre agence, la taille de l’équipe et quelques jours qui vous conviennent, et nous répondons avec un horaire.',
   emailLabel: 'Écrivez à',
+  bookCta: 'Choisir un créneau',
+  bookCalendarBody: '30 minutes sur Google Meet. L’invitation arrive par e-mail.',
+  emailAltLabel: 'Ou écrivez à',
   email: 'hola@traviosoft.com',
   faq: [
     {
       q: 'Y a-t-il un essai gratuit ?',
-      a: ['Non. Il y a une démo de 30 minutes.']
+      a: ['Il y a une démo de 30 minutes sur un voyage exemple.']
     },
     {
       q: 'Qui fait la démo ?',
@@ -165,11 +164,11 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: 'Dois-je préparer quelque chose ?',
-      a: ['Non.']
+      a: ['Rien à préparer.']
     },
     {
       q: 'Allez-vous me demander mes données ?',
-      a: ['Non. La démo utilise un voyage exemple avec des données inventées.']
+      a: ['La démo utilise un voyage exemple avec des données inventées.']
     }
   ]
 };
@@ -183,30 +182,26 @@ export const switching: SiteContent['switching'] = {
   timelineTitle: 'Comment cela se passe',
   timeline: [
     {
-      when: 'Jour 1',
       title: 'Vous nous envoyez vos fichiers',
       body: 'Vos tarifs, clients, prestataires et voyages en cours, en tableurs ou en export d’un autre outil.'
     },
     {
-      when: 'Semaine 1',
       title: 'Nous importons, vous vérifiez',
       body: 'Nous chargeons tout dans l’espace de votre agence. Vous l’ouvrez, vous regardez quelques produits et quelques clients, et vous nous dites quoi ajuster.'
     },
     {
-      when: 'Semaine 2',
       title: 'Votre premier vrai devis',
       body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque, puis nous formons votre équipe en visio. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
     },
     {
-      when: 'En service',
       title: 'Les nouvelles demandes entrent dans l’application',
       body: 'À partir de là, chaque nouvelle demande commence dans Traviosoft. Les voyages déjà en cours se terminent comme ils ont commencé.'
     }
   ],
   importTitle: 'Ce qui est repris',
   importParts: [
-    { title: 'Compris dans le prix de l’import', body: 'Votre catalogue avec ses tarifs, vos clients, vos prestataires et leurs contacts. Depuis des tableurs ou un export de votre outil actuel.' },
-    { title: 'Sur devis', body: 'Les voyages en cours et les autres fichiers (Word, PDF, e-mails). Nous vous donnons un prix après avoir vu un échantillon.' }
+    { title: 'Compris dans le prix de l’import', body: 'Votre catalogue avec un prix par produit, vos clients, vos prestataires et leurs contacts. Depuis des tableurs ou un export de votre outil actuel.' },
+    { title: 'Sur devis', body: 'Les tarifs par saison, les voyages en cours et les autres fichiers (Word, PDF, e-mails). Nous vous donnons un prix après avoir vu un échantillon.' }
   ],
   seasonTitle: 'Cela va-t-il perturber ma saison ?',
   seasonBody: [
@@ -221,7 +216,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'Combien cela coûte-t-il ?',
-      a: [`La mise en place, l’accompagnement et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec une ligne par élément et les mêmes colonnes du début à la fin. Les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
+      a: [`La mise en place, l’accompagnement et l’import de vos tableurs sont offerts en annuel. En mensuel, la mise en place et l’accompagnement coûtent ${PRICES.setupMonthly} EUR une seule fois et l’import ${PRICES.importMonthly} EUR une seule fois.`, 'Le prix de l’import couvre des listes avec un prix par produit, une ligne par élément et les mêmes colonnes du début à la fin. Les tarifs par saison, les documents Word, les PDF, les voyages en cours et les listes à trier d’abord sont chiffrés sur devis, après avoir vu un échantillon.']
     },
     {
       q: 'Que deviennent mes anciens fichiers ?',
@@ -287,7 +282,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Y a-t-il un essai gratuit ?',
-          a: ['Non. Il y a une démo de 30 minutes.']
+          a: ['Il y a une démo de 30 minutes sur un voyage exemple.']
         }
       ]
     },
@@ -321,7 +316,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Est-ce conforme aux règles de mon pays ?',
-          a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Les régimes de TVA et la facturation électronique s’activent pays par pays dans les paramètres. Pour les autres pays, demandez-nous ce qui est couvert.']
+          a: ['La numérotation des factures par société et les avoirs fonctionnent partout. Le régime espagnol de TVA des agences de voyages est intégré. Dans les autres pays, les factures passent par votre logiciel de facturation. Pour votre pays, demandez-nous pendant la démo.']
         }
       ]
     }
@@ -329,19 +324,12 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'À propos de Traviosoft : né dans une agence de Barcelone',
+  metaTitle: 'À propos de Traviosoft',
   metaDescription:
-    'Traviosoft est né dans une agence de voyages sur mesure de Barcelone qui tournait avec Excel, Word et WhatsApp. Support par email assuré par les personnes qui construisent le produit, données en UE.',
+    'Traviosoft est un logiciel de gestion pour agences de voyages sur mesure et DMC. Support par email assuré par les personnes qui construisent le produit, données en UE.',
   title: 'À propos de Traviosoft',
-  lead: 'Traviosoft est né dans une agence de voyages sur mesure de Barcelone. C’est un système de gestion pour les agences sur mesure et les DMC.',
+  lead: 'Traviosoft est un logiciel de gestion pour agences de voyages sur mesure et DMC.',
   blocks: [
-    {
-      title: 'D’où il vient',
-      body: [
-        'L’agence fonctionnait avec Excel pour les tarifs, Word pour les devis et WhatsApp pour tout le reste. Pendant une semaine chargée, chaque acompte et chaque confirmation d’hôtel dépendaient de la mémoire de quelqu’un.',
-        'La première version a été construite là, sur les voyages de l’agence.'
-      ]
-    },
     {
       title: 'Ce qu’il fait',
       body: [
@@ -351,7 +339,7 @@ export const about: SiteContent['about'] = {
     {
       title: 'Support',
       body: [
-        'Le support se fait par e-mail, en espagnol, en anglais et en français, par les personnes qui construisent le produit.'
+        'Le support se fait par e-mail par les personnes qui construisent le produit.'
       ]
     },
     {
@@ -362,9 +350,7 @@ export const about: SiteContent['about'] = {
     }
   ],
   facts: [
-    { k: 'Origine', v: 'Une agence sur mesure de Barcelone' },
     { k: 'Pour', v: 'Agences sur mesure et DMC' },
-    { k: 'Support', v: 'Par email, en espagnol, anglais et français' },
     { k: 'Données', v: 'Un espace privé par agence, hébergé dans l’UE' }
   ]
 };
