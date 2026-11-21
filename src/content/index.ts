@@ -2,14 +2,16 @@ import type { Locale, SiteContent, Article } from './types';
 import en from './en';
 import es from './es';
 import fr from './fr';
+import it from './it';
+import pt from './pt';
 
-const all: Record<Locale, SiteContent> = { en, es, fr };
+const all: Record<Locale, SiteContent> = { en, es, fr, it, pt };
 
 export function getContent(locale: string): SiteContent {
   return all[(locale as Locale)] ?? all.es;
 }
 
-export const locales: Locale[] = ['es', 'en', 'fr'];
+export const locales: Locale[] = ['es', 'en', 'fr', 'it', 'pt'];
 
 /** Find an article by slug in one locale. */
 export function findArticle(locale: string, kind: Article['kind'] | Article['kind'][], slug: string) {

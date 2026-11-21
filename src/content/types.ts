@@ -4,19 +4,28 @@
  * Pages never hard-code copy: they read it from getContent(locale).
  *
  * Copy rules (see PRODUCT.md):
- * - features of the Premium plan are marked `premium: true` (shown with a "Premium" tag)
+ * - features of the Premium plan are marked `premium: true` (used by the pricing table, not shown on product pages)
  * - no testimonials, no client logos, no invented numbers, no founder name or face
  * - never call Traviosoft a "CRM"
  * - one quiet demo link (header). No repeated demo buttons in page bodies.
  * - country-specific rules (REAV, Veri*Factu) are never headline features
  */
 
-export type Locale = 'es' | 'en' | 'fr';
+export type Locale = 'es' | 'en' | 'fr' | 'it' | 'pt';
+
+/** BCP 47 tag per locale, for hreflang and <html lang> (Portuguese is the European variant). */
+export const LANG_TAG: Record<Locale, string> = { es: 'es', en: 'en', fr: 'fr', it: 'it', pt: 'pt-PT' };
 
 export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
+/** A product page, optionally with the topic to land on (`sell#quotes`). */
+export type JobLink = JobSlug | `${JobSlug}#${string}`;
 
 /** Product fragments drawn in code (src/components/visuals.tsx). */
+/** Generic line icons for the 'before' notes (no third-party logos: their brand rules do not allow it). */
+export type ScrapIcon = 'sheet' | 'doc' | 'chat' | 'bank' | 'book' | 'mail' | 'phone' | 'note' | 'pdf' | 'calc';
+
 export type VisualKey =
+  | 'margin' | 'commission' | 'confirm' | 'statuses' | 'rooming' | 'schedule' | 'paylink' | 'settings' | 'currencies' | 'country'
   | 'quote'
   | 'requests'
   | 'catalogue'
@@ -74,6 +83,14 @@ export type JobPage = {
 export type Link = { label: string; href: string };
 
 /** Text used inside the product fragments. Only labels; names and numbers stay as data. */
+/** Words of the proposal document and the itinerary phone in the home hero (fields of the app's documents). */
+export type ProposalText = {
+  agency: string; kind: string; trip: string; meta: [string, string, string];
+  days: { t: string; s: string }[];
+  total: string; vatIncl: string;
+  stops: { day?: string; k: string; t: string; s: string; link?: string }[];
+};
+
 export type VisualText = {
   quoteLabel: string; trip: string; tripSub: string; total: string; sent: string;
   requests: string; newReq: string; quoted: string; waiting: string; won: string;
@@ -94,6 +111,24 @@ export type VisualText = {
   connections: string;
   days: string[];
   guide: string; halfDay: string; privateCar: string; transfers: string;
+  /** Example data that has words in it, so it reads in the page's language. */
+  ex: {
+    muller: string; event: string; reqTrip: string; reqLisbon: string; reqBarcelona: string; reqMallorca: string;
+    seasons: [string, string, string]; room: string; vat: string;
+    itinerary: [string, string, string, string];
+    mailHotel: string; mailGuide: string;
+    langNames: [string, string, string, string, string];
+    conWebsite: string; conWebsiteSub: string; conAccounting: string; conAccountingSub: string; conAi: string; on: string;
+    numLocale: string; date1: string; date2: string; date3: string;
+    net: string; commission: string; sellPrice: string;
+    commTitle: string; trip2Name: string;
+    rooming: string; double: string; twin: string; single: string;
+    supplierDue: string; toPay: string;
+    mailSubject: string; mailBody: string; payDeposit: string;
+    settings: string; langs: string; currencies: string;
+    smith: string; atlas: string; books: string;
+    countryTitle: string; vatScheme: string; einvoice: string; einvoiceNote: string;
+  };
 };
 
 export type ArticleBlock =
@@ -105,7 +140,7 @@ export type ArticleBlock =
   | { type: 'callout'; text: string }
   | { type: 'faq'; items: Faq[] };
 
-export type ArticleKind = 'compare' | 'guide' | 'best' | 'spain';
+export type ArticleKind = 'compare' | 'guide' | 'best' | 'spain' | 'invoicing';
 
 export type Article = {
   /** shared key linking translations of the same article across locales */
@@ -149,15 +184,19 @@ export type Plan = {
   users: string;
   yearly: string;
   monthly: string;
-  priceNote: string;
+  /** extra-user price, shown for the billing period picked on the switch */
+  priceNote: { yearly: string; monthly: string };
   hot?: boolean;
-  lines: { text: string; no?: boolean }[];
 };
+
+/** A comparison cell: true = included, false = not included, a string = included, with this detail. */
+export type CompareCell = boolean | string | { text: string; was?: string; option?: boolean };
+export type CompareSection = { title: string; rows: { f: string; classic: CompareCell; premium: CompareCell }[] };
 
 export type SiteContent = {
   locale: Locale;
   nav: {
-    product: string; pricing: string; example: string; demo: string;
+    product: string; pricing: string; demo: string;
     menuLabel: string; close: string; skip: string; resources: string;
   };
   footer: {
@@ -167,24 +206,31 @@ export type SiteContent = {
     privacy: string; terms: string; notice: string;
     hosted: string; rights: string;
     /** extra footer links that only exist in this locale (e.g. Spain page) */
+    posts: { slug: string; label: string }[];
     localLinks: Link[];
+    /** cookie banner, shown only when an ad measurement tag is configured */
+    consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };
   };
   common: {
-    premium: string; next: string; onThisPage: string; updated: string; readMore: string;
+    premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
     notFound: { title: string; body: string };
   };
   visuals: VisualText;
   home: {
     metaTitle: string; metaDescription: string;
-    kick: string; giant: string; sub: string;
-    tags: { t: string; s: string }[];
+    title: string; sub: string;
+    /** The proposal and the day-by-day itinerary the agency sends, shown in the hero. */
+    proposal: ProposalText;
     tripTitle: string;
-    steps: { time: string; title: string; body: string; job: JobSlug }[];
-    stepGo: string;
-    baTitle: string; beforeTitle: string; beforeScraps: string[]; afterTitle: string; afterBody: string;
-    exampleTitle: string; exampleBody: string; exampleLink: string;
-    priceTitle: string; priceBody: string; coin1: string; coin2: string; priceLink: string;
+    /** Four moments of one sample trip, each with the app screen where it happens. */
+    /** rec: one line from the sample trip shown in the hero; {margin} {deposit} {total} are filled in the page's number format. */
+  moments: { rec: string; title: string; body: string; go: string; job: JobLink }[];
+    sitTitle: string; setupLine: string;
+    /** Common ways of working, in the visitor's own words, each pointing to the page that covers it. */
+    situations: { t: string; s: string; job: JobLink }[];
+    baTitle: string; beforeTitle: string; beforeScraps: { i: ScrapIcon; t: string }[]; afterTitle: string; afterBody: string;
+    priceTitle: string; priceBody: string; priceImport: string; priceFree: string; priceFreeNote: string; extraUserLine: string; coin1: string; coin2: string; coinUsers: string; priceNote: string; priceLink: string;
     facts: { k: string; v: string }[];
   };
   jobs: Record<JobSlug, JobPage>;
@@ -193,34 +239,28 @@ export type SiteContent = {
     title: string; lead: string;
     yearly: string; monthly: string; yearlyNote: string;
     plans: Plan[];
-    includedTitle: string; included: string[];
+    compareTitle: string; compareFeature: string; yes: string; no: string; compare: CompareSection[]; compareNote: string[];
+    /** the link under the comparison to the product pages */
+    productLink: string;
     faq: Faq[];
-  };
-  example: {
-    metaTitle: string; metaDescription: string;
-    title: string; lead: string;
-    tabs: { itinerary: string; quote: string };
-    /** label above the trip picker */
-    pick: string;
-    trips: ExampleTrip[];
-    note: string;
   };
   demo: {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;
     agendaTitle: string;
     agenda: { mins: string; title: string; body: string }[];
-    bringTitle: string; bring: string[];
     afterTitle: string; after: string[];
     bookTitle: string; bookBody: string; emailLabel: string; email: string;
+    /** shown once the Cal.com link (CAL_LINK) is set */
+    bookCta: string; bookCalendarBody: string; emailAltLabel: string;
     faq: Faq[];
   };
   switching: {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;
     timelineTitle: string;
-    timeline: { when: string; title: string; body: string }[];
-    importTitle: string; importRows: { what: string; from: string; how: string }[]; importHead: string[];
+    timeline: { title: string; body: string }[];
+    importTitle: string; importParts: { title: string; body: string }[];
     seasonTitle: string; seasonBody: string[];
     faq: Faq[];
   };
@@ -231,11 +271,10 @@ export type SiteContent = {
   about: {
     metaTitle: string; metaDescription: string; title: string; lead: string;
     blocks: { title: string; body: string[] }[];
-    facts: { k: string; v: string }[];
   };
   resources: {
     metaTitle: string; metaDescription: string; title: string; lead: string;
-    groups: { kind: ArticleKind | 'glossary' | 'example'; title: string; body: string }[];
+    groups: { kind: ArticleKind | 'glossary'; title: string; body: string }[];
     glossaryTitle: string; glossaryMeta: string; glossaryLead: string;
   };
   articles: Article[];

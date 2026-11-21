@@ -403,52 +403,62 @@
     "notice_title": "Mentions légales - Traviosoft",
     "back_home": "Retour à l'accueil",
     "updated_label": "Dernière mise à jour",
-    "updated_date": "Juin 2026",
+    "updated_date": "Novembre 2026",
     "privacy": {
       "intro": "Cette politique explique comment nous traitons les informations collectées via le site traviosoft.com. Elle concerne uniquement le site web public. L'utilisation de l'application Traviosoft par nos clients est régie par un contrat distinct.",
       "sections": [
         {
           "heading": "Qui nous sommes",
           "body": [
-            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014, l'entreprise derrière Traviosoft, un logiciel de gestion pour les agences de voyage sur mesure et DMC. Pour toute question sur cette politique ou sur vos données, vous pouvez nous écrire à sidoine@traviosoft.com."
+            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014, l'entreprise derrière Traviosoft, un logiciel de gestion pour les agences de voyage sur mesure et DMC. Pour toute question sur cette politique ou sur vos données, vous pouvez nous écrire à privacy@traviosoft.com."
           ]
         },
         {
           "heading": "Ce que nous collectons",
           "body": [
-            "Lorsque vous réservez une démo, vous partagez les informations que vous saisissez dans le formulaire de réservation : en général votre nom, votre adresse email et quelques éléments sur votre agence. La réservation elle-même est gérée par l'outil de prise de rendez-vous de Google, qui traite donc aussi les informations que vous y saisissez.",
-            "Comme la plupart des sites, notre hébergeur enregistre des données techniques de base, comme votre adresse IP et votre type de navigateur, dans ses journaux de serveur. Nous n'utilisons pas de traceurs publicitaires et ne constituons pas de profils marketing."
+            "Lorsque vous demandez une démo, vous choisissez un créneau dans notre fenêtre de réservation (Cal.com) ou vous nous écrivez par e-mail. Nous recevons ce que vous saisissez ou choisissez de nous dire : en général votre nom, votre adresse e-mail, le nom de votre agence et quelques éléments sur elle.",
+            "Comme la plupart des sites, notre hébergeur enregistre des données techniques de base, comme votre adresse IP et votre type de navigateur, dans ses journaux de serveur. Si vous acceptez les cookies publicitaires, LinkedIn, Meta et Google enregistrent aussi votre visite sur ce site (voir « Publicité et audiences »)."
           ]
         },
         {
           "heading": "Comment nous utilisons vos informations",
           "body": [
-            "Nous utilisons les informations que vous nous donnez pour répondre à votre demande de démo, préparer l'appel et assurer le suivi au sujet de Traviosoft. Les journaux techniques servent à garder le site sûr et fonctionnel. Nous ne vendons jamais vos données et ne les partageons qu'avec les prestataires nécessaires au fonctionnement du site et de la réservation.",
-            "Lorsque la loi exige une base légale, nous nous appuyons sur votre demande (organiser la démo que vous avez sollicitée) et sur notre intérêt légitime à sécuriser le site et à rester en contact avec les personnes qui nous ont écrit."
+            "Nous utilisons les informations que vous nous donnez pour répondre à votre demande de démo, préparer l'appel et assurer le suivi concernant Traviosoft. Nous utilisons les journaux techniques pour garder le site sûr et fonctionnel. Nous ne vendons jamais vos données. Nous les partageons uniquement avec les prestataires nécessaires au site et à notre messagerie, et avec LinkedIn, Meta et Google pour notre publicité, comme expliqué ci-dessous.",
+            "Lorsque la loi exige une base légale, nous nous appuyons sur votre demande (pour organiser la démo demandée), sur votre consentement (pour les cookies publicitaires) et sur notre intérêt légitime (garder le site sûr, rester en contact avec les personnes qui nous ont écrit et montrer nos publicités aux entreprises du voyage)."
           ]
         },
         {
           "heading": "Services tiers",
           "body": [
-            "Le calendrier de démo est fourni par Google. La réservation d'un créneau est soumise aux conditions et à la politique de confidentialité de Google. Le site est diffusé via l'hébergement et le réseau de Cloudflare. Ces prestataires traitent des données limitées pour notre compte afin de faire fonctionner la réservation et le site."
+            "Le site est diffusé via l'hébergement et le réseau de contenus de Cloudflare. Les réservations de démo passent par Cal.com, Inc., qui ne se charge que lorsque vous ouvrez la fenêtre de réservation, reçoit ce que vous y saisissez et ajoute l'appel à notre agenda. Nos publicités sont diffusées sur LinkedIn (LinkedIn Ireland Unlimited Company), sur Facebook et Instagram (Meta Platforms Ireland Limited), et sur la recherche Google, YouTube, Gmail et les sites partenaires (Google Ireland Limited). Pour les cookies publicitaires, LinkedIn et Meta sont responsables conjoints du traitement avec nous pour leurs balises. Google agit en tant que responsable de traitement indépendant. Leurs propres politiques de confidentialité s'appliquent à l'usage qu'ils font des données. Certains de ces prestataires peuvent transférer des données vers les États-Unis dans le cadre du Data Privacy Framework UE-États-Unis ou des clauses contractuelles types de la Commission européenne."
+          ]
+        },
+        {
+          "heading": "Publicité et audiences",
+          "body": [
+            "Si vous acceptez les cookies publicitaires, l'Insight Tag de LinkedIn, le Pixel Meta et la balise Google enregistrent que votre navigateur a visité ce site, les pages vues et si vous avez ouvert la page démo, cliqué pour nous contacter ou réservé une démo. Nous nous en servons pour mesurer nos publicités et les montrer à nouveau aux personnes qui ont visité le site. LinkedIn, Meta et Google ne nous donnent que des totaux et des tailles d'audience, jamais de noms.",
+            "Nous pouvons aussi transmettre à LinkedIn une liste de noms d'entreprises et de sites web afin que nos publicités atteignent ces entreprises du voyage. La liste ne contient ni nom de personne ni adresse e-mail. Nous le faisons sur la base de notre intérêt légitime à présenter Traviosoft aux professionnels du voyage.",
+            "Si vous nous contactez ou réservez une démo, nous pouvons aussi ajouter votre adresse e-mail professionnelle à nos listes d'audience publicitaire sur LinkedIn et Meta, afin que nos publicités continuent de vous atteindre pendant que vous découvrez Traviosoft. Elle est chiffrée (hachée) avant l'envoi, sert uniquement à retrouver les comptes et est supprimée par les plateformes après la correspondance. Nous le faisons sur la base de notre intérêt légitime à rester en contact avec les personnes qui nous ont écrit, et vous pouvez vous y opposer à tout moment comme indiqué ci-dessous.",
+            "Vous pouvez vous y opposer à tout moment : écrivez à privacy@traviosoft.com et nous vous retirons de nos listes, modifiez votre choix avec « Gérer les cookies » en bas de chaque page, ou réglez vos préférences publicitaires dans vos comptes LinkedIn, Meta et Google."
           ]
         },
         {
           "heading": "Cookies",
           "body": [
-            "Le site n'utilise que les cookies nécessaires à son fonctionnement et à la mémorisation de votre choix de langue. Le calendrier de réservation intégré peut déposer ses propres cookies, gérés par Google. Nous n'utilisons pas de cookies publicitaires."
+            "Le site utilise les cookies nécessaires à son fonctionnement et à la mémorisation de votre langue et de votre choix sur les cookies. Avec votre accord uniquement, il utilise aussi des cookies publicitaires de LinkedIn, Meta et Google. Refuser est aussi simple qu'accepter, et le site fonctionne de la même façon dans les deux cas. Nous vous redemandons votre choix au bout de six mois."
           ]
         },
         {
           "heading": "Combien de temps nous les conservons",
           "body": [
-            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant une durée raisonnable. Les journaux techniques ne sont conservés que le temps court nécessaire à la sécurité et à la maintenance."
+            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant trois ans après notre dernier échange. Les journaux techniques ne sont conservés que le temps court nécessaire à la sécurité et à la maintenance.",
+            "Les cookies publicitaires durent au maximum 13 mois. Les coordonnées transmises pour les audiences publicitaires sont conservées pendant la durée de la campagne et retirées de nos listes dès que vous vous y opposez."
           ]
         },
         {
           "heading": "Vos droits",
           "body": [
-            "Vous pouvez demander à consulter les données que nous détenons sur vous, à les corriger ou à les supprimer. Pour faire une demande, écrivez-nous à sidoine@traviosoft.com. L'entreprise étant établie en France, vous pouvez aussi introduire une réclamation auprès de la CNIL."
+            "Vous pouvez demander à consulter les données que nous détenons sur vous, à les corriger, à les supprimer, à en limiter l'utilisation ou à les recevoir dans un format portable. Vous pouvez aussi vous opposer à leur utilisation, et retirer votre consentement à tout moment. Pour faire une demande, écrivez-nous à privacy@traviosoft.com : nous répondons sous un mois. Vous pouvez aussi introduire une réclamation auprès d'une autorité de protection des données, notamment celle du pays où vous vivez ou travaillez. L'entreprise étant établie en France, son autorité est la CNIL."
           ]
         },
         {
@@ -465,7 +475,7 @@
         {
           "heading": "Qui édite ce site",
           "body": [
-            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014. Vous pouvez nous contacter à sidoine@traviosoft.com. Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis."
+            "Ce site est édité par Sidoine Dantin EI, immatriculée en France sous le SIRET 941 883 779 00014. Vous pouvez nous contacter à privacy@traviosoft.com. Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis."
           ]
         },
         {
@@ -495,7 +505,7 @@
         {
           "heading": "Liens et services externes",
           "body": [
-            "Le calendrier de démo est hébergé par Google et le site est diffusé via Cloudflare. Nous ne sommes pas responsables du contenu ni des pratiques de ces services tiers, qui sont régis par leurs propres conditions."
+            "Le site est diffusé via Cloudflare, et nos publicités sont diffusées sur LinkedIn, Meta et Google. Nous ne sommes pas responsables du contenu ni des pratiques de ces services tiers, qui sont régis par leurs propres conditions."
           ]
         },
         {
@@ -524,13 +534,13 @@
         {
           "heading": "Éditeur du site",
           "body": [
-            "Ce site est édité par Sidoine Dantin EI, entreprise individuelle immatriculée en France sous le SIRET 941 883 779 00014. Adresse du siège : 137 rue à Vaches, 62610 Balinghem, France. Directeur de la publication : Sidoine Dantin. Contact : sidoine@traviosoft.com."
+            "Ce site est édité par Sidoine Dantin EI, entreprise individuelle immatriculée en France sous le SIRET 941 883 779 00014. Adresse du siège : 137 rue à Vaches, 62610 Balinghem, France. Directeur de la publication : Sidoine Dantin. Contact : privacy@traviosoft.com."
           ]
         },
         {
           "heading": "Hébergement",
           "body": [
-            "Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis (cloudflare.com)."
+            "Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis, téléphone +1 650 319 8930 (cloudflare.com)."
           ]
         },
         {
@@ -548,7 +558,7 @@
         {
           "heading": "Contact",
           "body": [
-            "Pour toute question sur le site, écrivez à sidoine@traviosoft.com."
+            "Pour toute question sur le site, écrivez à privacy@traviosoft.com."
           ]
         }
       ]

@@ -3,6 +3,18 @@ import { setRequestLocale } from 'next-intl/server';
 import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { FaqList, FaqSchema } from '@/components/site/faq';
+import { BookDemo } from '@/components/site/book-demo';
+
+/** Cal.com event ("user/event"), opened over the page. Empty: booking by email. */
+// One Cal.com event per language: each event's "Interface language" is set to that language in Cal.com,
+// so the booking window matches the page whatever the visitor's browser or Cal.com account says.
+const CAL_LINKS: Record<string, string> = {
+  en: 'traviosoft/demo-en',
+  fr: 'traviosoft/demo',
+  es: 'traviosoft/demo-es',
+  it: 'traviosoft/demo-it',
+  pt: 'traviosoft/demo-pt',
+};
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -17,6 +29,7 @@ export default async function DemoPage({ params }: Props) {
   setRequestLocale(locale);
   const c = getContent(locale);
   const d = c.demo;
+  const CAL_LINK = CAL_LINKS[locale] ?? CAL_LINKS.en;
   return (
     <>
       <section className="wrap" style={{ paddingBlock: 'clamp(56px, 8vw, 100px) 40px' }}>
@@ -29,26 +42,21 @@ export default async function DemoPage({ params }: Props) {
           <ol className="agenda">
             {d.agenda.map(a => (
               <li key={a.title}>
-                <span className="mins num">{a.mins}<span style={{ fontSize: 16, marginLeft: 4 }}>min</span></span>
+                <span className="mins">{a.mins}<span style={{ fontSize: 16, marginLeft: 4 }}>min</span></span>
                 <div><b style={{ fontSize: 19 }}>{a.title}</b><p className="muted" style={{ marginTop: 6 }}>{a.body}</p></div>
               </li>
             ))}
           </ol>
         </div>
         <div style={{ display: 'grid', gap: 20 }}>
-          <div className="card" style={{ background: 'var(--green)', color: 'var(--cream)', borderColor: 'var(--green)' }}>
+          <div className="card" style={{ background: 'var(--deep)', color: 'var(--cream)', borderColor: 'var(--deep)' }}>
             <h2 className="h3">{d.bookTitle}</h2>
-            <p style={{ opacity: 0.9 }}>{d.bookBody}</p>
-            <p style={{ marginTop: 8 }}><span className="lbl" style={{ opacity: 0.7 }}>{d.emailLabel}</span><br />
-              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: 24, fontWeight: 800, color: 'var(--yellow)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
-          </div>
-          <div className="card">
-            <h2 className="h3" style={{ color: 'var(--green)' }}>{d.bringTitle}</h2>
-            <ul style={{ margin: 0, paddingLeft: 18, display: 'grid', gap: 6 }}>{d.bring.map(b => <li key={b}>{b}</li>)}</ul>
-          </div>
-          <div className="card">
-            <h2 className="h3" style={{ color: 'var(--green)' }}>{d.afterTitle}</h2>
-            <ul style={{ margin: 0, paddingLeft: 18, display: 'grid', gap: 6 }}>{d.after.map(b => <li key={b}>{b}</li>)}</ul>
+            <p style={{ opacity: 0.9 }}>{CAL_LINK ? d.bookCalendarBody : d.bookBody}</p>
+            {CAL_LINK && (
+              <p style={{ marginTop: 16 }}><BookDemo calLink={CAL_LINK} label={d.bookCta} locale={locale} /></p>
+            )}
+            <p style={{ marginTop: CAL_LINK ? 16 : 8 }}><span className="lbl" style={{ opacity: 0.75 }}>{CAL_LINK ? d.emailAltLabel : d.emailLabel}</span><br />
+              <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: CAL_LINK ? 19 : 24, fontWeight: 700, color: 'var(--cream)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
           </div>
         </div>
       </section>
