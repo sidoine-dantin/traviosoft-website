@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 /**
  * Home page motion. Turns on html.motion (so nothing is hidden without JS or for people who ask
- * for reduced motion), then reveals [data-reveal], .scraps, .ba and .coins as they come into view.
+ * for reduced motion), then reveals [data-reveal], .scraps, the after card and the price coins as each comes into view.
  */
 export function HomeMotion() {
   useEffect(() => {
@@ -20,8 +20,11 @@ export function HomeMotion() {
       for (const e of entries) {
         if (e.isIntersecting) { e.target.classList.add('in'); reveal.unobserve(e.target); }
       }
-    }, { threshold: 0.15 });
-    document.querySelectorAll('[data-reveal], .scraps, .ba, .coins').forEach(el => reveal.observe(el));
+    // Each animated piece is watched itself (not the section around it), and only counts once its
+    // top is a fifth of the screen above the bottom edge: otherwise a tall box (the price card on a
+    // phone) starts its animation while the part that moves is still below the screen.
+    }, { threshold: 0, rootMargin: '0px 0px -20% 0px' });
+    document.querySelectorAll('[data-reveal], .scraps, .ba .after, .coins .coin').forEach(el => reveal.observe(el));
 
     return () => { reveal.disconnect(); root.classList.remove('motion'); };
   }, []);
