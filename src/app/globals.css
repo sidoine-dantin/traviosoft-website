@@ -746,8 +746,8 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
   /* on phones: the title, then the video, then the words */
   .explorer .topic { gap: 0; grid-template-columns: 1fr; }
   .explorer .topic-copy { display: contents; }
-  .explorer .topic-copy .h2 { order: 0; margin-bottom: 4px; }
-  .explorer .topic-visual { order: 1; margin-bottom: 8px; }
+  .explorer .topic-copy .h2 { order: 0; margin-bottom: 28px; }
+  .explorer .topic-visual { order: 1; margin-bottom: 32px; }
   .explorer .topic-copy .lead { order: 2; }
   .explorer .topic-points { order: 3; }
 }
