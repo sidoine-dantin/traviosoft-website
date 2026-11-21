@@ -455,7 +455,7 @@ a.card:hover { box-shadow: 0 22px 40px -26px rgba(1, 58, 45, .5); }
 .toggle.small button { padding: 7px 12px; font-size: 14px; }
 /* a one-off fee with monthly billing: its price, and the yearly offer under it */
 .cmp-cell.cmp-fee { flex-direction: column; align-items: flex-start; gap: 2px; }
-.cmp-fee b { font-size: 17px; font-weight: 750; color: var(--ink); white-space: nowrap; }
+.cmp-fee b { font-size: 15px; font-weight: 600; color: var(--ink); white-space: nowrap; }
 .cmp-fee-note { color: var(--muted); font-size: 13px; }
 .cmp-table { width: 100%; border-collapse: collapse; margin-top: 44px; }
 .cmp-table caption { text-align: left; font-size: clamp(20px, 2vw, 24px); font-weight: 700; color: var(--green); padding: 0 16px 10px; }
