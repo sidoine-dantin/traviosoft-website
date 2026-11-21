@@ -706,6 +706,13 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .explorer-topic, .explorer-topic .topic { scroll-margin-top: 120px; }
 .explorer .topic { grid-template-columns: minmax(0, 1fr); }
 .explorer .topic-visual { justify-content: flex-start; position: static; }
+@media (min-width: 901px) {
+  .explorer-topics { gap: 0; }
+  .explorer-topic, .explorer-topic .topic { scroll-margin-top: 68px; }
+  .explorer-topic { min-height: calc(100vh - 68px); min-height: calc(100svh - 68px); display: flex; flex-direction: column; justify-content: center; }
+  .explorer[data-live] .explorer-topic { opacity: 0; transition: opacity .3s ease; }
+  .explorer[data-live] .explorer-topic[data-on] { opacity: 1; transition: opacity .45s ease .1s; }
+}
 @media (min-width: 901px) { .explorer .topic-copy .lead { display: none; } .explorer .topic-points { margin-top: 0; } .explorer .topic-copy .h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; } }
 @media (min-width: 1240px) {
   .explorer .topic { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
