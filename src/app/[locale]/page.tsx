@@ -36,11 +36,14 @@ export default async function HomePage({ params }: Props) {
         <div className="hero-stage">
           {/* Background: two soft circles and the dotted route of a trip, with two stops. */}
           <svg className="hero-bg" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-            <circle cx="160" cy="560" r="300" fill="var(--deep)" opacity=".55" />
-            <circle cx="1320" cy="90" r="220" fill="var(--cream)" opacity=".07" />
-            <path d="M-20 520 C 180 420, 260 160, 520 120 S 980 260, 1140 120 S 1380 60, 1470 140" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".7" />
-            <circle cx="520" cy="120" r="9" fill="var(--yellow)" />
-            <circle cx="1140" cy="120" r="9" fill="var(--yellow)" />
+            {/* data-depth: how much slower than the page each layer moves while scrolling (HomeMotion). */}
+            <g data-depth=".35"><circle cx="160" cy="560" r="300" fill="var(--deep)" opacity=".55" /></g>
+            <g data-depth=".2"><circle cx="1320" cy="90" r="220" fill="var(--cream)" opacity=".07" /></g>
+            <g data-depth=".1">
+              <path d="M-20 520 C 180 420, 260 160, 520 120 S 980 260, 1140 120 S 1380 60, 1470 140" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".7" />
+              <circle cx="520" cy="120" r="9" fill="var(--yellow)" />
+              <circle cx="1140" cy="120" r="9" fill="var(--yellow)" />
+            </g>
           </svg>
           <HeroTrip p={h.proposal} amount={2660} locale={loc} />
         </div>

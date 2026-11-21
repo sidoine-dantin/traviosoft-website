@@ -123,7 +123,8 @@ Same rule as the app (`apps/web/DESIGN.md` "Motion" in the monorepo): every move
 | Cards | shadow deepens on hover; the card does not lift |
 | Phone header | slides away 200 ms reading down, back 250 ms on scroll up |
 | Home reveals (seen once) | 400 ms fade and 12 px rise; the messy pile drops in one scrap after another with a small settle; the tidy side follows after 250 ms; the two price coins roll a short way into their tilt in 500 ms |
-| Hero phone, route dots | still |
+| Hero background (circles, dotted route) | parallax while scrolling, desktop only: the large circle trails the page by 35%, the small one by 20%, the route and its stops by 10% |
+| Hero phone | still |
 
 Reduced motion turns every animation and transition off. Click targets: header links are at least 40 px tall, buttons and phone links 44 px or more (`MOBILE.md`).
 
