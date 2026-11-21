@@ -53,7 +53,15 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
       if (r.bottom <= 0 || r.top >= vh) { setOn(-1); return; } // section off screen: nothing plays
       if (window.matchMedia(PINNED).matches) {
         const step = (r.height - vh) / n;
-        setOn(Math.min(n - 1, Math.max(0, Math.floor(-r.top / step))));
+        const at = Math.min(n - 0.0001, Math.max(0, -r.top / step));
+        const i = Math.floor(at);
+        // How far the visitor is through this topic (0 to 1): the current dot fills with it and the
+        // topic drifts a little, so every bit of scroll shows, not only the change of topic.
+        const p = (at - i).toFixed(3);
+        t.style.setProperty('--p', p);
+        els[i]?.style.setProperty('--p', p);
+        t.querySelectorAll<HTMLElement>('.explorer-now')[i]?.style.setProperty('--p', p);
+        setOn(i);
       } else {
         // phones: the topic that crosses a line halfway down the screen is the one being read
         let cur = -1;
