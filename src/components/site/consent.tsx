@@ -3,7 +3,6 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import { usePathname } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
-import { Mark } from './logo';
 
 /*
  * Ad measurement (LinkedIn Insight Tag, Meta Pixel, Google tag for Google Ads), loaded only after the
@@ -258,17 +257,13 @@ export function Consent({ text, accept, refuse, more, policy }: { text: string; 
   };
 
   return (
-    <>
-    <div className="consent-dim" aria-hidden="true" />
     <div className="consent" role="dialog" aria-live="polite" aria-label={policy}>
-      <span className="wm consent-wm" aria-hidden="true"><Mark />traviosoft</span>
       <p>{text}</p>
       <div className="consent-actions">
-        <Link href="/legal/privacy" className="consent-btn consent-more" onClick={() => setReopened(false)}>{more} →</Link>
         <button type="button" className="consent-btn" onClick={() => decide('denied')}>{refuse}</button>
         <button type="button" className="consent-btn consent-accept" onClick={() => decide('granted')}>{accept}</button>
       </div>
+      <Link href="/legal/privacy" className="consent-more">{more} →</Link>
     </div>
-    </>
   );
 }
