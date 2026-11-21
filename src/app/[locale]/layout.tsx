@@ -12,7 +12,7 @@ import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
 import { LANG_TAG, type Locale } from '@/content/types';
-import { baseUrl, siteName } from '@/lib/seo';
+import { baseUrl, siteName, ORG_ID, SITE_ID, SOFTWARE_ID, PROFILES } from '@/lib/seo';
 import '../globals.css';
 
 const bricolage = Bricolage_Grotesque({
@@ -63,6 +63,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const software = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': SOFTWARE_ID,
     name: siteName,
     url: `${baseUrl}/${locale}`,
     applicationCategory: 'BusinessApplication',
@@ -102,10 +103,23 @@ export default async function LocaleLayout({ children, params }: Props) {
         }
       }
     ],
-    publisher: { '@type': 'Organization', name: siteName, url: baseUrl }
+    image: `${baseUrl}/og/${locale}.png`,
+    publisher: { '@id': ORG_ID }
   };
-  const org = { '@context': 'https://schema.org', '@type': 'Organization', name: siteName, url: baseUrl, logo: `${baseUrl}/icon.svg` };
-  const site = { '@context': 'https://schema.org', '@type': 'WebSite', name: siteName, url: baseUrl, inLanguage: routing.locales };
+  // One organisation for every page and language, so search engines and AI tools tie the
+  // site, the software and the public profiles to the same company.
+  const org = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': ORG_ID,
+    name: siteName,
+    url: baseUrl,
+    logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png`, width: 512, height: 512 },
+    description: c.footer.tagline,
+    email: 'hola@traviosoft.com',
+    sameAs: PROFILES
+  };
+  const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: baseUrl, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
 
   const jobs = (['sell', 'book', 'get-paid', 'setup'] as const).map(s => ({
     slug: s,
