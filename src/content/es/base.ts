@@ -141,7 +141,7 @@ export const visuals: SiteContent['visuals'] = {
     conWebsite: 'Web', conWebsiteSub: 'Solicitudes desde tu web', conAccounting: 'Contabilidad', conAccountingSub: 'Ventas, compras, pagos', conAi: 'Asistente IA', on: 'Activo',
     numLocale: 'es-ES', date1: '14 mar', date2: '12 abr', date3: '9 may',
     net: 'Coste neto', commission: 'Comisión de la agencia 10%', sellPrice: 'Precio de venta',
-    commTitle: 'Comisiones · Viajes Lunamar · abril', trip2Name: 'Lisboa → Oporto, 6 días',
+    commTitle: 'Comisiones · Agencia colaboradora · abril', trip2Name: 'Lisboa → Oporto, 6 días',
     rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Doble', twin: 'Twin', single: 'Individual',
     supplierDue: 'Proveedor · vence', toPay: 'Por pagar',
     mailSubject: 'Tu presupuesto · Andalucía, 8 días', mailBody: 'Señal del 30% para confirmar el viaje.', payDeposit: 'Pagar la señal',

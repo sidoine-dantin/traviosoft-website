@@ -139,7 +139,7 @@ export const visuals: SiteContent['visuals'] = {
     conWebsite: 'Sito web', conWebsiteSub: 'Richieste dal tuo sito', conAccounting: 'Contabilità', conAccountingSub: 'Vendite, acquisti, pagamenti', conAi: 'Assistente IA', on: 'Attivo',
     numLocale: 'it-IT', date1: '14 mar', date2: '12 apr', date3: '9 mag',
     net: 'Costo netto', commission: 'Commissione partner 10%', sellPrice: 'Prezzo di vendita',
-    commTitle: 'Commissioni · Viajes Lunamar · aprile', trip2Name: 'Lisbona → Porto, 6 giorni',
+    commTitle: 'Commissioni · Agenzia partner · aprile', trip2Name: 'Lisbona → Porto, 6 giorni',
     rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Doppia', twin: 'Doppia letti separati', single: 'Singola',
     supplierDue: 'Fornitore · scadenza', toPay: 'Da pagare',
     mailSubject: 'Il tuo preventivo · Andalusia, 8 giorni', mailBody: 'Acconto del 30% per confermare il viaggio.', payDeposit: 'Paga l’acconto',

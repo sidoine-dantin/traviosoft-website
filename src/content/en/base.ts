@@ -139,7 +139,7 @@ export const visuals: SiteContent['visuals'] = {
     conWebsite: 'Website', conWebsiteSub: 'Requests from your site', conAccounting: 'Accounting', conAccountingSub: 'Sales, purchases, payments', conAi: 'AI assistant', on: 'On',
     numLocale: 'en-GB', date1: '14 Mar', date2: '12 Apr', date3: '9 May',
     net: 'Net cost', commission: 'Partner commission 10%', sellPrice: 'Selling price',
-    commTitle: 'Commission · Viajes Lunamar · April', trip2Name: 'Lisboa → Porto, 6 days',
+    commTitle: 'Commission · Partner agency · April', trip2Name: 'Lisboa → Porto, 6 days',
     rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Double', twin: 'Twin', single: 'Single',
     supplierDue: 'Supplier · due', toPay: 'To pay',
     mailSubject: 'Your quote · Andalucía, 8 days', mailBody: 'Deposit 30% to confirm the trip.', payDeposit: 'Pay the deposit',
