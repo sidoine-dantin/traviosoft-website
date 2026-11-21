@@ -98,20 +98,20 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Prenotare e seguire il viaggio: pratiche, fornitori, itinerario del cliente | Traviosoft',
   metaDescription:
-    'Il primo pagamento trasforma il preventivo in pratica. Gli stati di prenotazione, viaggio e pagamento si aggiornano da soli, le email dei fornitori vengono archiviate sul viaggio e il tuo cliente riceve un itinerario giorno per giorno.',
+    'Tutti i servizi del viaggio in un’unica lista. Gli stati di prenotazione, viaggio e pagamento si aggiornano da soli, le email dei fornitori vengono archiviate sul viaggio e il tuo cliente riceve un itinerario giorno per giorno.',
   name: 'Prenotare e seguire',
   menuLine: 'Dal preventivo accettato al viaggio concluso',
   step: '2 di 4',
   heroTitle: 'Pratiche, prenotazioni e itinerario del cliente',
   heroLead:
-    'Quando il cliente paga l’acconto, il preventivo diventa una pratica con tutti i servizi da prenotare. Ogni viaggio ha la sua lista di prenotazioni, le email dei fornitori e una pagina itinerario per il viaggiatore.',
+    'Tutti i servizi del viaggio sono in un’unica lista di prenotazioni. Le richieste partono ai fornitori con un clic, le risposte vengono archiviate sul viaggio e il viaggiatore ha la sua pagina itinerario.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Prenotazioni',
       title: 'Ogni prenotazione pronta per il viaggio',
-      lead: 'Appena il cliente paga l’acconto, tutti i servizi del viaggio sono in un’unica lista. Un clic invia le richieste di prenotazione, i fornitori confermano e il viaggio è pronto.',
+      lead: 'Tutti i servizi del viaggio sono in un’unica lista. Un clic invia le richieste di prenotazione, i fornitori confermano e il viaggio è pronto.',
       visual: 'confirm',
       features: [
         { title: 'Tutti i servizi in una lista', body: ['Il preventivo accettato porta l’hotel, la guida, l’auto e le visite, con date, viaggiatori e prezzi. Niente da riscrivere.'] },

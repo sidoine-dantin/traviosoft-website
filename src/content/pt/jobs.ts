@@ -98,20 +98,20 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Reservar e acompanhar a viagem: reservas, fornecedores, itinerário do cliente | Traviosoft',
   metaDescription:
-    'O primeiro pagamento transforma o orçamento numa reserva. Os estados de reserva, viagem e pagamento atualizam-se sozinhos, os emails dos fornecedores ficam guardados na viagem e o seu cliente recebe um itinerário dia a dia.',
+    'Todos os serviços da viagem numa só lista. Os estados de reserva, viagem e pagamento atualizam-se sozinhos, os emails dos fornecedores ficam guardados na viagem e o seu cliente recebe um itinerário dia a dia.',
   name: 'Reservar e acompanhar',
   menuLine: 'Do orçamento aceite à viagem concluída',
   step: '2 de 4',
   heroTitle: 'Reservas, fornecedores e itinerário do cliente',
   heroLead:
-    'Quando o cliente paga o adiantamento, o orçamento torna-se uma reserva com todos os serviços a reservar. Cada viagem tem a sua lista de serviços a reservar, os emails dos fornecedores e uma página de itinerário para o viajante.',
+    'Todos os serviços da viagem ficam numa só lista de reservas. Os pedidos seguem para os fornecedores num clique, as respostas ficam guardadas na viagem e o viajante tem a sua página de itinerário.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Reservas',
       title: 'Cada reserva pronta para a viagem',
-      lead: 'Assim que o cliente paga o adiantamento, todos os serviços da viagem ficam numa só lista. Um clique envia os pedidos de reserva, os fornecedores confirmam e a viagem fica pronta.',
+      lead: 'Todos os serviços da viagem ficam numa só lista. Um clique envia os pedidos de reserva, os fornecedores confirmam e a viagem fica pronta.',
       visual: 'confirm',
       features: [
         { title: 'Todos os serviços numa lista', body: ['O orçamento aceite traz o hotel, o guia, o carro e as visitas, com as datas, os viajantes e os preços. Nada para escrever de novo.'] },

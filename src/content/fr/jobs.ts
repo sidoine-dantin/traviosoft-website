@@ -98,20 +98,20 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Réserver et suivre le voyage | Traviosoft',
   metaDescription:
-    'Le premier paiement confirme le voyage. Les statuts se mettent à jour seuls, les e-mails des prestataires sont classés et le client reçoit son programme.',
+    'Toutes les prestations du voyage sur une liste. Les statuts se mettent à jour seuls, les e-mails des prestataires sont classés et le client reçoit son programme.',
   name: 'Réserver et suivre',
   menuLine: 'Du devis accepté au voyage terminé',
   step: '2 sur 4',
   heroTitle: 'Voyages confirmés, réservations et programme client',
   heroLead:
-    'Quand le client paie l’acompte, le voyage est confirmé avec toutes les prestations à réserver. Chaque voyage a sa liste de réservations, les e-mails de ses prestataires et une page de programme pour le voyageur.',
+    'Toutes les prestations du voyage sont sur une seule liste de réservations. Les demandes partent aux prestataires en un clic, leurs réponses sont classées sur le voyage, et le voyageur a sa page de programme.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Réservations',
       title: 'Chaque réservation prête pour le voyage',
-      lead: 'Dès que le client paie l’acompte, toutes les prestations du voyage sont sur une seule liste. Un clic envoie les demandes de réservation, les prestataires confirment, et le voyage est prêt.',
+      lead: 'Toutes les prestations du voyage sont sur une seule liste. Un clic envoie les demandes de réservation, les prestataires confirment, et le voyage est prêt.',
       visual: 'confirm',
       features: [
         { title: 'Toutes les prestations sur une liste', body: ['Le devis accepté apporte l’hôtel, le guide, la voiture et les visites, avec leurs dates, voyageurs et prix. Rien à ressaisir.'] },

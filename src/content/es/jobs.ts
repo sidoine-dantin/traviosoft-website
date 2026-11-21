@@ -98,20 +98,20 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Reservar y operar el viaje | Traviosoft',
   metaDescription:
-    'El primer pago convierte el presupuesto en reserva. Los estados se actualizan solos, los emails de proveedores se archivan y el cliente recibe su itinerario.',
+    'Todos los servicios del viaje en una lista. Los estados se actualizan solos, los emails de proveedores se archivan y el cliente recibe su itinerario.',
   name: 'Reservar y operar',
   menuLine: 'Del presupuesto aceptado al viaje realizado',
   step: '2 de 4',
   heroTitle: 'Reservas e itinerario del cliente',
   heroLead:
-    'Cuando el cliente paga la señal, el presupuesto pasa a ser una reserva con todos los servicios por reservar. Cada viaje tiene su lista de reservas, los emails de sus proveedores y una página de itinerario para el viajero.',
+    'Todos los servicios del viaje están en una sola lista de reservas. Las solicitudes salen a los proveedores con un clic, sus respuestas se archivan en el viaje y el viajero tiene su página de itinerario.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Reservas',
       title: 'Cada reserva lista para el viaje',
-      lead: 'En cuanto el cliente paga la señal, todos los servicios del viaje están en una sola lista. Un clic envía las solicitudes de reserva, los proveedores confirman y el viaje está listo.',
+      lead: 'Todos los servicios del viaje están en una sola lista. Un clic envía las solicitudes de reserva, los proveedores confirman y el viaje está listo.',
       visual: 'confirm',
       features: [
         { title: 'Todos los servicios en una lista', body: ['El presupuesto aceptado trae el hotel, el guía, el coche y las visitas, con sus fechas, viajeros y precios. Nada que volver a escribir.'] },

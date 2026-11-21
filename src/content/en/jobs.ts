@@ -98,20 +98,20 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Book and run the trip: orders, suppliers, client itinerary | Traviosoft',
   metaDescription:
-    'The first payment turns the quote into an order. Booking, trip and payment statuses update themselves, supplier emails are filed on the trip, and your client gets a day-by-day itinerary.',
+    'Every service of the trip on one booking list. Booking, trip and payment statuses update themselves, supplier emails are filed on the trip, and your client gets a day-by-day itinerary.',
   name: 'Book and run',
   menuLine: 'From the accepted quote to the trip done',
   step: '2 of 4',
   heroTitle: 'Orders, bookings and the client itinerary',
   heroLead:
-    'When the client pays the deposit, the quote becomes an order with every service to book. Each trip has its booking list, its supplier emails and an itinerary page for the traveller.',
+    'Every service of the trip is on one booking list. Booking requests go to suppliers in one click, their replies are filed on the trip, and the traveller gets an itinerary page.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Bookings',
       title: 'Every booking ready for the trip',
-      lead: 'Once the client pays the deposit, every service of the trip is on one list. One click sends the booking requests, the suppliers confirm, and the trip is ready.',
+      lead: 'Every service of the trip is on one list. One click sends the booking requests, the suppliers confirm, and the trip is ready.',
       visual: 'confirm',
       features: [
         { title: 'Every service on one list', body: ['The accepted quote brings the hotel, the guide, the car and the visits, with their dates, travellers and prices. Nothing to type again.'] },
