@@ -10,7 +10,7 @@ export function GET() {
   const lines: string[] = [
     '# Traviosoft',
     '',
-    `> ${en.footer.tagline} Web management software for tailor-made travel agencies and DMCs. Two plans, billed yearly or monthly, VAT excluded: Classic from ${PRICES.classic.yearly} EUR a month and Premium from ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included in both. Each agency has its own separate space, hosted in the EU. Site in Spanish, English, French, Italian and Portuguese.`,
+    `> ${en.footer.tagline} Two plans, billed yearly or monthly, VAT excluded: Classic from ${PRICES.classic.yearly} EUR a month and Premium from ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included in both. Each agency has its own separate space, hosted in the EU. Site in Spanish, English, French, Italian and Portuguese.`,
     '',
     '## Key facts',
     ...en.home.facts.map(f => `- ${f.k}: ${f.v}`),
@@ -19,6 +19,16 @@ export function GET() {
     ...(['sell', 'book', 'get-paid', 'setup'] as const).map(s => `- [${en.jobs[s].name}](${baseUrl}/en/${s}): ${en.jobs[s].metaDescription}`),
     `- [Pricing](${baseUrl}/en/pricing): ${en.pricing.metaDescription}`,
     `- [FAQ](${baseUrl}/en/faq): ${en.faqPage.metaDescription}`,
+    `- [About](${baseUrl}/en/about): ${en.about.metaDescription}`,
+    `- [Book a demo](${baseUrl}/en/demo): ${en.demo.metaDescription}`,
+    '',
+    '## Other languages',
+    ...locales.filter(l => l !== 'en').map(l => `- ${baseUrl}/${l}`),
+    `- Sitemap: ${baseUrl}/sitemap.xml`,
+    '',
+    // The FAQ answers in full: the questions people ask an AI assistant about a product like this one.
+    '## Questions and answers',
+    ...en.faqPage.groups.flatMap(g => g.items.flatMap(f => [`### ${f.q}`, f.a.join(' '), ''])),
     ''
   ];
   for (const l of locales) {

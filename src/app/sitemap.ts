@@ -1,7 +1,7 @@
 import { LANG_TAG, type Locale } from '@/content/types';
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-import { baseUrl, pagePaths } from '@/lib/seo';
+import { baseUrl, pagePaths, SITE_UPDATED } from '@/lib/seo';
 import { getContent, articleAlternates, locales } from '@/content';
 
 const priority: Record<string, number> = {
@@ -11,7 +11,7 @@ const priority: Record<string, number> = {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = new Date(SITE_UPDATED);
   const pages = pagePaths.map(path =>
     routing.locales.map(locale => ({
       url: `${baseUrl}/${locale}${path}`,
