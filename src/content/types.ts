@@ -271,7 +271,6 @@ export type SiteContent = {
   about: {
     metaTitle: string; metaDescription: string; title: string; lead: string;
     blocks: { title: string; body: string[] }[];
-    facts: { k: string; v: string }[];
   };
   resources: {
     metaTitle: string; metaDescription: string; title: string; lead: string;

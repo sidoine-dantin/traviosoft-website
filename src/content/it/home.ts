@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 export const home: SiteContent['home'] = {
   metaTitle: 'Traviosoft: gestionale per agenzie di viaggio su misura e DMC',
   metaDescription:
-    `Richieste, preventivi con i tuoi margini, prenotazioni, itinerari per i clienti, pagamenti e fatture in un unico posto. Per agenzie di viaggio su misura e DMC. Da ${PRICES.classic.yearly} EUR al mese, ospitato nell’UE.`,
+    `Richieste, preventivi con i tuoi margini, prenotazioni, itinerari per i clienti, pagamenti e fatture in un unico posto. Per agenzie di viaggio su misura e DMC. Da ${PRICES.classic.yearly} EUR al mese, con i tuoi dati ospitati nell’UE.`,
   title: 'Gestionale per agenzie di viaggio su misura e DMC',
   sub: 'Richieste, preventivi, prenotazioni, pagamenti e fatture, in un unico posto.',
   proposal: {

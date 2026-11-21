@@ -137,7 +137,7 @@ export const demo: SiteContent['demo'] = {
   agendaTitle: 'The call',
   agenda: [
     { mins: '5', title: 'Your agency', body: 'Team size, what you sell and the tools you use today.' },
-    { mins: '15', title: 'A sample trip', body: 'The request, the quote with margin, the order, the itinerary, the payment and the invoice. A couple’s trip, an incentive group or a safari.' },
+    { mins: '15', title: 'A sample trip', body: 'The request, the quote with margin, the bookings, the itinerary, the payment and the invoice.' },
     { mins: '10', title: 'Pricing and questions', body: 'The plan for your team, importing your data, and your questions.' }
   ],
   afterTitle: 'After the call',
@@ -327,32 +327,14 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'About Traviosoft',
   metaDescription:
-    'Traviosoft is management software for tailor-made travel agencies and DMCs. Support by email from the people who build the product, data hosted in the EU.',
+    'Traviosoft is management software for tailor-made travel agencies and DMCs: each trip in one place, from the first request to the final invoice, with your data hosted in the EU.',
   title: 'About Traviosoft',
-  lead: 'Traviosoft is management software for tailor-made travel agencies and DMCs.',
+  lead: 'Traviosoft is management software for tailor-made travel agencies and DMCs. Each trip lives in one place, from the first request to the final invoice.',
   blocks: [
-    {
-      title: 'What it does',
-      body: [
-        'Traviosoft covers the whole trip: requests, quotes priced service by service from net rates, bookings with several suppliers, documents in the client’s language, payments and invoices.'
-      ]
-    },
-    {
-      title: 'Support',
-      body: [
-        'Support is by email from the people who build the product.'
-      ]
-    },
-    {
-      title: 'Your data',
-      body: [
-        'Each agency has its own separate space, hosted in the European Union. You can export your data at any time.'
-      ]
-    }
-  ],
-  facts: [
-    { k: 'For', v: 'Tailor-made agencies and DMCs' },
-    { k: 'Data', v: 'A private space per agency, hosted in the EU' }
+    { title: 'Made for tailor-made trips', body: ['Every trip is different. Traviosoft prices each service from the supplier’s net rate, works with several suppliers per service, and handles groups, currencies and documents in the client’s language.'] },
+    { title: 'One trip, one set of figures', body: ['The accepted quote becomes the bookings, the payment schedule and the invoices. The whole agency works from the same figures, and nothing is typed twice.'] },
+    { title: 'Your data', body: ['Each agency has its own private space. Your data is hosted in the European Union, and you can export it at any time.'] },
+    { title: 'Working with us', body: ['We set up your account and import your data with you. Support is by email, from the people who build Traviosoft.'] }
   ]
 };
 

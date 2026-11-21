@@ -58,10 +58,6 @@ export default async function DemoPage({ params }: Props) {
             <p style={{ marginTop: CAL_LINK ? 16 : 8 }}><span className="lbl" style={{ opacity: 0.75 }}>{CAL_LINK ? d.emailAltLabel : d.emailLabel}</span><br />
               <a href={`mailto:${d.email}`} style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: CAL_LINK ? 19 : 24, fontWeight: 700, color: 'var(--cream)', overflowWrap: 'anywhere' }}>{d.email}</a></p>
           </div>
-          <div className="card">
-            <h2 className="h3" style={{ color: 'var(--green)' }}>{d.afterTitle}</h2>
-            <ul style={{ margin: 0, paddingLeft: 18, display: 'grid', gap: 6 }}>{d.after.map(b => <li key={b}>{b}</li>)}</ul>
-          </div>
         </div>
       </section>
       <section className="on-cream2 band">

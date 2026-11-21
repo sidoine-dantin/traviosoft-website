@@ -293,6 +293,8 @@
 .sit:hover b, .sit:focus-visible b { text-shadow: .25px 0 0 currentColor, -.25px 0 0 currentColor; }
 .sit:hover .arr, .sit:focus-visible .arr { transform: translateX(5px); }
 @media (max-width: 760px) { .sits { grid-template-columns: minmax(0, 1fr); } }
+.about-blocks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 5vw, 64px) clamp(40px, 7vw, 112px); }
+@media (max-width: 760px) { .about-blocks { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- price coins ---------- */
 .coins { display: grid; grid-template-columns: 1fr auto auto; gap: 48px; align-items: center; background: var(--yellow); border-radius: 32px; padding: clamp(32px, 5vw, 64px); }

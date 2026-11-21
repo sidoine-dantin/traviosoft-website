@@ -137,7 +137,7 @@ export const demo: SiteContent['demo'] = {
   agendaTitle: 'L’appel',
   agenda: [
     { mins: '5', title: 'Votre agence', body: 'Taille de l’équipe, ce que vous vendez et les outils que vous utilisez aujourd’hui.' },
-    { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, les réservations, le programme, le paiement et la facture. Un voyage en couple, un groupe incentive ou un safari.' },
+    { mins: '15', title: 'Un voyage exemple', body: 'La demande, le devis avec marge, les réservations, le programme, le paiement et la facture.' },
     { mins: '10', title: 'Tarifs et questions', body: 'L’offre pour votre équipe, l’import de vos données et vos questions.' }
   ],
   afterTitle: 'Après l’appel',
@@ -327,32 +327,14 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'À propos de Traviosoft',
   metaDescription:
-    'Traviosoft est un logiciel de gestion pour agences de voyages sur mesure et DMC. Support par email assuré par les personnes qui construisent le produit, données en UE.',
+    'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC : chaque voyage en un seul endroit, de la première demande à la facture finale, avec vos données hébergées dans l’UE.',
   title: 'À propos de Traviosoft',
-  lead: 'Traviosoft est un logiciel de gestion pour agences de voyages sur mesure et DMC.',
+  lead: 'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC. Chaque voyage tient en un seul endroit, de la première demande à la facture finale.',
   blocks: [
-    {
-      title: 'Ce qu’il fait',
-      body: [
-        'Traviosoft couvre tout le voyage : demandes, devis chiffrés prestation par prestation à partir de tarifs nets, réservations avec plusieurs prestataires, documents dans la langue du client, paiements et factures.'
-      ]
-    },
-    {
-      title: 'Support',
-      body: [
-        'Le support se fait par e-mail par les personnes qui construisent le produit.'
-      ]
-    },
-    {
-      title: 'Vos données',
-      body: [
-        'Chaque agence a son propre espace séparé, hébergé dans l’Union européenne. Vous pouvez exporter vos données à tout moment.'
-      ]
-    }
-  ],
-  facts: [
-    { k: 'Pour', v: 'Agences sur mesure et DMC' },
-    { k: 'Données', v: 'Un espace privé par agence, hébergé dans l’UE' }
+    { title: 'Pensé pour le sur-mesure', body: ['Chaque voyage est différent. Traviosoft calcule chaque prestation à partir du tarif net du prestataire, accepte plusieurs prestataires par prestation, et gère les groupes, les devises et les documents dans la langue du client.'] },
+    { title: 'Un voyage, les mêmes chiffres partout', body: ['Le devis accepté donne les réservations, l’échéancier et les factures. Toute l’agence travaille sur les mêmes chiffres, sans rien ressaisir.'] },
+    { title: 'Vos données', body: ['Chaque agence a son propre espace privé. Vos données sont hébergées dans l’Union européenne, et vous pouvez les exporter à tout moment.'] },
+    { title: 'Travailler avec nous', body: ['Nous configurons votre compte et importons vos données avec vous. Le support se fait par e-mail, avec les personnes qui développent Traviosoft.'] }
   ]
 };
 

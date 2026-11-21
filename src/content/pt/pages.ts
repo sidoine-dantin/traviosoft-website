@@ -139,7 +139,7 @@ export const demo: SiteContent['demo'] = {
   agendaTitle: 'A chamada',
   agenda: [
     { mins: '5', title: 'A sua agência', body: 'Dimensão da equipa, o que vende e as ferramentas que usa hoje.' },
-    { mins: '15', title: 'Uma viagem de exemplo', body: 'O pedido, o orçamento com a margem, as reservas, o programa, o pagamento e a fatura. Uma viagem a dois, um grupo de incentivo ou um safari.' },
+    { mins: '15', title: 'Uma viagem de exemplo', body: 'O pedido, o orçamento com a margem, as reservas, o programa, o pagamento e a fatura.' },
     { mins: '10', title: 'Preços e perguntas', body: 'O plano para a sua equipa, a importação dos seus dados e as suas perguntas.' }
   ],
   afterTitle: 'Depois da chamada',
@@ -329,32 +329,14 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'Sobre nós | Traviosoft',
   metaDescription:
-    'O Traviosoft é um software de gestão para agências de viagens à medida e DMC. Apoio por email das pessoas que desenvolvem o produto, dados alojados na UE.',
+    'O Traviosoft é um software de gestão para agências de viagens à medida e DMC: cada viagem num só lugar, do primeiro pedido à fatura final, com os seus dados alojados na UE.',
   title: 'Sobre nós',
-  lead: 'O Traviosoft é um software de gestão para agências de viagens à medida e DMC.',
+  lead: 'O Traviosoft é um software de gestão para agências de viagens à medida e DMC. Cada viagem fica num só lugar, do primeiro pedido à fatura final.',
   blocks: [
-    {
-      title: 'O que faz',
-      body: [
-        'O Traviosoft cobre toda a viagem: pedidos, orçamentos feitos serviço a serviço a partir das tarifas net, reservas com vários fornecedores, documentos na língua do cliente, pagamentos e faturas.'
-      ]
-    },
-    {
-      title: 'Apoio',
-      body: [
-        'O apoio é feito por email pelas pessoas que desenvolvem o produto.'
-      ]
-    },
-    {
-      title: 'Os seus dados',
-      body: [
-        'Cada agência tem o seu próprio espaço, alojado na União Europeia. Pode exportar os seus dados a qualquer momento.'
-      ]
-    }
-  ],
-  facts: [
-    { k: 'Para', v: 'Agências à medida e DMC' },
-    { k: 'Dados', v: 'Um espaço privado por agência, alojado na UE' }
+    { title: 'Pensado para viagens à medida', body: ['Cada viagem é diferente. O Traviosoft calcula cada serviço a partir da tarifa net do fornecedor, trabalha com vários fornecedores por serviço e gere grupos, moedas e documentos na língua do cliente.'] },
+    { title: 'Uma viagem, os mesmos números', body: ['O orçamento aceite dá origem às reservas, às prestações e às faturas. Toda a agência trabalha com os mesmos números, sem voltar a escrever nada.'] },
+    { title: 'Os seus dados', body: ['Cada agência tem o seu próprio espaço privado. Os seus dados estão alojados na União Europeia e pode exportá-los a qualquer momento.'] },
+    { title: 'Trabalhar connosco', body: ['Configuramos a sua conta e importamos os seus dados consigo. O apoio é por email, com as pessoas que desenvolvem o Traviosoft.'] }
   ]
 };
 
