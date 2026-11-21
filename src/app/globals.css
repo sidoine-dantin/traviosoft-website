@@ -713,6 +713,8 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
   /* the track is as tall as the scroll it takes to go through every topic; the stage inside it stays on screen */
   .explorer.band { padding-top: 0; padding-bottom: 0; }
   .explorer-track { height: calc(var(--n) * 85svh + 100svh); }
+  /* the way in and out (35svh each, see measure() in chapter-explorer): the stage eases into place and away */
+  .explorer[data-live] .explorer-track { height: calc(var(--n) * 85svh + 170svh); margin: -17.5svh 0; }
   .explorer-grid { position: sticky; top: 68px; height: calc(100svh - 68px); }
   .explorer-topic { grid-area: 1 / 1; min-width: 0; }
   .explorer[data-live] .explorer-topic { opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility 0s .25s; }
