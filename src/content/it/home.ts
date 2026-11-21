@@ -49,7 +49,7 @@ export const home: SiteContent['home'] = {
         "day": "Giorno 2 · Martedì 4 maggio",
         "k": "Attività",
         "t": "Moschea-Cattedrale di Cordova",
-        "s": "La sua guida: Lucía"
+        "s": "La sua guida: Valentina"
       }
     ]
   },
@@ -108,7 +108,7 @@ export const home: SiteContent['home'] = {
   beforeTitle: 'Oggi',
   beforeScraps: [
     { i: 'sheet', t: 'Tariffe_2026_DEFINITIVO_v3.xlsx' },
-    { i: 'doc', t: 'Preventivo Rossi.docx' },
+    { i: 'doc', t: 'Preventivo Bianchi.docx' },
     { i: 'chat', t: 'WhatsApp: «l’hotel ha confermato?»' },
     { i: 'bank', t: 'Acconto? controllare la banca' },
     { i: 'book', t: 'Numeri di fattura su un quaderno' },

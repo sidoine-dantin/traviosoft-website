@@ -49,7 +49,7 @@ export const home: SiteContent['home'] = {
         "day": "Jour 2 · Mardi 4 mai",
         "k": "Activité",
         "t": "Mosquée-Cathédrale de Cordoue",
-        "s": "Votre guide : Lucía"
+        "s": "Votre guide : Valentina"
       }
     ]
   },
@@ -108,7 +108,7 @@ export const home: SiteContent['home'] = {
   beforeTitle: 'Aujourd’hui',
   beforeScraps: [
     { i: 'sheet', t: 'Tarifs_2026_FINAL_v3.xlsx' },
-    { i: 'doc', t: 'Devis Martin.docx' },
+    { i: 'doc', t: 'Devis Lefèvre.docx' },
     { i: 'chat', t: 'WhatsApp : « l’hôtel a confirmé ? »' },
     { i: 'bank', t: 'Acompte ? vérifier la banque' },
     { i: 'book', t: 'Numéros de facture dans un cahier' },

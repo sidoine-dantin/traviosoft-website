@@ -49,7 +49,7 @@ export const home: SiteContent['home'] = {
         "day": "Día 2 · Martes 4 de mayo",
         "k": "Actividad",
         "t": "Mezquita-Catedral de Córdoba",
-        "s": "Su guía: Lucía"
+        "s": "Su guía: Valentina"
       }
     ]
   },
@@ -108,7 +108,7 @@ export const home: SiteContent['home'] = {
   beforeTitle: 'Hoy',
   beforeScraps: [
     { i: 'sheet', t: 'Tarifas_2026_FINAL_v3.xlsx' },
-    { i: 'doc', t: 'Presupuesto García.docx' },
+    { i: 'doc', t: 'Presupuesto Olabarri.docx' },
     { i: 'chat', t: 'WhatsApp: "¿ha confirmado el hotel?"' },
     { i: 'bank', t: '¿Señal? mirar el banco' },
     { i: 'book', t: 'Números de factura en una libreta' },

@@ -49,7 +49,7 @@ export const home: SiteContent['home'] = {
         "day": "Dia 2 · Terça, 4 de maio",
         "k": "Atividade",
         "t": "Mesquita-Catedral de Córdova",
-        "s": "O seu guia: Lucía"
+        "s": "A sua guia: Valentina"
       }
     ]
   },

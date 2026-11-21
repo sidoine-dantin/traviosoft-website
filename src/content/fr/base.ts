@@ -139,12 +139,12 @@ export const visuals: SiteContent['visuals'] = {
     conWebsite: 'Site web', conWebsiteSub: 'Demandes depuis votre site', conAccounting: 'Comptabilité', conAccountingSub: 'Ventes, achats, paiements', conAi: 'Assistant IA', on: 'Actif',
     numLocale: 'fr-FR', date1: '14 mars', date2: '12 avr.', date3: '9 mai',
     net: 'Coût net', commission: 'Commission partenaire 10 %', sellPrice: 'Prix de vente',
-    commTitle: 'Commissions · Viajes Norte · avril', trip2Name: 'Lisbonne → Porto, 6 jours',
+    commTitle: 'Commissions · Viajes Lunamar · avril', trip2Name: 'Lisbonne → Porto, 6 jours',
     rooming: 'Rooming list · Hotel Alfonso XIII', double: 'Double', twin: 'Twin', single: 'Single',
     supplierDue: 'Prestataire · échéance', toPay: 'À payer',
     mailSubject: 'Votre devis · Andalousie, 8 jours', mailBody: 'Acompte de 30 % pour confirmer le voyage.', payDeposit: 'Payer l’acompte',
     settings: 'Réglages', langs: 'Langues', currencies: 'Devises',
-    smith: 'Famille Smith', atlas: 'Atlas Travel', books: 'Votre comptabilité',
+    smith: 'Famille Whitcombe', atlas: 'Famille Brooks', books: 'Votre comptabilité',
     countryTitle: 'Réglages par pays', vatScheme: 'Régime de TVA des agences de voyages', einvoice: 'Facturation électronique', einvoiceNote: 'Selon ce qu’exige votre pays'
   }
 };

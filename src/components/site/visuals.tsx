@@ -73,10 +73,10 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'requests':
       return (
         <Frag title={v.requests} right={<span className="mono">4</span>}>
-          <Row a="Laura & Tom" s={v.ex.reqTrip} b={pill(v.newReq, 'new')} />
+          <Row a="Iris & Noah" s={v.ex.reqTrip} b={pill(v.newReq, 'new')} />
           <Row a={v.ex.muller} s={v.ex.reqLisbon} b={pill(v.quoted, 'grey')} />
           <Row a={v.ex.event} s={v.ex.reqBarcelona} b={pill(v.waiting, 'wait')} />
-          <Row a="Dupont" s={v.ex.reqMallorca} b={pill(v.won, 'ok')} />
+          <Row a="Lind" s={v.ex.reqMallorca} b={pill(v.won, 'ok')} />
         </Frag>
       );
     case 'catalogue':
@@ -93,7 +93,7 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
         <Frag title={v.followup}>
           <Row a={v.ex.muller} s={v.followupLine} b={pill(v.waiting, 'wait')} />
           <Row a={v.ex.event} s={v.followupLine} b={pill(v.followupSent, 'ok')} />
-          <Row a="Laura & Tom" s={v.sent} b={pill(v.quoted, 'grey')} />
+          <Row a="Iris & Noah" s={v.sent} b={pill(v.quoted, 'grey')} />
         </Frag>
       );
     case 'order':
@@ -109,16 +109,16 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
       return (
         <Frag title={v.supplierMail} right={<span className="mono">{v.filed}</span>}>
           <Row a="Hotel Alfonso XIII" s={v.ex.mailHotel} b={pill(v.confirmed, 'ok')} />
-          <Row a="Andalucía Guides" s={v.ex.mailGuide} b={pill(v.confirmed, 'ok')} />
-          <Row a="Sur Transfers" s={v.serviceSheet} b={<span className="mono">PDF</span>} />
+          <Row a="Giralda Guides" s={v.ex.mailGuide} b={pill(v.confirmed, 'ok')} />
+          <Row a="Calima Transfers" s={v.serviceSheet} b={<span className="mono">PDF</span>} />
         </Frag>
       );
     case 'calendar': {
       const bands = [
         { l: 'Müller', s: 1, w: 7 },
-        { l: 'Laura & Tom', s: 10, w: 8 },
-        { l: 'Dupont', s: 19, w: 7 },
-        { l: 'Garcia', s: 24, w: 6 }
+        { l: 'Iris & Noah', s: 10, w: 8 },
+        { l: 'Lind', s: 19, w: 7 },
+        { l: 'Olabarri', s: 24, w: 6 }
       ];
       return (
         <Frag title={v.calendar}>
@@ -210,9 +210,9 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'rooming':
       return (
         <Frag title={v.ex.rooming}>
-          <Row a="Laura & Tom" s={v.ex.double} b={<span className="mono">101</span>} />
-          <Row a="Ana & Jordi" s={v.ex.twin} b={<span className="mono">102</span>} />
-          <Row a="Claire" s={v.ex.single} b={<span className="mono">103</span>} />
+          <Row a="Iris & Noah" s={v.ex.double} b={<span className="mono">101</span>} />
+          <Row a="Bruna & Oriol" s={v.ex.twin} b={<span className="mono">102</span>} />
+          <Row a="Nadia" s={v.ex.single} b={<span className="mono">103</span>} />
         </Frag>
       );
     case 'schedule':
@@ -267,9 +267,9 @@ export function Visual({ k, v }: { k: VisualKey; v: VisualText }) {
     case 'team':
       return (
         <Frag title={v.team} right={<span className="mono">3 {v.seats}</span>}>
-          <Row a="Ana" s={v.owner} b={null} />
-          <Row a="Jordi" s={v.sales2} b={null} />
-          <Row a="Claire" s={v.ops} b={null} />
+          <Row a="Bruna" s={v.owner} b={null} />
+          <Row a="Oriol" s={v.sales2} b={null} />
+          <Row a="Nadia" s={v.ops} b={null} />
         </Frag>
       );
     case 'safe':
