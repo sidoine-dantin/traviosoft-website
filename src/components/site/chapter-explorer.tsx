@@ -5,7 +5,9 @@ import { Children, useCallback, useEffect, useId, useRef, useState, type CSSProp
 type Props = { titles: string[]; leads: string[]; label: string; children: ReactNode };
 
 const PINNED = '(min-width: 901px)';
-const HEADER = 68; // the sticky header; the stage holds still just under it
+const HEADER = 68;
+const DOT_STEP = 30; // the dots' spacing (.explorer-dots a height)
+const DOT_Y = 15; // the centre of a dot in its row // the sticky header; the stage holds still just under it
 
 /**
  * The pinned layout's measures, from the track's position. The stage holds still over `len` pixels
@@ -27,7 +29,8 @@ function measure(t: HTMLElement) {
  * the video stay in place, and scrolling swaps them for the next topic. The page keeps its normal
  * scroll (nothing is hijacked): the section is simply as tall as its topics, and the part of it
  * that is on screen decides which topic shows. A vertical row of dots beside the title says where
- * the visitor is and takes them to a topic.
+ * the visitor is and takes them to a topic; the current dot is a drop that is pulled towards the next
+ * one as the visitor scrolls, and lands on it when the topic changes.
  *
  * On phones the topics follow one another down the page, each with its own title, and the topic
  * crossing the middle of the screen is the one being read.
@@ -40,6 +43,23 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
   const id = useId().replace(/:/g, '');
   const track = useRef<HTMLDivElement>(null);
   const stage = useRef<HTMLDivElement>(null);
+  const drop = useRef<SVGGElement>(null);
+
+  /** Draws the drop: on topic i, pulled down by p (0 to 1) towards the next dot. */
+  const pull = useCallback((i: number, p: number, last: boolean) => {
+    const g = drop.current;
+    if (!g) return;
+    const e = p * p; // starts gently, pulls harder towards the end
+    const [main, neck, tail] = Array.from(g.querySelectorAll('circle'));
+    const ty = DOT_Y + (last ? 9 : 26) * e;
+    g.style.transform = `translateY(${i * DOT_STEP}px)`;
+    main.setAttribute('cy', (DOT_Y + 2 * e).toFixed(2));
+    main.setAttribute('r', (7 - 0.8 * e).toFixed(2));
+    tail.setAttribute('cy', ty.toFixed(2));
+    tail.setAttribute('r', (5 - e).toFixed(2));
+    neck.setAttribute('cy', ((DOT_Y + ty) / 2 + 1).toFixed(2));
+    neck.setAttribute('r', (5 - 2.4 * e).toFixed(2));
+  }, []);
   const topics = Children.toArray(children);
   const n = titles.length;
 
@@ -77,12 +97,9 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
           stage.current!.style.transform = `translateY(${y.toFixed(1)}px)`;
         }
         const i = Math.floor(at);
-        // How far the visitor is through this topic (0 to 1): the current dot fills with it and the
-        // topic drifts a little, so every bit of scroll shows, not only the change of topic.
-        const p = (at - i).toFixed(3);
-        t.style.setProperty('--p', p);
-        els[i]?.style.setProperty('--p', p);
-        t.querySelectorAll<HTMLElement>('.explorer-now')[i]?.style.setProperty('--p', p);
+        // How far the visitor is through this topic (0 to 1): the current dot is pulled down towards
+        // the next one like a drop, so every bit of scroll shows, not only the change of topic.
+        pull(i, at - i, i === n - 1);
         setOn(i);
       } else {
         // phones: the topic that crosses a line halfway down the screen is the one being read
@@ -122,6 +139,21 @@ export function ChapterExplorer({ titles, leads, label, children }: Props) {
         <div className="wrap explorer-grid" ref={stage}>
           <div className="explorer-side">
             <nav className="explorer-dots" aria-label={label}>
+              <svg className="explorer-drop" width="32" height={n * DOT_STEP} viewBox={`0 0 32 ${n * DOT_STEP}`} aria-hidden="true">
+                <defs>
+                  <filter id={`${id}-goo`} x="-50%" y="-20%" width="200%" height="140%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2.6" />
+                    <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9" />
+                  </filter>
+                </defs>
+                <g ref={drop} className="explorer-drop-move" style={{ transform: `translateY(${shown * DOT_STEP}px)` }}>
+                  <g filter={`url(#${id}-goo)`}>
+                    <circle cx="16" cy={DOT_Y} r="7" />
+                    <circle cx="16" cy={DOT_Y} r="5" />
+                    <circle cx="16" cy={DOT_Y} r="5" />
+                  </g>
+                </g>
+              </svg>
               <ol>
                 {titles.map((t, i) => (
                   <li key={i}>
