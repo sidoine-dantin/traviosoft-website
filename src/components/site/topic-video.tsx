@@ -19,7 +19,7 @@ export function TopicVideo({ src, label, pause, play }: Props) {
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.dataset.held = '1'; setStopped(true); return; }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.dataset.held = '1'; const raf = requestAnimationFrame(() => setStopped(true)); return () => cancelAnimationFrame(raf); }
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !v.dataset.held) v.play().catch(() => {});
       else v.pause();
