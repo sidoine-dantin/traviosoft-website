@@ -400,7 +400,7 @@
 .chapter-bar a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; text-decoration: none; font-size: 15px; font-weight: 650; color: var(--green); background: var(--white); border: 1px solid var(--line); white-space: nowrap; transition: background .2s, color .2s, scale 100ms var(--ease-enter); }
 .chapter-bar a:hover { border-color: var(--green); }
 .chapter-bar a[aria-current="true"] { background: var(--green); border-color: var(--green); color: var(--cream); }
-@media (max-width: 920px) { html[data-bar="hidden"] .chapter-bar, html[data-bar="hidden"] .cmp-head { top: 0; } }
+@media (max-width: 920px) { html[data-bar="hidden"] .chapter-bar, html[data-bar="hidden"] .pl-head { top: 0; } }
 
 /* ---------- next job ---------- */
 .next-job { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; text-decoration: none; }
@@ -435,24 +435,60 @@ a.card:hover { box-shadow: 0 22px 40px -26px rgba(1, 58, 45, .5); }
 .toggle button { border: 0; background: none; font: inherit; font-weight: 650; padding: 10px 18px; border-radius: 999px; cursor: pointer; color: var(--green); }
 .toggle button[aria-pressed="true"] { background: var(--green); color: var(--cream); }
 .toggle small { font-weight: 600; opacity: .8; margin-left: 6px; }
-/* Plan cards sit in the same columns as the comparison table below them. */
-:root { --plan-cols: minmax(0, 1fr) 290px 290px; }
-.plans { display: grid; grid-template-columns: var(--plan-cols); gap: 24px; align-items: start; }
-.plans-ctl { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-.plan { background: var(--white); border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 16px; border: 1.5px solid var(--line); }
-.plan.hot { background: var(--green); color: var(--cream); border-color: var(--green); }
-.plan .price { font-family: var(--figure); font-weight: 800; font-variation-settings: "wdth" 75; font-size: 76px; line-height: .9; }
-.plan .price small { font-family: var(--body); font-size: 15px; font-weight: 600; letter-spacing: 0; margin-left: 6px; font-variation-settings: normal; }
-@media (max-width: 900px) { .plans { grid-template-columns: 1fr; gap: 16px; } .plans-ctl { flex-direction: row; flex-wrap: wrap; align-items: center; margin-bottom: 8px; } }
+/* Plan header: one switch and one pair of plan cards that shrink, as the page scrolls, into the
+   comparison's pinned header row (see plans.tsx). --p is the scroll progress, 0 = full cards, 1 = the
+   header row; every size below is drawn between its full (…0) and compact (…1) value. The cards land
+   in the table's own columns: room + gap + card + gap + card, the same widths as the rows below. */
+.pl-head {
+  --p: 0; --q: calc(1 - var(--p));
+  --gap: 24px; --padx: 16px; --col0: 290px; --col1: 290px; --ctl-h: 0px; --ctl-s: .8; --ctl-dy: 14px;
+  --cpx0: 30px; --cpx1: 32px; --cpy0: 30px; --cpy1: 12px; --r0: 24px; --r1: 14px;
+  --nm0: 24px; --nm1: 17px; --pr0: 76px; --pr1: 24px; --eur0: 15px; --eur1: 12px;
+  position: sticky; top: 68px; z-index: 40; transition: top .25s ease;
+  display: flex; align-items: flex-start;
+  padding: calc(10px * var(--p)) var(--padx); background: var(--cream);
+}
+.pl-head.pl-fade { animation: pl-fade 160ms var(--ease-enter); }
+@keyframes pl-fade { from { opacity: 0; } }
+.pl-ctl { position: absolute; left: var(--padx); top: calc((10px + var(--ctl-dy)) * var(--p)); display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.pl-ctl .toggle { transform-origin: 0 0; scale: calc(1 - (1 - var(--ctl-s)) * var(--p)); }
+.pl-note { margin: 0; font-size: 15px; color: var(--muted); opacity: calc(1 - 5 * var(--p)); }
+.pl-room { flex: 1 1 0; min-width: 0; margin-right: calc(var(--gap) * var(--p)); }
+.pl-card { flex: none; box-sizing: border-box; width: calc(var(--col1) + (var(--col0) - var(--col1)) * var(--q));
+  margin-top: calc(var(--ctl-h) * var(--q));
+  padding: calc(var(--cpy1) + (var(--cpy0) - var(--cpy1)) * var(--q)) calc(var(--cpx1) + (var(--cpx0) - var(--cpx1)) * var(--q));
+  border-radius: calc(var(--r1) + (var(--r0) - var(--r1)) * var(--q));
+  background: var(--white); border: 1.5px solid var(--line); color: var(--ink); }
+.pl-card + .pl-card { margin-left: var(--gap); }
+.pl-card.hot { background: var(--green); color: var(--cream); border-color: var(--green); }
+.pl-name { margin: 0; font-size: calc(var(--nm1) + (var(--nm0) - var(--nm1)) * var(--q)); font-weight: 650; line-height: 1.15; color: var(--green); }
+.pl-card.hot .pl-name { color: inherit; }
+.pl-fold { margin: 0; overflow: hidden; opacity: calc((1 - 2 * var(--p)) * .8); }
+.pl-users { max-height: calc(3em * var(--q)); margin-top: calc(4px * var(--q)); }
+.pl-extra { max-height: calc(3em * var(--q)); margin-top: calc(16px * var(--q)); font-size: 14px; line-height: 1.4; }
+.pl-price { margin: calc(2px + 14px * var(--q)) 0 0; font-family: var(--figure); font-weight: 800; font-variation-settings: "wdth" 75; line-height: .9; white-space: nowrap;
+  font-size: calc(var(--pr1) + (var(--pr0) - var(--pr1)) * var(--q)); }
+.pl-price small { font-family: var(--body); font-weight: 600; letter-spacing: 0; font-variation-settings: normal;
+  font-size: calc(var(--eur1) + (var(--eur0) - var(--eur1)) * var(--q)); margin-left: calc(4px + 2px * var(--q)); }
+/* tablets and phones: the switch sits above the two cards, side by side; the header row uses the table's narrow columns */
+@media (max-width: 900px) {
+  .pl-head { --col0: calc(50% - var(--gap) / 2); --col1: 150px; --ctl-h: 100px; --ctl-s: .76; --ctl-dy: 4px;
+    --cpx0: 20px; --cpx1: 14px; --cpy0: 20px; --cpy1: 10px; --r1: 12px; --nm0: 21px; --nm1: 16px; --pr0: 58px; --pr1: 20px; --eur1: 11px; }
+}
+@media (max-width: 760px) {
+  .pl-head { --gap: 12px; --padx: 10px; --col1: 76px; --ctl-s: .7; --ctl-dy: 3px;
+    --cpx0: 16px; --cpx1: 6px; --cpy0: 18px; --cpy1: 8px; --r0: 20px; --nm0: 19px; --nm1: 13px; --pr0: 50px; --pr1: 17px; --eur0: 13px; --eur1: 10px; }
+  .pl-extra { font-size: 13px; }
+}
+/* the compact switch fits the room left of the two 76 px columns */
+@media (max-width: 374px) { .pl-head { --ctl-s: .62; } }
+@media (max-width: 349px) { .pl-head { --ctl-s: .5; } }
 
 /* Plan comparison: one table per section; feature, Classic, Premium. */
-.cmp { margin-top: 0; --cmp-cols: var(--plan-cols); }
-.cmp-head { position: sticky; top: 68px; z-index: 40; transition: top .25s ease; display: grid; grid-template-columns: var(--cmp-cols); gap: 24px; padding: 16px 16px;
-  background: var(--cream); font-weight: 700; color: var(--green); }
-.cmp-head { align-items: center; }
-.cmp-head-ctl { min-width: 0; }
-.toggle.small { padding: 3px; gap: 2px; }
-.toggle.small button { padding: 7px 12px; font-size: 14px; }
+.cmp { --cmp-cols: minmax(0, 1fr) 290px 290px; }
+/* a column of blocks, so the margin the plan header keeps under itself never merges with a table's own margin */
+.cmp { display: flex; flex-direction: column; }
+@media (min-width: 901px) { .cmp-table td { padding-left: 32px; } }
 /* a one-off fee with monthly billing: its price, and the yearly offer under it */
 .cmp-cell.cmp-fee { flex-direction: column; align-items: flex-start; gap: 2px; }
 .cmp-fee b { font-size: 15px; font-weight: 600; color: var(--ink); white-space: nowrap; }
@@ -471,25 +507,19 @@ a.card:hover { box-shadow: 0 22px 40px -26px rgba(1, 58, 45, .5); }
 .cmp-was { white-space: nowrap; color: var(--muted); }
 .cmp-no path { stroke: var(--muted); stroke-width: 2; stroke-linecap: round; opacity: .7; }
 .cmp-detail { padding-top: 2px; }
-@media (min-width: 901px) { .cmp-table td, .cmp-head span + span { padding-left: 32px; } }
 @media (max-width: 900px) { .cmp { --cmp-cols: minmax(0, 1fr) 150px 150px; } }
-.cmp-wrap { margin-top: clamp(48px, 6vw, 72px); }
 .cmp-note p { margin: 0 0 6px; }
 .cmp-note { margin-top: 28px; font-size: 14px; color: var(--muted); max-width: 70ch; }
 @media (max-width: 760px) {
   .cmp { --cmp-cols: minmax(0, 1fr) 76px 76px; }
-  .cmp-head, .cmp-table tr { gap: 12px; }
-  .cmp-head { font-size: 14px; }
+  .cmp-table tr { gap: 12px; }
   .cmp-table th { font-size: 15px; }
   .cmp-table tr { padding: 14px 10px; }
   /* a detail does not fit in a narrow column: it goes on its own line under the feature */
   .cmp-cell { flex-direction: column; gap: 6px; font-size: 13px; text-align: center; }
   /* stacked under the icon, so the text, the old price and the column name share its centre line */
   .cmp-was { display: block; }
-  .cmp-head { padding-inline: 10px; }
-  .cmp-head span + span { text-align: center; }
   .cmp-cell.cmp-fee { align-items: center; }
-  .toggle.small button { padding: 7px 9px; font-size: 13px; }
 }
 
 /* ---------- tables ---------- */
