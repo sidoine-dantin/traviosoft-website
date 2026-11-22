@@ -17,22 +17,14 @@ export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; lo
   const nj = c.jobs[next];
   return (
     <>
-      <section className="wrap job-hero">
-        <div>
-          <h1 className="h1">{j.heroTitle}</h1>
-          <p className="lead">{j.heroLead}</p>
-        </div>
-        <div className="job-hero-visual">
-          {j.heroVisual === 'assistant' ? <AssistantChat c={c} /> : <Visual k={j.heroVisual} v={c.visuals} />}
-        </div>
-      </section>
-
-      {slug === 'ai-assistant' && (
-        <section className="band-sm sim-band">
-          <div className="wrap">
-            <h2 className="h2" style={{ color: 'var(--green)' }}>{c.ai.sim.title}</h2>
-            <p className="lead muted" style={{ maxWidth: '52ch', marginTop: 14 }}>{c.ai.sim.lead}</p>
-            <AiSim t={c.ai.sim} locale={c.visuals.ex.numLocale} />
+      {j.heroVisual === 'assistant' ? <AiHero c={c} /> : (
+        <section className="wrap job-hero">
+          <div>
+            <h1 className="h1">{j.heroTitle}</h1>
+            <p className="lead">{j.heroLead}</p>
+          </div>
+          <div className="job-hero-visual">
+            <Visual k={j.heroVisual} v={c.visuals} />
           </div>
         </section>
       )}
@@ -88,17 +80,29 @@ function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string 
   );
 }
 
-/** The AI assistant page's hero: one question to the assistant and its answer, from the agency's figures. */
-function AssistantChat({ c }: { c: SiteContent }) {
-  const eur = (v: number) => new Intl.NumberFormat(c.visuals.ex.numLocale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(v);
-  const h = c.ai.hero;
+/**
+ * The AI assistant page's hero: the title on cream, then the simulation itself on the green stage
+ * of the home hero (soft circles and the dotted route of a trip behind it).
+ */
+function AiHero({ c }: { c: SiteContent }) {
+  const j = c.jobs['ai-assistant'];
   return (
-    <div className="frag ai-hero" role="img" aria-label={`${h.ask} ${h.answer.replace('{owed}', eur(13020)).replace('{overdue}', eur(4547))}`}>
-      <div className="fh"><span>{c.ai.sim.chatTitle}</span></div>
-      <div className="ai-hero-body">
-        <p className="sim-me">{h.ask}</p>
-        <p className="sim-bot">{h.answer.replace('{owed}', eur(13020)).replace('{overdue}', eur(4547))}</p>
+    <header className="hero on-cream ai-hero">
+      <div className="wrap">
+        <h1 className="hero-title">{j.heroTitle}</h1>
+        <p className="hero-sub">{j.heroLead}</p>
       </div>
-    </div>
+      <div className="hero-stage ai-stage">
+        <svg className="hero-bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <circle cx="150" cy="760" r="320" fill="var(--deep)" opacity=".55" />
+          <circle cx="1330" cy="110" r="230" fill="var(--cream)" opacity=".07" />
+          <path d="M-20 300 C 200 180, 330 420, 620 380 S 1060 120, 1460 220" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".55" />
+        </svg>
+        <div className="wrap ai-stage-in">
+          <p className="ai-note">{c.ai.sim.note}</p>
+          <AiSim t={c.ai.sim} locale={c.visuals.ex.numLocale} />
+        </div>
+      </div>
+    </header>
   );
 }

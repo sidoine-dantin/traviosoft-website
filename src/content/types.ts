@@ -199,28 +199,57 @@ export type CompareSection = { title: string; rows: { f: string; classic: Compar
 /** The AI assistant: its product page, the band on the home page and the simulation on its page. */
 export type AiText = {
   page: JobPage;
-  /** home band */
-  home: { title: string; body: string; link: string };
-  /** hero picture: one question and its answer; {owed} and {overdue} are amounts */
-  hero: { ask: string; answer: string };
   sim: AiSimText;
 };
 
+/** One line in the chat or on a Traviosoft screen: what it is, and a detail under it. */
+export type AiSimRow = { t: string; s: string };
+
+/**
+ * One step of the simulation. `say` is both the visitor's choice and the message it sends.
+ * Amounts are written `{2660}` and shown in euros in the visitor's language; `{dep}`, `{bal}` and
+ * `{due}` are filled from the quote whose payment terms are being set.
+ */
+export type AiSimStep = {
+  say: string;
+  /** what the assistant shows it is doing in Traviosoft while it works */
+  tools?: string[];
+  reply?: string;
+  rows?: AiSimRow[];
+  /** a line after the rows */
+  after?: string;
+  /** the question the AI app asks before a change: the action and what will be written */
+  ask?: { action: string; rows: AiSimRow[] };
+  /** the answer once the change is allowed */
+  done?: string;
+};
+
+export type AiSimStepId =
+  | 'today' | 'late' | 'payOlabarri'
+  | 'quote' | 'quoteIris' | 'quoteMadrid' | 'madridBianchi' | 'terms' | 'terms30' | 'terms50' | 'send'
+  | 'bookings' | 'confirmSeville' | 'requestGranada'
+  | 'remove' | 'delLind' | 'delWeber';
+
 /** The simulation: a chat with the AI assistant beside the Traviosoft screens it changes. Sample data only. */
 export type AiSimText = {
-  title: string; lead: string;
-  chatTitle: string; chatSub: string; appTitle: string; appSub: string;
-  pick: string; restart: string; allow: string; deny: string; denied: string; thinking: string;
-  /** the answer shown on the question once it is answered */
-  allowedTag: string; deniedTag: string;
-  quotes: string; bookings: string; review: string; reviewEmpty: string; approve: string;
-  draft: string; sent: string; requested: string; confirmed: string;
-  /** sample records */
-  bianchiTrip: string; olabarriTrip: string; irisTrip: string; hotelSeville: string; guideCordoba: string; hotelGranada: string;
-  today: { prompt: string; answer: string; rows: { t: string; s: string }[] };
-  quote: { prompt: string; askTitle: string; askSub: string; done: string };
-  booking: { prompt: string; askTitle: string; askSub: string; done: string };
-  remove: { prompt: string; askTitle: string; askSub: string; queued: string; reviewItem: string; approved: string };
+  /** a short line above the simulation, saying it runs on sample data */
+  note: string;
+  chatTitle: string; connected: string; greeting: string; composer: string;
+  appSub: string;
+  allow: string; deny: string; allowedTag: string; deniedTag: string; deniedReply: string;
+  restart: string; more: string; working: string;
+  nav: { dashboard: string; quotes: string; bookings: string; payments: string; review: string };
+  ui: {
+    draft: string; sent: string; requested: string; confirmed: string; toBook: string; late: string; paid: string; due: string;
+    total: string; margin: string; schedule: string; deposit: string; balance: string;
+    send: string; approve: string; reviewEmpty: string; trashed: string; reference: string;
+    newRequests: string; toFollow: string; latePayments: string; bookingsLeft: string;
+  };
+  names: {
+    irisTrip: string; bianchiTrip: string; madridTrip: string; lindTrip: string; weberTrip: string;
+    olabarriPay: string; martinPay: string; hotelSeville: string; guideCordoba: string; hotelGranada: string;
+  };
+  steps: Record<AiSimStepId, AiSimStep>;
 };
 
 export type SiteContent = {

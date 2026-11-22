@@ -9,8 +9,6 @@ import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
 import { HeroTrip } from '@/components/site/hero-trip';
 import { PRICES } from '@/content/prices';
-import { TopicVideo } from '@/components/site/topic-video';
-import { topicVideo } from '@/content/topic-videos';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -27,7 +25,6 @@ export default async function HomePage({ params }: Props) {
   const h = c.home;
   const loc = c.visuals.ex.numLocale;
   // The sample trip of the hero: cost 2210, margin 450, total 2660, 30% deposit 798 (whole euros, they add up).
-  const aiVideo = topicVideo(locale, 'ask');
   const money = (v: number) => new Intl.NumberFormat(loc, { maximumFractionDigits: 0 }).format(v);
 
   return (
@@ -71,17 +68,6 @@ export default async function HomePage({ params }: Props) {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="band home-band ai-band">
-        <div className="wrap ai-band-grid">
-          <div>
-            <h2 className="h2" data-reveal style={{ color: 'var(--green)', maxWidth: '18ch' }}>{c.ai.home.title}</h2>
-            <p className="ai-band-body">{c.ai.home.body}</p>
-            <p style={{ marginTop: 28 }}><Link href="/ai-assistant" className="arrow" style={{ color: 'var(--green)' }}><span className="arr-t">{c.ai.home.link}</span><span className="arr" aria-hidden="true">→</span></Link></p>
-          </div>
-          {aiVideo && <TopicVideo src={aiVideo} label={c.ai.home.title} pause={c.common.pauseVideo} play={c.common.playVideo} />}
         </div>
       </section>
 

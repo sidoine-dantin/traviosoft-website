@@ -48,7 +48,7 @@ export const ai: AiText = {
         features: [
           { title: 'Una pregunta antes de cada cambio', body: ['Claude, ChatGPT y Mistral te preguntan en el chat antes de cada cambio. El cambio se hace en cuanto lo permites.'] },
           { title: 'Eliminaciones aprobadas en Traviosoft', body: ['Si permites eliminar, cada eliminación espera en Traviosoft hasta que la apruebas allí, y queda registrada a tu nombre.'] },
-          { title: 'Otras apps de IA', body: ['Los cambios de cualquier otra app de IA esperan tu aprobación en Traviosoft.'] },
+          { title: 'Otras apps de IA', body: ['No todas las demás apps de IA preguntan antes de actuar, así que sus cambios esperan tu aprobación en Traviosoft.'] },
           { title: 'Cada cambio en el historial', body: ['Lo que hace el asistente aparece en el historial de actividad de Traviosoft, a nombre de la persona que lo conectó.'] }
         ]
       },
@@ -79,62 +79,144 @@ export const ai: AiText = {
       }
     ],
     faq: [
-      { q: '¿Qué apps de IA puedo usar?', a: ['Claude, ChatGPT y Mistral, en una versión de la app que permita añadir tus propios conectores. Otras apps de IA que pueden añadir conectores también funcionan, y sus cambios esperan tu aprobación en Traviosoft.'] },
-      { q: '¿El asistente ve todos nuestros datos?', a: ['Ve lo que ve en Traviosoft la persona que lo conectó.'] },
+      { q: '¿Qué apps de IA puedo usar?', a: ['Cualquier app de IA que pueda añadir un conector MCP, el estándar abierto con el que las apps de IA se conectan a otros programas. Claude, ChatGPT y Mistral te preguntan en el chat antes de cada cambio, y el cambio se hace en cuanto lo permites. Con otra app, Traviosoft no puede estar seguro de que te pregunte antes, así que sus cambios esperan tu aprobación en Traviosoft, en Revisión de cambios.'] },
+      { q: '¿El asistente ve todos nuestros datos?', a: ['Ve exactamente lo que la persona que lo conectó puede ver en Traviosoft según su rol: los mismos clientes, viajes y equipos, y los precios de compra y los márgenes solo si su rol los muestra. Si su rol cambia, lo que ve el asistente cambia también.'] },
       { q: '¿Puede escribir a un proveedor?', a: ['Sí. Puede enviar una solicitud de reserva o pedir disponibilidad a un proveedor, cuando lo permites. Los presupuestos y las facturas llegan a los clientes desde Traviosoft.'] },
-      { q: '¿Puede emitir facturas?', a: ['Las facturas se emiten en Traviosoft, por una persona. El asistente puede consultarlas, seguir lo que está pagado y corregir un borrador.'] },
-      { q: '¿Hay también un asistente dentro de Traviosoft?', a: ['Sí, como opción en los dos planes, con límites de uso. Trabaja en la propia app y te pide tu visto bueno antes de cada cambio.'] }
+      { q: '¿Puede emitir facturas?', a: ['Puede consultar las facturas, seguir lo que está pagado y corregir un borrador. Pero una factura siempre la emite una persona, en Traviosoft: el asistente no puede emitir ni anular una factura, porque su número es un registro legal.'] },
+      { q: '¿Hay también un asistente dentro de Traviosoft?', a: ['Sí, como opción en los dos planes, con límites de uso. Trabaja en la propia app, sin tener que conectar otra app de IA.'] }
     ]
   },
-  home: {
-    title: 'Trabaja en Traviosoft desde tu asistente de IA',
-    body: 'Conecta Claude, ChatGPT o Mistral. Pregunta qué tienes pendiente hoy, pide un presupuesto desde tu catálogo o registra la confirmación de un proveedor. Cada cambio se hace en cuanto lo permites.',
-    link: 'Ver el asistente de IA'
-  },
-  hero: {
-    ask: '¿Cuánto nos deben los clientes?',
-    answer: '{owed} en presupuestos aceptados, y {overdue} ya han vencido.'
-  },
   sim: {
-    title: 'Pruébalo con una agencia de ejemplo',
-    lead: 'Envía uno de los mensajes de abajo. Las respuestas son una simulación con datos de ejemplo, y el lado de Traviosoft muestra lo que cambia.',
-    chatTitle: 'Tu asistente de IA', chatSub: 'Conectado a Traviosoft',
-    appTitle: 'Traviosoft', appSub: 'Tu agencia',
-    pick: 'Envía un mensaje', restart: 'Empezar de nuevo', allow: 'Permitir', deny: 'Denegar',
-    allowedTag: 'Permitido', deniedTag: 'Denegado',
-    denied: 'Entendido. Traviosoft se queda como está.', thinking: 'Trabajando en Traviosoft',
-    quotes: 'Presupuestos', bookings: 'Reservas · Famiglia Bianchi', review: 'Revisión de cambios', reviewEmpty: 'Todos los cambios revisados', approve: 'Aprobar',
-    draft: 'Borrador', sent: 'Enviado', requested: 'Solicitado', confirmed: 'Confirmado',
-    bianchiTrip: 'Sevilla y Granada, 6 días', olabarriTrip: 'Un fin de semana en Córdoba', irisTrip: 'Andalucía, 8 días',
-    hotelSeville: 'Hotel en Sevilla', guideCordoba: 'Guía en Córdoba', hotelGranada: 'Hotel en Granada',
-    today: {
-      prompt: '¿Qué tengo pendiente hoy?',
-      answer: 'Tienes tres cosas pendientes:',
-      rows: [
-        { t: 'Una solicitud nueva por responder', s: 'Iris & Noah, Andalucía, 8 días' },
-        { t: 'Un presupuesto por seguir', s: 'Famiglia Bianchi, enviado hace 9 días' },
-        { t: 'Una reserva que espera al proveedor', s: 'Hotel en Sevilla, Famiglia Bianchi' }
-      ]
+    note: 'Pruébalo con una agencia de ejemplo: elige un mensaje. Las respuestas son una simulación, sin IA detrás.',
+    chatTitle: 'Tu asistente de IA', connected: 'Traviosoft conectado',
+    greeting: '¿Qué puedo hacer hoy por tu agencia?', composer: 'Elige un mensaje de arriba',
+    appSub: 'Tu agencia',
+    allow: 'Permitir', deny: 'Denegar', allowedTag: 'Permitido', deniedTag: 'Denegado',
+    deniedReply: 'Entendido. No ha cambiado nada en Traviosoft.',
+    restart: 'Empezar de nuevo', more: 'Otra cosa', working: 'Trabajando en Traviosoft',
+    nav: { dashboard: 'Panel', quotes: 'Presupuestos', bookings: 'Reservas', payments: 'Pagos', review: 'Revisión de cambios' },
+    ui: {
+      draft: 'Borrador', sent: 'Enviado', requested: 'Solicitado', confirmed: 'Confirmado', toBook: 'Por reservar', late: 'Vencido', paid: 'Pagado', due: 'Pendiente',
+      total: 'Total', margin: 'Tu margen', schedule: 'Calendario de pagos', deposit: 'Anticipo', balance: 'Resto',
+      send: 'Enviar', approve: 'Aprobar', reviewEmpty: 'Todos los cambios revisados', trashed: 'Aprobado. El presupuesto está en la papelera.', reference: 'Ref.',
+      newRequests: 'Solicitudes nuevas', toFollow: 'Presupuestos por seguir', latePayments: 'Pagos vencidos', bookingsLeft: 'Reservas por cerrar'
     },
-    quote: {
-      prompt: 'Prepara un presupuesto para Iris & Noah, Andalucía, 8 días, desde el 3 de mayo',
-      askTitle: '¿Crear un presupuesto en Traviosoft?',
-      askSub: 'Iris & Noah · Andalucía, 8 días · 6 servicios de tu catálogo',
-      done: 'El presupuesto está en Traviosoft como borrador: {total}, con tu margen de {margin}.'
+    names: {
+      irisTrip: 'Andalucía, 8 días', bianchiTrip: 'Sevilla y Granada, 6 días', madridTrip: 'Madrid y Toledo, 4 días',
+      lindTrip: 'Mallorca, 5 días', weberTrip: 'Lisboa, 4 días',
+      olabarriPay: 'Resto, fin de semana en Córdoba', martinPay: 'Anticipo, Provenza, 7 días',
+      hotelSeville: 'Hotel en Sevilla', guideCordoba: 'Guía en Córdoba', hotelGranada: 'Hotel en Granada'
     },
-    booking: {
-      prompt: 'El hotel de Sevilla ha confirmado la reserva Bianchi, referencia 48213',
-      askTitle: '¿Actualizar una reserva en Traviosoft?',
-      askSub: 'Hotel en Sevilla: confirmado, referencia 48213',
-      done: 'Hecho. El hotel en Sevilla está confirmado, con la referencia 48213.'
-    },
-    remove: {
-      prompt: 'Elimina el presupuesto Olabarri, han elegido otra fecha',
-      askTitle: '¿Eliminar un presupuesto en Traviosoft?',
-      askSub: 'Familia Olabarri · Un fin de semana en Córdoba',
-      queued: 'La eliminación espera ahora tu aprobación en Traviosoft, en Revisión de cambios.',
-      reviewItem: 'Eliminar el presupuesto de Familia Olabarri',
-      approved: 'Aprobado en Traviosoft. El presupuesto está en la papelera.'
+    steps: {
+      today: {
+        say: '¿Qué tengo pendiente hoy?',
+        tools: ['Leyendo tu panel'],
+        reply: 'Hoy tienes cuatro cosas pendientes:',
+        rows: [
+          { t: 'Una solicitud nueva por responder', s: 'Iris & Noah, Andalucía, 8 días desde el 3 de mayo' },
+          { t: 'Un presupuesto por seguir', s: 'Famiglia Bianchi, enviado hace 9 días' },
+          { t: 'Dos pagos vencidos', s: '{2387} en total' },
+          { t: 'Dos reservas por cerrar', s: 'El viaje de la Famiglia Bianchi a Sevilla y Granada' }
+        ],
+        after: '¿Por dónde quieres empezar?'
+      },
+      late: {
+        say: 'Enséñame los pagos vencidos',
+        tools: ['Buscando los pagos vencidos'],
+        reply: 'Hay dos pagos vencidos:',
+        rows: [
+          { t: 'Familia Olabarri, {1427}', s: 'Resto del fin de semana en Córdoba, vencido hace 5 días' },
+          { t: 'Sophie Martin, {960}', s: 'Anticipo para la Provenza, vencido hace 3 días' }
+        ],
+        after: 'Si alguno ha pagado, dímelo y lo registro.'
+      },
+      payOlabarri: {
+        say: 'Olabarri ha pagado por transferencia',
+        reply: 'Lo registro en el fin de semana en Córdoba.',
+        ask: { action: 'Registrar un pago', rows: [{ t: 'Cliente', s: 'Familia Olabarri' }, { t: 'Importe', s: '{1427}' }, { t: 'Forma de pago', s: 'Transferencia, hoy' }] },
+        done: 'Registrado. La Familia Olabarri ha pagado todo, y queda un pago vencido: el anticipo de Sophie Martin.'
+      },
+      quote: { say: 'Crea un presupuesto', reply: 'Claro. ¿Para quién es?' },
+      quoteIris: {
+        say: 'Para la solicitud de Iris & Noah',
+        tools: ['Leyendo la solicitud de Iris & Noah', 'Buscando en tu catálogo', 'Comprobando los precios del 3 al 10 de mayo'],
+        reply: 'Iris & Noah piden 8 días en Andalucía desde el 3 de mayo, para dos. Esto es lo que pondría, de tu catálogo, con los precios de esas fechas:',
+        rows: [
+          { t: 'Traslado desde el aeropuerto, Sevilla', s: '3 de mayo' },
+          { t: 'Hotel en el casco antiguo de Sevilla, 4 noches', s: 'Del 3 al 7 de mayo' },
+          { t: 'Guía privado en Córdoba, media jornada', s: '5 de mayo' },
+          { t: 'Coche de alquiler, 4 días', s: 'Del 7 al 10 de mayo' },
+          { t: 'Hotel en Granada, 3 noches', s: 'Del 7 al 10 de mayo' },
+          { t: 'Entradas a la Alhambra con guía', s: '8 de mayo' }
+        ],
+        after: 'Total {2660} para dos, con tu margen de {450}.',
+        ask: { action: 'Crear un presupuesto', rows: [{ t: 'Cliente', s: 'Iris & Noah' }, { t: 'Viaje', s: 'Andalucía, del 3 al 10 de mayo' }, { t: 'Servicios', s: '6 de tu catálogo' }, { t: 'Total', s: '{2660}' }] },
+        done: 'El presupuesto está en Traviosoft como borrador, y te lo he abierto. ¿Quieres fijar las condiciones de pago, o enviarlo?'
+      },
+      quoteMadrid: { say: 'Para un viaje a Madrid', reply: '¿Quién viaja, y cuándo?' },
+      madridBianchi: {
+        say: 'Famiglia Bianchi, 4 personas, 12 de junio',
+        tools: ['Buscando a la Famiglia Bianchi', 'Buscando en tu catálogo', 'Comprobando los precios del 12 al 15 de junio'],
+        reply: 'Para la Famiglia Bianchi, 4 días en Madrid desde el 12 de junio, para cuatro personas, pondría:',
+        rows: [
+          { t: 'Traslados del aeropuerto, ida y vuelta', s: '12 y 15 de junio' },
+          { t: 'Hotel en el centro de Madrid, 3 noches, 2 habitaciones', s: 'Del 12 al 15 de junio' },
+          { t: 'Museo del Prado con guía', s: '13 de junio' },
+          { t: 'Excursión de un día a Toledo con guía', s: '14 de junio' }
+        ],
+        after: 'Total {2100} para cuatro, con tu margen de {380}.',
+        ask: { action: 'Crear un presupuesto', rows: [{ t: 'Cliente', s: 'Famiglia Bianchi' }, { t: 'Viaje', s: 'Madrid y Toledo, del 12 al 15 de junio' }, { t: 'Servicios', s: '4 de tu catálogo' }, { t: 'Total', s: '{2100}' }] },
+        done: 'El presupuesto está en Traviosoft como borrador, y te lo he abierto. ¿Quieres fijar las condiciones de pago, o enviarlo?'
+      },
+      terms: { say: 'Fija las condiciones de pago', reply: '¿Qué condiciones quieres?' },
+      terms30: {
+        say: '30 % ahora, el resto 30 días antes',
+        ask: { action: 'Fijar el calendario de pagos', rows: [{ t: 'Anticipo, 30 %', s: '{dep}, hoy' }, { t: 'Resto', s: '{bal}, el {due}' }] },
+        done: 'Hecho, el calendario de pagos está en el presupuesto. ¿Quieres enviarlo ya?'
+      },
+      terms50: {
+        say: 'Mitad ahora, mitad 30 días antes',
+        ask: { action: 'Fijar el calendario de pagos', rows: [{ t: 'Anticipo, 50 %', s: '{dep}, hoy' }, { t: 'Resto', s: '{bal}, el {due}' }] },
+        done: 'Hecho, el calendario de pagos está en el presupuesto. ¿Quieres enviarlo ya?'
+      },
+      send: {
+        say: 'Envíalo',
+        reply: 'Los presupuestos llegan a tus clientes desde Traviosoft, para que veas exactamente lo que reciben. Te lo he abierto: pulsa Enviar cuando te parezca bien.'
+      },
+      bookings: {
+        say: 'Revisa las últimas reservas',
+        tools: ['Buscando las reservas en curso'],
+        reply: 'Así va el viaje de la Famiglia Bianchi a Sevilla y Granada, del 10 al 15 de mayo:',
+        rows: [
+          { t: 'Hotel en Sevilla', s: 'Solicitado hace 4 días, aún sin respuesta' },
+          { t: 'Guía en Córdoba', s: 'Confirmado' },
+          { t: 'Hotel en Granada', s: 'Aún sin reservar' }
+        ],
+        after: '¿Hay noticias de Sevilla, o pregunto al hotel de Granada?'
+      },
+      confirmSeville: {
+        say: 'Sevilla confirmado, ref. 48213',
+        ask: { action: 'Actualizar una reserva', rows: [{ t: 'Reserva', s: 'Hotel en Sevilla, del 10 al 13 de mayo' }, { t: 'Estado', s: 'Confirmado' }, { t: 'Referencia', s: '48213' }] },
+        done: 'Hecho. El hotel en Sevilla está confirmado, con la referencia 48213.'
+      },
+      requestGranada: {
+        say: 'Reserva el hotel de Granada',
+        tools: ['Buscando el hotel en tus proveedores'],
+        reply: 'Envío la solicitud de reserva al hotel por email, desde Traviosoft.',
+        ask: { action: 'Enviar una solicitud de reserva', rows: [{ t: 'Para', s: 'Hotel en Granada' }, { t: 'Fechas', s: 'Del 13 al 15 de mayo, 2 noches' }, { t: 'Habitaciones', s: '2 dobles, Famiglia Bianchi' }] },
+        done: 'Enviada. Dime cuando conteste el hotel y registro su confirmación.'
+      },
+      remove: { say: 'Elimina un presupuesto', tools: ['Buscando tus presupuestos en borrador'], reply: '¿Cuál? Estos dos siguen en borrador.' },
+      delLind: {
+        say: 'Anna Lind, Mallorca',
+        ask: { action: 'Eliminar un presupuesto', rows: [{ t: 'Presupuesto', s: 'Anna Lind, Mallorca, 5 días' }, { t: 'Total', s: '{1980}' }, { t: 'Estado', s: 'Borrador' }] },
+        done: 'La eliminación espera ahora tu aprobación en Traviosoft, en Revisión de cambios. No se elimina nada hasta que la apruebes allí.'
+      },
+      delWeber: {
+        say: 'Familie Weber, Lisboa',
+        ask: { action: 'Eliminar un presupuesto', rows: [{ t: 'Presupuesto', s: 'Familie Weber, Lisboa, 4 días' }, { t: 'Total', s: '{1450}' }, { t: 'Estado', s: 'Borrador' }] },
+        done: 'La eliminación espera ahora tu aprobación en Traviosoft, en Revisión de cambios. No se elimina nada hasta que la apruebes allí.'
+      }
     }
   }
 };
