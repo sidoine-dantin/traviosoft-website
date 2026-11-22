@@ -56,10 +56,10 @@ export const home: SiteContent['home'] = {
   tripTitle: "O percurso de uma viagem no Traviosoft",
   moments: [
     {"rec": "Andaluzia · 2 viajantes", "title": "O pedido", "body": "Chega à lista de pedidos, com o tempo que já esperou e o passo seguinte.", "go": "Ver os pedidos", "job": "sell#requests"},
-    {"rec": "Margem {margin} EUR", "title": "O orçamento", "body": "Cada linha parte do custo do fornecedor. Vê a margem da viagem antes de enviar a proposta.", "go": "Ver os orçamentos", "job": "sell#quotes"},
-    {"rec": "Hotel em Sevilha: confirmado", "title": "As reservas", "body": "Quando o cliente aceita, cada fornecedor recebe o seu pedido, e a resposta fica registada na linha.", "go": "Ver as reservas", "job": "book#order"},
+    {"rec": "Margem {margin} EUR", "title": "O orçamento", "body": "Cada linha parte do custo do fornecedor. Vê a sua margem na viagem antes de enviar o orçamento.", "go": "Ver os orçamentos", "job": "sell#quotes"},
+    {"rec": "Hotel em Sevilha: confirmado", "title": "As reservas", "body": "Quando o cliente aceita, cada fornecedor recebe o seu pedido de reserva, e a resposta fica guardada com a viagem.", "go": "Ver as reservas", "job": "book#order"},
     {"rec": "Adiantamento {deposit} EUR: pago", "title": "Os pagamentos", "body": "As prestações vêm do orçamento aceite. O cliente paga a partir da ligação no e-mail.", "go": "Ver os pagamentos", "job": "get-paid#schedule"},
-    {"rec": "Fatura final: {total} EUR", "title": "A fatura", "body": "Retoma as linhas do orçamento aceite.", "go": "Ver as faturas", "job": "get-paid#invoices"}
+    {"rec": "Fatura final: {total} EUR", "title": "A fatura", "body": "Parte do orçamento aceite, com os mesmos valores.", "go": "Ver as faturas", "job": "get-paid#invoices"}
   ],
   sitTitle: "Conforme a sua forma de trabalhar",
   situations: [
@@ -75,12 +75,12 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "Os meus fornecedores faturam em dólares ou dirhams",
-      "s": "Custos na moeda deles, preços na sua, com a taxa de câmbio do orçamento guardada.",
+      "s": "Custos na moeda deles, preços na sua. Cada orçamento mantém a sua taxa de câmbio.",
       "job": "setup#currencies"
     },
     {
       "t": "Trabalho com guias e motoristas",
-      "s": "Ficha de serviço enviada ao guia, e o pagamento dele acompanhado com a viagem.",
+      "s": "O guia recebe os detalhes do dia por e-mail, e o que lhe deve fica com a viagem.",
       "job": "book#suppliers"
     },
     {
@@ -100,7 +100,7 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "Temos várias marcas ou empresas",
-      "s": "Cada uma tem os seus documentos, menções e numeração de faturas.",
+      "s": "Cada uma tem o seu logótipo, os seus documentos e os seus números de fatura.",
       "job": "setup#brands"
     }
   ],

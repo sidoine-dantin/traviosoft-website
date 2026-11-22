@@ -12,6 +12,30 @@ export const TOPIC_VIDEOS: Record<string, readonly string[]> = {
     'schedule', 'links', 'invoices', 'dashboard',
     'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
   ],
+  fr: [
+    'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
+    'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
+    'schedule', 'links', 'invoices', 'dashboard',
+    'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+  ],
+  es: [
+    'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
+    'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
+    'schedule', 'links', 'invoices', 'dashboard',
+    'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+  ],
+  it: [
+    'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
+    'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
+    'schedule', 'links', 'invoices', 'dashboard',
+    'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+  ],
+  pt: [
+    'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
+    'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
+    'schedule', 'links', 'invoices', 'dashboard',
+    'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+  ],
 };
 
 export function topicVideo(locale: string, id: string): string | null {

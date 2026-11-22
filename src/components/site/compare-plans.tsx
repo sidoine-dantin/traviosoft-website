@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import type { CompareCell, CompareSection } from '@/content/types';
 
 type Props = {
@@ -8,8 +7,6 @@ type Props = {
   note: string[];
   /** the billing chosen above: a one-off fee that is free with yearly billing shows its real price with monthly */
   yearly: boolean;
-  /** the billing switch, pinned in the header row */
-  toggle: ReactNode;
 };
 
 function Cell({ v, labels, yearly }: { v: CompareCell; labels: Props['labels']; yearly: boolean }) {
@@ -53,13 +50,13 @@ function Cell({ v, labels, yearly }: { v: CompareCell; labels: Props['labels']; 
   );
 }
 
-/** Feature-by-feature comparison of the two plans, grouped by job. */
-export function ComparePlans({ sections, labels, names, note, yearly, toggle }: Props) {
+/**
+ * Feature-by-feature comparison of the two plans, grouped by job. Its pinned header row (the billing
+ * switch and the two plans) is drawn by Plans, above these tables.
+ */
+export function ComparePlans({ sections, labels, names, note, yearly }: Props) {
   return (
-    <div className="cmp">
-      <div className="cmp-head">
-        <div className="cmp-head-ctl">{toggle}</div><span aria-hidden="true">{names[0]}</span><span aria-hidden="true">{names[1]}</span>
-      </div>
+    <>
       {sections.map(s => (
         <table key={s.title} className="cmp-table">
           <caption>{s.title}</caption>
@@ -78,6 +75,6 @@ export function ComparePlans({ sections, labels, names, note, yearly, toggle }: 
         </table>
       ))}
       <div className="cmp-note">{note.map(n => <p key={n}>{n}</p>)}</div>
-    </div>
+    </>
   );
 }

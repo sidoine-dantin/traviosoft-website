@@ -7,7 +7,7 @@ export const siteName = 'Traviosoft';
 
 /** Date the site's pages last changed, for the sitemap. Bump it when page copy changes,
  *  so search engines can trust the dates (a new date on every build teaches them to ignore it). */
-export const SITE_UPDATED = '2026-11-21';
+export const SITE_UPDATED = '2026-11-22';
 
 /** Stable ids that tie the schema.org blocks of every page together. */
 export const ORG_ID = `${baseUrl}/#organization`;

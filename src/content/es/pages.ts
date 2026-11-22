@@ -4,10 +4,10 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Precios: Classic desde ${PRICES.classic.yearly} EUR al mes, Premium desde ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Dos planes para agencias de viajes a medida y DMC. Classic gestiona toda la agencia desde ${PRICES.classic.yearly} EUR al mes; Premium añade grupos, varios equipos, divisas, compras y varias marcas. ${PRICES.usersIncluded} usuarios incluidos, alta gratis con pago anual.`,
+    `Dos planes para agencias de viajes a medida y DMC. Classic gestiona toda la agencia desde ${PRICES.classic.yearly} EUR al mes; Premium añade grupos, varios equipos, divisas, órdenes de compra a proveedores y varias marcas. ${PRICES.usersIncluded} usuarios incluidos, alta gratis con pago anual.`,
   title: 'Precios',
   productLink: 'Ver el producto',
-  lead: 'Classic cubre toda la agencia, desde la primera solicitud hasta la última factura. Premium añade grupos, varios equipos, otras divisas, compras y varias marcas.',
+  lead: 'Classic cubre toda la agencia, desde la primera solicitud hasta la última factura. Premium añade grupos, varios equipos, otras divisas, órdenes de compra a proveedores y varias marcas.',
   yearly: 'Anual',
   monthly: 'Mensual',
   yearlyNote: 'Precios por mes, sin IVA.',
@@ -41,17 +41,17 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Solicitudes y presupuestos con tu margen y tu comisión', classic: true, premium: true },
         { f: 'Catálogo con precios por temporada', classic: true, premium: true },
         { f: 'Agencias colaboradoras y liquidaciones de comisión', classic: true, premium: true },
-        { f: 'Página de propuesta e itinerario día a día, con tu logo y tus colores', classic: true, premium: true },
+        { f: 'El presupuesto como página web y el itinerario día a día, con tu logo y tus colores', classic: true, premium: true },
         { f: 'Documentos en el idioma del cliente', classic: true, premium: true },
-        { f: 'Multidivisa', classic: false, premium: true }
+        { f: 'Presupuestos y precios de proveedores en otras divisas', classic: false, premium: true }
       ]
     },
     {
       title: 'Reservar',
       rows: [
-        { f: 'Pedidos y reservas, con los correos de proveedores archivados en el viaje', classic: true, premium: true },
-        { f: 'Hojas de servicio', classic: true, premium: true },
-        { f: 'Grupos: listas de viajeros, enlace a formulario y rooming lists', classic: false, premium: true },
+        { f: 'Las reservas de cada presupuesto aceptado, con los correos de proveedores guardados en el viaje', classic: true, premium: true },
+        { f: 'Bonos de servicio para guías, conductores y hoteles', classic: true, premium: true },
+        { f: 'Grupos: listas de viajeros, formulario que rellenan los viajeros y rooming lists', classic: false, premium: true },
         { f: 'Solicitudes de disponibilidad y órdenes de compra a proveedores', classic: false, premium: true }
       ]
     },
@@ -61,18 +61,18 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Calendarios de pago y enlaces de pago', classic: true, premium: true },
         { f: 'Recordatorios de pago automáticos', classic: false, premium: true },
         { f: 'Facturas y rectificativas', classic: 'En España: integradas. En otros países: a través de tu programa de facturación', premium: 'En España: integradas. En otros países: a través de tu programa de facturación' },
-        { f: 'Panel de control', classic: true, premium: true },
-        { f: 'Exportación contable', classic: false, premium: true }
+        { f: 'Panel con ventas, viajes y caja', classic: true, premium: true },
+        { f: 'Exportación a tu programa de contabilidad', classic: false, premium: true }
       ]
     },
     {
       title: 'Equipo y conexiones',
       rows: [
-        { f: 'Varios equipos', classic: false, premium: true },
-        { f: 'Roles personalizados', classic: false, premium: true },
+        { f: 'Varios equipos, cada uno con sus clientes y sus viajes', classic: false, premium: true },
+        { f: 'Roles a tu medida: quién ve y hace qué', classic: false, premium: true },
         { f: 'Varias marcas y sociedades en una cuenta', classic: false, premium: true },
-        { f: 'Conector MCP para tus propias herramientas de IA (Claude, ChatGPT y otras)', classic: true, premium: true },
-        { f: 'El asistente integrado', classic: { text: 'Opcional, con límites de uso', option: true }, premium: { text: 'Opcional, con límites de uso', option: true } },
+        { f: 'Conexión con el asistente de IA que ya usas (Claude, ChatGPT y otros)', classic: true, premium: true },
+        { f: 'El asistente de IA dentro de Traviosoft', classic: { text: 'Opcional, con límites de uso', option: true }, premium: { text: 'Opcional, con límites de uso', option: true } },
         { f: 'Acceso API, para que tu desarrollador conecte tu web y tus otros programas', classic: false, premium: true }
       ]
     },
@@ -192,7 +192,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       title: 'Tu primer presupuesto de verdad',
-      body: 'Configuramos tu margen, tu IVA, tus reglas de comisión y tu marca, y formamos a tu equipo por videollamada. Haces un presupuesto real con tus propias tarifas. Si te atascas, estamos por email.'
+      body: 'Configuramos tu margen, tu IVA, tus reglas de comisión y tu marca, y formamos a tu equipo por videollamada. Haces un presupuesto real con tus propias tarifas. Respondemos a tus preguntas por email.'
     },
     {
       title: 'Las solicitudes nuevas entran en la aplicación',
@@ -254,7 +254,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: '¿Qué ve mi cliente?',
-          a: ['Un presupuesto limpio con nombres pensados para el cliente, precios por persona, lo que incluye y lo que no, en su idioma y con tu marca. Tus tarifas netas y tus márgenes quedan solo para tu equipo.']
+          a: ['Un presupuesto con el nombre que elijas para cada servicio y precios por persona, en su idioma y con tu marca. La página web del presupuesto indica también lo incluido y lo no incluido. Tus precios de compra y tus márgenes quedan solo para tu equipo.']
         },
         {
           q: '¿Pueden mis guías y conductores ver el viaje?',
@@ -332,7 +332,7 @@ export const about: SiteContent['about'] = {
   lead: 'Traviosoft es un software de gestión para agencias de viajes a medida y DMC. Cada viaje está en un solo lugar, de la primera solicitud a la factura final.',
   blocks: [
     { title: 'Pensado para viajes a medida', body: ['Cada viaje es distinto. Traviosoft calcula cada servicio a partir de la tarifa neta del proveedor, trabaja con varios proveedores por servicio y gestiona grupos, divisas y documentos en el idioma del cliente.'] },
-    { title: 'Un viaje, las mismas cifras', body: ['El presupuesto aceptado da las reservas, los vencimientos y las facturas. Toda la agencia trabaja con las mismas cifras, sin volver a teclear nada.'] },
+    { title: 'Un viaje, las mismas cifras', body: ['El presupuesto aceptado da las reservas, los vencimientos y las facturas. Toda la agencia trabaja con las mismas cifras, tecleadas una sola vez.'] },
     { title: 'Tus datos', body: ['Cada agencia tiene su propio espacio privado. Tus datos están alojados en la Unión Europea y puedes exportarlos en cualquier momento.'] },
     { title: 'Trabajar con nosotros', body: ['Configuramos tu cuenta e importamos tus datos contigo. El soporte es por email, con las personas que desarrollan Traviosoft.'] }
   ]

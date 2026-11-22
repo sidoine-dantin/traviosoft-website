@@ -10,7 +10,7 @@ export const home: SiteContent['home'] = {
   proposal: {
     "agency": "Your agency",
     "kind": "Travel proposal",
-    "trip": "Andalusia, 8 days",
+    "trip": "Andalucía, 8 days",
     "meta": [
       "2 travellers",
       "8 days",
@@ -55,11 +55,11 @@ export const home: SiteContent['home'] = {
   },
   tripTitle: "The journey of a trip in Traviosoft",
   moments: [
-    {"rec": "Andalusia · 2 travellers", "title": "The request", "body": "It lands in the list of requests, with how long it has waited and what comes next.", "go": "See requests", "job": "sell#requests"},
-    {"rec": "Margin {margin} EUR", "title": "The quote", "body": "Each line starts from the supplier’s cost. You see the margin on the trip before you send the proposal.", "go": "See quotes", "job": "sell#quotes"},
-    {"rec": "Hotel in Seville: confirmed", "title": "The bookings", "body": "Once the client accepts, each supplier gets its request, and the answer is saved on the line.", "go": "See bookings", "job": "book#order"},
+    {"rec": "Andalucía · 2 travellers", "title": "The request", "body": "It lands in the list of requests, with how long it has waited and what comes next.", "go": "See requests", "job": "sell#requests"},
+    {"rec": "Margin {margin} EUR", "title": "The quote", "body": "Each line starts from the supplier’s cost. You see your margin on the trip before you send the quote.", "go": "See quotes", "job": "sell#quotes"},
+    {"rec": "Hotel in Seville: confirmed", "title": "The bookings", "body": "Once the client accepts, each supplier gets its booking request, and the answer is kept with the trip.", "go": "See bookings", "job": "book#order"},
     {"rec": "Deposit {deposit} EUR: paid", "title": "The payments", "body": "The payment schedule comes from the accepted quote. The client pays from the link in the email.", "go": "See payments", "job": "get-paid#schedule"},
-    {"rec": "Final invoice: {total} EUR", "title": "The invoice", "body": "It takes the lines of the accepted quote.", "go": "See invoices", "job": "get-paid#invoices"}
+    {"rec": "Final invoice: {total} EUR", "title": "The invoice", "body": "Made from the accepted quote, with the same amounts.", "go": "See invoices", "job": "get-paid#invoices"}
   ],
   sitTitle: "However you work",
   situations: [
@@ -75,12 +75,12 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "My suppliers bill in dollars or dirhams",
-      "s": "Costs in their currency, prices in yours, with the rate of the quote kept.",
+      "s": "Costs in their currency, prices in yours. Each quote keeps its exchange rate.",
       "job": "setup#currencies"
     },
     {
       "t": "I work with guides and drivers",
-      "s": "A service sheet sent to the guide, and their payment followed with the trip.",
+      "s": "The guide gets the day’s details by email, and what you owe them stays with the trip.",
       "job": "book#suppliers"
     },
     {
@@ -90,7 +90,7 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "I invoice under the margin scheme",
-      "s": "VAT worked out on your margin, with the scheme’s mention on the invoice.",
+      "s": "VAT worked out on your margin, with the scheme’s wording on the invoice.",
       "job": "setup#country"
     },
     {
@@ -100,7 +100,7 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "We have several brands or companies",
-      "s": "Each one has its own documents, invoice mentions and numbering.",
+      "s": "Each one has its own logo, documents and invoice numbers.",
       "job": "setup#brands"
     }
   ],

@@ -132,7 +132,7 @@ const netRates: Article = {
     { type: 'h2', text: 'Dove entrano le imposte', id: 'imposte' },
     { type: 'p', text: 'Come si applica l’IVA al ricarico o alla commissione dipende dal paese e dal fatto che l’agenzia venda in nome proprio o come intermediaria. Le pagine di "Fatturazione per paese" descrivono le regole in diversi paesi.' },
     { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'In Traviosoft una procedura di prezzo trasforma le tariffe nette in prezzi di vendita, con il margine, l’IVA e la commissione quando un’agenzia partner vende il viaggio.' },
+    { type: 'p', text: 'In Traviosoft le tue regole di prezzo trasformano le tariffe nette in prezzi di vendita, con il margine, l’IVA e la commissione quando un’agenzia partner vende il viaggio.' },
     { type: 'h2', text: 'Domande frequenti', id: 'faq' },
     {
       type: 'faq',

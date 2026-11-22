@@ -96,7 +96,7 @@ const euVat: Article = {
       '1 January 2035: Member States with a domestic real-time reporting obligation align their systems with the EU model and standards.'
     ] },
     { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'In Traviosoft, invoices are made from the trip, with the mention of the travel agency scheme when you switch it on.' },
+    { type: 'p', text: 'In Traviosoft, invoices are made from the trip, with the wording of the travel agency scheme when you switch it on.' },
     { type: 'p', text: 'Official sources: European Commission, [VAT special schemes](https://taxation-customs.ec.europa.eu/special-schemes_en), [VAT in the Digital Age](https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en) and [adoption of the ViDA package](https://taxation-customs.ec.europa.eu/news/adoption-vat-digital-age-package-2025-03-11_en).' }
   ]
 };
@@ -130,9 +130,9 @@ const netRates: Article = {
     { type: 'p', text: 'A DMC or tour operator that sells through other agencies often works the other way round: it sets a commissionable price and pays the selling agency a commission.' },
     { type: 'p', text: 'Example: a DMC builds a trip from 1,000 EUR of net costs and prices it at 1,300 EUR for the traveller, with a 10% commission for the selling agency. The selling agency earns 130 EUR, and the DMC keeps 1,170 EUR, which is 170 EUR above its costs.' },
     { type: 'h2', text: 'Where taxes come in', id: 'taxes' },
-    { type: 'p', text: 'How VAT applies to the markup or to the commission depends on the country and on whether the agency sells in its own name or as an intermediary. The pages in "Invoicing by country" describe the rules in several countries.' },
+    { type: 'p', text: 'How VAT applies to the markup or to the commission depends on the country and on whether the agency sells in its own name or as an intermediary. The pages in “Invoicing by country” describe the rules in several countries.' },
     { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'In Traviosoft, a pricing procedure turns net rates into selling prices, with the margin, the VAT and the commission when a partner agency sells the trip.' },
+    { type: 'p', text: 'In Traviosoft, your pricing rules turn net rates into selling prices, with the margin, the VAT and the commission when a partner agency sells the trip.' },
     { type: 'h2', text: 'Questions', id: 'faq' },
     {
       type: 'faq',

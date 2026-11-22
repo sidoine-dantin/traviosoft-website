@@ -4,10 +4,10 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les groupes, plusieurs équipes, les devises, les achats et plusieurs marques. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
+    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les groupes, plusieurs équipes, les devises, les bons de commande aux prestataires et plusieurs marques. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
   title: 'Tarifs',
   productLink: 'Voir le produit',
-  lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les groupes, plusieurs équipes, les autres devises, les achats et plusieurs marques.',
+  lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les groupes, plusieurs équipes, les autres devises, les bons de commande aux prestataires et plusieurs marques.',
   yearly: 'Annuel',
   monthly: 'Mensuel',
   yearlyNote: 'Prix par mois, hors TVA.',
@@ -41,17 +41,17 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Demandes et devis avec votre marge et votre commission', classic: true, premium: true },
         { f: 'Catalogue avec prix par saison', classic: true, premium: true },
         { f: 'Agences partenaires et relevés de commission', classic: true, premium: true },
-        { f: 'Page de proposition et programme jour par jour, avec votre logo et vos couleurs', classic: true, premium: true },
+        { f: 'Le devis en page web et le programme jour par jour, avec votre logo et vos couleurs', classic: true, premium: true },
         { f: 'Documents dans la langue du client', classic: true, premium: true },
-        { f: 'Multi-devises', classic: false, premium: true }
+        { f: 'Devis et prix des prestataires dans d’autres devises', classic: false, premium: true }
       ]
     },
     {
       title: 'Réserver',
       rows: [
-        { f: 'Voyages confirmés et réservations, avec les e-mails des prestataires classés sur le voyage', classic: true, premium: true },
-        { f: 'Fiches de service', classic: true, premium: true },
-        { f: 'Groupes : listes de voyageurs, lien vers un formulaire et rooming lists', classic: false, premium: true },
+        { f: 'Les réservations de chaque devis accepté, avec les e-mails des prestataires gardés sur le voyage', classic: true, premium: true },
+        { f: 'Fiches de service pour les guides, chauffeurs et hôtels', classic: true, premium: true },
+        { f: 'Groupes : listes de voyageurs, formulaire rempli par les voyageurs et rooming lists', classic: false, premium: true },
         { f: 'Demandes de disponibilité et bons de commande aux prestataires', classic: false, premium: true }
       ]
     },
@@ -61,18 +61,18 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Échéanciers et liens de paiement', classic: true, premium: true },
         { f: 'Rappels de paiement automatiques', classic: false, premium: true },
         { f: 'Factures et avoirs', classic: 'En Espagne : intégrées. Ailleurs : via votre logiciel de facturation', premium: 'En Espagne : intégrées. Ailleurs : via votre logiciel de facturation' },
-        { f: 'Tableau de bord', classic: true, premium: true },
-        { f: 'Export comptable', classic: false, premium: true }
+        { f: 'Tableau de bord : ventes, voyages et trésorerie', classic: true, premium: true },
+        { f: 'Export vers votre logiciel de comptabilité', classic: false, premium: true }
       ]
     },
     {
       title: 'Équipe et connexions',
       rows: [
-        { f: 'Plusieurs équipes', classic: false, premium: true },
-        { f: 'Rôles personnalisés', classic: false, premium: true },
+        { f: 'Plusieurs équipes, chacune avec ses clients et ses voyages', classic: false, premium: true },
+        { f: 'Rôles sur mesure : qui voit et fait quoi', classic: false, premium: true },
         { f: 'Plusieurs marques et sociétés dans un compte', classic: false, premium: true },
-        { f: 'Connecteur MCP pour vos propres outils d’IA (Claude, ChatGPT et autres)', classic: true, premium: true },
-        { f: 'L’assistant intégré', classic: { text: 'En option, avec des limites d’utilisation', option: true }, premium: { text: 'En option, avec des limites d’utilisation', option: true } },
+        { f: 'Connexion à l’assistant d’IA que vous utilisez déjà (Claude, ChatGPT et autres)', classic: true, premium: true },
+        { f: 'L’assistant d’IA dans Traviosoft', classic: { text: 'En option, avec des limites d’utilisation', option: true }, premium: { text: 'En option, avec des limites d’utilisation', option: true } },
         { f: 'Accès API, pour que votre développeur relie votre site et vos autres logiciels', classic: false, premium: true }
       ]
     },
@@ -192,7 +192,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       title: 'Votre premier vrai devis',
-      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque, puis nous formons votre équipe en visio. Vous construisez un vrai devis à partir de vos propres tarifs. Nous restons joignables par e-mail si besoin.'
+      body: 'Nous configurons votre marge, la TVA, vos règles de commission et votre marque, puis nous formons votre équipe en visio. Vous construisez un vrai devis à partir de vos propres tarifs. Nous répondons à vos questions par e-mail.'
     },
     {
       title: 'Les nouvelles demandes entrent dans l’application',
@@ -246,7 +246,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Qu’est-ce que Traviosoft ?',
-          a: ['Un logiciel web de gestion pour les agences de voyages sur mesure et les DMC. Il couvre la demande, le devis, la commande et les réservations, l’itinéraire client, les paiements et les factures.']
+          a: ['Un logiciel web de gestion pour les agences de voyages sur mesure et les DMC. Il couvre les demandes, les devis, les réservations, l’itinéraire client, les paiements et les factures.']
         },
         {
           q: 'Plusieurs prestataires peuvent-ils vendre le même hôtel ou le même service ?',
@@ -254,7 +254,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Que voit mon client ?',
-          a: ['Un devis net avec des intitulés pensés pour le client, des prix par personne, ce qui est compris et ce qui ne l’est pas, dans sa langue et à votre marque. Vos tarifs nets et vos marges restent réservés à votre équipe.']
+          a: ['Un devis avec le nom que vous choisissez pour chaque prestation et des prix par personne, dans sa langue et à votre marque. La page web du devis indique aussi ce qui est inclus et non inclus. Vos prix d’achat et vos marges restent réservés à votre équipe.']
         },
         {
           q: 'Mes guides et mes chauffeurs peuvent-ils voir le voyage ?',
@@ -332,7 +332,7 @@ export const about: SiteContent['about'] = {
   lead: 'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC. Chaque voyage tient en un seul endroit, de la première demande à la facture finale.',
   blocks: [
     { title: 'Pensé pour le sur-mesure', body: ['Chaque voyage est différent. Traviosoft calcule chaque prestation à partir du tarif net du prestataire, accepte plusieurs prestataires par prestation, et gère les groupes, les devises et les documents dans la langue du client.'] },
-    { title: 'Un voyage, les mêmes chiffres partout', body: ['Le devis accepté donne les réservations, l’échéancier et les factures. Toute l’agence travaille sur les mêmes chiffres, sans rien ressaisir.'] },
+    { title: 'Un voyage, les mêmes chiffres partout', body: ['Le devis accepté donne les réservations, l’échéancier et les factures. Toute l’agence travaille sur les mêmes chiffres, saisis une seule fois.'] },
     { title: 'Vos données', body: ['Chaque agence a son propre espace privé. Vos données sont hébergées dans l’Union européenne, et vous pouvez les exporter à tout moment.'] },
     { title: 'Travailler avec nous', body: ['Nous configurons votre compte et importons vos données avec vous. Le support se fait par e-mail, avec les personnes qui développent Traviosoft.'] }
   ]
