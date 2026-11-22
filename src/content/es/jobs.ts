@@ -4,93 +4,93 @@ const sell: JobPage = {
   slug: 'sell',
   metaTitle: 'Vender: solicitudes, catálogo y presupuestos | Traviosoft',
   metaDescription:
-    'Todas las solicitudes en una lista, catálogo con precios por temporada y presupuestos con tu margen, IVA y comisión, en el idioma del cliente, con seguimiento.',
+    'Todas las solicitudes de clientes en una lista, un catálogo con precios por temporada y varios proveedores por producto, presupuestos con tu margen y el IVA, enviados en el idioma del cliente y con seguimiento a los 7 días.',
   name: 'Vender',
   menuLine: 'De la primera solicitud al presupuesto aceptado',
   step: '1 de 4',
   heroTitle: 'Solicitudes, catálogo y presupuestos',
   heroLead:
-    'Todas las solicitudes en una lista, un catálogo con tus tarifas por temporada y presupuestos hechos a partir de él con tu margen y tu comisión.',
+    'Traviosoft reúne todas las solicitudes de clientes en una lista, tus productos y precios en un catálogo, y crea presupuestos que muestran tu margen en cada línea.',
   heroVisual: 'quote',
   chapters: [
     {
       id: 'requests',
       kicker: 'Solicitudes',
-      title: 'Una lista de solicitudes',
-      lead: 'Cada consulta en una lista con su siguiente paso, tanto si llegó por email, por teléfono o por WhatsApp.',
+      title: 'Las solicitudes de clientes en una lista',
+      lead: 'Cada consulta llega a la misma lista con su siguiente paso, tanto si vino por email, por teléfono o por WhatsApp.',
       visual: 'requests',
       features: [
-        { title: 'Estado de cada solicitud', body: ['Cada solicitud tiene un estado: nueva, presupuestada o en espera de respuesta.'] },
-        { title: 'Una solicitud pasa a ser un proyecto', body: ['Cuando una solicitud va en serio, se convierte en proyecto. El cliente, las fechas, los viajeros y tus notas se quedan juntos durante todo el viaje.'] },
-        { title: 'Recordatorios', body: ['Pon una fecha a una solicitud. Vuelve a aparecer en tu panel el día que toca.'] }
+        { title: 'Nueva o respondida', body: ['Ves de un vistazo qué solicitudes esperan todavía un primer presupuesto. El estado cambia solo cuando se envía el presupuesto.'] },
+        { title: 'De la solicitud al presupuesto', body: ['Crea el presupuesto desde la solicitud. El cliente, las fechas del viaje y el número de viajeros ya están rellenados.'] },
+        { title: 'Recordatorios', body: ['Pon una fecha a una solicitud y ese día vuelve a aparecer en tu lista de cosas por hacer.'] }
       ]
     },
     {
       id: 'catalogue',
       kicker: 'Catálogo',
-      title: 'Productos con precios por fecha',
-      lead: 'Hoteles, traslados, guías y actividades, cada uno con precios por fecha. El presupuesto usa el precio de las fechas del viaje.',
+      title: 'Un catálogo de productos y precios',
+      lead: 'Tus hoteles, traslados, guías y actividades, cada uno con lo que te cuesta y el precio al que lo vendes, por fecha.',
       visual: 'catalogue',
       features: [
-        { title: 'Periodos de precio por fecha', body: ['Temporada baja, media y alta, eventos especiales, tarifas de contratos nuevos. Cada producto guarda sus precios por periodo y el presupuesto usa el que corresponde a las fechas del viaje.'] },
-        { title: 'Varios proveedores por producto', body: ['Ten dos empresas de traslados o tres guías para el mismo servicio, cada uno con sus tarifas, y elige uno por viaje.'] },
-        { title: 'Paquetes preparados', body: ['Guarda una vez tus rutas clásicas. Añade el paquete entero a un presupuesto con un clic y ajusta lo que cambie.'] }
+        { title: 'Periodos de precio', body: ['Temporada baja, media y alta, eventos especiales, tarifas de los contratos del año que viene. Cada producto guarda sus precios por periodo y el presupuesto usa el que corresponde a las fechas del viaje.'] },
+        { title: 'Varios proveedores por producto', body: ['Ten dos empresas de traslados o tres guías para el mismo servicio, cada uno con sus tarifas, y elige uno para cada viaje.'] },
+        { title: 'Tus rutas clásicas, guardadas', body: ['Guarda una vez una ruta clásica. Añádela a un presupuesto con un clic, a los precios de hoy, y ajusta lo que cambie.'] }
       ]
     },
     {
       id: 'quotes',
       kicker: 'Presupuestos',
-      title: 'Margen, IVA y comisión',
-      lead: 'Define tus reglas de precio una vez y cada línea del presupuesto las aplica.',
+      title: 'Presupuestos con tu margen y el IVA',
+      lead: 'Crea el presupuesto línea a línea desde tu catálogo. Cada línea muestra lo que te cuesta, lo que paga el cliente y tu margen.',
       visual: 'margin',
       features: [
-        { title: 'Procedimientos de precios', body: ['Un procedimiento de precios convierte tus tarifas netas en precios de venta: tu margen, el IVA que corresponde y la comisión cuando vende el viaje otra agencia o un colaborador.'] },
-        { title: 'Incluido y no incluido', body: ['Lo que cubre el precio y lo que no, en una lista en el presupuesto.'] },
-        { title: 'Versiones', body: ['¿El cliente pide un hotel más barato? Haz una versión nueva. La anterior se conserva y puedes reabrirla cuando quieras.'] }
+        { title: 'Tus reglas de precio', body: ['Define una vez cómo se suman tu margen y el IVA al precio de un proveedor. Cada línea del presupuesto se calcula después de la misma manera.'] },
+        { title: 'Lo que ve el cliente', body: ['El cliente ve los servicios y los precios. Tus costes y tus márgenes se quedan dentro de tu agencia.'] },
+        { title: 'Versiones', body: ['¿El cliente pide un hotel más barato? Cambia el presupuesto y envíalo de nuevo. La versión enviada antes se conserva y se puede restaurar.'] }
       ]
     },
     {
       id: 'send',
       kicker: 'Envío y seguimiento',
-      title: 'Envío y seguimiento',
-      lead: 'El presupuesto se envía por email en el idioma del cliente. Siete días después vuelve a ti para el seguimiento.',
+      title: 'Envío del presupuesto y seguimiento',
+      lead: 'El presupuesto sale por email en PDF, en el idioma del cliente. Una semana después, Traviosoft te recuerda hacer el seguimiento.',
       visual: 'followup',
       features: [
-        { title: 'Plantillas de email', body: ['Tus propios textos de email, en cada idioma. El presupuesto va adjunto y el email queda listo para enviar.'] },
-        { title: 'En el idioma del cliente', body: ['Español, catalán, inglés, francés e italiano. El presupuesto, el email y los documentos siguen el idioma del cliente.'] },
-        { title: 'Seguimiento a los 7 días', body: ['Una semana después del envío, el presupuesto aparece en tu lista de seguimiento.'] }
+        { title: 'Plantillas de email', body: ['Escribe tus textos de email una vez, en cada idioma. Cuando envías un presupuesto, el email está listo con el PDF adjunto.'] },
+        { title: 'En el idioma del cliente', body: ['Español, catalán, inglés, francés o italiano. El presupuesto y su email se escriben en el idioma del cliente.'] },
+        { title: 'Seguimiento a los 7 días', body: ['Siete días después del envío, el presupuesto aparece en tu lista de presupuestos por seguir. Puedes elegir otra fecha.'] }
       ]
     },
     {
       id: 'proposal',
       kicker: 'Propuesta',
-      title: 'Una página con el viaje',
-      lead: 'El cliente recibe un enlace a una página con el viaje, en su idioma y con tu logo.',
+      title: 'El presupuesto como página web',
+      lead: 'El cliente también puede abrir el presupuesto como una página web, con fotos del viaje, en su idioma.',
       visual: 'proposal',
       features: [
-        { title: 'Una página de propuesta para compartir', body: ['Un enlace con el viaje, los servicios y el precio. Se abre en cualquier móvil.'] },
-        { title: 'Tu marca', body: ['Tu logo y tus colores en la página y en todos los documentos.'] },
-        { title: 'Las mismas cifras en todas partes', body: ['La propuesta, el PDF del presupuesto y después la factura salen de las mismas líneas. Cambia un precio una vez y queda bien en todas partes.'] }
+        { title: 'Compartida con un enlace', body: ['El enlace va en el email del presupuesto. La página lleva tu logo y tus colores y se abre en cualquier móvil.'] },
+        { title: 'Incluido y no incluido', body: ['Para cada servicio, la página indica lo que cubre el precio y lo que es extra.'] },
+        { title: 'Los mismos precios que el presupuesto', body: ['La página, el PDF y después las facturas usan las mismas líneas, así que los precios coinciden.'] }
       ]
     },
     {
       id: 'partners',
       kicker: 'Agencias colaboradoras',
       title: 'Las comisiones y tu margen real',
-      lead: 'Presupuesta a la agencia colaboradora, conserva a su cliente en el viaje y liquida su comisión con las mismas cifras.',
+      lead: 'Cuando otra agencia vende tu viaje a su propio cliente, el presupuesto incluye su comisión y muestra el margen que te queda.',
       visual: 'commission',
       features: [
-        { title: 'La agencia y su cliente', body: ['El presupuesto va a la agencia colaboradora y los viajeros son sus clientes. Ambos están en el viaje, del primer presupuesto a la última factura.'] },
-        { title: 'La comisión en el precio', body: ['Fija la comisión de la agencia en el presupuesto. Está en el precio de venta desde la primera línea y tu margen sigue a la vista para ti.'] },
-        { title: 'Liquidaciones de comisión', body: ['Lo que debes a cada agencia, por periodo, según los viajes que te envió. Se liquida con un clic.'] }
+        { title: 'La agencia y su cliente', body: ['El presupuesto va dirigido a la agencia y los viajeros figuran en él. Ambos siguen en el viaje hasta la última factura.'] },
+        { title: 'La comisión en el precio', body: ['Introduce la comisión de la agencia en el presupuesto. El precio de venta la incluye y ves tu margen después de la comisión.'] },
+        { title: 'Liquidaciones de comisión', body: ['Consulta lo que debes a cada agencia por los viajes que te trajo, periodo a periodo, y márcalo como pagado con un clic.'] }
       ]
     }
   ],
   faq: [
-    { q: '¿Puedo importar mi catálogo actual?', a: ['Sí. Importamos tus productos, precios y proveedores desde tus hojas de cálculo durante la configuración. La configuración y la importación son gratis con facturación anual.'] },
-    { q: '¿Pueden varios proveedores vender el mismo hotel o servicio?', a: ['Sí. Un producto puede tener varios proveedores, cada uno con sus tarifas. Eliges el proveedor por viaje.'] },
-    { q: '¿Qué ve mi cliente?', a: ['Un presupuesto limpio con nombres pensados para el cliente, precios por persona, lo incluido y lo no incluido, en su idioma y con tu marca. Tus tarifas netas y tus márgenes quedan solo para tu equipo.'] },
-    { q: '¿Tengo que usar el catálogo en todos los presupuestos?', a: ['Un presupuesto puede mezclar líneas del catálogo y líneas sueltas.'] }
+    { q: '¿Puedo importar mi catálogo actual?', a: ['Sí. Durante la configuración importamos tus productos, precios y proveedores desde tus hojas de cálculo. La configuración y la importación son gratis con facturación anual.'] },
+    { q: '¿Pueden varios proveedores vender el mismo hotel o servicio?', a: ['Sí. Un producto puede tener varios proveedores, cada uno con sus tarifas. Eliges el proveedor para cada viaje.'] },
+    { q: '¿Qué ve mi cliente?', a: ['Un presupuesto con el nombre que elijas para cada servicio y precios por persona, en su idioma y con tu marca. La página web del presupuesto indica también lo incluido y lo no incluido. Tus precios de compra y tus márgenes quedan solo para tu equipo.'] },
+    { q: '¿Tengo que usar el catálogo en todos los presupuestos?', a: ['Un presupuesto puede mezclar productos del catálogo y líneas que escribes solo para ese viaje.'] }
   ]
 };
 
@@ -98,92 +98,91 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Reservar y operar el viaje | Traviosoft',
   metaDescription:
-    'Todos los servicios del viaje en una lista. Los estados se actualizan solos, los emails de proveedores se archivan y el cliente recibe su itinerario.',
+    'Cuando se acepta un presupuesto, todos los servicios del viaje aparecen en una lista, listos para reservar. Las solicitudes de reserva salen a los proveedores por email, cada servicio muestra su estado y tu cliente recibe un itinerario día a día.',
   name: 'Reservar y operar',
   menuLine: 'Del presupuesto aceptado al viaje realizado',
   step: '2 de 4',
-  heroTitle: 'Reservas e itinerario del cliente',
+  heroTitle: 'Reservas, proveedores e itinerario del cliente',
   heroLead:
-    'Todos los servicios del viaje están en una sola lista de reservas. Las solicitudes salen a los proveedores con un clic, sus respuestas se archivan en el viaje y el viajero tiene su página de itinerario.',
+    'Cuando el cliente acepta el presupuesto, todos los servicios del viaje aparecen en una lista, listos para reservar. Las solicitudes de reserva salen a tus proveedores por email, ves lo que está confirmado y el viajero recibe un itinerario día a día.',
   heroVisual: 'order',
   chapters: [
     {
       id: 'order',
       kicker: 'Reservas',
       title: 'Cada reserva lista para el viaje',
-      lead: 'Todos los servicios del viaje están en una sola lista. Un clic envía las solicitudes de reserva, los proveedores confirman y el viaje está listo.',
+      lead: 'El hotel, el guía, los traslados y las visitas del presupuesto aceptado aparecen en una lista, listos para reservar. Envía las solicitudes de reserva y los proveedores confirman.',
       visual: 'confirm',
       features: [
-        { title: 'Todos los servicios en una lista', body: ['El presupuesto aceptado trae el hotel, el guía, el coche y las visitas, con sus fechas, viajeros y precios. Nada que volver a escribir.'] },
-        { title: 'Solicitudes de reserva en un clic', body: ['Cada proveedor recibe su solicitud de reserva por email, con las fechas y los viajeros. Sus respuestas se archivan en el viaje.'] },
-        { title: 'Cambios tras la confirmación', body: ['¿El cliente añade una noche? Actualiza el viaje y la reserva lo sigue, así el equipo trabaja siempre con la última versión.'] }
+        { title: 'Todos los servicios en una lista', body: ['Los servicios vienen del presupuesto aceptado, con sus fechas, viajeros y precios ya rellenados.'] },
+        { title: 'Solicitudes de reserva por email', body: ['Cada proveedor recibe su solicitud de reserva con los servicios, las fechas y el número de viajeros. La respuesta se guarda con el viaje.'] },
+        { title: 'Cambios tras la confirmación', body: ['¿El cliente añade una noche? Cambia el presupuesto y las reservas lo siguen, para que el equipo trabaje con la versión actual.'] }
       ]
     },
     {
       id: 'status',
       kicker: 'Estados',
       title: 'Estados de reserva en cada viaje',
-      lead: 'Ves de un vistazo qué servicios están confirmados y cuáles esperan al proveedor.',
+      lead: 'En cada viaje ves qué servicios están confirmados y cuáles esperan todavía al proveedor.',
       visual: 'statuses',
       features: [
-        { title: 'Una lista de reservas por viaje', body: ['Hotel, guía, coche, billetes: cada servicio indica si está por reservar, esperando al proveedor o confirmado.'] },
-        { title: 'Etiquetas que se actualizan solas', body: ['Cuando se confirma el último servicio, el viaje aparece como reservado.'] },
-        { title: 'Archivo', body: ['Los viajes terminados van al archivo y se pueden seguir buscando. Un registro borrado se puede recuperar desde la papelera.'] }
+        { title: 'Un estado por servicio', body: ['Hotel, guía, coche, billetes: cada uno está por reservar, esperando al proveedor o confirmado.'] },
+        { title: 'Un estado para todo el viaje', body: ['Cada viaje muestra cuántos de sus servicios están confirmados, por ejemplo 3 de 7, y aparece como todo reservado después del último.'] },
+        { title: 'Las reservas que te necesitan', body: ['Una lista reúne las reservas que siguen esperando la respuesta de un proveedor, los bloqueos que vencen pronto y las que hay que reconfirmar antes del viaje.'] }
       ]
     },
     {
       id: 'suppliers',
       kicker: 'Proveedores',
-      title: 'Fichas y emails de proveedores',
-      lead: 'Contactos, documentos y emails, archivados en el proveedor y en el viaje.',
+      title: 'Los proveedores y sus emails',
+      lead: 'Cada proveedor tiene sus contactos, documentos y tarifas en un solo lugar. Los emails sobre una reserva se guardan con el viaje al que pertenecen.',
       visual: 'suppliers',
       features: [
-        { title: 'Emails de proveedores archivados por ti', body: ['Las confirmaciones y respuestas de los proveedores llegan al viaje al que pertenecen.'] },
-        { title: 'Bonos de servicio', body: ['Envía a cada guía, conductor u hotel un bono claro con fechas, nombres y detalles, directamente desde el viaje.'] },
-        { title: 'Peticiones de disponibilidad y órdenes de compra', body: ['Pide disponibilidad a un hotel y envía después la orden de compra desde el viaje. Las respuestas y los cambios vuelven a la reserva.'], premium: true }
+        { title: 'Los emails de proveedores en el viaje correcto', body: ['Una confirmación o una respuesta de un proveedor queda adjunta al viaje al que se refiere, donde todo el equipo puede leerla.'] },
+        { title: 'Bonos de servicio', body: ['Envía a cada guía, conductor u hotel un bono con las fechas, los horarios, los nombres y el punto de encuentro, directamente desde el viaje.'] },
+        { title: 'Peticiones de disponibilidad y órdenes de compra', body: ['Pregunta a un hotel si las fechas están disponibles y envía después la orden de compra con el precio acordado. El proveedor responde desde un enlace y el estado de la reserva se actualiza.'], premium: true }
       ]
     },
     {
       id: 'itinerary',
       kicker: 'Itinerario del cliente',
       title: 'Un itinerario día a día',
-      lead: 'Una página con cada día, los hoteles, los horarios y los contactos, que el viajero recibe por enlace.',
+      lead: 'El viajero recibe un enlace a una página web con cada día del viaje: los hoteles, los horarios y los contactos.',
       visual: 'itinerary',
       features: [
-        { title: 'Una página de itinerario para compartir', body: ['Un enlace, día a día. Se abre en cualquier móvil.'] },
-        { title: 'En el idioma del viajero y con tu marca', body: ['El itinerario sigue el idioma del cliente y lleva tu logo.'] },
-        { title: 'Siempre actualizado', body: ['Cambia una hora de recogida en el viaje y la página muestra la nueva hora. El enlace no cambia.'] }
+        { title: 'Compartido con un enlace', body: ['Un enlace, día a día. Se abre en cualquier móvil.'] },
+        { title: 'En el idioma del viajero, con tu marca', body: ['La página está escrita en el idioma del cliente y lleva tu logo.'] },
+        { title: 'Siempre actualizado', body: ['Cambia una hora de recogida y la página muestra la nueva hora. El enlace no cambia.'] }
       ]
     },
     {
       id: 'groups',
       kicker: 'Grupos',
       title: 'Grupos y rooming lists',
-      lead: 'Listas de viajeros, servicios para parte del grupo y una rooming list por hotel.',
+      lead: 'Para viajes de grupo: la lista de viajeros, los servicios que solo toma una parte del grupo y una rooming list para cada hotel.',
       visual: 'rooming',
       features: [
-        { title: 'La lista de viajeros', body: ['Pega o importa la lista desde una hoja de cálculo, o envía al organizador un enlace a un formulario. Hasta 200 viajeros por viaje.'] },
-        { title: 'Servicios para parte del grupo', body: ['El día de golf para doce, la cena de gala para todos: cada servicio indica quién lo toma y las cifras de cada hotel lo siguen.'] },
-        { title: 'Una rooming list por hotel', body: ['Habitaciones creadas según quién comparte con quién, numeradas por hotel, listas para enviar en PDF o en hoja de cálculo.'] }
+        { title: 'La lista de viajeros', body: ['Pega o importa la lista desde una hoja de cálculo, o envía un enlace a un formulario para que los viajeros indiquen ellos mismos su pasaporte, su dieta y sus necesidades de accesibilidad. Hasta 200 viajeros por viaje.'] },
+        { title: 'Servicios para parte del grupo', body: ['El día de golf para doce, la cena de gala para todos. Cada servicio indica quién participa, para que cada proveedor reciba las cifras correctas.'] },
+        { title: 'Una rooming list por hotel', body: ['Las habitaciones se forman según quién comparte con quién y se numeran para cada hotel. Envía la lista en PDF o en hoja de cálculo.'] }
       ]
     },
     {
       id: 'calendar',
       kicker: 'Calendario',
       title: 'Los viajes en un calendario',
-      lead: 'Cada viaje es una banda en el calendario. En el móvil, los servicios del día aparecen en una lista.',
+      lead: 'El calendario muestra cada viaje como una banda, de la llegada a la salida. En el móvil, muestra en una lista los servicios del día.',
       visual: 'calendar',
       features: [
-        { title: 'Bandas de viaje', body: ['Ve cada viaje de la llegada a la salida y lo cargadas que están las próximas semanas.'] },
-        { title: 'El día en tu móvil', body: ['Las llegadas, traslados y visitas de hoy en una lista que puedes mirar entre dos reuniones.'] },
-        { title: 'Datos de los viajeros', body: ['Los viajeros rellenan su pasaporte, su dieta y sus necesidades de accesibilidad con un enlace a un formulario, y las respuestas llegan al viaje.'] }
+        { title: 'Bandas de viaje', body: ['Ve qué viajes coinciden y la carga de las próximas semanas.'] },
+        { title: 'El día en tu móvil', body: ['Las llegadas, traslados y visitas de hoy en una sola lista, fácil de consultar entre dos reuniones.'] }
       ]
     }
   ],
   faq: [
     { q: '¿Pueden mis guías y conductores ver el viaje?', a: ['Reciben por email un bono de servicio con lo que necesitan: fechas, horas, nombres y punto de encuentro.'] },
-    { q: '¿Qué pasa si el cliente cambia una fecha?', a: ['Actualiza el viaje. Los servicios, la página del itinerario y los bonos siguen el cambio, y los servicios que hay que volver a reservar aparecen otra vez como por reservar.'] },
-    { q: '¿Las respuestas de los proveedores quedan en el viaje?', a: ['Sí. Las solicitudes de reserva salen de Traviosoft desde tu propio buzón, y la respuesta de cada proveedor se archiva en su viaje, donde todo el equipo la ve.'] }
+    { q: '¿Qué pasa si el cliente cambia una fecha?', a: ['Cambia la fecha en el presupuesto. Las reservas, la página del itinerario y los bonos de servicio siguen el cambio, y los servicios que hay que volver a reservar aparecen de nuevo como por reservar.'] },
+    { q: '¿Las respuestas de los proveedores quedan en el viaje?', a: ['Sí. Las solicitudes de reserva salen de Traviosoft desde tu propio buzón, y la respuesta de cada proveedor se guarda con su viaje, donde la ve todo el equipo.'] }
   ]
 };
 
@@ -197,61 +196,61 @@ const getPaid: JobPage = {
   step: '3 de 4',
   heroTitle: 'Cobros, facturas y cifras',
   heroLead:
-    'Los cobros y las facturas salen del presupuesto aceptado, así que los importes cuadran.',
+    'Los pagos y las facturas salen del presupuesto aceptado, así que los importes coinciden. Las mismas cifras muestran tus ventas, el dinero recibido y el dinero que debes a proveedores.',
   heroVisual: 'payments',
   chapters: [
     {
       id: 'schedule',
       kicker: 'Calendario de pagos',
       title: 'Señal y liquidación con vencimientos',
-      lead: 'La señal y la liquidación se fijan en el presupuesto, con sus fechas de vencimiento.',
+      lead: 'Cada presupuesto tiene sus pagos planificados: normalmente una señal y una liquidación, cada una con su fecha de vencimiento.',
       visual: 'schedule',
       features: [
-        { title: 'Señal y liquidación', body: ['Un porcentaje o un importe, cada uno con su fecha de vencimiento, en cada viaje.'] },
-        { title: 'Lo que vence esta semana', body: ['Todos los pagos que vencen o ya han pasado su fecha, de todos tus viajes, en una lista.'] },
-        { title: 'Recordatorios de pago', body: ['Recordatorios al cliente antes y después de la fecha de vencimiento, en su idioma.'] }
+        { title: 'Señal y liquidación', body: ['Un porcentaje o un importe para cada pago, con su fecha de vencimiento. Tu calendario de pagos habitual se aplica con un clic.'] },
+        { title: 'Lo que vence esta semana', body: ['Una sola lista muestra todos los pagos de clientes que vencen o ya han vencido, en todos tus viajes.'] },
+        { title: 'Recordatorios de pago', body: ['Traviosoft puede escribir al cliente antes y después de un vencimiento, en su idioma y con tus palabras.'] }
       ]
     },
     {
       id: 'links',
       kicker: 'Enlaces de pago',
       title: 'Enlaces de pago en el email',
-      lead: 'Tu enlace de pago sale con el email y el cliente paga desde él.',
+      lead: 'El cliente paga en línea desde un enlace en tu email, con tarjeta por ejemplo.',
       visual: 'paylink',
       features: [
-        { title: 'Tu propio enlace de pago', body: ['Conecta el enlace de pago que ya usas. Sale junto con el email del presupuesto.'] },
-        { title: 'Registra un pago con un clic', body: ['Una transferencia o un pago con tarjeta se registra en el viaje y la etiqueta de pago se actualiza sola.'] }
+        { title: 'Tu propio enlace de pago', body: ['Usa el enlace del proveedor de pagos que ya tienes. Añádelo a un pago y sale en el email al cliente.'] },
+        { title: 'Los pagos registrados en el viaje', body: ['Cuando llega una transferencia o un pago con tarjeta, regístralo con un clic. El viaje aparece entonces como pagado en parte o pagado.'] }
       ]
     },
     {
       id: 'invoices',
       kicker: 'Facturas',
       title: 'Facturas desde el viaje',
-      lead: 'Las facturas de señal y final se hacen desde el viaje, con los importes del presupuesto.',
+      lead: 'Las facturas de señal y final se hacen a partir del presupuesto aceptado, con sus importes y los datos del cliente.',
       visual: 'invoices',
       features: [
-        { title: 'Facturas de señal y final', body: ['Hechas desde el viaje con un clic, con los datos del cliente y los importes correctos.'] },
-        { title: 'Facturas rectificativas', body: ['Una cancelación o un cambio se convierte en una factura rectificativa vinculada a la factura original.'] },
-        { title: 'Listo para tu gestoría', body: ['Un resumen en Excel o un zip con todos los PDF a final de mes, en dos clics.'] }
+        { title: 'Facturas de señal y final', body: ['Un clic crea la factura de una señal recibida y, más adelante, la factura final, que descuenta la señal.'] },
+        { title: 'Facturas rectificativas', body: ['Cuando un viaje se cancela o se modifica, una factura rectificativa anula la factura original y queda vinculada a ella.'] },
+        { title: 'Listo para tu gestoría', body: ['A final de mes, exporta un resumen en Excel o un archivo zip con todas las facturas en PDF.'] }
       ]
     },
     {
       id: 'dashboard',
       kicker: 'Panel',
       title: 'Ventas, viajes y tesorería',
-      lead: 'Ventas, viajes, cobros y pagos, para el periodo que elijas.',
+      lead: 'Tus ventas, tus viajes, el dinero recibido y el dinero por pagar en una sola página, para el periodo que elijas.',
       visual: 'dashboard',
       features: [
         { title: 'Ventas y viajes', body: ['Lo que has vendido y cuántos viajes, este mes, esta temporada o este año.'] },
-        { title: 'Cobros y pagos', body: ['Lo que te han pagado los clientes y lo que debes a los proveedores, lado a lado.'] },
-        { title: 'Hoy', body: ['Recordatorios, pagos que vencen y reservas por confirmar, reunidos para el día.'] }
+        { title: 'Cobros y pagos', body: ['Lo que te han pagado los clientes y lo que debes a proveedores, lado a lado.'] },
+        { title: 'Hoy', body: ['El trabajo del día en un solo lugar: recordatorios, pagos que vencen y reservas por confirmar.'] }
       ]
     }
   ],
   faq: [
-    { q: '¿Qué proveedores de pago funcionan?', a: ['Añades el enlace de pago del proveedor que ya usas. El cliente paga allí y tú registras el pago en el viaje.'] },
-    { q: '¿Puede mi gestoría obtener los archivos?', a: ['Sí. Exporta un resumen en Excel o un zip con todas las facturas en PDF de cualquier periodo.'] },
-    { q: '¿Sigue las normas de mi país?', a: ['La numeración de facturas por empresa y las facturas rectificativas funcionan en todas partes. El régimen especial de las agencias de viajes de España está integrado. En otros países, las facturas pasan por tu programa de facturación. Para tu país, pregúntanos en la demo.'] }
+    { q: '¿Qué proveedores de pago funcionan?', a: ['Cualquier proveedor que te dé un enlace de pago. Añades el enlace al pago, el cliente paga allí y registras el pago en el viaje.'] },
+    { q: '¿Puede mi gestoría obtener los archivos?', a: ['Sí. Exporta un resumen en Excel o un archivo zip con todas las facturas en PDF de cualquier periodo.'] },
+    { q: '¿Sigue las normas de mi país?', a: ['Las facturas se numeran en secuencia para cada una de tus empresas, y las facturas rectificativas están disponibles en todos los países. Para España, el régimen especial de las agencias de viajes está integrado. En otros países, la factura la emite tu propio programa de facturación, conectado a Traviosoft. Para tu país, pregúntanos en la demo.'] }
   ]
 };
 
@@ -265,53 +264,53 @@ const setup: JobPage = {
   step: '4 de 4',
   heroTitle: 'Marcas, idiomas, monedas y equipo',
   heroLead:
-    'Ajustes de marcas, idiomas, monedas, normas fiscales por país y usuarios. Se aplican a todos los viajes.',
+    'Tus marcas, idiomas, monedas, reglas fiscales y usuarios se configuran una vez. Cada presupuesto, reserva y factura los sigue después.',
   heroVisual: 'settings',
   chapters: [
     {
       id: 'brands',
       kicker: 'Marcas',
       title: 'Varias marcas en una cuenta',
-      lead: 'Gestiona una segunda marca o una segunda empresa desde el mismo sitio, cada una con su imagen y su numeración.',
+      lead: 'Una agencia que vende con dos nombres, o que gestiona dos empresas, trabaja desde una sola cuenta. Cada marca conserva su imagen.',
       visual: 'brands',
       features: [
-        { title: 'Logo y colores por marca', body: ['Cada presupuesto, propuesta, itinerario y factura lleva la marca del viaje.'], premium: true },
-        { title: 'Numeración por empresa', body: ['Cada entidad legal mantiene su propia numeración de facturas.'], premium: true }
+        { title: 'Logo y colores por marca', body: ['Cada viaje pertenece a una marca. Su presupuesto, su propuesta, su itinerario y su factura llevan el logo y los colores de esa marca.'], premium: true },
+        { title: 'Numeración por empresa', body: ['Cuando facturas desde dos empresas, cada una mantiene sus propios números de factura.'], premium: true }
       ]
     },
     {
       id: 'languages',
       kicker: 'Idiomas',
       title: 'Documentos en el idioma del cliente',
-      lead: 'Presupuestos, emails, propuestas e itinerarios en español, catalán, inglés, francés e italiano.',
+      lead: 'Presupuestos, emails, propuestas e itinerarios se escriben en español, catalán, inglés, francés o italiano, según el cliente.',
       visual: 'languages',
       features: [
-        { title: 'Documentos por idioma', body: ['Cada cliente tiene un idioma y todos los documentos lo siguen.'] },
+        { title: 'Un idioma por cliente', body: ['Indica una vez el idioma del cliente y todos los documentos para ese cliente lo siguen.'] },
         { title: 'Traducciones automáticas', body: ['Las descripciones de producto de tu catálogo se traducen por ti y puedes corregir cualquier traducción.'] },
-        { title: 'Plantillas de email por idioma', body: ['Tus propios textos en cada idioma, usados automáticamente.'] }
+        { title: 'Plantillas de email por idioma', body: ['Tu propia redacción en cada idioma, elegida automáticamente para cada cliente.'] }
       ]
     },
     {
       id: 'currencies',
       kicker: 'Monedas',
       title: 'Varias monedas',
-      lead: 'Lodges en dólares, un cliente en libras, tu contabilidad en euros. Cada presupuesto tiene su moneda y tus cifras cuadran en la tuya.',
+      lead: 'Lodges con precios en dólares, un cliente que paga en libras, tus cuentas en euros. Cada presupuesto tiene su moneda y tus cifras se suman en la tuya.',
       visual: 'currencies',
       features: [
         { title: 'Una moneda por cliente y por presupuesto', body: ['Presupuesta a un cliente británico en libras y a un colaborador estadounidense en dólares, desde el mismo catálogo.'], premium: true },
-        { title: 'Precios de proveedor en su moneda', body: ['Guarda cada tarifa en la moneda en que factura el proveedor. El presupuesto la convierte al cambio del día, con el margen de seguridad que elijas.'], premium: true },
-        { title: 'Tu contabilidad en una moneda', body: ['Facturas, cobros, márgenes e informes cuadran en tu moneda contable, con las diferencias de cambio calculadas por ti.'], premium: true }
+        { title: 'Precios de proveedor en su moneda', body: ['Guarda cada tarifa en la moneda en que factura el proveedor. El presupuesto la convierte al cambio del día, más un colchón que eliges para las variaciones del cambio.'], premium: true },
+        { title: 'Tus cuentas en una sola moneda', body: ['Facturas, pagos, márgenes e informes se suman en tu moneda contable. Las ganancias y pérdidas por tipo de cambio se calculan por ti.'], premium: true }
       ]
     },
     {
       id: 'country',
       kicker: 'Ajustes por país',
       title: 'Normas fiscales por país',
-      lead: 'Los regímenes fiscales y la facturación electrónica son ajustes. España está integrada.',
+      lead: 'El IVA de las agencias de viajes y la facturación electrónica cambian de un país a otro, por eso se configuran para tu país.',
       visual: 'country',
       features: [
-        { title: 'Regímenes de IVA para agencias de viajes', body: ['Para España, el régimen especial de las agencias de viajes (REAV) y su mención en tus facturas están integrados.'] },
-        { title: 'Facturación electrónica', body: ['Según el país, las facturas se envían desde Traviosoft o desde tu programa de facturación.'] }
+        { title: 'IVA sobre el margen', body: ['Para España, el régimen especial de las agencias de viajes con IVA sobre el margen (REAV) y su mención en tus facturas están integrados.'] },
+        { title: 'Facturación electrónica', body: ['Donde las facturas deben enviarse por vía electrónica, salen desde Traviosoft o desde tu programa de facturación, según el país.'] }
       ]
     },
     {
@@ -321,18 +320,18 @@ const setup: JobPage = {
       lead: 'Cada vendedor trabaja con sus propios clientes y viajes, y tú ves las ventas de toda la agencia.',
       visual: 'team',
       features: [
-        { title: 'Usuarios incluidos en tu plan', body: ['3 usuarios en los dos planes, y más cuando crezca tu equipo.'] },
-        { title: 'Equipos, carteras y roles', body: ['Da a cada equipo y a cada persona sus propios clientes y viajes, y decide quién ve qué.'], premium: true }
+        { title: 'Usuarios incluidos en tu plan', body: ['Los dos planes, Classic y Premium, incluyen 3 usuarios. Añade más cuando crezca tu equipo.'] },
+        { title: 'Equipos y roles', body: ['Da a cada persona sus propios clientes y viajes, agrupa a las personas en equipos y elige lo que cada una puede ver y hacer.'], premium: true }
       ]
     },
     {
       id: 'data',
       kicker: 'Tus datos',
       title: 'Datos y alojamiento',
-      lead: 'Cada agencia tiene su propio espacio separado, alojado en la Unión Europea, aparte de todas las demás agencias.',
+      lead: 'Los datos de tu agencia se guardan en su propio espacio, en servidores de la Unión Europea.',
       visual: 'safe',
       features: [
-        { title: 'Un espacio propio para tu agencia', body: ['Tus datos viven en su propio espacio, aparte de las demás agencias.'] },
+        { title: 'Un espacio propio para tu agencia', body: ['Tus clientes, precios y viajes se almacenan aparte de los de otras agencias.'] },
         { title: 'Alojado en la UE', body: ['Tus datos se quedan en la Unión Europea, bajo el RGPD.'] },
         { title: 'Llévate tus datos', body: ['Si te das de baja, recuperas tus datos en formatos estándar.'] }
       ]
@@ -340,20 +339,20 @@ const setup: JobPage = {
     {
       id: 'connections',
       kicker: 'Conexiones',
-      title: 'Conexiones',
-      lead: 'Tus otros programas pueden leer y escribir tus datos de Traviosoft, con los mismos permisos que en la aplicación.',
+      title: 'Conexiones con tus otras herramientas',
+      lead: 'Tu web, tu programa de contabilidad y tu asistente de IA pueden trabajar con tus datos de Traviosoft. Cada conexión tiene los permisos que le das.',
       visual: 'connections',
       features: [
-        { title: 'Tu web y tu contabilidad', body: ['Tu web, tu programa de contabilidad o un desarrollador con el que trabajes pueden leer y escribir tus datos de Traviosoft.'], premium: true },
-        { title: 'Tus herramientas de IA', body: ['Conecta el asistente de IA que ya usas, como Claude o ChatGPT, a tus datos de Traviosoft, con los mismos permisos que la persona que lo conecta.'], premium: true },
-        { title: 'El asistente dentro de Traviosoft', body: ['Pregunta qué te necesita hoy, pide un presupuesto preparado desde tu catálogo o convierte la lista de precios de un proveedor en precios de catálogo. Cada cambio espera tu visto bueno.'], premium: true }
+        { title: 'Tu web y tu contabilidad', body: ['El formulario de contacto de tu web puede llegar directamente a tus solicitudes, y tu programa de contabilidad puede recoger las facturas y los pagos.'], premium: true },
+        { title: 'Tus herramientas de IA', body: ['Conecta el asistente de IA que ya usas, como Claude o ChatGPT. Trabaja en Traviosoft con los permisos de la persona que lo conectó.'], premium: true },
+        { title: 'El asistente dentro de Traviosoft', body: ['Pregunta qué necesita tu atención hoy, pide un presupuesto preparado desde tu catálogo o convierte la lista de precios de un proveedor en precios de catálogo. Cada cambio espera tu visto bueno.'], premium: true }
       ]
     }
   ],
   faq: [
     { q: '¿Dónde están mis datos?', a: ['En un espacio propio para tu agencia, alojado en la Unión Europea.'] },
     { q: '¿Puedo irme con mis datos?', a: ['Sí. Recuperas tus datos en formatos estándar.'] },
-    { q: '¿Quién puede ver qué?', a: ['En Classic, cada usuario ve los viajes de la agencia. En Premium, cada equipo y cada persona pueden tener sus propios clientes, viajes y permisos.'] }
+    { q: '¿Quién puede ver qué?', a: ['En el plan Classic, cada usuario ve todos los viajes de la agencia. En el plan Premium, cada equipo y cada persona pueden tener sus propios clientes y viajes, con los permisos que elijas.'] }
   ]
 };
 
