@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/navigation';
 import { Logo } from '@/components/site/logo';
-import type { SiteContent } from '@/content/types';
+import { JOB_ORDER, type SiteContent } from '@/content/types';
 import { CookieSettingsLink } from '@/components/site/consent';
 import { Parallax } from '@/components/site/parallax';
 import { RouteTraveller } from '@/components/site/route-traveller';
@@ -33,7 +33,7 @@ export default function Footer({ c }: { c: SiteContent }) {
           <div>
             <h4>{f.product}</h4>
             <ul>
-              {(['sell', 'book', 'get-paid', 'setup'] as const).map(s => (
+              {JOB_ORDER.map(s => (
                 <li key={s}><Link href={`/${s}`}>{c.jobs[s].name}</Link></li>
               ))}
               <li><Link href="/pricing">{c.nav.pricing}</Link></li>

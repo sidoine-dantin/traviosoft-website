@@ -16,7 +16,9 @@ export type Locale = 'es' | 'en' | 'fr' | 'it' | 'pt';
 /** BCP 47 tag per locale, for hreflang and <html lang> (Portuguese is the European variant). */
 export const LANG_TAG: Record<Locale, string> = { es: 'es', en: 'en', fr: 'fr', it: 'it', pt: 'pt-PT' };
 
-export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
+export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup' | 'ai-assistant';
+/** The product pages in menu order. */
+export const JOB_ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup', 'ai-assistant'];
 /** A product page, optionally with the topic to land on (`sell#quotes`). */
 export type JobLink = JobSlug | `${JobSlug}#${string}`;
 
@@ -42,7 +44,8 @@ export type VisualKey =
   | 'languages'
   | 'team'
   | 'safe'
-  | 'connections';
+  | 'connections'
+  | 'assistant';
 
 export type Feature = {
   title: string;
@@ -193,6 +196,33 @@ export type Plan = {
 export type CompareCell = boolean | string | { text: string; was?: string; option?: boolean };
 export type CompareSection = { title: string; rows: { f: string; classic: CompareCell; premium: CompareCell }[] };
 
+/** The AI assistant: its product page, the band on the home page and the simulation on its page. */
+export type AiText = {
+  page: JobPage;
+  /** home band */
+  home: { title: string; body: string; link: string };
+  /** hero picture: one question and its answer; {owed} and {overdue} are amounts */
+  hero: { ask: string; answer: string };
+  sim: AiSimText;
+};
+
+/** The simulation: a chat with the AI assistant beside the Traviosoft screens it changes. Sample data only. */
+export type AiSimText = {
+  title: string; lead: string;
+  chatTitle: string; chatSub: string; appTitle: string; appSub: string;
+  pick: string; restart: string; allow: string; deny: string; denied: string; thinking: string;
+  /** the answer shown on the question once it is answered */
+  allowedTag: string; deniedTag: string;
+  quotes: string; bookings: string; review: string; reviewEmpty: string; approve: string;
+  draft: string; sent: string; requested: string; confirmed: string;
+  /** sample records */
+  bianchiTrip: string; olabarriTrip: string; irisTrip: string; hotelSeville: string; guideCordoba: string; hotelGranada: string;
+  today: { prompt: string; answer: string; rows: { t: string; s: string }[] };
+  quote: { prompt: string; askTitle: string; askSub: string; done: string };
+  booking: { prompt: string; askTitle: string; askSub: string; done: string };
+  remove: { prompt: string; askTitle: string; askSub: string; queued: string; reviewItem: string; approved: string };
+};
+
 export type SiteContent = {
   locale: Locale;
   nav: {
@@ -234,6 +264,7 @@ export type SiteContent = {
     facts: { k: string; v: string }[];
   };
   jobs: Record<JobSlug, JobPage>;
+  ai: AiText;
   pricing: {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;

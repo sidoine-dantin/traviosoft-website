@@ -30,6 +30,7 @@ export const pagePaths = [
   '/book',
   '/get-paid',
   '/setup',
+  '/ai-assistant',
   '/pricing',
   '/demo',
   '/switch',

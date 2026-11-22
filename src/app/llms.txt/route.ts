@@ -1,4 +1,5 @@
 import { getContent, locales } from '@/content';
+import { JOB_ORDER } from '@/content/types';
 import { baseUrl } from '@/lib/seo';
 import { PRICES } from '@/content/prices';
 
@@ -16,7 +17,7 @@ export function GET() {
     ...en.home.facts.map(f => `- ${f.k}: ${f.v}`),
     '',
     '## Product (English)',
-    ...(['sell', 'book', 'get-paid', 'setup'] as const).map(s => `- [${en.jobs[s].name}](${baseUrl}/en/${s}): ${en.jobs[s].metaDescription}`),
+    ...JOB_ORDER.map(s => `- [${en.jobs[s].name}](${baseUrl}/en/${s}): ${en.jobs[s].metaDescription}`),
     `- [Pricing](${baseUrl}/en/pricing): ${en.pricing.metaDescription}`,
     `- [FAQ](${baseUrl}/en/faq): ${en.faqPage.metaDescription}`,
     `- [About](${baseUrl}/en/about): ${en.about.metaDescription}`,

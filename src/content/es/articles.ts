@@ -931,13 +931,14 @@ const aiTools: Article = {
       type: 'list',
       items: [
         'Claude (aplicación o web): Ajustes, Conectores, Añadir conector personalizado, y pega tu dirección de Traviosoft.',
-        'ChatGPT: Ajustes, Conectores, Añadir, con la misma dirección.',
+        'ChatGPT: Configuración, Aplicaciones, Configuración avanzada, Modo desarrollador, y crea una aplicación con la misma dirección.',
+        'Mistral (Le Chat): Contexto, Conectores, Añadir conector, Conector MCP personalizado, con la misma dirección.',
         'Las herramientas de automatización como n8n también pueden conectarse para hacer tareas automáticas.'
       ]
     },
     {
       type: 'p',
-      text: 'La herramienta de IA te lleva a Traviosoft para iniciar sesión. Te muestra lo que pide hacer y puedes desmarcar lo que prefieras no permitir.'
+      text: 'La herramienta de IA te lleva a Traviosoft para iniciar sesión. Eliges Solo lectura, o Leer y hacer cambios, y si también puede eliminar.'
     },
     { type: 'h2', text: 'Tú mantienes el control', id: 'control' },
     {
@@ -946,7 +947,7 @@ const aiTools: Article = {
         'El conector está desactivado hasta que un administrador lo activa.',
         'El administrador elige quién puede conectar una herramienta de IA.',
         'Una herramienta de IA nunca hace más de lo que puede hacer en la aplicación la persona que la conectó.',
-        'En modo seguro cada cambio espera en una lista de revisión a que esa persona lo apruebe.',
+        'Claude, ChatGPT y Mistral preguntan a la persona antes de cada cambio. Las eliminaciones, y los cambios de otras herramientas de IA, esperan en Traviosoft a que una persona los apruebe.',
         'Cada acción queda en el historial con el nombre de la persona que conectó la herramienta.',
         'Cualquier conexión se puede cortar al instante desde Traviosoft.'
       ]
@@ -958,7 +959,7 @@ const aiTools: Article = {
         { q: '¿Funciona con Gemini?', a: ['El conector funciona con cualquier herramienta de IA compatible con MCP. Google admite el MCP en sus herramientas Gemini para desarrolladores. La posibilidad de añadir un conector personalizado depende de la versión de Gemini.'] },
         { q: '¿El conector MCP está incluido en mi plan?', a: ['Sí. Está incluido en Classic y en Premium. El asistente integrado es opcional en los dos planes, con límites de uso.'] },
         { q: '¿La IA ve todos nuestros datos?', a: ['Ve lo que ve la persona que la conectó, y nada más. Un administrador también puede permitir solo la lectura y bloquear cualquier cambio.'] },
-        { q: '¿La IA puede escribir sola a los clientes?', a: ['En modo seguro, activado por defecto, los cambios esperan la aprobación de una persona. Tú decides lo que puede hacer.'] }
+        { q: '¿La IA puede enviar emails?', a: ['Los presupuestos y las facturas llegan a los clientes desde Traviosoft. La IA puede enviar una solicitud de reserva o de disponibilidad a un proveedor, cuando la persona lo permite.'] }
       ]
     }
   ]

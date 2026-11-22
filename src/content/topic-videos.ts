@@ -11,30 +11,35 @@ export const TOPIC_VIDEOS: Record<string, readonly string[]> = {
     'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
     'schedule', 'links', 'invoices', 'dashboard',
     'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+    'ask', 'work', 'approve', 'rights', 'connect',
   ],
   fr: [
     'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
     'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
     'schedule', 'links', 'invoices', 'dashboard',
     'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+    'ask', 'work', 'approve', 'rights', 'connect',
   ],
   es: [
     'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
     'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
     'schedule', 'links', 'invoices', 'dashboard',
     'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+    'ask', 'work', 'approve', 'rights', 'connect',
   ],
   it: [
     'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
     'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
     'schedule', 'links', 'invoices', 'dashboard',
     'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+    'ask', 'work', 'approve', 'rights', 'connect',
   ],
   pt: [
     'requests', 'catalogue', 'quotes', 'send', 'proposal', 'partners',
     'order', 'status', 'suppliers', 'itinerary', 'groups', 'calendar',
     'schedule', 'links', 'invoices', 'dashboard',
     'brands', 'languages', 'currencies', 'country', 'team', 'data', 'connections',
+    'ask', 'work', 'approve', 'rights', 'connect',
   ],
 };
 

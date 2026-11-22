@@ -11,7 +11,7 @@ import { Consent } from '@/components/site/consent';
 import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
-import { LANG_TAG, type Locale } from '@/content/types';
+import { LANG_TAG, JOB_ORDER, type Locale } from '@/content/types';
 import { baseUrl, siteName, ORG_ID, SITE_ID, SOFTWARE_ID, PROFILES } from '@/lib/seo';
 import '../globals.css';
 
@@ -121,7 +121,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
   const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: baseUrl, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
 
-  const jobs = (['sell', 'book', 'get-paid', 'setup'] as const).map(s => ({
+  const jobs = JOB_ORDER.map(s => ({
     slug: s,
     name: c.jobs[s].name,
     menuLine: c.jobs[s].menuLine

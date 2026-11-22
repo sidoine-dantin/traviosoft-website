@@ -73,7 +73,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Várias equipas, cada uma com os seus clientes e viagens', classic: false, premium: true },
         { f: 'Funções à medida: quem vê e faz o quê', classic: false, premium: true },
         { f: 'Várias marcas e empresas numa só conta', classic: false, premium: true },
-        { f: 'Ligação ao assistente de IA que já usa (Claude, ChatGPT e outros)', classic: true, premium: true },
+        { f: 'Trabalhar no Traviosoft a partir do assistente de IA que já usa (Claude, ChatGPT, Mistral)', classic: true, premium: true },
         { f: 'O assistente de IA dentro do Traviosoft', classic: { text: 'Opcional, com limites de utilização', option: true }, premium: { text: 'Opcional, com limites de utilização', option: true } },
         { f: 'Acesso à API, para o seu programador ligar o seu site e outro software', classic: false, premium: true }
       ]
@@ -267,8 +267,12 @@ export const faqPage: SiteContent['faqPage'] = {
           a: ['Sim. Faça o orçamento à agência parceira, mantenha o cliente dela na viagem, junte a comissão do parceiro e liquide-a a partir de um extrato por período.']
         },
         {
-          q: 'Há um assistente de IA?',
-          a: ['Sim, como opção nos dois planos, com limites de utilização. Pergunte-lhe o que precisa de si hoje, peça-lhe um orçamento preparado a partir do seu catálogo ou que transforme a tabela de preços de um fornecedor em preços do catálogo; cada alteração aguarda a sua confirmação. Ligar aos seus dados do Traviosoft o assistente de IA que já usa está incluído nos dois planos.']
+          q: 'Posso usar o Traviosoft a partir do Claude ou do ChatGPT?',
+          a: ['Sim, nos dois planos. Ligue o Claude, o ChatGPT ou o Mistral e pergunte o que tem pendente, peça um orçamento a partir do seu catálogo ou registe a confirmação de um fornecedor. Pede-lhe confirmação antes de cada alteração e só faz o que a pessoa que o ligou pode fazer.']
+        },
+        {
+          q: 'Há um assistente dentro do Traviosoft?',
+          a: ['Sim, como opção nos dois planos, com limites de utilização. Pergunte-lhe o que precisa de si hoje, peça-lhe um orçamento preparado a partir do seu catálogo ou que transforme a tabela de preços de um fornecedor em preços do catálogo; cada alteração aguarda a sua confirmação.']
         }
       ]
     },

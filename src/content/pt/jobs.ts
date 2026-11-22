@@ -1,4 +1,5 @@
 import type { JobPage, JobSlug } from '../types';
+import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
@@ -356,4 +357,4 @@ const setup: JobPage = {
   ]
 };
 
-export const jobs: Record<JobSlug, JobPage> = { sell, book, 'get-paid': getPaid, setup };
+export const jobs: Record<JobSlug, JobPage> = { sell, book, 'get-paid': getPaid, setup, 'ai-assistant': ai.page };

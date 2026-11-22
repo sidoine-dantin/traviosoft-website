@@ -731,13 +731,14 @@ const aiTools: Article = {
       type: 'list',
       items: [
         'Claude (application ou web) : Paramètres, Connecteurs, Ajouter un connecteur personnalisé, puis collez votre adresse Traviosoft.',
-        'ChatGPT : Paramètres, Connecteurs, Ajouter, avec la même adresse.',
+        'ChatGPT : Paramètres, Applications, Paramètres avancés, Mode développeur, puis créez une application avec la même adresse.',
+        'Mistral (Le Chat) : Contexte, Connecteurs, Ajouter un connecteur, Connecteur MCP personnalisé, avec la même adresse.',
         'Les outils d’automatisation comme n8n peuvent aussi se connecter pour lancer des tâches automatiques.'
       ]
     },
     {
       type: 'p',
-      text: 'L’outil d’IA vous envoie sur Traviosoft pour vous connecter. Il affiche ce qu’il demande à faire et vous pouvez décocher ce que vous préférez ne pas autoriser.'
+      text: 'L’outil d’IA vous envoie sur Traviosoft pour vous connecter. Vous choisissez Lecture seule, ou Lire et modifier, et s’il peut aussi supprimer.'
     },
     { type: 'h2', text: 'Vous gardez la main', id: 'controle' },
     {
@@ -746,7 +747,7 @@ const aiTools: Article = {
         'Le connecteur reste désactivé tant qu’un administrateur ne l’active pas.',
         'L’administrateur choisit qui peut connecter un outil d’IA.',
         'Un outil d’IA ne fait jamais plus que la personne qui l’a connecté ne peut faire dans l’application.',
-        'En mode sécurisé, chaque changement attend dans une liste de validation que cette personne l’approuve.',
+        'Claude, ChatGPT et Mistral demandent à la personne avant chaque changement. Les suppressions, et les changements venant d’autres outils d’IA, attendent dans Traviosoft qu’une personne les approuve.',
         'Chaque action est enregistrée dans l’historique au nom de la personne qui a connecté l’outil.',
         'Chaque connexion peut être coupée immédiatement depuis Traviosoft.'
       ]
@@ -758,7 +759,7 @@ const aiTools: Article = {
         { q: 'Est-ce que ça fonctionne avec Gemini ?', a: ['Le connecteur fonctionne avec tout outil d’IA compatible MCP. Google prend en charge le MCP dans ses outils Gemini pour développeurs. La possibilité d’ajouter un connecteur personnalisé dépend de la version de Gemini.'] },
         { q: 'Le connecteur MCP est-il inclus dans mon offre ?', a: ['Oui. Il est inclus dans Classic et dans Premium. L’assistant intégré est une option dans les deux offres, avec des limites d’utilisation.'] },
         { q: 'L’IA voit-elle toutes nos données ?', a: ['Elle voit ce que voit la personne qui l’a connectée, et rien de plus. Un administrateur peut aussi n’autoriser que la lecture et bloquer tout changement.'] },
-        { q: 'L’IA peut-elle écrire seule à des clients ?', a: ['En mode sécurisé, activé par défaut, les changements attendent l’accord d’une personne. Vous décidez de ce qu’elle peut faire.'] }
+        { q: 'L’IA peut-elle envoyer des e-mails ?', a: ['Les devis et les factures partent vers les clients depuis Traviosoft. L’IA peut envoyer une demande de réservation ou de disponibilité à un prestataire, une fois que la personne l’autorise.'] }
       ]
     }
   ]

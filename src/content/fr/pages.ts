@@ -71,7 +71,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Plusieurs équipes, chacune avec ses clients et ses voyages', classic: false, premium: true },
         { f: 'Rôles sur mesure : qui voit et fait quoi', classic: false, premium: true },
         { f: 'Plusieurs marques et sociétés dans un compte', classic: false, premium: true },
-        { f: 'Connexion à l’assistant d’IA que vous utilisez déjà (Claude, ChatGPT et autres)', classic: true, premium: true },
+        { f: 'Travailler dans Traviosoft depuis l’assistant d’IA que vous utilisez déjà (Claude, ChatGPT, Mistral)', classic: true, premium: true },
         { f: 'L’assistant d’IA dans Traviosoft', classic: { text: 'En option, avec des limites d’utilisation', option: true }, premium: { text: 'En option, avec des limites d’utilisation', option: true } },
         { f: 'Accès API, pour que votre développeur relie votre site et vos autres logiciels', classic: false, premium: true }
       ]
@@ -265,8 +265,12 @@ export const faqPage: SiteContent['faqPage'] = {
           a: ['Oui. Envoyez le devis à l’agence partenaire, gardez son client sur le voyage, ajoutez la commission du partenaire et réglez-la à partir d’un relevé par période.']
         },
         {
-          q: 'Y a-t-il un assistant IA ?',
-          a: ['Oui, en option dans les deux offres, avec des limites d’utilisation. Demandez-lui ce qui vous attend aujourd’hui, faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue ; chaque changement attend votre accord. La connexion à vos données Traviosoft de l’assistant d’IA que vous utilisez déjà est incluse dans les deux offres.']
+          q: 'Puis-je utiliser Traviosoft depuis Claude ou ChatGPT ?',
+          a: ['Oui, dans les deux offres. Connectez Claude, ChatGPT ou Mistral, puis demandez ce qui vous attend, faites préparer un devis depuis votre catalogue ou enregistrez la confirmation d’un prestataire. Il vous demande avant chaque changement et ne fait que ce que la personne qui l’a connecté peut faire.']
+        },
+        {
+          q: 'Y a-t-il un assistant dans Traviosoft ?',
+          a: ['Oui, en option dans les deux offres, avec des limites d’utilisation. Demandez-lui ce qui vous attend aujourd’hui, faites-lui préparer un devis depuis votre catalogue ou transformer la grille tarifaire d’un prestataire en prix catalogue ; chaque changement attend votre accord.']
         }
       ]
     },
