@@ -56,10 +56,10 @@ export const home: SiteContent['home'] = {
   tripTitle: "El recorrido de un viaje en Traviosoft",
   moments: [
     {"rec": "Andalucía · 2 viajeros", "title": "La solicitud", "body": "Llega a la lista de solicitudes, con cuánto tiempo lleva esperando y el siguiente paso.", "go": "Ver las solicitudes", "job": "sell#requests"},
-    {"rec": "Margen {margin} EUR", "title": "El presupuesto", "body": "Cada línea parte del coste del proveedor. Ve el margen del viaje antes de enviar la propuesta.", "go": "Ver los presupuestos", "job": "sell#quotes"},
-    {"rec": "Hotel en Sevilla: confirmado", "title": "Las reservas", "body": "Cuando el cliente acepta, cada proveedor recibe su solicitud, y su respuesta queda guardada en la línea.", "go": "Ver las reservas", "job": "book#order"},
+    {"rec": "Margen {margin} EUR", "title": "El presupuesto", "body": "Cada línea parte del coste del proveedor. Ves tu margen en el viaje antes de enviar el presupuesto.", "go": "Ver los presupuestos", "job": "sell#quotes"},
+    {"rec": "Hotel en Sevilla: confirmado", "title": "Las reservas", "body": "Cuando el cliente acepta, cada proveedor recibe su solicitud de reserva, y su respuesta queda guardada con el viaje.", "go": "Ver las reservas", "job": "book#order"},
     {"rec": "Señal {deposit} EUR: pagada", "title": "Los pagos", "body": "Los vencimientos salen del presupuesto aceptado. El cliente paga desde el enlace del correo.", "go": "Ver los pagos", "job": "get-paid#schedule"},
-    {"rec": "Factura final: {total} EUR", "title": "La factura", "body": "Recoge las líneas del presupuesto aceptado.", "go": "Ver las facturas", "job": "get-paid#invoices"}
+    {"rec": "Factura final: {total} EUR", "title": "La factura", "body": "Sale del presupuesto aceptado, con los mismos importes.", "go": "Ver las facturas", "job": "get-paid#invoices"}
   ],
   sitTitle: "Según su forma de trabajar",
   situations: [
@@ -75,12 +75,12 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "Mis proveedores facturan en dólares o en dírhams",
-      "s": "Costes en su moneda, precios en la suya, con el tipo de cambio del presupuesto guardado.",
+      "s": "Costes en su moneda, precios en la tuya. Cada presupuesto conserva su tipo de cambio.",
       "job": "setup#currencies"
     },
     {
       "t": "Trabajo con guías y conductores",
-      "s": "Hoja de servicio enviada al guía, y su pago seguido con el viaje.",
+      "s": "El guía recibe los detalles del día por correo, y lo que le debes queda con el viaje.",
       "job": "book#suppliers"
     },
     {
@@ -90,7 +90,7 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "Facturo en el régimen especial de agencias de viajes",
-      "s": "El IVA se calcula sobre su margen, con la mención del régimen en la factura.",
+      "s": "El IVA se calcula sobre tu margen, con la mención del régimen en la factura.",
       "job": "setup#country"
     },
     {
@@ -100,7 +100,7 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "Tenemos varias marcas o sociedades",
-      "s": "Cada una tiene sus documentos, sus menciones y su numeración de facturas.",
+      "s": "Cada una tiene su logo, sus documentos y sus números de factura.",
       "job": "setup#brands"
     }
   ],

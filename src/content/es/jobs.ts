@@ -162,9 +162,9 @@ const book: JobPage = {
       lead: 'Para viajes de grupo: la lista de viajeros, los servicios que solo toma una parte del grupo y una rooming list para cada hotel.',
       visual: 'rooming',
       features: [
-        { title: 'La lista de viajeros', body: ['Pega o importa la lista desde una hoja de cálculo, o envía un enlace a un formulario para que los viajeros indiquen ellos mismos su pasaporte, su dieta y sus necesidades de accesibilidad. Hasta 200 viajeros por viaje.'] },
-        { title: 'Servicios para parte del grupo', body: ['El día de golf para doce, la cena de gala para todos. Cada servicio indica quién participa, para que cada proveedor reciba las cifras correctas.'] },
-        { title: 'Una rooming list por hotel', body: ['Las habitaciones se forman según quién comparte con quién y se numeran para cada hotel. Envía la lista en PDF o en hoja de cálculo.'] }
+        { title: 'La lista de viajeros', body: ['Pega o importa la lista desde una hoja de cálculo, o envía un enlace a un formulario para que los viajeros indiquen ellos mismos su pasaporte, su dieta y sus necesidades de accesibilidad. Hasta 200 viajeros por viaje.'], premium: true },
+        { title: 'Servicios para parte del grupo', body: ['El día de golf para doce, la cena de gala para todos. Cada servicio indica quién participa, para que cada proveedor reciba las cifras correctas.'], premium: true },
+        { title: 'Una rooming list por hotel', body: ['Las habitaciones se forman según quién comparte con quién y se numeran para cada hotel. Envía la lista en PDF o en hoja de cálculo.'], premium: true }
       ]
     },
     {
@@ -208,7 +208,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Señal y liquidación', body: ['Un porcentaje o un importe para cada pago, con su fecha de vencimiento. Tu calendario de pagos habitual se aplica con un clic.'] },
         { title: 'Lo que vence esta semana', body: ['Una sola lista muestra todos los pagos de clientes que vencen o ya han vencido, en todos tus viajes.'] },
-        { title: 'Recordatorios de pago', body: ['Traviosoft puede escribir al cliente antes y después de un vencimiento, en su idioma y con tus palabras.'] }
+        { title: 'Recordatorios de pago', body: ['Traviosoft puede escribir al cliente antes y después de un vencimiento, en su idioma y con tus palabras.'], premium: true }
       ]
     },
     {
@@ -344,8 +344,8 @@ const setup: JobPage = {
       visual: 'connections',
       features: [
         { title: 'Tu web y tu contabilidad', body: ['El formulario de contacto de tu web puede llegar directamente a tus solicitudes, y tu programa de contabilidad puede recoger las facturas y los pagos.'], premium: true },
-        { title: 'Tus herramientas de IA', body: ['Conecta el asistente de IA que ya usas, como Claude o ChatGPT. Trabaja en Traviosoft con los permisos de la persona que lo conectó.'], premium: true },
-        { title: 'El asistente dentro de Traviosoft', body: ['Pregunta qué necesita tu atención hoy, pide un presupuesto preparado desde tu catálogo o convierte la lista de precios de un proveedor en precios de catálogo. Cada cambio espera tu visto bueno.'], premium: true }
+        { title: 'Tus herramientas de IA', body: ['Conecta el asistente de IA que ya usas, como Claude o ChatGPT. Trabaja en Traviosoft con los permisos de la persona que lo conectó.'] },
+        { title: 'El asistente dentro de Traviosoft', body: ['Pregunta qué necesita tu atención hoy, pide un presupuesto preparado desde tu catálogo o convierte la lista de precios de un proveedor en precios de catálogo. Cada cambio espera tu visto bueno. El asistente es una opción en los dos planes.'] }
       ]
     }
   ],

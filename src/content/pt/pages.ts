@@ -6,10 +6,10 @@ const FREE = 'Gratuito com faturação anual*';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Preços: Classic desde ${PRICES.classic.yearly} EUR por mês, Premium desde ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Dois planos para agências de viagens à medida e DMC. O Classic gere toda a agência desde ${PRICES.classic.yearly} EUR por mês; o Premium acrescenta grupos, várias equipas, moedas, compras e várias marcas. ${PRICES.usersIncluded} utilizadores incluídos, implementação gratuita com faturação anual.`,
+    `Dois planos para agências de viagens à medida e DMC. O Classic gere toda a agência desde ${PRICES.classic.yearly} EUR por mês; o Premium acrescenta grupos, várias equipas, moedas, notas de encomenda a fornecedores e várias marcas. ${PRICES.usersIncluded} utilizadores incluídos, implementação gratuita com faturação anual.`,
   title: 'Preços',
   productLink: 'Ver o produto',
-  lead: 'O Classic cobre toda a agência, do primeiro pedido à última fatura. O Premium acrescenta grupos, várias equipas, outras moedas, compras e várias marcas.',
+  lead: 'O Classic cobre toda a agência, do primeiro pedido à última fatura. O Premium acrescenta grupos, várias equipas, outras moedas, notas de encomenda a fornecedores e várias marcas.',
   yearly: 'Anual',
   monthly: 'Mensal',
   yearlyNote: 'Preços por mês, sem IVA.',
@@ -43,17 +43,17 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Pedidos e orçamentos com a sua margem e as comissões', classic: true, premium: true },
         { f: 'Catálogo com preços por época', classic: true, premium: true },
         { f: 'Agências parceiras e extratos de comissões', classic: true, premium: true },
-        { f: 'Proposta de viagem e itinerário dia a dia, com o seu logótipo e as suas cores', classic: true, premium: true },
+        { f: 'O orçamento como página web e o itinerário dia a dia, com o seu logótipo e as suas cores', classic: true, premium: true },
         { f: 'Documentos na língua do cliente', classic: true, premium: true },
-        { f: 'Várias moedas', classic: false, premium: true }
+        { f: 'Orçamentos e preços de fornecedores noutras moedas', classic: false, premium: true }
       ]
     },
     {
       title: 'Reservar',
       rows: [
-        { f: 'Viagens confirmadas e reservas, com os emails dos fornecedores guardados na viagem', classic: true, premium: true },
-        { f: 'Vouchers de serviço', classic: true, premium: true },
-        { f: 'Grupos: listas de viajantes, link de formulário e rooming lists', classic: false, premium: true },
+        { f: 'As reservas de cada orçamento aceite, com os emails dos fornecedores guardados na viagem', classic: true, premium: true },
+        { f: 'Vouchers de serviço para guias, motoristas e hotéis', classic: true, premium: true },
+        { f: 'Grupos: listas de viajantes, formulário preenchido pelos viajantes e rooming lists', classic: false, premium: true },
         { f: 'Pedidos de disponibilidade e notas de encomenda a fornecedores', classic: false, premium: true }
       ]
     },
@@ -63,18 +63,18 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Planos de pagamento e links de pagamento', classic: true, premium: true },
         { f: 'Lembretes de pagamento automáticos', classic: false, premium: true },
         { f: 'Faturas e notas de crédito', classic: 'Em Espanha: integradas. Noutros países: através do seu software de faturação', premium: 'Em Espanha: integradas. Noutros países: através do seu software de faturação' },
-        { f: 'Painel', classic: true, premium: true },
-        { f: 'Exportação contabilística', classic: false, premium: true }
+        { f: 'Painel com vendas, viagens e tesouraria', classic: true, premium: true },
+        { f: 'Exportação para o seu software de contabilidade', classic: false, premium: true }
       ]
     },
     {
       title: 'Equipa e ligações',
       rows: [
-        { f: 'Várias equipas', classic: false, premium: true },
-        { f: 'Funções personalizadas', classic: false, premium: true },
+        { f: 'Várias equipas, cada uma com os seus clientes e viagens', classic: false, premium: true },
+        { f: 'Funções à medida: quem vê e faz o quê', classic: false, premium: true },
         { f: 'Várias marcas e empresas numa só conta', classic: false, premium: true },
-        { f: 'Conector MCP para as suas ferramentas de IA (Claude, ChatGPT e outras)', classic: true, premium: true },
-        { f: 'O assistente integrado', classic: { text: 'Opcional, com limites de utilização', option: true }, premium: { text: 'Opcional, com limites de utilização', option: true } },
+        { f: 'Ligação ao assistente de IA que já usa (Claude, ChatGPT e outros)', classic: true, premium: true },
+        { f: 'O assistente de IA dentro do Traviosoft', classic: { text: 'Opcional, com limites de utilização', option: true }, premium: { text: 'Opcional, com limites de utilização', option: true } },
         { f: 'Acesso à API, para o seu programador ligar o seu site e outro software', classic: false, premium: true }
       ]
     },
@@ -194,7 +194,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       title: 'O seu primeiro orçamento real',
-      body: 'Configuramos as suas regras de margem, IVA e comissões e a sua marca, e formamos a sua equipa por videochamada. Faz um orçamento real com as suas próprias tarifas. Estamos disponíveis por email se precisar.'
+      body: 'Configuramos as suas regras de margem, IVA e comissões e a sua marca, e formamos a sua equipa por videochamada. Faz um orçamento real com as suas próprias tarifas. Respondemos às suas perguntas por email.'
     },
     {
       title: 'Os novos pedidos entram na aplicação',
@@ -248,7 +248,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'O que é o Traviosoft?',
-          a: ['Um software de gestão web para agências de viagens à medida e DMC. Cobre o pedido, o orçamento, a reserva com os serviços a reservar, o itinerário do cliente, os pagamentos e as faturas.']
+          a: ['Um software de gestão web para agências de viagens à medida e DMC. Cobre os pedidos, os orçamentos, as reservas, o itinerário do cliente, os pagamentos e as faturas.']
         },
         {
           q: 'Vários fornecedores podem vender o mesmo hotel ou serviço?',
@@ -256,7 +256,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'O que vê o meu cliente?',
-          a: ['Um orçamento limpo com nomes pensados para ele, preços por pessoa, o que está incluído e o que não está, na língua dele e com a sua marca. As suas tarifas net e as suas margens ficam reservadas à sua equipa.']
+          a: ['Um orçamento com o nome que escolher para cada serviço e preços por pessoa, na língua dele e com a sua marca. A página web do orçamento indica também o que está incluído e não incluído. Os seus preços de compra e as suas margens ficam reservados à sua equipa.']
         },
         {
           q: 'Os meus guias e motoristas podem ver a viagem?',
@@ -334,7 +334,7 @@ export const about: SiteContent['about'] = {
   lead: 'O Traviosoft é um software de gestão para agências de viagens à medida e DMC. Cada viagem fica num só lugar, do primeiro pedido à fatura final.',
   blocks: [
     { title: 'Pensado para viagens à medida', body: ['Cada viagem é diferente. O Traviosoft calcula cada serviço a partir da tarifa net do fornecedor, trabalha com vários fornecedores por serviço e gere grupos, moedas e documentos na língua do cliente.'] },
-    { title: 'Uma viagem, os mesmos números', body: ['O orçamento aceite dá origem às reservas, às prestações e às faturas. Toda a agência trabalha com os mesmos números, sem voltar a escrever nada.'] },
+    { title: 'Uma viagem, os mesmos números', body: ['O orçamento aceite dá origem às reservas, às prestações e às faturas. Toda a agência trabalha com os mesmos números, introduzidos uma só vez.'] },
     { title: 'Os seus dados', body: ['Cada agência tem o seu próprio espaço privado. Os seus dados estão alojados na União Europeia e pode exportá-los a qualquer momento.'] },
     { title: 'Trabalhar connosco', body: ['Configuramos a sua conta e importamos os seus dados consigo. O apoio é por email, com as pessoas que desenvolvem o Traviosoft.'] }
   ]

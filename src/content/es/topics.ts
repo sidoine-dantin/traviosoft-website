@@ -132,7 +132,7 @@ const netRates: Article = {
     { type: 'h2', text: 'Dónde entran los impuestos', id: 'impuestos' },
     { type: 'p', text: 'Cómo se aplica el IVA al recargo o a la comisión depende del país y de si la agencia vende en nombre propio o como intermediaria. Las páginas «Facturar en tu país» describen las reglas de varios países.' },
     { type: 'h2', text: 'En Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'En Traviosoft, un procedimiento de precios convierte las tarifas netas en precios de venta, con el margen, el IVA y la comisión cuando una agencia colaboradora vende el viaje.' },
+    { type: 'p', text: 'En Traviosoft, tus reglas de precios convierten las tarifas netas en precios de venta, con el margen, el IVA y la comisión cuando una agencia colaboradora vende el viaje.' },
     { type: 'h2', text: 'Preguntas', id: 'faq' },
     {
       type: 'faq',

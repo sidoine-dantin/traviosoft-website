@@ -162,9 +162,9 @@ const book: JobPage = {
       lead: 'Pour les voyages de groupe : la liste des voyageurs, les prestations pour une partie du groupe seulement, et une rooming list pour chaque hôtel.',
       visual: 'rooming',
       features: [
-        { title: 'La liste des voyageurs', body: ['Collez ou importez la liste depuis un tableur, ou envoyez un lien vers un formulaire pour que les voyageurs indiquent eux-mêmes leur passeport, leur régime alimentaire et leurs besoins d’accessibilité. Jusqu’à 200 voyageurs par voyage.'] },
-        { title: 'Des prestations pour une partie du groupe', body: ['La journée golf pour douze, le dîner de gala pour tous. Chaque prestation indique qui y participe, pour que chaque prestataire reçoive les bons effectifs.'] },
-        { title: 'Une rooming list par hôtel', body: ['Les chambres sont composées selon qui partage avec qui et numérotées pour chaque hôtel. Envoyez la liste en PDF ou en tableur.'] }
+        { title: 'La liste des voyageurs', body: ['Collez ou importez la liste depuis un tableur, ou envoyez un lien vers un formulaire pour que les voyageurs indiquent eux-mêmes leur passeport, leur régime alimentaire et leurs besoins d’accessibilité. Jusqu’à 200 voyageurs par voyage.'], premium: true },
+        { title: 'Des prestations pour une partie du groupe', body: ['La journée golf pour douze, le dîner de gala pour tous. Chaque prestation indique qui y participe, pour que chaque prestataire reçoive les bons effectifs.'], premium: true },
+        { title: 'Une rooming list par hôtel', body: ['Les chambres sont composées selon qui partage avec qui et numérotées pour chaque hôtel. Envoyez la liste en PDF ou en tableur.'], premium: true }
       ]
     },
     {
@@ -208,7 +208,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Acompte et solde', body: ['Un pourcentage ou un montant pour chaque paiement, avec sa date d’échéance. Votre échéancier habituel s’applique en un clic.'] },
         { title: 'Ce qui est dû cette semaine', body: ['Une seule liste affiche tous les paiements clients dus ou échus, sur l’ensemble de vos voyages.'] },
-        { title: 'Rappels de paiement', body: ['Traviosoft peut écrire au client avant et après une échéance, dans sa langue et avec vos mots.'] }
+        { title: 'Rappels de paiement', body: ['Traviosoft peut écrire au client avant et après une échéance, dans sa langue et avec vos mots.'], premium: true }
       ]
     },
     {
@@ -344,8 +344,8 @@ const setup: JobPage = {
       visual: 'connections',
       features: [
         { title: 'Votre site et votre comptabilité', body: ['Le formulaire de contact de votre site peut arriver directement dans vos demandes, et votre logiciel de comptabilité peut récupérer les factures et les paiements.'], premium: true },
-        { title: 'Vos outils d’IA', body: ['Connectez l’assistant d’IA que vous utilisez déjà, comme Claude ou ChatGPT. Il travaille dans Traviosoft avec les droits de la personne qui l’a connecté.'], premium: true },
-        { title: 'L’assistant dans Traviosoft', body: ['Demandez ce qui vous attend aujourd’hui, faites préparer un devis depuis votre catalogue ou transformez la grille tarifaire d’un prestataire en prix catalogue. Chaque changement attend votre accord.'], premium: true }
+        { title: 'Vos outils d’IA', body: ['Connectez l’assistant d’IA que vous utilisez déjà, comme Claude ou ChatGPT. Il travaille dans Traviosoft avec les droits de la personne qui l’a connecté.'] },
+        { title: 'L’assistant dans Traviosoft', body: ['Demandez ce qui vous attend aujourd’hui, faites préparer un devis depuis votre catalogue ou transformez la grille tarifaire d’un prestataire en prix catalogue. Chaque changement attend votre accord. L’assistant est une option des deux offres.'] }
       ]
     }
   ],

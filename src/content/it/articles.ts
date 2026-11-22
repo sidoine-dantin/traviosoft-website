@@ -76,7 +76,7 @@ const compares: Cmp[] = [
       ['Versioni del preventivo', 'Ogni versione è salvata e si può riaprire', 'Un file per versione'],
       ['Prenotazioni ai fornitori', 'Un elenco per viaggio con stati che si aggiornano da soli', 'Una colonna o un documento a parte'],
       ['Fatture', 'Create dal viaggio, numerate per società, con note di credito', 'Il tuo modello di fattura'],
-      ['Regole fiscali spagnole', 'Diciture REAV, attivate per paese', 'Da impostare nel tuo modello'],
+      ['Regole fiscali spagnole', 'Il regime IVA delle agenzie di viaggio (REAV) in fattura', 'Da impostare nel tuo modello'],
       ['Programma per il cliente', 'Una pagina da condividere, giorno per giorno, nella sua lingua', 'Un PDF o un file Word inviato per email'],
       ['Dati', 'Uno spazio separato per la tua agenzia, ospitato nell’UE', 'I tuoi file, dovunque li conservi']
     ],
@@ -109,7 +109,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Confrontiamo Traviosoft ed Ezus: a chi si rivolge ciascuno, prezzi pubblicati, lingue e avvio, e cosa fa meglio ciascuno per DMC e agenzie su misura.',
     title: 'Traviosoft o Ezus: un confronto indipendente per DMC e agenzie incoming',
-    lead: 'Ezus è un gestionale francese affermato per DMC, con molti clienti, prezzi pubblici e assistenza in cinque lingue. Traviosoft mostra un solo prezzo con gli utenti inclusi e aggiunge le diciture REAV per le agenzie in Spagna.',
+    lead: 'Ezus è un gestionale francese affermato per DMC, con molti clienti, prezzi pubblici e assistenza in cinque lingue. Traviosoft mostra un solo prezzo con gli utenti inclusi e aggiunge il regime IVA spagnolo delle agenzie di viaggio (REAV) per le agenzie in Spagna.',
     card: 'Due strumenti con prezzi pubblici: a chi si rivolge ciascuno e cosa include.',
     basis:
       'I dati di Ezus provengono dal suo sito e da elenchi pubblici, verificati il 3 novembre 2026. I prezzi cambiano: controlla sempre le pagine prezzi aggiornate di entrambi. Il numero di clienti di Ezus è quello che pubblica.',
@@ -129,14 +129,14 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'Vuoi un solo prezzo con gli utenti inclusi, e configurazione e importazione incluse con la fatturazione annuale.',
-      'La tua agenzia è in Spagna e vuoi le diciture REAV sulle fatture.',
+      'La tua agenzia è in Spagna e vuoi il regime IVA spagnolo delle agenzie di viaggio (REAV) sulle fatture.',
       'Lavori soprattutto in spagnolo e francese e vuoi documenti e modelli di email nella lingua del cliente.',
       'Preferisci uno strumento costruito intorno al percorso di un viaggio: richiesta, preventivo con margine, prenotazione, pagamento e fattura.'
     ],
     switching: SWITCH('Ezus'),
     faq: [
       { q: 'Come sono i prezzi di ciascuno?', a: [`Traviosoft Classic costa ${PRICES.classic.yearly} EUR al mese con fatturazione annuale, ${PRICES.usersIncluded} utenti inclusi, con configurazione e importazione incluse. Ezus Professional costa 75 EUR per utente al mese, con un pacchetto di onboarding da 1.990 EUR che include un avviamento guidato. Controlla le pagine prezzi aggiornate di entrambi.`] },
-      { q: 'Ezus funziona per la Spagna?', a: ['Sì. Ezus ha un sito e un’assistenza in spagnolo. Traviosoft include anche le diciture REAV per le agenzie in Spagna.'] },
+      { q: 'Ezus funziona per la Spagna?', a: ['Sì. Ezus ha un sito e un’assistenza in spagnolo. Traviosoft include anche il regime IVA spagnolo delle agenzie di viaggio (REAV) per le agenzie in Spagna.'] },
       { q: 'Posso provarli entrambi?', a: ['Entrambi funzionano con una demo.'] }
     ]
   },
@@ -155,7 +155,7 @@ const compares: Cmp[] = [
     rows: [
       ['Pensato per', 'Agenzie incoming, DMC e agenzie su misura', 'Gestione di agenzie di viaggi in Spagna, soprattutto dettaglianti'],
       ['Prezzo', `Classic da ${PRICES.classic.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Su richiesta'],
-      ['Conosciuto per', 'Preventivi con margine per riga, un catalogo stagionale, una pagina programma per il cliente e REAV', 'Una lunga storia con le agenzie di viaggi in Spagna']
+      ['Conosciuto per', 'Preventivi con margine per riga, un catalogo stagionale, una pagina programma per il cliente e il regime IVA spagnolo delle agenzie di viaggio (REAV)', 'Una lunga storia con le agenzie di viaggi in Spagna']
     ],
     otherBetter: [
       'Sei un’agenzia dettagliante che vende biglietteria, hotel e pacchetti di tour operator. Uno strumento pensato per quel lavoro di solito è più adatto.',
@@ -204,7 +204,7 @@ const compares: Cmp[] = [
       'Il tuo lavoro quotidiano è calcolare, inviare e seguire preventivi di viaggio con margine.',
       'Ti serve un catalogo con prezzi stagionali e più fornitori per servizio.',
       'Vuoi un elenco di prenotazioni per viaggio, voucher di servizio e un programma per il cliente.',
-      'La tua agenzia applica il REAV e vuoi le diciture su ogni fattura in automatico.'
+      'La tua agenzia applica il regime IVA delle agenzie di viaggio (REAV) e vuoi le diciture su ogni fattura in automatico.'
     ],
     switching:
       'Traviosoft gestisce il viaggio, dalla richiesta alla fattura, ed esporta un riepilogo Excel o uno zip di fatture PDF, che il commercialista può importare in Holded o in un altro programma di contabilità. La pagina [Passare a Traviosoft](/switch) descrive i passaggi.',
@@ -242,7 +242,7 @@ const compares: Cmp[] = [
     usBetter: [
       'Vuoi preventivare, prenotare e fatturare tutto il viaggio in un solo sistema ed essere operativo con una configurazione breve.',
       'Vuoi vedere il prezzo e gli utenti inclusi prima di chiedere una demo.',
-      'Il tuo mercato è la Spagna e vendi in spagnolo e francese, con il REAV.',
+      'Il tuo mercato è la Spagna e vendi in spagnolo e francese, con il regime IVA delle agenzie di viaggio (REAV).',
       'Vuoi che importiamo prodotti, prezzi e fornitori dai tuoi fogli di calcolo durante la configurazione.'
     ],
     switching: SWITCH('Lemax'),
@@ -260,7 +260,7 @@ const compares: Cmp[] = [
     metaDescription:
       'Tourwriter è un software neozelandese per DMC di lusso e travel designer. Confrontiamo a chi si rivolge ciascuno, piani, prezzi, lingue e cosa fa meglio ciascuno.',
     title: 'Traviosoft o Tourwriter: due strumenti per costruire viaggi',
-    lead: 'Tourwriter è un software neozelandese noto per i suoi programmi di viaggio curati, pensato per DMC di lusso e travel designer che lavorano in inglese. Traviosoft ha prezzi in euro con gli utenti inclusi, lavora in spagnolo e francese e include il REAV.',
+    lead: 'Tourwriter è un software neozelandese noto per i suoi programmi di viaggio curati, pensato per DMC di lusso e travel designer che lavorano in inglese. Traviosoft ha prezzi in euro con gli utenti inclusi, lavora in spagnolo e francese e include il regime IVA delle agenzie di viaggio (REAV).',
     card: 'Programmi di lusso curati in inglese e uno strumento con prezzi in euro in spagnolo e francese.',
     basis:
       'I dati di Tourwriter provengono dal suo sito (pagine piani e azienda), verificati il 3 novembre 2026. I suoi prezzi sono prezzi "a partire da" in dollari USA, per utente, con un preventivo per ogni team, quindi il totale reale può essere diverso.',
@@ -278,7 +278,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'Vuoi un prezzo in euro con gli utenti inclusi in ogni piano.',
-      'La tua agenzia è in Spagna e vuoi il REAV integrato.',
+      'La tua agenzia è in Spagna e vuoi il regime IVA delle agenzie di viaggio (REAV) integrato.',
       'I tuoi clienti parlano spagnolo o francese e vuoi preventivi ed email nella loro lingua.',
       'Vuoi configurazione e importazione incluse con la fatturazione annuale.'
     ],
@@ -441,7 +441,7 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Copre tutto il viaggio: richieste, un catalogo con prezzi stagionali, preventivi con margine e commissione, prenotazioni, pagamenti e fatture, con il REAV per la Spagna. Mostra il suo prezzo, e configurazione e importazione sono incluse con la fatturazione annuale.'
+      text: 'Copre tutto il viaggio: richieste, un catalogo con prezzi stagionali, preventivi con margine e commissione, prenotazioni, pagamenti e fatture, con il regime IVA delle agenzie di viaggio (REAV) per la Spagna. Mostra il suo prezzo, e configurazione e importazione sono incluse con la fatturazione annuale.'
     },
     { type: 'h3', text: 'Ezus' },
     {

@@ -162,9 +162,9 @@ const book: JobPage = {
       lead: 'For group trips: the list of travellers, services that only part of the group takes, and a rooming list for each hotel.',
       visual: 'rooming',
       features: [
-        { title: 'The travellers list', body: ['Paste or import the list from a spreadsheet, or send a form link so travellers fill in their own passport, diet and accessibility details. Up to 200 travellers per trip.'] },
-        { title: 'Services for part of the group', body: ['The golf day for twelve, the gala dinner for everyone. Each service lists who takes it, so every supplier gets the right numbers.'] },
-        { title: 'A rooming list per hotel', body: ['Rooms are made from who shares with whom and numbered for each hotel. Send the list as a PDF or a spreadsheet.'] }
+        { title: 'The travellers list', body: ['Paste or import the list from a spreadsheet, or send a form link so travellers fill in their own passport, diet and accessibility details. Up to 200 travellers per trip.'], premium: true },
+        { title: 'Services for part of the group', body: ['The golf day for twelve, the gala dinner for everyone. Each service lists who takes it, so every supplier gets the right numbers.'], premium: true },
+        { title: 'A rooming list per hotel', body: ['Rooms are made from who shares with whom and numbered for each hotel. Send the list as a PDF or a spreadsheet.'], premium: true }
       ]
     },
     {
@@ -208,7 +208,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Deposit and balance', body: ['A percentage or an amount for each payment, with its due date. Your usual schedule is applied in one click.'] },
         { title: 'What is due this week', body: ['One list shows every client payment that is due or past its date, across all your trips.'] },
-        { title: 'Payment reminders', body: ['Traviosoft can email the client before and after a due date, in their language and with your wording.'] }
+        { title: 'Payment reminders', body: ['Traviosoft can email the client before and after a due date, in their language and with your wording.'], premium: true }
       ]
     },
     {
@@ -344,8 +344,8 @@ const setup: JobPage = {
       visual: 'connections',
       features: [
         { title: 'Your website and accounting', body: ['Your website can send its contact form straight into your requests, and your accounting software can pick up invoices and payments.'], premium: true },
-        { title: 'Your AI tools', body: ['Connect the AI assistant you already use, such as Claude or ChatGPT. It works in Traviosoft with the rights of the person who connected it.'], premium: true },
-        { title: 'The assistant inside Traviosoft', body: ['Ask what needs your attention today, have a quote prepared from your catalog, or turn a supplier’s price list into catalog prices. Each change waits for your approval.'], premium: true }
+        { title: 'Your AI tools', body: ['Connect the AI assistant you already use, such as Claude or ChatGPT. It works in Traviosoft with the rights of the person who connected it.'] },
+        { title: 'The assistant inside Traviosoft', body: ['Ask what needs your attention today, have a quote prepared from your catalog, or turn a supplier’s price list into catalog prices. Each change waits for your approval. The assistant is an option on both plans.'] }
       ]
     }
   ],

@@ -755,7 +755,7 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .explorer-drop { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; fill: var(--green); }
 .explorer-dots a:focus-visible { outline: 3px solid var(--green); outline-offset: -4px; border-radius: 12px; }
 .explorer-topics { display: grid; min-width: 0; }
-.explorer .topic { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: center; }
+.explorer .topic { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 4vw, 64px); align-items: center; }
 .explorer .topic-visual { position: static; justify-content: center; }
 .explorer .topic-points { grid-template-columns: 1fr; gap: 28px; }
 @media (min-width: 901px) {

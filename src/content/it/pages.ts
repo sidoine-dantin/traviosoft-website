@@ -6,10 +6,10 @@ const FREE = 'Gratuito con fatturazione annuale*';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Prezzi: Classic da ${PRICES.classic.yearly} EUR al mese, Premium da ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Due piani per agenzie di viaggio su misura e DMC. Classic gestisce tutta l’agenzia da ${PRICES.classic.yearly} EUR al mese; Premium aggiunge gruppi, più team, valute, acquisti e più marchi. ${PRICES.usersIncluded} utenti inclusi, avvio gratuito con fatturazione annuale.`,
+    `Due piani per agenzie di viaggio su misura e DMC. Classic gestisce tutta l’agenzia da ${PRICES.classic.yearly} EUR al mese; Premium aggiunge gruppi, più team, valute, ordini di acquisto ai fornitori e più marchi. ${PRICES.usersIncluded} utenti inclusi, avvio gratuito con fatturazione annuale.`,
   title: 'Prezzi',
   productLink: 'Vedi il prodotto',
-  lead: 'Classic copre tutta l’agenzia, dalla prima richiesta all’ultima fattura. Premium aggiunge gruppi, più team, altre valute, acquisti e più marchi.',
+  lead: 'Classic copre tutta l’agenzia, dalla prima richiesta all’ultima fattura. Premium aggiunge gruppi, più team, altre valute, ordini di acquisto ai fornitori e più marchi.',
   yearly: 'Annuale',
   monthly: 'Mensile',
   yearlyNote: 'Prezzi al mese, IVA esclusa.',
@@ -43,17 +43,17 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Richieste e preventivi con il tuo margine e le commissioni', classic: true, premium: true },
         { f: 'Catalogo con prezzi per stagione', classic: true, premium: true },
         { f: 'Agenzie partner ed estratti conto delle commissioni', classic: true, premium: true },
-        { f: 'Proposta di viaggio e itinerario giorno per giorno, con il tuo logo e i tuoi colori', classic: true, premium: true },
+        { f: 'Il preventivo come pagina web e l’itinerario giorno per giorno, con il tuo logo e i tuoi colori', classic: true, premium: true },
         { f: 'Documenti nella lingua del cliente', classic: true, premium: true },
-        { f: 'Più valute', classic: false, premium: true }
+        { f: 'Preventivi e prezzi dei fornitori in altre valute', classic: false, premium: true }
       ]
     },
     {
       title: 'Prenotare',
       rows: [
-        { f: 'Pratiche e prenotazioni, con le email dei fornitori archiviate sul viaggio', classic: true, premium: true },
-        { f: 'Voucher di servizio', classic: true, premium: true },
-        { f: 'Gruppi: liste dei viaggiatori, link a un modulo e rooming list', classic: false, premium: true },
+        { f: 'Le prenotazioni di ogni preventivo accettato, con le email dei fornitori conservate sul viaggio', classic: true, premium: true },
+        { f: 'Voucher di servizio per guide, autisti e hotel', classic: true, premium: true },
+        { f: 'Gruppi: liste dei viaggiatori, modulo compilato dai viaggiatori e rooming list', classic: false, premium: true },
         { f: 'Richieste di disponibilità e ordini di acquisto ai fornitori', classic: false, premium: true }
       ]
     },
@@ -63,18 +63,18 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Scadenze di pagamento e link di pagamento', classic: true, premium: true },
         { f: 'Promemoria di pagamento automatici', classic: false, premium: true },
         { f: 'Fatture e note di credito', classic: 'In Spagna: integrate. Altrove: tramite il tuo software di fatturazione', premium: 'In Spagna: integrate. Altrove: tramite il tuo software di fatturazione' },
-        { f: 'Dashboard', classic: true, premium: true },
-        { f: 'Esportazione contabile', classic: false, premium: true }
+        { f: 'Dashboard con vendite, viaggi e cassa', classic: true, premium: true },
+        { f: 'Esportazione verso il tuo software di contabilità', classic: false, premium: true }
       ]
     },
     {
       title: 'Team e collegamenti',
       rows: [
-        { f: 'Più team', classic: false, premium: true },
-        { f: 'Ruoli personalizzati', classic: false, premium: true },
+        { f: 'Più team, ognuno con i suoi clienti e i suoi viaggi', classic: false, premium: true },
+        { f: 'Ruoli su misura: chi vede e fa cosa', classic: false, premium: true },
         { f: 'Più marchi e società in un solo account', classic: false, premium: true },
-        { f: 'Connettore MCP per i tuoi strumenti di IA (Claude, ChatGPT e altri)', classic: true, premium: true },
-        { f: 'L’assistente integrato', classic: { text: 'Opzionale, con limiti di utilizzo', option: true }, premium: { text: 'Opzionale, con limiti di utilizzo', option: true } },
+        { f: 'Collegamento all’assistente AI che usi già (Claude, ChatGPT e altri)', classic: true, premium: true },
+        { f: 'L’assistente AI dentro Traviosoft', classic: { text: 'Opzionale, con limiti di utilizzo', option: true }, premium: { text: 'Opzionale, con limiti di utilizzo', option: true } },
         { f: 'Accesso API, per collegare il tuo sito e altri software tramite il tuo sviluppatore', classic: false, premium: true }
       ]
     },
@@ -194,7 +194,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       title: 'Il tuo primo preventivo reale',
-      body: 'Configuriamo le tue regole di margine, IVA e commissioni e il tuo marchio, poi formiamo il tuo team in videochiamata. Prepari un preventivo reale con le tue tariffe. Siamo raggiungibili via email se ti blocchi.'
+      body: 'Configuriamo le tue regole di margine, IVA e commissioni e il tuo marchio, poi formiamo il tuo team in videochiamata. Prepari un preventivo reale con le tue tariffe. Rispondiamo alle tue domande via email.'
     },
     {
       title: 'Le nuove richieste entrano nell’app',
@@ -248,7 +248,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'Cos’è Traviosoft?',
-          a: ['Un gestionale web per agenzie di viaggio su misura e DMC. Copre la richiesta, il preventivo, la pratica e le prenotazioni, l’itinerario del cliente, i pagamenti e le fatture.']
+          a: ['Un gestionale web per agenzie di viaggio su misura e DMC. Copre le richieste, i preventivi, le prenotazioni, l’itinerario del cliente, i pagamenti e le fatture.']
         },
         {
           q: 'Più fornitori possono vendere lo stesso hotel o servizio?',
@@ -256,7 +256,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Cosa vede il mio cliente?',
-          a: ['Un preventivo pulito con i nomi pensati per lui, prezzi a persona, cosa è incluso e cosa no, nella sua lingua e con il tuo marchio. Le tue tariffe nette e i tuoi margini restano riservati al tuo team.']
+          a: ['Un preventivo con il nome che scegli per ogni servizio e i prezzi per persona, nella sua lingua e con il tuo marchio. La pagina web del preventivo indica anche cosa è incluso e non incluso. I tuoi prezzi di acquisto e i tuoi margini restano riservati al tuo team.']
         },
         {
           q: 'Le mie guide e i miei autisti possono vedere il viaggio?',
@@ -334,7 +334,7 @@ export const about: SiteContent['about'] = {
   lead: 'Traviosoft è un software gestionale per agenzie di viaggio su misura e DMC. Ogni viaggio è in un unico posto, dalla prima richiesta alla fattura finale.',
   blocks: [
     { title: 'Pensato per i viaggi su misura', body: ['Ogni viaggio è diverso. Traviosoft calcola ogni servizio dalla tariffa netta del fornitore, lavora con più fornitori per servizio e gestisce gruppi, valute e documenti nella lingua del cliente.'] },
-    { title: 'Un viaggio, gli stessi numeri', body: ['Il preventivo accettato genera le prenotazioni, le scadenze e le fatture. Tutta l’agenzia lavora sugli stessi numeri, senza ridigitare nulla.'] },
+    { title: 'Un viaggio, gli stessi numeri', body: ['Il preventivo accettato genera le prenotazioni, le scadenze e le fatture. Tutta l’agenzia lavora sugli stessi numeri, inseriti una sola volta.'] },
     { title: 'I tuoi dati', body: ['Ogni agenzia ha il proprio spazio privato. I tuoi dati sono ospitati nell’Unione europea e puoi esportarli in qualsiasi momento.'] },
     { title: 'Lavorare con noi', body: ['Configuriamo il tuo account e importiamo i tuoi dati insieme a te. L’assistenza è via email, con le persone che sviluppano Traviosoft.'] }
   ]

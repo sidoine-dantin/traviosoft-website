@@ -56,10 +56,10 @@ export const home: SiteContent['home'] = {
   tripTitle: "Il percorso di un viaggio in Traviosoft",
   moments: [
     {"rec": "Andalusia · 2 viaggiatori", "title": "La richiesta", "body": "Arriva nella lista delle richieste, con da quanto tempo aspetta e il passo successivo.", "go": "Vedi le richieste", "job": "sell#requests"},
-    {"rec": "Margine {margin} EUR", "title": "Il preventivo", "body": "Ogni riga parte dal costo del fornitore. Vedi il margine del viaggio prima di inviare la proposta.", "go": "Vedi i preventivi", "job": "sell#quotes"},
-    {"rec": "Hotel a Siviglia: confermato", "title": "Le prenotazioni", "body": "Quando il cliente accetta, ogni fornitore riceve la sua richiesta, e la risposta viene salvata sulla riga.", "go": "Vedi le prenotazioni", "job": "book#order"},
+    {"rec": "Margine {margin} EUR", "title": "Il preventivo", "body": "Ogni riga parte dal costo del fornitore. Vedi il tuo margine sul viaggio prima di inviare il preventivo.", "go": "Vedi i preventivi", "job": "sell#quotes"},
+    {"rec": "Hotel a Siviglia: confermato", "title": "Le prenotazioni", "body": "Quando il cliente accetta, ogni fornitore riceve la sua richiesta di prenotazione, e la risposta resta con il viaggio.", "go": "Vedi le prenotazioni", "job": "book#order"},
     {"rec": "Acconto {deposit} EUR: pagato", "title": "I pagamenti", "body": "Le scadenze vengono dal preventivo accettato. Il cliente paga dal link nell’email.", "go": "Vedi i pagamenti", "job": "get-paid#schedule"},
-    {"rec": "Fattura finale: {total} EUR", "title": "La fattura", "body": "Riprende le righe del preventivo accettato.", "go": "Vedi le fatture", "job": "get-paid#invoices"}
+    {"rec": "Fattura finale: {total} EUR", "title": "La fattura", "body": "Nasce dal preventivo accettato, con gli stessi importi.", "go": "Vedi le fatture", "job": "get-paid#invoices"}
   ],
   sitTitle: "Secondo il tuo modo di lavorare",
   situations: [
@@ -75,12 +75,12 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "I miei fornitori fatturano in dollari o in dirham",
-      "s": "Costi nella loro valuta, prezzi nella tua, con il cambio del preventivo conservato.",
+      "s": "Costi nella loro valuta, prezzi nella tua. Ogni preventivo conserva il suo cambio.",
       "job": "setup#currencies"
     },
     {
       "t": "Lavoro con guide e autisti",
-      "s": "Scheda servizio inviata alla guida, e il suo pagamento seguito con il viaggio.",
+      "s": "La guida riceve i dettagli della giornata via email, e quanto le devi resta con il viaggio.",
       "job": "book#suppliers"
     },
     {
@@ -100,7 +100,7 @@ export const home: SiteContent['home'] = {
     },
     {
       "t": "Abbiamo più marchi o società",
-      "s": "Ognuno ha i suoi documenti, le sue diciture e la sua numerazione delle fatture.",
+      "s": "Ognuno ha il suo logo, i suoi documenti e i suoi numeri di fattura.",
       "job": "setup#brands"
     }
   ],

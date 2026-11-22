@@ -132,7 +132,7 @@ const netRates: Article = {
     { type: 'h2', text: 'Onde entram os impostos', id: 'impostos' },
     { type: 'p', text: 'A forma como o IVA se aplica ao markup ou à comissão depende do país e de a agência vender em nome próprio ou como intermediária. As páginas de "Faturação por país" descrevem as regras em vários países.' },
     { type: 'h2', text: 'No Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'No Traviosoft, um procedimento de preço transforma as tarifas net em preços de venda, com a margem, o IVA e a comissão quando uma agência parceira vende a viagem.' },
+    { type: 'p', text: 'No Traviosoft, as suas regras de preço transformam as tarifas net em preços de venda, com a margem, o IVA e a comissão quando uma agência parceira vende a viagem.' },
     { type: 'h2', text: 'Perguntas frequentes', id: 'faq' },
     {
       type: 'faq',

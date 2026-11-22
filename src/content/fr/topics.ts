@@ -132,7 +132,7 @@ const netRates: Article = {
     { type: 'h2', text: 'La place des taxes', id: 'taxes' },
     { type: 'p', text: 'La façon dont la TVA s’applique à la majoration ou à la commission dépend du pays et du fait que l’agence vend en son nom ou comme intermédiaire. Les pages « Facturer dans votre pays » décrivent les règles de plusieurs pays.' },
     { type: 'h2', text: 'Dans Traviosoft', id: 'traviosoft' },
-    { type: 'p', text: 'Dans Traviosoft, une procédure de prix transforme les tarifs nets en prix de vente, avec la marge, la TVA et la commission quand une agence partenaire vend le voyage.' },
+    { type: 'p', text: 'Dans Traviosoft, vos règles de prix transforment les tarifs nets en prix de vente, avec la marge, la TVA et la commission quand une agence partenaire vend le voyage.' },
     { type: 'h2', text: 'Questions', id: 'faq' },
     {
       type: 'faq',

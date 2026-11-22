@@ -4,10 +4,10 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR | Traviosoft`,
   metaDescription:
-    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchasing and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
+    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchase orders to suppliers and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
   title: 'Pricing',
   productLink: 'See the product',
-  lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds groups, several teams, other currencies, purchasing and several brands.',
+  lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds groups, several teams, other currencies, purchase orders to suppliers and several brands.',
   yearly: 'Yearly',
   monthly: 'Monthly',
   yearlyNote: 'Prices per month, VAT excluded.',
@@ -41,17 +41,17 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Requests and quotes with your margin and commission', classic: true, premium: true },
         { f: 'Catalog with season prices', classic: true, premium: true },
         { f: 'Partner agencies and commission statements', classic: true, premium: true },
-        { f: 'Proposal page and day-by-day itinerary, with your logo and colours', classic: true, premium: true },
+        { f: 'The quote as a web page and a day-by-day itinerary, with your logo and colours', classic: true, premium: true },
         { f: 'Documents in the client’s language', classic: true, premium: true },
-        { f: 'Multi-currency', classic: false, premium: true }
+        { f: 'Quotes and supplier prices in other currencies', classic: false, premium: true }
       ]
     },
     {
       title: 'Book',
       rows: [
-        { f: 'Orders and bookings, with supplier emails filed on the trip', classic: true, premium: true },
-        { f: 'Service sheets', classic: true, premium: true },
-        { f: 'Groups: traveller lists, form link and rooming lists', classic: false, premium: true },
+        { f: 'Bookings for every accepted quote, with supplier emails kept on the trip', classic: true, premium: true },
+        { f: 'Service sheets for guides, drivers and hotels', classic: true, premium: true },
+        { f: 'Groups: traveller lists, a form travellers fill in, and rooming lists', classic: false, premium: true },
         { f: 'Availability requests and purchase orders to suppliers', classic: false, premium: true }
       ]
     },
@@ -61,18 +61,18 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Payment schedules and payment links', classic: true, premium: true },
         { f: 'Automatic payment reminders', classic: false, premium: true },
         { f: 'Invoices and credit notes', classic: 'In Spain: built in. Elsewhere: through your invoicing software', premium: 'In Spain: built in. Elsewhere: through your invoicing software' },
-        { f: 'Dashboard', classic: true, premium: true },
-        { f: 'Accounting export', classic: false, premium: true }
+        { f: 'Dashboard with sales, trips and cash', classic: true, premium: true },
+        { f: 'Export to your accounting software', classic: false, premium: true }
       ]
     },
     {
       title: 'Team and connections',
       rows: [
-        { f: 'Several teams', classic: false, premium: true },
-        { f: 'Custom roles', classic: false, premium: true },
+        { f: 'Several teams, each with its own clients and trips', classic: false, premium: true },
+        { f: 'Roles you define: who can see and do what', classic: false, premium: true },
         { f: 'Several brands and companies in one account', classic: false, premium: true },
-        { f: 'MCP connector for your own AI tools (Claude, ChatGPT and others)', classic: true, premium: true },
-        { f: 'The built-in assistant', classic: { text: 'Optional, with usage limits', option: true }, premium: { text: 'Optional, with usage limits', option: true } },
+        { f: 'Connection to the AI assistant you already use (Claude, ChatGPT and others)', classic: true, premium: true },
+        { f: 'AI assistant inside Traviosoft', classic: { text: 'Optional, with usage limits', option: true }, premium: { text: 'Optional, with usage limits', option: true } },
         { f: 'API access, so your developer can connect your website and other software', classic: false, premium: true }
       ]
     },
@@ -87,7 +87,7 @@ export const pricing: SiteContent['pricing'] = {
       ]
     }
   ],
-  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup and onboarding (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Seasonal rates and other files (Word, PDF, emails, trips in progress) are imported on quote.`, '** For clean and well-organised data.'],
+  compareNote: [`* Limited-time offer for yearly billing only. With monthly billing, setup and onboarding (${PRICES.setupMonthly} EUR) and import (${PRICES.importMonthly} EUR) are charged once at the start. Seasonal rates and other files (Word, PDF, emails, trips in progress) are priced separately, once we have seen a sample.`, '** For clean and well-organised data.'],
   faq: [
     {
       q: 'Which plan do I need?',
@@ -123,7 +123,7 @@ export const pricing: SiteContent['pricing'] = {
     },
     {
       q: 'What does the import include?',
-      a: [`Your catalog with one price per product, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Seasonal rates, Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
+      a: [`Your catalog with one price per product, your clients and your suppliers, from spreadsheets or an export of your current tool, with one row per item and the same columns all the way down. It is free with yearly billing and ${PRICES.importMonthly} EUR once with monthly billing.`, 'Seasonal rates, Word documents, PDFs, emails, trips in progress and lists that need sorting first are priced separately, once we have seen a sample.']
     }
   ]
 };
@@ -192,7 +192,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       title: 'Your first real quote',
-      body: 'We set up your margin, VAT and commission rules and your brand, then train your team by video call. You build a real quote from your own rates. We are on email if you get stuck.'
+      body: 'We set up your margin, VAT and commission rules and your brand, then train your team by video call. You build a real quote from your own rates. We answer your questions by email.'
     },
     {
       title: 'New requests go in the app',
@@ -202,7 +202,7 @@ export const switching: SiteContent['switching'] = {
   importTitle: 'What comes over',
   importParts: [
     { title: 'Included in the import price', body: 'Your catalog with one price per product, your clients, your suppliers and their contacts. From spreadsheets or an export of your current tool.' },
-    { title: 'On quote', body: 'Seasonal rates, trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
+    { title: 'Priced separately', body: 'Seasonal rates, trips in progress and other files (Word, PDF, emails). We give you a price once we have seen a sample.' }
   ],
   seasonTitle: 'Will it disrupt my season?',
   seasonBody: [
@@ -217,7 +217,7 @@ export const switching: SiteContent['switching'] = {
     },
     {
       q: 'What does it cost?',
-      a: [`Setup, onboarding and the import of your spreadsheets are free with yearly billing. With monthly billing, setup and onboarding are ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one price per product, one row per item and the same columns all the way down. Seasonal rates, Word documents, PDFs, trips in progress and lists that need sorting first are priced on quote, once we have seen a sample.']
+      a: [`Setup, onboarding and the import of your spreadsheets are free with yearly billing. With monthly billing, setup and onboarding are ${PRICES.setupMonthly} EUR once and the import ${PRICES.importMonthly} EUR once.`, 'The import price covers lists with one price per product, one row per item and the same columns all the way down. Seasonal rates, Word documents, PDFs, trips in progress and lists that need sorting first are priced separately, once we have seen a sample.']
     },
     {
       q: 'What happens to my old files?',
@@ -246,7 +246,7 @@ export const faqPage: SiteContent['faqPage'] = {
       items: [
         {
           q: 'What is Traviosoft?',
-          a: ['Web management software for tailor-made travel agencies and DMCs. It covers the request, the quote, the order and bookings, the client itinerary, payments and invoices.']
+          a: ['Web management software for tailor-made travel agencies and DMCs. It covers requests, quotes, bookings, the client itinerary, payments and invoices.']
         },
         {
           q: 'Can several suppliers sell the same hotel or service?',
@@ -254,7 +254,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'What does my client see?',
-          a: ['A clean quote with client-facing names, prices per person, what is included and not included, in their language and with your brand. Your net rates and margins stay private to your team.']
+          a: ['A quote with the name you choose for each service and prices per person, in their language and with your brand. The web page of the quote also lists what is included and not included. Your purchase prices and margins stay private to your team.']
         },
         {
           q: 'Can my guides and drivers see the trip?',
@@ -262,7 +262,7 @@ export const faqPage: SiteContent['faqPage'] = {
         },
         {
           q: 'Do you work with DMCs that sell through partner agencies?',
-          a: ['Yes. Quote the partner agency, keep their client on the trip, add the partner’s commission and settle it from a statement per period.']
+          a: ['Yes. Quote the partner agency, keep their client on the trip, add the partner’s commission and pay it from a statement for each period.']
         },
         {
           q: 'Is there an AI assistant?',
@@ -332,7 +332,7 @@ export const about: SiteContent['about'] = {
   lead: 'Traviosoft is management software for tailor-made travel agencies and DMCs. Each trip lives in one place, from the first request to the final invoice.',
   blocks: [
     { title: 'Made for tailor-made trips', body: ['Every trip is different. Traviosoft prices each service from the supplier’s net rate, works with several suppliers per service, and handles groups, currencies and documents in the client’s language.'] },
-    { title: 'One trip, one set of figures', body: ['The accepted quote becomes the bookings, the payment schedule and the invoices. The whole agency works from the same figures, and nothing is typed twice.'] },
+    { title: 'One trip, one set of figures', body: ['The accepted quote becomes the bookings, the payment schedule and the invoices. The whole agency works from the same figures, and each figure is typed once.'] },
     { title: 'Your data', body: ['Each agency has its own private space. Your data is hosted in the European Union, and you can export it at any time.'] },
     { title: 'Working with us', body: ['We set up your account and import your data with you. Support is by email, from the people who build Traviosoft.'] }
   ]

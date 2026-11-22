@@ -73,7 +73,7 @@ const compares: Cmp[] = [
       ['Quote versions', 'Every version is saved and can be reopened', 'One file per version'],
       ['Supplier bookings', 'A list per trip with statuses that update themselves', 'A column or a separate document'],
       ['Invoices', 'Made from the trip, numbered per company, with credit notes', 'Your own invoice template'],
-      ['Spanish tax rules', 'REAV labels, switched on per country', 'Set up in your own template'],
+      ['Spanish tax rules', 'The travel agency VAT scheme (REAV) on invoices', 'Set up in your own template'],
       ['Client itinerary', 'A shareable page, day by day, in their language', 'A PDF or Word file sent by email'],
       ['Data', 'A separate space for your agency, hosted in the EU', 'Your files, wherever you store them']
     ],
@@ -88,10 +88,10 @@ const compares: Cmp[] = [
       'When a hotel changes its price, you want to see which open quotes it affects and update them in one go.',
       'You want the margin and the commission applied the same way every time, from rules you set once.',
       'You want the quote to become the invoice, and the files for your accountant, without retyping.',
-      'You invoice clients abroad and need documents in Spanish, English and French.'
+      'You invoice clients abroad and need documents in their language.'
     ],
     switching:
-      'During setup we import your products, prices and suppliers from your spreadsheets, free with yearly billing. The [Switching page](/switch) describes the steps, and the guide "From Excel to travel agency software" describes what changes.',
+      'During setup we import your products, prices and suppliers from your spreadsheets, free with yearly billing. The [Switching page](/switch) describes the steps, and the guide “From Excel to travel agency software” describes what changes.',
     faq: [
       { q: 'Can I keep using Excel next to Traviosoft?', a: ['Yes. You can import your data from Excel and export an Excel recap or a zip of every invoice PDF for your accountant.'] },
       { q: 'What happens to the margin formulas I already have?', a: ['They become pricing rules. Instead of copying the formula into every file, you define it once and it applies to every line of every quote.'] },
@@ -106,7 +106,7 @@ const compares: Cmp[] = [
     metaDescription:
       'We compare Traviosoft and Ezus on who each is for, published prices, languages and getting started, and what each one does best for DMCs and tailor-made agencies.',
     title: 'Traviosoft vs Ezus: an independent comparison for DMCs and inbound agencies',
-    lead: 'Ezus is a well-established French software for DMCs, with many customers, public prices and support in five languages. Traviosoft shows one price with users included and adds the REAV labels for agencies in Spain.',
+    lead: 'Ezus is a well-established French software for DMCs, with many customers, public prices and support in five languages. Traviosoft shows one price with users included and includes Spain’s travel agency VAT scheme (REAV) on invoices.',
     card: 'Two tools with public prices: who each is for and what each includes.',
     basis:
       'Ezus details come from its website and public directories, checked on 3 November 2026. Prices change, so always check both current pricing pages. Ezus customer numbers are the ones it publishes.',
@@ -126,7 +126,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'You want one price with users included, and setup and import included with yearly billing.',
-      'Your agency is in Spain and you want REAV labels on your invoices.',
+      'Your agency is in Spain and you want the travel agency VAT scheme (REAV) on your invoices.',
       'You work mostly in Spanish and French and want documents and email templates in the client’s language.',
       'You prefer a tool built around the flow of one trip: request, quote with margin, booking, payment and invoice.'
     ],
@@ -134,7 +134,7 @@ const compares: Cmp[] = [
       'If you move to Traviosoft from Ezus, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
       { q: 'How is each one priced?', a: [`Traviosoft Classic is ${PRICES.classic.yearly} EUR a month with yearly billing, ${PRICES.usersIncluded} users included, with setup and import included. Ezus Professional is 75 EUR per user a month, with an onboarding pack of 1,990 EUR that includes a guided rollout. Check both current pricing pages.`] },
-      { q: 'Does Ezus work for Spain?', a: ['Yes. Ezus has a Spanish site and support. Traviosoft also includes REAV labels for agencies in Spain.'] },
+      { q: 'Does Ezus work for Spain?', a: ['Yes. Ezus has a Spanish site and support. Traviosoft also includes the travel agency VAT scheme (REAV) for agencies in Spain.'] },
       { q: 'Can I try both?', a: ['Both work with a demo.'] }
     ]
   },
@@ -153,7 +153,7 @@ const compares: Cmp[] = [
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Travel agency management in Spain, mostly retail agencies'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
-      ['Known for', 'Quotes with margin per line, a seasonal catalog, a client itinerary page and REAV', 'A long record with travel agencies in Spain']
+      ['Known for', 'Quotes with margin per line, a seasonal catalog, a client itinerary page and Spain’s travel agency VAT scheme (REAV)', 'A long record with travel agencies in Spain']
     ],
     otherBetter: [
       'You are a retail agency selling tickets, hotels and wholesaler packages. A tool built for that work usually fits better.',
@@ -203,7 +203,7 @@ const compares: Cmp[] = [
       'Your daily work is calculating, sending and following up travel quotes with margin.',
       'You need a catalog with seasonal prices and several suppliers per service.',
       'You want a booking list per trip, service sheets and a client itinerary.',
-      'Your agency applies REAV and you want the labels on every invoice automatically.'
+      'Your agency applies the travel agency VAT scheme (REAV) and you want its wording on every invoice automatically.'
     ],
     switching:
       'Traviosoft runs the trip, from request to invoice, and exports an Excel recap or a zip of PDF invoices, which an accountant can bring into Holded or another accounting program. The [Switching page](/switch) describes the steps.',
@@ -224,12 +224,12 @@ const compares: Cmp[] = [
     lead: 'Lemax is software with more than 30 years behind it, built for mid-size and large tour operators and DMCs. Its Lemax GO package is designed for teams from 15 users, priced with each client. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
     card: 'Two complete systems: a long-established platform and one flow from request to invoice with a published price.',
     basis:
-      'Lemax details come from its website and trade press, checked on 3 November 2026. Lemax agrees prices with each client, so we write "On request". Its customer numbers are the ones it shows.',
+      'Lemax details come from its website and trade press, checked on 3 November 2026. Lemax agrees prices with each client, so we write “On request”. Its customer numbers are the ones it shows.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Mid-size and large tour operators and DMCs'],
       ['Team size', `Two plans, ${PRICES.usersIncluded} users included`, 'Lemax GO from 15 users'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request; agreed with each client before signing'],
-      ['Rollout', 'Setup and import free with yearly billing', 'Says "live in 90 days" for Lemax GO'],
+      ['Rollout', 'Setup and import free with yearly billing', 'Says “live in 90 days” for Lemax GO'],
       ['Distribution and connections', 'Connections to your website and accounting (Premium) and to your AI tools (both plans)', 'Supplier connectivity, booking API and B2B portal, according to its site']
     ],
     otherBetter: [
@@ -241,15 +241,15 @@ const compares: Cmp[] = [
     usBetter: [
       'You want to quote, book and invoice the whole trip in one system and be up and running through a short setup.',
       'You want to see the price and the users included before asking for a demo.',
-      'Your market is Spain and you sell in Spanish and French, with REAV.',
+      'Your market is Spain and you sell in Spanish and French, with the travel agency VAT scheme (REAV).',
       'You want us to import your products, prices and suppliers from your spreadsheets during setup.'
     ],
     switching:
       'If you move to Traviosoft from Lemax, we import your products, prices and suppliers from your spreadsheets during setup, free with yearly billing. The [Switching page](/switch) describes the steps.',
     faq: [
-      { q: 'Who is Lemax GO for?', a: ['Teams of 15 users or more, according to its site, with a rollout it describes as "live in 90 days".'] },
+      { q: 'Who is Lemax GO for?', a: ['Teams of 15 users or more, according to its site, with a rollout it describes as “live in 90 days”.'] },
       { q: 'How is Lemax priced?', a: ['Lemax agrees the package and rollout price with each client before signing.'] },
-      { q: 'Can Traviosoft connect to my other tools?', a: ['Yes, on Premium. Your website, your accounting tool or a developer you work with can read and write your Traviosoft data, and you can connect the AI assistant you already use.'] }
+      { q: 'Can Traviosoft connect to my other tools?', a: ['Yes. On Premium, your website, your accounting software or a developer you work with can read and write your Traviosoft data. On both plans, you can connect the AI assistant you already use.'] }
     ]
   },
   {
@@ -260,10 +260,10 @@ const compares: Cmp[] = [
     metaDescription:
       'Tourwriter is New Zealand software for luxury DMCs and travel designers. We compare who each is for, plans, prices, languages and what each one does best.',
     title: 'Traviosoft vs Tourwriter: two tools for designing trips',
-    lead: 'Tourwriter is New Zealand software known for polished itineraries, built for luxury DMCs and travel designers working in English. Traviosoft prices in euros with users included, works in Spanish and French, and includes REAV.',
+    lead: 'Tourwriter is New Zealand software known for polished itineraries, built for luxury DMCs and travel designers working in English. Traviosoft prices in euros with users included, works in Spanish and French, and includes Spain’s travel agency VAT scheme (REAV).',
     card: 'Polished luxury itineraries in English and a euro-priced tool in Spanish and French.',
     basis:
-      'Tourwriter details come from its site (plans and company pages), checked on 3 November 2026. Its prices are "from" prices in US dollars, per user, with a quote for each team, so the real total can differ.',
+      'Tourwriter details come from its site (plans and company pages), checked on 3 November 2026. Its prices are “from” prices in US dollars, per user, with a quote for each team, so the real total can differ.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Luxury DMCs and travel designers, multi-day FIT trips'],
       ['Published price', `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Starter from 99 USD per user a month; Pro from 149 USD; Premium on request'],
@@ -278,7 +278,7 @@ const compares: Cmp[] = [
     ],
     usBetter: [
       'You want a price in euros with users included in each plan.',
-      'Your agency is in Spain and you want REAV built in.',
+      'Your agency is in Spain and you want the travel agency VAT scheme (REAV) built in.',
       'Your clients speak Spanish or French and you want quotes and emails in their language.',
       'You want setup and import included with yearly billing.'
     ],
@@ -302,7 +302,7 @@ const compares: Cmp[] = [
     lead: 'Tourplan has been making software for DMCs and tour operators since 1986, with sales, bookings and back office in a modular system used by 450 companies in 75 countries. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
     card: 'A modular system with 40 years behind it and one flow from request to invoice with a published price.',
     basis:
-      'Tourplan details come from its website (home and About pages), checked on 14 November 2026. Its site does not publish prices, so we write "On request".',
+      'Tourplan details come from its website (home and About pages), checked on 14 November 2026. Its site does not publish prices, so we write “On request”.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'DMCs, inbound and outbound tour operators: FIT, groups, MICE, tailor-made, series tours'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
@@ -341,7 +341,7 @@ const compares: Cmp[] = [
     lead: 'Kaptio, founded in Reykjavik in 2012, brings CRM, contracting, pricing, inventory, reservations, payments and operations together for cruise, rail, group tours and tailor-made travel. Traviosoft covers the whole trip, from the first request to the last invoice, with documents in five languages and a published price.',
     card: 'One platform for multi-day travel and one flow from request to invoice with a published price.',
     basis:
-      'Kaptio details come from its website (home, platform and About pages), checked on 14 November 2026. Its site does not publish prices, so we write "On request".',
+      'Kaptio details come from its website (home, platform and About pages), checked on 14 November 2026. Its site does not publish prices, so we write “On request”.',
     rows: [
       ['Made for', 'Inbound agencies, DMCs and tailor-made agencies', 'Multi-day travel: cruise, rail, group tours and tailor-made travel'],
       ['Price', `Classic from ${PRICES.classic.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'On request'],
@@ -423,7 +423,7 @@ const best: Article = {
   blocks: [
     {
       type: 'p',
-      text: 'Traviosoft writes this list, so we stick to public facts, write "On request" where a vendor shares its prices in a demo, and say what each tool does best. Facts checked on 3 November 2026. Prices change, so always check the official pages.'
+      text: 'Traviosoft writes this list, so we stick to public facts, write “On request” where a vendor shares its prices in a demo, and say what each tool does best. Facts checked on 3 November 2026. Prices change, so always check the official pages.'
     },
     { type: 'h2', text: 'Comparison table', id: 'table' },
     {
@@ -445,7 +445,7 @@ const best: Article = {
     { type: 'h3', text: 'Traviosoft' },
     {
       type: 'p',
-      text: 'Covers the whole trip: requests, a catalog with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with REAV for Spain. It shows its price, and setup and import are included with yearly billing.'
+      text: 'Covers the whole trip: requests, a catalog with seasonal prices, quotes with margin and commission, bookings, payments and invoices, with the travel agency VAT scheme (REAV) for Spain. It shows its price, and setup and import are included with yearly billing.'
     },
     { type: 'h3', text: 'Ezus' },
     {
@@ -487,7 +487,7 @@ const best: Article = {
       'Options differ in the minimum number of users and in what is included in each plan.',
       'The first-year cost can include setup and data import on top of the monthly fee, depending on the vendor.',
       'The language of the documents a client receives can differ from the language of the screens.',
-      'Invoicing rules depend on the country; the pages in "Invoicing by country" describe several.',
+      'Invoicing rules depend on the country; the pages in “Invoicing by country” describe several.',
       'Some vendors publish their prices; others share them in a demo.'
     ] },
     { type: 'h2', text: 'Questions', id: 'faq' },
@@ -530,16 +530,16 @@ const quote: Article = {
         ['50%', '1,500.00 EUR', '500.00 EUR', '33.3%']
       ]
     },
-    { type: 'h2', text: 'Example: 4 nights in Andalucia for 2 people', id: 'example' },
+    { type: 'h2', text: 'Example: 4 nights in Andalucía for 2 people', id: 'example' },
     {
       type: 'table',
       head: ['Service', 'Calculation', 'Net cost'],
       rows: [
-        ['Hotel, double room', '4 nights x 100 EUR', '400 EUR'],
-        ['Private transfers', '2 transfers x 60 EUR', '120 EUR'],
-        ['Guide', '2 days x 150 EUR', '300 EUR'],
-        ['Cooking class', '2 people x 40 EUR', '80 EUR'],
-        ['Entrance fees', '2 people x 50 EUR', '100 EUR'],
+        ['Hotel, double room', '4 nights × 100 EUR', '400 EUR'],
+        ['Private transfers', '2 transfers × 60 EUR', '120 EUR'],
+        ['Guide', '2 days × 150 EUR', '300 EUR'],
+        ['Cooking class', '2 people × 40 EUR', '80 EUR'],
+        ['Entrance fees', '2 people × 50 EUR', '100 EUR'],
         ['Total net', '', '1,000 EUR']
       ]
     },
@@ -564,7 +564,7 @@ const quote: Article = {
     { type: 'h2', text: 'Taxes', id: 'taxes' },
     {
       type: 'p',
-      text: 'The amounts above are before tax. How VAT applies to a trip depends on the country and on the scheme the agency uses; the pages in "Invoicing by country" describe several countries.'
+      text: 'The amounts above are before tax. How VAT applies to a trip depends on the country and on the scheme the agency uses; the pages in “Invoicing by country” describe several countries.'
     },
     { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
     {

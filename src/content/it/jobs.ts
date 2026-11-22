@@ -162,9 +162,9 @@ const book: JobPage = {
       lead: 'Per i viaggi di gruppo: la lista dei viaggiatori, i servizi che riguardano solo una parte del gruppo e una rooming list per ogni hotel.',
       visual: 'rooming',
       features: [
-        { title: 'La lista dei viaggiatori', body: ['Incolla o importa la lista da un foglio di calcolo, oppure invia il link a un modulo perché i viaggiatori inseriscano da soli passaporto, dieta ed esigenze di accessibilità. Fino a 200 viaggiatori per viaggio.'] },
-        { title: 'Servizi per una parte del gruppo', body: ['La giornata di golf per dodici, la cena di gala per tutti. Ogni servizio indica chi partecipa, così ogni fornitore riceve i numeri giusti.'] },
-        { title: 'Una rooming list per hotel', body: ['Le camere sono composte a partire da chi dorme con chi e numerate per ogni hotel. Invia la lista in PDF o in foglio di calcolo.'] }
+        { title: 'La lista dei viaggiatori', body: ['Incolla o importa la lista da un foglio di calcolo, oppure invia il link a un modulo perché i viaggiatori inseriscano da soli passaporto, dieta ed esigenze di accessibilità. Fino a 200 viaggiatori per viaggio.'], premium: true },
+        { title: 'Servizi per una parte del gruppo', body: ['La giornata di golf per dodici, la cena di gala per tutti. Ogni servizio indica chi partecipa, così ogni fornitore riceve i numeri giusti.'], premium: true },
+        { title: 'Una rooming list per hotel', body: ['Le camere sono composte a partire da chi dorme con chi e numerate per ogni hotel. Invia la lista in PDF o in foglio di calcolo.'], premium: true }
       ]
     },
     {
@@ -208,7 +208,7 @@ const getPaid: JobPage = {
       features: [
         { title: 'Acconto e saldo', body: ['Una percentuale o un importo per ogni pagamento, con la sua scadenza. Il tuo piano di pagamento abituale si applica con un clic.'] },
         { title: 'Cosa scade questa settimana', body: ['Un’unica lista mostra tutti i pagamenti dei clienti in scadenza o scaduti, su tutti i tuoi viaggi.'] },
-        { title: 'Promemoria di pagamento', body: ['Traviosoft può scrivere al cliente prima e dopo una scadenza, nella sua lingua e con le tue parole.'] }
+        { title: 'Promemoria di pagamento', body: ['Traviosoft può scrivere al cliente prima e dopo una scadenza, nella sua lingua e con le tue parole.'], premium: true }
       ]
     },
     {
@@ -344,8 +344,8 @@ const setup: JobPage = {
       visual: 'connections',
       features: [
         { title: 'Il tuo sito e la tua contabilità', body: ['Il modulo di contatto del tuo sito può arrivare direttamente tra le tue richieste, e il tuo software di contabilità può recuperare fatture e pagamenti.'], premium: true },
-        { title: 'I tuoi strumenti di IA', body: ['Collega l’assistente AI che usi già, come Claude o ChatGPT. Lavora in Traviosoft con i diritti della persona che lo ha collegato.'], premium: true },
-        { title: 'L’assistente dentro Traviosoft', body: ['Chiedi cosa richiede la tua attenzione oggi, fai preparare un preventivo dal tuo catalogo o trasforma il listino di un fornitore in prezzi del catalogo. Ogni modifica attende la tua approvazione.'], premium: true }
+        { title: 'I tuoi strumenti di IA', body: ['Collega l’assistente AI che usi già, come Claude o ChatGPT. Lavora in Traviosoft con i diritti della persona che lo ha collegato.'] },
+        { title: 'L’assistente dentro Traviosoft', body: ['Chiedi cosa richiede la tua attenzione oggi, fai preparare un preventivo dal tuo catalogo o trasforma il listino di un fornitore in prezzi del catalogo. Ogni modifica attende la tua approvazione. L’assistente è un’opzione su entrambi i piani.'] }
       ]
     }
   ],
