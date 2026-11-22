@@ -428,17 +428,17 @@ const best: Article = {
     { type: 'h2', text: 'Tableau comparatif', id: 'tableau' },
     {
       type: 'table',
-      head: ['Logiciel', 'Pour qui', 'Taille d’équipe', 'Prix', 'Langues', 'Fondation'],
+      head: ['Logiciel', 'Pour qui', 'Taille d’équipe', 'Prix', 'Langues'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Réceptifs, DMC et agences sur mesure', `Deux offres, ${PRICES.usersIncluded} utilisateurs inclus`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Documents en FR, EN, ES et plus', 'Voir la page À propos'],
-        ['Ezus', 'DMC, réceptifs, tour-opérateurs et agences', 'Professional jusqu’à 10 utilisateurs ; Enterprise à partir de 30', '75 EUR par utilisateur et par mois (Professional) ; pack d’onboarding 1 990 EUR', 'Site et support en EN, FR, ES, IT, PT', '2019, Paris'],
-        ['Tourplan', 'Tour-opérateurs et DMC établis', 'Sur demande', 'Sur demande', 'Site en anglais, espagnol et japonais', '1986, Nouvelle-Zélande'],
-        ['Tourwriter', 'DMC de luxe et concepteurs de voyages', '1 à plus de 20 personnes selon l’offre', 'À partir de 99 USD par utilisateur et par mois ; frais de démarrage à partir de 1 199 USD', 'Anglais', '2004, Nouvelle-Zélande'],
-        ['Lemax', 'Tour-opérateurs et DMC moyens et grands', 'Lemax GO à partir de 15 utilisateurs', 'Sur demande', 'Anglais', '1990, Croatie'],
-        ['Kaptio', 'Grands opérateurs de circuits de plusieurs jours', 'Grands opérateurs', 'Sur demande', 'Anglais', '2012, Islande'],
-        ['GIAV', 'Agences de voyages en Espagne, avec un long parcours auprès du détail', 'Sur demande', 'Sur demande', 'Espagnol', 'De longue date en Espagne'],
-        ['Excel + Word', 'Toute agence qui débute', 'Une à trois personnes en pratique', 'La licence que vous avez déjà', 'Celle que vous écrivez', '1985 (Excel)']
+        ['Traviosoft', 'Réceptifs, DMC et agences sur mesure', `Deux offres, ${PRICES.usersIncluded} utilisateurs inclus`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR par mois, ${PRICES.usersIncluded} utilisateurs inclus`, 'Documents en FR, EN, ES et plus'],
+        ['Ezus', 'DMC, réceptifs, tour-opérateurs et agences', 'Professional jusqu’à 10 utilisateurs ; Enterprise à partir de 30', '75 EUR par utilisateur et par mois (Professional) ; pack d’onboarding 1 990 EUR', 'Site et support en EN, FR, ES, IT, PT'],
+        ['Tourplan', 'Tour-opérateurs et DMC établis', 'Sur demande', 'Sur demande', 'Site en anglais, espagnol et japonais'],
+        ['Tourwriter', 'DMC de luxe et concepteurs de voyages', '1 à plus de 20 personnes selon l’offre', 'À partir de 99 USD par utilisateur et par mois ; frais de démarrage à partir de 1 199 USD', 'Anglais'],
+        ['Lemax', 'Tour-opérateurs et DMC moyens et grands', 'Lemax GO à partir de 15 utilisateurs', 'Sur demande', 'Anglais'],
+        ['Kaptio', 'Grands opérateurs de circuits de plusieurs jours', 'Grands opérateurs', 'Sur demande', 'Anglais'],
+        ['GIAV', 'Agences de voyages en Espagne, avec un long parcours auprès du détail', 'Sur demande', 'Sur demande', 'Espagnol'],
+        ['Excel + Word', 'Toute agence qui débute', 'Une à trois personnes en pratique', 'La licence que vous avez déjà', 'Celle que vous écrivez']
       ]
     },
     { type: 'h2', text: 'Chaque outil et ses points forts', id: 'logiciels' },

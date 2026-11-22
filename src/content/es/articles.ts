@@ -428,17 +428,17 @@ const best: Article = {
     { type: 'h2', text: 'Tabla comparativa', id: 'tabla' },
     {
       type: 'table',
-      head: ['Programa', 'Para quién es', 'Tamaño de equipo', 'Precio', 'Idiomas', 'Fundación'],
+      head: ['Programa', 'Para quién es', 'Tamaño de equipo', 'Precio', 'Idiomas'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, CA, EN, FR e IT', 'Ver Sobre nosotros'],
-        ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); pack de onboarding 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT', '2019, París'],
-        ['Tourplan', 'Turoperadores y DMC consolidados', 'A consultar', 'A consultar', 'Web en inglés, español y japonés', '1986, Nueva Zelanda'],
-        ['Tourwriter', 'DMC y diseñadores de viajes de lujo', 'De 1 a más de 20 personas según plan', 'Desde 99 USD por usuario y mes; puesta en marcha desde 1.199 USD', 'Inglés', '2004, Nueva Zelanda'],
-        ['Lemax', 'Turoperadores y DMC medianos y grandes', 'Lemax GO desde 15 usuarios', 'A consultar', 'Inglés', '1990, Croacia'],
-        ['Kaptio', 'Operadores grandes de viajes de varios días', 'Grandes operadores', 'A consultar', 'Inglés', '2012, Islandia'],
-        ['GIAV', 'Agencias de viajes en España, con larga trayectoria en minoristas', 'A consultar', 'A consultar', 'Español', 'Muchos años en España'],
-        ['Excel + Word', 'Cualquier agencia que empieza', 'Una a tres personas en la práctica', 'La licencia que ya tengas', 'El que tú escribas', '1985 (Excel)']
+        ['Traviosoft', 'Receptivos, DMC y agencias a medida', `Dos planes, ${PRICES.usersIncluded} usuarios incluidos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mes, ${PRICES.usersIncluded} usuarios incluidos`, 'Documentos en ES, CA, EN, FR e IT'],
+        ['Ezus', 'DMC, receptivos, turoperadores y agencias', 'Professional hasta 10 usuarios; Enterprise desde 30', '75 EUR por usuario y mes (Professional); pack de onboarding 1.990 EUR', 'Web y soporte en EN, FR, ES, IT, PT'],
+        ['Tourplan', 'Turoperadores y DMC consolidados', 'A consultar', 'A consultar', 'Web en inglés, español y japonés'],
+        ['Tourwriter', 'DMC y diseñadores de viajes de lujo', 'De 1 a más de 20 personas según plan', 'Desde 99 USD por usuario y mes; puesta en marcha desde 1.199 USD', 'Inglés'],
+        ['Lemax', 'Turoperadores y DMC medianos y grandes', 'Lemax GO desde 15 usuarios', 'A consultar', 'Inglés'],
+        ['Kaptio', 'Operadores grandes de viajes de varios días', 'Grandes operadores', 'A consultar', 'Inglés'],
+        ['GIAV', 'Agencias de viajes en España, con larga trayectoria en minoristas', 'A consultar', 'A consultar', 'Español'],
+        ['Excel + Word', 'Cualquier agencia que empieza', 'Una a tres personas en la práctica', 'La licencia que ya tengas', 'El que tú escribas']
       ]
     },
     { type: 'h2', text: 'Cada programa y en qué destaca', id: 'programas' },

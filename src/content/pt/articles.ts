@@ -424,17 +424,17 @@ const best: Article = {
     { type: 'h2', text: 'Tabela de comparação', id: 'tabela' },
     {
       type: 'table',
-      head: ['Ferramenta', 'A quem se destina', 'Dimensão da equipa', 'Preço', 'Línguas', 'Fundação'],
+      head: ['Ferramenta', 'A quem se destina', 'Dimensão da equipa', 'Preço', 'Línguas'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Agências de turismo recetivo, DMC e agências à medida', `Dois planos, ${PRICES.usersIncluded} utilizadores incluídos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR por mês, ${PRICES.usersIncluded} utilizadores incluídos`, 'Documentos em ES, CA, EN, FR e IT', 'Ver a página Sobre nós'],
-        ['Ezus', 'DMC, agências de turismo recetivo, operadores turísticos e agências', 'Professional até 10 utilizadores; Enterprise a partir de 30', '75 EUR por utilizador por mês (Professional); pacote de onboarding 1990 EUR', 'Site e apoio em EN, FR, ES, IT, PT', '2019, Paris'],
-        ['Tourplan', 'Operadores turísticos e DMC consolidados', 'Sob consulta', 'Sob consulta', 'Site em inglês, espanhol e japonês', '1986, Nova Zelândia'],
-        ['Tourwriter', 'DMC de luxo e travel designers', 'De 1 a mais de 20 pessoas, consoante o plano', 'A partir de 99 USD por utilizador por mês; configuração a partir de 1199 USD', 'Inglês', '2004, Nova Zelândia'],
-        ['Lemax', 'Operadores turísticos e DMC de média e grande dimensão', 'Lemax GO a partir de 15 utilizadores', 'Sob consulta', 'Inglês', '1990, Croácia'],
-        ['Kaptio', 'Grandes operadores de viagens de vários dias', 'Grandes operadores', 'Sob consulta', 'Inglês', '2012, Islândia'],
-        ['GIAV', 'Agências de viagens em Espanha, com um longo historial no retalho', 'Sob consulta', 'Sob consulta', 'Espanhol', 'Muitos anos em Espanha'],
-        ['Excel + Word', 'Qualquer agência em início de atividade', 'Uma a três pessoas, na prática', 'A licença que já tem', 'A que escrever', '1985 (Excel)']
+        ['Traviosoft', 'Agências de turismo recetivo, DMC e agências à medida', `Dois planos, ${PRICES.usersIncluded} utilizadores incluídos`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR por mês, ${PRICES.usersIncluded} utilizadores incluídos`, 'Documentos em ES, CA, EN, FR e IT'],
+        ['Ezus', 'DMC, agências de turismo recetivo, operadores turísticos e agências', 'Professional até 10 utilizadores; Enterprise a partir de 30', '75 EUR por utilizador por mês (Professional); pacote de onboarding 1990 EUR', 'Site e apoio em EN, FR, ES, IT, PT'],
+        ['Tourplan', 'Operadores turísticos e DMC consolidados', 'Sob consulta', 'Sob consulta', 'Site em inglês, espanhol e japonês'],
+        ['Tourwriter', 'DMC de luxo e travel designers', 'De 1 a mais de 20 pessoas, consoante o plano', 'A partir de 99 USD por utilizador por mês; configuração a partir de 1199 USD', 'Inglês'],
+        ['Lemax', 'Operadores turísticos e DMC de média e grande dimensão', 'Lemax GO a partir de 15 utilizadores', 'Sob consulta', 'Inglês'],
+        ['Kaptio', 'Grandes operadores de viagens de vários dias', 'Grandes operadores', 'Sob consulta', 'Inglês'],
+        ['GIAV', 'Agências de viagens em Espanha, com um longo historial no retalho', 'Sob consulta', 'Sob consulta', 'Espanhol'],
+        ['Excel + Word', 'Qualquer agência em início de atividade', 'Uma a três pessoas, na prática', 'A licença que já tem', 'A que escrever']
       ]
     },
     { type: 'h2', text: 'Cada ferramenta e o que faz melhor', id: 'ferramentas' },

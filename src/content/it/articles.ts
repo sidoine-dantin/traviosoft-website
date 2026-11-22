@@ -424,17 +424,17 @@ const best: Article = {
     { type: 'h2', text: 'Tabella di confronto', id: 'tabella' },
     {
       type: 'table',
-      head: ['Strumento', 'A chi si rivolge', 'Dimensione del team', 'Prezzo', 'Lingue', 'Fondazione'],
+      head: ['Strumento', 'A chi si rivolge', 'Dimensione del team', 'Prezzo', 'Lingue'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Agenzie incoming, DMC e agenzie su misura', `Due piani, ${PRICES.usersIncluded} utenti inclusi`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Documenti in ES, CA, EN, FR e IT', 'Vedi la pagina Chi siamo'],
-        ['Ezus', 'DMC, agenzie incoming, tour operator e agenzie', 'Professional fino a 10 utenti; Enterprise da 30', '75 EUR per utente al mese (Professional); pacchetto di onboarding 1.990 EUR', 'Sito e assistenza in EN, FR, ES, IT, PT', '2019, Parigi'],
-        ['Tourplan', 'Tour operator e DMC affermati', 'Su richiesta', 'Su richiesta', 'Sito in inglese, spagnolo e giapponese', '1986, Nuova Zelanda'],
-        ['Tourwriter', 'DMC di lusso e travel designer', 'Da 1 a oltre 20 persone secondo il piano', 'Da 99 USD per utente al mese; configurazione da 1.199 USD', 'Inglese', '2004, Nuova Zelanda'],
-        ['Lemax', 'Tour operator e DMC medi e grandi', 'Lemax GO da 15 utenti', 'Su richiesta', 'Inglese', '1990, Croazia'],
-        ['Kaptio', 'Grandi operatori di viaggi di più giorni', 'Grandi operatori', 'Su richiesta', 'Inglese', '2012, Islanda'],
-        ['GIAV', 'Agenzie di viaggi in Spagna, con una lunga storia nel dettaglio', 'Su richiesta', 'Su richiesta', 'Spagnolo', 'Molti anni in Spagna'],
-        ['Excel + Word', 'Qualsiasi agenzia che inizia', 'Da una a tre persone, nella pratica', 'La licenza che hai già', 'Quella in cui scrivi', '1985 (Excel)']
+        ['Traviosoft', 'Agenzie incoming, DMC e agenzie su misura', `Due piani, ${PRICES.usersIncluded} utenti inclusi`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR al mese, ${PRICES.usersIncluded} utenti inclusi`, 'Documenti in ES, CA, EN, FR e IT'],
+        ['Ezus', 'DMC, agenzie incoming, tour operator e agenzie', 'Professional fino a 10 utenti; Enterprise da 30', '75 EUR per utente al mese (Professional); pacchetto di onboarding 1.990 EUR', 'Sito e assistenza in EN, FR, ES, IT, PT'],
+        ['Tourplan', 'Tour operator e DMC affermati', 'Su richiesta', 'Su richiesta', 'Sito in inglese, spagnolo e giapponese'],
+        ['Tourwriter', 'DMC di lusso e travel designer', 'Da 1 a oltre 20 persone secondo il piano', 'Da 99 USD per utente al mese; configurazione da 1.199 USD', 'Inglese'],
+        ['Lemax', 'Tour operator e DMC medi e grandi', 'Lemax GO da 15 utenti', 'Su richiesta', 'Inglese'],
+        ['Kaptio', 'Grandi operatori di viaggi di più giorni', 'Grandi operatori', 'Su richiesta', 'Inglese'],
+        ['GIAV', 'Agenzie di viaggi in Spagna, con una lunga storia nel dettaglio', 'Su richiesta', 'Su richiesta', 'Spagnolo'],
+        ['Excel + Word', 'Qualsiasi agenzia che inizia', 'Da una a tre persone, nella pratica', 'La licenza che hai già', 'Quella in cui scrivi']
       ]
     },
     { type: 'h2', text: 'Ogni strumento e cosa fa meglio', id: 'strumenti' },

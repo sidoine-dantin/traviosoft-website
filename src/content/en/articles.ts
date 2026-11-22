@@ -428,17 +428,17 @@ const best: Article = {
     { type: 'h2', text: 'Comparison table', id: 'table' },
     {
       type: 'table',
-      head: ['Tool', 'Who it is for', 'Team size', 'Price', 'Languages', 'Founded'],
+      head: ['Tool', 'Who it is for', 'Team size', 'Price', 'Languages'],
       usRow: 0,
       rows: [
-        ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', `Two plans, ${PRICES.usersIncluded} users included`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Documents in ES, CA, EN, FR and IT', 'See the About page'],
-        ['Ezus', 'DMCs, inbound agencies, tour operators and agencies', 'Professional up to 10 users; Enterprise from 30', '75 EUR per user a month (Professional); onboarding pack 1,990 EUR', 'Site and support in EN, FR, ES, IT, PT', '2019, Paris'],
-        ['Tourplan', 'Established tour operators and DMCs', 'On request', 'On request', 'Site in English, Spanish and Japanese', '1986, New Zealand'],
-        ['Tourwriter', 'Luxury DMCs and travel designers', '1 to 20+ people depending on plan', 'From 99 USD per user a month; setup from 1,199 USD', 'English', '2004, New Zealand'],
-        ['Lemax', 'Mid-size and large tour operators and DMCs', 'Lemax GO from 15 users', 'On request', 'English', '1990, Croatia'],
-        ['Kaptio', 'Large multi-day travel operators', 'Large operators', 'On request', 'English', '2012, Iceland'],
-        ['GIAV', 'Travel agencies in Spain, with a long record in retail', 'On request', 'On request', 'Spanish', 'Many years in Spain'],
-        ['Excel + Word', 'Any agency starting out', 'One to three people in practice', 'The licence you already have', 'Whatever you write', '1985 (Excel)']
+        ['Traviosoft', 'Inbound agencies, DMCs and tailor-made agencies', `Two plans, ${PRICES.usersIncluded} users included`, `Classic ${PRICES.classic.yearly} EUR, Premium ${PRICES.premium.yearly} EUR a month, ${PRICES.usersIncluded} users included`, 'Documents in ES, CA, EN, FR and IT'],
+        ['Ezus', 'DMCs, inbound agencies, tour operators and agencies', 'Professional up to 10 users; Enterprise from 30', '75 EUR per user a month (Professional); onboarding pack 1,990 EUR', 'Site and support in EN, FR, ES, IT, PT'],
+        ['Tourplan', 'Established tour operators and DMCs', 'On request', 'On request', 'Site in English, Spanish and Japanese'],
+        ['Tourwriter', 'Luxury DMCs and travel designers', '1 to 20+ people depending on plan', 'From 99 USD per user a month; setup from 1,199 USD', 'English'],
+        ['Lemax', 'Mid-size and large tour operators and DMCs', 'Lemax GO from 15 users', 'On request', 'English'],
+        ['Kaptio', 'Large multi-day travel operators', 'Large operators', 'On request', 'English'],
+        ['GIAV', 'Travel agencies in Spain, with a long record in retail', 'On request', 'On request', 'Spanish'],
+        ['Excel + Word', 'Any agency starting out', 'One to three people in practice', 'The licence you already have', 'Whatever you write']
       ]
     },
     { type: 'h2', text: 'Each tool and what it does best', id: 'tools' },
