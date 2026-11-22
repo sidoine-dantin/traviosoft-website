@@ -1,5 +1,6 @@
 import { ScrapIcon } from '@/components/site/scrap-icon';
 import { Parallax } from '@/components/site/parallax';
+import { RouteTraveller } from '@/components/site/route-traveller';
 import { HomeMotion } from '@/components/site/home-motion';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
@@ -41,12 +42,14 @@ export default async function HomePage({ params }: Props) {
             <g data-depth=".35"><circle cx="160" cy="560" r="300" fill="var(--deep)" opacity=".55" /></g>
             <g data-depth=".2"><circle cx="1320" cy="90" r="220" fill="var(--cream)" opacity=".07" /></g>
             <g data-depth=".1">
-              <path d="M-20 520 C 180 420, 260 160, 520 120 S 980 260, 1140 120 S 1380 60, 1470 140" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".7" />
+              <path data-route d="M-20 520 C 180 420, 260 160, 520 120 S 980 260, 1140 120 S 1380 60, 1470 140" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".7" />
               <circle cx="520" cy="120" r="9" fill="var(--yellow)" />
-              <circle cx="1140" cy="120" r="9" fill="var(--yellow)" />
+              {/* This stop travels along the line with the scroll (RouteTraveller). */}
+              <circle data-route-dot cx="1140" cy="120" r="9" fill="var(--yellow)" />
             </g>
           </svg>
           <Parallax anchor="top" />
+          <RouteTraveller anchor="top" />
           <HeroTrip p={h.proposal} amount={2660} locale={loc} />
         </div>
       </header>
