@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 /** Seconds into the film where the opening still is taken (public/videos/<l>/ai-lead[-m]-start.webp). */
-const START = 1.6;
+const START = 0.75;
 
 type Props = { src: string; label: string; pause: string; play: string; shape: 'wide' | 'phone' };
 
@@ -11,7 +11,7 @@ type Props = { src: string; label: string; pause: string; play: string; shape: '
  * The AI page's lead video: a whole conversation with the assistant, filmed on the page's green.
  * Two cuts of it share the hero (wide for computers, vertical with larger text for phones); CSS shows
  * one, and only the one on screen loads and plays. It sits at the top of the page, so it shows a
- * still of its opening (the question asked, the assistant thinking) at once, then plays from that
+ * still of its opening (an empty chat, about to be written in) at once, then plays from that
  * same moment as soon as any of it is on screen. The whole video is the button that stops and
  * restarts it (WCAG 2.2.2). With reduced motion it does not start on its own and shows its last frame.
  */
