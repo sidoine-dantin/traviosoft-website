@@ -10,7 +10,14 @@ import { NextConfig } from 'next';
 const REQUEST_CONFIG = './src/i18n/request.ts';
 
 const config: NextConfig = {
-  images: { remotePatterns: [] },
+  /*
+   * Every page is built once into plain HTML files and served as static assets. No code runs
+   * when someone opens a page, so pages can never hit the Workers CPU limit (error 1102).
+   * The small Worker in worker/index.ts only answers what has no file: the language choice at
+   * "/", addresses without a language, and the 404 page. Redirects live in public/_redirects.
+   */
+  output: 'export',
+  images: { remotePatterns: [], unoptimized: true },
   turbopack: {
     resolveAlias: { 'next-intl/config': REQUEST_CONFIG }
   },
@@ -21,15 +28,6 @@ const config: NextConfig = {
       'next-intl/config': path.resolve(webpackConfig.context ?? process.cwd(), REQUEST_CONFIG)
     };
     return webpackConfig;
-  },
-  async redirects() {
-    // Old pages from the first site, kept so existing links and search results still land somewhere useful.
-    return [
-      { source: '/:locale(es|en|fr)/product', destination: '/:locale/sell', permanent: true },
-      { source: '/:locale(es|en|fr)/how-it-works', destination: '/:locale/sell', permanent: true },
-      // The example trips pages were removed (2026-11-13).
-      { source: '/:locale(es|en|fr)/example/:trip*', destination: '/:locale', permanent: false }
-    ];
   }
 };
 
