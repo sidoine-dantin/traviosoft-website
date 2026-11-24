@@ -52,8 +52,7 @@ const ROOT: Id[] = ['today', 'quote', 'bookings', 'remove'];
 const NEXT: Partial<Record<Id, Id[]>> = {
   today: ['late', 'quote', 'bookings'],
   late: ['payOlabarri'],
-  quote: ['quoteIris', 'quoteMadrid'],
-  quoteMadrid: ['madridBianchi'],
+  quote: ['quoteIris', 'madridBianchi'],
   quoteIris: ['terms', 'send'],
   madridBianchi: ['terms', 'send'],
   terms: ['terms30', 'terms50'],
@@ -85,6 +84,10 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
   const [choices, setChoices] = useState<Id[]>(ROOT);
   const [busy, setBusy] = useState(false);
   const [app, setApp] = useState<App>(START);
+  // On phones one side shows at a time; a dot on the Traviosoft tab says something changed there.
+  const [tab, setTab] = useState<'chat' | 'app'>('chat');
+  const [dot, setDot] = useState(false);
+  const seen = useRef('');
   const logRef = useRef<HTMLDivElement>(null);
   const timers = useRef<number[]>([]);
 
@@ -95,7 +98,13 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
   useEffect(() => {
     const el = logRef.current;
     if (el) el.scrollTo({ top: el.scrollHeight, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-  }, [msgs]);
+  }, [msgs, choices]);
+  const appKey = JSON.stringify({ ...app, flash: null, sendHint: false });
+  useEffect(() => {
+    if (seen.current && seen.current !== appKey && tab === 'chat') setDot(true);
+    seen.current = appKey;
+  }, [appKey, tab]);
+  const showTab = (k: 'chat' | 'app') => { setTab(k); if (k === 'app') setDot(false); };
 
   const q = app.quote ? QUOTES[app.quote] : null;
   const dep = q && app.terms ? Math.round(q.total * app.terms) : 0;
@@ -189,20 +198,27 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
   const restart = () => {
     timers.current.forEach(clearTimeout);
     timers.current = [];
-    setMsgs([]); setUsed([]); setChoices(ROOT); setBusy(false); setApp(START);
+    setMsgs([]); setUsed([]); setChoices(ROOT); setBusy(false); setApp(START); setDot(false); setTab('chat');
+    seen.current = '';
   };
 
   const waiting = msgs.some(m => m.k === 'ask' && m.state === 'open');
   const showMore = !busy && !waiting && choices.length > 0 && !ROOT.some(r => choices.includes(r)) && ROOT.some(r => !used.includes(r));
 
   return (
-    <div className="sim">
+    <div className="sim" data-tab={tab}>
+      <div className="sim-tabs" role="tablist">
+        <button type="button" role="tab" aria-selected={tab === 'chat'} onClick={() => showTab('chat')}>{t.chatTab}</button>
+        <button type="button" role="tab" aria-selected={tab === 'app'} onClick={() => showTab('app')}>
+          Traviosoft{dot && <i className="sim-dot" aria-label={t.changed} />}
+        </button>
+      </div>
       <div className="sim-chat">
         <div className="sim-head">
           <b>{t.chatTitle}</b>
           <span className="sim-conn"><i aria-hidden="true" />{t.connected}</span>
         </div>
-        <div className="sim-log" ref={logRef} aria-live="polite">
+        <div className="sim-log" ref={logRef} aria-live="polite" data-empty={msgs.length === 0 || undefined}>
           {msgs.length === 0 && <p className="sim-greet">{t.greeting}</p>}
           {msgs.map((m, i) => {
             if (m.k === 'me') return <p key={i} className="sim-me">{m.text}</p>;
@@ -217,19 +233,15 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
             if (m.k === 'bot') return <Bot key={i} s={t.steps[m.id]} prices={PRICES[m.id]} fill={fill} eur={eur} />;
             return <Ask key={i} m={m} s={t.steps[m.id]} t={t} fill={s => fill(s, pctOf(m.id))} onAnswer={answer} />;
           })}
-        </div>
-        <div className="sim-compose">
-          <div className="sim-chips">
-            {!busy && !waiting && choices.map(id => (
-              <button key={id} type="button" className="sim-chip" onClick={() => send(id)}>{t.steps[id].say}</button>
-            ))}
-            {showMore && <button type="button" className="sim-chip ghost" onClick={() => setChoices(ROOT.filter(x => !used.includes(x)))}>{t.more}</button>}
-          </div>
-          <div className="sim-input" aria-hidden="true">
-            <span>{t.composer}</span>
-            {used.length > 0 && <button type="button" className="sim-restart" onClick={restart}>{t.restart}</button>}
-            <i className="sim-send" />
-          </div>
+          {!busy && !waiting && (choices.length > 0 || used.length > 0) && (
+            <div className="sim-chips">
+              {choices.map(id => (
+                <button key={id} type="button" className="sim-chip" onClick={() => send(id)}>{t.steps[id].say}</button>
+              ))}
+              {showMore && <button type="button" className="sim-chip ghost" onClick={() => setChoices(ROOT.filter(x => !used.includes(x)))}>{t.more}</button>}
+              {used.length > 0 && <button type="button" className="sim-restart" onClick={restart}>{t.restart}</button>}
+            </div>
+          )}
         </div>
       </div>
 
@@ -302,7 +314,7 @@ function AppPane({ t, app, go, eur, day, dep, approve, sendQuote }: {
 
   return (
     <div className="sim-app" aria-label="Traviosoft">
-      <div className="sim-head"><b>Traviosoft</b><span>{t.appSub}</span></div>
+      <div className="sim-head"><b>Traviosoft</b></div>
       <nav className="sim-nav">
         {nav.map(([k, label]) => (
           <button key={k} type="button" aria-current={navOn === k || undefined} onClick={() => go(k)}>

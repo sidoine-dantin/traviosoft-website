@@ -58,6 +58,9 @@ export const common: SiteContent['common'] = {
   backToResources: 'Toutes les ressources',
   allResources: 'Voir toutes les ressources',
   perMonth: 'EUR / mois',
+  aiAsk: 'Ou demandez à votre assistant d’IA',
+  aiSee: 'Voir comment',
+  demoLine: 'Découvrez-le sur vos propres voyages',
   notFound: {
     title: 'Page introuvable',
     body: 'Il n’y a rien à cette adresse.'

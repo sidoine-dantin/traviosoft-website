@@ -58,6 +58,9 @@ export const common: SiteContent['common'] = {
   backToResources: 'All resources',
   allResources: 'See all resources',
   perMonth: 'EUR / month',
+  aiAsk: 'Or ask your AI assistant',
+  aiSee: 'See how',
+  demoLine: 'See it with your own trips',
   notFound: {
     title: 'Page not found',
     body: 'There is nothing at this address.'

@@ -51,6 +51,9 @@ export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; lo
             </span>
             <span aria-hidden="true" style={{ fontSize: 56, fontWeight: 300 }}>→</span>
           </Link>
+          {j.heroVisual !== 'assistant' && (
+            <p className="next-demo">{c.common.demoLine}: <Link href="/demo">{c.nav.demo}</Link></p>
+          )}
         </div>
       </section>
     </>
@@ -70,6 +73,19 @@ function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string 
             <li key={f.title}><h3>{f.title}</h3>{f.body.map((p, k) => <p key={k}>{p}</p>)}</li>
           ))}
         </ul>
+        {ch.ai && (
+          <p className="topic-ai">
+            {ch.ai.say ? (
+              <>
+                <span className="topic-ai-k">{c.common.aiAsk}</span>
+                <span className="topic-ai-say">{ch.ai.say}</span>
+                <Link href="/ai-assistant">{c.common.aiSee} <span aria-hidden="true">→</span></Link>
+              </>
+            ) : (
+              <Link href="/ai-assistant#rights">{ch.ai.link} <span aria-hidden="true">→</span></Link>
+            )}
+          </p>
+        )}
       </div>
       <div className="topic-visual">
         {video

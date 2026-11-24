@@ -17,33 +17,9 @@ export const ai: AiText = {
     step: '5 of 5',
     heroTitle: 'Work in Traviosoft from your AI assistant',
     heroLead:
-      'Connect Claude, ChatGPT or Mistral to your agency’s Traviosoft. Write what you need in a sentence, and it works on your real clients, prices and trips, with the rights you give it.',
+      'Connect Claude, ChatGPT or Mistral to your agency’s Traviosoft. It works on your real clients, prices and trips, with the rights you give it.',
     heroVisual: 'assistant',
     chapters: [
-      {
-        id: 'ask',
-        kicker: 'Ask',
-        title: 'Ask what needs doing',
-        lead: 'Your assistant looks at your Traviosoft dashboard and tells you what is waiting for you today.',
-        visual: 'dashboard',
-        features: [
-          { title: 'Your day in one question', body: ['Ask “What needs me today?” and get the new requests to answer, the quotes to follow up and the overdue payments, each with a link that opens it in Traviosoft.'] },
-          { title: 'Questions about your trips and money', body: ['Which bookings are still waiting for the supplier? How much do clients owe? The answers come from your quotes, bookings and payments.'] },
-          { title: 'Find anything', body: ['Look up a client, a quote, a supplier or a trip by name, reference, email or phone.'] }
-        ]
-      },
-      {
-        id: 'work',
-        kicker: 'Do',
-        title: 'Have the work done',
-        lead: 'Write what you need in a sentence. The assistant does it in Traviosoft, the way you would in the app.',
-        visual: 'quote',
-        features: [
-          { title: 'Quotes from your catalog', body: ['Ask for a quote for a client’s trip. The services come from your catalog, at the prices of the travel dates and with your margin, as if you had built the quote yourself.'] },
-          { title: 'Bookings', body: ['Record a supplier’s confirmation and its reference, tick off a booking task or ask a supplier for availability.'] },
-          { title: 'Clients and payments', body: ['Add a new client, set the payment dates of a quote or record a payment that has arrived.'] }
-        ]
-      },
       {
         id: 'approve',
         kicker: 'Approval',
@@ -53,7 +29,6 @@ export const ai: AiText = {
         features: [
           { title: 'A question before each change', body: ['Claude, ChatGPT and Mistral ask you in the chat before each change. The change is made once you allow it.'] },
           { title: 'Deletions approved in Traviosoft', body: ['If you allow deleting, each deletion waits in Traviosoft until you approve it there, and it is recorded under your name.'] },
-          { title: 'Other AI apps', body: ['Not every other AI app asks before it acts, so their changes wait for your approval in Traviosoft.'] },
           { title: 'Every change in the history', body: ['What the assistant does appears in the activity history of Traviosoft, under the name of the person who connected it.'] }
         ]
       },
@@ -94,8 +69,8 @@ export const ai: AiText = {
   sim: {
     note: 'Try it on a sample agency: choose a message. The replies are a simulation, with no AI behind them.',
     chatTitle: 'Your AI assistant', connected: 'Traviosoft connected',
-    greeting: 'What can I do for your agency today?', composer: 'Choose a message above',
-    appSub: 'Your agency',
+    greeting: 'What can I do for your agency today?',
+    chatTab: 'Chat', changed: 'Something changed in Traviosoft',
     allow: 'Allow', deny: 'Deny', allowedTag: 'Allowed', deniedTag: 'Denied',
     deniedReply: 'Understood. Nothing has changed in Traviosoft.',
     restart: 'Start again', more: 'Something else', working: 'Working in Traviosoft',
@@ -155,14 +130,13 @@ export const ai: AiText = {
           { t: 'Alhambra tickets with a guide', s: '8 May' }
         ],
         after: 'Total {2660} for two, with your margin of {450}.',
-        ask: { action: 'Create a quote', rows: [{ t: 'Client', s: 'Iris & Noah' }, { t: 'Trip', s: 'Andalusia, 3 to 10 May' }, { t: 'Services', s: '6 from your catalog' }, { t: 'Total', s: '{2660}' }] },
+        ask: { action: 'Create a quote', rows: [{ t: 'Client', s: 'Iris & Noah' }, { t: 'Trip', s: 'Andalusia, 3 to 10 May' }, { t: 'Total', s: '{2660}' }] },
         done: 'The quote is in Traviosoft as a draft, and I’ve opened it for you. Do you want to set the payment terms, or send it?'
       },
-      quoteMadrid: { say: 'For a trip to Madrid', reply: 'Who is travelling, and when?' },
       madridBianchi: {
-        say: 'Famiglia Bianchi, 4 people, 12 June',
-        tools: ['Find Famiglia Bianchi', 'Search your catalog', 'Check prices for 12 to 15 June'],
-        reply: 'For Famiglia Bianchi, 4 days in Madrid from 12 June, for four people, I would put in:',
+        say: 'For Famiglia Bianchi, Madrid',
+        tools: ['Read the Madrid request from Famiglia Bianchi', 'Search your catalog', 'Check prices for 12 to 15 June'],
+        reply: 'Famiglia Bianchi asked for 4 days in Madrid from 12 June, for four. Here is what I would put in, from your catalog, at the prices for those dates:',
         rows: [
           { t: 'Airport transfers, both ways', s: '12 and 15 June' },
           { t: 'Hotel in central Madrid, 3 nights, 2 rooms', s: '12 to 15 June' },
@@ -170,7 +144,7 @@ export const ai: AiText = {
           { t: 'Day trip to Toledo with a guide', s: '14 June' }
         ],
         after: 'Total {2100} for four, with your margin of {380}.',
-        ask: { action: 'Create a quote', rows: [{ t: 'Client', s: 'Famiglia Bianchi' }, { t: 'Trip', s: 'Madrid and Toledo, 12 to 15 June' }, { t: 'Services', s: '4 from your catalog' }, { t: 'Total', s: '{2100}' }] },
+        ask: { action: 'Create a quote', rows: [{ t: 'Client', s: 'Famiglia Bianchi' }, { t: 'Trip', s: 'Madrid and Toledo, 12 to 15 June' }, { t: 'Total', s: '{2100}' }] },
         done: 'The quote is in Traviosoft as a draft, and I’ve opened it for you. Do you want to set the payment terms, or send it?'
       },
       terms: { say: 'Set the payment terms', reply: 'Which terms do you want?' },

@@ -62,6 +62,8 @@ export type Chapter = {
   lead: string;
   visual: VisualKey;
   features: Feature[];
+  /** a line under the points: what to write to the AI assistant for this work, or a link to its page */
+  ai?: { say?: string; link?: string };
 };
 
 export type Faq = { q: string; a: string[] };
@@ -226,7 +228,7 @@ export type AiSimStep = {
 
 export type AiSimStepId =
   | 'today' | 'late' | 'payOlabarri'
-  | 'quote' | 'quoteIris' | 'quoteMadrid' | 'madridBianchi' | 'terms' | 'terms30' | 'terms50' | 'send'
+  | 'quote' | 'quoteIris' | 'madridBianchi' | 'terms' | 'terms30' | 'terms50' | 'send'
   | 'bookings' | 'confirmSeville' | 'requestGranada'
   | 'remove' | 'delLind' | 'delWeber';
 
@@ -234,8 +236,9 @@ export type AiSimStepId =
 export type AiSimText = {
   /** a short line above the simulation, saying it runs on sample data */
   note: string;
-  chatTitle: string; connected: string; greeting: string; composer: string;
-  appSub: string;
+  chatTitle: string; connected: string; greeting: string;
+  /** phones: the two tabs (the other one is "Traviosoft"), and what the dot on it says */
+  chatTab: string; changed: string;
   allow: string; deny: string; allowedTag: string; deniedTag: string; deniedReply: string;
   restart: string; more: string; working: string;
   nav: { dashboard: string; quotes: string; bookings: string; payments: string; review: string };
@@ -273,6 +276,8 @@ export type SiteContent = {
   common: {
     premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
+    /** the AI line under some topics, and the demo line in the last band of the product pages */
+    aiAsk: string; aiSee: string; demoLine: string;
     notFound: { title: string; body: string };
   };
   visuals: VisualText;

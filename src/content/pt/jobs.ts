@@ -40,6 +40,7 @@ const sell: JobPage = {
     },
     {
       id: 'quotes',
+      ai: { say: '«Cria um orçamento para Iris & Noah com o meu catálogo»' },
       kicker: 'Orçamentos',
       title: 'Orçamentos com a sua margem e o IVA',
       lead: 'Crie o orçamento linha a linha a partir do seu catálogo. Cada linha mostra o que lhe custa, o que o cliente paga e a sua margem.',
@@ -122,6 +123,7 @@ const book: JobPage = {
     },
     {
       id: 'status',
+      ai: { say: '«O hotel de Sevilha confirmou, ref. 48213»' },
       kicker: 'Estados',
       title: 'Estados de reserva em cada viagem',
       lead: 'Em cada viagem, vê que serviços estão confirmados e quais ainda esperam pelo fornecedor.',
@@ -214,6 +216,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'links',
+      ai: { say: '«A Olabarri pagou o saldo por transferência»' },
       kicker: 'Links de pagamento',
       title: 'Links de pagamento no email',
       lead: 'O cliente paga online a partir de um link no seu email, com cartão por exemplo.',
@@ -316,6 +319,7 @@ const setup: JobPage = {
     },
     {
       id: 'team',
+      ai: { link: 'Quem pode ligar um assistente de IA' },
       kicker: 'Equipa',
       title: 'Clientes e vendas de cada vendedor',
       lead: 'Cada vendedor trabalha com os seus próprios clientes e viagens, e vê as vendas de toda a agência.',

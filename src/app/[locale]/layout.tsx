@@ -121,11 +121,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
   const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: baseUrl, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
 
-  const jobs = JOB_ORDER.map(s => ({
+  // The four product pages sit under Product; the AI assistant has its own item beside it.
+  const jobs = JOB_ORDER.filter(s => s !== 'ai-assistant').map(s => ({
     slug: s,
     name: c.jobs[s].name,
     menuLine: c.jobs[s].menuLine
   }));
+  const ai = { slug: 'ai-assistant', name: c.jobs['ai-assistant'].name };
 
   return (
     <html lang={LANG_TAG[locale as Locale] ?? locale} className={`${bricolage.variable} ${schibsted.variable}`}>
@@ -134,7 +136,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <JsonLd data={site} />
         <JsonLd data={software} />
         <NextIntlClientProvider messages={messages}>
-          <Header locale={c.locale} labels={c.nav} jobs={jobs} />
+          <Header locale={c.locale} labels={c.nav} jobs={jobs} ai={ai} />
           <main id="main">{children}</main>
           <Footer c={c} />
           <ScrollTop />

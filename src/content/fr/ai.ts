@@ -12,33 +12,9 @@ export const ai: AiText = {
     step: '5 sur 5',
     heroTitle: 'Travaillez dans Traviosoft depuis votre assistant d’IA',
     heroLead:
-      'Connectez Claude, ChatGPT ou Mistral au Traviosoft de votre agence. Écrivez ce dont vous avez besoin en une phrase : il travaille sur vos vrais clients, prix et voyages, avec les droits que vous lui donnez.',
+      'Connectez Claude, ChatGPT ou Mistral au Traviosoft de votre agence. Il travaille sur vos vrais clients, prix et voyages, avec les droits que vous lui donnez.',
     heroVisual: 'assistant',
     chapters: [
-      {
-        id: 'ask',
-        kicker: 'Demander',
-        title: 'Demandez ce qui vous attend',
-        lead: 'Votre assistant regarde votre tableau de bord Traviosoft et vous dit ce qui vous attend aujourd’hui.',
-        visual: 'dashboard',
-        features: [
-          { title: 'Votre journée en une question', body: ['Demandez « Qu’est-ce qui m’attend aujourd’hui ? » : les nouvelles demandes à traiter, les devis à relancer et les paiements en retard, chacun avec un lien qui l’ouvre dans Traviosoft.'] },
-          { title: 'Vos voyages et votre argent', body: ['Quelles réservations attendent encore le prestataire ? Combien vos clients vous doivent-ils ? Les réponses viennent de vos devis, réservations et paiements.'] },
-          { title: 'Tout retrouver', body: ['Cherchez un client, un devis, un prestataire ou un voyage par son nom, sa référence, son e-mail ou son téléphone.'] }
-        ]
-      },
-      {
-        id: 'work',
-        kicker: 'Faire',
-        title: 'Faites faire le travail',
-        lead: 'Écrivez ce dont vous avez besoin en une phrase. L’assistant le fait dans Traviosoft, comme vous le feriez dans l’app.',
-        visual: 'quote',
-        features: [
-          { title: 'Des devis depuis votre catalogue', body: ['Demandez un devis pour le voyage d’un client. Les prestations viennent de votre catalogue, aux prix des dates du voyage et avec votre marge, comme si vous aviez fait le devis vous-même.'] },
-          { title: 'Les réservations', body: ['Enregistrez la confirmation d’un prestataire et sa référence, cochez une tâche de réservation ou demandez une disponibilité à un prestataire.'] },
-          { title: 'Clients et paiements', body: ['Ajoutez un nouveau client, fixez les dates de paiement d’un devis ou enregistrez un paiement reçu.'] }
-        ]
-      },
       {
         id: 'approve',
         kicker: 'Validation',
@@ -48,7 +24,6 @@ export const ai: AiText = {
         features: [
           { title: 'Une question avant chaque changement', body: ['Claude, ChatGPT et Mistral vous demandent dans la conversation avant chaque changement. Il est fait dès que vous l’autorisez.'] },
           { title: 'Suppressions validées dans Traviosoft', body: ['Si vous autorisez la suppression, chaque suppression attend dans Traviosoft que vous la validiez, et elle est enregistrée à votre nom.'] },
-          { title: 'Les autres apps d’IA', body: ['Les autres apps d’IA ne demandent pas toutes avant d’agir, alors leurs changements attendent votre accord dans Traviosoft.'] },
           { title: 'Chaque changement dans l’historique', body: ['Ce que fait l’assistant apparaît dans l’historique d’activité de Traviosoft, au nom de la personne qui l’a connecté.'] }
         ]
       },
@@ -89,8 +64,8 @@ export const ai: AiText = {
   sim: {
     note: 'Essayez sur une agence exemple : choisissez un message. Les réponses sont une simulation, sans IA derrière.',
     chatTitle: 'Votre assistant d’IA', connected: 'Traviosoft connecté',
-    greeting: 'Que puis-je faire pour votre agence aujourd’hui ?', composer: 'Choisissez un message ci-dessus',
-    appSub: 'Votre agence',
+    greeting: 'Que puis-je faire pour votre agence aujourd’hui ?',
+    chatTab: 'Chat', changed: 'Du nouveau dans Traviosoft',
     allow: 'Autoriser', deny: 'Refuser', allowedTag: 'Autorisé', deniedTag: 'Refusé',
     deniedReply: 'Entendu. Rien n’a changé dans Traviosoft.',
     restart: 'Recommencer', more: 'Autre chose', working: 'Travail dans Traviosoft',
@@ -150,14 +125,13 @@ export const ai: AiText = {
           { t: 'Billets pour l’Alhambra avec un guide', s: '8 mai' }
         ],
         after: 'Total {2660} pour deux, avec votre marge de {450}.',
-        ask: { action: 'Créer un devis', rows: [{ t: 'Client', s: 'Iris & Noah' }, { t: 'Voyage', s: 'Andalousie, du 3 au 10 mai' }, { t: 'Prestations', s: '6 de votre catalogue' }, { t: 'Total', s: '{2660}' }] },
+        ask: { action: 'Créer un devis', rows: [{ t: 'Client', s: 'Iris & Noah' }, { t: 'Voyage', s: 'Andalousie, du 3 au 10 mai' }, { t: 'Total', s: '{2660}' }] },
         done: 'Le devis est dans Traviosoft en brouillon, et je vous l’ai ouvert. Voulez-vous fixer les conditions de paiement, ou l’envoyer ?'
       },
-      quoteMadrid: { say: 'Pour un voyage à Madrid', reply: 'Qui voyage, et quand ?' },
       madridBianchi: {
-        say: 'Famiglia Bianchi, 4 personnes, 12 juin',
-        tools: ['Recherche de la Famiglia Bianchi', 'Recherche dans votre catalogue', 'Vérification des prix du 12 au 15 juin'],
-        reply: 'Pour la Famiglia Bianchi, 4 jours à Madrid à partir du 12 juin, pour quatre personnes, je propose :',
+        say: 'Pour la Famiglia Bianchi, Madrid',
+        tools: ['Lecture de la demande de la Famiglia Bianchi pour Madrid', 'Recherche dans votre catalogue', 'Vérification des prix du 12 au 15 juin'],
+        reply: 'La Famiglia Bianchi demande 4 jours à Madrid à partir du 12 juin, pour quatre. Voici ce que je propose, depuis votre catalogue, aux prix de ces dates :',
         rows: [
           { t: 'Transferts aéroport, aller et retour', s: '12 et 15 juin' },
           { t: 'Hôtel dans le centre de Madrid, 3 nuits, 2 chambres', s: 'Du 12 au 15 juin' },
@@ -165,7 +139,7 @@ export const ai: AiText = {
           { t: 'Journée à Tolède avec un guide', s: '14 juin' }
         ],
         after: 'Total {2100} pour quatre, avec votre marge de {380}.',
-        ask: { action: 'Créer un devis', rows: [{ t: 'Client', s: 'Famiglia Bianchi' }, { t: 'Voyage', s: 'Madrid et Tolède, du 12 au 15 juin' }, { t: 'Prestations', s: '4 de votre catalogue' }, { t: 'Total', s: '{2100}' }] },
+        ask: { action: 'Créer un devis', rows: [{ t: 'Client', s: 'Famiglia Bianchi' }, { t: 'Voyage', s: 'Madrid et Tolède, du 12 au 15 juin' }, { t: 'Total', s: '{2100}' }] },
         done: 'Le devis est dans Traviosoft en brouillon, et je vous l’ai ouvert. Voulez-vous fixer les conditions de paiement, ou l’envoyer ?'
       },
       terms: { say: 'Fixe les conditions de paiement', reply: 'Quelles conditions voulez-vous ?' },

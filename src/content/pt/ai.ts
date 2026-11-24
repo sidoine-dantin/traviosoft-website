@@ -12,33 +12,9 @@ export const ai: AiText = {
     step: '5 de 5',
     heroTitle: 'Trabalhe no Traviosoft a partir do seu assistente de IA',
     heroLead:
-      'Ligue o Claude, o ChatGPT ou o Mistral ao Traviosoft da sua agência. Escreva o que precisa numa frase: ele trabalha com os seus clientes, preços e viagens reais, com os direitos que lhe der.',
+      'Ligue o Claude, o ChatGPT ou o Mistral ao Traviosoft da sua agência. Ele trabalha com os seus clientes, preços e viagens reais, com os direitos que lhe der.',
     heroVisual: 'assistant',
     chapters: [
-      {
-        id: 'ask',
-        kicker: 'Perguntar',
-        title: 'Pergunte o que tem pendente',
-        lead: 'O seu assistente consulta o seu painel do Traviosoft e diz-lhe o que o espera hoje.',
-        visual: 'dashboard',
-        features: [
-          { title: 'O seu dia numa pergunta', body: ['Pergunte «O que tenho pendente hoje?» e receba os pedidos novos por responder, os orçamentos por acompanhar e os pagamentos em atraso, cada um com uma ligação que o abre no Traviosoft.'] },
-          { title: 'As suas viagens e o seu dinheiro', body: ['Que reservas ainda aguardam o fornecedor? Quanto lhe devem os clientes? As respostas vêm dos seus orçamentos, reservas e pagamentos.'] },
-          { title: 'Encontrar tudo', body: ['Procure um cliente, um orçamento, um fornecedor ou uma viagem pelo nome, referência, email ou telefone.'] }
-        ]
-      },
-      {
-        id: 'work',
-        kicker: 'Fazer',
-        title: 'Peça que o trabalho seja feito',
-        lead: 'Escreva o que precisa numa frase. O assistente faz isso no Traviosoft, tal como o faria na app.',
-        visual: 'quote',
-        features: [
-          { title: 'Orçamentos a partir do seu catálogo', body: ['Peça um orçamento para a viagem de um cliente. Os serviços vêm do seu catálogo, aos preços das datas da viagem e com a sua margem, como se tivesse sido o próprio a fazer o orçamento.'] },
-          { title: 'Reservas', body: ['Registe a confirmação de um fornecedor e a respetiva referência, marque uma tarefa de reserva ou peça disponibilidade a um fornecedor.'] },
-          { title: 'Clientes e pagamentos', body: ['Adicione um cliente novo, defina as datas de pagamento de um orçamento ou registe um pagamento recebido.'] }
-        ]
-      },
       {
         id: 'approve',
         kicker: 'Aprovação',
@@ -48,7 +24,6 @@ export const ai: AiText = {
         features: [
           { title: 'Uma pergunta antes de cada alteração', body: ['O Claude, o ChatGPT e o Mistral perguntam-lhe na conversa antes de cada alteração. A alteração é feita assim que a permitir.'] },
           { title: 'Eliminações aprovadas no Traviosoft', body: ['Se permitir eliminar, cada eliminação aguarda no Traviosoft até a aprovar lá, e fica registada em seu nome.'] },
-          { title: 'Outras apps de IA', body: ['Nem todas as outras apps de IA perguntam antes de agir, por isso as suas alterações aguardam a sua aprovação no Traviosoft.'] },
           { title: 'Cada alteração no histórico', body: ['O que o assistente faz aparece no histórico de atividade do Traviosoft, em nome da pessoa que o ligou.'] }
         ]
       },
@@ -89,8 +64,8 @@ export const ai: AiText = {
   sim: {
     note: 'Experimente com uma agência de exemplo: escolha uma mensagem. As respostas são uma simulação, sem IA por trás.',
     chatTitle: 'O seu assistente de IA', connected: 'Traviosoft ligado',
-    greeting: 'O que posso fazer hoje pela sua agência?', composer: 'Escolha uma mensagem acima',
-    appSub: 'A sua agência',
+    greeting: 'O que posso fazer hoje pela sua agência?',
+    chatTab: 'Chat', changed: 'Há alterações no Traviosoft',
     allow: 'Permitir', deny: 'Recusar', allowedTag: 'Permitido', deniedTag: 'Recusado',
     deniedReply: 'Entendido. Nada mudou no Traviosoft.',
     restart: 'Recomeçar', more: 'Outra coisa', working: 'A trabalhar no Traviosoft',
@@ -150,14 +125,13 @@ export const ai: AiText = {
           { t: 'Bilhetes para a Alhambra com guia', s: '8 de maio' }
         ],
         after: 'Total {2660} para dois, com a sua margem de {450}.',
-        ask: { action: 'Criar um orçamento', rows: [{ t: 'Cliente', s: 'Iris & Noah' }, { t: 'Viagem', s: 'Andaluzia, de 3 a 10 de maio' }, { t: 'Serviços', s: '6 do seu catálogo' }, { t: 'Total', s: '{2660}' }] },
+        ask: { action: 'Criar um orçamento', rows: [{ t: 'Cliente', s: 'Iris & Noah' }, { t: 'Viagem', s: 'Andaluzia, de 3 a 10 de maio' }, { t: 'Total', s: '{2660}' }] },
         done: 'O orçamento está no Traviosoft como rascunho, e abri-o para si. Quer definir as condições de pagamento, ou enviá-lo?'
       },
-      quoteMadrid: { say: 'Para uma viagem a Madrid', reply: 'Quem viaja, e quando?' },
       madridBianchi: {
-        say: 'Famiglia Bianchi, 4 pessoas, 12 de junho',
-        tools: ['A procurar a Famiglia Bianchi', 'A procurar no seu catálogo', 'A verificar os preços de 12 a 15 de junho'],
-        reply: 'Para a Famiglia Bianchi, 4 dias em Madrid a partir de 12 de junho, para quatro pessoas, eu poria:',
+        say: 'Para a Famiglia Bianchi, Madrid',
+        tools: ['A ler o pedido da Famiglia Bianchi para Madrid', 'A procurar no seu catálogo', 'A verificar os preços de 12 a 15 de junho'],
+        reply: 'A Famiglia Bianchi pede 4 dias em Madrid a partir de 12 de junho, para quatro. Eis o que eu poria, do seu catálogo, aos preços dessas datas:',
         rows: [
           { t: 'Transfers do aeroporto, ida e volta', s: '12 e 15 de junho' },
           { t: 'Hotel no centro de Madrid, 3 noites, 2 quartos', s: 'De 12 a 15 de junho' },
@@ -165,7 +139,7 @@ export const ai: AiText = {
           { t: 'Excursão de um dia a Toledo com guia', s: '14 de junho' }
         ],
         after: 'Total {2100} para quatro, com a sua margem de {380}.',
-        ask: { action: 'Criar um orçamento', rows: [{ t: 'Cliente', s: 'Famiglia Bianchi' }, { t: 'Viagem', s: 'Madrid e Toledo, de 12 a 15 de junho' }, { t: 'Serviços', s: '4 do seu catálogo' }, { t: 'Total', s: '{2100}' }] },
+        ask: { action: 'Criar um orçamento', rows: [{ t: 'Cliente', s: 'Famiglia Bianchi' }, { t: 'Viagem', s: 'Madrid e Toledo, de 12 a 15 de junho' }, { t: 'Total', s: '{2100}' }] },
         done: 'O orçamento está no Traviosoft como rascunho, e abri-o para si. Quer definir as condições de pagamento, ou enviá-lo?'
       },
       terms: { say: 'Define as condições de pagamento', reply: 'Que condições quer?' },
