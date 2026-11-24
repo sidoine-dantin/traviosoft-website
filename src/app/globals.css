@@ -834,8 +834,10 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .sim-head span { font-size: 13px; color: var(--muted); }
 .sim-conn { display: inline-flex; align-items: center; gap: 7px; }
 .sim-conn i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
-.sim-log { height: 440px; overflow-y: auto; padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5; }
-.sim-greet { margin: 6px 0 0; font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.2; color: var(--green); max-width: 18ch; }
+/* Like a chat app: the messages scroll, the choices stay pinned under them. */
+.sim-chat { height: 600px; }
+.sim-log { flex: 1 1 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 22px 22px 12px; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5; }
+.sim-greet { margin: auto 0; font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.2; color: var(--green); max-width: 18ch; }
 .sim-me { align-self: flex-end; max-width: 82%; margin: 0; padding: 10px 15px; border-radius: 16px; background: var(--tint); color: var(--ink); animation: sim-in .22s var(--ease-enter); }
 .sim-bot { align-self: stretch; margin: 0; display: grid; gap: 10px; animation: sim-in .22s var(--ease-enter); }
 .sim-bot p { margin: 0; }
@@ -849,8 +851,15 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .sim-md.priced .sim-fig { float: right; font-weight: 650; }
 .sim-bot b { font-weight: 700; }
 /* Working: "Thinking" with a light sweep, then each lookup with a small spinner until it is done. */
-.sim-think { margin: 0; font-size: 14.5px; animation: sim-in .2s var(--ease-enter); }
+.sim-think { margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14.5px; animation: sim-in .2s var(--ease-enter); }
 .sim-think span { background: linear-gradient(90deg, var(--muted) 35%, var(--ink) 50%, var(--muted) 65%) 0 0 / 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: sim-sweep 1.5s linear infinite; }
+/* three dots that rise in turn, next to "Thinking" */
+.sim-dots { display: inline-flex; gap: 4px; }
+.sim-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: sim-bob 1s ease-in-out infinite; }
+.sim-dots i:nth-child(2) { animation-delay: .15s; }
+.sim-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes sim-bob { 0%, 70%, 100% { transform: none; opacity: .35; } 35% { transform: translateY(-4px); opacity: 1; } }
+.sim-review-btns { display: inline-flex; gap: 8px; }
 @keyframes sim-sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
 .sim-spin { width: 12px; height: 12px; margin: 0 1px; flex: none; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--green); animation: sim-turn .8s linear infinite; }
 @keyframes sim-turn { to { rotate: 1turn; } }
@@ -877,13 +886,14 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .sim-btn:active { scale: .97; }
 .sim-btn[data-hint] { box-shadow: 0 0 0 4px var(--yellow); }
 .sim-btn:focus-visible, .sim-chip:focus-visible, .sim-restart:focus-visible, .sim-nav button:focus-visible, .sim-link button:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
-.sim-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-top: 2px; }
-.sim-log[data-empty] .sim-chips { padding-top: 4px; }
+.sim-compose { flex: none; display: flex; align-items: flex-end; gap: 10px; padding: 12px 16px 16px; min-height: 96px; background: var(--white); box-shadow: 0 -12px 16px -12px rgba(1, 20, 15, .08); }
+.sim-chips { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.sim-chips[data-busy] { align-self: center; }
 .sim-chip { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--green); background: var(--white); color: var(--green); cursor: pointer; animation: sim-in .2s var(--ease-enter); transition: background .15s, color .15s; }
 @media (hover: hover) { .sim-chip:hover { background: var(--green); color: var(--white); } }
 .sim-chip.ghost { border-color: var(--line); color: var(--ink); }
 @media (hover: hover) { .sim-chip.ghost:hover { background: var(--tint); color: var(--ink); } }
-.sim-restart { font: inherit; font-size: 13.5px; background: none; border: 0; padding: 4px 6px; margin-left: auto; color: var(--muted); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.sim-restart { font: inherit; font-size: 13.5px; background: none; border: 0; padding: 4px 6px; flex: none; color: var(--muted); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
 .sim-restart:hover { color: var(--green); }
 .sim-tabs { display: none; }
 .sim-nav { display: flex; flex-wrap: wrap; gap: 4px; padding: 10px 14px 0; }
@@ -904,7 +914,7 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .sim-rows small { display: block; font-size: 12.5px; color: var(--muted); }
 .sim-rows li[data-flash] { background: var(--yellow); }
 .sim-rows li.sim-empty { grid-template-columns: 1fr; color: var(--muted); }
-.sim-rows li:has(> .sim-btn), .sim-rows li:has(> .sim-count) { grid-template-columns: minmax(0, 1fr) auto; }
+.sim-rows li:has(> .sim-btn), .sim-rows li:has(> .sim-review-btns), .sim-rows li:has(> .sim-count) { grid-template-columns: minmax(0, 1fr) auto; }
 .sim-rows li:not(:has(.sim-fig)):not(:has(.sim-btn)):not(.sim-empty):not(.sim-link) { grid-template-columns: minmax(0, 1fr) auto; }
 .sim-count { font-family: var(--figure); font-weight: 700; font-size: 20px; color: var(--green); }
 .sim-fig { font-family: var(--figure); font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -930,6 +940,7 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 @media (prefers-reduced-motion: reduce) {
   .sim-me, .sim-bot, .sim-ask, .sim-tools, .sim-tools li, .sim-chip, .sim-screen, .sim-lines li, .sim-sched, .sim-md li, .sim-think { animation: sim-fade .2s; }
   .sim-think span { animation: none; color: var(--muted); }
+  .sim-dots i { animation: none; opacity: .7; }
   .sim-spin { animation: none; border-color: var(--green); }
 }
 @keyframes sim-fade { from { opacity: 0; } to { opacity: 1; } }
@@ -943,6 +954,5 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
   .sim-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); }
   .sim[data-tab="chat"] .sim-app, .sim[data-tab="app"] .sim-chat { display: none; }
   .sim-app { min-height: 440px; }
-  .sim-log { height: 440px; }
-  .sim-log[data-empty] { height: auto; padding-bottom: 18px; }
+  .sim-chat { height: 560px; }
 }

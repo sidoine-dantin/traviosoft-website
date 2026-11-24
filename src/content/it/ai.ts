@@ -68,12 +68,12 @@ export const ai: AiText = {
     chatTab: 'Chat', changed: 'Novità in Traviosoft',
     allow: 'Consenti', deny: 'Rifiuta', allowedTag: 'Consentito', deniedTag: 'Rifiutato',
     deniedReply: 'Va bene. In Traviosoft non è cambiato nulla.',
-    restart: 'Ricomincia', more: 'Altro', working: 'Al lavoro in Traviosoft', thinking: 'Sto pensando',
+    restart: 'Ricomincia', working: 'Al lavoro in Traviosoft', thinking: 'Sto pensando',
     nav: { dashboard: 'Dashboard', quotes: 'Preventivi', bookings: 'Prenotazioni', payments: 'Pagamenti', review: 'Revisione delle modifiche' },
     ui: {
       draft: 'Bozza', sent: 'Inviato', requested: 'Richiesto', confirmed: 'Confermato', toBook: 'Da prenotare', late: 'Scaduto', paid: 'Pagato', due: 'Da pagare',
       total: 'Totale', margin: 'Il tuo margine', schedule: 'Piano dei pagamenti', deposit: 'Acconto', balance: 'Saldo',
-      send: 'Invia', approve: 'Approva', reviewEmpty: 'Tutte le modifiche sono state riviste', trashed: 'Approvato. Il preventivo è nel cestino.', reference: 'Rif.',
+      send: 'Invia', approve: 'Approva', reject: 'Rifiuta', rejected: 'Rifiutato. Il preventivo resta com’è.', reviewEmpty: 'Tutte le modifiche sono state riviste', trashed: 'Approvato. Il preventivo è nel cestino.', reference: 'Rif.',
       newRequests: 'Nuove richieste', toFollow: 'Preventivi da sollecitare', latePayments: 'Pagamenti scaduti', bookingsLeft: 'Prenotazioni da completare'
     },
     names: {

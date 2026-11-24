@@ -240,12 +240,12 @@ export type AiSimText = {
   /** phones: the two tabs (the other one is "Traviosoft"), and what the dot on it says */
   chatTab: string; changed: string;
   allow: string; deny: string; allowedTag: string; deniedTag: string; deniedReply: string;
-  restart: string; more: string; working: string; thinking: string;
+  restart: string; working: string; thinking: string;
   nav: { dashboard: string; quotes: string; bookings: string; payments: string; review: string };
   ui: {
     draft: string; sent: string; requested: string; confirmed: string; toBook: string; late: string; paid: string; due: string;
     total: string; margin: string; schedule: string; deposit: string; balance: string;
-    send: string; approve: string; reviewEmpty: string; trashed: string; reference: string;
+    send: string; approve: string; reject: string; rejected: string; reviewEmpty: string; trashed: string; reference: string;
     newRequests: string; toFollow: string; latePayments: string; bookingsLeft: string;
   };
   names: {

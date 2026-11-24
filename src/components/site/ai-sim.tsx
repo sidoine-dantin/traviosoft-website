@@ -38,13 +38,14 @@ type App = {
   queued: 'delLind' | 'delWeber' | null;
   removed: ('delLind' | 'delWeber')[];
   trashed: boolean;
+  rejected: boolean;
   flash: string | null;
 };
 
 const START: App = {
   screen: 'dashboard', quote: null, quoteSent: false, terms: null, sendHint: false,
   olabarriPaid: false, sevilleConfirmed: false, granadaRequested: false,
-  queued: null, removed: [], trashed: false, flash: null
+  queued: null, removed: [], trashed: false, rejected: false, flash: null
 };
 
 const ROOT: Id[] = ['today', 'quote', 'bookings', 'remove'];
@@ -201,7 +202,7 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
         setApp(a => ({ ...a, granadaRequested: true, screen: 'bookings' }));
         flash('granada');
       } else if (id === 'delLind' || id === 'delWeber') {
-        setApp(a => ({ ...a, queued: id, trashed: false, screen: 'review' }));
+        setApp(a => ({ ...a, queued: id, trashed: false, rejected: false, screen: 'review' }));
         flash('review');
       }
       setAsk('allowed');
@@ -210,6 +211,7 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
   };
 
   const approveInApp = () => setApp(a => (a.queued ? { ...a, removed: [...a.removed, a.queued], queued: null, trashed: true } : a));
+  const rejectInApp = () => setApp(a => (a.queued ? { ...a, queued: null, rejected: true } : a));
   const sendInApp = () => { setApp(a => ({ ...a, quoteSent: true, sendHint: false })); flash('status'); };
 
   const restart = () => {
@@ -220,7 +222,6 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
   };
 
   const waiting = msgs.some(m => m.k === 'ask' && m.state === 'open');
-  const showMore = !busy && !waiting && choices.length > 0 && !ROOT.some(r => choices.includes(r)) && ROOT.some(r => !used.includes(r));
 
   return (
     <div className="sim" data-tab={tab}>
@@ -235,11 +236,11 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
           <b>{t.chatTitle}</b>
           <span className="sim-conn"><i aria-hidden="true" />{t.connected}</span>
         </div>
-        <div className="sim-log" ref={logRef} aria-live="polite" data-empty={msgs.length === 0 || undefined}>
+        <div className="sim-log" ref={logRef} aria-live="polite">
           {msgs.length === 0 && <p className="sim-greet">{t.greeting}</p>}
           {msgs.map((m, i) => {
             if (m.k === 'me') return <p key={i} className="sim-me">{m.text}</p>;
-            if (m.k === 'think') return <p key={i} className="sim-think"><span>{t.thinking}</span></p>;
+            if (m.k === 'think') return <p key={i} className="sim-think"><i className="sim-dots" aria-hidden="true"><i /><i /><i /></i><span>{t.thinking}</span></p>;
             if (m.k === 'text') return <Words key={i} text={fill(m.text)} then={m.then} tick={follow} />;
             if (m.k === 'tools') return (
               <ul key={i} className="sim-tools" aria-label={t.working}>
@@ -252,19 +253,18 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
             if (m.k === 'bot') return <Bot key={i} s={t.steps[m.id]} prices={PRICES[m.id]} fill={fill} eur={eur} then={m.then} tick={follow} />;
             return <Ask key={i} m={m} s={t.steps[m.id]} t={t} fill={s => fill(s, pctOf(m.id))} onAnswer={answer} />;
           })}
-          {!busy && !waiting && (choices.length > 0 || used.length > 0) && (
-            <div className="sim-chips">
-              {choices.map(id => (
-                <button key={id} type="button" className="sim-chip" onClick={() => send(id)}>{t.steps[id].say}</button>
-              ))}
-              {showMore && <button type="button" className="sim-chip ghost" onClick={() => setChoices(ROOT.filter(x => !used.includes(x)))}>{t.more}</button>}
-              {used.length > 0 && <button type="button" className="sim-restart" onClick={restart}>{t.restart}</button>}
-            </div>
-          )}
+        </div>
+        <div className="sim-compose">
+          <div className="sim-chips" data-busy={busy || waiting || undefined}>
+            {!busy && !waiting && choices.map(id => (
+              <button key={id} type="button" className="sim-chip" onClick={() => send(id)}>{t.steps[id].say}</button>
+            ))}
+          </div>
+          {used.length > 0 && <button type="button" className="sim-restart" onClick={restart}>{t.restart}</button>}
         </div>
       </div>
 
-      <AppPane t={t} app={app} go={go} eur={eur} day={day} dep={dep} approve={approveInApp} sendQuote={sendInApp} />
+      <AppPane t={t} app={app} go={go} eur={eur} day={day} dep={dep} approve={approveInApp} reject={rejectInApp} sendQuote={sendInApp} />
     </div>
   );
 }
@@ -369,9 +369,9 @@ function Cross() {
   return <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>;
 }
 
-function AppPane({ t, app, go, eur, day, dep, approve, sendQuote }: {
+function AppPane({ t, app, go, eur, day, dep, approve, reject, sendQuote }: {
   t: AiSimText; app: App; go: (s: Screen) => void; eur: (v: number) => string; day: (d: Date) => string; dep: number;
-  approve: () => void; sendQuote: () => void;
+  approve: () => void; reject: () => void; sendQuote: () => void;
 }) {
   const u = t.ui;
   const n = t.names;
@@ -475,10 +475,13 @@ function AppPane({ t, app, go, eur, day, dep, approve, sendQuote }: {
             {app.queued ? (
               <li data-flash={fl('review')}>
                 <span><b>{t.steps[app.queued].ask?.action}</b><small>{DRAFTS[app.queued].client} · {app.queued === 'delLind' ? n.lindTrip : n.weberTrip}</small></span>
-                <button type="button" className="sim-btn" onClick={approve}>{u.approve}</button>
+                <span className="sim-review-btns">
+                  <button type="button" className="sim-btn ghost" onClick={reject}>{u.reject}</button>
+                  <button type="button" className="sim-btn" onClick={approve}>{u.approve}</button>
+                </span>
               </li>
             ) : (
-              <li className="sim-empty"><span>{app.trashed ? u.trashed : u.reviewEmpty}</span></li>
+              <li className="sim-empty"><span>{app.trashed ? u.trashed : app.rejected ? u.rejected : u.reviewEmpty}</span></li>
             )}
           </ul>
         )}

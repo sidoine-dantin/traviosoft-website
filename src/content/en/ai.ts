@@ -73,12 +73,12 @@ export const ai: AiText = {
     chatTab: 'Chat', changed: 'Something changed in Traviosoft',
     allow: 'Allow', deny: 'Deny', allowedTag: 'Allowed', deniedTag: 'Denied',
     deniedReply: 'Understood. Nothing has changed in Traviosoft.',
-    restart: 'Start again', more: 'Something else', working: 'Working in Traviosoft', thinking: 'Thinking',
+    restart: 'Start again', working: 'Working in Traviosoft', thinking: 'Thinking',
     nav: { dashboard: 'Dashboard', quotes: 'Quotes', bookings: 'Bookings', payments: 'Payments', review: 'Change review' },
     ui: {
       draft: 'Draft', sent: 'Sent', requested: 'Requested', confirmed: 'Confirmed', toBook: 'To book', late: 'Late', paid: 'Paid', due: 'Due',
       total: 'Total', margin: 'Your margin', schedule: 'Payment schedule', deposit: 'Deposit', balance: 'Balance',
-      send: 'Send', approve: 'Approve', reviewEmpty: 'All changes reviewed', trashed: 'Approved. The quote is in the trash.', reference: 'Ref.',
+      send: 'Send', approve: 'Approve', reject: 'Reject', rejected: 'Rejected. The quote stays as it is.', reviewEmpty: 'All changes reviewed', trashed: 'Approved. The quote is in the trash.', reference: 'Ref.',
       newRequests: 'New requests', toFollow: 'Quotes to follow up', latePayments: 'Late payments', bookingsLeft: 'Bookings to finish'
     },
     names: {

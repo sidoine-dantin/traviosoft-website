@@ -68,12 +68,12 @@ export const ai: AiText = {
     chatTab: 'Chat', changed: 'Du nouveau dans Traviosoft',
     allow: 'Autoriser', deny: 'Refuser', allowedTag: 'Autorisé', deniedTag: 'Refusé',
     deniedReply: 'Entendu. Rien n’a changé dans Traviosoft.',
-    restart: 'Recommencer', more: 'Autre chose', working: 'Travail dans Traviosoft', thinking: 'Réflexion',
+    restart: 'Recommencer', working: 'Travail dans Traviosoft', thinking: 'Réflexion',
     nav: { dashboard: 'Tableau de bord', quotes: 'Devis', bookings: 'Réservations', payments: 'Paiements', review: 'Revue des changements' },
     ui: {
       draft: 'Brouillon', sent: 'Envoyé', requested: 'Demandé', confirmed: 'Confirmé', toBook: 'À réserver', late: 'En retard', paid: 'Payé', due: 'À venir',
       total: 'Total', margin: 'Votre marge', schedule: 'Échéancier', deposit: 'Acompte', balance: 'Solde',
-      send: 'Envoyer', approve: 'Approuver', reviewEmpty: 'Tous les changements sont revus', trashed: 'Approuvé. Le devis est dans la corbeille.', reference: 'Réf.',
+      send: 'Envoyer', approve: 'Approuver', reject: 'Refuser', rejected: 'Refusé. Le devis reste tel quel.', reviewEmpty: 'Tous les changements sont revus', trashed: 'Approuvé. Le devis est dans la corbeille.', reference: 'Réf.',
       newRequests: 'Nouvelles demandes', toFollow: 'Devis à relancer', latePayments: 'Paiements en retard', bookingsLeft: 'Réservations à terminer'
     },
     names: {
