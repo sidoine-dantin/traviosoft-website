@@ -1,16 +1,18 @@
 'use client';
 
-import { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { usePathname } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 
 /*
- * Ad measurement (LinkedIn Insight Tag, Meta Pixel, Google tag for Google Ads), loaded only after the
- * visitor accepts. The IDs come from build-time variables; with neither set,
- * nothing is loaded and no banner is shown.
+ * Cookie notice and ad tags (LinkedIn Insight Tag, Meta Pixel, Google tag for Google Ads).
+ * No tag loads before the visitor chooses. With no tag ID set, nothing loads and no notice shows.
  *
- * Refusing is as easy as accepting (one click, same size), the choice is kept
- * for six months, and "Cookie settings" in the footer reopens the banner.
+ * First view: title, one short paragraph, then "Accept all", "Necessary only" and "Preferences",
+ * all the same size, so refusing is as easy as accepting (CNIL 2020 recommendation, EDPB cookie
+ * banner taskforce 2023). "Preferences" turns the same card into one switch per purpose, both off
+ * until the visitor turns them on. The choice is kept for six months; "Cookie settings" in the
+ * footer reopens the switches at any time.
  */
 
 // Public tag IDs (they appear in every page's network requests); env vars can override them.
@@ -30,7 +32,16 @@ const KEY = 'tv-consent';
 const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 182;
 export const OPEN_EVENT = 'tv-consent-open';
 
-type Choice = 'granted' | 'denied';
+/*
+ * Two purposes, each with its own switch under "Preferences" (CNIL: one consent per purpose):
+ * - m, ad measurement: the Google tag counts visits and demo bookings that come from our ads,
+ *   with ad personalisation off (Consent Mode v2: ad_storage and ad_user_data granted).
+ * - r, ads on other sites: the LinkedIn Insight Tag and the Meta Pixel load, and the Google tag
+ *   may use the visit for remarketing (ad_personalization granted). LinkedIn and Meta tags cannot
+ *   measure without also building audiences, so they load only with this purpose.
+ * Nothing loads before a choice: Google Consent Mode "basic" implementation.
+ */
+export type Choice = { m: boolean; r: boolean };
 
 type Win = Window & {
   fbq?: ((...args: unknown[]) => void) & { callMethod?: unknown; queue?: unknown[]; loaded?: boolean; version?: string; push?: unknown };
@@ -46,9 +57,13 @@ function readChoice(): Choice | null {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return null;
-    const v = JSON.parse(raw) as { c: Choice; t: number };
-    if (Date.now() - v.t > MAX_AGE_MS) return null;
-    return v.c === 'granted' || v.c === 'denied' ? v.c : null;
+    const v = JSON.parse(raw) as { c?: 'granted' | 'denied'; m?: boolean; r?: boolean; t: number };
+    if (typeof v.t !== 'number' || Date.now() - v.t > MAX_AGE_MS) return null;
+    if (typeof v.m === 'boolean' && typeof v.r === 'boolean') return { m: v.m, r: v.r };
+    // A choice made with the earlier one-switch banner: "Accept all" covered both purposes.
+    if (v.c === 'granted') return { m: true, r: true };
+    if (v.c === 'denied') return { m: false, r: false };
+    return null;
   } catch {
     return null;
   }
@@ -60,7 +75,7 @@ let memoryChoice: Choice | null = null; // used when storage is blocked
 function saveChoice(c: Choice) {
   memoryChoice = c;
   try {
-    localStorage.setItem(KEY, JSON.stringify({ c, t: Date.now() }));
+    localStorage.setItem(KEY, JSON.stringify({ m: c.m, r: c.r, t: Date.now() }));
   } catch {
     /* storage blocked: the choice lasts for this page only */
   }
@@ -75,9 +90,18 @@ function subscribe(cb: () => void) {
     window.removeEventListener('storage', cb);
   };
 }
-/** 'unset' before a choice, 'server' while rendering on the server (no banner then). */
-const snapshot = () => readChoice() ?? memoryChoice ?? 'unset';
-const serverSnapshot = () => 'server' as const;
+/** A string so React can compare snapshots: 'unset' before a choice, 'server' while rendering on the server, else "m1r0". */
+const encode = (c: Choice) => `m${c.m ? 1 : 0}r${c.r ? 1 : 0}`;
+const snapshot = () => {
+  const c = readChoice() ?? memoryChoice;
+  return c ? encode(c) : 'unset';
+};
+const serverSnapshot = () => 'server';
+function decode(s: string): Choice | null {
+  const m = /^m([01])r([01])$/.exec(s);
+  return m ? { m: m[1] === '1', r: m[2] === '1' } : null;
+}
+const current = () => decode(snapshot());
 
 function addScript(src: string) {
   if (document.querySelector(`script[src="${src}"]`)) return;
@@ -87,11 +111,39 @@ function addScript(src: string) {
   document.head.appendChild(s);
 }
 
-let loaded = false;
-function loadTags() {
-  if (loaded) return;
-  loaded = true;
+const loaded = { google: false, social: false };
+
+function googleConsent(c: Choice) {
+  return {
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: c.r ? 'granted' : 'denied',
+    analytics_storage: 'denied'
+  };
+}
+
+function loadTags(c: Choice) {
   const w = window as Win;
+  if (GOOGLE_ADS_ID && (c.m || c.r)) {
+    if (!loaded.google) {
+      loaded.google = true;
+      w.dataLayer = w.dataLayer ?? [];
+      // gtag needs the real `arguments` object, not an array.
+      w.gtag = function gtag() {
+        w.dataLayer!.push(arguments);
+      };
+      // Consent Mode v2: everything refused by default, then the visitor's choice. No analytics at all.
+      w.gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+      w.gtag('consent', 'update', googleConsent(c));
+      w.gtag('js', new Date());
+      w.gtag('config', GOOGLE_ADS_ID, { send_page_view: false });
+      addScript(`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`);
+    } else {
+      w.gtag?.('consent', 'update', googleConsent(c));
+    }
+  }
+  if (!c.r || loaded.social) return;
+  loaded.social = true;
   if (LINKEDIN_ID) {
     w._linkedin_partner_id = LINKEDIN_ID;
     w._linkedin_data_partner_ids = [...(w._linkedin_data_partner_ids ?? []), LINKEDIN_ID];
@@ -119,23 +171,6 @@ function loadTags() {
     addScript('https://connect.facebook.net/en_US/fbevents.js');
     w.fbq('init', META_ID);
   }
-  if (GOOGLE_ADS_ID) {
-    w.dataLayer = w.dataLayer ?? [];
-    // gtag needs the real `arguments` object, not an array.
-    w.gtag = function gtag() {
-      w.dataLayer!.push(arguments);
-    };
-    // The tag only ever runs after the visitor accepted, so advertising consent is granted; no analytics.
-    w.gtag('consent', 'default', {
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
-      analytics_storage: 'denied',
-    });
-    w.gtag('js', new Date());
-    w.gtag('config', GOOGLE_ADS_ID, { send_page_view: false });
-    addScript(`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`);
-  }
 }
 
 /**
@@ -144,8 +179,8 @@ function loadTags() {
  */
 function trackPage(pathname: string) {
   const w = window as Win;
-  if (GOOGLE_ADS_ID) w.gtag?.('event', 'page_view', { send_to: GOOGLE_ADS_ID, page_location: window.location.href });
-  if (!META_ID) return;
+  if (loaded.google) w.gtag?.('event', 'page_view', { send_to: GOOGLE_ADS_ID, page_location: window.location.href });
+  if (!META_ID || !loaded.social) return;
   w.fbq?.('track', 'PageView');
   const page = pathname.split('/').filter(Boolean).pop();
   if (page === 'pricing' || page === 'demo') w.fbq?.('track', 'ViewContent', { content_name: page });
@@ -156,14 +191,14 @@ function trackPage(pathname: string) {
  * accepted and the tag is loaded, so it is safe to call from anywhere.
  */
 export function googleConversion(label: string) {
-  if (!GOOGLE_ADS_ID || !label || !loaded || snapshot() !== 'granted') return;
+  if (!GOOGLE_ADS_ID || !label || !loaded.google) return;
   (window as Win).gtag?.('event', 'conversion', { send_to: `${GOOGLE_ADS_ID}/${label}` });
 }
 
 /** "Demo click" conversion on LinkedIn and Google Ads. */
 function demoConversion() {
   const w = window as Win;
-  if (LINKEDIN_ID && LINKEDIN_CONVERSION_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_CONVERSION_ID) });
+  if (loaded.social && LINKEDIN_ID && LINKEDIN_CONVERSION_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_CONVERSION_ID) });
   googleConversion(GOOGLE_ADS_DEMO_LABEL);
 }
 
@@ -172,9 +207,9 @@ function demoConversion() {
  * ("Demo booked"), Meta (Schedule) and LinkedIn. Nothing is sent without consent.
  */
 export function bookedConversion() {
-  if (snapshot() !== 'granted' || !loaded) return;
   const w = window as Win;
   googleConversion(GOOGLE_ADS_BOOKED_LABEL);
+  if (!loaded.social) return;
   if (META_ID) w.fbq?.('track', 'Schedule');
   if (LINKEDIN_ID && LINKEDIN_BOOKED_ID) w.lintrk?.('track', { conversion_id: Number(LINKEDIN_BOOKED_ID) });
 }
@@ -191,7 +226,7 @@ function trackClick(target: EventTarget | null) {
   const href = a.getAttribute('href') ?? '';
   const w = window as Win;
   if (href.startsWith('mailto:')) {
-    if (META_ID) w.fbq?.('track', 'Contact');
+    if (META_ID && loaded.social) w.fbq?.('track', 'Contact');
     demoConversion();
     return;
   }
@@ -203,7 +238,7 @@ function trackClick(target: EventTarget | null) {
     return;
   }
   if (path.split('/').filter(Boolean).pop() === 'demo') {
-    if (META_ID) w.fbq?.('trackCustom', 'DemoClick');
+    if (META_ID && loaded.social) w.fbq?.('trackCustom', 'DemoClick');
     demoConversion();
   }
 }
@@ -219,51 +254,109 @@ export function CookieSettingsLink({ label }: { label: string }) {
   );
 }
 
-export function Consent({ text, accept, refuse, more, policy }: { text: string; accept: string; refuse: string; more: string; policy: string }) {
+export type ConsentLabels = {
+  title: string; text: string; accept: string; refuse: string; preferences: string; policy: string;
+  necessary: string; necessaryText: string; alwaysOn: string;
+  measure: string; measureText: string; retarget: string; retargetText: string; save: string;
+};
+
+function Switch({ on, label, text, onChange }: { on: boolean; label: string; text: string; onChange: (v: boolean) => void }) {
+  return (
+    <div className="consent-row">
+      <div className="consent-row-text">
+        <span className="consent-row-name" id={`cs-${label}`}>{label}</span>
+        <span className="consent-row-desc">{text}</span>
+      </div>
+      <button type="button" role="switch" aria-checked={on} aria-labelledby={`cs-${label}`} className="consent-switch" onClick={() => onChange(!on)}>
+        <span className="consent-knob" aria-hidden="true" />
+      </button>
+    </div>
+  );
+}
+
+export function Consent({ labels: l }: { labels: ConsentLabels }) {
   const pathname = usePathname();
   const stored = useSyncExternalStore(subscribe, snapshot, serverSnapshot);
-  const choice: Choice | null = stored === 'granted' || stored === 'denied' ? stored : null;
-  const [reopened, setReopened] = useState(false);
+  const choice = decode(stored);
+  // 'closed', the first view ('main') or the switches ('prefs'). The footer link opens the switches.
+  const [view, setView] = useState<'auto' | 'main' | 'prefs' | 'closed'>('auto');
+  const [draft, setDraft] = useState<Choice>({ m: false, r: false });
+  const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     if (!ENABLED) return;
-    const reopen = () => setReopened(true);
+    const reopen = () => {
+      setDraft(current() ?? { m: false, r: false });
+      setView('prefs');
+    };
     window.addEventListener(OPEN_EVENT, reopen);
     return () => window.removeEventListener(OPEN_EVENT, reopen);
   }, []);
 
   useEffect(() => {
-    if (choice !== 'granted') return;
-    loadTags();
+    if (!choice || (!choice.m && !choice.r)) return;
+    loadTags(choice);
     trackPage(pathname);
-  }, [choice, pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stored, pathname]);
 
   useEffect(() => {
-    if (choice !== 'granted') return;
+    if (!choice || (!choice.m && !choice.r)) return;
     const onClick = (e: MouseEvent) => trackClick(e.target);
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
-  }, [choice]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stored]);
 
-  const open = reopened || stored === 'unset';
-  if (!ENABLED || !open) return null;
+  useEffect(() => {
+    if (view === 'prefs') headingRef.current?.focus();
+  }, [view]);
+
+  const shown = view === 'auto' ? (stored === 'unset' ? 'main' : 'closed') : view;
+  if (!ENABLED || shown === 'closed') return null;
 
   const decide = (c: Choice) => {
-    const wasGranted = choice === 'granted';
+    const before = choice;
     saveChoice(c);
-    setReopened(false);
-    // Tags already running cannot be unloaded: a reload starts the page without them.
-    if (wasGranted && c === 'denied') window.location.reload();
+    setView('closed');
+    // Tags already running cannot be unloaded: a reload starts the page without the ones now refused.
+    if (before && ((before.r && !c.r) || ((before.m || before.r) && !c.m && !c.r))) window.location.reload();
   };
+  const all = { m: true, r: true };
+  const none = { m: false, r: false };
 
   return (
-    <div className="consent" role="dialog" aria-live="polite" aria-label={policy}>
-      <p>{text}</p>
-      <div className="consent-actions">
-        <button type="button" className="consent-btn" onClick={() => decide('denied')}>{refuse}</button>
-        <button type="button" className="consent-btn consent-accept" onClick={() => decide('granted')}>{accept}</button>
-      </div>
-      <Link href="/legal/privacy" className="consent-more">{more} →</Link>
+    <div className="consent" role="dialog" aria-labelledby="consent-title" data-view={shown}>
+      <h2 className="consent-title" id="consent-title" ref={headingRef} tabIndex={-1}>{shown === 'prefs' ? l.preferences : l.title}</h2>
+      {shown === 'main' ? (
+        <>
+          <p>{l.text}</p>
+          <div className="consent-actions">
+            <button type="button" className="consent-btn consent-accept" onClick={() => decide(all)}>{l.accept}</button>
+            <button type="button" className="consent-btn consent-refuse" onClick={() => decide(none)}>{l.refuse}</button>
+            <button type="button" className="consent-btn" onClick={() => { setDraft(current() ?? none); setView('prefs'); }}>{l.preferences}</button>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="consent-rows">
+            <div className="consent-row">
+              <div className="consent-row-text">
+                <span className="consent-row-name">{l.necessary}</span>
+                <span className="consent-row-desc">{l.necessaryText}</span>
+              </div>
+              <span className="consent-always">{l.alwaysOn}</span>
+            </div>
+            <Switch on={draft.m} label={l.measure} text={l.measureText} onChange={m => setDraft(d => ({ ...d, m }))} />
+            <Switch on={draft.r} label={l.retarget} text={l.retargetText} onChange={r => setDraft(d => ({ ...d, r }))} />
+          </div>
+          <div className="consent-actions">
+            <button type="button" className="consent-btn consent-accept" onClick={() => decide(all)}>{l.accept}</button>
+            <button type="button" className="consent-btn consent-refuse" onClick={() => decide(draft)}>{l.save}</button>
+          </div>
+        </>
+      )}
+      <Link href="/legal/privacy" className="consent-more">{l.policy}</Link>
     </div>
   );
 }
