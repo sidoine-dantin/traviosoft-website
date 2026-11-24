@@ -151,7 +151,7 @@ export const demo: SiteContent['demo'] = {
   bookBody: 'Booking is by email for now. Send your agency name, team size and a few days that suit you, and we reply with a time.',
   emailLabel: 'Write to',
   bookCta: 'Choose a time',
-  bookCalendarBody: '30 minutes on Google Meet. The invitation arrives by email.',
+  bookCalendarBody: '30 minutes on Google Meet, in English or French. The invitation arrives by email.',
   emailAltLabel: 'Or write to',
   email: 'hola@traviosoft.com',
   faq: [
@@ -161,7 +161,7 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: 'Who runs the demo?',
-      a: ['Someone from the Traviosoft team, in Spanish, English or French.']
+      a: ['Someone from the Traviosoft team, in English or French.']
     },
     {
       q: 'Do I need to prepare anything?',

@@ -153,7 +153,7 @@ export const demo: SiteContent['demo'] = {
   bookBody: 'Por agora a marcação é feita por email. Envie o nome da sua agência, a dimensão da equipa e alguns dias que lhe deem jeito, e respondemos com uma hora.',
   emailLabel: 'Escreva para',
   bookCta: 'Escolher uma hora',
-  bookCalendarBody: '30 minutos no Google Meet. O convite chega por email.',
+  bookCalendarBody: '30 minutos no Google Meet, em inglês ou em francês. O convite chega por email.',
   emailAltLabel: 'Ou escreva para',
   email: 'hola@traviosoft.com',
   faq: [
@@ -163,7 +163,7 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: 'Quem faz a demonstração?',
-      a: ['Alguém da equipa Traviosoft, em espanhol, inglês ou francês.']
+      a: ['Alguém da equipa Traviosoft, em inglês ou em francês.']
     },
     {
       q: 'Preciso de preparar alguma coisa?',
