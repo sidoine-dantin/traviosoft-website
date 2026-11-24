@@ -11,17 +11,18 @@ import { useEffect, useRef } from 'react';
  * `anchor="bottom"` (the footer): the stop sets off from the start of the line as the scene comes
  * into view and arrives where it is drawn at the bottom of the page.
  *
- * The stop glides: each frame it covers part of the way to where the scroll puts it, so it keeps
- * moving after the scroll stops and slows down until it settles (GLIDE below). A wheel that scrolls
- * in steps then reads as one smooth movement.
+ * The stop has momentum: it is pulled toward where the scroll puts it like a weight on a soft spring
+ * that never overshoots, so it picks up speed gently, keeps travelling after the scroll stops and
+ * slows down until it settles (PULL below). A wheel that scrolls in steps reads as one movement.
  *
  * Looks in the element this sits in for a `<path data-route>` and a `<circle data-route-dot>`.
  * Desktop only (from 861 px, where the route is shown) and off when the system asks for reduced
  * motion: the stop then stays where it is drawn.
  */
-/** How long the stop takes to catch up, in seconds: after this it has covered about 63% of the gap,
- * and it settles about four times this after the scroll stops. */
-const GLIDE = 0.32;
+/** How strongly the stop is pulled toward the scroll, per second. At 3 it trails a steady scroll by
+ * about two thirds of a second, and after the scroll stops it keeps moving visibly for about a
+ * second, then settles over the next one. Higher is snappier, lower glides longer. */
+const PULL = 3;
 
 export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -51,6 +52,7 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
 
     let frame = 0;
     let shown = -1; // Where on the line the stop is drawn now; -1 until the first frame.
+    let speed = 0; // How fast it travels along the line, per second.
     let last = 0;
     const place = (x: number, y: number) => {
       dot.setAttribute('cx', x.toFixed(1));
@@ -73,16 +75,23 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
     };
     const paint = (now: number) => {
       frame = 0;
-      if (!desktop.matches) { shown = -1; place(rest.x, rest.y); return; }
+      if (!desktop.matches) { shown = -1; speed = 0; place(rest.x, rest.y); return; }
       const goal = target();
       if (shown < 0) {
         // First frame, or back from a narrow window: start where the scroll is, without a glide.
         shown = goal;
+        speed = 0;
       } else {
-        // Frame-rate independent ease: the same share of the gap per second on any screen.
-        const dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
-        shown += (goal - shown) * (1 - Math.exp(-dt / GLIDE));
-        if (Math.abs(goal - shown) < 0.05) shown = goal;
+        // A critically damped spring, stepped in slices of at most 1/120 s so it behaves the same
+        // on any screen and never overshoots.
+        let dt = Math.min(0.1, Math.max(0, (now - last) / 1000));
+        while (dt > 0) {
+          const h = Math.min(dt, 1 / 120);
+          speed += (PULL * PULL * (goal - shown) - 2 * PULL * speed) * h;
+          shown += speed * h;
+          dt -= h;
+        }
+        if (Math.abs(goal - shown) < 0.05 && Math.abs(speed) < 0.5) { shown = goal; speed = 0; }
       }
       last = now;
       const p = path.getPointAtLength(shown);
@@ -95,7 +104,7 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
       last = performance.now();
       frame = requestAnimationFrame(paint);
     };
-    const jump = () => { shown = -1; request(); };
+    const jump = () => { shown = -1; speed = 0; request(); };
 
     request();
     window.addEventListener('scroll', request, { passive: true });
