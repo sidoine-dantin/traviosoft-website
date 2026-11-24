@@ -1,3 +1,4 @@
+import type { ConsentLabels } from '@/components/site/consent';
 /**
  * Content model for the whole marketing site.
  * One SiteContent object per locale (src/content/{es,en,fr}/index.ts).
@@ -270,8 +271,8 @@ export type SiteContent = {
     /** extra footer links that only exist in this locale (e.g. Spain page) */
     posts: { slug: string; label: string }[];
     localLinks: Link[];
-    /** cookie banner, shown only when an ad measurement tag is configured */
-    consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };
+    /** cookie notice, shown only when an ad tag is configured; `settings` is the footer link that reopens it */
+    consent: ConsentLabels & { settings: string };
   };
   common: {
     premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;

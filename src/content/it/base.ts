@@ -37,10 +37,19 @@ export const footer: SiteContent['footer'] = {
   ],
   localLinks: [],
   consent: {
+    title: 'Cookie',
     text: 'Usiamo cookie necessari, per esempio per ricordare la tua lingua. Con il tuo consenso, usiamo anche cookie pubblicitari per misurare i nostri annunci e mostrarli su altri siti.',
     accept: 'Accetta tutti',
     refuse: 'Solo necessari',
-    more: 'Scopri di più',
+    preferences: 'Preferenze',
+    necessary: 'Necessari',
+    necessaryText: 'Ricordare la tua lingua e la tua scelta sui cookie.',
+    alwaysOn: 'Sempre attivi',
+    measure: 'Misurazione degli annunci',
+    measureText: 'Google Ads conta le visite e le demo prenotate che arrivano dai nostri annunci.',
+    retarget: 'Annunci su altri siti',
+    retargetText: 'LinkedIn, Meta e Google ricordano la tua visita, così i nostri annunci possono ritrovarti sui loro siti.',
+    save: 'Salva le scelte',
     settings: 'Gestisci i cookie',
     policy: 'Informativa sulla privacy'
   }
