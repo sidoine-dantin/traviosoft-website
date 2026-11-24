@@ -709,7 +709,7 @@ const aiTools: Article = {
   metaDescription:
     'How a travel agency can use AI on its own data: the assistant built into Traviosoft, and the MCP connector that links Claude, ChatGPT and other AI tools to your quotes, bookings and payments.',
   title: 'AI in your travel agency',
-  lead: 'Traviosoft works with AI in two ways. The built-in assistant works inside the app for each person who uses it. The MCP connector lets the AI tool you already use, such as Claude or ChatGPT, read and update your agency’s data with your permission.',
+  lead: 'Traviosoft works with AI in two ways. The built-in assistant works inside the app for each person who uses it. The MCP connector lets the AI tool you already use, such as Claude or ChatGPT, read your agency’s data, and it asks your permission before it updates anything.',
   updated: '2026-11-14',
   card: 'The built-in assistant, the MCP connector for Claude and ChatGPT, and how you stay in control.',
   blocks: [
@@ -759,7 +759,7 @@ const aiTools: Article = {
         { q: 'Does it work with Gemini?', a: ['The connector works with any AI tool that supports MCP. Google supports MCP in its Gemini developer tools. Whether a custom connector can be added depends on the Gemini version.'] },
         { q: 'Is the MCP connector included in my plan?', a: ['Yes. It is included in both Classic and Premium. The built-in assistant is an option on both plans, with usage limits.'] },
         { q: 'Does the AI see all our data?', a: ['It sees what the person who connected it can see, and nothing more. An administrator can also allow reading only and block every change.'] },
-        { q: 'Can the AI send emails?', a: ['Quotes and invoices go to clients from Traviosoft. The AI can send a booking request or an availability request to a supplier, after the person allows it.'] }
+        { q: 'Can the AI send emails?', a: ['Quotes and invoices go to clients from Traviosoft. The AI can email a supplier too, and it asks the person’s permission first: once they allow it, it sends the booking request or the availability request.'] }
       ]
     }
   ]

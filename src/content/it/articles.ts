@@ -705,7 +705,7 @@ const aiTools: Article = {
   metaDescription:
     'Come un’agenzia di viaggi può usare l’IA sui propri dati: l’assistente integrato in Traviosoft e il connettore MCP che collega Claude, ChatGPT e altri strumenti di IA a preventivi, prenotazioni e pagamenti.',
   title: 'L’IA nella tua agenzia di viaggi',
-  lead: 'Traviosoft lavora con l’IA in due modi. L’assistente integrato lavora dentro l’app per ogni persona che lo usa. Il connettore MCP permette allo strumento di IA che usi già, come Claude o ChatGPT, di leggere e aggiornare i dati della tua agenzia con il tuo permesso.',
+  lead: 'Traviosoft lavora con l’IA in due modi. L’assistente integrato lavora dentro l’app per ogni persona che lo usa. Il connettore MCP permette allo strumento di IA che usi già, come Claude o ChatGPT, di leggere i dati della tua agenzia, e ti chiede il permesso prima di modificare qualsiasi cosa.',
   updated: '2026-11-14',
   card: 'L’assistente integrato, il connettore MCP per Claude e ChatGPT, e come mantieni il controllo.',
   blocks: [
@@ -755,7 +755,7 @@ const aiTools: Article = {
         { q: 'Funziona con Gemini?', a: ['Il connettore funziona con qualsiasi strumento di IA che supporta MCP. Google supporta MCP nei suoi strumenti per sviluppatori Gemini. La possibilità di aggiungere un connettore personalizzato dipende dalla versione di Gemini.'] },
         { q: 'Il connettore MCP è incluso nel mio piano?', a: ['Sì. È incluso sia in Classic sia in Premium. L’assistente integrato è un’opzione su entrambi i piani, con limiti di utilizzo.'] },
         { q: 'L’IA vede tutti i nostri dati?', a: ['Vede ciò che può vedere la persona che l’ha collegata, e niente di più. Un amministratore può anche permettere solo la lettura e bloccare ogni modifica.'] },
-        { q: 'L’IA può inviare email?', a: ['Preventivi e fatture arrivano ai clienti da Traviosoft. L’IA può inviare a un fornitore una richiesta di prenotazione o di disponibilità, quando la persona lo consente.'] }
+        { q: 'L’IA può inviare email?', a: ['Preventivi e fatture arrivano ai clienti da Traviosoft. L’IA può anche scrivere a un fornitore, e prima chiede il permesso alla persona: quando lo consente, invia la richiesta di prenotazione o di disponibilità.'] }
       ]
     }
   ]

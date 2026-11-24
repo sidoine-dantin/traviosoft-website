@@ -27,7 +27,7 @@ export const ai: AiText = {
         lead: 'The assistant reads on its own and asks you before it changes anything.',
         visual: 'confirm',
         features: [
-          { title: 'A question before each change', body: ['Claude, ChatGPT and Mistral ask you in the chat before each change. The change is made once you allow it.'] },
+          { title: 'A question before each change', body: ['Before each change, Claude, ChatGPT and Mistral ask your permission in the chat. Nothing changes until you allow it.'] },
           { title: 'Deletions approved in Traviosoft', body: ['If you allow deleting, each deletion waits in Traviosoft until you approve it there, and it is recorded under your name.'] },
           { title: 'Every change in the history', body: ['What the assistant does appears in the activity history of Traviosoft, under the name of the person who connected it.'] }
         ]
@@ -59,9 +59,9 @@ export const ai: AiText = {
       }
     ],
     faq: [
-      { q: 'Which AI apps can I use?', a: ['Any AI app that can add an MCP connector, the open standard AI apps use to connect to other software. Claude, ChatGPT and Mistral ask you in the chat before every change, so their changes are made as soon as you allow them. With another app, Traviosoft cannot be sure it asks you first, so its changes wait for your approval in Traviosoft, in Change review.'] },
+      { q: 'Which AI apps can I use?', a: ['Any AI app that can add an MCP connector, the open standard AI apps use to connect to other software. Claude, ChatGPT and Mistral ask your permission in the chat before every change, so Traviosoft makes the change as soon as you allow it. With another app, Traviosoft cannot be sure it asks you first, so its changes wait for your approval in Traviosoft, in Change review.'] },
       { q: 'Does the assistant see all our data?', a: ['It sees exactly what the person who connected it is allowed to see in Traviosoft, under their role: the same clients, trips and teams, and purchase prices and margins only if their role shows them. When their role changes, what the assistant sees changes with it.'] },
-      { q: 'Can it email a supplier?', a: ['Yes. It can send a booking request or ask a supplier for availability, once you allow it. Quotes and invoices go to clients from Traviosoft.'] },
+      { q: 'Can it email a supplier?', a: ['Yes, and it asks your permission first. Once you allow it, it sends the supplier a booking request or asks for availability. Quotes and invoices go to clients from Traviosoft.'] },
       { q: 'Can it issue invoices?', a: ['It can look up invoices, follow what is paid and correct a draft. Issuing an invoice, though, is always done by a person in Traviosoft: the assistant cannot issue or cancel one, because an invoice number is a legal record.'] },
       { q: 'Is there also an assistant inside Traviosoft?', a: ['Yes, as an option on both plans, with usage limits. It works in the app itself, with no other AI app to connect.'] }
     ]
@@ -73,7 +73,7 @@ export const ai: AiText = {
     chatTab: 'Chat', changed: 'Something changed in Traviosoft',
     allow: 'Allow', deny: 'Deny', allowedTag: 'Allowed', deniedTag: 'Denied',
     deniedReply: 'Understood. Nothing has changed in Traviosoft.',
-    restart: 'Start again', more: 'Something else', working: 'Working in Traviosoft',
+    restart: 'Start again', more: 'Something else', working: 'Working in Traviosoft', thinking: 'Thinking',
     nav: { dashboard: 'Dashboard', quotes: 'Quotes', bookings: 'Bookings', payments: 'Payments', review: 'Change review' },
     ui: {
       draft: 'Draft', sent: 'Sent', requested: 'Requested', confirmed: 'Confirmed', toBook: 'To book', late: 'Late', paid: 'Paid', due: 'Due',
@@ -129,7 +129,7 @@ export const ai: AiText = {
           { t: 'Hotel in Granada, 3 nights', s: '7 to 10 May' },
           { t: 'Alhambra tickets with a guide', s: '8 May' }
         ],
-        after: 'Total {2660} for two, with your margin of {450}.',
+        after: 'Total **{2660}** for two, with your margin of {450}.',
         ask: { action: 'Create a quote', rows: [{ t: 'Client', s: 'Iris & Noah' }, { t: 'Trip', s: 'Andalusia, 3 to 10 May' }, { t: 'Total', s: '{2660}' }] },
         done: 'The quote is in Traviosoft as a draft, and I’ve opened it for you. Do you want to set the payment terms, or send it?'
       },
@@ -143,7 +143,7 @@ export const ai: AiText = {
           { t: 'Prado Museum with a guide', s: '13 June' },
           { t: 'Day trip to Toledo with a guide', s: '14 June' }
         ],
-        after: 'Total {2100} for four, with your margin of {380}.',
+        after: 'Total **{2100}** for four, with your margin of {380}.',
         ask: { action: 'Create a quote', rows: [{ t: 'Client', s: 'Famiglia Bianchi' }, { t: 'Trip', s: 'Madrid and Toledo, 12 to 15 June' }, { t: 'Total', s: '{2100}' }] },
         done: 'The quote is in Traviosoft as a draft, and I’ve opened it for you. Do you want to set the payment terms, or send it?'
       },

@@ -705,7 +705,7 @@ const aiTools: Article = {
   metaDescription:
     'Como uma agência de viagens pode usar a IA sobre os seus próprios dados: o assistente integrado no Traviosoft e o conector MCP que liga o Claude, o ChatGPT e outras ferramentas de IA aos seus orçamentos, reservas e pagamentos.',
   title: 'A IA na sua agência de viagens',
-  lead: 'O Traviosoft trabalha com a IA de duas formas. O assistente integrado funciona dentro da aplicação para cada pessoa que o usa. O conector MCP permite que a ferramenta de IA que já usa, como o Claude ou o ChatGPT, leia e atualize os dados da sua agência com a sua autorização.',
+  lead: 'O Traviosoft trabalha com a IA de duas formas. O assistente integrado funciona dentro da aplicação para cada pessoa que o usa. O conector MCP permite que a ferramenta de IA que já usa, como o Claude ou o ChatGPT, leia os dados da sua agência, e pede-lhe autorização antes de alterar o que quer que seja.',
   updated: '2026-11-14',
   card: 'O assistente integrado, o conector MCP para o Claude e o ChatGPT, e como mantém o controlo.',
   blocks: [
@@ -755,7 +755,7 @@ const aiTools: Article = {
         { q: 'Funciona com o Gemini?', a: ['O conector funciona com qualquer ferramenta de IA compatível com MCP. A Google suporta MCP nas suas ferramentas Gemini para programadores. A possibilidade de adicionar um conector personalizado depende da versão do Gemini.'] },
         { q: 'O conector MCP está incluído no meu plano?', a: ['Sim. Está incluído no Classic e no Premium. O assistente integrado é uma opção em ambos os planos, com limites de utilização.'] },
         { q: 'A IA vê todos os nossos dados?', a: ['Vê o que a pessoa que a ligou pode ver, e nada mais. Um administrador pode também permitir só a leitura e bloquear qualquer alteração.'] },
-        { q: 'A IA pode enviar emails?', a: ['Os orçamentos e as faturas chegam aos clientes a partir do Traviosoft. A IA pode enviar a um fornecedor um pedido de reserva ou de disponibilidade, depois de a pessoa o permitir.'] }
+        { q: 'A IA pode enviar emails?', a: ['Os orçamentos e as faturas chegam aos clientes a partir do Traviosoft. A IA também pode escrever a um fornecedor, e pede primeiro autorização à pessoa: depois de o permitir, envia o pedido de reserva ou de disponibilidade.'] }
       ]
     }
   ]

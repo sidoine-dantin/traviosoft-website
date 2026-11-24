@@ -20,10 +20,11 @@ type QuoteKey = 'iris' | 'madrid';
 
 type Msg =
   | { k: 'me'; text: string }
+  | { k: 'think' }
   | { k: 'tools'; lines: string[]; shown: number; done: boolean }
-  | { k: 'bot'; id: Id }
-  | { k: 'ask'; id: Id; state: 'open' | 'allowed' | 'denied' }
-  | { k: 'text'; text: string };
+  | { k: 'bot'; id: Id; then?: () => void }
+  | { k: 'ask'; id: Id; state: 'open' | 'running' | 'allowed' | 'denied' }
+  | { k: 'text'; text: string; then?: () => void };
 
 type App = {
   screen: Screen;
@@ -78,6 +79,9 @@ const DRAFTS = { delLind: { client: 'Anna Lind', total: 1980 }, delWeber: { clie
 /** The screen a step shows when it is sent, and the one it opens once its change is allowed. */
 const SHOWS: Partial<Record<Id, Screen>> = { today: 'dashboard', late: 'payments', remove: 'quotes', bookings: 'bookings', terms: 'quote', send: 'quote' };
 
+/** A short pause, so each step reads as work being done and not as a lookup table. */
+const jitter = (base: number, spread: number) => base + Math.round(Math.random() * spread);
+
 export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [used, setUsed] = useState<Id[]>([]);
@@ -99,6 +103,7 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
     const el = logRef.current;
     if (el) el.scrollTo({ top: el.scrollHeight, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }, [msgs, choices]);
+  const follow = () => { const el = logRef.current; if (el) el.scrollTop = el.scrollHeight; };
   const appKey = JSON.stringify({ ...app, flash: null, sendHint: false });
   useEffect(() => {
     if (seen.current && seen.current !== appKey && tab === 'chat') setDot(true);
@@ -137,59 +142,71 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
     setBusy(true);
     setChoices([]);
     setMsgs(x => [...x, { k: 'me', text: s.say }]);
+
+    // Thinking first, then each lookup in Traviosoft one after the other, then the answer, written out.
+    let at = 350;
+    later(() => setMsgs(x => [...x, { k: 'think' }]), at);
+    at += jitter(1100, 500);
     const tools = s.tools ?? [];
-    const pace = 420;
     if (tools.length) {
-      later(() => setMsgs(x => [...x, { k: 'tools', lines: tools, shown: 1, done: false }]), 300);
-      tools.slice(1).forEach((_, i) => later(() => setMsgs(x => x.map(m => (m.k === 'tools' && !m.done ? { ...m, shown: i + 2 } : m))), 300 + pace * (i + 1)));
+      later(() => setMsgs(x => [...x.filter(m => m.k !== 'think'), { k: 'tools', lines: tools, shown: 1, done: false }]), at);
+      tools.forEach((_, i) => {
+        at += jitter(900, 700);
+        if (i < tools.length - 1) later(() => setMsgs(x => x.map(m => (m.k === 'tools' && !m.done ? { ...m, shown: i + 2 } : m))), at);
+      });
     }
-    const at = 300 + pace * Math.max(tools.length, 1) + 200;
-    later(() => {
-      setMsgs(x => [
-        ...x.map(m => (m.k === 'tools' && !m.done ? { ...m, done: true } : m)),
-        ...(s.reply || s.rows ? [{ k: 'bot', id } as Msg] : []),
-        ...(s.ask ? [{ k: 'ask', id, state: 'open' } as Msg] : [])
-      ]);
-      const screen = SHOWS[id];
-      if (screen) go(screen);
+    const finish = () => {
+      if (s.ask) setMsgs(x => [...x, { k: 'ask', id, state: 'open' }]);
       if (id === 'send') { setApp(a => ({ ...a, sendHint: true })); flash('send'); }
       setBusy(false);
       if (!s.ask) setChoices(nextFor(id, usedNow));
-    }, at);
+    };
+    later(() => {
+      setMsgs(x => [
+        ...x.filter(m => m.k !== 'think').map(m => (m.k === 'tools' && !m.done ? { ...m, done: true } : m)),
+        ...(s.reply || s.rows || s.after ? [{ k: 'bot', id, then: finish } as Msg] : [])
+      ]);
+      const screen = SHOWS[id];
+      if (screen) go(screen);
+      if (!(s.reply || s.rows || s.after)) later(finish, 250);
+    }, at + 250);
   };
 
   const answer = (id: Id, allow: boolean) => {
-    setMsgs(x => x.map(m => (m.k === 'ask' && m.id === id && m.state === 'open' ? { ...m, state: allow ? 'allowed' : 'denied' } : m)));
+    const setAsk = (state: 'running' | 'allowed' | 'denied') =>
+      setMsgs(x => x.map(m => (m.k === 'ask' && m.id === id && m.state !== 'allowed' && m.state !== 'denied' ? { ...m, state } : m)));
     setBusy(true);
+    const end = () => { setBusy(false); setChoices(allow ? nextFor(id, used) : ROOT.filter(x => !used.includes(x))); };
+    if (!allow) {
+      setAsk('denied');
+      later(() => setMsgs(x => [...x, { k: 'text', text: t.deniedReply, then: end }]), 500);
+      return;
+    }
+    setAsk('running');
     later(() => {
-      if (!allow) {
-        setMsgs(x => [...x, { k: 'text', text: t.deniedReply }]);
-      } else {
-        // The change lands in Traviosoft, which opens the screen it changed.
-        if (id === 'quoteIris' || id === 'madridBianchi') {
-          setApp(a => ({ ...a, quote: id === 'quoteIris' ? 'iris' : 'madrid', screen: 'quote' }));
-          flash('quote');
-        } else if (id === 'terms30' || id === 'terms50') {
-          setApp(a => ({ ...a, terms: pctOf(id), screen: 'quote' }));
-          flash('schedule');
-        } else if (id === 'payOlabarri') {
-          setApp(a => ({ ...a, olabarriPaid: true, screen: 'payments' }));
-          flash('olabarri');
-        } else if (id === 'confirmSeville') {
-          setApp(a => ({ ...a, sevilleConfirmed: true, screen: 'bookings' }));
-          flash('seville');
-        } else if (id === 'requestGranada') {
-          setApp(a => ({ ...a, granadaRequested: true, screen: 'bookings' }));
-          flash('granada');
-        } else if (id === 'delLind' || id === 'delWeber') {
-          setApp(a => ({ ...a, queued: id, trashed: false, screen: 'review' }));
-          flash('review');
-        }
-        setMsgs(x => [...x, { k: 'text', text: t.steps[id].done ?? '' }]);
+      // The change lands in Traviosoft, which opens the screen it changed.
+      if (id === 'quoteIris' || id === 'madridBianchi') {
+        setApp(a => ({ ...a, quote: id === 'quoteIris' ? 'iris' : 'madrid', screen: 'quote' }));
+        flash('quote');
+      } else if (id === 'terms30' || id === 'terms50') {
+        setApp(a => ({ ...a, terms: pctOf(id), screen: 'quote' }));
+        flash('schedule');
+      } else if (id === 'payOlabarri') {
+        setApp(a => ({ ...a, olabarriPaid: true, screen: 'payments' }));
+        flash('olabarri');
+      } else if (id === 'confirmSeville') {
+        setApp(a => ({ ...a, sevilleConfirmed: true, screen: 'bookings' }));
+        flash('seville');
+      } else if (id === 'requestGranada') {
+        setApp(a => ({ ...a, granadaRequested: true, screen: 'bookings' }));
+        flash('granada');
+      } else if (id === 'delLind' || id === 'delWeber') {
+        setApp(a => ({ ...a, queued: id, trashed: false, screen: 'review' }));
+        flash('review');
       }
-      setBusy(false);
-      setChoices(allow ? nextFor(id, used) : ROOT.filter(x => !used.includes(x)));
-    }, 650);
+      setAsk('allowed');
+      later(() => setMsgs(x => [...x, { k: 'text', text: t.steps[id].done ?? '', then: end }]), 350);
+    }, jitter(1200, 500));
   };
 
   const approveInApp = () => setApp(a => (a.queued ? { ...a, removed: [...a.removed, a.queued], queued: null, trashed: true } : a));
@@ -222,15 +239,17 @@ export function AiSim({ t, locale }: { t: AiSimText; locale: string }) {
           {msgs.length === 0 && <p className="sim-greet">{t.greeting}</p>}
           {msgs.map((m, i) => {
             if (m.k === 'me') return <p key={i} className="sim-me">{m.text}</p>;
-            if (m.k === 'text') return <div key={i} className="sim-bot"><p>{fill(m.text)}</p></div>;
+            if (m.k === 'think') return <p key={i} className="sim-think"><span>{t.thinking}</span></p>;
+            if (m.k === 'text') return <Words key={i} text={fill(m.text)} then={m.then} tick={follow} />;
             if (m.k === 'tools') return (
               <ul key={i} className="sim-tools" aria-label={t.working}>
-                {m.lines.slice(0, m.shown).map((l, j) => (
-                  <li key={j} data-done={m.done || j < m.shown - 1 || undefined}><Tick />{l}</li>
-                ))}
+                {m.lines.slice(0, m.shown).map((l, j) => {
+                  const done = m.done || j < m.shown - 1;
+                  return <li key={j} data-done={done || undefined}>{done ? <Tick /> : <i className="sim-spin" aria-hidden="true" />}{l}</li>;
+                })}
               </ul>
             );
-            if (m.k === 'bot') return <Bot key={i} s={t.steps[m.id]} prices={PRICES[m.id]} fill={fill} eur={eur} />;
+            if (m.k === 'bot') return <Bot key={i} s={t.steps[m.id]} prices={PRICES[m.id]} fill={fill} eur={eur} then={m.then} tick={follow} />;
             return <Ask key={i} m={m} s={t.steps[m.id]} t={t} fill={s => fill(s, pctOf(m.id))} onAnswer={answer} />;
           })}
           {!busy && !waiting && (choices.length > 0 || used.length > 0) && (
@@ -254,24 +273,70 @@ function Tick() {
   return <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
-function Bot({ s, prices, fill, eur }: { s: AiSimStep; prices?: number[]; fill: (s: string) => string; eur: (v: number) => string }) {
+/** Bold where the text says **so**, as AI apps show their answers. An unclosed ** (mid-stream) stays bold to the end. */
+function rich(s: string) {
+  return s.split('**').map((p, i) => (i % 2 ? <b key={i}>{p}</b> : p));
+}
+
+/**
+ * Reveals an answer the way AI apps write it: a few words at a time, each list item as a whole.
+ * `pauses[i]` is the wait before unit i. With reduced motion everything shows at once.
+ */
+function useReveal(pauses: number[], then?: () => void, tick?: () => void) {
+  const total = pauses.length;
+  const [n, setN] = useState(() => (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? total : 0));
+  const ended = useRef(false);
+  const cb = useRef({ then, tick });
+  useEffect(() => { cb.current = { then, tick }; });
+  useEffect(() => {
+    cb.current.tick?.();
+    if (n >= total) {
+      if (!ended.current) { ended.current = true; cb.current.then?.(); }
+      return;
+    }
+    const id = window.setTimeout(() => setN(n + 1), pauses[n]);
+    return () => clearTimeout(id);
+  }, [n, total, pauses]);
+  return n;
+}
+
+const wordPause = (i: number) => 24 + ((i * 37) % 34);
+
+function Words({ text, then, tick }: { text: string; then?: () => void; tick?: () => void }) {
+  const words = text.split(' ');
+  const [pauses] = useState(() => words.map((_, i) => wordPause(i)));
+  const n = useReveal(pauses, then, tick);
+  return <div className="sim-bot"><p>{rich(words.slice(0, n).join(' '))}</p></div>;
+}
+
+function Bot({ s, prices, fill, eur, then, tick }: {
+  s: AiSimStep; prices?: number[]; fill: (s: string) => string; eur: (v: number) => string; then?: () => void; tick?: () => void;
+}) {
+  const reply = s.reply ? fill(s.reply).split(' ') : [];
+  const rows = s.rows ?? [];
+  const after = s.after ? fill(s.after).split(' ') : [];
+  const [pauses] = useState(() => [
+    ...reply.map((_, i) => wordPause(i)),
+    ...rows.map((_, i) => (i === 0 ? 260 : 170)),
+    ...after.map((_, i) => (i === 0 ? 300 : wordPause(i)))
+  ]);
+  const n = useReveal(pauses, then, tick);
+  const nr = Math.max(0, Math.min(rows.length, n - reply.length));
+  const na = Math.max(0, n - reply.length - rows.length);
   return (
     <div className="sim-bot">
-      {s.reply && <p>{fill(s.reply)}</p>}
-      {s.rows && (
-        prices ? (
-          <table className="sim-prop">
-            <tbody>
-              {s.rows.map((r, i) => (
-                <tr key={r.t}><td><b>{r.t}</b><small>{r.s}</small></td><td className="sim-fig">{eur(prices[i])}</td></tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <ul className="sim-list">{s.rows.map(r => <li key={r.t}><b>{fill(r.t)}</b><span>{fill(r.s)}</span></li>)}</ul>
-        )
+      {reply.length > 0 && <p>{rich(reply.slice(0, n).join(' '))}</p>}
+      {nr > 0 && (
+        <ul className={`sim-md${prices ? ' priced' : ''}`}>
+          {rows.slice(0, nr).map((r, i) => (
+            <li key={r.t}>
+              <span><b>{fill(r.t)}</b><span>{fill(r.s)}</span></span>
+              {prices && <span className="sim-fig">{eur(prices[i])}</span>}
+            </li>
+          ))}
+        </ul>
       )}
-      {s.after && <p>{fill(s.after)}</p>}
+      {na > 0 && <p>{rich(after.slice(0, na).join(' '))}</p>}
     </div>
   );
 }
@@ -280,21 +345,28 @@ function Ask({ m, s, t, fill, onAnswer }: {
   m: Extract<Msg, { k: 'ask' }>; s: AiSimStep; t: AiSimText; fill: (s: string) => string; onAnswer: (id: Id, allow: boolean) => void;
 }) {
   if (!s.ask) return null;
+  // Once answered, the request folds into one line, like a step the assistant has passed.
+  if (m.state !== 'open') return (
+    <p className="sim-ask-done" data-state={m.state}>
+      {m.state === 'running' ? <i className="sim-spin" aria-hidden="true" /> : m.state === 'allowed' ? <Tick /> : <Cross />}
+      <span><b>{m.state === 'denied' ? t.deniedTag : t.allowedTag}</b> · {s.ask.action}</span>
+    </p>
+  );
   return (
     <div className="sim-ask">
       <span className="sim-ask-app">Traviosoft</span>
       <b>{s.ask.action}</b>
       <dl>{s.ask.rows.map((r: AiSimRow) => <div key={r.t}><dt>{r.t}</dt><dd>{fill(r.s)}</dd></div>)}</dl>
-      {m.state === 'open' ? (
-        <div className="sim-ask-btns">
-          <button type="button" className="sim-btn ghost" onClick={() => onAnswer(m.id, false)}>{t.deny}</button>
-          <button type="button" className="sim-btn" onClick={() => onAnswer(m.id, true)}>{t.allow}</button>
-        </div>
-      ) : (
-        <span className={`pill ${m.state === 'allowed' ? 'p-ok' : 'p-grey'} sim-ask-state`}>{m.state === 'allowed' ? t.allowedTag : t.deniedTag}</span>
-      )}
+      <div className="sim-ask-btns">
+        <button type="button" className="sim-btn ghost" onClick={() => onAnswer(m.id, false)}>{t.deny}</button>
+        <button type="button" className="sim-btn" onClick={() => onAnswer(m.id, true)}>{t.allow}</button>
+      </div>
     </div>
   );
+}
+
+function Cross() {
+  return <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>;
 }
 
 function AppPane({ t, app, go, eur, day, dep, approve, sendQuote }: {

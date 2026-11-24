@@ -22,7 +22,7 @@ export const ai: AiText = {
         lead: 'O assistente consulta sozinho e pergunta-lhe antes de alterar seja o que for.',
         visual: 'confirm',
         features: [
-          { title: 'Uma pergunta antes de cada alteração', body: ['O Claude, o ChatGPT e o Mistral perguntam-lhe na conversa antes de cada alteração. A alteração é feita assim que a permitir.'] },
+          { title: 'Uma pergunta antes de cada alteração', body: ['Antes de cada alteração, o Claude, o ChatGPT e o Mistral pedem-lhe autorização na conversa. Nada muda até que o permita.'] },
           { title: 'Eliminações aprovadas no Traviosoft', body: ['Se permitir eliminar, cada eliminação aguarda no Traviosoft até a aprovar lá, e fica registada em seu nome.'] },
           { title: 'Cada alteração no histórico', body: ['O que o assistente faz aparece no histórico de atividade do Traviosoft, em nome da pessoa que o ligou.'] }
         ]
@@ -54,9 +54,9 @@ export const ai: AiText = {
       }
     ],
     faq: [
-      { q: 'Que apps de IA posso usar?', a: ['Qualquer app de IA que permita adicionar um conector MCP, o padrão aberto com que as apps de IA se ligam a outro software. O Claude, o ChatGPT e o Mistral perguntam-lhe na conversa antes de cada alteração, e a alteração é feita assim que a permitir. Com outra app, o Traviosoft não pode ter a certeza de que ela lhe pergunta antes, por isso as suas alterações aguardam a sua aprovação no Traviosoft, em Revisão de alterações.'] },
+      { q: 'Que apps de IA posso usar?', a: ['Qualquer app de IA que permita adicionar um conector MCP, o padrão aberto com que as apps de IA se ligam a outro software. O Claude, o ChatGPT e o Mistral pedem-lhe autorização na conversa antes de cada alteração, e o Traviosoft faz a alteração assim que a permitir. Com outra app, o Traviosoft não pode ter a certeza de que ela lhe pergunta antes, por isso as suas alterações aguardam a sua aprovação no Traviosoft, em Revisão de alterações.'] },
       { q: 'O assistente vê todos os nossos dados?', a: ['Vê exatamente o que a pessoa que o ligou pode ver no Traviosoft, de acordo com a sua função: os mesmos clientes, viagens e equipas, e os preços de compra e as margens só se a sua função os mostrar. Se a função mudar, o que o assistente vê muda também.'] },
-      { q: 'Pode escrever a um fornecedor?', a: ['Sim. Pode enviar um pedido de reserva ou pedir disponibilidade a um fornecedor, depois de o permitir. Os orçamentos e as faturas chegam aos clientes a partir do Traviosoft.'] },
+      { q: 'Pode escrever a um fornecedor?', a: ['Sim, e pede-lhe autorização primeiro. Depois de o permitir, envia ao fornecedor um pedido de reserva ou de disponibilidade. Os orçamentos e as faturas chegam aos clientes a partir do Traviosoft.'] },
       { q: 'Pode emitir faturas?', a: ['Pode consultar as faturas, acompanhar o que está pago e corrigir um rascunho. Mas uma fatura é sempre emitida por uma pessoa, no Traviosoft: o assistente não pode emitir nem anular uma fatura, porque o seu número é um registo legal.'] },
       { q: 'Também há um assistente dentro do Traviosoft?', a: ['Sim, como opção nos dois planos, com limites de utilização. Trabalha na própria app, sem ter de ligar outra app de IA.'] }
     ]
@@ -68,7 +68,7 @@ export const ai: AiText = {
     chatTab: 'Chat', changed: 'Há alterações no Traviosoft',
     allow: 'Permitir', deny: 'Recusar', allowedTag: 'Permitido', deniedTag: 'Recusado',
     deniedReply: 'Entendido. Nada mudou no Traviosoft.',
-    restart: 'Recomeçar', more: 'Outra coisa', working: 'A trabalhar no Traviosoft',
+    restart: 'Recomeçar', more: 'Outra coisa', working: 'A trabalhar no Traviosoft', thinking: 'A pensar',
     nav: { dashboard: 'Painel', quotes: 'Orçamentos', bookings: 'Reservas', payments: 'Pagamentos', review: 'Revisão de alterações' },
     ui: {
       draft: 'Rascunho', sent: 'Enviado', requested: 'Pedido', confirmed: 'Confirmado', toBook: 'Por reservar', late: 'Em atraso', paid: 'Pago', due: 'A pagar',
@@ -124,7 +124,7 @@ export const ai: AiText = {
           { t: 'Hotel em Granada, 3 noites', s: 'De 7 a 10 de maio' },
           { t: 'Bilhetes para a Alhambra com guia', s: '8 de maio' }
         ],
-        after: 'Total {2660} para dois, com a sua margem de {450}.',
+        after: 'Total **{2660}** para dois, com a sua margem de {450}.',
         ask: { action: 'Criar um orçamento', rows: [{ t: 'Cliente', s: 'Iris & Noah' }, { t: 'Viagem', s: 'Andaluzia, de 3 a 10 de maio' }, { t: 'Total', s: '{2660}' }] },
         done: 'O orçamento está no Traviosoft como rascunho, e abri-o para si. Quer definir as condições de pagamento, ou enviá-lo?'
       },
@@ -138,7 +138,7 @@ export const ai: AiText = {
           { t: 'Museu do Prado com guia', s: '13 de junho' },
           { t: 'Excursão de um dia a Toledo com guia', s: '14 de junho' }
         ],
-        after: 'Total {2100} para quatro, com a sua margem de {380}.',
+        after: 'Total **{2100}** para quatro, com a sua margem de {380}.',
         ask: { action: 'Criar um orçamento', rows: [{ t: 'Cliente', s: 'Famiglia Bianchi' }, { t: 'Viagem', s: 'Madrid e Toledo, de 12 a 15 de junho' }, { t: 'Total', s: '{2100}' }] },
         done: 'O orçamento está no Traviosoft como rascunho, e abri-o para si. Quer definir as condições de pagamento, ou enviá-lo?'
       },
