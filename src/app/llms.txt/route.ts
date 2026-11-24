@@ -19,6 +19,7 @@ export function GET() {
     '## Product (English)',
     ...JOB_ORDER.map(s => `- [${en.jobs[s].name}](${baseUrl}/en/${s}): ${en.jobs[s].metaDescription}`),
     `- [Pricing](${baseUrl}/en/pricing): ${en.pricing.metaDescription}`,
+    `- [Pricing in Markdown](${baseUrl}/pricing.md): plans, prices, the full plan comparison and pricing questions as plain text. Other languages: ${locales.map(l => `${baseUrl}/${l}/pricing.md`).join(', ')}`,
     `- [FAQ](${baseUrl}/en/faq): ${en.faqPage.metaDescription}`,
     `- [About](${baseUrl}/en/about): ${en.about.metaDescription}`,
     `- [Book a demo](${baseUrl}/en/demo): ${en.demo.metaDescription}`,
