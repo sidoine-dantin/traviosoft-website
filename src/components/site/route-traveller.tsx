@@ -13,7 +13,12 @@ import { useEffect, useRef } from 'react';
  *
  * The stop has momentum: it is pulled toward where the scroll puts it like a weight on a soft spring
  * that never overshoots, so it picks up speed gently, keeps travelling after the scroll stops and
- * slows down until it settles (PULL below). A wheel that scrolls in steps reads as one movement.
+ * slows down until it settles (PULL below). It never goes faster than TOP_SPEED, so a fast scroll
+ * doesn't send it racing: it travels at an easy pace and catches up afterwards. A wheel that
+ * scrolls in steps reads as one movement.
+ *
+ * The dots of the line drift with it, in the same direction at a fraction of its speed (DRIFT), and
+ * stop when it stops: the route is being travelled. Nothing moves while the page is still.
  *
  * Looks in the element this sits in for a `<path data-route>` and a `<circle data-route-dot>`.
  * Desktop only (from 861 px, where the route is shown) and off when the system asks for reduced
@@ -22,7 +27,14 @@ import { useEffect, useRef } from 'react';
 /** How strongly the stop is pulled toward the scroll, per second. At 3 it trails a steady scroll by
  * about two thirds of a second, and after the scroll stops it keeps moving visibly for about a
  * second, then settles over the next one. Higher is snappier, lower glides longer. */
-const PULL = 3;
+const PULL = 1.8;
+
+/** The fastest the stop travels, in units of the drawing per second (the drawing is 1440 wide, so
+ * on a 1440 px window this is pixels per second). */
+const TOP_SPEED = 220;
+
+/** How fast the dots of the line drift, as a share of the stop's speed. */
+const DRIFT = 0.4;
 
 export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -75,7 +87,9 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
     };
     const paint = (now: number) => {
       frame = 0;
-      if (!desktop.matches) { shown = -1; speed = 0; place(rest.x, rest.y); return; }
+      if (!desktop.matches) {
+        shown = -1; speed = 0; place(rest.x, rest.y); path.style.strokeDashoffset = ''; return;
+      }
       const goal = target();
       if (shown < 0) {
         // First frame, or back from a narrow window: start where the scroll is, without a glide.
@@ -88,6 +102,7 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
         while (dt > 0) {
           const h = Math.min(dt, 1 / 120);
           speed += (PULL * PULL * (goal - shown) - 2 * PULL * speed) * h;
+          speed = Math.max(-TOP_SPEED, Math.min(TOP_SPEED, speed));
           shown += speed * h;
           dt -= h;
         }
@@ -96,6 +111,7 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
       last = now;
       const p = path.getPointAtLength(shown);
       place(p.x, p.y);
+      path.style.strokeDashoffset = (-(shown - start) * DRIFT).toFixed(1);
       if (shown !== goal) frame = requestAnimationFrame(paint);
     };
     const request = () => {
@@ -116,6 +132,7 @@ export function RouteTraveller({ anchor }: { anchor: 'top' | 'bottom' }) {
       desktop.removeEventListener('change', jump);
       if (frame) cancelAnimationFrame(frame);
       place(rest.x, rest.y);
+      path.style.strokeDashoffset = '';
     };
   }, [anchor]);
 
