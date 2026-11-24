@@ -839,158 +839,22 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .topic-video-play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; padding: 19px; border-radius: 50%; background: rgba(1, 93, 71, .88); fill: var(--cream); opacity: 0; transform: scale(.8); transition: opacity .2s, transform .2s; pointer-events: none; }
 .topic-video[data-stopped] .topic-video-play { opacity: 1; transform: none; }
 
-/* AI assistant page: the hero holds the simulation (sample data, no AI behind it) on the green stage.
-   The chat is laid out like the AI apps people use: their message in a soft bubble on the right, the
-   assistant's answer as plain text, what it reads in Traviosoft as small ticked lines, and the question
-   before a change as a card. No separator lines: parts are set apart by space and soft surfaces.
-   Motion: fades and short slides under 250 ms, fades only with reduced motion. */
-.ai-hero .hero-sub { max-width: 52ch; }
-.ai-stage { padding-bottom: clamp(36px, 5vw, 72px); overflow: hidden; }
-.ai-stage-in { position: relative; z-index: 1; padding-inline: 0; }
-.ai-note { margin: 0 0 18px; color: var(--cream); font-size: 15px; opacity: .9; }
-.lead-video { max-width: 1120px; margin-inline: auto; aspect-ratio: 16 / 9; box-shadow: 0 30px 60px -30px rgba(1, 20, 15, .6); }
-.lead-video video { object-fit: cover; }
-.sim { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(16px, 2.4vw, 28px); align-items: stretch; text-align: left; }
-.sim-chat, .sim-app { background: var(--white); border-radius: 20px; overflow: hidden; min-width: 0; display: flex; flex-direction: column; box-shadow: 0 30px 60px -30px rgba(1, 20, 15, .6); color: var(--ink); }
-.sim-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; background: var(--tint); }
-.sim-head b { font-size: 15px; }
-.sim-head span { font-size: 13px; color: var(--muted); }
-.sim-conn { display: inline-flex; align-items: center; gap: 7px; }
-.sim-conn i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
-/* Like a chat app: the messages scroll, the choices stay pinned under them. */
-.sim-chat { height: 600px; }
-.sim-log { flex: 1 1 0; min-height: 0; overflow-y: auto; padding: 22px 22px 12px; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5; }
-.sim-greet { margin: auto 0; font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.2; color: var(--green); max-width: 18ch; }
-.sim-me { align-self: flex-end; max-width: 82%; margin: 0; padding: 10px 15px; border-radius: 16px; background: var(--tint); color: var(--ink); animation: sim-in .22s var(--ease-enter); }
-.sim-bot { align-self: stretch; margin: 0; display: grid; gap: 10px; animation: sim-in .22s var(--ease-enter); }
-.sim-bot p { margin: 0; }
-/* Answers laid out as AI apps write them: a plain bulleted list, bold names, details under them. */
-.sim-md { list-style: disc; margin: 0; padding: 0 0 0 20px; display: grid; gap: 9px; }
-.sim-md li { padding-left: 2px; animation: sim-in .2s var(--ease-enter); }
-.sim-md li::marker { color: var(--green); }
-.sim-md b { font-weight: 650; }
-.sim-md li > span:first-child > span { display: block; font-size: 14px; color: var(--muted); }
-.sim-md.priced li > span:first-child { display: inline-block; max-width: calc(100% - 88px); vertical-align: top; }
-.sim-md.priced .sim-fig { float: right; font-weight: 650; }
-.sim-bot b { font-weight: 700; }
-/* Working: "Thinking" with a light sweep, then each lookup with a small spinner until it is done. */
-.sim-think { margin: 0; display: flex; align-items: center; gap: 10px; font-size: 14.5px; animation: sim-in .2s var(--ease-enter); }
-.sim-think span { background: linear-gradient(90deg, var(--muted) 35%, var(--ink) 50%, var(--muted) 65%) 0 0 / 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: sim-sweep 1.5s linear infinite; }
-/* three dots that rise in turn, next to "Thinking" */
-.sim-dots { display: inline-flex; gap: 4px; }
-.sim-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: sim-bob 1s ease-in-out infinite; }
-.sim-dots i:nth-child(2) { animation-delay: .15s; }
-.sim-dots i:nth-child(3) { animation-delay: .3s; }
-@keyframes sim-bob { 0%, 70%, 100% { transform: none; opacity: .35; } 35% { transform: translateY(-4px); opacity: 1; } }
-.sim-review-btns { display: inline-flex; gap: 8px; }
-@keyframes sim-sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
-.sim-spin { width: 12px; height: 12px; margin: 0 1px; flex: none; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--green); animation: sim-turn .8s linear infinite; }
-@keyframes sim-turn { to { rotate: 1turn; } }
-.sim-tools li:not([data-done]) { color: var(--ink); }
-.sim-tools { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13.5px; color: var(--muted); animation: sim-in .22s var(--ease-enter); }
-.sim-tools li { display: flex; align-items: center; gap: 7px; animation: sim-in .2s var(--ease-enter); }
-.sim-tools li svg { color: var(--muted); opacity: .35; transition: opacity .2s, color .2s; }
-.sim-tools li[data-done] svg { color: var(--green); opacity: 1; }
-.sim-ask { align-self: stretch; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 14px; background: var(--cream); box-shadow: inset 0 0 0 1.5px var(--line); animation: sim-in .22s var(--ease-enter); }
-.sim-ask-app { font-size: 12px; font-weight: 700; color: var(--green); }
-.sim-ask b { font-size: 15.5px; }
-.sim-ask dl { margin: 2px 0 0; display: grid; gap: 3px; font-size: 14px; }
-.sim-ask dl div { display: grid; grid-template-columns: minmax(80px, auto) minmax(0, 1fr); gap: 12px; }
-.sim-ask dt { color: var(--muted); }
-.sim-ask dd { margin: 0; font-weight: 600; }
-.sim-ask-btns { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
-/* An answered permission folds into one line, like a step already passed. */
-.sim-ask-done { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); animation: sim-fade .2s; }
-.sim-ask-done b { font-weight: 650; color: var(--ink); }
-.sim-ask-done svg { color: var(--green); flex: none; }
-.sim-ask-done[data-state="denied"] svg { color: var(--muted); }
-.sim-btn { font: inherit; font-size: 14px; font-weight: 700; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--green); background: var(--green); color: var(--white); cursor: pointer; transition: scale 100ms var(--ease-enter); }
-.sim-btn.ghost { background: var(--white); color: var(--ink); border-color: var(--line); }
-.sim-btn:active { scale: .97; }
-.sim-btn[data-hint] { box-shadow: 0 0 0 4px var(--yellow); }
-.sim-btn:focus-visible, .sim-chip:focus-visible, .sim-restart:focus-visible, .sim-nav button:focus-visible, .sim-link button:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
-.sim-compose { flex: none; display: flex; align-items: flex-end; gap: 10px; padding: 12px 16px 16px; min-height: 96px; background: var(--white); box-shadow: 0 -12px 16px -12px rgba(1, 20, 15, .08); }
-.sim-chips { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.sim-chips[data-busy] { align-self: center; }
-.sim-chip { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--green); background: var(--white); color: var(--green); cursor: pointer; animation: sim-in .2s var(--ease-enter); transition: background .15s, color .15s; }
-@media (hover: hover) { .sim-chip:hover { background: var(--green); color: var(--white); } }
-.sim-chip.ghost { border-color: var(--line); color: var(--ink); }
-@media (hover: hover) { .sim-chip.ghost:hover { background: var(--tint); color: var(--ink); } }
-.sim-restart { font: inherit; font-size: 13.5px; background: none; border: 0; padding: 4px 6px; flex: none; color: var(--muted); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
-.sim-restart:hover { color: var(--green); }
-.sim-tabs { display: none; }
-.sim-nav { display: flex; flex-wrap: wrap; gap: 4px; padding: 10px 14px 0; }
-.sim-nav button { font: inherit; font-size: 13px; font-weight: 650; padding: 6px 11px; border-radius: 999px; border: 0; background: none; color: var(--muted); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-.sim-nav button:hover { color: var(--ink); }
-.sim-nav button[aria-current] { background: var(--green); color: var(--white); }
-.sim-badge { min-width: 18px; height: 18px; border-radius: 9px; background: var(--yellow); color: var(--deep); font-size: 11px; font-weight: 800; display: inline-grid; place-items: center; padding: 0 5px; }
-.sim-screen { padding: 14px 18px 20px; display: grid; gap: 10px; align-content: start; animation: sim-in .22s var(--ease-enter); }
-.sim-sub { margin: 0; font-size: 13.5px; color: var(--muted); }
-.sim-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.sim-rows li, .sim-link button { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px; background: var(--cream); font-size: 14px; transition: background .25s; }
-.sim-link { padding: 0 !important; background: none !important; display: block !important; }
-.sim-link button { width: 100%; font: inherit; font-size: 14px; color: inherit; text-align: left; border: 0; cursor: pointer; }
-.sim-link button:hover { background: var(--tint); }
-.sim-link[data-flash] button { background: var(--yellow); }
-.sim-rows li > span:first-child, .sim-link button > span:first-child { min-width: 0; }
-.sim-rows b { display: block; font-weight: 650; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.sim-rows small { display: block; font-size: 12.5px; color: var(--muted); }
-.sim-rows li[data-flash] { background: var(--yellow); }
-.sim-rows li.sim-empty { grid-template-columns: 1fr; color: var(--muted); }
-.sim-rows li:has(> .sim-btn), .sim-rows li:has(> .sim-review-btns), .sim-rows li:has(> .sim-count) { grid-template-columns: minmax(0, 1fr) auto; }
-.sim-rows li:not(:has(.sim-fig)):not(:has(.sim-btn)):not(.sim-empty):not(.sim-link) { grid-template-columns: minmax(0, 1fr) auto; }
-.sim-count { font-family: var(--figure); font-weight: 700; font-size: 20px; color: var(--green); }
-/* Dashboard: four tiles, each with its icon and its number first, so it reads at a glance. */
-.sim-tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.sim-tiles li { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "ico n" "lbl lbl" "sub sub"; align-items: center; gap: 2px 10px; padding: 14px 16px; border-radius: 16px; background: var(--cream); transition: background .25s; }
-.sim-tiles li[data-flash] { background: var(--yellow); }
-.sim-tiles .sim-ico { grid-area: ico; width: 38px; height: 38px; padding: 9px; border-radius: 50%; background: var(--tint); color: var(--green); }
-.sim-tiles li[data-tone="alert"] .sim-ico { background: var(--yellow); color: var(--deep); }
-.sim-tile-n { grid-area: n; justify-self: end; font-family: var(--figure); font-size: 30px; font-weight: 700; color: var(--green); line-height: 1; }
-.sim-tiles li[data-tone="alert"] .sim-tile-n { color: var(--deep); }
-.sim-tiles span { grid-area: lbl; margin-top: 10px; font-size: 14px; font-weight: 650; line-height: 1.3; }
-.sim-tiles small { grid-area: sub; font-size: 12.5px; color: var(--muted); }
-.sim-steps { display: flex; gap: 5px; margin-top: 4px; }
-.sim-steps i { width: 22px; height: 6px; border-radius: 3px; background: var(--tint); }
-.sim-steps i[data-on] { background: var(--green); }
-.sim-rows .sim-ico { color: var(--green); flex: none; }
-.sim-rows li:has(> .sim-ico) { grid-template-columns: auto minmax(0, 1fr) auto; }
-.sim-fig { font-family: var(--figure); font-weight: 600; font-variant-numeric: tabular-nums; }
-.sim-quote { display: grid; gap: 10px; border-radius: 14px; transition: background .3s; }
-.sim-quote-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
-.sim-quote-head b { display: block; font-size: 17px; }
-.sim-quote-head small { display: block; font-size: 13px; color: var(--muted); }
-.sim-quote-head .pill[data-flash] { box-shadow: 0 0 0 4px var(--yellow); }
-.sim-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
-.sim-lines li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 7px 12px; border-radius: 10px; background: var(--cream); font-size: 13.5px; animation: sim-in .22s var(--ease-enter) backwards; }
-.sim-lines li:nth-child(2) { animation-delay: 40ms; } .sim-lines li:nth-child(3) { animation-delay: 80ms; } .sim-lines li:nth-child(4) { animation-delay: 120ms; } .sim-lines li:nth-child(5) { animation-delay: 160ms; } .sim-lines li:nth-child(6) { animation-delay: 200ms; }
-.sim-lines b { display: block; font-weight: 600; }
-.sim-lines small { display: block; font-size: 12px; color: var(--muted); }
-.sim-total, .sim-margin { display: flex; justify-content: space-between; padding: 0 12px; }
-.sim-total { font-size: 16px; font-weight: 700; margin-top: 2px; }
-.sim-margin { font-size: 13.5px; color: var(--muted); }
-.sim-sched { display: grid; gap: 4px; padding: 10px 12px; border-radius: 12px; background: var(--tint); font-size: 13.5px; transition: background .3s; animation: sim-in .22s var(--ease-enter); }
-.sim-sched[data-flash] { background: var(--yellow); }
-.sim-sched h4 { margin: 0 0 2px; font-size: 13px; color: var(--muted); }
-.sim-sched div { display: flex; justify-content: space-between; gap: 12px; }
-.sim-quote-foot { display: flex; justify-content: flex-end; }
-@keyframes sim-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) {
-  .sim-me, .sim-bot, .sim-ask, .sim-tools, .sim-tools li, .sim-chip, .sim-screen, .sim-lines li, .sim-sched, .sim-md li, .sim-think { animation: sim-fade .2s; }
-  .sim-think span { animation: none; color: var(--muted); }
-  .sim-dots i { animation: none; opacity: .7; }
-  .sim-spin { animation: none; border-color: var(--green); }
-}
-@keyframes sim-fade { from { opacity: 0; } to { opacity: 1; } }
-/* Phones: one side at a time, chosen with two tabs; a dot on Traviosoft when something changed there. */
-@media (max-width: 900px) {
-  .sim { grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  .sim-tabs { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: rgba(1, 20, 15, .28); justify-self: start; }
-  .sim-tabs button { font: inherit; font-size: 14.5px; font-weight: 700; padding: 8px 18px; border-radius: 999px; border: 0; background: none; color: var(--cream); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-  .sim-tabs button[aria-selected="true"] { background: var(--white); color: var(--green); }
-  .sim-tabs button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
-  .sim-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); }
-  .sim[data-tab="chat"] .sim-app, .sim[data-tab="app"] .sim-chat { display: none; }
-  .sim-app { min-height: 440px; }
-  .sim-chat { height: 560px; }
+/* AI assistant page: one green stage from the top. The title and a short line sit over the lead video,
+   a filmed conversation on the same green, so the video has no box around it. Computers get the wide
+   cut, phones the vertical one with larger text. */
+.ai-hero { background: var(--green); color: var(--cream); padding: clamp(40px, 6vw, 80px) var(--gutter) clamp(28px, 4vw, 56px); }
+.ai-hero .hero-title { color: var(--cream); margin-top: 0; max-width: 22ch; }
+.ai-hero .hero-sub { color: var(--cream); opacity: .9; max-width: 54ch; }
+.lead-video { position: relative; display: block; width: 100%; max-width: 1180px; margin: clamp(12px, 2vw, 24px) auto 0; padding: 0; border: 0; background: none; cursor: pointer; aspect-ratio: 16 / 9; }
+.lead-video video { display: block; width: 100%; height: 100%; background: var(--green);
+  /* the edges fade out, so the video's own green melts into the page's green whatever the decoder does to the colour */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5%, #000 97.5%, transparent), linear-gradient(to bottom, transparent, #000 3%, #000 97%, transparent);
+  -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent, #000 2.5%, #000 97.5%, transparent), linear-gradient(to bottom, transparent, #000 3%, #000 97%, transparent); mask-composite: intersect; }
+.lead-video:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; border-radius: 12px; }
+.lead-video .topic-video-play { background: rgba(224, 243, 84, .92); fill: var(--green); }
+.lead-video[data-stopped] .topic-video-play { opacity: 1; transform: none; }
+.lead-video.phone { display: none; aspect-ratio: 3 / 4; max-width: 560px; }
+@media (max-width: 700px) {
+  .lead-video.wide { display: none; }
+  .lead-video.phone { display: block; }
 }

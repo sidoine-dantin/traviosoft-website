@@ -1,29 +1,16 @@
 'use client';
 
-import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-type Props = { src: string; label: string; pause: string; play: string; note: ReactNode; sim: ReactNode };
-
-const noop = () => () => {};
-const wantsVideo = () => new URLSearchParams(window.location.search).get('hero') === 'video';
+type Props = { src: string; label: string; pause: string; play: string; shape: 'wide' | 'phone' };
 
 /**
- * The AI page's hero stage. By default it is the simulation the visitor can click through.
- * With ?hero=video in the address it shows the lead video instead (the same conversation,
- * filmed), so the two can be compared on the preview before one is kept.
+ * The AI page's lead video: a whole conversation with the assistant, filmed on the page's green.
+ * Two cuts of it share the hero (wide for computers, vertical with larger text for phones); CSS shows
+ * one, and only the one on screen loads and plays. The whole video is the button that stops and
+ * restarts it (WCAG 2.2.2). With reduced motion it does not start on its own and shows its last frame.
  */
-export function AiHeroStage({ src, label, pause, play, note, sim }: Props) {
-  const video = useSyncExternalStore(noop, wantsVideo, () => false);
-  if (!video) return <>{note}{sim}</>;
-  return <LeadVideo src={src} label={label} pause={pause} play={play} />;
-}
-
-/**
- * A wide silent loop of a whole conversation. It plays while it is on screen; the whole video is
- * the button that stops and restarts it (WCAG 2.2.2). With reduced motion it does not start on
- * its own and shows its last frame.
- */
-function LeadVideo({ src, label, pause, play }: Omit<Props, 'note' | 'sim'>) {
+export function LeadVideo({ src, label, pause, play, shape }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [stopped, setStopped] = useState(false);
@@ -37,10 +24,11 @@ function LeadVideo({ src, label, pause, play }: Omit<Props, 'note' | 'sim'>) {
       const raf = requestAnimationFrame(() => { setStopped(true); setStill(true); });
       return () => cancelAnimationFrame(raf);
     }
+    // A hidden cut (display: none) never intersects, so it never loads.
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !v.dataset.held) v.play().catch(() => {});
       else v.pause();
-    }, { threshold: 0.4 });
+    }, { threshold: 0.35 });
     io.observe(v);
     return () => io.disconnect();
   }, []);
@@ -53,7 +41,7 @@ function LeadVideo({ src, label, pause, play }: Omit<Props, 'note' | 'sim'>) {
   };
 
   return (
-    <button type="button" className="topic-video lead-video" onClick={toggle} aria-label={`${label}. ${playing ? pause : play}`} data-stopped={stopped || undefined}>
+    <button type="button" className={`lead-video ${shape}`} onClick={toggle} aria-label={`${label}. ${playing ? pause : play}`} data-stopped={stopped || undefined}>
       <video
         ref={ref}
         src={`${src}.mp4`}
@@ -61,9 +49,9 @@ function LeadVideo({ src, label, pause, play }: Omit<Props, 'note' | 'sim'>) {
         muted
         loop
         playsInline
-        preload="auto"
-        width={1280}
-        height={720}
+        preload="none"
+        width={shape === 'wide' ? 1280 : 720}
+        height={shape === 'wide' ? 720 : 960}
         aria-hidden="true"
         tabIndex={-1}
         onPlay={() => setPlaying(true)}

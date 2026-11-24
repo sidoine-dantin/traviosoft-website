@@ -233,7 +233,7 @@ export type AiSimStepId =
   | 'bookings' | 'confirmSeville' | 'requestGranada'
   | 'remove' | 'delLind' | 'delWeber';
 
-/** The simulation: a chat with the AI assistant beside the Traviosoft screens it changes. Sample data only. */
+/** The conversation the lead video films (ai/gen-lead.js in the video sources reads it): a chat with the AI assistant beside the Traviosoft screens it changes. Sample data only. */
 export type AiSimText = {
   /** a short line above the simulation, saying it runs on sample data */
   note: string;

@@ -10,9 +10,9 @@ export const ai: AiText = {
     name: 'Assistente de IA',
     menuLine: 'Trabalhar no Traviosoft a partir do Claude ou do ChatGPT',
     step: '5 de 5',
-    heroTitle: 'Trabalhe no Traviosoft a partir do seu assistente de IA',
+    heroTitle: 'Peça ao Claude, ao ChatGPT ou ao Mistral. Ele trabalha no seu Traviosoft.',
     heroLead:
-      'Ligue o Claude, o ChatGPT ou o Mistral ao Traviosoft da sua agência. Ele trabalha com os seus clientes, preços e viagens reais, com os direitos que lhe der.',
+      'Com os seus clientes, preços e viagens reais, e com os direitos que lhe der. Antes de cada alteração, pede-lhe autorização.',
     heroVisual: 'assistant',
     chapters: [
       {

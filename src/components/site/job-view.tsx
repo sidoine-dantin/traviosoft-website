@@ -5,8 +5,7 @@ import { FaqList, FaqSchema } from './faq';
 import { ChapterExplorer } from './chapter-explorer';
 import { TopicVideo } from './topic-video';
 import { topicVideo } from '@/content/topic-videos';
-import { AiSim } from './ai-sim';
-import { AiHeroStage } from './ai-hero-stage';
+import { LeadVideo } from './lead-video';
 import type { Chapter } from '@/content/types';
 
 
@@ -98,34 +97,20 @@ function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string 
 }
 
 /**
- * The AI assistant page's hero: the title on cream, then the simulation itself on the green stage
- * of the home hero (soft circles and the dotted route of a trip behind it).
+ * The AI assistant page's hero: one green stage from the top, the title and a short line over the
+ * lead video (a filmed conversation on the same green). Wide cut on computers, vertical on phones.
  */
 function AiHero({ c, locale }: { c: SiteContent; locale: string }) {
   const j = c.jobs['ai-assistant'];
+  const v = { src: `/videos/${locale}/ai-lead`, label: j.heroTitle, pause: c.common.pauseVideo, play: c.common.playVideo };
   return (
-    <header className="hero on-cream ai-hero">
+    <header className="hero ai-hero">
       <div className="wrap">
         <h1 className="hero-title">{j.heroTitle}</h1>
         <p className="hero-sub">{j.heroLead}</p>
       </div>
-      <div className="hero-stage ai-stage">
-        <svg className="hero-bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-          <circle cx="150" cy="760" r="320" fill="var(--deep)" opacity=".55" />
-          <circle cx="1330" cy="110" r="230" fill="var(--cream)" opacity=".07" />
-          <path d="M-20 300 C 200 180, 330 420, 620 380 S 1060 120, 1460 220" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".55" />
-        </svg>
-        <div className="wrap ai-stage-in">
-          <AiHeroStage
-            src={`/videos/${locale}/ai-lead`}
-            label={j.heroTitle}
-            pause={c.common.pauseVideo}
-            play={c.common.playVideo}
-            note={<p className="ai-note">{c.ai.sim.note}</p>}
-            sim={<AiSim t={c.ai.sim} locale={c.visuals.ex.numLocale} />}
-          />
-        </div>
-      </div>
+      <LeadVideo {...v} shape="wide" />
+      <LeadVideo {...v} src={`${v.src}-m`} shape="phone" />
     </header>
   );
 }
