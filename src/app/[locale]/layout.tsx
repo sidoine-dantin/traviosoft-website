@@ -45,6 +45,8 @@ export const viewport: Viewport = {
   themeColor: '#F7F8F6'
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
 }

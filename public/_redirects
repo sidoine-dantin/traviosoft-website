@@ -1,0 +1,14 @@
+# Old pages from the first site, kept so existing links and search results still land somewhere useful.
+# The example trips pages were removed (2026-11-13). Lines with * come last (Cloudflare reads them more slowly).
+/es/product /es/sell 301
+/es/how-it-works /es/sell 301
+/en/product /en/sell 301
+/en/how-it-works /en/sell 301
+/fr/product /fr/sell 301
+/fr/how-it-works /fr/sell 301
+/es/example /es 302
+/en/example /en 302
+/fr/example /fr 302
+/es/example/* /es 302
+/en/example/* /en 302
+/fr/example/* /fr 302

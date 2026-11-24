@@ -10,6 +10,8 @@ const priority: Record<string, number> = {
   '/glossary': 0.6
 };
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(SITE_UPDATED);
   const pages = pagePaths.map(path =>
