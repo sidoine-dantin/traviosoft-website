@@ -2,7 +2,7 @@ import nextVitals from 'eslint-config-next/core-web-vitals';
 
 const config = [
   ...nextVitals,
-  { ignores: ['.next/**', '.open-next/**', 'node_modules/**', 'next-env.d.ts'] }
+  { ignores: ['.next/**', 'out/**', 'worker/**', 'node_modules/**', 'next-env.d.ts'] }
 ];
 
 export default config;

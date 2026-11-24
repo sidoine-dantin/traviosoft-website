@@ -1,12 +1,12 @@
 name = "traviosoft-website"
 compatibility_date = "2025-01-01"
-compatibility_flags = ["nodejs_compat"]
-main = ".open-next/worker.js"
+# Only runs for addresses with no file (see worker/index.ts). Every page is a static file.
+main = "worker/index.ts"
 
 [assets]
-directory = ".open-next/assets"
+directory = "out"
 binding = "ASSETS"
 
-# Serve the prerendered pages from the static assets (see scripts/cache-to-assets.mjs).
+# Build the static site (next build with output: 'export' writes it to out/) before every deploy or upload.
 [build]
-command = "node scripts/cache-to-assets.mjs"
+command = "npm run build"
