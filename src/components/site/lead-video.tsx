@@ -2,12 +2,17 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+/** Seconds into the film where the opening still is taken (public/videos/<l>/ai-lead[-m]-start.webp). */
+const START = 1.6;
+
 type Props = { src: string; label: string; pause: string; play: string; shape: 'wide' | 'phone' };
 
 /**
  * The AI page's lead video: a whole conversation with the assistant, filmed on the page's green.
  * Two cuts of it share the hero (wide for computers, vertical with larger text for phones); CSS shows
- * one, and only the one on screen loads and plays. The whole video is the button that stops and
+ * one, and only the one on screen loads and plays. It sits at the top of the page, so it shows a
+ * still of its opening (the question asked, the assistant thinking) at once, then plays from that
+ * same moment as soon as any of it is on screen. The whole video is the button that stops and
  * restarts it (WCAG 2.2.2). With reduced motion it does not start on its own and shows its last frame.
  */
 export function LeadVideo({ src, label, pause, play, shape }: Props) {
@@ -28,7 +33,7 @@ export function LeadVideo({ src, label, pause, play, shape }: Props) {
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting && !v.dataset.held) v.play().catch(() => {});
       else v.pause();
-    }, { threshold: 0.35 });
+    }, { threshold: 0 });
     io.observe(v);
     return () => io.disconnect();
   }, []);
@@ -45,11 +50,12 @@ export function LeadVideo({ src, label, pause, play, shape }: Props) {
       <video
         ref={ref}
         src={`${src}.mp4`}
-        poster={still ? `${src}.webp` : undefined}
+        poster={still ? `${src}.webp` : `${src}-start.webp`}
         muted
         loop
         playsInline
         preload="none"
+        onLoadedMetadata={(e) => { const v = e.currentTarget; if (!v.dataset.started) { v.dataset.started = '1'; if (!still) v.currentTime = START; } }}
         width={shape === 'wide' ? 1280 : 720}
         height={shape === 'wide' ? 720 : 960}
         aria-hidden="true"

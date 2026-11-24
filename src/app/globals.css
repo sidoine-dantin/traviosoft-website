@@ -842,10 +842,10 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 /* AI assistant page: one green stage from the top. The title and a short line sit over the lead video,
    a filmed conversation on the same green, so the video has no box around it. Computers get the wide
    cut, phones the vertical one with larger text. */
-.ai-hero { background: var(--green); color: var(--cream); padding: clamp(40px, 6vw, 80px) var(--gutter) clamp(28px, 4vw, 56px); }
-.ai-hero .hero-title { color: var(--cream); margin-top: 0; max-width: 22ch; }
-.ai-hero .hero-sub { color: var(--cream); opacity: .9; max-width: 54ch; }
-.lead-video { position: relative; display: block; width: 100%; max-width: 1180px; margin: clamp(12px, 2vw, 24px) auto 0; padding: 0; border: 0; background: none; cursor: pointer; aspect-ratio: 16 / 9; }
+.ai-hero { background: var(--green); color: var(--cream); padding: clamp(28px, 4vw, 52px) var(--gutter) clamp(20px, 3vw, 40px); }
+.ai-hero .hero-title { color: var(--cream); margin-top: 0; max-width: 30ch; font-size: clamp(32px, 3.6vw, 50px); }
+.ai-hero .hero-sub { color: var(--cream); opacity: .9; max-width: 60ch; margin-top: 14px; font-size: 18px; }
+.lead-video { position: relative; display: block; width: 100%; max-width: 1180px; margin: 8px auto 0; padding: 0; border: 0; background: none; cursor: pointer; aspect-ratio: 16 / 9; }
 .lead-video video { display: block; width: 100%; height: 100%; background: var(--green);
   /* the edges fade out, so the video's own green melts into the page's green whatever the decoder does to the colour */
   -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5%, #000 97.5%, transparent), linear-gradient(to bottom, transparent, #000 3%, #000 97%, transparent);
@@ -853,6 +853,8 @@ html.motion .facts.in > div { opacity: 1; translate: 0 0; }
 .lead-video:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; border-radius: 12px; }
 .lead-video .topic-video-play { background: rgba(224, 243, 84, .92); fill: var(--green); }
 .lead-video[data-stopped] .topic-video-play { opacity: 1; transform: none; }
+/* on a computer the title, the whole video and a hint of the next section fit in one screen */
+.lead-video.wide { width: min(100%, 1180px, max(640px, calc((100svh - 410px) * 16 / 9))); }
 .lead-video.phone { display: none; aspect-ratio: 3 / 4; max-width: 560px; }
 @media (max-width: 700px) {
   .lead-video.wide { display: none; }
