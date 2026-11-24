@@ -6,6 +6,7 @@ import { ChapterExplorer } from './chapter-explorer';
 import { TopicVideo } from './topic-video';
 import { topicVideo } from '@/content/topic-videos';
 import { AiSim } from './ai-sim';
+import { AiHeroStage } from './ai-hero-stage';
 import type { Chapter } from '@/content/types';
 
 
@@ -17,7 +18,7 @@ export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; lo
   const nj = c.jobs[next];
   return (
     <>
-      {j.heroVisual === 'assistant' ? <AiHero c={c} /> : (
+      {j.heroVisual === 'assistant' ? <AiHero c={c} locale={locale} /> : (
         <section className="wrap job-hero">
           <div>
             <h1 className="h1">{j.heroTitle}</h1>
@@ -100,7 +101,7 @@ function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string 
  * The AI assistant page's hero: the title on cream, then the simulation itself on the green stage
  * of the home hero (soft circles and the dotted route of a trip behind it).
  */
-function AiHero({ c }: { c: SiteContent }) {
+function AiHero({ c, locale }: { c: SiteContent; locale: string }) {
   const j = c.jobs['ai-assistant'];
   return (
     <header className="hero on-cream ai-hero">
@@ -115,8 +116,14 @@ function AiHero({ c }: { c: SiteContent }) {
           <path d="M-20 300 C 200 180, 330 420, 620 380 S 1060 120, 1460 220" fill="none" stroke="var(--yellow)" strokeWidth="4" strokeDasharray="0 16" strokeLinecap="round" opacity=".55" />
         </svg>
         <div className="wrap ai-stage-in">
-          <p className="ai-note">{c.ai.sim.note}</p>
-          <AiSim t={c.ai.sim} locale={c.visuals.ex.numLocale} />
+          <AiHeroStage
+            src={`/videos/${locale}/ai-lead`}
+            label={j.heroTitle}
+            pause={c.common.pauseVideo}
+            play={c.common.playVideo}
+            note={<p className="ai-note">{c.ai.sim.note}</p>}
+            sim={<AiSim t={c.ai.sim} locale={c.visuals.ex.numLocale} />}
+          />
         </div>
       </div>
     </header>

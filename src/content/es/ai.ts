@@ -39,22 +39,11 @@ export const ai: AiText = {
           { title: 'Costes y márgenes', body: ['Los precios de compra y los márgenes solo llegan al asistente de las personas que los ven en Traviosoft.'] },
           { title: 'Desconecta cuando quieras', body: ['Desconecta desde la app de IA, o un administrador corta cualquier conexión desde Traviosoft, al momento.'] }
         ]
-      },
-      {
-        id: 'connect',
-        kicker: 'Conexión',
-        title: 'Conectar tu asistente',
-        lead: 'Añade Traviosoft como conector en tu app de IA, inicia sesión y elige lo que puede hacer.',
-        visual: 'connections',
-        features: [
-          { title: 'Claude, ChatGPT y Mistral', body: ['Añade la dirección de Traviosoft de tu agencia como conector. Tu app de IA te lleva a Traviosoft para iniciar sesión.'] },
-          { title: 'Solo lectura, o leer y hacer cambios', body: ['Al iniciar sesión, eliges lo que puede hacer tu asistente y si también puede eliminar.'] },
-          { title: 'Incluido en los dos planes', body: ['Conectar tu asistente de IA forma parte de Classic y Premium, para cada persona que autorice el administrador.'] }
-        ]
       }
     ],
     faq: [
       { q: '¿Qué apps de IA puedo usar?', a: ['Cualquier app de IA que pueda añadir un conector MCP, el estándar abierto con el que las apps de IA se conectan a otros programas. Claude, ChatGPT y Mistral te piden permiso en el chat antes de cada cambio, y Traviosoft lo hace en cuanto lo permites. Con otra app, Traviosoft no puede estar seguro de que te pregunte antes, así que sus cambios esperan tu aprobación en Traviosoft, en Revisión de cambios.'] },
+      { q: '¿Cómo lo conecto, y cuesta algo más?', a: ['Son unos minutos. En tu app de IA, añade la dirección de Traviosoft de tu agencia como conector, inicia sesión y elige si el asistente solo puede consultar o también hacer cambios. Está incluido en Classic y Premium, para cada persona que el administrador permita.'] },
       { q: '¿El asistente ve todos nuestros datos?', a: ['Ve exactamente lo que la persona que lo conectó puede ver en Traviosoft según su rol: los mismos clientes, viajes y equipos, y los precios de compra y los márgenes solo si su rol los muestra. Si su rol cambia, lo que ve el asistente cambia también.'] },
       { q: '¿Puede escribir a un proveedor?', a: ['Sí, y primero te pide permiso. Cuando lo permites, envía al proveedor una solicitud de reserva o le pide disponibilidad. Los presupuestos y las facturas llegan a los clientes desde Traviosoft.'] },
       { q: '¿Puede emitir facturas?', a: ['Puede consultar las facturas, seguir lo que está pagado y corregir un borrador. Pero una factura siempre la emite una persona, en Traviosoft: el asistente no puede emitir ni anular una factura, porque su número es un registro legal.'] },

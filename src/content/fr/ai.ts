@@ -39,22 +39,11 @@ export const ai: AiText = {
           { title: 'Coûts et marges', body: ['Les prix d’achat et les marges n’arrivent à l’assistant que pour les personnes qui les voient dans Traviosoft.'] },
           { title: 'Déconnecter à tout moment', body: ['Déconnectez depuis l’app d’IA, ou un administrateur coupe n’importe quelle connexion depuis Traviosoft, immédiatement.'] }
         ]
-      },
-      {
-        id: 'connect',
-        kicker: 'Connexion',
-        title: 'Connecter votre assistant',
-        lead: 'Ajoutez Traviosoft comme connecteur dans votre app d’IA, connectez-vous et choisissez ce qu’il peut faire.',
-        visual: 'connections',
-        features: [
-          { title: 'Claude, ChatGPT et Mistral', body: ['Ajoutez l’adresse Traviosoft de votre agence comme connecteur. Votre app d’IA vous envoie ensuite sur Traviosoft pour vous connecter.'] },
-          { title: 'Lecture seule, ou lire et modifier', body: ['À la connexion, vous choisissez ce que votre assistant peut faire, et s’il peut aussi supprimer.'] },
-          { title: 'Inclus dans les deux offres', body: ['Connecter votre assistant d’IA fait partie de Classic et de Premium, pour chaque personne que l’administrateur autorise.'] }
-        ]
       }
     ],
     faq: [
       { q: 'Quelles apps d’IA puis-je utiliser ?', a: ['Toute app d’IA qui peut ajouter un connecteur MCP, le standard ouvert qui permet aux apps d’IA de se connecter à d’autres logiciels. Claude, ChatGPT et Mistral vous demandent votre accord dans la conversation avant chaque changement, et Traviosoft le fait dès que vous l’autorisez. Avec une autre app, Traviosoft ne peut pas être sûr qu’elle vous demande d’abord, alors ses changements attendent votre accord dans Traviosoft, dans Revue des changements.'] },
+      { q: 'Comment le connecter, et est-ce payant ?', a: ['Quelques minutes suffisent. Dans votre app d’IA, ajoutez l’adresse Traviosoft de votre agence comme connecteur, connectez-vous et choisissez si l’assistant peut seulement consulter ou aussi faire des changements. C’est inclus dans Classic et Premium, pour chaque personne que l’administrateur autorise.'] },
       { q: 'L’assistant voit-il toutes nos données ?', a: ['Il voit exactement ce que la personne qui l’a connecté a le droit de voir dans Traviosoft, selon son rôle : les mêmes clients, voyages et équipes, et les prix d’achat et les marges seulement si son rôle les montre. Si son rôle change, ce que voit l’assistant change aussi.'] },
       { q: 'Peut-il écrire à un prestataire ?', a: ['Oui, et il vous demande d’abord votre accord. Une fois que vous l’autorisez, il envoie au prestataire une demande de réservation ou de disponibilité. Les devis et les factures partent vers les clients depuis Traviosoft.'] },
       { q: 'Peut-il émettre des factures ?', a: ['Il peut consulter les factures, suivre ce qui est payé et corriger un brouillon. En revanche, une facture est toujours émise par une personne, dans Traviosoft : l’assistant ne peut ni émettre ni annuler une facture, car son numéro est une pièce légale.'] },

@@ -44,22 +44,11 @@ export const ai: AiText = {
           { title: 'Costs and margins', body: ['Purchase prices and margins reach the assistant only for people who see them in Traviosoft.'] },
           { title: 'Disconnect at any time', body: ['Disconnect from the AI app, or an administrator ends any connection from Traviosoft, with effect at once.'] }
         ]
-      },
-      {
-        id: 'connect',
-        kicker: 'Connect',
-        title: 'Connecting your assistant',
-        lead: 'Add Traviosoft as a connector in your AI app, sign in, and choose what it may do.',
-        visual: 'connections',
-        features: [
-          { title: 'Claude, ChatGPT and Mistral', body: ['Add your agency’s Traviosoft address as a connector. Your AI app then sends you to Traviosoft to sign in.'] },
-          { title: 'Read only, or read and make changes', body: ['When you sign in, you choose what your assistant may do, and whether it may also delete.'] },
-          { title: 'Included in both plans', body: ['Connecting your AI assistant is part of Classic and Premium, for each person the administrator allows.'] }
-        ]
       }
     ],
     faq: [
       { q: 'Which AI apps can I use?', a: ['Any AI app that can add an MCP connector, the open standard AI apps use to connect to other software. Claude, ChatGPT and Mistral ask your permission in the chat before every change, so Traviosoft makes the change as soon as you allow it. With another app, Traviosoft cannot be sure it asks you first, so its changes wait for your approval in Traviosoft, in Change review.'] },
+      { q: 'How do I connect it, and does it cost extra?', a: ['It takes a few minutes. In your AI app, add your agency’s Traviosoft address as a connector, sign in, and choose whether the assistant may only read or also make changes. It is included in Classic and Premium, for each person the administrator allows.'] },
       { q: 'Does the assistant see all our data?', a: ['It sees exactly what the person who connected it is allowed to see in Traviosoft, under their role: the same clients, trips and teams, and purchase prices and margins only if their role shows them. When their role changes, what the assistant sees changes with it.'] },
       { q: 'Can it email a supplier?', a: ['Yes, and it asks your permission first. Once you allow it, it sends the supplier a booking request or asks for availability. Quotes and invoices go to clients from Traviosoft.'] },
       { q: 'Can it issue invoices?', a: ['It can look up invoices, follow what is paid and correct a draft. Issuing an invoice, though, is always done by a person in Traviosoft: the assistant cannot issue or cancel one, because an invoice number is a legal record.'] },

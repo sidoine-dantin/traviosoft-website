@@ -365,6 +365,18 @@ function Ask({ m, s, t, fill, onAnswer }: {
   );
 }
 
+/** Small line icons, so each tile and row says what it is before it is read. */
+const ICONS: Record<string, string> = {
+  inbox: 'M4 13h4.5l1.5 2.5h4l1.5-2.5H20M5.5 5h13L20 13v6H4v-6z',
+  doc: 'M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5',
+  clock: 'M12 3a9 9 0 1 1 0 18a9 9 0 0 1 0-18zM12 7.5V12l3 2',
+  bed: 'M3 6v13M21 19v-6a3 3 0 0 0-3-3h-7v6M3 16h18M7 13a1.5 1.5 0 1 0 0-.01',
+  guide: 'M12 4a3 3 0 1 1 0 6a3 3 0 0 1 0-6zM6 20c0-3.3 2.7-6 6-6s6 2.7 6 6'
+};
+function Ico({ k }: { k: string }) {
+  return <svg className="sim-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d={ICONS[k]} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
+
 function Cross() {
   return <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>;
 }
@@ -396,11 +408,24 @@ function AppPane({ t, app, go, eur, day, dep, approve, reject, sendQuote }: {
       </nav>
       <div className="sim-screen" key={app.screen + (app.quote ?? '')}>
         {app.screen === 'dashboard' && (
-          <ul className="sim-rows">
-            <li><span><b>{u.newRequests}</b><small>Iris &amp; Noah · {n.irisTrip}</small></span><span className="sim-count">{app.quote === 'iris' ? 0 : 1}</span></li>
-            <li><span><b>{u.toFollow}</b><small>Famiglia Bianchi · {n.bianchiTrip}</small></span><span className="sim-count">1</span></li>
-            <li><span><b>{u.latePayments}</b><small>{eur(late.reduce((a, b) => a + b, 0))}</small></span><span className="sim-count">{late.length}</span></li>
-            <li><span><b>{u.bookingsLeft}</b><small>Famiglia Bianchi · {n.bianchiTrip}</small></span><span className="sim-count">{app.sevilleConfirmed ? 1 : 2}</span></li>
+          <ul className="sim-tiles">
+            <li data-flash={fl('quote')}>
+              <Ico k="inbox" /><b className="sim-tile-n">{app.quote === 'iris' ? 0 : 1}</b>
+              <span>{u.newRequests}</span><small>Iris &amp; Noah</small>
+            </li>
+            <li>
+              <Ico k="doc" /><b className="sim-tile-n">1</b>
+              <span>{u.toFollow}</span><small>Famiglia Bianchi</small>
+            </li>
+            <li data-tone={late.length ? 'alert' : undefined} data-flash={fl('olabarri')}>
+              <Ico k="clock" /><b className="sim-tile-n">{late.length}</b>
+              <span>{u.latePayments}</span><small className="sim-fig">{eur(late.reduce((a, b) => a + b, 0))}</small>
+            </li>
+            <li data-flash={fl('seville') ?? fl('granada')}>
+              <Ico k="bed" /><b className="sim-tile-n">{app.sevilleConfirmed ? 1 : 2}</b>
+              <span>{u.bookingsLeft}</span>
+              <small className="sim-steps" aria-hidden="true">{[1, app.sevilleConfirmed ? 1 : 0, 0].map((d, i) => <i key={i} data-on={d || undefined} />)}</small>
+            </li>
           </ul>
         )}
 
@@ -450,9 +475,9 @@ function AppPane({ t, app, go, eur, day, dep, approve, reject, sendQuote }: {
           <>
             <p className="sim-sub">Famiglia Bianchi · {n.bianchiTrip}</p>
             <ul className="sim-rows">
-              <li data-flash={fl('seville')}><span><b>{n.hotelSeville}</b><small>{app.sevilleConfirmed ? `${u.reference} 48213` : ' '}</small></span><span className={`pill ${app.sevilleConfirmed ? 'p-ok' : 'p-wait'}`}>{app.sevilleConfirmed ? u.confirmed : u.requested}</span></li>
-              <li><span><b>{n.guideCordoba}</b><small>{' '}</small></span><span className="pill p-ok">{u.confirmed}</span></li>
-              <li data-flash={fl('granada')}><span><b>{n.hotelGranada}</b><small>{' '}</small></span><span className={`pill ${app.granadaRequested ? 'p-wait' : 'p-grey'}`}>{app.granadaRequested ? u.requested : u.toBook}</span></li>
+              <li data-flash={fl('seville')}><Ico k="bed" /><span><b>{n.hotelSeville}</b><small>{app.sevilleConfirmed ? `${u.reference} 48213` : ' '}</small></span><span className={`pill ${app.sevilleConfirmed ? 'p-ok' : 'p-wait'}`}>{app.sevilleConfirmed ? u.confirmed : u.requested}</span></li>
+              <li><Ico k="guide" /><span><b>{n.guideCordoba}</b><small>{' '}</small></span><span className="pill p-ok">{u.confirmed}</span></li>
+              <li data-flash={fl('granada')}><Ico k="bed" /><span><b>{n.hotelGranada}</b><small>{' '}</small></span><span className={`pill ${app.granadaRequested ? 'p-wait' : 'p-grey'}`}>{app.granadaRequested ? u.requested : u.toBook}</span></li>
             </ul>
           </>
         )}
