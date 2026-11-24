@@ -49,7 +49,7 @@ export default async function HomePage({ params }: Props) {
             </g>
           </svg>
           <Parallax anchor="top" />
-          <RouteTraveller anchor="top" />
+          <RouteTraveller />
           <HeroTrip p={h.proposal} amount={2660} locale={loc} />
         </div>
       </header>

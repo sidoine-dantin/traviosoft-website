@@ -23,7 +23,7 @@ export default function Footer({ c }: { c: SiteContent }) {
         </g>
       </svg>
       <Parallax anchor="bottom" />
-      <RouteTraveller anchor="bottom" />
+      <RouteTraveller />
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
