@@ -105,12 +105,12 @@ function AiHero({ c, locale }: { c: SiteContent; locale: string }) {
   const v = { src: `/videos/${locale}/ai-lead`, label: j.heroTitle, pause: c.common.pauseVideo, play: c.common.playVideo };
   return (
     <header className="hero ai-hero">
-      <div className="wrap">
+      <div className="ai-hero-in">
         <h1 className="hero-title">{j.heroTitle}</h1>
         <p className="hero-sub">{j.heroLead}</p>
+        <LeadVideo {...v} shape="wide" />
+        <LeadVideo {...v} src={`${v.src}-m`} shape="phone" />
       </div>
-      <LeadVideo {...v} shape="wide" />
-      <LeadVideo {...v} src={`${v.src}-m`} shape="phone" />
     </header>
   );
 }
