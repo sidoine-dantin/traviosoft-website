@@ -8,6 +8,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { JsonLd } from '@/components/site/json-ld';
 import { Consent } from '@/components/site/consent';
+import { AdSourceCapture } from '@/components/site/ad-source';
 import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
@@ -143,6 +144,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Footer c={c} />
           <ScrollTop />
           <Consent labels={c.footer.consent} />
+          <AdSourceCapture />
         </NextIntlClientProvider>
       </body>
     </html>

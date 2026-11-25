@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { bookedConversion } from './consent';
+import { adSourceConfig } from './ad-source';
 
 /** The header's "Book a demo" sends this when the visitor is already on the demo page. */
 export const OPEN_BOOKING_EVENT = 'tv-open-booking';
@@ -72,7 +73,7 @@ function openBooking(calLink: string, locale: string) {
     cal.ns[NS]('on', { action: 'bookingSuccessfulV2', callback: onBooked });
     cal.ns[NS]('on', { action: 'bookingSuccessful', callback: onBooked });
   }
-  cal.ns[NS]('modal', { calLink, config: { layout: 'month_view' } });
+  cal.ns[NS]('modal', { calLink, config: { layout: 'month_view', ...adSourceConfig() } });
 }
 
 function open(calLink: string, locale: string) {
