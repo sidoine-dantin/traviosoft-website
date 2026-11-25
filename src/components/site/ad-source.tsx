@@ -42,7 +42,8 @@ export function AdSourceCapture() {
       const params = new URLSearchParams(window.location.search);
       const found: AdSource = {};
       for (const f of FIELDS) {
-        const v = params.get(f);
+        // Last value wins: Google appends the account's link suffix (exact ad id) after the ad's own UTMs.
+        const v = params.getAll(f).filter(Boolean).pop();
         if (v) found[f] = v.slice(0, 100);
       }
       if (Object.keys(found).length) window.sessionStorage.setItem(KEY, JSON.stringify(found));
