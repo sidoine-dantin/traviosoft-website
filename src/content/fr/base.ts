@@ -37,10 +37,19 @@ export const footer: SiteContent['footer'] = {
   ],
   localLinks: [],
   consent: {
+    title: 'Cookies',
     text: 'Nous utilisons des cookies nécessaires, par exemple pour retenir votre langue. Avec votre accord, nous utilisons aussi des cookies publicitaires pour mesurer nos annonces et les afficher sur d’autres sites.',
     accept: 'Tout accepter',
     refuse: 'Nécessaires uniquement',
-    more: 'En savoir plus',
+    preferences: 'Préférences',
+    necessary: 'Nécessaires',
+    necessaryText: 'Retenir votre langue et votre choix sur les cookies.',
+    alwaysOn: 'Toujours actifs',
+    measure: 'Mesure des annonces',
+    measureText: 'Google Ads compte les visites et les démos réservées qui viennent de nos annonces.',
+    retarget: 'Annonces sur d’autres sites',
+    retargetText: 'LinkedIn, Meta et Google retiennent votre visite, pour que nos annonces vous retrouvent sur leurs sites.',
+    save: 'Enregistrer mes choix',
     settings: 'Gérer les cookies',
     policy: 'Politique de confidentialité'
   }
@@ -58,6 +67,9 @@ export const common: SiteContent['common'] = {
   backToResources: 'Toutes les ressources',
   allResources: 'Voir toutes les ressources',
   perMonth: 'EUR / mois',
+  aiAsk: 'Ou demandez à votre assistant d’IA',
+  aiSee: 'Voir comment',
+  demoLine: 'Découvrez-le sur vos propres voyages',
   notFound: {
     title: 'Page introuvable',
     body: 'Il n’y a rien à cette adresse.'

@@ -709,7 +709,7 @@ const aiTools: Article = {
   metaDescription:
     'How a travel agency can use AI on its own data: the assistant built into Traviosoft, and the MCP connector that links Claude, ChatGPT and other AI tools to your quotes, bookings and payments.',
   title: 'AI in your travel agency',
-  lead: 'Traviosoft works with AI in two ways. The built-in assistant works inside the app for each person who uses it. The MCP connector lets the AI tool you already use, such as Claude or ChatGPT, read and update your agency’s data with your permission.',
+  lead: 'Traviosoft works with AI in two ways. The built-in assistant works inside the app for each person who uses it. The MCP connector lets the AI tool you already use, such as Claude or ChatGPT, read your agency’s data, and it asks your permission before it updates anything.',
   updated: '2026-11-14',
   card: 'The built-in assistant, the MCP connector for Claude and ChatGPT, and how you stay in control.',
   blocks: [
@@ -731,13 +731,14 @@ const aiTools: Article = {
       type: 'list',
       items: [
         'Claude (desktop or web): Settings, Connectors, Add custom connector, then paste your Traviosoft address.',
-        'ChatGPT: Settings, Connectors, Add, with the same address.',
+        'ChatGPT: Settings, Apps, Advanced settings, Developer mode, then create an app with the same address.',
+        'Mistral (Le Chat): Context, Connectors, Add connector, Custom MCP connector, with the same address.',
         'Automation tools such as n8n can connect too, to run tasks automatically.'
       ]
     },
     {
       type: 'p',
-      text: 'The AI tool sends you to Traviosoft to sign in. It shows what it asks to do and you can untick anything you would rather not allow.'
+      text: 'The AI tool sends you to Traviosoft to sign in. You choose Read only, or Read and make changes, and whether it may also delete.'
     },
     { type: 'h2', text: 'You stay in control', id: 'control' },
     {
@@ -746,7 +747,7 @@ const aiTools: Article = {
         'The connector is off until an administrator turns it on.',
         'The administrator chooses who may connect an AI tool.',
         'An AI tool never does more than the person who connected it can do in the app.',
-        'In safe mode every change waits in a review list for that person to approve.',
+        'Claude, ChatGPT and Mistral ask the person before each change. Deletions, and changes from other AI tools, wait in Traviosoft for a person to approve them.',
         'Every action is recorded in the activity log under the name of the person who connected it.',
         'Any connection can be cut off at once from Traviosoft.'
       ]
@@ -758,7 +759,7 @@ const aiTools: Article = {
         { q: 'Does it work with Gemini?', a: ['The connector works with any AI tool that supports MCP. Google supports MCP in its Gemini developer tools. Whether a custom connector can be added depends on the Gemini version.'] },
         { q: 'Is the MCP connector included in my plan?', a: ['Yes. It is included in both Classic and Premium. The built-in assistant is an option on both plans, with usage limits.'] },
         { q: 'Does the AI see all our data?', a: ['It sees what the person who connected it can see, and nothing more. An administrator can also allow reading only and block every change.'] },
-        { q: 'Can the AI send emails to clients on its own?', a: ['Changes wait for a person’s approval in safe mode, which is on by default. You decide what it may do.'] }
+        { q: 'Can the AI send emails?', a: ['Quotes and invoices go to clients from Traviosoft. The AI can email a supplier too, and it asks the person’s permission first: once they allow it, it sends the booking request or the availability request.'] }
       ]
     }
   ]

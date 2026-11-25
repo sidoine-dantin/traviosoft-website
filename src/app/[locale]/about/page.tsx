@@ -3,11 +3,11 @@ import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getContent } from '@/content';
 import { buildMetadata } from '@/lib/seo';
-import type { JobSlug } from '@/content/types';
+import { JOB_ORDER, type JobSlug } from '@/content/types';
 
 type Props = { params: Promise<{ locale: string }> };
 
-const JOBS: JobSlug[] = ['sell', 'book', 'get-paid', 'setup'];
+const JOBS: JobSlug[] = JOB_ORDER;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

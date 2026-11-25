@@ -1,14 +1,15 @@
 import { Link } from '@/i18n/navigation';
-import type { JobSlug, SiteContent } from '@/content/types';
+import { JOB_ORDER, type JobSlug, type SiteContent } from '@/content/types';
 import { Visual } from './visuals';
 import { FaqList, FaqSchema } from './faq';
 import { ChapterExplorer } from './chapter-explorer';
 import { TopicVideo } from './topic-video';
 import { topicVideo } from '@/content/topic-videos';
+import { LeadVideo } from './lead-video';
 import type { Chapter } from '@/content/types';
 
 
-const ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup'];
+const ORDER = JOB_ORDER;
 
 export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; locale: string }) {
   const j = c.jobs[slug];
@@ -16,15 +17,17 @@ export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; lo
   const nj = c.jobs[next];
   return (
     <>
-      <section className="wrap job-hero">
-        <div>
-          <h1 className="h1">{j.heroTitle}</h1>
-          <p className="lead">{j.heroLead}</p>
-        </div>
-        <div className="job-hero-visual">
-          <Visual k={j.heroVisual} v={c.visuals} />
-        </div>
-      </section>
+      {j.heroVisual === 'assistant' ? <AiHero c={c} locale={locale} /> : (
+        <section className="wrap job-hero">
+          <div>
+            <h1 className="h1">{j.heroTitle}</h1>
+            <p className="lead">{j.heroLead}</p>
+          </div>
+          <div className="job-hero-visual">
+            <Visual k={j.heroVisual} v={c.visuals} />
+          </div>
+        </section>
+      )}
 
       <ChapterExplorer titles={j.chapters.map(ch => ch.title)} leads={j.chapters.map(ch => ch.lead)} label={c.common.onThisPage}>
         {j.chapters.map(ch => <Topic key={ch.id} ch={ch} c={c} locale={locale} />)}
@@ -48,6 +51,9 @@ export function JobView({ c, slug, locale }: { c: SiteContent; slug: JobSlug; lo
             </span>
             <span aria-hidden="true" style={{ fontSize: 56, fontWeight: 300 }}>→</span>
           </Link>
+          {j.heroVisual !== 'assistant' && (
+            <p className="next-demo">{c.common.demoLine}: <Link href="/demo">{c.nav.demo}</Link></p>
+          )}
         </div>
       </section>
     </>
@@ -67,6 +73,19 @@ function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string 
             <li key={f.title}><h3>{f.title}</h3>{f.body.map((p, k) => <p key={k}>{p}</p>)}</li>
           ))}
         </ul>
+        {ch.ai && (
+          <p className="topic-ai">
+            {ch.ai.say ? (
+              <>
+                <span className="topic-ai-k">{c.common.aiAsk}</span>
+                <span className="topic-ai-say">{ch.ai.say}</span>
+                <Link href="/ai-assistant">{c.common.aiSee} <span aria-hidden="true">→</span></Link>
+              </>
+            ) : (
+              <Link href="/ai-assistant#rights">{ch.ai.link} <span aria-hidden="true">→</span></Link>
+            )}
+          </p>
+        )}
       </div>
       <div className="topic-visual">
         {video
@@ -74,5 +93,24 @@ function Topic({ ch, c, locale }: { ch: Chapter; c: SiteContent; locale: string 
           : <Visual k={ch.visual} v={c.visuals} />}
       </div>
     </div>
+  );
+}
+
+/**
+ * The AI assistant page's hero: one green stage from the top, the title and a short line over the
+ * lead video (a filmed conversation on the same green). Wide cut on computers, vertical on phones.
+ */
+function AiHero({ c, locale }: { c: SiteContent; locale: string }) {
+  const j = c.jobs['ai-assistant'];
+  const v = { src: `/videos/${locale}/ai-lead`, label: j.heroTitle, pause: c.common.pauseVideo, play: c.common.playVideo };
+  return (
+    <header className="hero ai-hero">
+      <div className="ai-hero-in">
+        <h1 className="hero-title">{j.heroTitle}</h1>
+        <p className="hero-sub">{j.heroLead}</p>
+        <LeadVideo {...v} shape="wide" />
+        <LeadVideo {...v} src={`${v.src}-m`} shape="phone" />
+      </div>
+    </header>
   );
 }

@@ -13,11 +13,13 @@ type Props = {
   locale: Locale;
   labels: { product: string; pricing: string; resources: string; demo: string; menuLabel: string; close: string; skip: string };
   jobs: JobLink[];
+  /** the AI assistant page, a top-level item between Product and Pricing */
+  ai: { slug: string; name: string };
   /** paths that exist in each locale; used to hide a language that has no version of this page */
   available?: Partial<Record<Locale, string>>;
 };
 
-export default function Header({ locale, labels, jobs }: Props) {
+export default function Header({ locale, labels, jobs, ai }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
@@ -148,6 +150,7 @@ export default function Header({ locale, labels, jobs }: Props) {
               </div>
             )}
           </div>
+          <Link href={`/${ai.slug}`} aria-current={pathname === `/${ai.slug}` ? 'page' : undefined}>{ai.name}</Link>
           <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>{labels.pricing}</Link>
         </nav>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -186,6 +189,12 @@ export default function Header({ locale, labels, jobs }: Props) {
             ))}
           </ul>
           <ul className="mobile-links">
+            <li>
+              <Link href={`/${ai.slug}`} aria-current={pathname === `/${ai.slug}` ? 'page' : undefined}>
+                <b>{ai.name}</b>
+                <span className="arr" aria-hidden="true">→</span>
+              </Link>
+            </li>
             <li>
               <Link href="/pricing" aria-current={pathname === '/pricing' ? 'page' : undefined}>
                 <b>{labels.pricing}</b>

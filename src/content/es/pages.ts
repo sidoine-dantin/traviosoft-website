@@ -71,7 +71,7 @@ export const pricing: SiteContent['pricing'] = {
         { f: 'Varios equipos, cada uno con sus clientes y sus viajes', classic: false, premium: true },
         { f: 'Roles a tu medida: quién ve y hace qué', classic: false, premium: true },
         { f: 'Varias marcas y sociedades en una cuenta', classic: false, premium: true },
-        { f: 'Conexión con el asistente de IA que ya usas (Claude, ChatGPT y otros)', classic: true, premium: true },
+        { f: 'Trabaja en Traviosoft desde el asistente de IA que ya usas (Claude, ChatGPT, Mistral)', classic: true, premium: true },
         { f: 'El asistente de IA dentro de Traviosoft', classic: { text: 'Opcional, con límites de uso', option: true }, premium: { text: 'Opcional, con límites de uso', option: true } },
         { f: 'Acceso API, para que tu desarrollador conecte tu web y tus otros programas', classic: false, premium: true }
       ]
@@ -151,7 +151,7 @@ export const demo: SiteContent['demo'] = {
   bookBody: 'De momento, la cita se pide por email. Envíanos el nombre de tu agencia, el tamaño del equipo y unos días que te vengan bien, y te respondemos con una hora.',
   emailLabel: 'Escribe a',
   bookCta: 'Elegir una hora',
-  bookCalendarBody: '30 minutos por Google Meet. La invitación llega por email.',
+  bookCalendarBody: '30 minutos por Google Meet, en inglés o en francés. La invitación llega por email.',
   emailAltLabel: 'O escribe a',
   email: 'hola@traviosoft.com',
   faq: [
@@ -161,7 +161,7 @@ export const demo: SiteContent['demo'] = {
     },
     {
       q: '¿Quién hace la demo?',
-      a: ['Alguien del equipo de Traviosoft, en español, inglés o francés.']
+      a: ['Alguien del equipo de Traviosoft, en inglés o en francés.']
     },
     {
       q: '¿Tengo que preparar algo?',
@@ -265,8 +265,12 @@ export const faqPage: SiteContent['faqPage'] = {
           a: ['Sí. Presupuesta a la agencia colaboradora, conserva a su cliente en el viaje, añade la comisión de la agencia y liquídala con una relación por periodo.']
         },
         {
-          q: '¿Hay un asistente de IA?',
-          a: ['Sí, como opción en los dos planes, con límites de uso. Pregúntale qué te necesita hoy, pídele un presupuesto preparado desde tu catálogo o que convierta la lista de precios de un proveedor en precios de catálogo; cada cambio espera tu visto bueno. Conectar a tus datos de Traviosoft el asistente de IA que ya usas está incluido en los dos planes.']
+          q: '¿Puedo usar Traviosoft desde Claude o ChatGPT?',
+          a: ['Sí, en los dos planes. Conecta Claude, ChatGPT o Mistral y pregunta qué tienes pendiente, pide un presupuesto desde tu catálogo o registra la confirmación de un proveedor. Te pregunta antes de cada cambio y solo hace lo que puede hacer la persona que lo conectó.']
+        },
+        {
+          q: '¿Hay un asistente dentro de Traviosoft?',
+          a: ['Sí, como opción en los dos planes, con límites de uso. Pregúntale qué te necesita hoy, pídele un presupuesto preparado desde tu catálogo o que convierta la lista de precios de un proveedor en precios de catálogo; cada cambio espera tu visto bueno.']
         }
       ]
     },

@@ -1,4 +1,5 @@
 import type { JobPage, JobSlug } from '../types';
+import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
@@ -39,6 +40,7 @@ const sell: JobPage = {
     },
     {
       id: 'quotes',
+      ai: { say: '« Crée un devis pour Iris & Noah depuis mon catalogue »' },
       kicker: 'Devis',
       title: 'Des devis avec votre marge et la TVA',
       lead: 'Construisez le devis ligne par ligne depuis votre catalogue. Chaque ligne affiche ce qu’elle vous coûte, ce que paie le client et votre marge.',
@@ -121,6 +123,7 @@ const book: JobPage = {
     },
     {
       id: 'status',
+      ai: { say: '« L’hôtel de Séville a confirmé, réf. 48213 »' },
       kicker: 'Statuts',
       title: 'Les statuts de réservation de chaque voyage',
       lead: 'Pour chaque voyage, vous voyez les prestations confirmées et celles qui attendent encore le prestataire.',
@@ -213,6 +216,7 @@ const getPaid: JobPage = {
     },
     {
       id: 'links',
+      ai: { say: '« Olabarri a payé le solde par virement »' },
       kicker: 'Liens de paiement',
       title: 'Liens de paiement dans l’e-mail',
       lead: 'Le client paie en ligne depuis un lien dans votre e-mail, par carte par exemple.',
@@ -315,6 +319,7 @@ const setup: JobPage = {
     },
     {
       id: 'team',
+      ai: { link: 'Qui peut connecter un assistant d’IA' },
       kicker: 'Équipe',
       title: 'Chaque vendeur avec ses clients et ses ventes',
       lead: 'Chaque vendeur travaille sur ses propres clients et voyages, et vous voyez les ventes de toute l’agence.',
@@ -356,4 +361,4 @@ const setup: JobPage = {
   ]
 };
 
-export const jobs: Record<JobSlug, JobPage> = { sell, book, 'get-paid': getPaid, setup };
+export const jobs: Record<JobSlug, JobPage> = { sell, book, 'get-paid': getPaid, setup, 'ai-assistant': ai.page };

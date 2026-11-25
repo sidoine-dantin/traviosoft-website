@@ -1,3 +1,4 @@
+import type { ConsentLabels } from '@/components/site/consent';
 /**
  * Content model for the whole marketing site.
  * One SiteContent object per locale (src/content/{es,en,fr}/index.ts).
@@ -16,7 +17,9 @@ export type Locale = 'es' | 'en' | 'fr' | 'it' | 'pt';
 /** BCP 47 tag per locale, for hreflang and <html lang> (Portuguese is the European variant). */
 export const LANG_TAG: Record<Locale, string> = { es: 'es', en: 'en', fr: 'fr', it: 'it', pt: 'pt-PT' };
 
-export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup';
+export type JobSlug = 'sell' | 'book' | 'get-paid' | 'setup' | 'ai-assistant';
+/** The product pages in menu order. */
+export const JOB_ORDER: JobSlug[] = ['sell', 'book', 'get-paid', 'setup', 'ai-assistant'];
 /** A product page, optionally with the topic to land on (`sell#quotes`). */
 export type JobLink = JobSlug | `${JobSlug}#${string}`;
 
@@ -42,7 +45,8 @@ export type VisualKey =
   | 'languages'
   | 'team'
   | 'safe'
-  | 'connections';
+  | 'connections'
+  | 'assistant';
 
 export type Feature = {
   title: string;
@@ -59,6 +63,8 @@ export type Chapter = {
   lead: string;
   visual: VisualKey;
   features: Feature[];
+  /** a line under the points: what to write to the AI assistant for this work, or a link to its page */
+  ai?: { say?: string; link?: string };
 };
 
 export type Faq = { q: string; a: string[] };
@@ -193,6 +199,63 @@ export type Plan = {
 export type CompareCell = boolean | string | { text: string; was?: string; option?: boolean };
 export type CompareSection = { title: string; rows: { f: string; classic: CompareCell; premium: CompareCell }[] };
 
+/** The AI assistant: its product page, the band on the home page and the simulation on its page. */
+export type AiText = {
+  page: JobPage;
+  sim: AiSimText;
+};
+
+/** One line in the chat or on a Traviosoft screen: what it is, and a detail under it. */
+export type AiSimRow = { t: string; s: string };
+
+/**
+ * One step of the simulation. `say` is both the visitor's choice and the message it sends.
+ * Amounts are written `{2660}` and shown in euros in the visitor's language; `{dep}`, `{bal}` and
+ * `{due}` are filled from the quote whose payment terms are being set.
+ */
+export type AiSimStep = {
+  say: string;
+  /** what the assistant shows it is doing in Traviosoft while it works */
+  tools?: string[];
+  reply?: string;
+  rows?: AiSimRow[];
+  /** a line after the rows */
+  after?: string;
+  /** the question the AI app asks before a change: the action and what will be written */
+  ask?: { action: string; rows: AiSimRow[] };
+  /** the answer once the change is allowed */
+  done?: string;
+};
+
+export type AiSimStepId =
+  | 'today' | 'late' | 'payOlabarri'
+  | 'quote' | 'quoteIris' | 'madridBianchi' | 'terms' | 'terms30' | 'terms50' | 'send'
+  | 'bookings' | 'confirmSeville' | 'requestGranada'
+  | 'remove' | 'delLind' | 'delWeber';
+
+/** The conversation the lead video films (ai/gen-lead.js in the video sources reads it): a chat with the AI assistant beside the Traviosoft screens it changes. Sample data only. */
+export type AiSimText = {
+  /** a short line above the simulation, saying it runs on sample data */
+  note: string;
+  chatTitle: string; connected: string; greeting: string;
+  /** phones: the two tabs (the other one is "Traviosoft"), and what the dot on it says */
+  chatTab: string; changed: string;
+  allow: string; deny: string; allowedTag: string; deniedTag: string; deniedReply: string;
+  restart: string; working: string; thinking: string;
+  nav: { dashboard: string; quotes: string; bookings: string; payments: string; review: string };
+  ui: {
+    draft: string; sent: string; requested: string; confirmed: string; toBook: string; late: string; paid: string; due: string;
+    total: string; margin: string; schedule: string; deposit: string; balance: string;
+    send: string; approve: string; reject: string; rejected: string; reviewEmpty: string; trashed: string; reference: string;
+    newRequests: string; toFollow: string; latePayments: string; bookingsLeft: string;
+  };
+  names: {
+    irisTrip: string; bianchiTrip: string; madridTrip: string; lindTrip: string; weberTrip: string;
+    olabarriPay: string; martinPay: string; hotelSeville: string; guideCordoba: string; hotelGranada: string;
+  };
+  steps: Record<AiSimStepId, AiSimStep>;
+};
+
 export type SiteContent = {
   locale: Locale;
   nav: {
@@ -208,12 +271,14 @@ export type SiteContent = {
     /** extra footer links that only exist in this locale (e.g. Spain page) */
     posts: { slug: string; label: string }[];
     localLinks: Link[];
-    /** cookie banner, shown only when an ad measurement tag is configured */
-    consent: { text: string; accept: string; refuse: string; more: string; settings: string; policy: string };
+    /** cookie notice, shown only when an ad tag is configured; `settings` is the footer link that reopens it */
+    consent: ConsentLabels & { settings: string };
   };
   common: {
     premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;
     faqTitle: string; backToResources: string; allResources: string; perMonth: string;
+    /** the AI line under some topics, and the demo line in the last band of the product pages */
+    aiAsk: string; aiSee: string; demoLine: string;
     notFound: { title: string; body: string };
   };
   visuals: VisualText;
@@ -234,6 +299,7 @@ export type SiteContent = {
     facts: { k: string; v: string }[];
   };
   jobs: Record<JobSlug, JobPage>;
+  ai: AiText;
   pricing: {
     metaTitle: string; metaDescription: string;
     title: string; lead: string;

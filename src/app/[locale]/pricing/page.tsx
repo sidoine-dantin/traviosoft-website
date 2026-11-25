@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getContent } from '@/content';
-import { buildMetadata } from '@/lib/seo';
+import { baseUrl, buildMetadata } from '@/lib/seo';
 import { Plans } from '@/components/site/plans';
 import { FaqList, FaqSchema } from '@/components/site/faq';
 
@@ -11,7 +11,9 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const p = getContent(locale).pricing;
-  return buildMetadata({ locale, path: '/pricing', title: p.metaTitle, description: p.metaDescription });
+  const meta = buildMetadata({ locale, path: '/pricing', title: p.metaTitle, description: p.metaDescription });
+  // the same page as Markdown, for AI tools that read text rather than layout
+  return { ...meta, alternates: { ...meta.alternates, types: { 'text/markdown': `${baseUrl}/${locale}/pricing.md` } } };
 }
 
 export default async function PricingPage({ params }: Props) {
