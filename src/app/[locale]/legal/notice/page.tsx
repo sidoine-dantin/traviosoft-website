@@ -29,7 +29,7 @@ export default async function NoticePage({ params }: Props) {
         </Link>
 
         <LegalDocument
-          title={t('notice_title').replace(' - Traviosoft', '')}
+          title={t('notice_title')}
           updatedLabel={t('updated_label')}
           updatedDate={t('updated_date')}
           intro={t('notice.intro')}

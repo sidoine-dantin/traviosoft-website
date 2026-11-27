@@ -3,7 +3,7 @@ import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Vender: solicitudes, catálogo y presupuestos | Traviosoft',
+  metaTitle: 'Vender: solicitudes, catálogo y presupuestos',
   metaDescription:
     'Todas las solicitudes de clientes en una lista, un catálogo con precios por temporada y varios proveedores por producto, presupuestos con tu margen y el IVA, enviados en el idioma del cliente y con seguimiento a los 7 días.',
   name: 'Vender',
@@ -98,7 +98,7 @@ const sell: JobPage = {
 
 const book: JobPage = {
   slug: 'book',
-  metaTitle: 'Reservar y operar el viaje | Traviosoft',
+  metaTitle: 'Reservar y operar el viaje',
   metaDescription:
     'Cuando se acepta un presupuesto, todos los servicios del viaje aparecen en una lista, listos para reservar. Las solicitudes de reserva salen a los proveedores por email, cada servicio muestra su estado y tu cliente recibe un itinerario día a día.',
   name: 'Reservar y operar',
@@ -191,7 +191,7 @@ const book: JobPage = {
 
 const getPaid: JobPage = {
   slug: 'get-paid',
-  metaTitle: 'Cobrar y facturar: pagos, facturas, panel | Traviosoft',
+  metaTitle: 'Cobrar y facturar: pagos, facturas, panel',
   metaDescription:
     'Señal y liquidación en el presupuesto, enlaces de pago en el email, facturas y rectificativas con las mismas cifras, y un panel con ventas, cobros y pagos.',
   name: 'Cobrar',
@@ -260,7 +260,7 @@ const getPaid: JobPage = {
 
 const setup: JobPage = {
   slug: 'setup',
-  metaTitle: 'Tu configuración: marcas, idiomas, datos | Traviosoft',
+  metaTitle: 'Tu configuración: marcas, idiomas, datos',
   metaDescription:
     'Varias marcas en una cuenta, documentos en el idioma del cliente, varias monedas, ajustes por país, tu equipo, tus datos en la UE y conexiones con tus otras herramientas.',
   name: 'Tu configuración',

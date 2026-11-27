@@ -9,7 +9,7 @@ import type { AiText } from '../types';
 export const ai: AiText = {
   page: {
     slug: 'ai-assistant',
-    metaTitle: 'AI assistant: work in Traviosoft from Claude, ChatGPT or Mistral | Traviosoft',
+    metaTitle: 'AI assistant: work in Traviosoft from Claude, ChatGPT or Mistral',
     metaDescription:
       'Connect the AI assistant you already use to Traviosoft. Ask what needs doing, have a quote prepared from your catalog, record a booking or a payment, and approve each change. Included in both plans.',
     name: 'AI assistant',

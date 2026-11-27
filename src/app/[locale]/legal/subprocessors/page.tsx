@@ -29,7 +29,7 @@ export default async function SubprocessorsPage({ params }: Props) {
         </Link>
 
         <LegalDocument
-          title={t('subprocessors_title').replace(' - Traviosoft', '')}
+          title={t('subprocessors_title')}
           updatedLabel={t('updated_label')}
           updatedDate={t('updated_date')}
           intro={t('subprocessors.intro')}

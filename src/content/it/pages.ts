@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 const FREE = 'Gratuito con fatturazione annuale*';
 
 export const pricing: SiteContent['pricing'] = {
-  metaTitle: `Prezzi: Classic da ${PRICES.classic.yearly} EUR al mese, Premium da ${PRICES.premium.yearly} EUR | Traviosoft`,
+  metaTitle: `Prezzi: Classic da ${PRICES.classic.yearly} EUR al mese, Premium da ${PRICES.premium.yearly} EUR`,
   metaDescription:
     `Due piani per agenzie di viaggio su misura e DMC. Classic gestisce tutta l’agenzia da ${PRICES.classic.yearly} EUR al mese; Premium aggiunge gruppi, più team, valute, ordini di acquisto ai fornitori e più marchi. ${PRICES.usersIncluded} utenti inclusi, avvio gratuito con fatturazione annuale.`,
   title: 'Prezzi',
@@ -131,7 +131,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Demo del software per agenzie di viaggio | Traviosoft',
+  metaTitle: 'Demo del software per agenzie di viaggio',
   metaDescription:
     'Una chiamata di 30 minuti: un viaggio di esempio in Traviosoft dalla richiesta alla fattura, poi prezzi e domande.',
   title: 'Prenota una demo',
@@ -177,7 +177,7 @@ export const demo: SiteContent['demo'] = {
 };
 
 export const switching: SiteContent['switching'] = {
-  metaTitle: 'Passare da Excel a Traviosoft | Traviosoft',
+  metaTitle: 'Passare da Excel a Traviosoft',
   metaDescription:
     'Come passare da Excel, Word e WhatsApp in piena stagione: cosa importiamo, cosa controlli tu e come continuare a gestire i viaggi in corso mentre ne avvii di nuovi.',
   title: 'Passare a Traviosoft',
@@ -237,7 +237,7 @@ export const switching: SiteContent['switching'] = {
 };
 
 export const faqPage: SiteContent['faqPage'] = {
-  metaTitle: 'Domande frequenti | Traviosoft',
+  metaTitle: 'Domande frequenti',
   metaDescription:
     'Cosa fa Traviosoft, quanto costa, dove sono ospitati i tuoi dati e come funziona il passaggio da Excel.',
   title: 'Domande frequenti',
@@ -331,7 +331,7 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'Chi siamo | Traviosoft',
+  metaTitle: 'Chi siamo',
   metaDescription:
     'Traviosoft è un software gestionale per agenzie di viaggio su misura e DMC: ogni viaggio in un unico posto, dalla prima richiesta alla fattura finale, con i tuoi dati ospitati nell’UE.',
   title: 'Chi siamo',
@@ -345,7 +345,7 @@ export const about: SiteContent['about'] = {
 };
 
 export const resources: SiteContent['resources'] = {
-  metaTitle: 'Risorse per agenzie di viaggio su misura | Traviosoft',
+  metaTitle: 'Risorse per agenzie di viaggio su misura',
   metaDescription:
     'Confronti, guide e un glossario per agenzie su misura e DMC che scelgono un gestionale. Linguaggio semplice, senza registrazione.',
   title: 'Risorse',

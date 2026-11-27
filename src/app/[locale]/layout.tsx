@@ -122,7 +122,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     email: 'hola@traviosoft.com',
     sameAs: PROFILES
   };
-  const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: baseUrl, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
+  const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: `${baseUrl}/`, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
 
   // The four product pages sit under Product; the AI assistant has its own item beside it.
   const jobs = JOB_ORDER.filter(s => s !== 'ai-assistant').map(s => ({

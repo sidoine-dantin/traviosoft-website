@@ -29,7 +29,7 @@ export default async function PrivacyPage({ params }: Props) {
         </Link>
 
         <LegalDocument
-          title={t('privacy_title').replace(' - Traviosoft', '')}
+          title={t('privacy_title')}
           updatedLabel={t('updated_label')}
           updatedDate={t('updated_date')}
           intro={t('privacy.intro')}

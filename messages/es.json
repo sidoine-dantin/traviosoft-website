@@ -85,7 +85,7 @@
     }
   },
   "product": {
-    "meta_title": "Funcionalidades - Traviosoft",
+    "meta_title": "Funcionalidades",
     "meta_description": "Descubre lo que cambia cuando presupuestos, pedidos, pagos, proveedores y facturación viven en una sola herramienta pensada para agencias de viajes a medida y DMC. Reserva una demo de 30 minutos.",
     "intro": {
       "headline": "Menos tiempo en administración. Más tiempo vendiendo viajes.",
@@ -198,7 +198,7 @@
     }
   },
   "how_it_works": {
-    "meta_title": "Cómo funciona - Traviosoft",
+    "meta_title": "Cómo funciona",
     "meta_description": "Desde la solicitud del cliente hasta la factura, descubre el recorrido completo de un expediente en Traviosoft, paso a paso.",
     "intro": {
       "headline": "Del primer mensaje del cliente a la factura final",
@@ -257,7 +257,7 @@
     }
   },
   "pricing": {
-    "meta_title": "Precios - Traviosoft",
+    "meta_title": "Precios",
     "meta_description": "Un modelo de precios claro, con todas las funciones en todos los planes, para agencias de viajes a medida y DMC. Reserva una demo para recibir tu tarifa.",
     "intro": {
       "headline": "Un solo producto, adaptado a tu agencia. Un precio para el tamaño de tu equipo.",
@@ -288,7 +288,7 @@
     }
   },
   "about": {
-    "meta_title": "Quiénes somos - Traviosoft",
+    "meta_title": "Quiénes somos",
     "meta_description": "Traviosoft nace de la necesidad real de una agencia de viajes a medida. Descubre la filosofía detrás del producto.",
     "intro": {
       "headline": "Hecho para agencias de viajes a medida y DMC",
@@ -313,7 +313,7 @@
     }
   },
   "demo": {
-    "meta_title": "Reservar una demo - Traviosoft",
+    "meta_title": "Reservar una demo",
     "meta_description": "Reserva una demo de 30 minutos para descubrir cómo Traviosoft se adapta a tu agencia de viajes. Sin compromiso, sin discurso comercial.",
     "hero": {
       "headline": "Reserva tu demo de 30 minutos",
@@ -356,7 +356,7 @@
     }
   },
   "faq": {
-    "meta_title": "Preguntas frecuentes - Traviosoft",
+    "meta_title": "Preguntas frecuentes",
     "meta_description": "Respuestas a las preguntas frecuentes sobre Traviosoft: seguridad de los datos, puesta en marcha, importación de datos, idiomas disponibles y más.",
     "intro": {
       "headline": "Preguntas frecuentes",
@@ -398,9 +398,9 @@
     }
   },
   "legal": {
-    "privacy_title": "Política de privacidad - Traviosoft",
-    "terms_title": "Condiciones generales - Traviosoft",
-    "notice_title": "Aviso legal - Traviosoft",
+    "privacy_title": "Política de privacidad",
+    "terms_title": "Condiciones generales",
+    "notice_title": "Aviso legal",
     "back_home": "Volver al inicio",
     "updated_label": "Última actualización",
     "updated_date": "Noviembre de 2026",
@@ -565,8 +565,8 @@
         }
       ]
     },
-    "app_privacy_title": "Privacidad de la aplicación - Traviosoft",
-    "subprocessors_title": "Subencargados - Traviosoft",
+    "app_privacy_title": "Privacidad de la aplicación",
+    "subprocessors_title": "Subencargados",
     "app_privacy": {
       "intro": "Esta política explica cómo tratamos los datos personales de las personas que usan la aplicación Traviosoft: el personal de las agencias suscritas. Los datos que una agencia registra sobre sus propios clientes, viajeros y proveedores pertenecen a esa agencia, que decide cómo se usan. Los tratamos solo por cuenta de la agencia, según nuestro acuerdo de encargo de tratamiento: para esos datos, dirígete directamente a la agencia.",
       "sections": [

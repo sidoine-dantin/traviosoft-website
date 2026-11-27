@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 const FREE = 'Gratuito com faturação anual*';
 
 export const pricing: SiteContent['pricing'] = {
-  metaTitle: `Preços: Classic desde ${PRICES.classic.yearly} EUR por mês, Premium desde ${PRICES.premium.yearly} EUR | Traviosoft`,
+  metaTitle: `Preços: Classic desde ${PRICES.classic.yearly} EUR por mês, Premium desde ${PRICES.premium.yearly} EUR`,
   metaDescription:
     `Dois planos para agências de viagens à medida e DMC. O Classic gere toda a agência desde ${PRICES.classic.yearly} EUR por mês; o Premium acrescenta grupos, várias equipas, moedas, notas de encomenda a fornecedores e várias marcas. ${PRICES.usersIncluded} utilizadores incluídos, implementação gratuita com faturação anual.`,
   title: 'Preços',
@@ -131,7 +131,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Demonstração de software para agências de viagens | Traviosoft',
+  metaTitle: 'Demonstração de software para agências de viagens',
   metaDescription:
     'Uma chamada de 30 minutos: uma viagem de exemplo no Traviosoft, do pedido à fatura, e depois preços e perguntas.',
   title: 'Marcar uma demonstração',
@@ -177,7 +177,7 @@ export const demo: SiteContent['demo'] = {
 };
 
 export const switching: SiteContent['switching'] = {
-  metaTitle: 'Passar do Excel para o Traviosoft | Traviosoft',
+  metaTitle: 'Passar do Excel para o Traviosoft',
   metaDescription:
     'Como deixar o Excel, o Word e o WhatsApp em plena época: o que importamos, o que verifica e como continuar com as viagens em curso enquanto começa as novas.',
   title: 'Mudar para o Traviosoft',
@@ -237,7 +237,7 @@ export const switching: SiteContent['switching'] = {
 };
 
 export const faqPage: SiteContent['faqPage'] = {
-  metaTitle: 'Perguntas frequentes | Traviosoft',
+  metaTitle: 'Perguntas frequentes',
   metaDescription:
     'O que faz o Traviosoft, quanto custa, onde estão alojados os seus dados e como funciona a passagem do Excel.',
   title: 'Perguntas frequentes',
@@ -331,7 +331,7 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'Sobre nós | Traviosoft',
+  metaTitle: 'Sobre nós',
   metaDescription:
     'O Traviosoft é um software de gestão para agências de viagens à medida e DMC: cada viagem num só lugar, do primeiro pedido à fatura final, com os seus dados alojados na UE.',
   title: 'Sobre nós',
@@ -345,7 +345,7 @@ export const about: SiteContent['about'] = {
 };
 
 export const resources: SiteContent['resources'] = {
-  metaTitle: 'Recursos para agências de viagens à medida | Traviosoft',
+  metaTitle: 'Recursos para agências de viagens à medida',
   metaDescription:
     'Comparações, guias e um glossário para agências à medida e DMC que estão a escolher software. Linguagem simples, sem registo.',
   title: 'Recursos',

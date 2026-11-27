@@ -2,7 +2,7 @@ import type { SiteContent } from '../types';
 import { PRICES } from '../prices';
 
 export const home: SiteContent['home'] = {
-  metaTitle: 'Traviosoft: software para agencias a medida y DMC',
+  metaTitle: 'Software para agencias de viajes a medida y DMC',
   metaDescription:
     `Solicitudes, presupuestos con tu margen, reservas, itinerarios, cobros y facturas en un solo sitio. Para agencias de viajes a medida y DMC. Desde ${PRICES.classic.yearly} EUR al mes, en la UE.`,
   title: 'Software para agencias de viajes a medida y DMC',

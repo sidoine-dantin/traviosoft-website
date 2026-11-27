@@ -3,7 +3,7 @@ import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Vendere: richieste, catalogo e preventivi con i tuoi margini | Traviosoft',
+  metaTitle: 'Vendere: richieste, catalogo e preventivi con i tuoi margini',
   metaDescription:
     'Tutte le richieste dei clienti in una lista, un catalogo con prezzi per stagione e più fornitori per prodotto, preventivi con il tuo margine e l’IVA, inviati nella lingua del cliente e con un promemoria dopo 7 giorni.',
   name: 'Vendere',
@@ -98,7 +98,7 @@ const sell: JobPage = {
 
 const book: JobPage = {
   slug: 'book',
-  metaTitle: 'Prenotare e seguire il viaggio: pratiche, fornitori, itinerario del cliente | Traviosoft',
+  metaTitle: 'Prenotare e seguire il viaggio: pratiche, fornitori, itinerario del cliente',
   metaDescription:
     'Quando un preventivo viene accettato, tutti i servizi del viaggio sono in lista, pronti da prenotare. Le richieste di prenotazione partono ai fornitori per email, ogni servizio mostra il suo stato e il tuo cliente riceve un itinerario giorno per giorno.',
   name: 'Prenotare e seguire',
@@ -191,7 +191,7 @@ const book: JobPage = {
 
 const getPaid: JobPage = {
   slug: 'get-paid',
-  metaTitle: 'Incassare e tenere i conti: pagamenti, fatture, dashboard | Traviosoft',
+  metaTitle: 'Incassare e tenere i conti: pagamenti, fatture, dashboard',
   metaDescription:
     'Acconto e saldo previsti nel preventivo, link di pagamento nell’email, fatture e note di credito dagli stessi numeri, e una dashboard con vendite, viaggi, entrate e uscite.',
   name: 'Incassare',
@@ -260,7 +260,7 @@ const getPaid: JobPage = {
 
 const setup: JobPage = {
   slug: 'setup',
-  metaTitle: 'La tua configurazione: marchi, lingue, team e dati | Traviosoft',
+  metaTitle: 'La tua configurazione: marchi, lingue, team e dati',
   metaDescription:
     'Più marchi in un solo account, documenti nella lingua del cliente, più valute, impostazioni per paese, il tuo team, i tuoi dati ospitati nell’UE e collegamenti con i tuoi altri strumenti.',
   name: 'La tua configurazione',

@@ -3,7 +3,7 @@ import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Vender: pedidos, catálogo e orçamentos com as suas margens | Traviosoft',
+  metaTitle: 'Vender: pedidos, catálogo e orçamentos com as suas margens',
   metaDescription:
     'Todos os pedidos de clientes numa lista, um catálogo com preços por época e vários fornecedores por produto, orçamentos com a sua margem e o IVA, enviados na língua do cliente e com seguimento ao fim de 7 dias.',
   name: 'Vender',
@@ -98,7 +98,7 @@ const sell: JobPage = {
 
 const book: JobPage = {
   slug: 'book',
-  metaTitle: 'Reservar e acompanhar a viagem: reservas, fornecedores, itinerário do cliente | Traviosoft',
+  metaTitle: 'Reservar e acompanhar a viagem: reservas, fornecedores, itinerário do cliente',
   metaDescription:
     'Quando um orçamento é aceite, todos os serviços da viagem ficam numa lista, prontos a reservar. Os pedidos de reserva seguem para os fornecedores por email, cada serviço mostra o seu estado e o seu cliente recebe um itinerário dia a dia.',
   name: 'Reservar e acompanhar',
@@ -191,7 +191,7 @@ const book: JobPage = {
 
 const getPaid: JobPage = {
   slug: 'get-paid',
-  metaTitle: 'Receber e manter as contas: pagamentos, faturas, painel | Traviosoft',
+  metaTitle: 'Receber e manter as contas: pagamentos, faturas, painel',
   metaDescription:
     'Adiantamento e saldo previstos no orçamento, links de pagamento no email, faturas e notas de crédito feitas a partir dos mesmos números, e um painel com vendas, viagens, entradas e saídas.',
   name: 'Receber',
@@ -260,7 +260,7 @@ const getPaid: JobPage = {
 
 const setup: JobPage = {
   slug: 'setup',
-  metaTitle: 'A sua configuração: marcas, línguas, equipa e dados | Traviosoft',
+  metaTitle: 'A sua configuração: marcas, línguas, equipa e dados',
   metaDescription:
     'Várias marcas numa só conta, documentos na língua do cliente, várias moedas, definições por país, a sua equipa, os seus dados alojados na UE e ligações às suas outras ferramentas.',
   name: 'A sua configuração',

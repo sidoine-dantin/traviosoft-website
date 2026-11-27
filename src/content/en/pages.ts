@@ -2,7 +2,7 @@ import type { SiteContent } from '../types';
 import { PRICES } from '../prices';
 
 export const pricing: SiteContent['pricing'] = {
-  metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR | Traviosoft`,
+  metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR`,
   metaDescription:
     `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchase orders to suppliers and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
   title: 'Pricing',
@@ -129,7 +129,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Travel agency software demo | Traviosoft',
+  metaTitle: 'Travel agency software demo',
   metaDescription:
     'A 30-minute call: a sample trip in Traviosoft from request to invoice, then pricing and questions.',
   title: 'Book a demo',
@@ -175,7 +175,7 @@ export const demo: SiteContent['demo'] = {
 };
 
 export const switching: SiteContent['switching'] = {
-  metaTitle: 'Switching from Excel to Traviosoft | Traviosoft',
+  metaTitle: 'Switching from Excel to Traviosoft',
   metaDescription:
     'How to move from Excel, Word and WhatsApp in the middle of a season: what we import, what you check, and how to keep running trips while you start new ones.',
   title: 'Switching to Traviosoft',
@@ -235,7 +235,7 @@ export const switching: SiteContent['switching'] = {
 };
 
 export const faqPage: SiteContent['faqPage'] = {
-  metaTitle: 'Frequently asked questions | Traviosoft',
+  metaTitle: 'Frequently asked questions',
   metaDescription:
     'What Traviosoft does, what it costs, where your data is hosted and how switching from Excel works.',
   title: 'Frequently asked questions',
@@ -343,7 +343,7 @@ export const about: SiteContent['about'] = {
 };
 
 export const resources: SiteContent['resources'] = {
-  metaTitle: 'Resources for tailor-made travel agencies | Traviosoft',
+  metaTitle: 'Resources for tailor-made travel agencies',
   metaDescription:
     'Comparisons, guides and a glossary for tailor-made agencies and DMCs choosing software. Plain language, no sign-up needed.',
   title: 'Resources',

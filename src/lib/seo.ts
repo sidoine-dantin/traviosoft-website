@@ -7,7 +7,7 @@ export const siteName = 'Traviosoft';
 
 /** Date the site's pages last changed, for the sitemap. Bump it when page copy changes,
  *  so search engines can trust the dates (a new date on every build teaches them to ignore it). */
-export const SITE_UPDATED = '2026-11-22';
+export const SITE_UPDATED = '2026-11-27';
 
 /** Stable ids that tie the schema.org blocks of every page together. */
 export const ORG_ID = `${baseUrl}/#organization`;
@@ -16,12 +16,6 @@ export const SOFTWARE_ID = `${baseUrl}/#software`;
 
 /** Traviosoft's own public profiles, for the Organization schema (sameAs). Add each one once it is live. */
 export const PROFILES = ['https://www.linkedin.com/company/traviosoft'];
-
-/** Search results cut titles at about 60 characters; past that, the brand is dropped (Google shows the site name anyway). */
-export function fitTitle(title: string) {
-  const suffix = ' | Traviosoft';
-  return title.length > 60 && title.endsWith(suffix) ? title.slice(0, -suffix.length) : title;
-}
 
 /** Pages that exist in every locale, with the same path. */
 export const pagePaths = [
@@ -64,7 +58,6 @@ export function buildMetadata({ locale, path, title, description, alternates }: 
   for (const [l, p] of Object.entries(paths)) if (p !== undefined) languages[LANG_TAG[l as Locale] ?? l] = localizedUrl(l, p);
   const xDefault = paths[routing.defaultLocale] ?? paths[locale] ?? path;
   const url = localizedUrl(locale, path);
-  title = fitTitle(title);
   const image = { url: `${baseUrl}/og/${locale}.png`, width: 1200, height: 630, alt: siteName };
 
   return {

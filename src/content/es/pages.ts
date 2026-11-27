@@ -2,7 +2,7 @@ import type { SiteContent } from '../types';
 import { PRICES } from '../prices';
 
 export const pricing: SiteContent['pricing'] = {
-  metaTitle: `Precios: Classic desde ${PRICES.classic.yearly} EUR al mes, Premium desde ${PRICES.premium.yearly} EUR | Traviosoft`,
+  metaTitle: `Precios: Classic desde ${PRICES.classic.yearly} EUR al mes, Premium desde ${PRICES.premium.yearly} EUR`,
   metaDescription:
     `Dos planes para agencias de viajes a medida y DMC. Classic gestiona toda la agencia desde ${PRICES.classic.yearly} EUR al mes; Premium añade grupos, varios equipos, divisas, órdenes de compra a proveedores y varias marcas. ${PRICES.usersIncluded} usuarios incluidos, alta gratis con pago anual.`,
   title: 'Precios',
@@ -129,7 +129,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Demo de software para agencias de viajes | Traviosoft',
+  metaTitle: 'Demo de software para agencias de viajes',
   metaDescription:
     'Una llamada de 30 minutos: un viaje de muestra en Traviosoft de la solicitud a la factura, y después precios y preguntas.',
   title: 'Reservar una demo',
@@ -175,7 +175,7 @@ export const demo: SiteContent['demo'] = {
 };
 
 export const switching: SiteContent['switching'] = {
-  metaTitle: 'Pasar de Excel a Traviosoft | Traviosoft',
+  metaTitle: 'Pasar de Excel a Traviosoft',
   metaDescription:
     'Cómo pasar de Excel, Word y WhatsApp en plena temporada: qué importamos, qué revisas tú y cómo seguir con los viajes en curso mientras empiezas los nuevos.',
   title: 'Cambiar a Traviosoft',
@@ -235,7 +235,7 @@ export const switching: SiteContent['switching'] = {
 };
 
 export const faqPage: SiteContent['faqPage'] = {
-  metaTitle: 'Preguntas frecuentes | Traviosoft',
+  metaTitle: 'Preguntas frecuentes',
   metaDescription:
     'Qué hace Traviosoft, cuánto cuesta, dónde se alojan tus datos y cómo es el paso desde Excel.',
   title: 'Preguntas frecuentes',
@@ -343,7 +343,7 @@ export const about: SiteContent['about'] = {
 };
 
 export const resources: SiteContent['resources'] = {
-  metaTitle: 'Recursos para agencias de viajes a medida | Traviosoft',
+  metaTitle: 'Recursos para agencias de viajes a medida',
   metaDescription:
     'Comparativas, guías y un glosario para agencias a medida y DMC que eligen software. En lenguaje claro y sin necesidad de registrarte.',
   title: 'Recursos',

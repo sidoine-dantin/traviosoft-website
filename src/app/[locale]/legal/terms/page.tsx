@@ -29,7 +29,7 @@ export default async function TermsPage({ params }: Props) {
         </Link>
 
         <LegalDocument
-          title={t('terms_title').replace(' - Traviosoft', '')}
+          title={t('terms_title')}
           updatedLabel={t('updated_label')}
           updatedDate={t('updated_date')}
           intro={t('terms.intro')}
