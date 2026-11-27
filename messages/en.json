@@ -416,8 +416,8 @@
         {
           "heading": "What we collect",
           "body": [
-            "When you ask for a demo, you choose a time in our booking window (Cal.com) or write to us by email. We receive what you enter or choose to tell us: usually your name, your email address, the name of your agency and a few facts about it.",
-            "Like most websites, our hosting provider records basic technical data such as your IP address and browser type in its server logs. If you accept advertising cookies, LinkedIn, Meta and Google also record your visit to this site (see \"Advertising and audiences\")."
+            "When you ask for a demo, you choose a time in our booking window (Cal.com) or write to us by email. We receive what you enter in the form or in your email: your name, your email address, the name of your agency and any details you choose to add.",
+            "Our hosting provider, Cloudflare, records your IP address, your browser, the page requested and the time of the request in its server logs. If you accept advertising cookies, LinkedIn, Meta and Google also record your visit to this site (see \"Advertising and audiences\")."
           ]
         },
         {
@@ -430,7 +430,7 @@
         {
           "heading": "Third-party services",
           "body": [
-            "The website is delivered through Cloudflare's hosting and content network. Demo bookings are handled by Cal.com, Inc., which loads only when you open the booking window, receives what you enter there and adds the call to our calendar. Our ads run on LinkedIn (LinkedIn Ireland Unlimited Company), on Facebook and Instagram (Meta Platforms Ireland Limited), and on Google Search, YouTube, Gmail and partner websites (Google Ireland Limited). For the advertising cookies, LinkedIn and Meta act as joint controllers with us for their tags. Google acts as an independent controller. Their own privacy policies apply to what they do with the data. Some of these providers may transfer data to the United States under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
+            "The website is delivered through Cloudflare's hosting and content network. Demo bookings are handled by Cal.com, Inc., which loads only when you open the booking window, receives what you enter there and adds the call to our calendar. Our ads run on LinkedIn (LinkedIn Ireland Unlimited Company), on Facebook and Instagram (Meta Platforms Ireland Limited), and on Google Search, YouTube, Gmail and partner websites (Google Ireland Limited). For the advertising cookies, LinkedIn and Meta act as joint controllers with us for their tags. Google acts as an independent controller. Their own privacy policies apply to what they do with the data. Cloudflare, Cal.com, LinkedIn, Meta and Google may transfer data to the United States under the EU-US Data Privacy Framework or the European Commission's standard contractual clauses."
           ]
         },
         {
@@ -451,8 +451,8 @@
         {
           "heading": "How long we keep it",
           "body": [
-            "We keep the information from your demo request for as long as we are in contact about Traviosoft, and for three years after our last exchange. Technical logs are kept only for the short time needed for security and maintenance.",
-            "Advertising cookies last at most 13 months. Contact details uploaded for advertising audiences are kept for as long as the campaign runs and are removed from our lists when you object."
+            "We keep the information from your demo request for as long as we are in contact about Traviosoft, and for three years after our last exchange. We do not receive the server logs: Cloudflare keeps them under its own policy.",
+            "Advertising cookies last at most 13 months. Contact details uploaded for advertising audiences are removed from our lists as soon as you object, and at the latest three years after our last exchange."
           ]
         },
         {
@@ -481,7 +481,7 @@
         {
           "heading": "Using this website",
           "body": [
-            "By browsing traviosoft.com you accept these terms. The website exists to present Traviosoft and to let you book a demo. You agree not to misuse it, for example by attempting to disrupt it, access it through automated scraping, or interfere with its security.",
+            "By browsing traviosoft.com you accept these terms. The website exists to present Traviosoft and to let you book a demo. You may not attempt to disrupt it, extract its content by automated means (except robots allowed by its robots.txt file), or interfere with its security.",
             "Traviosoft is sold only to businesses: travel agencies, DMCs and other travel professionals."
           ]
         },
@@ -494,7 +494,7 @@
         {
           "heading": "Information on the site",
           "body": [
-            "We keep the content of this website as accurate and current as we can, but it is provided for general information. Features, descriptions and pricing may change as the product evolves. The website is provided on an \"as is\" basis, without warranty that it will always be available or error free."
+            "The content of this website is provided for general information and has no contractual value. Features, descriptions and pricing may change as the product evolves. The website is provided on an \"as is\" basis, without warranty that it will always be available or error free."
           ]
         },
         {
@@ -524,7 +524,7 @@
         {
           "heading": "Changes to these terms",
           "body": [
-            "We may update these terms from time to time. The date at the top shows when they were last changed. By continuing to use the website you accept the version in force."
+            "We may update these terms. The date at the top shows when they were last changed. By continuing to use the website you accept the version in force."
           ]
         }
       ]
@@ -583,13 +583,13 @@
             "Security records: when you sign in and use the application, we record the date and time, your IP address and your browser, to protect your account and look into misuse.",
             "How the application is used: if your agency leaves this on, we record which screens and functions are used. Every text and value on screen is masked, so we see clicks and pages, never your agency's data. When something fails, we also receive a technical error report.",
             "Your messages: what you write to our support and the suggestions you send us.",
-            "The AI assistant: when you use it, your question and the information needed to answer it are sent to the AI provider your agency chose. We keep a record of each action the assistant takes, with sensitive values removed."
+            "The AI assistant: when you use it, your question, the conversation so far and the agency data the assistant reads to answer it are sent to the AI provider your agency chose. We keep a record of each action the assistant takes, with access keys, tokens and card numbers removed."
           ]
         },
         {
           "heading": "Why we use it",
           "body": [
-            "We use your account and send you the emails the application needs (sign-in, notifications) to provide the service your agency subscribed to. This rests on our contract with your agency and on our legitimate interest in providing it.",
+            "We use your account and send you sign-in emails and notifications to provide the service your agency subscribed to. This rests on our contract with your agency and on our legitimate interest in providing it.",
             "We use security records to keep the application safe, which is our legitimate interest and our duty under data protection law.",
             "We use usage records and error reports to fix problems and improve the application, on the basis of our legitimate interest. Your agency can turn usage records off, and you can object by writing to us.",
             "We use your messages to answer you, on the basis of our legitimate interest. We use billing contacts to invoice your agency and keep our accounts, as the law requires."
@@ -611,7 +611,7 @@
           "heading": "How long we keep it",
           "body": [
             "Your account stays as long as it exists in your agency's workspace. At the end of the agency's contract, it is deleted with the workspace once the data recovery period is over.",
-            "Security records, usage records and error reports are kept only as long as those purposes need, and 13 months at most. Records of the AI assistant's actions are kept 90 days. Support messages are kept three years after our last exchange, and invoices ten years, as French accounting law requires."
+            "Security records are kept 13 months, usage records one year and error reports 90 days. Records of the AI assistant's actions are kept 90 days. Support messages are kept three years after our last exchange, and invoices ten years, as French accounting law requires."
           ]
         },
         {
@@ -629,7 +629,7 @@
       ]
     },
     "subprocessors": {
-      "intro": "These are the companies that process personal data for us when an agency uses the Traviosoft application. Each one is bound by contract to protect the data as we do. We tell our customers by email at least 30 days before we add or replace one.",
+      "intro": "These are the companies that process personal data for us when an agency uses the Traviosoft application. We have a data processing agreement with each of them under Article 28 of the GDPR. We tell our customers by email at least 30 days before we add or replace one.",
       "sections": [
         {
           "heading": "Hosting and storage",

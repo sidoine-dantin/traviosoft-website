@@ -416,8 +416,8 @@
         {
           "heading": "Ce que nous collectons",
           "body": [
-            "Lorsque vous demandez une démo, vous choisissez un créneau dans notre fenêtre de réservation (Cal.com) ou vous nous écrivez par e-mail. Nous recevons ce que vous saisissez ou choisissez de nous dire : en général votre nom, votre adresse e-mail, le nom de votre agence et quelques éléments sur elle.",
-            "Comme la plupart des sites, notre hébergeur enregistre des données techniques de base, comme votre adresse IP et votre type de navigateur, dans ses journaux de serveur. Si vous acceptez les cookies publicitaires, LinkedIn, Meta et Google enregistrent aussi votre visite sur ce site (voir « Publicité et audiences »)."
+            "Lorsque vous demandez une démo, vous choisissez un créneau dans notre fenêtre de réservation (Cal.com) ou vous nous écrivez par e-mail. Nous recevons ce que vous saisissez dans le formulaire ou dans votre e-mail : votre nom, votre adresse e-mail, le nom de votre agence et les précisions que vous choisissez d'ajouter.",
+            "Notre hébergeur, Cloudflare, enregistre dans ses journaux de serveur votre adresse IP, votre navigateur, la page demandée et l'heure de la demande. Si vous acceptez les cookies publicitaires, LinkedIn, Meta et Google enregistrent aussi votre visite sur ce site (voir « Publicité et audiences »)."
           ]
         },
         {
@@ -430,7 +430,7 @@
         {
           "heading": "Services tiers",
           "body": [
-            "Le site est diffusé via l'hébergement et le réseau de contenus de Cloudflare. Les réservations de démo passent par Cal.com, Inc., qui ne se charge que lorsque vous ouvrez la fenêtre de réservation, reçoit ce que vous y saisissez et ajoute l'appel à notre agenda. Nos publicités sont diffusées sur LinkedIn (LinkedIn Ireland Unlimited Company), sur Facebook et Instagram (Meta Platforms Ireland Limited), et sur la recherche Google, YouTube, Gmail et les sites partenaires (Google Ireland Limited). Pour les cookies publicitaires, LinkedIn et Meta sont responsables conjoints du traitement avec nous pour leurs balises. Google agit en tant que responsable de traitement indépendant. Leurs propres politiques de confidentialité s'appliquent à l'usage qu'ils font des données. Certains de ces prestataires peuvent transférer des données vers les États-Unis dans le cadre du Data Privacy Framework UE-États-Unis ou des clauses contractuelles types de la Commission européenne."
+            "Le site est diffusé via l'hébergement et le réseau de contenus de Cloudflare. Les réservations de démo passent par Cal.com, Inc., qui ne se charge que lorsque vous ouvrez la fenêtre de réservation, reçoit ce que vous y saisissez et ajoute l'appel à notre agenda. Nos publicités sont diffusées sur LinkedIn (LinkedIn Ireland Unlimited Company), sur Facebook et Instagram (Meta Platforms Ireland Limited), et sur la recherche Google, YouTube, Gmail et les sites partenaires (Google Ireland Limited). Pour les cookies publicitaires, LinkedIn et Meta sont responsables conjoints du traitement avec nous pour leurs balises. Google agit en tant que responsable de traitement indépendant. Leurs propres politiques de confidentialité s'appliquent à l'usage qu'ils font des données. Cloudflare, Cal.com, LinkedIn, Meta et Google peuvent transférer des données vers les États-Unis, dans le cadre du Data Privacy Framework UE-États-Unis ou des clauses contractuelles types de la Commission européenne."
           ]
         },
         {
@@ -451,8 +451,8 @@
         {
           "heading": "Combien de temps nous les conservons",
           "body": [
-            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant trois ans après notre dernier échange. Les journaux techniques ne sont conservés que le temps court nécessaire à la sécurité et à la maintenance.",
-            "Les cookies publicitaires durent au maximum 13 mois. Les coordonnées transmises pour les audiences publicitaires sont conservées pendant la durée de la campagne et retirées de nos listes dès que vous vous y opposez."
+            "Nous conservons les informations de votre demande de démo tant que nous sommes en contact au sujet de Traviosoft, puis pendant trois ans après notre dernier échange. Nous ne recevons pas les journaux de serveur : Cloudflare les conserve selon sa propre politique.",
+            "Les cookies publicitaires durent au maximum 13 mois. Les coordonnées transmises pour les audiences publicitaires sont retirées de nos listes dès que vous vous y opposez, et au plus tard trois ans après notre dernier échange."
           ]
         },
         {
@@ -481,7 +481,7 @@
         {
           "heading": "Utilisation du site",
           "body": [
-            "En naviguant sur traviosoft.com, vous acceptez ces conditions. Le site existe pour présenter Traviosoft et vous permettre de réserver une démo. Vous vous engagez à ne pas en faire un usage abusif, par exemple en tentant de le perturber, d'y accéder par extraction automatisée ou d'interférer avec sa sécurité.",
+            "En naviguant sur traviosoft.com, vous acceptez ces conditions. Le site existe pour présenter Traviosoft et vous permettre de réserver une démo. Il est interdit de tenter de le perturber, d'en extraire le contenu par des moyens automatisés, sauf pour les robots autorisés par son fichier robots.txt, ou de porter atteinte à sa sécurité.",
             "Traviosoft est vendu uniquement aux professionnels : agences de voyage, DMC et autres professionnels du voyage."
           ]
         },
@@ -494,7 +494,7 @@
         {
           "heading": "Informations présentes sur le site",
           "body": [
-            "Nous maintenons le contenu de ce site aussi exact et à jour que possible, mais il est fourni à titre d'information générale. Les fonctionnalités, descriptions et tarifs peuvent évoluer avec le produit. Le site est fourni « en l'état », sans garantie de disponibilité permanente ni d'absence d'erreur."
+            "Le contenu de ce site est fourni à titre d'information générale et n'a pas de valeur contractuelle. Les fonctionnalités, descriptions et tarifs peuvent évoluer avec le produit. Le site est fourni « en l'état », sans garantie de disponibilité permanente ni d'absence d'erreur."
           ]
         },
         {
@@ -524,7 +524,7 @@
         {
           "heading": "Modifications de ces conditions",
           "body": [
-            "Nous pouvons mettre à jour ces conditions de temps à autre. La date en haut de page indique leur dernière modification. En continuant à utiliser le site, vous acceptez la version en vigueur."
+            "Nous pouvons mettre à jour ces conditions. La date en haut de page indique leur dernière modification. En continuant à utiliser le site, vous acceptez la version en vigueur."
           ]
         }
       ]
@@ -583,13 +583,13 @@
             "Les journaux de sécurité : quand vous vous connectez et utilisez l'application, nous enregistrons la date et l'heure, votre adresse IP et votre navigateur, pour protéger votre compte et examiner les usages abusifs.",
             "L'usage de l'application : si votre agence le laisse activé, nous enregistrons les écrans et fonctions utilisés. Tous les textes et valeurs à l'écran sont masqués : nous voyons les clics et les pages, jamais les données de votre agence. En cas d'erreur, nous recevons aussi un rapport technique.",
             "Vos messages : ce que vous écrivez à notre assistance et les suggestions que vous nous envoyez.",
-            "L'assistant IA : quand vous l'utilisez, votre question et les informations nécessaires pour y répondre sont envoyées au fournisseur d'IA choisi par votre agence. Nous gardons une trace de chaque action de l'assistant, sans les valeurs sensibles."
+            "L'assistant IA : quand vous l'utilisez, votre question, l'historique de la conversation et les données de l'agence que l'assistant consulte pour répondre sont envoyés au fournisseur d'IA choisi par votre agence. Nous gardons une trace de chaque action de l'assistant, sans les clés d'accès, jetons et numéros de carte."
           ]
         },
         {
           "heading": "Pourquoi nous les utilisons",
           "body": [
-            "Nous utilisons votre compte et vous envoyons les courriels nécessaires (connexion, notifications) pour fournir le service auquel votre agence est abonnée. Cela repose sur notre contrat avec votre agence et sur notre intérêt légitime à le fournir.",
+            "Nous utilisons votre compte et vous envoyons les courriels de connexion et les notifications pour fournir le service auquel votre agence est abonnée. Cela repose sur notre contrat avec votre agence et sur notre intérêt légitime à le fournir.",
             "Nous utilisons les journaux de sécurité pour protéger l'application : c'est notre intérêt légitime et notre obligation au titre du RGPD.",
             "Nous utilisons les données d'usage et les rapports d'erreur pour corriger les problèmes et améliorer l'application, sur la base de notre intérêt légitime. Votre agence peut désactiver les données d'usage, et vous pouvez vous y opposer en nous écrivant.",
             "Nous utilisons vos messages pour vous répondre, sur la base de notre intérêt légitime, et les contacts de facturation pour facturer votre agence et tenir notre comptabilité, comme la loi l'exige."
@@ -611,7 +611,7 @@
           "heading": "Durée de conservation",
           "body": [
             "Votre compte est conservé tant qu'il existe dans l'espace de votre agence. À la fin du contrat de l'agence, il est supprimé avec l'espace, une fois la période de récupération des données terminée.",
-            "Les journaux de sécurité, les données d'usage et les rapports d'erreur sont conservés le temps nécessaire à ces finalités, et 13 mois au plus. La trace des actions de l'assistant IA est conservée 90 jours. Les messages d'assistance sont conservés trois ans après notre dernier échange, et les factures dix ans, comme le prévoit le droit comptable français."
+            "Les journaux de sécurité sont conservés 13 mois, les données d'usage un an et les rapports d'erreur 90 jours. La trace des actions de l'assistant IA est conservée 90 jours. Les messages d'assistance sont conservés trois ans après notre dernier échange, et les factures dix ans, comme le prévoit le droit comptable français."
           ]
         },
         {
@@ -629,7 +629,7 @@
       ]
     },
     "subprocessors": {
-      "intro": "Voici les entreprises qui traitent des données personnelles pour nous quand une agence utilise l'application Traviosoft. Chacune est tenue par contrat de protéger les données comme nous le faisons. Nous prévenons nos clients par courriel au moins 30 jours avant d'en ajouter ou d'en remplacer une.",
+      "intro": "Voici les entreprises qui traitent des données personnelles pour nous quand une agence utilise l'application Traviosoft. Nous avons conclu avec chacune un accord de traitement des données conforme à l'article 28 du RGPD. Nous prévenons nos clients par courriel au moins 30 jours avant d'en ajouter ou d'en remplacer une.",
       "sections": [
         {
           "heading": "Hébergement et stockage",

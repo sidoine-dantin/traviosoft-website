@@ -416,8 +416,8 @@
         {
           "heading": "Qué recogemos",
           "body": [
-            "Cuando pides una demo, eliges una hora en nuestra ventana de reserva (Cal.com) o nos escribes por correo electrónico. Recibimos lo que introduces o decides contarnos: normalmente tu nombre, tu dirección de correo, el nombre de tu agencia y algunos datos sobre ella.",
-            "Como la mayoría de los sitios, nuestro proveedor de alojamiento registra datos técnicos básicos, como tu dirección IP y tu tipo de navegador, en sus registros de servidor. Si aceptas las cookies publicitarias, LinkedIn, Meta y Google también registran tu visita a este sitio (ver \"Publicidad y audiencias\")."
+            "Cuando pides una demo, eliges una hora en nuestra ventana de reserva (Cal.com) o nos escribes por correo electrónico. Recibimos lo que introduces en el formulario o en tu correo: tu nombre, tu dirección de correo, el nombre de tu agencia y los detalles que decidas añadir.",
+            "Nuestro proveedor de alojamiento, Cloudflare, registra en sus registros de servidor tu dirección IP, tu navegador, la página solicitada y la hora de la solicitud. Si aceptas las cookies publicitarias, LinkedIn, Meta y Google también registran tu visita a este sitio (ver \"Publicidad y audiencias\")."
           ]
         },
         {
@@ -430,7 +430,7 @@
         {
           "heading": "Servicios de terceros",
           "body": [
-            "El sitio se sirve a través del alojamiento y la red de contenidos de Cloudflare. Las reservas de demo se gestionan con Cal.com, Inc., que solo se carga cuando abres la ventana de reserva, recibe lo que introduces en ella y añade la llamada a nuestro calendario. Nuestros anuncios se publican en LinkedIn (LinkedIn Ireland Unlimited Company), en Facebook e Instagram (Meta Platforms Ireland Limited), y en la búsqueda de Google, YouTube, Gmail y webs asociadas (Google Ireland Limited). Para las cookies publicitarias, LinkedIn y Meta son corresponsables del tratamiento junto con nosotros para sus etiquetas. Google actúa como responsable del tratamiento independiente. Lo que hacen con los datos se rige por sus propias políticas de privacidad. Algunos de estos proveedores pueden transferir datos a Estados Unidos en el marco del Data Privacy Framework UE-EE. UU. o de las cláusulas contractuales tipo de la Comisión Europea."
+            "El sitio se sirve a través del alojamiento y la red de contenidos de Cloudflare. Las reservas de demo se gestionan con Cal.com, Inc., que solo se carga cuando abres la ventana de reserva, recibe lo que introduces en ella y añade la llamada a nuestro calendario. Nuestros anuncios se publican en LinkedIn (LinkedIn Ireland Unlimited Company), en Facebook e Instagram (Meta Platforms Ireland Limited), y en la búsqueda de Google, YouTube, Gmail y webs asociadas (Google Ireland Limited). Para las cookies publicitarias, LinkedIn y Meta son corresponsables del tratamiento junto con nosotros para sus etiquetas. Google actúa como responsable del tratamiento independiente. Lo que hacen con los datos se rige por sus propias políticas de privacidad. Cloudflare, Cal.com, LinkedIn, Meta y Google pueden transferir datos a Estados Unidos en el marco del Data Privacy Framework UE-EE. UU. o de las cláusulas contractuales tipo de la Comisión Europea."
           ]
         },
         {
@@ -451,8 +451,8 @@
         {
           "heading": "Cuánto tiempo los conservamos",
           "body": [
-            "Conservamos la información de tu solicitud de demo mientras estemos en contacto sobre Traviosoft y durante tres años después de nuestro último intercambio. Los registros técnicos solo se guardan el tiempo breve necesario para la seguridad y el mantenimiento.",
-            "Las cookies publicitarias duran como máximo 13 meses. Los datos de contacto subidos para audiencias publicitarias se conservan mientras dura la campaña y se eliminan de nuestras listas cuando te opones."
+            "Conservamos la información de tu solicitud de demo mientras estemos en contacto sobre Traviosoft y durante tres años después de nuestro último intercambio. No recibimos los registros de servidor: Cloudflare los conserva según su propia política.",
+            "Las cookies publicitarias duran como máximo 13 meses. Los datos de contacto subidos para audiencias publicitarias se eliminan de nuestras listas en cuanto te opones, y a más tardar tres años después de nuestro último intercambio."
           ]
         },
         {
@@ -481,7 +481,7 @@
         {
           "heading": "Uso de este sitio",
           "body": [
-            "Al navegar por traviosoft.com aceptas estas condiciones. El sitio existe para presentar Traviosoft y permitirte reservar una demo. Te comprometes a no hacer un uso indebido del mismo, por ejemplo intentando interrumpirlo, acceder mediante extracción automatizada o interferir con su seguridad.",
+            "Al navegar por traviosoft.com aceptas estas condiciones. El sitio existe para presentar Traviosoft y permitirte reservar una demo. Está prohibido intentar interrumpirlo, extraer su contenido por medios automatizados (salvo los robots que autoriza su archivo robots.txt) o atentar contra su seguridad.",
             "Traviosoft se vende solo a empresas: agencias de viajes, DMC y otros profesionales del viaje."
           ]
         },
@@ -494,7 +494,7 @@
         {
           "heading": "Información del sitio",
           "body": [
-            "Mantenemos el contenido de este sitio tan exacto y actualizado como podemos, pero se ofrece a título informativo general. Las funciones, descripciones y precios pueden cambiar a medida que el producto evoluciona. El sitio se ofrece «tal cual», sin garantía de estar siempre disponible ni libre de errores."
+            "El contenido de este sitio se ofrece a título informativo general y no tiene valor contractual. Las funciones, descripciones y precios pueden cambiar a medida que el producto evoluciona. El sitio se ofrece «tal cual», sin garantía de estar siempre disponible ni libre de errores."
           ]
         },
         {
@@ -524,7 +524,7 @@
         {
           "heading": "Cambios en estas condiciones",
           "body": [
-            "Podemos actualizar estas condiciones de vez en cuando. La fecha de la parte superior indica su última modificación. Al seguir usando el sitio, aceptas la versión en vigor."
+            "Podemos actualizar estas condiciones. La fecha de la parte superior indica su última modificación. Al seguir usando el sitio, aceptas la versión en vigor."
           ]
         }
       ]
@@ -583,13 +583,13 @@
             "Registros de seguridad: cuando inicias sesión y usas la aplicación, registramos la fecha y la hora, tu dirección IP y tu navegador, para proteger tu cuenta y revisar usos indebidos.",
             "Uso de la aplicación: si tu agencia lo deja activado, registramos qué pantallas y funciones se usan. Todos los textos y valores de la pantalla se ocultan: vemos clics y páginas, nunca los datos de tu agencia. Cuando algo falla, también recibimos un informe técnico de error.",
             "Tus mensajes: lo que escribes a nuestro soporte y las sugerencias que nos envías.",
-            "El asistente de IA: cuando lo usas, tu pregunta y la información necesaria para responderla se envían al proveedor de IA que eligió tu agencia. Guardamos un registro de cada acción del asistente, sin los valores sensibles."
+            "El asistente de IA: cuando lo usas, tu pregunta, el historial de la conversación y los datos de la agencia que el asistente consulta para responder se envían al proveedor de IA que eligió tu agencia. Guardamos un registro de cada acción del asistente, sin las claves de acceso, los tokens ni los números de tarjeta."
           ]
         },
         {
           "heading": "Para qué los usamos",
           "body": [
-            "Usamos tu cuenta y te enviamos los correos necesarios (inicio de sesión, avisos) para prestar el servicio que tu agencia contrató. Esto se basa en nuestro contrato con tu agencia y en nuestro interés legítimo en prestarlo.",
+            "Usamos tu cuenta y te enviamos los correos de inicio de sesión y los avisos para prestar el servicio que tu agencia contrató. Esto se basa en nuestro contrato con tu agencia y en nuestro interés legítimo en prestarlo.",
             "Usamos los registros de seguridad para proteger la aplicación: es nuestro interés legítimo y nuestra obligación según el RGPD.",
             "Usamos los datos de uso y los informes de error para corregir problemas y mejorar la aplicación, sobre la base de nuestro interés legítimo. Tu agencia puede desactivar los datos de uso, y puedes oponerte escribiéndonos.",
             "Usamos tus mensajes para responderte, sobre la base de nuestro interés legítimo, y los contactos de facturación para facturar a tu agencia y llevar nuestra contabilidad, como exige la ley."
@@ -611,7 +611,7 @@
           "heading": "Cuánto tiempo los guardamos",
           "body": [
             "Tu cuenta se guarda mientras exista en el espacio de tu agencia. Al terminar el contrato de la agencia, se elimina con el espacio, una vez acabado el periodo de recuperación de datos.",
-            "Los registros de seguridad, los datos de uso y los informes de error se guardan el tiempo que necesitan esas finalidades, y 13 meses como máximo. El registro de las acciones del asistente de IA se guarda 90 días. Los mensajes de soporte se guardan tres años después de nuestro último intercambio, y las facturas diez años, como exige la ley contable francesa."
+            "Los registros de seguridad se guardan 13 meses, los datos de uso un año y los informes de error 90 días. El registro de las acciones del asistente de IA se guarda 90 días. Los mensajes de soporte se guardan tres años después de nuestro último intercambio, y las facturas diez años, como exige la ley contable francesa."
           ]
         },
         {
@@ -629,7 +629,7 @@
       ]
     },
     "subprocessors": {
-      "intro": "Estas son las empresas que tratan datos personales por nuestra cuenta cuando una agencia usa la aplicación Traviosoft. Cada una está obligada por contrato a proteger los datos como lo hacemos nosotros. Avisamos a nuestros clientes por correo al menos 30 días antes de añadir o sustituir una.",
+      "intro": "Estas son las empresas que tratan datos personales por nuestra cuenta cuando una agencia usa la aplicación Traviosoft. Tenemos con cada una un acuerdo de tratamiento de datos conforme al artículo 28 del RGPD. Avisamos a nuestros clientes por correo al menos 30 días antes de añadir o sustituir una.",
       "sections": [
         {
           "heading": "Alojamiento y almacenamiento",
