@@ -54,6 +54,8 @@ export default function Footer({ c }: { c: SiteContent }) {
               <li><Link href="/legal/privacy">{f.privacy}</Link></li>
               <li><Link href="/legal/terms">{f.terms}</Link></li>
               <li><Link href="/legal/notice">{f.notice}</Link></li>
+              <li><Link href="/legal/app-privacy">{f.appPrivacy}</Link></li>
+              <li><Link href="/legal/subprocessors">{f.subprocessors}</Link></li>
               <CookieSettingsLink label={f.consent.settings} />
             </ul>
           </div>

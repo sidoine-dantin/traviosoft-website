@@ -39,7 +39,9 @@ export const pagePaths = [
   '/glossary',
   '/legal/privacy',
   '/legal/terms',
-  '/legal/notice'
+  '/legal/notice',
+  '/legal/app-privacy',
+  '/legal/subprocessors'
 ] as const;
 
 export function localizedUrl(locale: string, path: string) {

@@ -405,7 +405,7 @@
     "updated_label": "Last updated",
     "updated_date": "November 2026",
     "privacy": {
-      "intro": "This policy explains how we handle information collected through the traviosoft.com website. It covers the public website only. The use of the Traviosoft application by our customers is governed by a separate agreement.",
+      "intro": "This policy explains how we handle information collected through the traviosoft.com website. It covers the public website only. How we handle the data of the people who use the Traviosoft application is described in the [app privacy notice](/legal/app-privacy).",
       "sections": [
         {
           "heading": "Who we are",
@@ -561,6 +561,113 @@
           "body": [
             "For any question about the site, write to privacy@traviosoft.com.",
             "This address is also our single point of contact for authorities and users under the EU Digital Services Act. You can write to us in English or French."
+          ]
+        }
+      ]
+    },
+    "app_privacy_title": "App Privacy Notice - Traviosoft",
+    "subprocessors_title": "Sub-processors - Traviosoft",
+    "app_privacy": {
+      "intro": "This notice explains how we handle the personal data of the people who use the Traviosoft application: the staff of the agencies that subscribe to it. The data an agency records about its own clients, travellers and suppliers belongs to that agency, which decides how it is used. We process that data only on the agency's behalf, under our data processing agreement, so please contact the agency directly about it.",
+      "sections": [
+        {
+          "heading": "Who we are",
+          "body": [
+            "Traviosoft is published by Sidoine Dantin EI, SIRET 941 883 779 00014, 137 rue à Vaches, 62610 Balinghem, France, which is the controller of the data described in this notice. For any question or request, write to privacy@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "What we collect",
+          "body": [
+            "Your account: your name, your professional email address, your role, the agency you belong to and your settings. Your password is stored only in encrypted form.",
+            "Security records: when you sign in and use the application, we record the date and time, your IP address and your browser, to protect your account and look into misuse.",
+            "How the application is used: if your agency leaves this on, we record which screens and functions are used. Every text and value on screen is masked, so we see clicks and pages, never your agency's data. When something fails, we also receive a technical error report.",
+            "Your messages: what you write to our support and the suggestions you send us.",
+            "The AI assistant: when you use it, your question and the information needed to answer it are sent to the AI provider your agency chose. We keep a record of each action the assistant takes, with sensitive values removed."
+          ]
+        },
+        {
+          "heading": "Why we use it",
+          "body": [
+            "We use your account and send you the emails the application needs (sign-in, notifications) to provide the service your agency subscribed to. This rests on our contract with your agency and on our legitimate interest in providing it.",
+            "We use security records to keep the application safe, which is our legitimate interest and our duty under data protection law.",
+            "We use usage records and error reports to fix problems and improve the application, on the basis of our legitimate interest. Your agency can turn usage records off, and you can object by writing to us.",
+            "We use your messages to answer you, on the basis of our legitimate interest. We use billing contacts to invoice your agency and keep our accounts, as the law requires."
+          ]
+        },
+        {
+          "heading": "Who receives it",
+          "body": [
+            "Your agency's administrators see your account and your activity in their workspace. Our service providers process data for us, and each one is listed with its country on our [sub-processors page](/legal/subprocessors). We never sell your data and never use it for advertising."
+          ]
+        },
+        {
+          "heading": "Transfers outside the EU",
+          "body": [
+            "Some of our providers are based in the United States. Those transfers rely on the European Commission's standard contractual clauses and, where the provider is certified, on the EU-US Data Privacy Framework."
+          ]
+        },
+        {
+          "heading": "How long we keep it",
+          "body": [
+            "Your account stays as long as it exists in your agency's workspace. At the end of the agency's contract, it is deleted with the workspace once the data recovery period is over.",
+            "Security records, usage records and error reports are kept only as long as those purposes need, and 13 months at most. Records of the AI assistant's actions are kept 90 days. Support messages are kept three years after our last exchange, and invoices ten years, as French accounting law requires."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "You can ask to see the data we hold about you, to correct it, to have it deleted, to restrict its use or to receive it in a portable format, and you can object to its use. To make a request, email privacy@traviosoft.com: we answer within one month. You can also lodge a complaint with a data protection authority, in particular in the country where you live or work. As the business is based in France, its authority is the CNIL."
+          ]
+        },
+        {
+          "heading": "Changes to this notice",
+          "body": [
+            "We update this notice when the application changes how it uses data. The date at the top shows the latest version."
+          ]
+        }
+      ]
+    },
+    "subprocessors": {
+      "intro": "These are the companies that process personal data for us when an agency uses the Traviosoft application. Each one is bound by contract to protect the data as we do. We tell our customers by email at least 30 days before we add or replace one.",
+      "sections": [
+        {
+          "heading": "Hosting and storage",
+          "body": [
+            "Hostinger International Ltd (Cyprus): the servers that run the application and its database, in a data centre in France.",
+            "Cloudflare, Inc. (United States): storage of documents and files, network delivery and protection against attacks. Safeguards: standard contractual clauses and the EU-US Data Privacy Framework."
+          ]
+        },
+        {
+          "heading": "Email",
+          "body": [
+            "Resend (Plus Five Five, Inc., United States): sending the application's emails, such as sign-in links, notifications and documents sent to clients. Data is stored in the United States. Safeguards: standard contractual clauses and the EU-US Data Privacy Framework."
+          ]
+        },
+        {
+          "heading": "AI assistant",
+          "body": [
+            "Anthropic, PBC (United States) and OpenAI (United States): the answers of the AI assistant, from the provider the agency chooses. Neither uses the data to train its models. Safeguards: standard contractual clauses."
+          ]
+        },
+        {
+          "heading": "Translation and addresses",
+          "body": [
+            "DeepL SE (Germany): translation of texts when a user asks for it.",
+            "komoot GmbH (Germany): address suggestions while a user types an address. It receives only the text typed."
+          ]
+        },
+        {
+          "heading": "Errors and usage",
+          "body": [
+            "Functional Software, Inc., trading as Sentry (United States), with data stored in Germany: technical error reports.",
+            "PostHog, Inc. (United States), with data stored in the EU: records of how the application is used, with every text on screen masked. Each agency can turn this off. Safeguards for both: standard contractual clauses."
+          ]
+        },
+        {
+          "heading": "Services an agency connects itself",
+          "body": [
+            "An agency can connect its own accounts, such as Google or Microsoft mailboxes, Xero, QuickBooks, MYOB, Fatture in Cloud, InvoiceXpress, Stripe, Redsys or Hotelbeds. These services work under the agency's own contract with them, and we send them only what the agency asks us to send."
           ]
         }
       ]

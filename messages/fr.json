@@ -405,7 +405,7 @@
     "updated_label": "Dernière mise à jour",
     "updated_date": "Novembre 2026",
     "privacy": {
-      "intro": "Cette politique explique comment nous traitons les informations collectées via le site traviosoft.com. Elle concerne uniquement le site web public. L'utilisation de l'application Traviosoft par nos clients est régie par un contrat distinct.",
+      "intro": "Cette politique explique comment nous traitons les informations collectées via le site traviosoft.com. Elle concerne uniquement le site web public. Le traitement des données des personnes qui utilisent l'application Traviosoft est décrit dans la [politique de confidentialité de l'application](/legal/app-privacy).",
       "sections": [
         {
           "heading": "Qui nous sommes",
@@ -561,6 +561,113 @@
           "body": [
             "Pour toute question sur le site, écrivez à privacy@traviosoft.com.",
             "Cette adresse est aussi notre point de contact unique pour les autorités et les utilisateurs au titre du règlement européen sur les services numériques. Vous pouvez nous écrire en français ou en anglais."
+          ]
+        }
+      ]
+    },
+    "app_privacy_title": "Confidentialité de l'application - Traviosoft",
+    "subprocessors_title": "Sous-traitants - Traviosoft",
+    "app_privacy": {
+      "intro": "Cette politique explique comment nous traitons les données personnelles des personnes qui utilisent l'application Traviosoft : le personnel des agences abonnées. Les données qu'une agence enregistre sur ses propres clients, voyageurs et fournisseurs appartiennent à cette agence, qui décide de leur usage. Nous les traitons uniquement pour son compte, selon notre accord de traitement des données : pour ces données, adressez-vous directement à l'agence.",
+      "sections": [
+        {
+          "heading": "Qui sommes-nous",
+          "body": [
+            "Traviosoft est édité par Sidoine Dantin EI, SIRET 941 883 779 00014, 137 rue à Vaches, 62610 Balinghem, France, responsable du traitement des données décrites ici. Pour toute question ou demande, écrivez à privacy@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "Ce que nous collectons",
+          "body": [
+            "Votre compte : votre nom, votre adresse électronique professionnelle, votre rôle, l'agence à laquelle vous appartenez et vos réglages. Votre mot de passe est conservé uniquement sous forme chiffrée.",
+            "Les journaux de sécurité : quand vous vous connectez et utilisez l'application, nous enregistrons la date et l'heure, votre adresse IP et votre navigateur, pour protéger votre compte et examiner les usages abusifs.",
+            "L'usage de l'application : si votre agence le laisse activé, nous enregistrons les écrans et fonctions utilisés. Tous les textes et valeurs à l'écran sont masqués : nous voyons les clics et les pages, jamais les données de votre agence. En cas d'erreur, nous recevons aussi un rapport technique.",
+            "Vos messages : ce que vous écrivez à notre assistance et les suggestions que vous nous envoyez.",
+            "L'assistant IA : quand vous l'utilisez, votre question et les informations nécessaires pour y répondre sont envoyées au fournisseur d'IA choisi par votre agence. Nous gardons une trace de chaque action de l'assistant, sans les valeurs sensibles."
+          ]
+        },
+        {
+          "heading": "Pourquoi nous les utilisons",
+          "body": [
+            "Nous utilisons votre compte et vous envoyons les courriels nécessaires (connexion, notifications) pour fournir le service auquel votre agence est abonnée. Cela repose sur notre contrat avec votre agence et sur notre intérêt légitime à le fournir.",
+            "Nous utilisons les journaux de sécurité pour protéger l'application : c'est notre intérêt légitime et notre obligation au titre du RGPD.",
+            "Nous utilisons les données d'usage et les rapports d'erreur pour corriger les problèmes et améliorer l'application, sur la base de notre intérêt légitime. Votre agence peut désactiver les données d'usage, et vous pouvez vous y opposer en nous écrivant.",
+            "Nous utilisons vos messages pour vous répondre, sur la base de notre intérêt légitime, et les contacts de facturation pour facturer votre agence et tenir notre comptabilité, comme la loi l'exige."
+          ]
+        },
+        {
+          "heading": "Qui les reçoit",
+          "body": [
+            "Les administrateurs de votre agence voient votre compte et votre activité dans leur espace. Nos prestataires traitent des données pour nous : chacun figure avec son pays sur notre [liste des sous-traitants](/legal/subprocessors). Nous ne vendons jamais vos données et ne les utilisons jamais pour de la publicité."
+          ]
+        },
+        {
+          "heading": "Transferts hors de l'Union européenne",
+          "body": [
+            "Certains de nos prestataires sont établis aux États-Unis. Ces transferts reposent sur les clauses contractuelles types de la Commission européenne et, quand le prestataire est certifié, sur le cadre de protection des données UE-États-Unis."
+          ]
+        },
+        {
+          "heading": "Durée de conservation",
+          "body": [
+            "Votre compte est conservé tant qu'il existe dans l'espace de votre agence. À la fin du contrat de l'agence, il est supprimé avec l'espace, une fois la période de récupération des données terminée.",
+            "Les journaux de sécurité, les données d'usage et les rapports d'erreur sont conservés le temps nécessaire à ces finalités, et 13 mois au plus. La trace des actions de l'assistant IA est conservée 90 jours. Les messages d'assistance sont conservés trois ans après notre dernier échange, et les factures dix ans, comme le prévoit le droit comptable français."
+          ]
+        },
+        {
+          "heading": "Vos droits",
+          "body": [
+            "Vous pouvez demander à consulter les données que nous détenons sur vous, à les corriger, à les supprimer, à en limiter l'utilisation ou à les recevoir dans un format portable, et vous pouvez vous opposer à leur utilisation. Pour faire une demande, écrivez à privacy@traviosoft.com : nous répondons sous un mois. Vous pouvez aussi introduire une réclamation auprès d'une autorité de protection des données, en particulier dans le pays où vous vivez ou travaillez. L'entreprise étant établie en France, son autorité est la CNIL."
+          ]
+        },
+        {
+          "heading": "Modifications",
+          "body": [
+            "Nous mettons cette politique à jour quand l'application change sa façon d'utiliser les données. La date en haut de page indique la dernière version."
+          ]
+        }
+      ]
+    },
+    "subprocessors": {
+      "intro": "Voici les entreprises qui traitent des données personnelles pour nous quand une agence utilise l'application Traviosoft. Chacune est tenue par contrat de protéger les données comme nous le faisons. Nous prévenons nos clients par courriel au moins 30 jours avant d'en ajouter ou d'en remplacer une.",
+      "sections": [
+        {
+          "heading": "Hébergement et stockage",
+          "body": [
+            "Hostinger International Ltd (Chypre) : les serveurs qui font fonctionner l'application et sa base de données, dans un centre de données en France.",
+            "Cloudflare, Inc. (États-Unis) : stockage des documents et fichiers, distribution sur le réseau et protection contre les attaques. Garanties : clauses contractuelles types et cadre de protection des données UE-États-Unis."
+          ]
+        },
+        {
+          "heading": "Courriels",
+          "body": [
+            "Resend (Plus Five Five, Inc., États-Unis) : envoi des courriels de l'application, comme les liens de connexion, les notifications et les documents envoyés aux clients. Données stockées aux États-Unis. Garanties : clauses contractuelles types et cadre de protection des données UE-États-Unis."
+          ]
+        },
+        {
+          "heading": "Assistant IA",
+          "body": [
+            "Anthropic, PBC (États-Unis) et OpenAI (États-Unis) : les réponses de l'assistant IA, selon le fournisseur choisi par l'agence. Aucun des deux n'utilise les données pour entraîner ses modèles. Garanties : clauses contractuelles types."
+          ]
+        },
+        {
+          "heading": "Traduction et adresses",
+          "body": [
+            "DeepL SE (Allemagne) : traduction de textes à la demande d'un utilisateur.",
+            "komoot GmbH (Allemagne) : suggestions d'adresses pendant la saisie. Il reçoit uniquement le texte saisi."
+          ]
+        },
+        {
+          "heading": "Erreurs et usage",
+          "body": [
+            "Functional Software, Inc., sous le nom Sentry (États-Unis), données stockées en Allemagne : rapports d'erreur techniques.",
+            "PostHog, Inc. (États-Unis), données stockées dans l'Union européenne : données d'usage de l'application, avec tous les textes à l'écran masqués. Chaque agence peut les désactiver. Garanties pour les deux : clauses contractuelles types."
+          ]
+        },
+        {
+          "heading": "Services qu'une agence connecte elle-même",
+          "body": [
+            "Une agence peut connecter ses propres comptes, comme les messageries Google ou Microsoft, Xero, QuickBooks, MYOB, Fatture in Cloud, InvoiceXpress, Stripe, Redsys ou Hotelbeds. Ces services fonctionnent selon le contrat de l'agence avec eux, et nous ne leur envoyons que ce que l'agence nous demande d'envoyer."
           ]
         }
       ]

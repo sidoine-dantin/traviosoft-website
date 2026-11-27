@@ -405,7 +405,7 @@
     "updated_label": "Última atualização",
     "updated_date": "Novembro de 2026",
     "privacy": {
-      "intro": "Esta política explica como tratamos a informação recolhida através do site traviosoft.com. Abrange apenas o site público. A utilização da aplicação Traviosoft pelos nossos clientes rege-se por um contrato separado.",
+      "intro": "Esta política explica como tratamos a informação recolhida através do site traviosoft.com. Abrange apenas o site público. A forma como tratamos os dados das pessoas que utilizam a aplicação Traviosoft está descrita na [política de privacidade da aplicação](/legal/app-privacy).",
       "sections": [
         {
           "heading": "Quem somos",
@@ -561,6 +561,113 @@
           "body": [
             "Para qualquer questão sobre o site, escreva para privacy@traviosoft.com.",
             "Este endereço é também o nosso ponto de contacto único para as autoridades e os utilizadores ao abrigo do Regulamento europeu dos Serviços Digitais. Pode escrever-nos em inglês ou em francês."
+          ]
+        }
+      ]
+    },
+    "app_privacy_title": "Privacidade da aplicação - Traviosoft",
+    "subprocessors_title": "Subcontratantes - Traviosoft",
+    "app_privacy": {
+      "intro": "Esta política explica como tratamos os dados pessoais das pessoas que utilizam a aplicação Traviosoft: o pessoal das agências subscritoras. Os dados que uma agência regista sobre os seus próprios clientes, viajantes e fornecedores pertencem a essa agência, que decide como são utilizados. Tratamo-los apenas por conta da agência, segundo o nosso acordo de tratamento de dados: para esses dados, contacte diretamente a agência.",
+      "sections": [
+        {
+          "heading": "Quem somos",
+          "body": [
+            "O Traviosoft é publicado por Sidoine Dantin EI, SIRET 941 883 779 00014, 137 rue à Vaches, 62610 Balinghem, France, responsável pelo tratamento dos dados aqui descritos. Para qualquer pergunta ou pedido, escreva para privacy@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "O que recolhemos",
+          "body": [
+            "A sua conta: o seu nome, o seu endereço de email profissional, a sua função, a agência a que pertence e as suas definições. A sua palavra-passe é guardada apenas de forma cifrada.",
+            "Registos de segurança: quando inicia sessão e utiliza a aplicação, registamos a data e a hora, o seu endereço IP e o seu navegador, para proteger a sua conta e analisar utilizações indevidas.",
+            "Utilização da aplicação: se a sua agência o deixar ativo, registamos que ecrãs e funções são utilizados. Todos os textos e valores no ecrã são ocultados: vemos cliques e páginas, nunca os dados da sua agência. Quando algo falha, recebemos também um relatório técnico de erro.",
+            "As suas mensagens: o que escreve ao nosso suporte e as sugestões que nos envia.",
+            "O assistente de IA: quando o utiliza, a sua pergunta e a informação necessária para lhe responder são enviadas ao fornecedor de IA escolhido pela sua agência. Guardamos um registo de cada ação do assistente, sem os valores sensíveis."
+          ]
+        },
+        {
+          "heading": "Para que os utilizamos",
+          "body": [
+            "Utilizamos a sua conta e enviamos-lhe os emails necessários (início de sessão, notificações) para prestar o serviço que a sua agência subscreveu. Isto assenta no nosso contrato com a sua agência e no nosso interesse legítimo em prestá-lo.",
+            "Utilizamos os registos de segurança para proteger a aplicação: é o nosso interesse legítimo e uma obrigação nossa nos termos do RGPD.",
+            "Utilizamos os dados de utilização e os relatórios de erro para corrigir problemas e melhorar a aplicação, com base no nosso interesse legítimo. A sua agência pode desativar os dados de utilização, e pode opor-se escrevendo-nos.",
+            "Utilizamos as suas mensagens para lhe responder, com base no nosso interesse legítimo, e os contactos de faturação para faturar à sua agência e manter a nossa contabilidade, como a lei exige."
+          ]
+        },
+        {
+          "heading": "Quem os recebe",
+          "body": [
+            "Os administradores da sua agência veem a sua conta e a sua atividade no respetivo espaço. Os nossos fornecedores tratam dados por nossa conta: cada um consta, com o seu país, da nossa [lista de subcontratantes](/legal/subprocessors). Nunca vendemos os seus dados nem os utilizamos para publicidade."
+          ]
+        },
+        {
+          "heading": "Transferências para fora da UE",
+          "body": [
+            "Alguns dos nossos fornecedores estão sediados nos Estados Unidos. Essas transferências assentam nas cláusulas contratuais-tipo da Comissão Europeia e, quando o fornecedor é certificado, no Quadro de Privacidade de Dados UE-EUA."
+          ]
+        },
+        {
+          "heading": "Durante quanto tempo os guardamos",
+          "body": [
+            "A sua conta é guardada enquanto existir no espaço da sua agência. No fim do contrato da agência, é apagada com o espaço, terminado o período de recuperação dos dados.",
+            "Os registos de segurança, os dados de utilização e os relatórios de erro são guardados durante o tempo necessário a essas finalidades, e no máximo 13 meses. O registo das ações do assistente de IA é guardado 90 dias. As mensagens de suporte são guardadas três anos após a nossa última troca, e as faturas dez anos, como exige a lei contabilística francesa."
+          ]
+        },
+        {
+          "heading": "Os seus direitos",
+          "body": [
+            "Pode pedir para ver os dados que guardamos sobre si, corrigi-los, apagá-los, limitar a sua utilização ou recebê-los num formato portável, e pode opor-se à sua utilização. Para fazer um pedido, escreva para privacy@traviosoft.com: respondemos no prazo de um mês. Pode também apresentar uma reclamação a uma autoridade de proteção de dados, em especial no país onde vive ou trabalha. Como a empresa está sediada em França, a sua autoridade é a CNIL."
+          ]
+        },
+        {
+          "heading": "Alterações",
+          "body": [
+            "Atualizamos esta política quando a aplicação muda a forma como utiliza os dados. A data no topo indica a versão mais recente."
+          ]
+        }
+      ]
+    },
+    "subprocessors": {
+      "intro": "Estas são as empresas que tratam dados pessoais por nossa conta quando uma agência utiliza a aplicação Traviosoft. Cada uma está obrigada por contrato a proteger os dados como nós. Avisamos os nossos clientes por email pelo menos 30 dias antes de acrescentar ou substituir uma.",
+      "sections": [
+        {
+          "heading": "Alojamento e armazenamento",
+          "body": [
+            "Hostinger International Ltd (Chipre): os servidores que fazem funcionar a aplicação e a sua base de dados, num centro de dados em França.",
+            "Cloudflare, Inc. (Estados Unidos): armazenamento de documentos e ficheiros, distribuição na rede e proteção contra ataques. Garantias: cláusulas contratuais-tipo e Quadro de Privacidade de Dados UE-EUA."
+          ]
+        },
+        {
+          "heading": "Email",
+          "body": [
+            "Resend (Plus Five Five, Inc., Estados Unidos): envio dos emails da aplicação, como ligações de acesso, notificações e documentos enviados a clientes. Dados guardados nos Estados Unidos. Garantias: cláusulas contratuais-tipo e Quadro de Privacidade de Dados UE-EUA."
+          ]
+        },
+        {
+          "heading": "Assistente de IA",
+          "body": [
+            "Anthropic, PBC (Estados Unidos) e OpenAI (Estados Unidos): as respostas do assistente de IA, conforme o fornecedor escolhido pela agência. Nenhum utiliza os dados para treinar os seus modelos. Garantias: cláusulas contratuais-tipo."
+          ]
+        },
+        {
+          "heading": "Tradução e moradas",
+          "body": [
+            "DeepL SE (Alemanha): tradução de textos a pedido de um utilizador.",
+            "komoot GmbH (Alemanha): sugestões de moradas durante a escrita. Recebe apenas o texto escrito."
+          ]
+        },
+        {
+          "heading": "Erros e utilização",
+          "body": [
+            "Functional Software, Inc., com o nome Sentry (Estados Unidos), dados guardados na Alemanha: relatórios técnicos de erro.",
+            "PostHog, Inc. (Estados Unidos), dados guardados na UE: dados de utilização da aplicação, com todos os textos no ecrã ocultados. Cada agência pode desativá-los. Garantias para ambos: cláusulas contratuais-tipo."
+          ]
+        },
+        {
+          "heading": "Serviços que a própria agência liga",
+          "body": [
+            "Uma agência pode ligar as suas próprias contas, como as caixas de correio Google ou Microsoft, Xero, QuickBooks, MYOB, Fatture in Cloud, InvoiceXpress, Stripe, Redsys ou Hotelbeds. Estes serviços funcionam segundo o contrato da agência com eles, e só lhes enviamos o que a agência nos pede para enviar."
           ]
         }
       ]

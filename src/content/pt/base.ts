@@ -25,6 +25,8 @@ export const footer: SiteContent['footer'] = {
   privacy: 'Privacidade',
   terms: 'Condições',
   notice: 'Aviso legal',
+  appPrivacy: 'Privacidade da app',
+  subprocessors: 'Subcontratantes',
   hosted: 'Os seus dados alojados na UE',
   rights: 'Traviosoft',
   /** blog posts shown in the footer, with short labels */

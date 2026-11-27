@@ -266,7 +266,7 @@ export type SiteContent = {
     tagline: string;
     product: string; company: string; resources: string; legal: string;
     switching: string; faq: string; about: string; glossary: string; guides: string; compare: string;
-    privacy: string; terms: string; notice: string;
+    privacy: string; terms: string; notice: string; appPrivacy: string; subprocessors: string;
     hosted: string; rights: string;
     /** extra footer links that only exist in this locale (e.g. Spain page) */
     posts: { slug: string; label: string }[];
