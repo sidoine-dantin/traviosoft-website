@@ -337,7 +337,7 @@ const setup: JobPage = {
       visual: 'safe',
       features: [
         { title: 'Uno spazio separato per la tua agenzia', body: ['I tuoi clienti, prezzi e viaggi sono archiviati separatamente da quelli delle altre agenzie.'] },
-        { title: 'Ospitato nell’UE', body: ['I tuoi dati restano nell’Unione europea, nel rispetto del GDPR.'] },
+        { title: 'Ospitato nell’UE', body: ['L’applicazione e il suo database girano su server in Francia, nel rispetto del GDPR.'] },
         { title: 'I tuoi dati vengono con te', body: ['Se smetti, riavrai i tuoi dati in formati standard.'] }
       ]
     },

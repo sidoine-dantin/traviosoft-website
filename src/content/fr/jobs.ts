@@ -337,7 +337,7 @@ const setup: JobPage = {
       visual: 'safe',
       features: [
         { title: 'Un espace à part pour votre agence', body: ['Vos clients, vos prix et vos voyages sont stockés à part de ceux des autres agences.'] },
-        { title: 'Hébergé dans l’UE', body: ['Vos données restent dans l’Union européenne, sous le RGPD.'] },
+        { title: 'Hébergé dans l’UE', body: ['L’application et sa base de données tournent sur des serveurs en France, sous le RGPD.'] },
         { title: 'Repartez avec vos données', body: ['Si vous arrêtez, vous récupérez vos données dans des formats standard.'] }
       ]
     },

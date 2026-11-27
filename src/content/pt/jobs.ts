@@ -337,7 +337,7 @@ const setup: JobPage = {
       visual: 'safe',
       features: [
         { title: 'Um espaço separado para a sua agência', body: ['Os seus clientes, preços e viagens são guardados à parte dos de outras agências.'] },
-        { title: 'Alojado na UE', body: ['Os seus dados ficam na União Europeia, ao abrigo do RGPD.'] },
+        { title: 'Alojado na UE', body: ['A aplicação e a sua base de dados funcionam em servidores em França, ao abrigo do RGPD.'] },
         { title: 'Sair com os seus dados', body: ['Se deixar o Traviosoft, recebe os seus dados em formatos normalizados.'] }
       ]
     },
