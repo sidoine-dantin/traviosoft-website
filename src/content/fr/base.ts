@@ -36,6 +36,7 @@ export const footer: SiteContent['footer'] = {
     { slug: 'qu-est-ce-qu-une-dmc', label: 'Qu’est-ce qu’une DMC' },
     { slug: 'allotement-hotel-date-de-release', label: 'L’allotement hôtelier' },
     { slug: 'devis-voyage-a-forfait-informations', label: 'Le devis de voyage à forfait' },
+    { slug: 'facturation-comptabilite-agence-de-voyages', label: 'Facturation et comptabilité' },
     { slug: 'de-excel-a-un-logiciel-agence-de-voyages', label: 'D’Excel à un logiciel' },
     { slug: 'rgpd-agence-de-voyages', label: 'RGPD et agences' },
     { slug: 'tva-regime-marge-agences-de-voyages-ue-vida', label: 'TVA sur la marge' }

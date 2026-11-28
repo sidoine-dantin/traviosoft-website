@@ -514,7 +514,7 @@ const quote: Article = {
   title: 'How a tailor-made travel price is calculated',
   lead: 'The price of a tailor-made trip is built from three amounts: what suppliers charge (the net rates), what the agency earns (the margin) and, when another agency sells the trip, its commission. This page shows the calculation on an example.',
   updated: '2026-11-14',
-  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
+  related: ['net-commissionable-rates', 'package-quote', 'agency-invoicing', 'what-is-a-dmc'],
   card: 'Net rates, margin on the selling price and commission, calculated on a worked example.',
   blocks: [
     { type: 'h2', text: 'Markup and margin for the same cost', id: 'concepts' },

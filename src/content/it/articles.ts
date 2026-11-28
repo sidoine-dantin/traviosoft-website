@@ -510,7 +510,7 @@ const quote: Article = {
   title: 'Come si calcola il prezzo di un viaggio su misura',
   lead: 'Il prezzo di un viaggio su misura si costruisce con tre importi: quanto chiedono i fornitori (le tariffe nette), quanto guadagna l’agenzia (il margine) e, quando un’altra agenzia vende il viaggio, la sua commissione. Questa pagina mostra il calcolo su un esempio.',
   updated: '2026-11-14',
-  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
+  related: ['net-commissionable-rates', 'package-quote', 'agency-invoicing', 'what-is-a-dmc'],
   card: 'Tariffe nette, margine sul prezzo di vendita e commissione, calcolati su un esempio.',
   blocks: [
     { type: 'h2', text: 'Ricarico e margine sullo stesso costo', id: 'concetti' },

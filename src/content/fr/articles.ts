@@ -514,7 +514,7 @@ const quote: Article = {
   title: 'Comment se calcule le prix d’un voyage sur mesure',
   lead: 'Le prix d’un voyage sur mesure se construit à partir de trois montants : ce que facturent les prestataires (les tarifs nets), ce que gagne l’agence (la marge) et, quand une autre agence vend le voyage, sa commission. Cette page montre le calcul sur un exemple.',
   updated: '2026-11-14',
-  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
+  related: ['net-commissionable-rates', 'package-quote', 'agency-invoicing', 'what-is-a-dmc'],
   card: 'Tarifs nets, marge sur le prix de vente et commission, calculés sur un exemple.',
   blocks: [
     { type: 'h2', text: 'Majoration et marge pour un même coût', id: 'notions' },

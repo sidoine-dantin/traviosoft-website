@@ -36,6 +36,7 @@ export const footer: SiteContent['footer'] = {
     { slug: 'o-que-e-uma-dmc', label: 'O que é uma DMC' },
     { slug: 'allotment-hotel-release', label: 'O allotment hoteleiro' },
     { slug: 'orcamento-viagem-organizada-informacoes', label: 'O orçamento de uma viagem organizada' },
+    { slug: 'faturacao-contabilidade-agencia-de-viagens', label: 'Faturação e contabilidade' },
     { slug: 'do-excel-a-software-agencia-de-viagens', label: 'Do Excel a um software' },
     { slug: 'rgpd-agencia-de-viagens', label: 'RGPD e agências' },
     { slug: 'iva-ue-regime-margem-agencias-de-viagens-vida', label: 'IVA na UE para agências' }

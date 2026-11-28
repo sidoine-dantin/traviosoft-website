@@ -339,4 +339,47 @@ const packageQuote: Article = {
   ]
 };
 
-export const posts: Article[] = [dmc, allotment, packageQuote];
+
+const INV_DISCLAIMER =
+  "Information générale, rédigée le 28 novembre 2026. Elle ne constitue pas un conseil juridique, fiscal ou comptable et n’a aucune valeur légale. Chaque pays fixe ses propres règles de facturation et de TVA : vérifiez les sources officielles ou demandez à un conseiller qualifié. Traviosoft décline toute responsabilité pour les décisions prises sur la base de cette page.";
+
+const invoicing: Article = {
+  key: 'agency-invoicing',
+  kind: 'guide',
+  slug: "facturation-comptabilite-agence-de-voyages",
+  metaTitle: "Facturation et comptabilité d’une agence de voyages",
+  metaDescription: "Comment un voyage sur mesure est facturé : factures d’acompte et de solde, avoirs, marge par voyage, et ce que reçoit l’expert-comptable chaque mois.",
+  title: "Facturation et comptabilité d’une agence de voyages, étape par étape",
+  lead: "Dans une agence de voyages, la facture arrive au bout d’une chaîne : le devis que le client accepte, l’acompte et le solde, le coût de chaque prestataire, puis les fichiers que reçoit l’expert-comptable. Cette page suit cette chaîne pour un voyage sur mesure.",
+  updated: '2026-11-28',
+  card: "Factures d’acompte et de solde, avoirs, marge par voyage et fichiers pour l’expert-comptable.",
+  related: ['eu-vat-travel', 'invoicing-france', 'invoicing-spain', 'quote-with-margins', 'net-commissionable-rates'],
+  blocks: [
+    { type: 'callout', text: INV_DISCLAIMER },
+    { type: 'h2', text: "Ce qui distingue la facturation d’une agence de voyages", id: 'specifics' },
+    { type: 'list', items: ["Un voyage réunit les prestations de nombreux prestataires : hôtels, guides, transferts, activités.", "Le client paie en général un acompte à la confirmation du voyage et le solde avant le départ. Les prestataires facturent souvent plus tard, parfois après le voyage.", "Dans l’Union européenne, une agence qui vend des voyages en son nom avec des prestations achetées à d’autres applique le régime particulier des agences de voyages : la TVA est due sur la marge.", "La marge d’un voyage est définitive quand toutes les factures des prestataires sont arrivées."] },
+    { type: 'h2', text: "Les documents d’un voyage", id: 'documents' },
+    { type: 'table', head: ["Document", "Quand", "Ce qu’il indique"], rows: [["Devis", "Avant l’accord du client", "Le programme, le prix total, l’acompte et le solde avec leurs dates."], ["Facture d’acompte", "À réception de l’acompte", "Le montant de l’acompte et le voyage concerné."], ["Facture de solde", "En général avant le départ", "Le prix total du voyage, moins l’acompte déjà facturé."], ["Avoir", "Quand le voyage est annulé ou modifié", "Le montant qui annule tout ou partie d’une facture précédente, avec sa référence."]] },
+    { type: 'p', text: "La directive TVA de l’Union européenne liste les mentions d’une facture, dont un numéro séquentiel qui identifie la facture et, quand le régime des agences de voyages s’applique, la mention « Régime particulier – agences de voyage » (article 226). Tout document qui modifie la facture initiale et y fait référence, comme un avoir, est assimilé à une facture (article 219). Chaque pays fixe la formulation exacte dans sa loi : voir les pages pour la [France](/guides/facturation-agence-de-voyages-france), l’[Espagne](/guides/facturation-agence-de-voyages-espagne), l’[Allemagne](/guides/facturation-agence-de-voyages-allemagne) et la [Belgique](/guides/facturation-agence-de-voyages-belgique)." },
+    { type: 'h2', text: "Un exemple : un voyage, du devis à la marge", id: 'example' },
+    { type: 'p', text: "Un voyage inventé de sept jours pour deux voyageurs, vendu 4 800 EUR, avec un acompte de 30 %." },
+    { type: 'table', head: ["Étape", "Montant"], rows: [["Facture d’acompte (30 %)", "1 440 EUR"], ["Facture de solde : 4 800 EUR moins l’acompte", "3 360 EUR à payer"], ["Hôtels, comme au devis", "2 300 EUR"], ["Guide et transferts, comme au devis", "900 EUR"], ["Activités, comme au devis", "400 EUR"], ["Marge prévue au devis", "1 200 EUR, 25 % du prix"], ["Facture du transporteur reçue après le voyage : 950 EUR au lieu de 900 EUR", "Marge 1 150 EUR, 24 % du prix"]] },
+    { type: 'p', text: "Dans le régime particulier, la TVA se calcule sur cette marge. C’est pourquoi les agences comparent chaque facture de prestataire au coût prévu au devis. La page sur le [prix d’un voyage sur mesure](/guides/devis-voyage-sur-mesure-avec-marge) montre comment le prix de vente se construit à partir des coûts." },
+    { type: 'h2', text: "Ce que reçoit l’expert-comptable", id: 'accountant' },
+    { type: 'list', items: ["Les factures et les avoirs de la période, dans l’ordre des numéros.", "Les paiements reçus de chaque client, avec leurs dates.", "Les factures des prestataires, chacune rattachée à son voyage.", "La marge de chaque voyage, sur laquelle repose le régime des agences de voyages."] },
+    { type: 'h2', text: "Logiciel de facturation et logiciel de gestion d’agence", id: 'software' },
+    { type: 'p', text: "Un logiciel de facturation émet et numérote les factures et les avoirs, et les envoie en facture électronique dans les pays qui l’exigent. Un logiciel de gestion d’agence contient ce qui précède la facture : la demande, le devis avec ses coûts et sa marge, les réservations auprès de chaque prestataire et l’échéancier de paiement." },
+    { type: 'p', text: "Quand les deux sont connectés, la facture reprend les montants du devis accepté, et la marge de chaque voyage est déjà connue quand l’expert-comptable la demande." },
+    { type: 'h2', text: "Dans Traviosoft", id: 'traviosoft' },
+    { type: 'p', text: "Traviosoft est un [logiciel pour agences de voyages sur mesure et DMC](/). Les [factures d’acompte et de solde et les avoirs](/get-paid) sont établis à partir du devis accepté, les paiements sont enregistrés sur le voyage, et le tableau de bord montre ce que les clients ont payé et ce qui est dû aux prestataires. En fin de mois, un récapitulatif Excel ou un fichier zip de toutes les factures part chez l’expert-comptable. Hors d’Espagne, la facture est émise par le logiciel de facturation que vous utilisez déjà, connecté à Traviosoft." },
+    { type: 'h2', text: "Questions", id: 'faq' },
+    { type: 'faq', items: [
+      { q: "Pourquoi la marge peut-elle changer après la facture de solde ?", a: ["Parce que certains prestataires facturent après le voyage. Quand une facture de prestataire diffère du coût prévu au devis, la marge du voyage change avec elle."] },
+      { q: "Quelle différence entre un avoir et un remboursement ?", a: ["Un avoir est un document qui annule tout ou partie d’une facture. Un remboursement est l’argent rendu au client. Une annulation produit souvent les deux."] },
+      { q: "Les factures peuvent-elles rester dans mon logiciel de facturation ?", a: ["Oui. Hors d’Espagne, la facture est émise par le logiciel de facturation que vous utilisez déjà, connecté à Traviosoft, avec les montants du devis accepté."] }
+    ] },
+    { type: 'p', text: "Sources : [Commission européenne, régimes particuliers de TVA](https://taxation-customs.ec.europa.eu/special-schemes_fr) et [directive 2006/112/CE du Conseil, articles 219 et 226](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:02006L0112-20250414)." }
+  ]
+};
+
+export const posts: Article[] = [dmc, allotment, packageQuote, invoicing];

@@ -339,4 +339,47 @@ const packageQuote: Article = {
   ]
 };
 
-export const posts: Article[] = [dmc, allotment, packageQuote];
+
+const INV_DISCLAIMER =
+  "Informação geral, redigida a 28 de novembro de 2026. Não constitui aconselhamento jurídico, fiscal ou contabilístico e não tem valor legal. Cada país fixa as suas próprias regras de faturação e de IVA: consulte as fontes oficiais ou um consultor qualificado. A Traviosoft não assume qualquer responsabilidade por decisões tomadas com base nesta página.";
+
+const invoicing: Article = {
+  key: 'agency-invoicing',
+  kind: 'guide',
+  slug: "faturacao-contabilidade-agencia-de-viagens",
+  metaTitle: "Faturação e contabilidade de uma agência de viagens",
+  metaDescription: "Como se fatura uma viagem à medida: faturas de adiantamento e de saldo, notas de crédito, a margem por viagem e o que o contabilista recebe todos os meses.",
+  title: "Faturação e contabilidade de uma agência de viagens, passo a passo",
+  lead: "Numa agência de viagens, a fatura chega no fim de uma cadeia: o orçamento que o cliente aceita, o adiantamento e o saldo, o custo de cada fornecedor e, depois, os ficheiros que o contabilista recebe. Esta página segue essa cadeia para uma viagem à medida.",
+  updated: '2026-11-28',
+  card: "Faturas de adiantamento e de saldo, notas de crédito, a margem por viagem e os ficheiros para o contabilista.",
+  related: ['eu-vat-travel', 'invoicing-france', 'invoicing-spain', 'quote-with-margins', 'net-commissionable-rates'],
+  blocks: [
+    { type: 'callout', text: INV_DISCLAIMER },
+    { type: 'h2', text: "O que distingue a faturação de uma agência de viagens", id: 'specifics' },
+    { type: 'list', items: ["Uma viagem reúne serviços de muitos fornecedores: hotéis, guias, transferes, atividades.", "O cliente paga normalmente um adiantamento ao confirmar a viagem e o saldo antes da partida. Os fornecedores faturam muitas vezes mais tarde, por vezes depois da viagem.", "Na União Europeia, uma agência que vende viagens em nome próprio com serviços comprados a terceiros aplica o regime especial das agências de viagens: o IVA é devido sobre a margem.", "A margem de uma viagem fica definitiva quando chegaram todas as faturas dos fornecedores."] },
+    { type: 'h2', text: "Os documentos de uma viagem", id: 'documents' },
+    { type: 'table', head: ["Documento", "Quando", "O que indica"], rows: [["Orçamento", "Antes de o cliente aceitar", "O programa, o preço total, o adiantamento e o saldo com as respetivas datas."], ["Fatura de adiantamento", "Quando o adiantamento é recebido", "O montante do adiantamento e a viagem a que pertence."], ["Fatura de saldo", "Normalmente antes da partida", "O preço total da viagem, menos o adiantamento já faturado."], ["Nota de crédito", "Quando a viagem é cancelada ou alterada", "O montante que anula toda ou parte de uma fatura anterior, com a sua referência."]] },
+    { type: 'p', text: "A diretiva do IVA da União Europeia enumera os elementos de uma fatura, entre eles um número sequencial que identifica a fatura e, quando se aplica o regime das agências de viagens, a menção «Regime da margem de lucro – Agências de viagens» (artigo 226.º). Qualquer documento que altere a fatura inicial e lhe faça referência, como uma nota de crédito, é assimilado a fatura (artigo 219.º). Cada país fixa a redação exata na sua lei: veja as páginas de [Espanha](/guides/faturacao-agencia-de-viagens-espanha), [França](/guides/faturacao-agencia-de-viagens-franca), [Alemanha](/guides/faturacao-agencia-de-viagens-alemanha) e [Bélgica](/guides/faturacao-agencia-de-viagens-belgica)." },
+    { type: 'h2', text: "Um exemplo: uma viagem, do orçamento à margem", id: 'example' },
+    { type: 'p', text: "Uma viagem inventada de sete dias para dois viajantes, vendida por 4 800 EUR, com um adiantamento de 30%." },
+    { type: 'table', head: ["Passo", "Montante"], rows: [["Fatura de adiantamento (30%)", "1 440 EUR"], ["Fatura de saldo: 4 800 EUR menos o adiantamento", "3 360 EUR a pagar"], ["Hotéis, como no orçamento", "2 300 EUR"], ["Guia e transferes, como no orçamento", "900 EUR"], ["Atividades, como no orçamento", "400 EUR"], ["Margem prevista no orçamento", "1 200 EUR, 25% do preço"], ["Fatura da empresa de transferes recebida depois da viagem: 950 EUR em vez de 900 EUR", "Margem de 1 150 EUR, 24% do preço"]] },
+    { type: 'p', text: "No regime especial, o IVA calcula-se sobre esta margem. Por isso as agências comparam cada fatura de fornecedor com o custo previsto no orçamento. A página sobre o [preço de uma viagem à medida](/guides/orcamento-viagem-a-medida-com-margem) mostra como o preço de venda se constrói a partir dos custos." },
+    { type: 'h2', text: "O que o contabilista recebe", id: 'accountant' },
+    { type: 'list', items: ["As faturas e as notas de crédito do período, por ordem de número.", "Os recebimentos de cada cliente, com as respetivas datas.", "As faturas dos fornecedores, cada uma ligada à sua viagem.", "A margem de cada viagem, na qual assenta o regime das agências de viagens."] },
+    { type: 'h2', text: "Software de faturação e software de gestão para agências", id: 'software' },
+    { type: 'p', text: "Um software de faturação emite e numera as faturas e as notas de crédito, e envia-as como fatura eletrónica nos países que o exigem. Um software de gestão para agências contém o que vem antes da fatura: o pedido, o orçamento com os custos e a margem, as reservas com cada fornecedor e o plano de pagamentos." },
+    { type: 'p', text: "Quando os dois estão ligados, a fatura retoma os montantes do orçamento aceite, e a margem de cada viagem já é conhecida quando o contabilista a pede." },
+    { type: 'h2', text: "No Traviosoft", id: 'traviosoft' },
+    { type: 'p', text: "O Traviosoft é um [software de gestão para agências de viagens à medida e DMC](/). As [faturas de adiantamento e de saldo e as notas de crédito](/get-paid) são feitas a partir do orçamento aceite, os recebimentos ficam registados na viagem e o painel mostra o que os clientes pagaram e o que se deve aos fornecedores. No fim do mês, um resumo em Excel ou um ficheiro zip com todas as faturas segue para o contabilista. Fora de Espanha, a fatura é emitida pelo software de faturação que já utiliza, ligado ao Traviosoft." },
+    { type: 'h2', text: "Perguntas", id: 'faq' },
+    { type: 'faq', items: [
+      { q: "Porque pode a margem mudar depois da fatura de saldo?", a: ["Porque alguns fornecedores faturam depois da viagem. Quando uma fatura de fornecedor difere do custo do orçamento, a margem da viagem muda com ela."] },
+      { q: "Qual é a diferença entre uma nota de crédito e um reembolso?", a: ["Uma nota de crédito é um documento que anula toda ou parte de uma fatura. Um reembolso é o dinheiro devolvido ao cliente. Um cancelamento produz muitas vezes os dois."] },
+      { q: "As faturas podem ficar no meu software de faturação?", a: ["Sim. Fora de Espanha, a fatura é emitida pelo software de faturação que já utiliza, ligado ao Traviosoft, com os montantes do orçamento aceite."] }
+    ] },
+    { type: 'p', text: "Fontes: [Comissão Europeia, regimes especiais de IVA](https://taxation-customs.ec.europa.eu/special-schemes_pt) e [Diretiva 2006/112/CE do Conselho, artigos 219.º e 226.º](https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:02006L0112-20250414)." }
+  ]
+};
+
+export const posts: Article[] = [dmc, allotment, packageQuote, invoicing];

@@ -339,4 +339,47 @@ const packageQuote: Article = {
   ]
 };
 
-export const posts: Article[] = [dmc, allotment, packageQuote];
+
+const INV_DISCLAIMER =
+  "Información general, redactada el 28 de noviembre de 2026. No es asesoramiento jurídico, fiscal ni contable y no tiene valor legal. Cada país fija sus propias normas de facturación y de IVA: consulta las fuentes oficiales o a un asesor cualificado. Traviosoft no asume ninguna responsabilidad por decisiones basadas en esta página.";
+
+const invoicing: Article = {
+  key: 'agency-invoicing',
+  kind: 'guide',
+  slug: "facturacion-contabilidad-agencia-de-viajes",
+  metaTitle: "Facturación y contabilidad de una agencia de viajes",
+  metaDescription: "Cómo se factura un viaje a medida: facturas de anticipo y finales, facturas rectificativas, el margen por viaje y lo que recibe el gestor cada mes.",
+  title: "Facturación y contabilidad de una agencia de viajes, paso a paso",
+  lead: "En una agencia de viajes, la factura llega al final de una cadena: el presupuesto que el cliente acepta, el anticipo y el saldo, el coste de cada proveedor y, después, los archivos que recibe el gestor o el contable. Esta página sigue esa cadena para un viaje a medida.",
+  updated: '2026-11-28',
+  card: "Facturas de anticipo y finales, rectificativas, el margen por viaje y los archivos para el gestor.",
+  related: ['eu-vat-travel', 'invoicing-france', 'invoicing-spain', 'quote-with-margins', 'net-commissionable-rates'],
+  blocks: [
+    { type: 'callout', text: INV_DISCLAIMER },
+    { type: 'h2', text: "Lo que distingue la facturación de una agencia de viajes", id: 'specifics' },
+    { type: 'list', items: ["Un viaje reúne servicios de muchos proveedores: hoteles, guías, traslados, actividades.", "El cliente suele pagar un anticipo al confirmar el viaje y el saldo antes de la salida. Los proveedores a menudo facturan más tarde, a veces después del viaje.", "En la Unión Europea, una agencia que vende viajes en nombre propio con servicios comprados a otros aplica el régimen especial de las agencias de viajes: el IVA se paga sobre el margen.", "El margen de un viaje es definitivo cuando han llegado todas las facturas de los proveedores."] },
+    { type: 'h2', text: "Los documentos de un viaje", id: 'documents' },
+    { type: 'table', head: ["Documento", "Cuándo", "Qué indica"], rows: [["Presupuesto", "Antes de que el cliente acepte", "El programa, el precio total, el anticipo y el saldo con sus fechas."], ["Factura de anticipo", "Al recibir el anticipo", "El importe del anticipo y el viaje al que corresponde."], ["Factura final", "Normalmente antes de la salida", "El precio total del viaje, menos el anticipo ya facturado."], ["Factura rectificativa", "Cuando el viaje se cancela o cambia", "El importe que anula toda o parte de una factura anterior, con su referencia."]] },
+    { type: 'p', text: "La directiva del IVA de la Unión Europea enumera los datos de una factura, entre ellos un número secuencial que identifica la factura y, cuando se aplica el régimen de las agencias de viajes, la mención «Régimen especial - Agencias de viajes» (artículo 226). Todo documento rectificativo que modifique la factura inicial y haga referencia a ella se asimila a una factura (artículo 219). Cada país fija la redacción exacta en su ley: consulta las páginas de [España](/guides/facturacion-agencia-de-viajes-espana), [Francia](/guides/facturacion-agencia-de-viajes-francia), [Alemania](/guides/facturacion-agencia-de-viajes-alemania) y [Bélgica](/guides/facturacion-agencia-de-viajes-belgica)." },
+    { type: 'h2', text: "Un ejemplo: un viaje, del presupuesto al margen", id: 'example' },
+    { type: 'p', text: "Un viaje inventado de siete días para dos viajeros, vendido por 4.800 EUR, con un anticipo del 30 %." },
+    { type: 'table', head: ["Paso", "Importe"], rows: [["Factura de anticipo (30 %)", "1.440 EUR"], ["Factura final: 4.800 EUR menos el anticipo", "3.360 EUR a pagar"], ["Hoteles, como en el presupuesto", "2.300 EUR"], ["Guía y traslados, como en el presupuesto", "900 EUR"], ["Actividades, como en el presupuesto", "400 EUR"], ["Margen previsto en el presupuesto", "1.200 EUR, el 25 % del precio"], ["Factura de la empresa de traslados recibida después del viaje: 950 EUR en lugar de 900 EUR", "Margen de 1.150 EUR, el 24 % del precio"]] },
+    { type: 'p', text: "En el régimen especial, el IVA se calcula sobre este margen. Por eso las agencias comparan cada factura de proveedor con el coste previsto en el presupuesto. La página sobre el [precio de un viaje a medida](/guides/presupuesto-viaje-a-medida-con-margen) muestra cómo se construye el precio de venta a partir de los costes." },
+    { type: 'h2', text: "Lo que recibe el gestor", id: 'accountant' },
+    { type: 'list', items: ["Las facturas y las rectificativas del periodo, por orden de número.", "Los cobros de cada cliente, con sus fechas.", "Las facturas de los proveedores, cada una vinculada a su viaje.", "El margen de cada viaje, en el que se basa el régimen de las agencias de viajes."] },
+    { type: 'h2', text: "Programa de facturación y software de gestión de agencia", id: 'software' },
+    { type: 'p', text: "Un programa de facturación emite y numera las facturas y las rectificativas, y las envía como factura electrónica en los países que lo exigen. Un software de gestión de agencia contiene lo que va antes de la factura: la solicitud, el presupuesto con sus costes y su margen, las reservas con cada proveedor y el calendario de pagos." },
+    { type: 'p', text: "Cuando ambos están conectados, la factura toma los importes del presupuesto aceptado, y el margen de cada viaje ya se conoce cuando el gestor lo pide." },
+    { type: 'h2', text: "En Traviosoft", id: 'traviosoft' },
+    { type: 'p', text: "Traviosoft es un [software para agencias de viajes a medida y DMC](/). Las [facturas de anticipo y finales y las rectificativas](/get-paid) se hacen a partir del presupuesto aceptado, los cobros se registran en el viaje y el panel muestra lo que han pagado los clientes y lo que se debe a los proveedores. A fin de mes, un resumen en Excel o un archivo zip con todas las facturas va al gestor. En España, el régimen especial de las agencias de viajes está integrado; en otros países, la factura la emite el programa de facturación que ya usas, conectado a Traviosoft." },
+    { type: 'h2', text: "Preguntas", id: 'faq' },
+    { type: 'faq', items: [
+      { q: "¿Por qué puede cambiar el margen después de la factura final?", a: ["Porque algunos proveedores facturan después del viaje. Cuando una factura de proveedor difiere del coste del presupuesto, el margen del viaje cambia con ella."] },
+      { q: "¿Qué diferencia hay entre una factura rectificativa y un reembolso?", a: ["Una factura rectificativa es un documento que anula toda o parte de una factura. Un reembolso es el dinero devuelto al cliente. Una cancelación suele producir ambos."] },
+      { q: "¿Pueden quedarse las facturas en mi programa de facturación?", a: ["Sí, fuera de España: la factura la emite el programa de facturación que ya usas, conectado a Traviosoft, con los importes del presupuesto aceptado."] }
+    ] },
+    { type: 'p', text: "Fuentes: [Comisión Europea, regímenes especiales del IVA](https://taxation-customs.ec.europa.eu/special-schemes_es) y [Directiva 2006/112/CE del Consejo, artículos 219 y 226](https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:02006L0112-20250414)." }
+  ]
+};
+
+export const posts: Article[] = [dmc, allotment, packageQuote, invoicing];

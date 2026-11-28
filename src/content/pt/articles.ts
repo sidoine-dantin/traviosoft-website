@@ -510,7 +510,7 @@ const quote: Article = {
   title: 'Como se calcula o preço de uma viagem à medida',
   lead: 'O preço de uma viagem à medida constrói-se com três montantes: o que os fornecedores cobram (as tarifas net), o que a agência ganha (a margem) e, quando outra agência vende a viagem, a sua comissão. Esta página mostra o cálculo num exemplo.',
   updated: '2026-11-14',
-  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
+  related: ['net-commissionable-rates', 'package-quote', 'agency-invoicing', 'what-is-a-dmc'],
   card: 'Tarifas net, margem sobre o preço de venda e comissão, calculadas num exemplo.',
   blocks: [
     { type: 'h2', text: 'Markup e margem sobre o mesmo custo', id: 'conceitos' },

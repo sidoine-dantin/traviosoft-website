@@ -36,6 +36,7 @@ export const footer: SiteContent['footer'] = {
     { slug: 'que-es-una-dmc', label: 'Qué es una DMC' },
     { slug: 'cupo-hotel-allotment-release', label: 'El cupo de hotel' },
     { slug: 'presupuesto-viaje-combinado-informacion', label: 'El presupuesto de un viaje combinado' },
+    { slug: 'facturacion-contabilidad-agencia-de-viajes', label: 'Facturación y contabilidad' },
     { slug: 'de-excel-a-un-software-de-agencia', label: 'De Excel a un software' },
     { slug: 'rgpd-agencia-de-viajes', label: 'RGPD y agencias' },
     { slug: 'iva-regimen-margen-agencias-de-viajes-ue-vida', label: 'IVA de las agencias en la UE' }

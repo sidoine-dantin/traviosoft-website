@@ -339,4 +339,47 @@ const packageQuote: Article = {
   ]
 };
 
-export const posts: Article[] = [dmc, allotment, packageQuote];
+
+const INV_DISCLAIMER =
+  "Informazione generale, scritta il 28 novembre 2026. Non è una consulenza legale, fiscale o contabile e non ha valore legale. Ogni paese stabilisce le proprie regole di fatturazione e di IVA: verifica le fonti ufficiali o chiedi a un consulente qualificato. Traviosoft non si assume alcuna responsabilità per decisioni basate su questa pagina.";
+
+const invoicing: Article = {
+  key: 'agency-invoicing',
+  kind: 'guide',
+  slug: "fatturazione-contabilita-agenzia-viaggi",
+  metaTitle: "Fatturazione e contabilità di un’agenzia di viaggi",
+  metaDescription: "Come si fattura un viaggio su misura: fatture di acconto e di saldo, note di credito, il margine per viaggio e cosa riceve il commercialista ogni mese.",
+  title: "Fatturazione e contabilità di un’agenzia di viaggi, passo dopo passo",
+  lead: "In un’agenzia di viaggi, la fattura arriva alla fine di una catena: il preventivo che il cliente accetta, l’acconto e il saldo, il costo di ogni fornitore e poi i file che riceve il commercialista. Questa pagina segue la catena per un viaggio su misura.",
+  updated: '2026-11-28',
+  card: "Fatture di acconto e di saldo, note di credito, il margine per viaggio e i file per il commercialista.",
+  related: ['eu-vat-travel', 'invoicing-france', 'invoicing-spain', 'quote-with-margins', 'net-commissionable-rates'],
+  blocks: [
+    { type: 'callout', text: INV_DISCLAIMER },
+    { type: 'h2', text: "Cosa distingue la fatturazione di un’agenzia di viaggi", id: 'specifics' },
+    { type: 'list', items: ["Un viaggio riunisce i servizi di molti fornitori: hotel, guide, transfer, attività.", "Il cliente di solito paga un acconto alla conferma del viaggio e il saldo prima della partenza. I fornitori spesso fatturano più tardi, a volte dopo il viaggio.", "Nell’Unione europea, un’agenzia che vende viaggi in nome proprio con servizi acquistati da altri applica il regime speciale delle agenzie di viaggio: l’IVA è dovuta sul margine.", "Il margine di un viaggio è definitivo quando sono arrivate tutte le fatture dei fornitori."] },
+    { type: 'h2', text: "I documenti di un viaggio", id: 'documents' },
+    { type: 'table', head: ["Documento", "Quando", "Cosa indica"], rows: [["Preventivo", "Prima che il cliente accetti", "Il programma, il prezzo totale, l’acconto e il saldo con le loro date."], ["Fattura di acconto", "Quando arriva l’acconto", "L’importo dell’acconto e il viaggio a cui si riferisce."], ["Fattura di saldo", "Di solito prima della partenza", "Il prezzo totale del viaggio, meno l’acconto già fatturato."], ["Nota di credito", "Quando il viaggio è annullato o modificato", "L’importo che storna in tutto o in parte una fattura precedente, con il suo riferimento."]] },
+    { type: 'p', text: "La direttiva IVA dell’Unione europea elenca i dati di una fattura, tra cui un numero progressivo che identifica la fattura e, quando si applica il regime delle agenzie di viaggio, la dicitura «regime del margine — agenzie di viaggio» (articolo 226). Ogni documento che modifica la fattura iniziale e vi fa riferimento, come una nota di credito, è assimilato a una fattura (articolo 219). Ogni paese stabilisce la formulazione esatta nella propria legge: vedi le pagine per [Spagna](/guides/fatturazione-agenzia-di-viaggi-spagna), [Francia](/guides/fatturazione-agenzia-di-viaggi-francia), [Germania](/guides/fatturazione-agenzia-di-viaggi-germania) e [Belgio](/guides/fatturazione-agenzia-di-viaggi-belgio)." },
+    { type: 'h2', text: "Un esempio: un viaggio, dal preventivo al margine", id: 'example' },
+    { type: 'p', text: "Un viaggio inventato di sette giorni per due viaggiatori, venduto a 4.800 EUR, con un acconto del 30%." },
+    { type: 'table', head: ["Passaggio", "Importo"], rows: [["Fattura di acconto (30%)", "1.440 EUR"], ["Fattura di saldo: 4.800 EUR meno l’acconto", "3.360 EUR da pagare"], ["Hotel, come nel preventivo", "2.300 EUR"], ["Guida e transfer, come nel preventivo", "900 EUR"], ["Attività, come nel preventivo", "400 EUR"], ["Margine previsto nel preventivo", "1.200 EUR, il 25% del prezzo"], ["Fattura dei transfer ricevuta dopo il viaggio: 950 EUR invece di 900 EUR", "Margine di 1.150 EUR, il 24% del prezzo"]] },
+    { type: 'p', text: "Nel regime speciale, l’IVA si calcola su questo margine. Per questo le agenzie confrontano ogni fattura di fornitore con il costo previsto nel preventivo. La pagina su [come si calcola il prezzo di un viaggio su misura](/guides/preventivo-viaggio-su-misura-con-margine) mostra come il prezzo di vendita nasce dai costi." },
+    { type: 'h2', text: "Cosa riceve il commercialista", id: 'accountant' },
+    { type: 'list', items: ["Le fatture e le note di credito del periodo, in ordine di numero.", "Gli incassi di ogni cliente, con le loro date.", "Le fatture dei fornitori, ognuna collegata al suo viaggio.", "Il margine di ogni viaggio, su cui si basa il regime delle agenzie di viaggio."] },
+    { type: 'h2', text: "Software di fatturazione e gestionale per agenzie", id: 'software' },
+    { type: 'p', text: "Un software di fatturazione emette e numera le fatture e le note di credito, e le invia come fattura elettronica nei paesi che lo richiedono. Un gestionale per agenzie contiene ciò che viene prima della fattura: la richiesta, il preventivo con costi e margine, le prenotazioni con ogni fornitore e il piano dei pagamenti." },
+    { type: 'p', text: "Quando i due sono collegati, la fattura riprende gli importi del preventivo accettato, e il margine di ogni viaggio è già noto quando il commercialista lo chiede." },
+    { type: 'h2', text: "In Traviosoft", id: 'traviosoft' },
+    { type: 'p', text: "Traviosoft è un [software gestionale per agenzie di viaggi su misura e DMC](/). Le [fatture di acconto e di saldo e le note di credito](/get-paid) nascono dal preventivo accettato, gli incassi si registrano sul viaggio e la dashboard mostra cosa hanno pagato i clienti e cosa si deve ai fornitori. A fine mese, un riepilogo Excel o un file zip con tutte le fatture va al commercialista. Fuori dalla Spagna, la fattura è emessa dal software di fatturazione che usi già, collegato a Traviosoft." },
+    { type: 'h2', text: "Domande", id: 'faq' },
+    { type: 'faq', items: [
+      { q: "Perché il margine può cambiare dopo la fattura di saldo?", a: ["Perché alcuni fornitori fatturano dopo il viaggio. Quando una fattura di fornitore è diversa dal costo del preventivo, il margine del viaggio cambia con essa."] },
+      { q: "Che differenza c’è tra una nota di credito e un rimborso?", a: ["Una nota di credito è un documento che storna in tutto o in parte una fattura. Un rimborso è il denaro restituito al cliente. Un annullamento spesso produce entrambi."] },
+      { q: "Le fatture possono restare nel mio software di fatturazione?", a: ["Sì. Fuori dalla Spagna, la fattura è emessa dal software di fatturazione che usi già, collegato a Traviosoft, con gli importi del preventivo accettato."] }
+    ] },
+    { type: 'p', text: "Fonti: [Commissione europea, regimi speciali IVA](https://taxation-customs.ec.europa.eu/special-schemes_it) e [direttiva 2006/112/CE del Consiglio, articoli 219 e 226](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:02006L0112-20250414)." }
+  ]
+};
+
+export const posts: Article[] = [dmc, allotment, packageQuote, invoicing];

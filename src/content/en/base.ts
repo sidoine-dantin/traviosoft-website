@@ -36,6 +36,7 @@ export const footer: SiteContent['footer'] = {
     { slug: 'what-is-a-dmc', label: 'What is a DMC' },
     { slug: 'hotel-allotment-release-date', label: 'Hotel allotments' },
     { slug: 'package-travel-quote-information', label: 'Package travel quotes' },
+    { slug: 'travel-agency-invoicing-accounting', label: 'Invoicing and accounting' },
     { slug: 'move-from-excel-to-travel-software', label: 'From Excel to software' },
     { slug: 'gdpr-travel-agency', label: 'GDPR for agencies' },
     { slug: 'eu-vat-margin-scheme-travel-agents-vida', label: 'EU VAT margin scheme' }

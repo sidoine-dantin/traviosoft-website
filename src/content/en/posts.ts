@@ -340,4 +340,106 @@ const packageQuote: Article = {
   ]
 };
 
-export const posts: Article[] = [dmc, allotment, packageQuote];
+
+const INV_DISCLAIMER =
+  'General information, written on 28 November 2026. It is not legal, tax or accounting advice and has no legal value. Each country sets its own invoicing and VAT rules: check the official sources or ask a qualified adviser. Traviosoft accepts no liability for decisions based on this page.';
+
+const invoicing: Article = {
+  key: 'agency-invoicing',
+  kind: 'guide',
+  slug: 'travel-agency-invoicing-accounting',
+  metaTitle: 'Travel agency invoicing and accounting, step by step',
+  metaDescription:
+    'How a tailor-made trip is invoiced: deposit and final invoices, credit notes, the margin per trip, and what the accountant receives at the end of the month.',
+  title: 'Travel agency invoicing and accounting, step by step',
+  lead: 'In a travel agency, the invoice comes at the end of a chain: the quote the client accepts, the deposit and the balance, the costs of each supplier, and then the files the accountant receives. This page follows that chain for one tailor-made trip.',
+  updated: '2026-11-28',
+  card: 'Deposit and final invoices, credit notes, the margin per trip and the accountant’s files.',
+  related: ['eu-vat-travel', 'invoicing-france', 'invoicing-spain', 'quote-with-margins', 'net-commissionable-rates'],
+  blocks: [
+    { type: 'callout', text: INV_DISCLAIMER },
+    { type: 'h2', text: 'What sets travel agency invoicing apart', id: 'specifics' },
+    {
+      type: 'list',
+      items: [
+        'One trip combines services from many suppliers: hotels, guides, transfers, activities.',
+        'The client usually pays a deposit when the trip is confirmed and the balance before departure. Suppliers often invoice later, sometimes after the trip.',
+        'In the European Union, an agency that sells trips in its own name with services bought from others applies the special VAT scheme for travel agents, where VAT is due on the margin.',
+        'The margin of a trip is final only when every supplier invoice has arrived.'
+      ]
+    },
+    { type: 'h2', text: 'The documents of one trip', id: 'documents' },
+    {
+      type: 'table',
+      head: ['Document', 'When', 'What it shows'],
+      rows: [
+        ['Quote', 'Before the client says yes', 'The programme, the total price, the deposit and the balance with their dates.'],
+        ['Deposit invoice', 'When the deposit is received', 'The amount of the deposit and the trip it belongs to.'],
+        ['Final invoice', 'Usually before departure', 'The total price of the trip, minus the deposit already invoiced.'],
+        ['Credit note', 'When the trip is cancelled or changed', 'The amount that reverses all or part of an earlier invoice, with a reference to it.']
+      ]
+    },
+    {
+      type: 'p',
+      text: 'The EU VAT Directive lists the details an invoice shows, among them a sequential number that identifies the invoice and, when the travel agent scheme applies, the mention “Margin scheme — Travel agents” (article 226). A document that amends an earlier invoice and refers to it, such as a credit note, is treated as an invoice (article 219). Each country sets the exact wording in its own law: see the pages for [France](/guides/travel-agency-invoicing-france), [Spain](/guides/travel-agency-invoicing-spain), [Germany](/guides/travel-agency-invoicing-germany) and [Belgium](/guides/travel-agency-invoicing-belgium).'
+    },
+    { type: 'h2', text: 'An example: one trip from quote to margin', id: 'example' },
+    { type: 'p', text: 'An invented seven-day trip for two travellers, sold 4,800 EUR, with a 30% deposit.' },
+    {
+      type: 'table',
+      head: ['Step', 'Amount'],
+      rows: [
+        ['Deposit invoice (30%)', '1,440 EUR'],
+        ['Final invoice: 4,800 EUR minus the deposit', '3,360 EUR to pay'],
+        ['Hotels, as quoted', '2,300 EUR'],
+        ['Guide and transfers, as quoted', '900 EUR'],
+        ['Activities, as quoted', '400 EUR'],
+        ['Margin planned on the quote', '1,200 EUR, 25% of the price'],
+        ['Transfer company invoice received after the trip: 950 EUR instead of 900 EUR', 'Margin 1,150 EUR, 24% of the price']
+      ]
+    },
+    {
+      type: 'p',
+      text: 'Under the special scheme, VAT is calculated on this margin. That is why agencies compare each supplier invoice with the cost planned on the quote. The page on [pricing a tailor-made trip](/guides/tailor-made-quote-with-margins) shows how the selling price is built from the costs.'
+    },
+    { type: 'h2', text: 'What the accountant receives', id: 'accountant' },
+    {
+      type: 'list',
+      items: [
+        'The invoices and credit notes of the period, in number order.',
+        'The payments received from each client, with their dates.',
+        'The supplier invoices, each linked to its trip.',
+        'The margin of each trip, which the travel agent scheme uses.'
+      ]
+    },
+    { type: 'h2', text: 'Invoicing software and agency management software', id: 'software' },
+    {
+      type: 'p',
+      text: 'Invoicing software issues and numbers invoices and credit notes, and sends them as e-invoices in the countries that require it. Agency management software holds what comes before the invoice: the request, the quote with its costs and margin, the bookings with each supplier and the payment schedule.'
+    },
+    {
+      type: 'p',
+      text: 'When both are connected, the invoice takes its amounts from the accepted quote, and the margin of each trip is already known when the accountant asks for it.'
+    },
+    { type: 'h2', text: 'In Traviosoft', id: 'traviosoft' },
+    {
+      type: 'p',
+      text: 'Traviosoft is [software for tailor-made travel agencies and DMCs](/). [Deposit and final invoices and credit notes](/get-paid) are made from the accepted quote, payments are recorded on the trip, and the dashboard shows what clients have paid and what is owed to suppliers. At the end of the month, an Excel summary or a zip file of every invoice goes to the accountant. Outside Spain, the invoice is issued by the invoicing software you already use, connected to Traviosoft.'
+    },
+    { type: 'h2', text: 'Questions', id: 'faq' },
+    {
+      type: 'faq',
+      items: [
+        { q: 'Why can the margin change after the final invoice?', a: ['Because some suppliers invoice after the trip. When a supplier invoice differs from the cost on the quote, the margin of the trip changes with it.'] },
+        { q: 'What is the difference between a credit note and a refund?', a: ['A credit note is a document that reverses all or part of an invoice. A refund is the money paid back to the client. A cancellation often produces both.'] },
+        { q: 'Can invoices stay in the invoicing software I already use?', a: ['Yes. Outside Spain, the invoice is issued by the invoicing software you already use, connected to Traviosoft, with the amounts of the accepted quote.'] }
+      ]
+    },
+    {
+      type: 'p',
+      text: 'Sources: [European Commission, VAT special schemes](https://taxation-customs.ec.europa.eu/special-schemes_en) and [Council Directive 2006/112/EC, articles 219 and 226](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02006L0112-20250414).'
+    }
+  ]
+};
+
+export const posts: Article[] = [dmc, allotment, packageQuote, invoicing];
