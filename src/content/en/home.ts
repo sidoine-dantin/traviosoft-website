@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 export const home: SiteContent['home'] = {
   metaTitle: 'Software for tailor-made travel agencies and DMCs',
   metaDescription:
-    `Requests, quotes with your margins, bookings, client itineraries, payments and invoices in one place. For tailor-made travel agencies and DMCs. From ${PRICES.classic.yearly} EUR a month, with your data hosted in the EU.`,
+    `Requests, quotes with your margins, bookings, client itineraries, payments and invoices in one place, for tailor-made travel agencies and DMCs.`,
   title: 'Software for tailor-made travel agencies and DMCs',
   sub: 'Requests, quotes, bookings, payments and invoices, in one place.',
   proposal: {

@@ -34,7 +34,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-spain',
     slug: 'facturacion-agencia-de-viajes-espana',
-    metaTitle: 'Facturación de agencias de viajes en España: REAV, Veri*Factu y factura electrónica',
+    metaTitle: 'Facturación de agencias en España: REAV y Veri*Factu',
     metaDescription: 'Cómo factura una agencia de viajes o un DMC en España: el REAV, qué muestra la factura, las fechas de Veri*Factu y la factura electrónica entre empresas.',
     title: 'Facturación de agencias de viajes en España',
     lead: 'En España, una agencia que vende viajes en nombre propio suele pagar el IVA sobre su margen, con el REAV. Las facturas deben salir de un programa que cumpla la normativa antifraude (Veri*Factu), y la factura electrónica entre empresas será obligatoria por etapas.',
@@ -67,7 +67,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-france',
     slug: 'facturacion-agencia-de-viajes-francia',
-    metaTitle: 'Facturación de agencias de viajes en Francia: régimen del margen y factura electrónica',
+    metaTitle: 'Facturación de agencias de viajes en Francia',
     metaDescription: 'Cómo factura una agencia de viajes en Francia: el régimen del margen, lo que muestra la factura y las fechas de la factura electrónica desde septiembre de 2026.',
     title: 'Facturación de agencias de viajes en Francia',
     lead: 'Las agencias de viajes francesas que venden en nombre propio pagan el IVA sobre su margen. Desde el 1 de septiembre de 2026, todas las empresas deben poder recibir facturas electrónicas por una plataforma autorizada, y las pymes deben emitirlas a partir del 1 de septiembre de 2027.',
@@ -95,7 +95,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-germany',
     slug: 'facturacion-agencia-de-viajes-alemania',
-    metaTitle: 'Facturación de agencias de viajes en Alemania: §25 UStG y factura electrónica',
+    metaTitle: 'Facturación de agencias de viajes en Alemania: §25 UStG',
     metaDescription: 'Cómo factura una agencia de viajes en Alemania: el régimen del margen del §25 UStG, la mención en la factura y las fechas de la factura electrónica.',
     title: 'Facturación de agencias de viajes en Alemania',
     lead: 'Los operadores turísticos alemanes pagan el IVA sobre su margen según el §25 UStG. En sus ventas entre empresas en Alemania, deben emitir facturas electrónicas a partir de 2027 o 2028, según su facturación.',
@@ -128,8 +128,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-belgium',
     slug: 'facturacion-agencia-de-viajes-belgica',
-    metaTitle: 'Facturación de agencias de viajes en Bélgica: régimen del margen y Peppol',
-    metaDescription: 'Cómo factura una agencia de viajes en Bélgica: el régimen especial de las agencias de viajes y la factura electrónica Peppol obligatoria entre empresas desde enero de 2026.',
+    metaTitle: 'Facturación de agencias de viajes en Bélgica: Peppol',
+    metaDescription: 'Cómo factura una agencia de viajes en Bélgica: el régimen especial y la factura electrónica Peppol, obligatoria entre empresas desde enero de 2026.',
     title: 'Facturación de agencias de viajes en Bélgica',
     lead: 'Las agencias de viajes belgas pagan el IVA sobre su margen con el régimen especial de las agencias de viajes. Desde el 1 de enero de 2026, las facturas entre empresas belgas son facturas electrónicas estructuradas enviadas por Peppol.',
     card: 'El régimen del margen y la factura electrónica Peppol desde 2026.',

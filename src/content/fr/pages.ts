@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR`,
   metaDescription:
-    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les groupes, plusieurs équipes, les devises, les bons de commande aux prestataires et plusieurs marques. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
+    `Deux offres pour agences sur mesure et DMC : Classic gère toute l’agence, Premium ajoute groupes, équipes, devises et marques. ${PRICES.usersIncluded} utilisateurs inclus.`,
   title: 'Tarifs',
   productLink: 'Voir le produit',
   lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les groupes, plusieurs équipes, les autres devises, les bons de commande aux prestataires et plusieurs marques.',
@@ -331,7 +331,7 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'À propos de Traviosoft',
   metaDescription:
-    'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC : chaque voyage en un seul endroit, de la première demande à la facture finale, avec vos données hébergées dans l’UE.',
+    'Logiciel de gestion pour agences de voyages sur mesure et DMC : chaque voyage au même endroit, de la première demande à la facture finale, hébergé dans l’UE.',
   title: 'À propos de Traviosoft',
   lead: 'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC. Chaque voyage tient en un seul endroit, de la première demande à la facture finale.',
   blocks: [
@@ -356,7 +356,8 @@ export const resources: SiteContent['resources'] = {
     { kind: 'glossary', title: 'Glossaire', body: 'Les termes d’agence de voyages et de logiciel, en une ligne chacun.' },
   ],
   glossaryTitle: 'Glossaire',
+  glossaryMetaTitle: 'Glossaire des termes du voyage sur mesure',
   glossaryMeta:
-    'Des définitions claires des termes qu’utilisent les agences de voyages sur mesure et les DMC : tarif net, commission, feuille de service, rooming list, acompte et plus.',
+    'Définitions claires des termes des agences de voyages sur mesure et des DMC : tarif net, commission, feuille de service, rooming list, acompte et plus.',
   glossaryLead: 'Les mots que vous utilisez chaque jour, et ceux du logiciel, en une ligne chacun.'
 };

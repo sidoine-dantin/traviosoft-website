@@ -9,7 +9,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'legal' });
-  return buildMetadata({ locale, path: '/legal/privacy', title: t('privacy_title') });
+  return buildMetadata({ locale, path: '/legal/privacy', title: t('privacy_title'), description: t('privacy_meta') });
 }
 
 export default async function PrivacyPage({ params }: Props) {

@@ -341,7 +341,7 @@ export type SiteContent = {
   resources: {
     metaTitle: string; metaDescription: string; title: string; lead: string;
     groups: { kind: ArticleKind | 'glossary'; title: string; body: string }[];
-    glossaryTitle: string; glossaryMeta: string; glossaryLead: string;
+    glossaryTitle: string; glossaryMetaTitle: string; glossaryMeta: string; glossaryLead: string;
   };
   articles: Article[];
   glossary: GlossaryTerm[];

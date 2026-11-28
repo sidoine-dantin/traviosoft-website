@@ -55,7 +55,6 @@ function ico(pngs) {
   return Buffer.concat([header, ...pngs.map(p => p.data)]);
 }
 
-const square = (size, pad, bg) => `<!doctype html><html><head><style>html,body{margin:0;width:${size}px;height:${size}px;background:${bg};display:grid;place-items:center;overflow:hidden}</style></head><body>${MARK(size - pad * 2)}</body></html>`;
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ deviceScaleFactor: 1 });
@@ -66,9 +65,10 @@ for (const [l, t] of Object.entries(TAGLINES)) {
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: `public/og/${l}.png` });
 }
+// Logo for search engines (Organization schema): the disc alone on a transparent background, like the favicon.
 await page.setViewportSize({ width: 512, height: 512 });
-await page.setContent(square(512, 48, '#F7F8F6'));
-await page.screenshot({ path: 'public/logo.png' });
+await page.setContent(disc(512));
+await page.screenshot({ path: 'public/logo.png', omitBackground: true });
 // Home-screen icon: opaque (iOS fills transparency with black), so the disc's yellow runs to the edges.
 await page.setViewportSize({ width: 180, height: 180 });
 await page.setContent(disc(180).replace('background:transparent', 'background:#E0F354'));

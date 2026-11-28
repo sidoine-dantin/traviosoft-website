@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 export const home: SiteContent['home'] = {
   metaTitle: 'Software de gestão para agências de viagens à medida e DMC',
   metaDescription:
-    `Pedidos, orçamentos com as suas margens, reservas, itinerários para os clientes, pagamentos e faturas num só lugar. Para agências de viagens à medida e DMC. Desde ${PRICES.classic.yearly} EUR por mês, com os seus dados alojados na UE.`,
+    `Pedidos, orçamentos com as suas margens, reservas, itinerários, pagamentos e faturas num só lugar, para agências de viagens à medida e DMC.`,
   title: 'Software de gestão para agências de viagens à medida e DMC',
   sub: 'Pedidos, orçamentos, reservas, pagamentos e faturas, num só lugar.',
   proposal: {

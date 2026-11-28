@@ -62,7 +62,7 @@ const compares: Cmp[] = [
     other: 'Excel e Word',
     metaTitle: 'Traviosoft o Excel e Word per un’agenzia di viaggi',
     metaDescription:
-      'Excel e Word sono il punto di partenza di quasi tutte le agenzie di viaggi. Confrontiamo preventivi, margini, prenotazioni e fatture per capire quando conviene un gestionale pensato per i viaggi.',
+      'Excel e Word sono il punto di partenza di quasi tutte le agenzie. Preventivi, margini, prenotazioni e fatture: quando conviene un gestionale per i viaggi.',
     title: 'Traviosoft o Excel e Word: quando passare a un gestionale per agenzie di viaggi',
     lead: 'Excel e Word sono flessibili, conosciuti e bastano a molte agenzie che vendono pochi viaggi all’anno. Quando entrano in gioco più persone, stagioni di prezzo e numerazione delle fatture, un gestionale pensato per i viaggi se ne occupa al posto tuo.',
     card: 'Foglio di calcolo o gestionale: quando conviene passare e quando no.',
@@ -258,7 +258,7 @@ const compares: Cmp[] = [
     other: 'Tourwriter',
     metaTitle: 'Traviosoft o Tourwriter per DMC e travel designer',
     metaDescription:
-      'Tourwriter è un software neozelandese per DMC di lusso e travel designer. Confrontiamo a chi si rivolge ciascuno, piani, prezzi, lingue e cosa fa meglio ciascuno.',
+      'Tourwriter è un software neozelandese per DMC di lusso e travel designer. A chi si rivolge ciascuno, piani, prezzi, lingue e punti di forza a confronto.',
     title: 'Traviosoft o Tourwriter: due strumenti per costruire viaggi',
     lead: 'Tourwriter è un software neozelandese noto per i suoi programmi di viaggio curati, pensato per DMC di lusso e travel designer che lavorano in inglese. Traviosoft ha prezzi in euro con gli utenti inclusi, lavora in spagnolo e francese e include il regime IVA delle agenzie di viaggio (REAV).',
     card: 'Programmi di lusso curati in inglese e uno strumento con prezzi in euro in spagnolo e francese.',
@@ -334,7 +334,7 @@ const compares: Cmp[] = [
     other: 'Kaptio',
     metaTitle: 'Traviosoft o Kaptio per tour operator e viaggi su misura',
     metaDescription:
-      'Kaptio è un software per viaggi di più giorni: crociere, treni, tour di gruppo e viaggi su misura. Confrontiamo a chi si rivolge ciascuno, azienda, prezzo e avvio.',
+      'Kaptio è un software per viaggi di più giorni: crociere, treni, tour di gruppo e su misura. A chi si rivolge ciascuno, azienda, prezzo e avvio a confronto.',
     title: 'Traviosoft o Kaptio: due sistemi per viaggi di più giorni',
     lead: 'Kaptio, fondata a Reykjavik nel 2012, riunisce CRM, contrattazione, tariffazione, inventario, prenotazioni, pagamenti e operativo per crociere, treni, tour di gruppo e viaggi su misura. Traviosoft copre tutto il viaggio, dalla prima richiesta all’ultima fattura, con documenti in cinque lingue e un prezzo pubblicato.',
     card: 'Una piattaforma per i viaggi di più giorni e un unico percorso dalla richiesta alla fattura con un prezzo pubblicato.',
@@ -371,7 +371,7 @@ const compares: Cmp[] = [
     other: 'TourCMS',
     metaTitle: 'Traviosoft o TourCMS: viaggi su misura o tour e attività',
     metaDescription:
-      'TourCMS è un software di prenotazione e channel management per operatori di tour e attività. Confrontiamo a chi si rivolge ciascuno, azienda, prezzi pubblicati e lingue.',
+      'TourCMS è un software di prenotazione e channel management per tour e attività. A chi si rivolge ciascuno, azienda, prezzi pubblicati e lingue a confronto.',
     title: 'Traviosoft o TourCMS: viaggi su misura e tour e attività',
     lead: 'TourCMS, gestito da Palisis in Svizzera, offre dal 2003 prenotazioni, distribuzione e channel management agli operatori di tour e attività. Traviosoft è pensato per i viaggi su misura, dalla prima richiesta all’ultima fattura, con documenti in cinque lingue.',
     card: 'Prenotazioni e channel management per tour e attività, e un unico percorso per i viaggi su misura.',
@@ -411,7 +411,7 @@ const best: Article = {
   slug: 'migliore-gestionale-dmc',
   metaTitle: 'Il miglior gestionale per DMC e agenzie incoming (2026)',
   metaDescription:
-    'Un confronto indipendente tra Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV ed Excel: a chi si rivolge ciascuno, prezzi pubblicati, lingue e punti di forza.',
+    'Un confronto tra Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV ed Excel: a chi si rivolge ciascuno, prezzi pubblicati, lingue e punti di forza.',
   title: 'Il miglior gestionale per DMC e agenzie incoming (2026)',
   lead: 'Per una DMC o un’agenzia di viaggi su misura, le opzioni sono Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio e GIAV; molte agenzie cominciano anche con Excel e Word. Questa guida li confronta su dati pubblici: a chi si rivolge ciascuno, prezzo, lingue e cosa fa meglio.',
   updated: UPDATED,
@@ -503,9 +503,9 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'preventivo-viaggio-su-misura-con-margine',
-  metaTitle: 'Come si calcola il prezzo di un viaggio su misura: margine e commissione',
+  metaTitle: 'Prezzo di un viaggio su misura: margine e commissione',
   metaDescription:
-    'Come si calcola il prezzo di un viaggio su misura a partire dalle tariffe nette, con un margine sul prezzo di vendita e una commissione, in un esempio con le cifre.',
+    'Come si calcola il prezzo di un viaggio su misura dalle tariffe nette, con un margine sul prezzo di vendita e una commissione, in un esempio con le cifre.',
   title: 'Come si calcola il prezzo di un viaggio su misura',
   lead: 'Il prezzo di un viaggio su misura si costruisce con tre importi: quanto chiedono i fornitori (le tariffe nette), quanto guadagna l’agenzia (il margine) e, quando un’altra agenzia vende il viaggio, la sua commissione. Questa pagina mostra il calcolo su un esempio.',
   updated: '2026-11-14',
@@ -646,9 +646,9 @@ const fromExcel: Article = {
   key: 'from-excel',
   kind: 'guide',
   slug: 'da-excel-a-gestionale-agenzia-di-viaggi',
-  metaTitle: 'Da Excel a un gestionale per agenzie di viaggi: cosa si sposta e cosa cambia',
+  metaTitle: 'Da Excel a un gestionale per agenzie di viaggi: cosa cambia',
   metaDescription:
-    'Cosa tiene di solito un’agenzia di viaggi nei fogli di calcolo, cosa passa in un gestionale per i viaggi e cosa cambia quando i viaggi stanno in un solo sistema.',
+    'Cosa tiene di solito un’agenzia nei fogli di calcolo, cosa passa in un gestionale per i viaggi e cosa cambia quando i viaggi stanno in un solo sistema.',
   title: 'Da Excel a un gestionale per agenzie di viaggi',
   lead: 'Molte agenzie lavorano con fogli di calcolo e documenti: un elenco di prodotti, un elenco di fornitori, i clienti e un file per ogni preventivo. Un gestionale per i viaggi tiene le stesse informazioni in un solo posto, collegate a ogni viaggio.',
   updated: '2026-11-14',
@@ -701,9 +701,9 @@ const aiTools: Article = {
   key: 'ai-assistant-mcp',
   kind: 'guide',
   slug: 'assistente-ia-mcp-agenzia-di-viaggi',
-  metaTitle: 'IA per agenzie di viaggi: assistente integrato e connettore MCP per Claude, ChatGPT e Gemini',
+  metaTitle: 'IA per agenzie di viaggi: assistente e connettore MCP',
   metaDescription:
-    'Come un’agenzia di viaggi può usare l’IA sui propri dati: l’assistente integrato in Traviosoft e il connettore MCP che collega Claude, ChatGPT e altri strumenti di IA a preventivi, prenotazioni e pagamenti.',
+    'Come un’agenzia di viaggi può usare l’IA sui propri dati: l’assistente integrato in Traviosoft e il connettore MCP per Claude, ChatGPT e altri strumenti.',
   title: 'L’IA nella tua agenzia di viaggi',
   lead: 'Traviosoft lavora con l’IA in due modi. L’assistente integrato lavora dentro l’app per ogni persona che lo usa. Il connettore MCP permette allo strumento di IA che usi già, come Claude o ChatGPT, di leggere i dati della tua agenzia, e ti chiede il permesso prima di modificare qualsiasi cosa.',
   updated: '2026-11-14',

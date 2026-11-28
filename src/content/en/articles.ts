@@ -104,7 +104,7 @@ const compares: Cmp[] = [
     other: 'Ezus',
     metaTitle: 'Traviosoft vs Ezus: comparison for DMCs',
     metaDescription:
-      'We compare Traviosoft and Ezus on who each is for, published prices, languages and getting started, and what each one does best for DMCs and tailor-made agencies.',
+      'Traviosoft and Ezus compared: who each is for, published prices, languages, getting started and what each does best for DMCs and tailor-made agencies.',
     title: 'Traviosoft vs Ezus: an independent comparison for DMCs and inbound agencies',
     lead: 'Ezus is a well-established French software for DMCs, with many customers, public prices and support in five languages. Traviosoft shows one price with users included and includes Spain’s travel agency VAT scheme (REAV) on invoices.',
     card: 'Two tools with public prices: who each is for and what each includes.',
@@ -334,7 +334,7 @@ const compares: Cmp[] = [
     updated: '2026-11-14',
     slug: 'traviosoft-vs-kaptio',
     other: 'Kaptio',
-    metaTitle: 'Traviosoft vs Kaptio for tour operators and tailor-made travel',
+    metaTitle: 'Traviosoft vs Kaptio: tour operators and tailor-made travel',
     metaDescription:
       'Kaptio is software for multi-day travel: cruise, rail, group tours and tailor-made travel. We compare who each is for, company, price and getting started.',
     title: 'Traviosoft vs Kaptio: two systems for multi-day trips',
@@ -372,7 +372,7 @@ const compares: Cmp[] = [
     updated: '2026-11-14',
     slug: 'traviosoft-vs-tourcms',
     other: 'TourCMS',
-    metaTitle: 'Traviosoft vs TourCMS: tailor-made trips or tours and activities',
+    metaTitle: 'Traviosoft vs TourCMS: tailor-made trips or day tours',
     metaDescription:
       'TourCMS is booking and channel management software for tours and activities operators. We compare who each is for, company, published prices and languages.',
     title: 'Traviosoft vs TourCMS: tailor-made trips and tours and activities',
@@ -507,7 +507,7 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'tailor-made-quote-with-margins',
-  metaTitle: 'How a tailor-made travel price is calculated: margin and commission',
+  metaTitle: 'Tailor-made travel pricing: margin and commission',
   metaDescription:
     'How the price of a tailor-made trip is calculated from net rates, with a margin on the selling price and a commission, in a worked example with figures.',
   title: 'How a tailor-made travel price is calculated',
@@ -586,7 +586,7 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-template-groups-mice',
-  metaTitle: 'Rooming list for groups and MICE: what it is and what it contains',
+  metaTitle: 'Rooming list for groups and MICE: what it contains',
   metaDescription:
     'What a rooming list is in group travel and MICE, the information it usually contains, an example and how hotels use it.',
   title: 'The rooming list for groups and MICE events',
@@ -650,7 +650,7 @@ const fromExcel: Article = {
   key: 'from-excel',
   kind: 'guide',
   slug: 'move-from-excel-to-travel-software',
-  metaTitle: 'From Excel to travel agency software: what moves and what changes',
+  metaTitle: 'From Excel to travel agency software: what changes',
   metaDescription:
     'What a travel agency usually keeps in spreadsheets, what moves into travel software and what changes once trips are in one system.',
   title: 'From Excel to travel agency software',
@@ -705,9 +705,9 @@ const aiTools: Article = {
   key: 'ai-assistant-mcp',
   kind: 'guide',
   slug: 'ai-assistant-mcp-travel-agency',
-  metaTitle: 'AI for travel agencies: built-in assistant and MCP connector for Claude, ChatGPT and Gemini',
+  metaTitle: 'AI for travel agencies: built-in assistant and MCP connector',
   metaDescription:
-    'How a travel agency can use AI on its own data: the assistant built into Traviosoft, and the MCP connector that links Claude, ChatGPT and other AI tools to your quotes, bookings and payments.',
+    'How a travel agency can use AI on its own data: the assistant built into Traviosoft and the MCP connector for Claude, ChatGPT and other AI tools.',
   title: 'AI in your travel agency',
   lead: 'Traviosoft works with AI in two ways. The built-in assistant works inside the app for each person who uses it. The MCP connector lets the AI tool you already use, such as Claude or ChatGPT, read your agency’s data, and it asks your permission before it updates anything.',
   updated: '2026-11-14',

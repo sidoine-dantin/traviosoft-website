@@ -59,7 +59,7 @@ const compares: Cmp[] = [
     other: 'Excel y Word',
     metaTitle: 'Traviosoft vs Excel y Word para agencias de viajes',
     metaDescription:
-      'Excel y Word son el punto de partida de casi toda agencia. Comparamos presupuestos, márgenes, reservas y facturas para ver cuándo compensa un software de viajes.',
+      'Excel y Word son el punto de partida de casi toda agencia. Comparamos presupuestos, márgenes, reservas y facturas para ver cuándo compensa un software.',
     title: 'Traviosoft frente a Excel y Word: cuándo dar el paso a un software de viajes',
     lead: 'Excel y Word son flexibles, conocidos y suficientes para muchas agencias que llevan pocos viajes al año. Cuando entran varias personas, temporadas de precios y facturas que numerar, un software pensado para viajes se encarga de ese trabajo por ti.',
     card: 'Hoja de cálculo o software: cuándo compensa cambiar y cuándo no.',
@@ -258,7 +258,7 @@ const compares: Cmp[] = [
     other: 'Tourwriter',
     metaTitle: 'Traviosoft vs Tourwriter para DMC y diseñadores de viaje',
     metaDescription:
-      'Tourwriter es un software neozelandés para DMC de lujo y diseñadores de viajes. Comparamos para quién es cada uno, planes, precios, idiomas y en qué destaca cada uno.',
+      'Tourwriter es un software neozelandés para DMC de lujo y diseñadores de viajes. Comparamos para quién es cada uno, planes, precios e idiomas.',
     title: 'Traviosoft frente a Tourwriter: dos programas para diseñar viajes',
     lead: 'Tourwriter es un software neozelandés conocido por sus itinerarios muy cuidados, pensado para DMC y diseñadores de viajes de lujo que trabajan en inglés. Traviosoft tiene precios en euros con usuarios incluidos, trabaja en español y francés, e incluye REAV.',
     card: 'Itinerarios de lujo muy cuidados en inglés y un programa en euros, en español y francés.',
@@ -336,7 +336,7 @@ const compares: Cmp[] = [
     other: 'Kaptio',
     metaTitle: 'Traviosoft vs Kaptio para turoperadores y viajes a medida',
     metaDescription:
-      'Kaptio es un software para viajes de varios días: cruceros, tren, circuitos en grupo y a medida. Comparamos para quién es cada uno, empresa, precio y puesta en marcha.',
+      'Kaptio es un software para viajes de varios días: cruceros, tren, circuitos y viajes a medida. Comparamos público, empresa, precio y puesta en marcha.',
     title: 'Traviosoft frente a Kaptio: dos sistemas para viajes de varios días',
     lead: 'Kaptio, fundado en Reikiavik en 2012, reúne gestión de clientes, contratos, tarifas, inventario, reservas, pagos y operaciones para cruceros, tren, circuitos en grupo y viajes a medida. Traviosoft cubre todo el viaje, de la primera solicitud a la última factura, con documentos en cinco idiomas y un precio publicado.',
     card: 'Una plataforma para viajes de varios días y un solo flujo de la solicitud a la factura, con precio publicado.',
@@ -372,9 +372,9 @@ const compares: Cmp[] = [
     updated: '2026-11-14',
     slug: 'traviosoft-vs-tourcms',
     other: 'TourCMS',
-    metaTitle: 'Traviosoft vs TourCMS: viajes a medida o excursiones y actividades',
+    metaTitle: 'Traviosoft vs TourCMS: viajes a medida o excursiones',
     metaDescription:
-      'TourCMS es un software de reservas y gestión de canales para operadores de excursiones y actividades. Comparamos para quién es cada uno, empresa, precios publicados e idiomas.',
+      'TourCMS es un software de reservas y canales para operadores de excursiones y actividades. Comparamos para quién es cada uno, empresa, precios e idiomas.',
     title: 'Traviosoft frente a TourCMS: viajes a medida, excursiones y actividades',
     lead: 'TourCMS, gestionado por Palisis en Suiza, ofrece desde 2003 reservas, distribución y gestión de canales a operadores de excursiones y actividades. Traviosoft está pensado para viajes a medida, de la primera solicitud a la última factura, con documentos en cinco idiomas.',
     card: 'Reservas y gestión de canales para excursiones y actividades, y un solo flujo para viajes a medida.',
@@ -415,7 +415,7 @@ const best: Article = {
   slug: 'mejor-software-dmc-receptivos',
   metaTitle: 'Mejor software para DMC y receptivos en España (2026)',
   metaDescription:
-    'Comparativa independiente de Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV y Excel: para quién es cada uno, precios publicados, idiomas y puntos fuertes.',
+    'Comparativa de Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV y Excel: para quién es cada uno, precios publicados, idiomas y puntos fuertes.',
   title: 'Mejor software para DMC y receptivos en España (2026)',
   lead: 'Para un DMC, receptivo o agencia a medida en España, las opciones son Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio y GIAV; muchas agencias empiezan también con Excel y Word. Esta guía los compara con datos públicos: para quién es cada uno, precio, idiomas y en qué destaca cada uno.',
   updated: UPDATED,
@@ -507,7 +507,7 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'presupuesto-viaje-a-medida-con-margen',
-  metaTitle: 'Cómo se calcula el precio de un viaje a medida: margen y comisión',
+  metaTitle: 'Precio de un viaje a medida: margen y comisión',
   metaDescription:
     'Cómo se calcula el precio de un viaje a medida a partir de las tarifas netas, con un margen sobre el precio de venta y una comisión, con un ejemplo en cifras.',
   title: 'Cómo se calcula el precio de un viaje a medida',
@@ -905,9 +905,9 @@ const aiTools: Article = {
   key: 'ai-assistant-mcp',
   kind: 'guide',
   slug: 'asistente-ia-mcp-agencia-de-viajes',
-  metaTitle: 'IA para agencias de viajes: asistente integrado y conector MCP para Claude, ChatGPT y Gemini',
+  metaTitle: 'IA para agencias de viajes: asistente y conector MCP',
   metaDescription:
-    'Cómo una agencia de viajes puede usar la IA con sus propios datos: el asistente integrado en Traviosoft y el conector MCP que une Claude, ChatGPT y otras herramientas de IA a tus presupuestos, reservas y cobros.',
+    'Cómo una agencia de viajes puede usar la IA con sus propios datos: el asistente integrado en Traviosoft y el conector MCP para Claude, ChatGPT y otras IA.',
   title: 'La IA en tu agencia de viajes',
   lead: 'Traviosoft trabaja con la IA de dos maneras. El asistente integrado trabaja dentro de la aplicación para cada persona que lo usa. El conector MCP permite que la herramienta de IA que ya usas, como Claude o ChatGPT, lea los datos de tu agencia, y te pide permiso antes de cambiar nada.',
   updated: '2026-11-14',

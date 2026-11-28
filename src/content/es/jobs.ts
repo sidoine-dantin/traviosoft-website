@@ -5,7 +5,7 @@ const sell: JobPage = {
   slug: 'sell',
   metaTitle: 'Vender: solicitudes, catálogo y presupuestos',
   metaDescription:
-    'Todas las solicitudes de clientes en una lista, un catálogo con precios por temporada y varios proveedores por producto, presupuestos con tu margen y el IVA, enviados en el idioma del cliente y con seguimiento a los 7 días.',
+    'Todas las solicitudes en una lista, un catálogo con precios por temporada y varios proveedores, y presupuestos con tu margen e IVA, en el idioma del cliente.',
   name: 'Vender',
   menuLine: 'De la primera solicitud al presupuesto aceptado',
   step: '1 de 4',
@@ -100,7 +100,7 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Reservar y operar el viaje',
   metaDescription:
-    'Cuando se acepta un presupuesto, todos los servicios del viaje aparecen en una lista, listos para reservar. Las solicitudes de reserva salen a los proveedores por email, cada servicio muestra su estado y tu cliente recibe un itinerario día a día.',
+    'Con el presupuesto aceptado, cada servicio queda listo para reservar: las solicitudes van por email a los proveedores y tu cliente recibe su itinerario.',
   name: 'Reservar y operar',
   menuLine: 'Del presupuesto aceptado al viaje realizado',
   step: '2 de 4',
@@ -262,7 +262,7 @@ const setup: JobPage = {
   slug: 'setup',
   metaTitle: 'Tu configuración: marcas, idiomas, datos',
   metaDescription:
-    'Varias marcas en una cuenta, documentos en el idioma del cliente, varias monedas, ajustes por país, tu equipo, tus datos en la UE y conexiones con tus otras herramientas.',
+    'Varias marcas en una cuenta, documentos en el idioma del cliente, varias monedas, ajustes por país, tu equipo, datos en la UE y conexión con tus herramientas.',
   name: 'Tu configuración',
   menuLine: 'Marcas, idiomas, monedas, equipo y datos',
   step: '4 de 4',

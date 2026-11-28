@@ -4,7 +4,7 @@ import { PRICES } from '../prices';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Pricing: Classic from ${PRICES.classic.yearly} EUR a month, Premium from ${PRICES.premium.yearly} EUR`,
   metaDescription:
-    `Two plans for tailor-made travel agencies and DMCs. Classic runs the whole agency from ${PRICES.classic.yearly} EUR a month; Premium adds groups, several teams, currencies, purchase orders to suppliers and several brands. ${PRICES.usersIncluded} users included, setup free with yearly billing.`,
+    `Two plans for tailor-made travel agencies and DMCs: Classic runs the whole agency, Premium adds groups, teams, currencies and brands. ${PRICES.usersIncluded} users included.`,
   title: 'Pricing',
   productLink: 'See the product',
   lead: 'Classic covers the whole agency, from the first request to the last invoice. Premium adds groups, several teams, other currencies, purchase orders to suppliers and several brands.',
@@ -331,7 +331,7 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'About Traviosoft',
   metaDescription:
-    'Traviosoft is management software for tailor-made travel agencies and DMCs: each trip in one place, from the first request to the final invoice, with your data hosted in the EU.',
+    'Management software for tailor-made travel agencies and DMCs: each trip in one place, from the first request to the final invoice, hosted in the EU.',
   title: 'About Traviosoft',
   lead: 'Traviosoft is management software for tailor-made travel agencies and DMCs. Each trip lives in one place, from the first request to the final invoice.',
   blocks: [
@@ -356,6 +356,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'glossary', title: 'Glossary', body: 'The travel-agency and software terms, in a line each.' },
   ],
   glossaryTitle: 'Glossary',
+  glossaryMetaTitle: 'Glossary of tailor-made travel terms',
   glossaryMeta:
     'Plain definitions of the terms tailor-made travel agencies and DMCs use: net rate, commission, service sheet, rooming list, deposit and more.',
   glossaryLead: 'The words you use every day, and the ones software uses, in a line each.'

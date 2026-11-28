@@ -399,8 +399,11 @@
   },
   "legal": {
     "privacy_title": "Informativa sulla privacy",
+    "privacy_meta": "Come traviosoft.com usa le tue informazioni: cosa raccogliamo, cookie e pubblicità, per quanto tempo le conserviamo e i tuoi diritti.",
     "terms_title": "Condizioni d’uso",
+    "terms_meta": "Le condizioni d’uso di traviosoft.com: il sito, la prenotazione della demo, proprietà intellettuale, link esterni, responsabilità e legge applicabile.",
     "notice_title": "Note legali",
+    "notice_meta": "Chi pubblica traviosoft.com, chi lo ospita, proprietà intellettuale, dati personali e come contattarci.",
     "back_home": "Torna alla home",
     "updated_label": "Ultimo aggiornamento",
     "updated_date": "Novembre 2026",
@@ -566,7 +569,9 @@
       ]
     },
     "app_privacy_title": "Privacy dell’applicazione",
+    "app_privacy_meta": "Come l’applicazione Traviosoft tratta i dati personali del personale delle agenzie: cosa raccogliamo, perché, chi li riceve e i tuoi diritti.",
     "subprocessors_title": "Sub-responsabili",
+    "subprocessors_meta": "I fornitori che trattano dati per l’applicazione Traviosoft: hosting, email, assistente AI, traduzione, indirizzi ed errori, con il loro paese.",
     "app_privacy": {
       "intro": "Questa informativa spiega come trattiamo i dati personali delle persone che usano l’applicazione Traviosoft: il personale delle agenzie abbonate. I dati che un’agenzia registra sui propri clienti, viaggiatori e fornitori appartengono a quell’agenzia, che decide come usarli. Li trattiamo solo per conto dell’agenzia, secondo il nostro accordo sul trattamento dei dati: per quei dati, rivolgiti direttamente all’agenzia.",
       "sections": [

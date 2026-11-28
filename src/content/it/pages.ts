@@ -6,7 +6,7 @@ const FREE = 'Gratuito con fatturazione annuale*';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Prezzi: Classic da ${PRICES.classic.yearly} EUR al mese, Premium da ${PRICES.premium.yearly} EUR`,
   metaDescription:
-    `Due piani per agenzie di viaggio su misura e DMC. Classic gestisce tutta l’agenzia da ${PRICES.classic.yearly} EUR al mese; Premium aggiunge gruppi, più team, valute, ordini di acquisto ai fornitori e più marchi. ${PRICES.usersIncluded} utenti inclusi, avvio gratuito con fatturazione annuale.`,
+    `Due piani per agenzie di viaggio su misura e DMC: Classic gestisce tutta l’agenzia, Premium aggiunge gruppi, team, valute e marchi. ${PRICES.usersIncluded} utenti inclusi.`,
   title: 'Prezzi',
   productLink: 'Vedi il prodotto',
   lead: 'Classic copre tutta l’agenzia, dalla prima richiesta all’ultima fattura. Premium aggiunge gruppi, più team, altre valute, ordini di acquisto ai fornitori e più marchi.',
@@ -179,7 +179,7 @@ export const demo: SiteContent['demo'] = {
 export const switching: SiteContent['switching'] = {
   metaTitle: 'Passare da Excel a Traviosoft',
   metaDescription:
-    'Come passare da Excel, Word e WhatsApp in piena stagione: cosa importiamo, cosa controlli tu e come continuare a gestire i viaggi in corso mentre ne avvii di nuovi.',
+    'Come passare da Excel, Word e WhatsApp in piena stagione: cosa importiamo, cosa controlli tu e come continuare i viaggi in corso mentre avvii i nuovi.',
   title: 'Passare a Traviosoft',
   lead: 'Il passaggio avviene per tappe, accanto ai viaggi che stai gestendo.',
   timelineTitle: 'Come funziona',
@@ -331,9 +331,9 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'Chi siamo',
+  metaTitle: 'Informazioni su Traviosoft',
   metaDescription:
-    'Traviosoft è un software gestionale per agenzie di viaggio su misura e DMC: ogni viaggio in un unico posto, dalla prima richiesta alla fattura finale, con i tuoi dati ospitati nell’UE.',
+    'Gestionale per agenzie di viaggio su misura e DMC: ogni viaggio in un unico posto, dalla prima richiesta alla fattura finale, con dati ospitati nell’UE.',
   title: 'Chi siamo',
   lead: 'Traviosoft è un software gestionale per agenzie di viaggio su misura e DMC. Ogni viaggio è in un unico posto, dalla prima richiesta alla fattura finale.',
   blocks: [
@@ -358,6 +358,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'glossary', title: 'Glossario', body: 'I termini delle agenzie di viaggio e del software, una riga ciascuno.' },
   ],
   glossaryTitle: 'Glossario',
+  glossaryMetaTitle: 'Glossario dei termini dei viaggi su misura',
   glossaryMeta:
     'Definizioni semplici dei termini usati da agenzie di viaggio su misura e DMC: tariffa netta, commissione, voucher, rooming list, acconto e altro.',
   glossaryLead: 'Le parole che usi ogni giorno, e quelle del software, una riga ciascuna.'

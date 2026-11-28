@@ -5,7 +5,7 @@ const sell: JobPage = {
   slug: 'sell',
   metaTitle: 'Sell: requests, catalog and quotes with your margins',
   metaDescription:
-    'Every client request in one list, a catalog with prices by season and several suppliers per product, quotes priced with your margin and VAT, sent in the client’s language with a follow-up after 7 days.',
+    'Every client request in one list, a catalog with seasonal prices and several suppliers, and quotes with your margin and VAT, sent in the client’s language.',
   name: 'Sell',
   menuLine: 'From the first request to the accepted quote',
   step: '1 of 4',
@@ -100,7 +100,7 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Book and run the trip: orders, suppliers, client itinerary',
   metaDescription:
-    'Once a quote is accepted, every service of the trip is listed, ready to book. Booking requests go to suppliers by email, each service shows its booking status, and your client gets a day-by-day itinerary.',
+    'Once a quote is accepted, each service is ready to book: requests go to suppliers by email and your client gets a day-by-day itinerary.',
   name: 'Book and run',
   menuLine: 'From the accepted quote to the trip done',
   step: '2 of 4',
@@ -193,7 +193,7 @@ const getPaid: JobPage = {
   slug: 'get-paid',
   metaTitle: 'Get paid and keep the books: payments, invoices, dashboard',
   metaDescription:
-    'Deposit and balance planned on the quote, payment links in the email, invoices and credit notes made from the same numbers, and a dashboard with sales, trips, money in and money out.',
+    'Deposit and balance planned on the quote, payment links in the email, invoices and credit notes from the same figures, and a dashboard of money in and out.',
   name: 'Get paid',
   menuLine: 'Payments, invoices and your numbers',
   step: '3 of 4',
@@ -262,7 +262,7 @@ const setup: JobPage = {
   slug: 'setup',
   metaTitle: 'Your setup: brands, languages, team and data',
   metaDescription:
-    'Several brands in one account, documents in your client’s language, several currencies, country settings, your team, your data hosted in the EU, and connections to your other tools.',
+    'Several brands in one account, documents in your client’s language, several currencies, country settings, your team, EU hosting and links to your other tools.',
   name: 'Your setup',
   menuLine: 'Brands, languages, currencies, team and data',
   step: '4 of 4',

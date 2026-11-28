@@ -34,8 +34,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-spain',
     slug: 'fatturazione-agenzia-di-viaggi-spagna',
-    metaTitle: 'Fatturazione per agenzie di viaggi in Spagna: REAV, Veri*Factu e fattura elettronica',
-    metaDescription: 'Come fattura un’agenzia di viaggi o una DMC in Spagna: il regime del margine REAV, cosa riporta la fattura, le date di Veri*Factu e la regola della fattura elettronica B2B.',
+    metaTitle: 'Fatturazione per agenzie in Spagna: REAV e Veri*Factu',
+    metaDescription: 'Come fattura un’agenzia di viaggi o una DMC in Spagna: il regime REAV, cosa riporta la fattura, le date di Veri*Factu e la fattura elettronica B2B.',
     title: 'Fatturazione per agenzie di viaggi in Spagna',
     lead: 'In Spagna, un’agenzia che vende viaggi in nome proprio di solito paga l’IVA sul margine con il REAV. Le fatture devono uscire da un software conforme alle regole antifrode (Veri*Factu), e la fattura elettronica tra imprese diventa obbligatoria per fasi.',
     card: 'REAV, Veri*Factu e fattura elettronica B2B, con le date in vigore.',
@@ -67,8 +67,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-france',
     slug: 'fatturazione-agenzia-di-viaggi-francia',
-    metaTitle: 'Fatturazione per agenzie di viaggi in Francia: regime del margine e fattura elettronica',
-    metaDescription: 'Come fattura un’agenzia di viaggi in Francia: il regime del margine delle agenzie di viaggio, cosa riporta la fattura e le date della fattura elettronica da settembre 2026.',
+    metaTitle: 'Fatturazione per agenzie di viaggi in Francia',
+    metaDescription: 'Come fattura un’agenzia di viaggi in Francia: il regime del margine, cosa riporta la fattura e le date della fattura elettronica da settembre 2026.',
     title: 'Fatturazione per agenzie di viaggi in Francia',
     lead: 'Le agenzie di viaggi francesi che vendono in nome proprio pagano l’IVA sul margine. Dal 1° settembre 2026 ogni impresa deve poter ricevere fatture elettroniche tramite una piattaforma autorizzata, e le piccole e medie imprese devono emetterle dal 1° settembre 2027.',
     card: 'Il regime del margine, la fattura e le date della fattura elettronica.',
@@ -95,7 +95,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-germany',
     slug: 'fatturazione-agenzia-di-viaggi-germania',
-    metaTitle: 'Fatturazione per agenzie di viaggi in Germania: §25 UStG e fattura elettronica',
+    metaTitle: 'Fatturazione per agenzie di viaggi in Germania: §25 UStG',
     metaDescription: 'Come fattura un’agenzia di viaggi in Germania: il regime del margine del §25 UStG, la dicitura in fattura e le date per emettere fatture elettroniche.',
     title: 'Fatturazione per agenzie di viaggi in Germania',
     lead: 'I tour operator tedeschi pagano l’IVA sul margine secondo il §25 UStG. Per le vendite nazionali tra imprese devono emettere fatture elettroniche dal 2027 o dal 2028, secondo il fatturato.',
@@ -128,8 +128,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-belgium',
     slug: 'fatturazione-agenzia-di-viaggi-belgio',
-    metaTitle: 'Fatturazione per agenzie di viaggi in Belgio: regime del margine e fattura elettronica Peppol',
-    metaDescription: 'Come fattura un’agenzia di viaggi in Belgio: il regime del margine delle agenzie di viaggio e la fattura elettronica Peppol obbligatoria tra imprese da gennaio 2026.',
+    metaTitle: 'Fatturazione per agenzie di viaggi in Belgio: Peppol',
+    metaDescription: 'Come fattura un’agenzia di viaggi in Belgio: il regime del margine e la fattura elettronica Peppol, obbligatoria tra imprese da gennaio 2026.',
     title: 'Fatturazione per agenzie di viaggi in Belgio',
     lead: 'Le agenzie di viaggi belghe pagano l’IVA sul margine con il regime speciale delle agenzie di viaggio. Dal 1° gennaio 2026 le fatture tra imprese belghe sono fatture elettroniche strutturate inviate tramite Peppol.',
     card: 'Il regime del margine e la fattura elettronica Peppol dal 2026.',

@@ -10,7 +10,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const r = getContent(locale).resources;
-  return buildMetadata({ locale, path: '/glossary', title: r.glossaryTitle, description: r.glossaryMeta });
+  return buildMetadata({ locale, path: '/glossary', title: r.glossaryMetaTitle, description: r.glossaryMeta });
 }
 
 export default async function GlossaryPage({ params }: Props) {

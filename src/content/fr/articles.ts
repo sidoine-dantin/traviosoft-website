@@ -59,7 +59,7 @@ const compares: Cmp[] = [
     other: 'Excel et Word',
     metaTitle: 'Traviosoft ou Excel et Word pour une agence de voyages',
     metaDescription:
-      'Excel et Word sont le point de départ de presque toutes les agences. Devis, marges, réservations et factures : quand un logiciel conçu pour les voyages vaut la peine.',
+      'Excel et Word sont le point de départ de presque toutes les agences. Devis, marges, réservations et factures : quand un logiciel de voyage vaut la peine.',
     title: 'Traviosoft ou Excel et Word : quand passer à un logiciel de voyage',
     lead: 'Excel et Word sont souples, connus de tous et suffisants pour beaucoup d’agences qui vendent quelques voyages par an. Dès que plusieurs personnes, des saisons de prix et une numérotation de factures entrent en jeu, un logiciel conçu pour les voyages prend ce travail en charge.',
     card: 'Tableur ou logiciel : quand le changement vaut la peine, et quand il ne l’est pas.',
@@ -181,7 +181,7 @@ const compares: Cmp[] = [
     other: 'Holded',
     metaTitle: 'Traviosoft ou Holded pour une agence de voyages',
     metaDescription:
-      'Holded est un logiciel de gestion pour PME ; Traviosoft est conçu pour le voyage. Sur quoi chacun se concentre, et comment une agence peut utiliser les deux ensemble.',
+      'Holded est un logiciel de gestion pour PME ; Traviosoft est conçu pour le voyage. Ce que fait chacun, et comment une agence peut utiliser les deux.',
     title: 'Traviosoft ou Holded : logiciel de voyage ou ERP généraliste',
     lead: 'Holded est un logiciel de facturation, de comptabilité et de gestion pour PME, très répandu en Espagne. Traviosoft est construit autour du voyage. Beaucoup d’agences utilisent les deux : Traviosoft pour les voyages, Holded pour l’entreprise.',
     card: 'Un outil généraliste pour PME et un outil de voyage : ce que fait chacun.',
@@ -336,7 +336,7 @@ const compares: Cmp[] = [
     other: 'Kaptio',
     metaTitle: 'Traviosoft ou Kaptio pour voyagistes et voyages sur mesure',
     metaDescription:
-      'Kaptio est un logiciel pour les voyages de plusieurs jours : croisières, train, circuits en groupe et sur mesure. Pour qui est chacun, société, prix et démarrage comparés.',
+      'Kaptio est un logiciel pour les voyages de plusieurs jours : croisières, train, circuits et sur mesure. Public, société, prix et démarrage comparés.',
     title: 'Traviosoft ou Kaptio : deux systèmes pour les voyages de plusieurs jours',
     lead: 'Kaptio, fondé à Reykjavik en 2012, réunit relation client, contrats, tarification, stock, réservations, paiements et opérations pour les croisières, le train, les circuits en groupe et le sur mesure. Traviosoft couvre tout le voyage, de la première demande à la dernière facture, avec des documents en cinq langues et un prix publié.',
     card: 'Une plateforme pour les voyages de plusieurs jours et un seul flux de la demande à la facture, avec un prix publié.',
@@ -372,9 +372,9 @@ const compares: Cmp[] = [
     updated: '2026-11-14',
     slug: 'traviosoft-vs-tourcms',
     other: 'TourCMS',
-    metaTitle: 'Traviosoft ou TourCMS : voyages sur mesure ou excursions et activités',
+    metaTitle: 'Traviosoft ou TourCMS : voyages sur mesure ou excursions',
     metaDescription:
-      'TourCMS est un logiciel de réservation et de gestion des canaux pour les opérateurs d’excursions et d’activités. Pour qui est chacun, société, prix publiés et langues comparés.',
+      'TourCMS est un logiciel de réservation et de canaux de vente pour les excursions et activités. Public, société, prix publiés et langues comparés.',
     title: 'Traviosoft ou TourCMS : voyages sur mesure, excursions et activités',
     lead: 'TourCMS, exploité par Palisis en Suisse, propose depuis 2003 la réservation, la distribution et la gestion des canaux aux opérateurs d’excursions et d’activités. Traviosoft est conçu pour les voyages sur mesure, de la première demande à la dernière facture, avec des documents en cinq langues.',
     card: 'Réservations et gestion des canaux pour excursions et activités, et un seul flux pour le sur mesure.',
@@ -507,7 +507,7 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'devis-voyage-sur-mesure-avec-marge',
-  metaTitle: 'Comment se calcule le prix d’un voyage sur mesure : marge et commission',
+  metaTitle: 'Prix d’un voyage sur mesure : marge et commission',
   metaDescription:
     'Comment se calcule le prix d’un voyage sur mesure à partir des tarifs nets, avec une marge sur le prix de vente et une commission, sur un exemple chiffré.',
   title: 'Comment se calcule le prix d’un voyage sur mesure',
@@ -586,7 +586,7 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-groupes-mice',
-  metaTitle: 'Rooming list pour groupes et MICE : ce que c’est et ce qu’elle contient',
+  metaTitle: 'Rooming list pour groupes et MICE : son contenu',
   metaDescription:
     'Ce qu’est une rooming list dans les voyages de groupe et le MICE, les informations qu’elle contient en général, un exemple et l’usage qu’en fait l’hôtel.',
   title: 'La rooming list pour les groupes et le MICE',
@@ -652,7 +652,7 @@ const fromExcel: Article = {
   slug: 'de-excel-a-un-logiciel-agence-de-voyages',
   metaTitle: 'D’Excel à un logiciel d’agence de voyages : ce qui change',
   metaDescription:
-    'Ce qu’une agence de voyages garde en général dans des tableurs, ce qui passe dans un logiciel de voyage et ce qui change quand les voyages sont dans un seul système.',
+    'Ce qu’une agence garde en général dans des tableurs, ce qui passe dans un logiciel de voyage et ce qui change quand tout est dans un seul système.',
   title: 'D’Excel à un logiciel d’agence de voyages',
   lead: 'Beaucoup d’agences travaillent avec des tableurs et des documents : une liste de produits, une liste de prestataires, les clients et un fichier par devis. Un logiciel de voyage réunit ces informations au même endroit, reliées à chaque voyage.',
   updated: '2026-11-14',
@@ -705,9 +705,9 @@ const aiTools: Article = {
   key: 'ai-assistant-mcp',
   kind: 'guide',
   slug: 'assistant-ia-mcp-agence-de-voyages',
-  metaTitle: 'IA pour agences de voyages : assistant intégré et connecteur MCP pour Claude, ChatGPT et Gemini',
+  metaTitle: 'IA pour agences de voyages : assistant et connecteur MCP',
   metaDescription:
-    'Comment une agence de voyages peut utiliser l’IA sur ses propres données : l’assistant intégré à Traviosoft et le connecteur MCP qui relie Claude, ChatGPT et d’autres outils d’IA à vos devis, réservations et paiements.',
+    'Comment une agence de voyages peut utiliser l’IA sur ses données : l’assistant intégré à Traviosoft et le connecteur MCP pour Claude, ChatGPT et d’autres IA.',
   title: 'L’IA dans votre agence de voyages',
   lead: 'Traviosoft fonctionne avec l’IA de deux façons. L’assistant intégré travaille dans l’application pour chaque personne qui l’utilise. Le connecteur MCP permet à l’outil d’IA que vous utilisez déjà, comme Claude ou ChatGPT, de lire les données de votre agence, et il vous demande votre accord avant de modifier quoi que ce soit.',
   updated: '2026-11-14',

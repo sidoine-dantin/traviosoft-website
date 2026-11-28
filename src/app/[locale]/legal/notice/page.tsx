@@ -9,7 +9,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'legal' });
-  return buildMetadata({ locale, path: '/legal/notice', title: t('notice_title') });
+  return buildMetadata({ locale, path: '/legal/notice', title: t('notice_title'), description: t('notice_meta') });
 }
 
 export default async function NoticePage({ params }: Props) {

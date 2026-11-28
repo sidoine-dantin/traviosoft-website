@@ -5,7 +5,7 @@ const sell: JobPage = {
   slug: 'sell',
   metaTitle: 'Vendre : demandes, catalogue et devis',
   metaDescription:
-    'Toutes les demandes clients dans une liste, un catalogue avec prix par saison et plusieurs prestataires par produit, des devis avec votre marge et la TVA, envoyés dans la langue du client et relancés après 7 jours.',
+    'Les demandes dans une liste, un catalogue avec prix par saison et plusieurs prestataires, des devis avec votre marge et la TVA, dans la langue du client.',
   name: 'Vendre',
   menuLine: 'De la première demande au devis accepté',
   step: '1 sur 4',
@@ -100,7 +100,7 @@ const book: JobPage = {
   slug: 'book',
   metaTitle: 'Réserver et suivre le voyage',
   metaDescription:
-    'Une fois le devis accepté, toutes les prestations du voyage sont listées, prêtes à réserver. Les demandes de réservation partent aux prestataires par e-mail, chaque prestation affiche son statut et votre client reçoit un programme jour par jour.',
+    'Devis accepté, chaque prestation est prête à réserver : les demandes partent aux prestataires par e-mail et le client reçoit son programme jour par jour.',
   name: 'Réserver et suivre',
   menuLine: 'Du devis accepté au voyage terminé',
   step: '2 sur 4',
@@ -262,7 +262,7 @@ const setup: JobPage = {
   slug: 'setup',
   metaTitle: 'Votre configuration : marques, langues, données',
   metaDescription:
-    'Plusieurs marques dans un compte, documents dans la langue du client, plusieurs devises, réglages par pays, votre équipe, vos données dans l’UE et des connexions à vos autres outils.',
+    'Plusieurs marques, documents dans la langue du client, plusieurs devises, réglages par pays, votre équipe, données dans l’UE et vos autres outils connectés.',
   name: 'Votre configuration',
   menuLine: 'Marques, langues, devises, équipe et données',
   step: '4 sur 4',

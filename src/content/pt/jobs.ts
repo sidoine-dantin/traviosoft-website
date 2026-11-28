@@ -5,7 +5,7 @@ const sell: JobPage = {
   slug: 'sell',
   metaTitle: 'Vender: pedidos, catálogo e orçamentos com as suas margens',
   metaDescription:
-    'Todos os pedidos de clientes numa lista, um catálogo com preços por época e vários fornecedores por produto, orçamentos com a sua margem e o IVA, enviados na língua do cliente e com seguimento ao fim de 7 dias.',
+    'Todos os pedidos numa lista, um catálogo com preços por época e vários fornecedores, e orçamentos com a sua margem e o IVA, na língua do cliente.',
   name: 'Vender',
   menuLine: 'Do primeiro pedido ao orçamento aceite',
   step: '1 de 4',
@@ -98,9 +98,9 @@ const sell: JobPage = {
 
 const book: JobPage = {
   slug: 'book',
-  metaTitle: 'Reservar e acompanhar a viagem: reservas, fornecedores, itinerário do cliente',
+  metaTitle: 'Reservar e acompanhar a viagem: fornecedores e itinerário',
   metaDescription:
-    'Quando um orçamento é aceite, todos os serviços da viagem ficam numa lista, prontos a reservar. Os pedidos de reserva seguem para os fornecedores por email, cada serviço mostra o seu estado e o seu cliente recebe um itinerário dia a dia.',
+    'Aceite o orçamento, cada serviço fica pronto a reservar: os pedidos seguem para os fornecedores por email e o cliente recebe um itinerário dia a dia.',
   name: 'Reservar e acompanhar',
   menuLine: 'Do orçamento aceite à viagem concluída',
   step: '2 de 4',
@@ -193,7 +193,7 @@ const getPaid: JobPage = {
   slug: 'get-paid',
   metaTitle: 'Receber e manter as contas: pagamentos, faturas, painel',
   metaDescription:
-    'Adiantamento e saldo previstos no orçamento, links de pagamento no email, faturas e notas de crédito feitas a partir dos mesmos números, e um painel com vendas, viagens, entradas e saídas.',
+    'Adiantamento e saldo no orçamento, links de pagamento no email, faturas e notas de crédito a partir dos mesmos números, e um painel com entradas e saídas.',
   name: 'Receber',
   menuLine: 'Pagamentos, faturas e os seus números',
   step: '3 de 4',
@@ -262,7 +262,7 @@ const setup: JobPage = {
   slug: 'setup',
   metaTitle: 'A sua configuração: marcas, línguas, equipa e dados',
   metaDescription:
-    'Várias marcas numa só conta, documentos na língua do cliente, várias moedas, definições por país, a sua equipa, os seus dados alojados na UE e ligações às suas outras ferramentas.',
+    'Várias marcas numa conta, documentos na língua do cliente, várias moedas, definições por país, a sua equipa, dados na UE e ligações às suas ferramentas.',
   name: 'A sua configuração',
   menuLine: 'Marcas, línguas, moedas, equipa e dados',
   step: '4 de 4',

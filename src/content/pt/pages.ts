@@ -6,7 +6,7 @@ const FREE = 'Gratuito com faturação anual*';
 export const pricing: SiteContent['pricing'] = {
   metaTitle: `Preços: Classic desde ${PRICES.classic.yearly} EUR por mês, Premium desde ${PRICES.premium.yearly} EUR`,
   metaDescription:
-    `Dois planos para agências de viagens à medida e DMC. O Classic gere toda a agência desde ${PRICES.classic.yearly} EUR por mês; o Premium acrescenta grupos, várias equipas, moedas, notas de encomenda a fornecedores e várias marcas. ${PRICES.usersIncluded} utilizadores incluídos, implementação gratuita com faturação anual.`,
+    `Dois planos para agências à medida e DMC: o Classic gere toda a agência, o Premium acrescenta grupos, equipas, moedas e marcas. ${PRICES.usersIncluded} utilizadores incluídos.`,
   title: 'Preços',
   productLink: 'Ver o produto',
   lead: 'O Classic cobre toda a agência, do primeiro pedido à última fatura. O Premium acrescenta grupos, várias equipas, outras moedas, notas de encomenda a fornecedores e várias marcas.',
@@ -331,9 +331,9 @@ export const faqPage: SiteContent['faqPage'] = {
 };
 
 export const about: SiteContent['about'] = {
-  metaTitle: 'Sobre nós',
+  metaTitle: 'Sobre o Traviosoft',
   metaDescription:
-    'O Traviosoft é um software de gestão para agências de viagens à medida e DMC: cada viagem num só lugar, do primeiro pedido à fatura final, com os seus dados alojados na UE.',
+    'Software de gestão para agências de viagens à medida e DMC: cada viagem num só lugar, do primeiro pedido à fatura final, com dados alojados na UE.',
   title: 'Sobre nós',
   lead: 'O Traviosoft é um software de gestão para agências de viagens à medida e DMC. Cada viagem fica num só lugar, do primeiro pedido à fatura final.',
   blocks: [
@@ -358,6 +358,7 @@ export const resources: SiteContent['resources'] = {
     { kind: 'glossary', title: 'Glossário', body: 'Os termos das agências de viagens e do software, uma linha cada.' },
   ],
   glossaryTitle: 'Glossário',
+  glossaryMetaTitle: 'Glossário de termos de viagens à medida',
   glossaryMeta:
     'Definições simples dos termos que as agências de viagens à medida e as DMC usam: tarifa net, comissão, voucher, rooming list, adiantamento e outros.',
   glossaryLead: 'As palavras que usa todos os dias, e as do software, uma linha cada.'

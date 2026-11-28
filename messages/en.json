@@ -399,8 +399,11 @@
   },
   "legal": {
     "privacy_title": "Privacy Policy",
+    "privacy_meta": "How traviosoft.com uses your information: what we collect, cookies and advertising, how long we keep it and your rights.",
     "terms_title": "Terms of Service",
+    "terms_meta": "The terms for using traviosoft.com: the site, the demo booking, intellectual property, external links, liability and governing law.",
     "notice_title": "Legal Notice",
+    "notice_meta": "Who publishes traviosoft.com, who hosts it, intellectual property, personal data and how to contact us.",
     "back_home": "Back to home",
     "updated_label": "Last updated",
     "updated_date": "November 2026",
@@ -566,7 +569,9 @@
       ]
     },
     "app_privacy_title": "App Privacy Notice",
+    "app_privacy_meta": "How the Traviosoft app uses the personal data of agency staff: what we collect, why, who receives it, transfers outside the EU and your rights.",
     "subprocessors_title": "Sub-processors",
+    "subprocessors_meta": "The providers that process data for the Traviosoft app: hosting, email, the AI assistant, translation, addresses and error tracking, with their countries.",
     "app_privacy": {
       "intro": "This notice explains how we handle the personal data of the people who use the Traviosoft application: the staff of the agencies that subscribe to it. The data an agency records about its own clients, travellers and suppliers belongs to that agency, which decides how it is used. We process that data only on the agency's behalf, under our data processing agreement, so please contact the agency directly about it.",
       "sections": [
