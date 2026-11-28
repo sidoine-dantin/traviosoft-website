@@ -33,6 +33,9 @@ export const footer: SiteContent['footer'] = {
   posts: [
     { slug: 'devis-voyage-sur-mesure-avec-marge', label: 'Prix d’un voyage sur mesure' },
     { slug: 'rooming-list-groupes-mice', label: 'La rooming list' },
+    { slug: 'qu-est-ce-qu-une-dmc', label: 'Qu’est-ce qu’une DMC' },
+    { slug: 'allotement-hotel-date-de-release', label: 'L’allotement hôtelier' },
+    { slug: 'devis-voyage-a-forfait-informations', label: 'Le devis de voyage à forfait' },
     { slug: 'de-excel-a-un-logiciel-agence-de-voyages', label: 'D’Excel à un logiciel' },
     { slug: 'rgpd-agence-de-voyages', label: 'RGPD et agences' },
     { slug: 'tva-regime-marge-agences-de-voyages-ue-vida', label: 'TVA sur la marge' }
@@ -66,6 +69,7 @@ export const common: SiteContent['common'] = {
   updated: 'Dernière mise à jour',
   readMore: 'Lire',
   faqTitle: 'Questions',
+  readNext: 'Pages liées',
   backToResources: 'Toutes les ressources',
   allResources: 'Voir toutes les ressources',
   perMonth: 'EUR / mois',

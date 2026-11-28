@@ -1,5 +1,6 @@
 import type { Article, ArticleBlock, Faq } from '../types';
 import { invoicingGuides } from './invoicing';
+import { posts } from './posts';
 import { topicGuides } from './topics';
 import { PRICES } from '../prices';
 
@@ -513,6 +514,7 @@ const quote: Article = {
   title: 'Comment se calcule le prix d’un voyage sur mesure',
   lead: 'Le prix d’un voyage sur mesure se construit à partir de trois montants : ce que facturent les prestataires (les tarifs nets), ce que gagne l’agence (la marge) et, quand une autre agence vend le voyage, sa commission. Cette page montre le calcul sur un exemple.',
   updated: '2026-11-14',
+  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
   card: 'Tarifs nets, marge sur le prix de vente et commission, calculés sur un exemple.',
   blocks: [
     { type: 'h2', text: 'Majoration et marge pour un même coût', id: 'notions' },
@@ -586,12 +588,13 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-groupes-mice',
-  metaTitle: 'Rooming list pour groupes et MICE : son contenu',
+  metaTitle: 'Rooming list : définition, colonnes et exemple pour groupes',
   metaDescription:
     'Ce qu’est une rooming list dans les voyages de groupe et le MICE, les informations qu’elle contient en général, un exemple et l’usage qu’en fait l’hôtel.',
   title: 'La rooming list pour les groupes et le MICE',
   lead: 'Une rooming list indique à l’hôtel qui dort dans chaque chambre d’un groupe, avec le type de chambre, les dates et les demandes particulières. L’hôtel s’en sert pour attribuer les chambres du bloc qu’il réserve au groupe.',
-  updated: '2026-11-14',
+  updated: '2026-11-28',
+  related: ['hotel-allotment', 'what-is-a-dmc', 'package-quote'],
   card: 'Ce qu’est une rooming list, ses colonnes habituelles et un exemple.',
   blocks: [
     {
@@ -620,6 +623,23 @@ const rooming: Article = {
       type: 'p',
       text: 'Un exemple de taille : un groupe de 22 personnes en 9 chambres twin (18 personnes) et 4 individuelles occupe 13 chambres. Le total de personnes sur la liste correspond au groupe.'
     },
+    { type: 'h2', text: 'Les abréviations des types de chambre', id: 'abreviations' },
+    {
+      type: 'table',
+      head: ['Abréviation', 'Chambre'],
+      rows: [
+        ['SGL', 'Single : une personne'],
+        ['DBL', 'Double : deux personnes, un lit'],
+        ['TWN', 'Twin : deux personnes, deux lits'],
+        ['TPL', 'Triple : trois personnes'],
+        ['DUS', 'Double à usage individuel : une personne dans une chambre double']
+      ]
+    },
+    { type: 'h2', text: 'Quand l’hôtel l’attend', id: 'date-limite' },
+    {
+      type: 'p',
+      text: 'Le contrat de groupe fixe une date limite, après laquelle les chambres sans nom sur la liste reviennent à l’hôtel. Par exemple, les conditions publiées par Fáilte Ireland pour les groupes demandent la rooming list complète, avec le solde, 30 jours avant l’arrivée. La page [L’allotement hôtelier et la date de release](/guides/allotement-hotel-date-de-release) explique la date de release et le cut-off.'
+    },
     { type: 'h2', text: 'Qui y figure', id: 'qui' },
     {
       type: 'p',
@@ -639,7 +659,8 @@ const rooming: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'La rooming list sert-elle seulement aux grands groupes ?', a: ['Non. Elle sert dès qu’un hôtel doit savoir qui dort dans quelle chambre, du petit groupe au grand événement.'] },
+        { q: 'Que veut dire rooming list ?', a: ['La liste des chambres d’un groupe, avec le nom des personnes dans chaque chambre, envoyée à l’hôtel avant l’arrivée.'] },
+        { q: 'La rooming list sert-elle seulement aux grands groupes ?', a: ['Elle sert dès qu’un hôtel doit savoir qui dort dans quelle chambre, du petit groupe au grand événement.'] },
         { q: 'Quelle différence entre une rooming list et une réservation ?', a: ['La réservation bloque les chambres. La rooming list dit qui occupe chacune d’elles.'] }
       ]
     }
@@ -765,4 +786,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...topicGuides, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...posts, ...topicGuides, ...invoicingGuides];

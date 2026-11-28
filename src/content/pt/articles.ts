@@ -1,5 +1,6 @@
 import type { Article, ArticleBlock, Faq } from '../types';
 import { invoicingGuides } from './invoicing';
+import { posts } from './posts';
 import { topicGuides } from './topics';
 import { PRICES } from '../prices';
 
@@ -509,6 +510,7 @@ const quote: Article = {
   title: 'Como se calcula o preço de uma viagem à medida',
   lead: 'O preço de uma viagem à medida constrói-se com três montantes: o que os fornecedores cobram (as tarifas net), o que a agência ganha (a margem) e, quando outra agência vende a viagem, a sua comissão. Esta página mostra o cálculo num exemplo.',
   updated: '2026-11-14',
+  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
   card: 'Tarifas net, margem sobre o preço de venda e comissão, calculadas num exemplo.',
   blocks: [
     { type: 'h2', text: 'Markup e margem sobre o mesmo custo', id: 'conceitos' },
@@ -582,12 +584,13 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-grupos-mice',
-  metaTitle: 'Rooming list para grupos e MICE: o que é e o que contém',
+  metaTitle: 'Rooming list: o que é, colunas e exemplo para grupos',
   metaDescription:
     'O que é uma rooming list nas viagens de grupo e no MICE, a informação que costuma conter, um exemplo e como os hotéis a usam.',
   title: 'A rooming list para grupos e eventos MICE',
   lead: 'Uma rooming list indica ao hotel quem dorme em cada quarto de um grupo, com o tipo de quarto, as datas e os pedidos especiais. O hotel usa-a para atribuir os quartos do bloco que reserva para o grupo.',
-  updated: '2026-11-14',
+  updated: '2026-11-28',
+  related: ['hotel-allotment', 'what-is-a-dmc', 'package-quote'],
   card: 'O que é uma rooming list, as colunas que costuma ter e um exemplo.',
   blocks: [
     {
@@ -616,6 +619,23 @@ const rooming: Article = {
       type: 'p',
       text: 'Um exemplo de dimensão: um grupo de 22 pessoas em 9 quartos twin (18 pessoas) e 4 quartos single ocupa 13 quartos. O total de pessoas na lista corresponde ao grupo.'
     },
+    { type: 'h2', text: 'As abreviaturas dos tipos de quarto', id: 'abreviaturas' },
+    {
+      type: 'table',
+      head: ['Abreviatura', 'Quarto'],
+      rows: [
+        ['SGL', 'Individual: uma pessoa'],
+        ['DBL', 'Duplo: duas pessoas, uma cama'],
+        ['TWN', 'Twin: duas pessoas, duas camas'],
+        ['TPL', 'Triplo: três pessoas'],
+        ['DUS', 'Duplo para uso individual: uma pessoa num quarto duplo']
+      ]
+    },
+    { type: 'h2', text: 'Quando o hotel a espera', id: 'prazo' },
+    {
+      type: 'p',
+      text: 'O contrato de grupo fixa uma data limite, depois da qual os quartos sem nome na lista voltam para o hotel. Por exemplo, as condições publicadas pela Fáilte Ireland para grupos pedem a rooming list completa, com o saldo, 30 dias antes da chegada. A página [O allotment hoteleiro e a data de release](/guides/allotment-hotel-release) explica a data de release e o cut-off.'
+    },
     { type: 'h2', text: 'Quem aparece na lista', id: 'quem' },
     {
       type: 'p',
@@ -635,7 +655,8 @@ const rooming: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'A rooming list é só para grupos grandes?', a: ['Não. Usa-se sempre que um hotel precisa de saber quem dorme em que quarto, de um pequeno grupo a um grande evento.'] },
+        { q: 'O que significa rooming list?', a: ['A lista dos quartos de um grupo, com o nome das pessoas em cada quarto, enviada ao hotel antes da chegada.'] },
+        { q: 'A rooming list é só para grupos grandes?', a: ['Usa-se sempre que um hotel precisa de saber quem dorme em que quarto, de um pequeno grupo a um grande evento.'] },
         { q: 'Qual é a diferença entre uma rooming list e uma reserva?', a: ['A reserva garante os quartos. A rooming list indica quem ocupa cada um deles.'] }
       ]
     }
@@ -761,4 +782,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...topicGuides, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...posts, ...topicGuides, ...invoicingGuides];

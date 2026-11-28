@@ -33,6 +33,9 @@ export const footer: SiteContent['footer'] = {
   posts: [
     { slug: 'tailor-made-quote-with-margins', label: 'Pricing a tailor-made trip' },
     { slug: 'rooming-list-template-groups-mice', label: 'Rooming lists' },
+    { slug: 'what-is-a-dmc', label: 'What is a DMC' },
+    { slug: 'hotel-allotment-release-date', label: 'Hotel allotments' },
+    { slug: 'package-travel-quote-information', label: 'Package travel quotes' },
     { slug: 'move-from-excel-to-travel-software', label: 'From Excel to software' },
     { slug: 'gdpr-travel-agency', label: 'GDPR for agencies' },
     { slug: 'eu-vat-margin-scheme-travel-agents-vida', label: 'EU VAT margin scheme' }
@@ -66,6 +69,7 @@ export const common: SiteContent['common'] = {
   updated: 'Last updated',
   readMore: 'Read',
   faqTitle: 'Questions',
+  readNext: 'Related pages',
   backToResources: 'All resources',
   allResources: 'See all resources',
   perMonth: 'EUR / month',

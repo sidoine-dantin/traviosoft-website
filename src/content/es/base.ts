@@ -33,6 +33,9 @@ export const footer: SiteContent['footer'] = {
   posts: [
     { slug: 'presupuesto-viaje-a-medida-con-margen', label: 'Precio de un viaje a medida' },
     { slug: 'rooming-list-grupos-mice', label: 'La rooming list' },
+    { slug: 'que-es-una-dmc', label: 'Qué es una DMC' },
+    { slug: 'cupo-hotel-allotment-release', label: 'El cupo de hotel' },
+    { slug: 'presupuesto-viaje-combinado-informacion', label: 'El presupuesto de un viaje combinado' },
     { slug: 'de-excel-a-un-software-de-agencia', label: 'De Excel a un software' },
     { slug: 'rgpd-agencia-de-viajes', label: 'RGPD y agencias' },
     { slug: 'iva-regimen-margen-agencias-de-viajes-ue-vida', label: 'IVA de las agencias en la UE' }
@@ -68,6 +71,7 @@ export const common: SiteContent['common'] = {
   updated: 'Última actualización',
   readMore: 'Leer',
   faqTitle: 'Preguntas',
+  readNext: 'Páginas relacionadas',
   backToResources: 'Todos los recursos',
   allResources: 'Ver todos los recursos',
   perMonth: 'EUR / mes',

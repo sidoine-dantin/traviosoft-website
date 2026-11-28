@@ -1,5 +1,6 @@
 import type { Article, ArticleBlock, Faq } from '../types';
 import { invoicingGuides } from './invoicing';
+import { posts } from './posts';
 import { topicGuides } from './topics';
 import { PRICES } from '../prices';
 
@@ -409,7 +410,7 @@ const best: Article = {
   key: 'best-dmc-software',
   kind: 'best',
   slug: 'migliore-gestionale-dmc',
-  metaTitle: 'Il miglior gestionale per DMC e agenzie incoming (2026)',
+  metaTitle: 'Gestionale per agenzie di viaggio e DMC: confronto (2026)',
   metaDescription:
     'Un confronto tra Traviosoft, Ezus, Tourplan, Tourwriter, Lemax, Kaptio, GIAV ed Excel: a chi si rivolge ciascuno, prezzi pubblicati, lingue e punti di forza.',
   title: 'Il miglior gestionale per DMC e agenzie incoming (2026)',
@@ -503,12 +504,13 @@ const quote: Article = {
   key: 'quote-with-margins',
   kind: 'guide',
   slug: 'preventivo-viaggio-su-misura-con-margine',
-  metaTitle: 'Prezzo di un viaggio su misura: margine e commissione',
+  metaTitle: 'Come si calcola il prezzo di un viaggio su misura',
   metaDescription:
     'Come si calcola il prezzo di un viaggio su misura dalle tariffe nette, con un margine sul prezzo di vendita e una commissione, in un esempio con le cifre.',
   title: 'Come si calcola il prezzo di un viaggio su misura',
   lead: 'Il prezzo di un viaggio su misura si costruisce con tre importi: quanto chiedono i fornitori (le tariffe nette), quanto guadagna l’agenzia (il margine) e, quando un’altra agenzia vende il viaggio, la sua commissione. Questa pagina mostra il calcolo su un esempio.',
   updated: '2026-11-14',
+  related: ['net-commissionable-rates', 'package-quote', 'what-is-a-dmc'],
   card: 'Tariffe nette, margine sul prezzo di vendita e commissione, calcolati su un esempio.',
   blocks: [
     { type: 'h2', text: 'Ricarico e margine sullo stesso costo', id: 'concetti' },
@@ -582,12 +584,13 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-gruppi-mice',
-  metaTitle: 'Rooming list per gruppi e MICE: cos’è e cosa contiene',
+  metaTitle: 'Rooming list: cos’è, colonne ed esempio per gruppi',
   metaDescription:
     'Cos’è una rooming list nei viaggi di gruppo e nel MICE, le informazioni che contiene di solito, un esempio e come la usano gli hotel.',
   title: 'La rooming list per gruppi ed eventi MICE',
   lead: 'Una rooming list dice all’hotel chi dorme in ogni camera di un gruppo, con la tipologia di camera, le date e le eventuali richieste. L’hotel la usa per assegnare le camere del blocco che tiene per il gruppo.',
-  updated: '2026-11-14',
+  updated: '2026-11-28',
+  related: ['hotel-allotment', 'what-is-a-dmc', 'package-quote'],
   card: 'Cos’è una rooming list, le colonne che ha di solito e un esempio.',
   blocks: [
     {
@@ -616,6 +619,23 @@ const rooming: Article = {
       type: 'p',
       text: 'Un esempio di dimensioni: un gruppo di 22 persone in 9 camere doppie a letti separati (18 persone) e 4 singole usa 13 camere. Il totale delle persone nella lista corrisponde al gruppo.'
     },
+    { type: 'h2', text: 'Le sigle dei tipi di camera', id: 'sigle' },
+    {
+      type: 'table',
+      head: ['Sigla', 'Camera'],
+      rows: [
+        ['SGL', 'Singola: una persona'],
+        ['DBL', 'Doppia: due persone, un letto'],
+        ['TWN', 'Twin: due persone, due letti'],
+        ['TPL', 'Tripla: tre persone'],
+        ['DUS', 'Doppia uso singola: una persona in una camera doppia']
+      ]
+    },
+    { type: 'h2', text: 'Quando la aspetta l’hotel', id: 'scadenza' },
+    {
+      type: 'p',
+      text: 'Il contratto di gruppo fissa una data limite, dopo la quale le camere senza nome nella lista tornano all’hotel. Per esempio, le condizioni pubblicate da Fáilte Ireland per i gruppi chiedono la rooming list completa, con il saldo, 30 giorni prima dell’arrivo. La pagina [L’allotment alberghiero e la data di release](/guides/allotment-hotel-release) spiega la data di release e il cut-off.'
+    },
     { type: 'h2', text: 'Chi compare nella lista', id: 'chi' },
     {
       type: 'p',
@@ -635,7 +655,8 @@ const rooming: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'La rooming list serve solo per i grandi gruppi?', a: ['No. Si usa ogni volta che un hotel deve sapere chi dorme in quale camera, dal piccolo gruppo al grande evento.'] },
+        { q: 'Cosa significa rooming list?', a: ['L’elenco delle camere di un gruppo, con i nomi delle persone in ogni camera, inviato all’hotel prima dell’arrivo.'] },
+        { q: 'La rooming list serve solo per i grandi gruppi?', a: ['Si usa ogni volta che un hotel deve sapere chi dorme in quale camera, dal piccolo gruppo al grande evento.'] },
         { q: 'Che differenza c’è tra una rooming list e una prenotazione?', a: ['La prenotazione blocca le camere. La rooming list dice chi occupa ciascuna di esse.'] }
       ]
     }
@@ -761,4 +782,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...topicGuides, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...posts, ...topicGuides, ...invoicingGuides];
