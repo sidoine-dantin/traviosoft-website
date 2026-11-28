@@ -4,8 +4,12 @@ import { FaqList, FaqSchema } from './faq';
 import { JsonLd } from './json-ld';
 import { baseUrl, ORG_ID } from '@/lib/seo';
 
+/** French puts a space before : ; ? ! and inside « »; a no-break space keeps the sign on the same line as its word. */
+const keepTogether = (t: string) => t.replace(/ ([:;?!»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
+
 /** Inline [label](/path) links and **bold** inside article text. */
-function Inline({ text }: { text: string }) {
+function Inline({ text: raw }: { text: string }) {
+  const text = keepTogether(raw);
   const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
   return (
     <>
@@ -22,8 +26,8 @@ function Inline({ text }: { text: string }) {
 
 function Block({ b }: { b: ArticleBlock }) {
   switch (b.type) {
-    case 'h2': return <h2 id={b.id}>{b.text}</h2>;
-    case 'h3': return <h3>{b.text}</h3>;
+    case 'h2': return <h2 id={b.id}>{keepTogether(b.text)}</h2>;
+    case 'h3': return <h3>{keepTogether(b.text)}</h3>;
     case 'p': return <p><Inline text={b.text} /></p>;
     case 'list': return b.ordered
       ? <ol>{b.items.map(i => <li key={i}><Inline text={i} /></li>)}</ol>
@@ -55,6 +59,13 @@ function Block({ b }: { b: ArticleBlock }) {
 }
 
 export function ArticleView({ c, a, path }: { c: SiteContent; a: Article; path: string }) {
+  // Links to related pages in the same language, so each article leads to the next one and to the product pages.
+  const related = (a.related ?? []).flatMap(k => {
+    const r = c.articles.find(x => x.key === k);
+    if (!r) return [];
+    const base = r.kind === 'compare' || r.kind === 'best' ? '/compare' : '/guides';
+    return [{ key: k, title: r.title, href: `${base}/${r.slug}` }];
+  });
   const toc = a.blocks.filter((b): b is Extract<ArticleBlock, { type: 'h2' }> => b.type === 'h2' && !!b.id);
   const date = new Date(a.updated + 'T12:00:00Z').toLocaleDateString(c.locale, { year: 'numeric', month: 'long', day: 'numeric' });
   const schema = {
@@ -96,6 +107,12 @@ export function ArticleView({ c, a, path }: { c: SiteContent; a: Article; path: 
           </nav>
         )}
         {a.blocks.map((b, i) => <Block key={i} b={b} />)}
+        {related.length > 0 && (
+          <nav className="related" aria-label={c.common.readNext}>
+            <h2>{c.common.readNext}</h2>
+            <ul>{related.map(r => <li key={r.key}><Link href={r.href}>{r.title}</Link></li>)}</ul>
+          </nav>
+        )}
       </div>
     </article>
   );

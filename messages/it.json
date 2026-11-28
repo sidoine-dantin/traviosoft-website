@@ -616,7 +616,7 @@
           "heading": "Per quanto tempo li conserviamo",
           "body": [
             "Il tuo account è conservato finché esiste nello spazio della tua agenzia. Alla fine del contratto dell’agenzia, è cancellato con lo spazio, una volta terminato il periodo di recupero dei dati.",
-            "I registri di sicurezza sono conservati 13 mesi, i dati d’uso un anno e i rapporti di errore 90 giorni. La traccia delle azioni dell’assistente IA è conservata 90 giorni. I messaggi di supporto sono conservati tre anni dopo il nostro ultimo scambio, e le fatture dieci anni, come richiede la legge contabile francese."
+            "I registri di sicurezza sono conservati al massimo finché esiste lo spazio della tua agenzia, i dati d’uso un anno e i rapporti di errore al massimo 90 giorni. La traccia delle azioni dell’assistente IA è conservata 90 giorni. I messaggi di supporto sono conservati tre anni dopo il nostro ultimo scambio, e le fatture dieci anni, come richiede la legge contabile francese."
           ]
         },
         {
@@ -634,7 +634,7 @@
       ]
     },
     "subprocessors": {
-      "intro": "Queste sono le aziende che trattano dati personali per nostro conto quando un’agenzia usa l’applicazione Traviosoft. Con ciascuna abbiamo un accordo sul trattamento dei dati ai sensi dell’articolo 28 del GDPR. Avvisiamo i nostri clienti via email almeno 30 giorni prima di aggiungerne o sostituirne una.",
+      "intro": "Queste sono le aziende che trattano dati personali per nostro conto quando un’agenzia usa l’applicazione Traviosoft. Avvisiamo i nostri clienti via email almeno 30 giorni prima di aggiungerne o sostituirne una.",
       "sections": [
         {
           "heading": "Hosting e archiviazione",

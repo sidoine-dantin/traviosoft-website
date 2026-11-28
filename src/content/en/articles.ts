@@ -1,5 +1,6 @@
 import type { Article, ArticleBlock, Faq } from '../types';
 import { invoicingGuides } from './invoicing';
+import { posts } from './posts';
 import { topicGuides } from './topics';
 import { PRICES } from '../prices';
 
@@ -513,6 +514,7 @@ const quote: Article = {
   title: 'How a tailor-made travel price is calculated',
   lead: 'The price of a tailor-made trip is built from three amounts: what suppliers charge (the net rates), what the agency earns (the margin) and, when another agency sells the trip, its commission. This page shows the calculation on an example.',
   updated: '2026-11-14',
+  related: ['net-commissionable-rates', 'package-quote', 'agency-invoicing', 'what-is-a-dmc'],
   card: 'Net rates, margin on the selling price and commission, calculated on a worked example.',
   blocks: [
     { type: 'h2', text: 'Markup and margin for the same cost', id: 'concepts' },
@@ -586,12 +588,13 @@ const rooming: Article = {
   key: 'rooming-list',
   kind: 'guide',
   slug: 'rooming-list-template-groups-mice',
-  metaTitle: 'Rooming list for groups and MICE: what it contains',
+  metaTitle: 'Rooming list: meaning, columns and an example for groups',
   metaDescription:
     'What a rooming list is in group travel and MICE, the information it usually contains, an example and how hotels use it.',
   title: 'The rooming list for groups and MICE events',
   lead: 'A rooming list tells the hotel who sleeps in each room of a group, with the room type, the dates and any requests. The hotel uses it to assign rooms in the block it holds for the group.',
-  updated: '2026-11-14',
+  updated: '2026-11-28',
+  related: ['hotel-allotment', 'what-is-a-dmc', 'package-quote'],
   card: 'What a rooming list is, the columns it usually has and an example.',
   blocks: [
     {
@@ -620,6 +623,23 @@ const rooming: Article = {
       type: 'p',
       text: 'An example of size: a group of 22 people in 9 twin rooms (18 people) and 4 single rooms uses 13 rooms. The total of people on the list matches the group.'
     },
+    { type: 'h2', text: 'Room type abbreviations', id: 'abbreviations' },
+    {
+      type: 'table',
+      head: ['Abbreviation', 'Room'],
+      rows: [
+        ['SGL', 'Single: one person'],
+        ['DBL', 'Double: two people, one bed'],
+        ['TWN', 'Twin: two people, two beds'],
+        ['TPL', 'Triple: three people'],
+        ['DUS', 'Double for single use: one person in a double room']
+      ]
+    },
+    { type: 'h2', text: 'When the hotel expects it', id: 'deadline' },
+    {
+      type: 'p',
+      text: 'The group contract sets a cut-off date, after which the rooms not named on the list go back to the hotel. As an example, the terms published by Fáilte Ireland for group bookings ask for the full rooming list, with the balance, 30 days before arrival. The page [Hotel allotments and release dates](/guides/hotel-allotment-release-date) explains release dates and cut-off.'
+    },
     { type: 'h2', text: 'Who appears on it', id: 'who' },
     {
       type: 'p',
@@ -639,7 +659,8 @@ const rooming: Article = {
     {
       type: 'faq',
       items: [
-        { q: 'Is a rooming list only for large groups?', a: ['No. It is used whenever a hotel needs to know who sleeps in which room, from a small group to a large event.'] },
+        { q: 'What does rooming list mean?', a: ['A list of the rooms of a group, with the names of the people in each room, sent to the hotel before arrival.'] },
+        { q: 'Is a rooming list only for large groups?', a: ['It is used whenever a hotel needs to know who sleeps in which room, from a small group to a large event.'] },
         { q: 'What is the difference between a rooming list and a booking?', a: ['The booking reserves the rooms. The rooming list says who occupies each of them.'] }
       ]
     }
@@ -765,4 +786,4 @@ const aiTools: Article = {
   ]
 };
 
-export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...topicGuides, ...invoicingGuides];
+export const articles: Article[] = [best, ...comparisons, quote, rooming, fromExcel, aiTools, ...posts, ...topicGuides, ...invoicingGuides];

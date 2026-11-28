@@ -616,7 +616,7 @@
           "heading": "Durante quanto tempo os guardamos",
           "body": [
             "A sua conta é guardada enquanto existir no espaço da sua agência. No fim do contrato da agência, é apagada com o espaço, terminado o período de recuperação dos dados.",
-            "Os registos de segurança são guardados 13 meses, os dados de utilização um ano e os relatórios de erro 90 dias. O registo das ações do assistente de IA é guardado 90 dias. As mensagens de suporte são guardadas três anos após a nossa última troca, e as faturas dez anos, como exige a lei contabilística francesa."
+            "Os registos de segurança são guardados no máximo enquanto existir o espaço da sua agência, os dados de utilização um ano e os relatórios de erro 90 dias no máximo. O registo das ações do assistente de IA é guardado 90 dias. As mensagens de suporte são guardadas três anos após a nossa última troca, e as faturas dez anos, como exige a lei contabilística francesa."
           ]
         },
         {
@@ -634,7 +634,7 @@
       ]
     },
     "subprocessors": {
-      "intro": "Estas são as empresas que tratam dados pessoais por nossa conta quando uma agência utiliza a aplicação Traviosoft. Temos com cada uma um acordo de tratamento de dados nos termos do artigo 28.º do RGPD. Avisamos os nossos clientes por email pelo menos 30 dias antes de acrescentar ou substituir uma.",
+      "intro": "Estas são as empresas que tratam dados pessoais por nossa conta quando uma agência utiliza a aplicação Traviosoft. Avisamos os nossos clientes por email pelo menos 30 dias antes de acrescentar ou substituir uma.",
       "sections": [
         {
           "heading": "Alojamento e armazenamento",

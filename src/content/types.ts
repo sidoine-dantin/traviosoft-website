@@ -163,6 +163,8 @@ export type Article = {
   /** one line for resource cards */
   card: string;
   blocks: ArticleBlock[];
+  /** keys of articles in the same language to link at the end of this one */
+  related?: string[];
 };
 
 export type ExampleTripId = 'andalucia' | 'group' | 'safari';
@@ -276,7 +278,7 @@ export type SiteContent = {
   };
   common: {
     premium: string; next: string; onThisPage: string; pauseVideo: string; playVideo: string; updated: string; readMore: string;
-    faqTitle: string; backToResources: string; allResources: string; perMonth: string;
+    faqTitle: string; readNext: string; backToResources: string; allResources: string; perMonth: string;
     /** the AI line under some topics, and the demo line in the last band of the product pages */
     aiAsk: string; aiSee: string; demoLine: string;
     notFound: { title: string; body: string };
