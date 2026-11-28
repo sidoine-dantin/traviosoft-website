@@ -9,7 +9,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'legal' });
-  return buildMetadata({ locale, path: '/legal/privacy', title: t('privacy_title') });
+  return buildMetadata({ locale, path: '/legal/privacy', title: t('privacy_title'), description: t('privacy_meta') });
 }
 
 export default async function PrivacyPage({ params }: Props) {
@@ -29,7 +29,7 @@ export default async function PrivacyPage({ params }: Props) {
         </Link>
 
         <LegalDocument
-          title={t('privacy_title').replace(' - Traviosoft', '')}
+          title={t('privacy_title')}
           updatedLabel={t('updated_label')}
           updatedDate={t('updated_date')}
           intro={t('privacy.intro')}

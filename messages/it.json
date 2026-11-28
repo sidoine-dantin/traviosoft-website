@@ -85,7 +85,7 @@
     }
   },
   "product": {
-    "meta_title": "Features - Traviosoft",
+    "meta_title": "Features",
     "meta_description": "See what changes when quotes, orders, payments, suppliers and invoicing live in one tool built for tailor-made travel agencies and DMCs. Book a 30-minute demo.",
     "intro": {
       "headline": "Less time fighting admin. More time selling trips.",
@@ -198,7 +198,7 @@
     }
   },
   "how_it_works": {
-    "meta_title": "How it works - Traviosoft",
+    "meta_title": "How it works",
     "meta_description": "From the client request to the invoice, discover the full journey of a file through Traviosoft, step by step.",
     "intro": {
       "headline": "From the client's first message to the final invoice",
@@ -257,7 +257,7 @@
     }
   },
   "pricing": {
-    "meta_title": "Pricing - Traviosoft",
+    "meta_title": "Pricing",
     "meta_description": "A clear pricing model, with every feature in every plan, for tailor-made travel agencies and DMCs. Book a demo to get your quote.",
     "intro": {
       "headline": "One product, shaped around your agency. Priced for your team size.",
@@ -288,7 +288,7 @@
     }
   },
   "about": {
-    "meta_title": "About - Traviosoft",
+    "meta_title": "About",
     "meta_description": "Traviosoft was born from the real-world needs of a tailor-made travel agency. Discover the philosophy behind the product.",
     "intro": {
       "headline": "Made for tailor-made travel agencies and DMCs",
@@ -313,7 +313,7 @@
     }
   },
   "demo": {
-    "meta_title": "Book a demo - Traviosoft",
+    "meta_title": "Book a demo",
     "meta_description": "Book a 30-minute demo to discover how Traviosoft fits your travel agency. No commitment, no sales script.",
     "hero": {
       "headline": "Book your 30-minute demo",
@@ -356,7 +356,7 @@
     }
   },
   "faq": {
-    "meta_title": "FAQ - Traviosoft",
+    "meta_title": "FAQ",
     "meta_description": "Answers to frequently asked questions about Traviosoft: data security, setup time, data import, available languages and more.",
     "intro": {
       "headline": "Frequently asked questions",
@@ -398,26 +398,29 @@
     }
   },
   "legal": {
-    "privacy_title": "Informativa sulla privacy - Traviosoft",
-    "terms_title": "Condizioni d’uso - Traviosoft",
-    "notice_title": "Note legali - Traviosoft",
+    "privacy_title": "Informativa sulla privacy",
+    "privacy_meta": "Come traviosoft.com usa le tue informazioni: cosa raccogliamo, cookie e pubblicità, per quanto tempo le conserviamo e i tuoi diritti.",
+    "terms_title": "Condizioni d’uso",
+    "terms_meta": "Le condizioni d’uso di traviosoft.com: il sito, la prenotazione della demo, proprietà intellettuale, link esterni, responsabilità e legge applicabile.",
+    "notice_title": "Note legali",
+    "notice_meta": "Chi pubblica traviosoft.com, chi lo ospita, proprietà intellettuale, dati personali e come contattarci.",
     "back_home": "Torna alla home",
     "updated_label": "Ultimo aggiornamento",
     "updated_date": "Novembre 2026",
     "privacy": {
-      "intro": "Questa informativa spiega come trattiamo le informazioni raccolte tramite il sito traviosoft.com. Riguarda solo il sito pubblico. L’uso dell’applicazione Traviosoft da parte dei nostri clienti è regolato da un contratto separato.",
+      "intro": "Questa informativa spiega come trattiamo le informazioni raccolte tramite il sito traviosoft.com. Riguarda solo il sito pubblico. Il trattamento dei dati delle persone che usano l’applicazione Traviosoft è descritto nell’[informativa privacy dell’applicazione](/legal/app-privacy).",
       "sections": [
         {
           "heading": "Chi siamo",
           "body": [
-            "Questo sito è pubblicato da Sidoine Dantin EI, impresa registrata in Francia con SIRET 941 883 779 00014, l’attività che sta dietro a Traviosoft, gestionale per agenzie di viaggio su misura e DMC. Per qualsiasi domanda su questa informativa o sui tuoi dati, puoi contattarci a privacy@traviosoft.com."
+            "Questo sito è pubblicato da Sidoine Dantin EI, impresa registrata in Francia con SIRET 941 883 779 00014, 137 rue à Vaches, 62610 Balinghem, Francia, l’attività che sta dietro a Traviosoft, gestionale per agenzie di viaggio su misura e DMC. Per qualsiasi domanda su questa informativa o sui tuoi dati, puoi contattarci a privacy@traviosoft.com."
           ]
         },
         {
           "heading": "Cosa raccogliamo",
           "body": [
-            "Quando chiedi una demo, scegli un orario nella nostra finestra di prenotazione (Cal.com) oppure ci scrivi via email. Riceviamo ciò che inserisci o scegli di dirci: di solito il tuo nome, il tuo indirizzo email, il nome della tua agenzia e alcune informazioni su di essa.",
-            "Come la maggior parte dei siti, il nostro fornitore di hosting registra nei log del server alcuni dati tecnici di base, come l’indirizzo IP e il tipo di browser. Se accetti i cookie pubblicitari, anche LinkedIn, Meta e Google registrano la tua visita a questo sito (vedi «Pubblicità e pubblici»)."
+            "Quando chiedi una demo, scegli un orario nella nostra finestra di prenotazione (Cal.com) oppure ci scrivi via email. Riceviamo ciò che inserisci nel modulo o nella tua email: il tuo nome, il tuo indirizzo email, il nome della tua agenzia e i dettagli che scegli di aggiungere.",
+            "Il nostro fornitore di hosting, Cloudflare, registra nei log del server il tuo indirizzo IP, il tuo browser, la pagina richiesta e l’ora della richiesta. Se accetti i cookie pubblicitari, anche LinkedIn, Meta e Google registrano la tua visita a questo sito (vedi «Pubblicità e pubblici»)."
           ]
         },
         {
@@ -430,7 +433,7 @@
         {
           "heading": "Servizi di terzi",
           "body": [
-            "Il sito è distribuito tramite la rete di hosting e contenuti di Cloudflare. Le prenotazioni delle demo passano da Cal.com, Inc., che si carica solo quando apri la finestra di prenotazione, riceve ciò che vi inserisci e aggiunge la chiamata al nostro calendario. I nostri annunci vengono pubblicati su LinkedIn (LinkedIn Ireland Unlimited Company), su Facebook e Instagram (Meta Platforms Ireland Limited) e sulla Ricerca Google, YouTube, Gmail e i siti partner (Google Ireland Limited). Per i cookie pubblicitari, LinkedIn e Meta agiscono come contitolari del trattamento insieme a noi per i loro tag. Google agisce come titolare autonomo del trattamento. Per ciò che fanno con i dati si applicano le loro informative sulla privacy. Alcuni di questi fornitori possono trasferire dati negli Stati Uniti nell’ambito del Data Privacy Framework UE-USA o delle clausole contrattuali tipo della Commissione europea."
+            "Il sito è distribuito tramite la rete di hosting e contenuti di Cloudflare. Le prenotazioni delle demo passano da Cal.com, Inc., che si carica solo quando apri la finestra di prenotazione, riceve ciò che vi inserisci e aggiunge la chiamata al nostro calendario. I nostri annunci vengono pubblicati su LinkedIn (LinkedIn Ireland Unlimited Company), su Facebook e Instagram (Meta Platforms Ireland Limited) e sulla Ricerca Google, YouTube, Gmail e i siti partner (Google Ireland Limited). Per i cookie pubblicitari, LinkedIn e Meta agiscono come contitolari del trattamento insieme a noi per i loro tag. Google agisce come titolare autonomo del trattamento. Per ciò che fanno con i dati si applicano le loro informative sulla privacy. Cloudflare, Cal.com, LinkedIn, Meta e Google possono trasferire dati negli Stati Uniti nell’ambito del Data Privacy Framework UE-USA o delle clausole contrattuali tipo della Commissione europea."
           ]
         },
         {
@@ -451,8 +454,8 @@
         {
           "heading": "Per quanto tempo li conserviamo",
           "body": [
-            "Conserviamo le informazioni della tua richiesta di demo finché siamo in contatto su Traviosoft, e per tre anni dopo il nostro ultimo scambio. I log tecnici sono conservati solo per il breve tempo necessario alla sicurezza e alla manutenzione.",
-            "I cookie pubblicitari durano al massimo 13 mesi. I dati di contatto caricati per i pubblici pubblicitari sono conservati per la durata della campagna e vengono rimossi dai nostri elenchi quando ti opponi."
+            "Conserviamo le informazioni della tua richiesta di demo finché siamo in contatto su Traviosoft, e per tre anni dopo il nostro ultimo scambio. Non riceviamo i log del server: Cloudflare li conserva secondo la propria politica.",
+            "I cookie pubblicitari durano al massimo 13 mesi. I dati di contatto caricati per i pubblici pubblicitari vengono rimossi dai nostri elenchi appena ti opponi, e al più tardi tre anni dopo il nostro ultimo scambio."
           ]
         },
         {
@@ -475,13 +478,14 @@
         {
           "heading": "Chi pubblica questo sito",
           "body": [
-            "Questo sito è pubblicato da Sidoine Dantin EI, impresa registrata in Francia con SIRET 941 883 779 00014. Puoi contattarci a privacy@traviosoft.com. Il sito è ospitato da Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Stati Uniti."
+            "Questo sito è pubblicato da Sidoine Dantin EI, impresa registrata in Francia con SIRET 941 883 779 00014, 137 rue à Vaches, 62610 Balinghem, Francia. Puoi contattarci a privacy@traviosoft.com. Il sito è ospitato da Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Stati Uniti."
           ]
         },
         {
           "heading": "Uso di questo sito",
           "body": [
-            "Navigando su traviosoft.com accetti queste condizioni. Il sito serve a presentare Traviosoft e a permetterti di prenotare una demo. Ti impegni a non farne un uso improprio, ad esempio tentando di disturbarne il funzionamento, di accedervi con estrazione automatica dei contenuti o di comprometterne la sicurezza."
+            "Navigando su traviosoft.com accetti queste condizioni. Il sito serve a presentare Traviosoft e a permetterti di prenotare una demo. È vietato tentare di disturbarne il funzionamento, estrarne i contenuti con mezzi automatici (salvo i robot autorizzati dal suo file robots.txt) o comprometterne la sicurezza.",
+            "Traviosoft è venduto solo alle imprese: agenzie di viaggio, DMC e altri professionisti del turismo."
           ]
         },
         {
@@ -493,13 +497,13 @@
         {
           "heading": "Le informazioni sul sito",
           "body": [
-            "Manteniamo il contenuto di questo sito il più accurato e aggiornato possibile, ma è fornito a titolo informativo generale. Funzioni, descrizioni e prezzi possono cambiare con l’evoluzione del prodotto. Il sito è fornito «così com’è», senza garanzia che sia sempre disponibile o privo di errori."
+            "Il contenuto di questo sito è fornito a titolo informativo generale e non ha valore contrattuale. Funzioni, descrizioni e prezzi possono cambiare con l’evoluzione del prodotto. Il sito è fornito «così com’è», senza garanzia che sia sempre disponibile o privo di errori."
           ]
         },
         {
           "heading": "Proprietà intellettuale",
           "body": [
-            "Il nome Traviosoft, i contenuti, il design e le immagini di questo sito appartengono a Traviosoft. Non puoi copiarli, riutilizzarli o ridistribuirli senza il nostro permesso scritto."
+            "Il nome Traviosoft, i contenuti, il design e le immagini di questo sito appartengono a Sidoine Dantin EI (Traviosoft). Non puoi copiarli, riutilizzarli o ridistribuirli senza il nostro permesso scritto."
           ]
         },
         {
@@ -523,7 +527,7 @@
         {
           "heading": "Modifiche a queste condizioni",
           "body": [
-            "Possiamo aggiornare queste condizioni di tanto in tanto. La data in alto indica l’ultima modifica. Continuando a usare il sito accetti la versione in vigore."
+            "Possiamo aggiornare queste condizioni. La data in alto indica l’ultima modifica. Continuando a usare il sito accetti la versione in vigore."
           ]
         }
       ]
@@ -534,7 +538,7 @@
         {
           "heading": "Editore del sito",
           "body": [
-            "Questo sito è pubblicato da Sidoine Dantin EI, impresa individuale (entreprise individuelle) registrata in Francia con SIRET 941 883 779 00014. Sede: 137 rue à Vaches, 62610 Balinghem, Francia. Direttore della pubblicazione: Sidoine Dantin. Contatto: privacy@traviosoft.com."
+            "Questo sito è pubblicato da Sidoine Dantin EI, impresa individuale (entreprise individuelle) registrata in Francia con SIRET 941 883 779 00014. Sede: 137 rue à Vaches, 62610 Balinghem, Francia. Direttore della pubblicazione: Sidoine Dantin. Contatto: privacy@traviosoft.com. Partita IVA intracomunitaria: FR27941883779."
           ]
         },
         {
@@ -558,7 +562,117 @@
         {
           "heading": "Contatto",
           "body": [
-            "Per qualsiasi domanda sul sito, scrivi a privacy@traviosoft.com."
+            "Per qualsiasi domanda sul sito, scrivi a privacy@traviosoft.com.",
+            "Questo indirizzo è anche il nostro punto di contatto unico per le autorità e gli utenti ai sensi del regolamento europeo sui servizi digitali. Puoi scriverci in inglese o in francese."
+          ]
+        }
+      ]
+    },
+    "app_privacy_title": "Privacy dell’applicazione",
+    "app_privacy_meta": "Come l’applicazione Traviosoft tratta i dati personali del personale delle agenzie: cosa raccogliamo, perché, chi li riceve e i tuoi diritti.",
+    "subprocessors_title": "Sub-responsabili",
+    "subprocessors_meta": "I fornitori che trattano dati per l’applicazione Traviosoft: hosting, email, assistente AI, traduzione, indirizzi ed errori, con il loro paese.",
+    "app_privacy": {
+      "intro": "Questa informativa spiega come trattiamo i dati personali delle persone che usano l’applicazione Traviosoft: il personale delle agenzie abbonate. I dati che un’agenzia registra sui propri clienti, viaggiatori e fornitori appartengono a quell’agenzia, che decide come usarli. Li trattiamo solo per conto dell’agenzia, secondo il nostro accordo sul trattamento dei dati: per quei dati, rivolgiti direttamente all’agenzia.",
+      "sections": [
+        {
+          "heading": "Chi siamo",
+          "body": [
+            "Traviosoft è pubblicato da Sidoine Dantin EI, SIRET 941 883 779 00014, 137 rue à Vaches, 62610 Balinghem, France, titolare del trattamento dei dati descritti qui. Per qualsiasi domanda o richiesta, scrivi a privacy@traviosoft.com."
+          ]
+        },
+        {
+          "heading": "Cosa raccogliamo",
+          "body": [
+            "Il tuo account: il tuo nome, il tuo indirizzo email professionale, il tuo ruolo, l’agenzia a cui appartieni e le tue impostazioni. La tua password è conservata solo in forma cifrata.",
+            "Registri di sicurezza: quando accedi e usi l’applicazione, registriamo data e ora, il tuo indirizzo IP e il tuo browser, per proteggere il tuo account ed esaminare gli usi impropri.",
+            "Uso dell’applicazione: se la tua agenzia lo lascia attivo, registriamo quali schermate e funzioni vengono usate. Tutti i testi e i valori sullo schermo sono mascherati: vediamo clic e pagine, mai i dati della tua agenzia. Quando qualcosa non funziona, riceviamo anche un rapporto tecnico di errore.",
+            "I tuoi messaggi: ciò che scrivi al nostro supporto e i suggerimenti che ci invii.",
+            "L’assistente IA: quando lo usi, la tua domanda, la cronologia della conversazione e i dati dell’agenzia che l’assistente consulta per rispondere sono inviati al fornitore di IA scelto dalla tua agenzia. Conserviamo una traccia di ogni azione dell’assistente, senza chiavi di accesso, token e numeri di carta."
+          ]
+        },
+        {
+          "heading": "Perché li usiamo",
+          "body": [
+            "Usiamo il tuo account e ti inviamo le email di accesso e le notifiche per fornire il servizio a cui la tua agenzia è abbonata. Questo si basa sul nostro contratto con la tua agenzia e sul nostro legittimo interesse a fornirlo.",
+            "Usiamo i registri di sicurezza per proteggere l’applicazione: è il nostro legittimo interesse e un nostro obbligo ai sensi del GDPR.",
+            "Usiamo i dati d’uso e i rapporti di errore per correggere i problemi e migliorare l’applicazione, sulla base del nostro legittimo interesse. La tua agenzia può disattivare i dati d’uso, e puoi opporti scrivendoci.",
+            "Usiamo i tuoi messaggi per risponderti, sulla base del nostro legittimo interesse, e i contatti di fatturazione per fatturare alla tua agenzia e tenere la nostra contabilità, come richiede la legge."
+          ]
+        },
+        {
+          "heading": "Chi li riceve",
+          "body": [
+            "Gli amministratori della tua agenzia vedono il tuo account e la tua attività nel loro spazio. I nostri fornitori trattano dati per nostro conto: ognuno è indicato con il suo paese nel nostro [elenco dei sub-responsabili](/legal/subprocessors). Non vendiamo mai i tuoi dati e non li usiamo mai per la pubblicità."
+          ]
+        },
+        {
+          "heading": "Trasferimenti fuori dall’UE",
+          "body": [
+            "Alcuni dei nostri fornitori hanno sede negli Stati Uniti. Questi trasferimenti si basano sulle clausole contrattuali tipo della Commissione europea e, quando il fornitore è certificato, sul quadro UE-USA per la protezione dei dati."
+          ]
+        },
+        {
+          "heading": "Per quanto tempo li conserviamo",
+          "body": [
+            "Il tuo account è conservato finché esiste nello spazio della tua agenzia. Alla fine del contratto dell’agenzia, è cancellato con lo spazio, una volta terminato il periodo di recupero dei dati.",
+            "I registri di sicurezza sono conservati 13 mesi, i dati d’uso un anno e i rapporti di errore 90 giorni. La traccia delle azioni dell’assistente IA è conservata 90 giorni. I messaggi di supporto sono conservati tre anni dopo il nostro ultimo scambio, e le fatture dieci anni, come richiede la legge contabile francese."
+          ]
+        },
+        {
+          "heading": "I tuoi diritti",
+          "body": [
+            "Puoi chiedere di vedere i dati che conserviamo su di te, di correggerli, di cancellarli, di limitarne l’uso o di riceverli in un formato portabile, e puoi opporti al loro uso. Per fare una richiesta, scrivi a privacy@traviosoft.com: rispondiamo entro un mese. Puoi anche presentare un reclamo a un’autorità per la protezione dei dati, in particolare nel paese in cui vivi o lavori. Poiché l’impresa ha sede in Francia, la sua autorità è la CNIL."
+          ]
+        },
+        {
+          "heading": "Modifiche",
+          "body": [
+            "Aggiorniamo questa informativa quando l’applicazione cambia il modo in cui usa i dati. La data in alto indica l’ultima versione."
+          ]
+        }
+      ]
+    },
+    "subprocessors": {
+      "intro": "Queste sono le aziende che trattano dati personali per nostro conto quando un’agenzia usa l’applicazione Traviosoft. Con ciascuna abbiamo un accordo sul trattamento dei dati ai sensi dell’articolo 28 del GDPR. Avvisiamo i nostri clienti via email almeno 30 giorni prima di aggiungerne o sostituirne una.",
+      "sections": [
+        {
+          "heading": "Hosting e archiviazione",
+          "body": [
+            "Hostinger International Ltd (Cipro): i server che fanno funzionare l’applicazione e il suo database, in un data center in Francia.",
+            "Cloudflare, Inc. (Stati Uniti): archiviazione di documenti e file, distribuzione in rete e protezione dagli attacchi. Garanzie: clausole contrattuali tipo e quadro UE-USA per la protezione dei dati."
+          ]
+        },
+        {
+          "heading": "Email",
+          "body": [
+            "Resend (Plus Five Five, Inc., Stati Uniti): invio delle email dell’applicazione, come link di accesso, notifiche e documenti inviati ai clienti. Dati conservati negli Stati Uniti. Garanzie: clausole contrattuali tipo e quadro UE-USA per la protezione dei dati."
+          ]
+        },
+        {
+          "heading": "Assistente IA",
+          "body": [
+            "Anthropic, PBC (Stati Uniti) e OpenAI (Stati Uniti): le risposte dell’assistente IA, secondo il fornitore scelto dall’agenzia. Nessuno dei due usa i dati per addestrare i propri modelli. Garanzie: clausole contrattuali tipo."
+          ]
+        },
+        {
+          "heading": "Traduzione e indirizzi",
+          "body": [
+            "DeepL SE (Germania): traduzione di testi su richiesta di un utente.",
+            "komoot GmbH (Germania): suggerimenti di indirizzi durante la digitazione. Riceve solo il testo digitato."
+          ]
+        },
+        {
+          "heading": "Errori e uso",
+          "body": [
+            "Functional Software, Inc., con il nome Sentry (Stati Uniti), dati conservati in Germania: rapporti tecnici di errore.",
+            "PostHog, Inc. (Stati Uniti), dati conservati nell’UE: dati d’uso dell’applicazione, con tutti i testi sullo schermo mascherati. Ogni agenzia può disattivarli. Garanzie per entrambi: clausole contrattuali tipo."
+          ]
+        },
+        {
+          "heading": "Servizi collegati dall’agenzia",
+          "body": [
+            "Un’agenzia può collegare i propri account, come le caselle Google o Microsoft, Xero, QuickBooks, MYOB, Fatture in Cloud, InvoiceXpress, Stripe, Redsys o Hotelbeds. Questi servizi funzionano secondo il contratto dell’agenzia con loro, e inviamo loro solo ciò che l’agenzia ci chiede di inviare."
           ]
         }
       ]

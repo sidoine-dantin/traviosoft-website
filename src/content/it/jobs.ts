@@ -3,9 +3,9 @@ import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Vendere: richieste, catalogo e preventivi con i tuoi margini | Traviosoft',
+  metaTitle: 'Vendere: richieste, catalogo e preventivi con i tuoi margini',
   metaDescription:
-    'Tutte le richieste dei clienti in una lista, un catalogo con prezzi per stagione e più fornitori per prodotto, preventivi con il tuo margine e l’IVA, inviati nella lingua del cliente e con un promemoria dopo 7 giorni.',
+    'Tutte le richieste in una lista, un catalogo con prezzi per stagione e più fornitori, e preventivi con il tuo margine e l’IVA, nella lingua del cliente.',
   name: 'Vendere',
   menuLine: 'Dalla prima richiesta al preventivo accettato',
   step: '1 di 4',
@@ -98,9 +98,9 @@ const sell: JobPage = {
 
 const book: JobPage = {
   slug: 'book',
-  metaTitle: 'Prenotare e seguire il viaggio: pratiche, fornitori, itinerario del cliente | Traviosoft',
+  metaTitle: 'Prenotare e seguire il viaggio: fornitori e itinerario',
   metaDescription:
-    'Quando un preventivo viene accettato, tutti i servizi del viaggio sono in lista, pronti da prenotare. Le richieste di prenotazione partono ai fornitori per email, ogni servizio mostra il suo stato e il tuo cliente riceve un itinerario giorno per giorno.',
+    'Accettato il preventivo, ogni servizio è pronto da prenotare: le richieste partono ai fornitori per email e il cliente riceve un itinerario giorno per giorno.',
   name: 'Prenotare e seguire',
   menuLine: 'Dal preventivo accettato al viaggio concluso',
   step: '2 di 4',
@@ -191,9 +191,9 @@ const book: JobPage = {
 
 const getPaid: JobPage = {
   slug: 'get-paid',
-  metaTitle: 'Incassare e tenere i conti: pagamenti, fatture, dashboard | Traviosoft',
+  metaTitle: 'Incassare e tenere i conti: pagamenti, fatture, dashboard',
   metaDescription:
-    'Acconto e saldo previsti nel preventivo, link di pagamento nell’email, fatture e note di credito dagli stessi numeri, e una dashboard con vendite, viaggi, entrate e uscite.',
+    'Acconto e saldo nel preventivo, link di pagamento nell’email, fatture e note di credito dagli stessi numeri, e una dashboard con entrate e uscite.',
   name: 'Incassare',
   menuLine: 'Pagamenti, fatture e i tuoi numeri',
   step: '3 di 4',
@@ -260,9 +260,9 @@ const getPaid: JobPage = {
 
 const setup: JobPage = {
   slug: 'setup',
-  metaTitle: 'La tua configurazione: marchi, lingue, team e dati | Traviosoft',
+  metaTitle: 'La tua configurazione: marchi, lingue, team e dati',
   metaDescription:
-    'Più marchi in un solo account, documenti nella lingua del cliente, più valute, impostazioni per paese, il tuo team, i tuoi dati ospitati nell’UE e collegamenti con i tuoi altri strumenti.',
+    'Più marchi in un account, documenti nella lingua del cliente, più valute, impostazioni per paese, il tuo team, dati nell’UE e collegamenti ai tuoi strumenti.',
   name: 'La tua configurazione',
   menuLine: 'Marchi, lingue, valute, team e dati',
   step: '4 di 4',
@@ -337,7 +337,7 @@ const setup: JobPage = {
       visual: 'safe',
       features: [
         { title: 'Uno spazio separato per la tua agenzia', body: ['I tuoi clienti, prezzi e viaggi sono archiviati separatamente da quelli delle altre agenzie.'] },
-        { title: 'Ospitato nell’UE', body: ['I tuoi dati restano nell’Unione europea, nel rispetto del GDPR.'] },
+        { title: 'Ospitato nell’UE', body: ['L’applicazione e il suo database girano su server in Francia, nel rispetto del GDPR.'] },
         { title: 'I tuoi dati vengono con te', body: ['Se smetti, riavrai i tuoi dati in formati standard.'] }
       ]
     },

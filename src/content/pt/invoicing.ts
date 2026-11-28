@@ -34,8 +34,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-spain',
     slug: 'faturacao-agencia-de-viagens-espanha',
-    metaTitle: 'Faturação para agências de viagens em Espanha: REAV, Veri*Factu e fatura eletrónica',
-    metaDescription: 'Como fatura uma agência de viagens ou uma DMC em Espanha: o regime da margem REAV, o que a fatura indica, as datas do Veri*Factu e a regra da fatura eletrónica B2B.',
+    metaTitle: 'Faturação para agências em Espanha: REAV e Veri*Factu',
+    metaDescription: 'Como fatura uma agência de viagens ou uma DMC em Espanha: o regime REAV, o que a fatura indica, as datas do Veri*Factu e a fatura eletrónica B2B.',
     title: 'Faturação para agências de viagens em Espanha',
     lead: 'Em Espanha, uma agência que vende viagens em nome próprio paga normalmente o IVA sobre a margem, ao abrigo do REAV. As faturas têm de ser emitidas por um software que cumpra as regras antifraude (Veri*Factu), e a fatura eletrónica entre empresas torna-se obrigatória por fases.',
     card: 'REAV, Veri*Factu e fatura eletrónica B2B, com as datas em vigor.',
@@ -67,8 +67,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-france',
     slug: 'faturacao-agencia-de-viagens-franca',
-    metaTitle: 'Faturação para agências de viagens em França: regime da margem e fatura eletrónica',
-    metaDescription: 'Como fatura uma agência de viagens em França: o regime da margem das agências de viagens, o que a fatura indica e as datas da fatura eletrónica a partir de setembro de 2026.',
+    metaTitle: 'Faturação para agências de viagens em França',
+    metaDescription: 'Como fatura uma agência de viagens em França: o regime da margem, o que a fatura indica e as datas da fatura eletrónica a partir de setembro de 2026.',
     title: 'Faturação para agências de viagens em França',
     lead: 'As agências de viagens francesas que vendem em nome próprio pagam o IVA sobre a margem. Desde 1 de setembro de 2026, todas as empresas têm de poder receber faturas eletrónicas através de uma plataforma aprovada, e as pequenas e médias empresas têm de as emitir a partir de 1 de setembro de 2027.',
     card: 'O regime da margem, a fatura e as datas da fatura eletrónica.',
@@ -95,7 +95,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-germany',
     slug: 'faturacao-agencia-de-viagens-alemanha',
-    metaTitle: 'Faturação para agências de viagens na Alemanha: §25 UStG e fatura eletrónica',
+    metaTitle: 'Faturação para agências de viagens na Alemanha: §25 UStG',
     metaDescription: 'Como fatura uma agência de viagens na Alemanha: o regime da margem do §25 UStG, a menção na fatura e as datas para emitir faturas eletrónicas.',
     title: 'Faturação para agências de viagens na Alemanha',
     lead: 'Os operadores turísticos alemães pagam o IVA sobre a margem ao abrigo do §25 UStG. Nas vendas nacionais entre empresas, têm de emitir faturas eletrónicas a partir de 2027 ou 2028, consoante o volume de negócios.',
@@ -128,8 +128,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-belgium',
     slug: 'faturacao-agencia-de-viagens-belgica',
-    metaTitle: 'Faturação para agências de viagens na Bélgica: regime da margem e fatura eletrónica Peppol',
-    metaDescription: 'Como fatura uma agência de viagens na Bélgica: o regime da margem das agências de viagens e a fatura eletrónica Peppol obrigatória entre empresas desde janeiro de 2026.',
+    metaTitle: 'Faturação para agências de viagens na Bélgica: Peppol',
+    metaDescription: 'Como fatura uma agência de viagens na Bélgica: o regime da margem e a fatura eletrónica Peppol, obrigatória entre empresas desde janeiro de 2026.',
     title: 'Faturação para agências de viagens na Bélgica',
     lead: 'As agências de viagens belgas pagam o IVA sobre a margem ao abrigo do regime especial das agências de viagens. Desde 1 de janeiro de 2026, as faturas entre empresas belgas são faturas eletrónicas estruturadas enviadas através da rede Peppol.',
     card: 'O regime da margem e a fatura eletrónica Peppol desde 2026.',

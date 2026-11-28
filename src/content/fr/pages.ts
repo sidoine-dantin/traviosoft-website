@@ -2,9 +2,9 @@ import type { SiteContent } from '../types';
 import { PRICES } from '../prices';
 
 export const pricing: SiteContent['pricing'] = {
-  metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR | Traviosoft`,
+  metaTitle: `Tarifs : Classic dès ${PRICES.classic.yearly} EUR par mois, Premium dès ${PRICES.premium.yearly} EUR`,
   metaDescription:
-    `Deux offres pour les agences de voyages sur mesure et les DMC. Classic gère toute l’agence dès ${PRICES.classic.yearly} EUR par mois ; Premium ajoute les groupes, plusieurs équipes, les devises, les bons de commande aux prestataires et plusieurs marques. ${PRICES.usersIncluded} utilisateurs inclus, mise en place offerte en annuel.`,
+    `Deux offres pour agences sur mesure et DMC : Classic gère toute l’agence, Premium ajoute groupes, équipes, devises et marques. ${PRICES.usersIncluded} utilisateurs inclus.`,
   title: 'Tarifs',
   productLink: 'Voir le produit',
   lead: 'Classic couvre toute l’agence, de la première demande à la dernière facture. Premium ajoute les groupes, plusieurs équipes, les autres devises, les bons de commande aux prestataires et plusieurs marques.',
@@ -129,7 +129,7 @@ export const pricing: SiteContent['pricing'] = {
 };
 
 export const demo: SiteContent['demo'] = {
-  metaTitle: 'Démo de logiciel pour agences de voyages | Traviosoft',
+  metaTitle: 'Démo de logiciel pour agences de voyages',
   metaDescription:
     'Un appel de 30 minutes : un voyage exemple dans Traviosoft, de la demande à la facture, puis les tarifs et vos questions.',
   title: 'Réserver une démo',
@@ -175,7 +175,7 @@ export const demo: SiteContent['demo'] = {
 };
 
 export const switching: SiteContent['switching'] = {
-  metaTitle: 'Passer d’Excel à Traviosoft | Traviosoft',
+  metaTitle: 'Passer d’Excel à Traviosoft',
   metaDescription:
     'Passer d’Excel, Word et WhatsApp à Traviosoft en pleine saison : ce que nous importons, ce que vous vérifiez, et comment finir les voyages en cours.',
   title: 'Passer à Traviosoft',
@@ -235,7 +235,7 @@ export const switching: SiteContent['switching'] = {
 };
 
 export const faqPage: SiteContent['faqPage'] = {
-  metaTitle: 'Questions fréquentes | Traviosoft',
+  metaTitle: 'Questions fréquentes',
   metaDescription:
     'Ce que fait Traviosoft, son prix, l’hébergement de vos données et le passage depuis Excel.',
   title: 'Questions fréquentes',
@@ -331,7 +331,7 @@ export const faqPage: SiteContent['faqPage'] = {
 export const about: SiteContent['about'] = {
   metaTitle: 'À propos de Traviosoft',
   metaDescription:
-    'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC : chaque voyage en un seul endroit, de la première demande à la facture finale, avec vos données hébergées dans l’UE.',
+    'Logiciel de gestion pour agences de voyages sur mesure et DMC : chaque voyage au même endroit, de la première demande à la facture finale, hébergé dans l’UE.',
   title: 'À propos de Traviosoft',
   lead: 'Traviosoft est un logiciel de gestion pour les agences de voyages sur mesure et les DMC. Chaque voyage tient en un seul endroit, de la première demande à la facture finale.',
   blocks: [
@@ -343,7 +343,7 @@ export const about: SiteContent['about'] = {
 };
 
 export const resources: SiteContent['resources'] = {
-  metaTitle: 'Ressources pour agences de voyages sur mesure | Traviosoft',
+  metaTitle: 'Ressources pour agences de voyages sur mesure',
   metaDescription:
     'Comparatifs, guides et un glossaire pour les agences sur mesure et les DMC qui choisissent un logiciel. En langage clair, sans inscription.',
   title: 'Ressources',
@@ -356,7 +356,8 @@ export const resources: SiteContent['resources'] = {
     { kind: 'glossary', title: 'Glossaire', body: 'Les termes d’agence de voyages et de logiciel, en une ligne chacun.' },
   ],
   glossaryTitle: 'Glossaire',
+  glossaryMetaTitle: 'Glossaire des termes du voyage sur mesure',
   glossaryMeta:
-    'Des définitions claires des termes qu’utilisent les agences de voyages sur mesure et les DMC : tarif net, commission, feuille de service, rooming list, acompte et plus.',
+    'Définitions claires des termes des agences de voyages sur mesure et des DMC : tarif net, commission, feuille de service, rooming list, acompte et plus.',
   glossaryLead: 'Les mots que vous utilisez chaque jour, et ceux du logiciel, en une ligne chacun.'
 };

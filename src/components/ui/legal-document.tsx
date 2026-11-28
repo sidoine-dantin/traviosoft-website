@@ -1,4 +1,22 @@
+import { Fragment } from 'react';
+import { Link } from '@/i18n/navigation';
+
 type LegalSection = { heading: string; body: string[] };
+
+/** Turns `[label](/path)` in a legal text into a localized link; the rest stays plain text. */
+function Rich({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\(\/[^)\s]*\))/);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\((\/[^)\s]*)\)$/);
+        return m
+          ? <Link key={i} href={m[2]} style={{ color: 'inherit', textDecoration: 'underline' }}>{m[1]}</Link>
+          : <Fragment key={i}>{part}</Fragment>;
+      })}
+    </>
+  );
+}
 
 /**
  * Renders a legal document (privacy policy, terms) as a readable long-form
@@ -40,7 +58,7 @@ export function LegalDocument({
         fontSize: '1.0625rem', color: 'var(--color-ink)',
         lineHeight: 1.7, marginBottom: '3rem'
       }}>
-        {intro}
+        <Rich text={intro} />
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2.75rem' }}>
@@ -59,7 +77,7 @@ export function LegalDocument({
                   fontSize: '0.9375rem', color: 'var(--color-muted)',
                   lineHeight: 1.8, margin: 0
                 }}>
-                  {paragraph}
+                  <Rich text={paragraph} />
                 </p>
               ))}
             </div>

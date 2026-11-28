@@ -34,7 +34,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-spain',
     slug: 'travel-agency-invoicing-spain',
-    metaTitle: 'Invoicing for travel agencies in Spain: REAV, Veri*Factu and e-invoicing',
+    metaTitle: 'Travel agency invoicing in Spain: REAV and Veri*Factu',
     metaDescription: 'How a travel agency or DMC in Spain invoices: the REAV margin scheme, what the invoice shows, the Veri*Factu dates and the B2B e-invoicing rule.',
     title: 'Invoicing for travel agencies in Spain',
     lead: 'In Spain, an agency that sells trips in its own name usually pays VAT on its margin under the REAV. Invoices must come from software that meets the anti-fraud rules (Veri*Factu), and e-invoicing between businesses becomes mandatory in stages.',
@@ -67,7 +67,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-france',
     slug: 'travel-agency-invoicing-france',
-    metaTitle: 'Invoicing for travel agencies in France: margin scheme and e-invoicing',
+    metaTitle: 'Travel agency invoicing in France: margin and e-invoicing',
     metaDescription: 'How a travel agency in France invoices: the travel agency margin scheme, what the invoice shows, and the e-invoicing dates from September 2026.',
     title: 'Invoicing for travel agencies in France',
     lead: 'French travel agencies that sell in their own name pay VAT on their margin. Since 1 September 2026, every business must be able to receive e-invoices through an approved platform, and small and medium businesses must issue them from 1 September 2027.',
@@ -95,7 +95,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-germany',
     slug: 'travel-agency-invoicing-germany',
-    metaTitle: 'Invoicing for travel agencies in Germany: §25 UStG and e-invoicing',
+    metaTitle: 'Travel agency invoicing in Germany: §25 UStG and e-invoicing',
     metaDescription: 'How a travel agency in Germany invoices: the §25 UStG margin scheme, the invoice wording, and the dates for issuing e-invoices.',
     title: 'Invoicing for travel agencies in Germany',
     lead: 'German tour operators pay VAT on their margin under §25 UStG. For domestic sales between businesses, they must issue e-invoices from 2027 or 2028, depending on turnover.',
@@ -128,7 +128,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-belgium',
     slug: 'travel-agency-invoicing-belgium',
-    metaTitle: 'Invoicing for travel agencies in Belgium: margin scheme and Peppol e-invoicing',
+    metaTitle: 'Travel agency invoicing in Belgium: margin scheme and Peppol',
     metaDescription: 'How a travel agency in Belgium invoices: the travel agency margin scheme, and the mandatory Peppol e-invoicing between businesses since January 2026.',
     title: 'Invoicing for travel agencies in Belgium',
     lead: 'Belgian travel agencies pay VAT on their margin under the special scheme for travel agencies. Since 1 January 2026, invoices between Belgian businesses are structured e-invoices sent through Peppol.',

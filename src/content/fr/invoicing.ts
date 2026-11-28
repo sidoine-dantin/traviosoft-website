@@ -34,8 +34,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-spain',
     slug: 'facturation-agence-de-voyages-espagne',
-    metaTitle: 'Facturation des agences de voyages en Espagne : REAV, Veri*Factu et facture électronique',
-    metaDescription: 'Comment facture une agence de voyages ou une DMC en Espagne : le régime de la marge REAV, ce que montre la facture, les dates de Veri*Factu et la facture électronique entre entreprises.',
+    metaTitle: 'Facturation des agences en Espagne : REAV et Veri*Factu',
+    metaDescription: 'Comment facture une agence de voyages ou une DMC en Espagne : le régime REAV, ce que montre la facture, les dates de Veri*Factu et la facture électronique.',
     title: 'Facturation des agences de voyages en Espagne',
     lead: 'En Espagne, une agence qui vend des voyages en son nom paie en général la TVA sur sa marge, dans le cadre du REAV. Les factures doivent sortir d’un logiciel conforme aux règles antifraude (Veri*Factu), et la facture électronique entre entreprises devient obligatoire par étapes.',
     card: 'REAV, Veri*Factu et facture électronique entre entreprises, avec les dates en vigueur.',
@@ -67,8 +67,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-france',
     slug: 'facturation-agence-de-voyages-france',
-    metaTitle: 'Facturation des agences de voyages en France : régime de la marge et facture électronique',
-    metaDescription: 'Comment facture une agence de voyages en France : le régime de la marge, ce que montre la facture et les dates de la facturation électronique depuis septembre 2026.',
+    metaTitle: 'Facturation des agences de voyages en France',
+    metaDescription: 'Comment facture une agence de voyages en France : le régime de la marge, ce que montre la facture et les dates de la facture électronique depuis septembre 2026.',
     title: 'Facturation des agences de voyages en France',
     lead: 'Les agences de voyages françaises qui vendent en leur nom paient la TVA sur leur marge. Depuis le 1er septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques par une plateforme agréée, et les PME et TPE doivent en émettre à partir du 1er septembre 2027.',
     card: 'Le régime de la marge, la facture et les dates de la facture électronique.',
@@ -95,7 +95,7 @@ const countries: Country[] = [
   {
     key: 'invoicing-germany',
     slug: 'facturation-agence-de-voyages-allemagne',
-    metaTitle: 'Facturation des agences de voyages en Allemagne : §25 UStG et facture électronique',
+    metaTitle: 'Facturation des agences de voyages en Allemagne : §25 UStG',
     metaDescription: 'Comment facture une agence de voyages en Allemagne : le régime de la marge du §25 UStG, la mention sur la facture et les dates de la facture électronique.',
     title: 'Facturation des agences de voyages en Allemagne',
     lead: 'Les voyagistes allemands paient la TVA sur leur marge selon le §25 UStG. Pour leurs ventes entre entreprises en Allemagne, ils doivent émettre des factures électroniques à partir de 2027 ou 2028, selon leur chiffre d’affaires.',
@@ -128,8 +128,8 @@ const countries: Country[] = [
   {
     key: 'invoicing-belgium',
     slug: 'facturation-agence-de-voyages-belgique',
-    metaTitle: 'Facturation des agences de voyages en Belgique : régime de la marge et Peppol',
-    metaDescription: 'Comment facture une agence de voyages en Belgique : le régime particulier des agences de voyages et la facture électronique Peppol obligatoire entre entreprises depuis janvier 2026.',
+    metaTitle: 'Facturation des agences de voyages en Belgique : Peppol',
+    metaDescription: 'Comment facture une agence de voyages en Belgique : le régime particulier et la facture électronique Peppol, obligatoire entre entreprises depuis janvier 2026.',
     title: 'Facturation des agences de voyages en Belgique',
     lead: 'Les agences de voyages belges paient la TVA sur leur marge, dans le cadre du régime particulier des agences de voyages. Depuis le 1er janvier 2026, les factures entre entreprises belges sont des factures électroniques structurées envoyées par Peppol.',
     card: 'Le régime de la marge et la facture électronique Peppol depuis 2026.',

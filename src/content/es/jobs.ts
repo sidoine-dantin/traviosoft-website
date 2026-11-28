@@ -3,9 +3,9 @@ import { ai } from './ai';
 
 const sell: JobPage = {
   slug: 'sell',
-  metaTitle: 'Vender: solicitudes, catálogo y presupuestos | Traviosoft',
+  metaTitle: 'Vender: solicitudes, catálogo y presupuestos',
   metaDescription:
-    'Todas las solicitudes de clientes en una lista, un catálogo con precios por temporada y varios proveedores por producto, presupuestos con tu margen y el IVA, enviados en el idioma del cliente y con seguimiento a los 7 días.',
+    'Todas las solicitudes en una lista, un catálogo con precios por temporada y varios proveedores, y presupuestos con tu margen e IVA, en el idioma del cliente.',
   name: 'Vender',
   menuLine: 'De la primera solicitud al presupuesto aceptado',
   step: '1 de 4',
@@ -98,9 +98,9 @@ const sell: JobPage = {
 
 const book: JobPage = {
   slug: 'book',
-  metaTitle: 'Reservar y operar el viaje | Traviosoft',
+  metaTitle: 'Reservar y operar el viaje',
   metaDescription:
-    'Cuando se acepta un presupuesto, todos los servicios del viaje aparecen en una lista, listos para reservar. Las solicitudes de reserva salen a los proveedores por email, cada servicio muestra su estado y tu cliente recibe un itinerario día a día.',
+    'Con el presupuesto aceptado, cada servicio queda listo para reservar: las solicitudes van por email a los proveedores y tu cliente recibe su itinerario.',
   name: 'Reservar y operar',
   menuLine: 'Del presupuesto aceptado al viaje realizado',
   step: '2 de 4',
@@ -191,7 +191,7 @@ const book: JobPage = {
 
 const getPaid: JobPage = {
   slug: 'get-paid',
-  metaTitle: 'Cobrar y facturar: pagos, facturas, panel | Traviosoft',
+  metaTitle: 'Cobrar y facturar: pagos, facturas, panel',
   metaDescription:
     'Señal y liquidación en el presupuesto, enlaces de pago en el email, facturas y rectificativas con las mismas cifras, y un panel con ventas, cobros y pagos.',
   name: 'Cobrar',
@@ -260,9 +260,9 @@ const getPaid: JobPage = {
 
 const setup: JobPage = {
   slug: 'setup',
-  metaTitle: 'Tu configuración: marcas, idiomas, datos | Traviosoft',
+  metaTitle: 'Tu configuración: marcas, idiomas, datos',
   metaDescription:
-    'Varias marcas en una cuenta, documentos en el idioma del cliente, varias monedas, ajustes por país, tu equipo, tus datos en la UE y conexiones con tus otras herramientas.',
+    'Varias marcas en una cuenta, documentos en el idioma del cliente, varias monedas, ajustes por país, tu equipo, datos en la UE y conexión con tus herramientas.',
   name: 'Tu configuración',
   menuLine: 'Marcas, idiomas, monedas, equipo y datos',
   step: '4 de 4',
@@ -337,7 +337,7 @@ const setup: JobPage = {
       visual: 'safe',
       features: [
         { title: 'Un espacio propio para tu agencia', body: ['Tus clientes, precios y viajes se almacenan aparte de los de otras agencias.'] },
-        { title: 'Alojado en la UE', body: ['Tus datos se quedan en la Unión Europea, bajo el RGPD.'] },
+        { title: 'Alojado en la UE', body: ['La aplicación y su base de datos funcionan en servidores en Francia, bajo el RGPD.'] },
         { title: 'Llévate tus datos', body: ['Si te das de baja, recuperas tus datos en formatos estándar.'] }
       ]
     },

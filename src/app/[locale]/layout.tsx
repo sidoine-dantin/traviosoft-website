@@ -8,6 +8,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { JsonLd } from '@/components/site/json-ld';
 import { Consent } from '@/components/site/consent';
+import { AdSourceCapture } from '@/components/site/ad-source';
 import { ScrollTop } from '@/components/site/scroll-top';
 import { PRICES } from '@/content/prices';
 import { getContent } from '@/content';
@@ -121,7 +122,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     email: 'hola@traviosoft.com',
     sameAs: PROFILES
   };
-  const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: baseUrl, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
+  const site = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': SITE_ID, name: siteName, url: `${baseUrl}/`, inLanguage: routing.locales, publisher: { '@id': ORG_ID } };
 
   // The four product pages sit under Product; the AI assistant has its own item beside it.
   const jobs = JOB_ORDER.filter(s => s !== 'ai-assistant').map(s => ({
@@ -143,6 +144,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Footer c={c} />
           <ScrollTop />
           <Consent labels={c.footer.consent} />
+          <AdSourceCapture />
         </NextIntlClientProvider>
       </body>
     </html>
