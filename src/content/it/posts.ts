@@ -8,7 +8,7 @@ const dmc: Article = {
   slug: 'dmc-cosa-significa',
   metaTitle: 'DMC: cosa significa e cosa fa un’agenzia incoming',
   metaDescription:
-    'Cos’è una DMC, cosa organizza, chi sono i suoi clienti, in cosa si distingue da un tour operator, da un’agenzia di viaggi e da un ente del turismo, e come calcola i prezzi.',
+    'Cos’è una DMC, cosa organizza, chi sono i suoi clienti, in cosa si distingue da un tour operator o un’agenzia di viaggi e come calcola i prezzi.',
   title: 'DMC: cosa significa',
   lead: 'Una DMC (destination management company), o agenzia incoming, è un’azienda con sede in una destinazione che organizza quello che i viaggiatori fanno lì: transfer, guide, escursioni, hotel, ristoranti ed eventi. I suoi clienti sono di solito tour operator, agenzie di viaggi e organizzatori di eventi, che vendono il viaggio al viaggiatore.',
   updated: '2026-11-28',
@@ -124,7 +124,7 @@ const allotment: Article = {
   slug: 'allotment-hotel-release',
   metaTitle: 'Allotment alberghiero: data di release, cut-off e wash',
   metaDescription:
-    'Cos’è un allotment alberghiero, come funzionano la data di release e il cut-off, cosa succede alle camere non vendute e cosa significano wash e attrition, con un esempio.',
+    'L’allotment alberghiero, la data di release e il cut-off, cosa succede alle camere invendute, wash e attrition, con un esempio.',
   title: 'L’allotment alberghiero e la data di release',
   lead: 'Un allotment è un numero di camere che un hotel riserva a un tour operator, a una DMC o a un’agenzia, a una tariffa concordata, per un periodo. Le camere non vendute alla data di release tornano all’hotel, che le vende attraverso gli altri canali.',
   updated: '2026-11-28',
@@ -227,9 +227,9 @@ const packageQuote: Article = {
   key: 'package-quote',
   kind: 'guide',
   slug: 'preventivo-pacchetto-turistico-informazioni',
-  metaTitle: 'Preventivo di un pacchetto turistico: le informazioni previste',
+  metaTitle: 'Preventivo di un pacchetto turistico: cosa deve indicare',
   metaDescription:
-    'Quando un viaggio su misura è un pacchetto turistico secondo la direttiva (UE) 2015/2302, e le informazioni che il preventivo e il contratto danno al viaggiatore: programma, prezzo, pagamenti, recesso.',
+    'Quando un viaggio su misura è un pacchetto turistico secondo la direttiva (UE) 2015/2302 e cosa indicano il preventivo e il contratto.',
   title: 'Cosa contiene il preventivo di un pacchetto turistico',
   lead: 'Quando un’agenzia combina un volo, un hotel, un’auto o un’escursione per lo stesso viaggio, il viaggio è spesso un pacchetto turistico secondo la direttiva europea. La direttiva elenca le informazioni che il viaggiatore riceve prima di prenotare e cosa aggiunge il contratto.',
   updated: '2026-11-28',

@@ -8,7 +8,7 @@ const dmc: Article = {
   slug: 'qu-est-ce-qu-une-dmc',
   metaTitle: 'Qu’est-ce qu’une DMC (agence réceptive) ?',
   metaDescription:
-    'Ce qu’est une DMC, ce qu’elle organise, qui sont ses clients, ce qui la distingue d’un tour-opérateur, d’une agence de voyages et d’un office de tourisme, et comment elle fixe ses prix.',
+    'Ce qu’est une DMC, ce qu’elle organise, qui sont ses clients, ce qui la distingue d’un tour-opérateur ou d’une agence, et comment elle fixe ses prix.',
   title: 'Qu’est-ce qu’une DMC ?',
   lead: 'Une DMC (destination management company), ou agence réceptive, est une entreprise installée dans une destination qui organise ce que les voyageurs y font : transferts, guides, excursions, hôtels, restaurants et événements. Ses clients sont en général des tour-opérateurs, des agences de voyages et des organisateurs d’événements, qui vendent le voyage au voyageur.',
   updated: '2026-11-28',
@@ -124,7 +124,7 @@ const allotment: Article = {
   slug: 'allotement-hotel-date-de-release',
   metaTitle: 'Allotement hôtelier : date de release, cut-off et wash',
   metaDescription:
-    'Ce qu’est un allotement hôtelier, comment fonctionnent la date de release et le cut-off, ce que deviennent les chambres non vendues, et ce que veulent dire wash et attrition, avec un exemple.',
+    'L’allotement hôtelier, la date de release et le cut-off, ce que deviennent les chambres invendues, le wash et l’attrition, avec un exemple.',
   title: 'L’allotement hôtelier et la date de release',
   lead: 'Un allotement est un nombre de chambres qu’un hôtel réserve à un tour-opérateur, une DMC ou une agence, à un tarif convenu, pour une période. Les chambres non vendues à la date de release reviennent à l’hôtel, qui les vend par ses autres canaux.',
   updated: '2026-11-28',
@@ -229,7 +229,7 @@ const packageQuote: Article = {
   slug: 'devis-voyage-a-forfait-informations',
   metaTitle: 'Devis de voyage à forfait : les informations de la directive',
   metaDescription:
-    'Quand un voyage sur mesure est un forfait au sens de la directive (UE) 2015/2302, et les informations que le devis et le contrat donnent au voyageur : programme, prix, paiements, annulation.',
+    'Quand un voyage sur mesure est un forfait selon la directive (UE) 2015/2302, et les informations du devis et du contrat : programme, prix, annulation.',
   title: 'Ce que contient un devis de voyage à forfait',
   lead: 'Quand une agence combine un vol, un hôtel, une voiture ou une excursion pour un même voyage, le voyage est souvent un forfait au sens de la directive européenne sur les voyages à forfait. La directive liste les informations que le voyageur reçoit avant de réserver, et ce que le contrat y ajoute.',
   updated: '2026-11-28',

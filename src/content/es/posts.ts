@@ -8,7 +8,7 @@ const dmc: Article = {
   slug: 'que-es-una-dmc',
   metaTitle: 'Qué es una DMC (agencia receptiva)',
   metaDescription:
-    'Qué es una DMC, qué organiza, quiénes son sus clientes, en qué se diferencia de un turoperador, una agencia de viajes y una oficina de turismo, y cómo calcula sus precios.',
+    'Qué es una DMC, qué organiza, quiénes son sus clientes, en qué se diferencia de un turoperador o una agencia de viajes y cómo calcula sus precios.',
   title: '¿Qué es una DMC?',
   lead: 'Una DMC (destination management company), o agencia receptiva, es una empresa situada en un destino que organiza lo que los viajeros hacen allí: traslados, guías, excursiones, hoteles, restaurantes y eventos. Sus clientes suelen ser turoperadores, agencias de viajes y organizadores de eventos, que venden el viaje al viajero.',
   updated: '2026-11-28',
@@ -124,7 +124,7 @@ const allotment: Article = {
   slug: 'cupo-hotel-allotment-release',
   metaTitle: 'Cupo de hotel (allotment): fecha de release y cut-off',
   metaDescription:
-    'Qué es un cupo de hotel o allotment, cómo funcionan la fecha de release y el cut-off, qué pasa con las habitaciones no vendidas y qué significan wash y attrition, con un ejemplo.',
+    'Qué es un cupo de hotel o allotment, cómo funcionan la fecha de release y el cut-off, qué pasa con las habitaciones sin vender, con un ejemplo.',
   title: 'El cupo de hotel y la fecha de release',
   lead: 'Un cupo, o allotment, es un número de habitaciones que un hotel reserva para un turoperador, una DMC o una agencia, a una tarifa acordada, durante un periodo. Las habitaciones que no se han vendido en la fecha de release vuelven al hotel, que las vende por sus otros canales.',
   updated: '2026-11-28',
@@ -227,9 +227,9 @@ const packageQuote: Article = {
   key: 'package-quote',
   kind: 'guide',
   slug: 'presupuesto-viaje-combinado-informacion',
-  metaTitle: 'Presupuesto de un viaje combinado: la información obligatoria',
+  metaTitle: 'Presupuesto de viaje combinado: la información obligatoria',
   metaDescription:
-    'Cuándo un viaje a medida es un viaje combinado según la Directiva (UE) 2015/2302, y la información que el presupuesto y el contrato dan al viajero: programa, precio, pagos y cancelación.',
+    'Cuándo un viaje a medida es un viaje combinado según la Directiva (UE) 2015/2302 y qué información dan el presupuesto y el contrato al viajero.',
   title: 'Qué contiene el presupuesto de un viaje combinado',
   lead: 'Cuando una agencia combina un vuelo, un hotel, un coche o una excursión para el mismo viaje, el viaje suele ser un viaje combinado según la directiva europea. La directiva enumera la información que recibe el viajero antes de reservar y lo que añade el contrato.',
   updated: '2026-11-28',

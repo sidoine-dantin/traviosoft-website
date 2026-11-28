@@ -230,7 +230,7 @@ const packageQuote: Article = {
   slug: 'package-travel-quote-information',
   metaTitle: 'Package travel quote: the information the EU directive lists',
   metaDescription:
-    'When a tailor-made trip is a package under Directive (EU) 2015/2302, and the information the quote and the contract give the traveller: itinerary, price, payments, cancellation.',
+    'When a tailor-made trip is a package under Directive (EU) 2015/2302, and what the quote and contract tell the traveller: itinerary, price, cancellation.',
   title: 'What a package travel quote contains',
   lead: 'When an agency combines a flight, a hotel, a car or an excursion for the same trip, the trip is often a package under the EU Package Travel Directive. The directive lists the information the traveller receives before booking, and what the contract adds.',
   updated: '2026-11-28',

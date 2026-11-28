@@ -8,7 +8,7 @@ const dmc: Article = {
   slug: 'o-que-e-uma-dmc',
   metaTitle: 'O que é uma DMC (agência de turismo recetivo)',
   metaDescription:
-    'O que é uma DMC, o que organiza, quem são os seus clientes, em que difere de um operador turístico, de uma agência de viagens e de uma entidade de turismo, e como calcula os preços.',
+    'O que é uma DMC, o que organiza, quem são os seus clientes, em que difere de um operador turístico ou de uma agência e como calcula os preços.',
   title: 'O que é uma DMC?',
   lead: 'Uma DMC (destination management company), ou agência de turismo recetivo, é uma empresa sediada num destino que organiza o que os viajantes lá fazem: transfers, guias, excursões, hotéis, restaurantes e eventos. Os seus clientes são normalmente operadores turísticos, agências de viagens e organizadores de eventos, que vendem a viagem ao viajante.',
   updated: '2026-11-28',
@@ -124,7 +124,7 @@ const allotment: Article = {
   slug: 'allotment-hotel-release',
   metaTitle: 'Allotment hoteleiro: data de release, cut-off e wash',
   metaDescription:
-    'O que é um allotment hoteleiro, como funcionam a data de release e o cut-off, o que acontece aos quartos não vendidos e o que significam wash e attrition, com um exemplo.',
+    'O allotment hoteleiro, a data de release e o cut-off, o que acontece aos quartos por vender, wash e attrition, com um exemplo.',
   title: 'O allotment hoteleiro e a data de release',
   lead: 'Um allotment é um número de quartos que um hotel reserva para um operador turístico, uma DMC ou uma agência, a uma tarifa acordada, durante um período. Os quartos não vendidos na data de release voltam para o hotel, que os vende pelos seus outros canais.',
   updated: '2026-11-28',
@@ -229,7 +229,7 @@ const packageQuote: Article = {
   slug: 'orcamento-viagem-organizada-informacoes',
   metaTitle: 'Orçamento de uma viagem organizada: a informação prevista',
   metaDescription:
-    'Quando uma viagem à medida é uma viagem organizada segundo a Diretiva (UE) 2015/2302, e a informação que o orçamento e o contrato dão ao viajante: programa, preço, pagamentos, rescisão.',
+    'Quando uma viagem à medida é uma viagem organizada segundo a Diretiva (UE) 2015/2302 e o que indicam o orçamento e o contrato.',
   title: 'O que contém o orçamento de uma viagem organizada',
   lead: 'Quando uma agência combina um voo, um hotel, um carro ou uma excursão para a mesma viagem, a viagem é muitas vezes uma viagem organizada segundo a diretiva europeia. A diretiva enumera a informação que o viajante recebe antes de reservar e o que o contrato acrescenta.',
   updated: '2026-11-28',
