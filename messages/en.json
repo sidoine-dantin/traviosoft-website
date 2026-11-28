@@ -616,7 +616,7 @@
           "heading": "How long we keep it",
           "body": [
             "Your account stays as long as it exists in your agency's workspace. At the end of the agency's contract, it is deleted with the workspace once the data recovery period is over.",
-            "Security records are kept as long as your agency's workspace exists, usage records one year and error reports at most 90 days. Records of the AI assistant's actions are kept 90 days. Support messages are kept three years after our last exchange, and invoices ten years, as French accounting law requires."
+            "Security records are kept at most as long as your agency's workspace exists, usage records one year and error reports at most 90 days. Records of the AI assistant's actions are kept 90 days. Support messages are kept three years after our last exchange, and invoices ten years, as French accounting law requires."
           ]
         },
         {

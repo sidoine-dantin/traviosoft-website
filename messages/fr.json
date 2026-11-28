@@ -616,7 +616,7 @@
           "heading": "Durée de conservation",
           "body": [
             "Votre compte est conservé tant qu'il existe dans l'espace de votre agence. À la fin du contrat de l'agence, il est supprimé avec l'espace, une fois la période de récupération des données terminée.",
-            "Les journaux de sécurité sont conservés tant que l'espace de votre agence existe, les données d'usage un an et les rapports d'erreur 90 jours au plus. La trace des actions de l'assistant IA est conservée 90 jours. Les messages d'assistance sont conservés trois ans après notre dernier échange, et les factures dix ans, comme le prévoit le droit comptable français."
+            "Les journaux de sécurité sont conservés au plus tant que l'espace de votre agence existe, les données d'usage un an et les rapports d'erreur 90 jours au plus. La trace des actions de l'assistant IA est conservée 90 jours. Les messages d'assistance sont conservés trois ans après notre dernier échange, et les factures dix ans, comme le prévoit le droit comptable français."
           ]
         },
         {
